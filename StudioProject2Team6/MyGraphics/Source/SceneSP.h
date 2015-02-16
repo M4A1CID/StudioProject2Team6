@@ -62,18 +62,30 @@ private:
 	enum GEOMETRY_TYPE
 	{
 		GEO_AXES,
+		GEO_TEXT,
 		NUM_GEOMETRY,
 	};
 
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
+	void DeclareLightParameters();
+	void DeclareGLEnable();
+	void UpdateUI(double dt);
+	void RenderUI();
+	void initGeoType();
 
+	/*========================================
+			Declare variables here
+	=========================================*/
 	unsigned m_vertexArrayID;
 	Mesh* meshList[NUM_GEOMETRY];
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 
 	bool toggleLight;
+
+	string s_position;
+	string s_fps;
 
 public:
 	SceneSP();

@@ -19,6 +19,38 @@ SceneSP::~SceneSP()
 
 void SceneSP::Init()
 {
+	DeclareGLEnable(); //Handle glEnable things
+
+	/*=============================================
+				Init variables here
+	=============================================*/
+	
+	toggleLight = true;
+	//Initialize camera settings
+	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
+
+	//Initialize all meshes to NULL
+	for(int i = 0; i < NUM_GEOMETRY; ++i)
+	{
+		meshList[i] = NULL;
+	}
+	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
+	initGeoType();
+
+	Mtx44 projection;
+	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
+	projectionStack.LoadMatrix(projection);
+
+
+	DeclareLightParameters(); //Declare Light parameters
+}
+void SceneSP::initGeoType()
+{
+	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16,16);
+	meshList[GEO_TEXT]->textureID = LoadTGA("Image//anime.tga");
+}
+void SceneSP::DeclareGLEnable()
+{
 	// Set background color to black
 	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
 	//Enable depth buffer and depth testing
@@ -42,26 +74,9 @@ void SceneSP::Init()
 	m_parameters[U_MVP] = glGetUniformLocation(m_programID, "MVP");
 	// Make sure you pass uniform parameters after glUseProgram()
 	glUniform1i(m_parameters[U_NUMLIGHTS], 1);
-
-	/*=============================================
-				Init variables here
-	=============================================*/
-	toggleLight = true;
-	//Initialize camera settings
-	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
-
-	//Initialize all meshes to NULL
-	for(int i = 0; i < NUM_GEOMETRY; ++i)
-	{
-		meshList[i] = NULL;
-	}
-	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
-
-	Mtx44 projection;
-	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
-	projectionStack.LoadMatrix(projection);
-
-
+}
+void SceneSP::DeclareLightParameters()
+{
 	// Get a handle for our "textColor" uniform
 	m_parameters[U_TEXT_ENABLED] = glGetUniformLocation(m_programID, "textEnabled");
 	m_parameters[U_TEXT_COLOR] = glGetUniformLocation(m_programID, "textColor");
@@ -116,7 +131,23 @@ void SceneSP::Init()
 	glUniform1f(m_parameters[U_LIGHT0_COSINNER], lights[0].cosInner);
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], lights[0].exponent);
 }
+void SceneSP::UpdateUI(double dt)
+{
+	std::stringstream ss_fps,ss_position;
+	
 
+	ss_fps << 1/dt;
+	s_fps = ss_fps.str();
+
+	ss_position << camera.position.x << "," << camera.position.y << "," << camera.position.z;
+	s_position = ss_position.str();
+
+}
+void SceneSP::RenderUI()
+{
+	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
+	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 3, 0, 0);
+}
 void SceneSP::Update(double dt)
 {
 	if(Application::IsKeyPressed('1')) //enable back face culling
@@ -135,7 +166,9 @@ void SceneSP::Update(double dt)
 	{
 		toggleLight = false;
 	}
+	UpdateUI(dt);
 	camera.Update(dt);
+	
 }
 void SceneSP::Render()
 {
@@ -166,8 +199,9 @@ void SceneSP::Render()
 		Position lightPosition_cameraspace = viewStack.Top() * lights[0].position;
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
-
+	
 	RenderMesh(meshList[GEO_AXES],false);
+	RenderUI();
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
