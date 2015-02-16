@@ -64,11 +64,13 @@ private:
 	{
 		GEO_AXES,
 		GEO_TEXT,
+		GEO_SUPERMARKET,
 		NUM_GEOMETRY,
 	};
 
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
+	void RenderSupermarket();
 	void DeclareLightParameters();
 	void DeclareGLEnable();
 	void UpdateUI(double dt);

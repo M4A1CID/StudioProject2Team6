@@ -49,6 +49,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16,16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//anime.tga");
+	meshList[GEO_SUPERMARKET] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//supermarket.obj");
+	meshList[GEO_SUPERMARKET]->textureID = LoadTGA("Image//supermarket.tga");
 }
 void SceneSP::initCharacter()
 {
@@ -211,6 +213,7 @@ void SceneSP::Render()
 	}
 	
 	RenderMesh(meshList[GEO_AXES],false);
+	RenderSupermarket();
 	RenderUI();
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
@@ -324,6 +327,12 @@ void SceneSP::RenderMesh(Mesh *mesh, bool enableLight)
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 }
+void SceneSP::RenderSupermarket()
+{
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_SUPERMARKET], false);
+	modelStack.PopMatrix();
+}
 void SceneSP::Exit()
 {
 	// Cleanup here
@@ -335,3 +344,4 @@ void SceneSP::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
+
