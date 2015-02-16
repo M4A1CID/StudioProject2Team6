@@ -7,6 +7,7 @@
 #include "Vertex.h"
 #include "LoadTGA.h"
 
+
 static float ROT_LIMIT = 45.f;
 static float SCALE_LIMIT = 5.f;
 SceneSP::SceneSP()
@@ -20,34 +21,39 @@ SceneSP::~SceneSP()
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
-
-	/*=============================================
-				Init variables here
-	=============================================*/
-	
-	toggleLight = true;
-	//Initialize camera settings
-	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
-
 	//Initialize all meshes to NULL
 	for(int i = 0; i < NUM_GEOMETRY; ++i)
 	{
 		meshList[i] = NULL;
 	}
-	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
+	/*=============================================
+				Init variables here
+	=============================================*/
+	initCharacter(); //Initilize the player
+	toggleLight = true;
+	//Initialize camera settings
+	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 	initGeoType();
+	
+	
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
 
-
+	
 	DeclareLightParameters(); //Declare Light parameters
 }
 void SceneSP::initGeoType()
 {
+	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16,16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//anime.tga");
+}
+void SceneSP::initCharacter()
+{
+	ptrplayer = new CCharacter(100.0f,0,0,5,false);
+
 }
 void SceneSP::DeclareGLEnable()
 {
@@ -133,7 +139,7 @@ void SceneSP::DeclareLightParameters()
 }
 void SceneSP::UpdateUI(double dt)
 {
-	std::stringstream ss_fps,ss_position;
+	std::stringstream ss_fps,ss_position,ss_money;
 	
 
 	ss_fps << 1/dt;
@@ -142,9 +148,13 @@ void SceneSP::UpdateUI(double dt)
 	ss_position << camera.position.x << "," << camera.position.y << "," << camera.position.z;
 	s_position = ss_position.str();
 
+	ss_money << ptrplayer->getMoney();
+	s_money = ss_money.str();
+
 }
 void SceneSP::RenderUI()
 {
+	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 3, 0, 0);
 }

@@ -9,6 +9,7 @@
 #include "MatrixStack.h"
 #include "Light.h"
 #include "Utility.h"
+#include "Character.h"
 #include <string>
 #include <sstream>
 
@@ -73,6 +74,7 @@ private:
 	void UpdateUI(double dt);
 	void RenderUI();
 	void initGeoType();
+	void initCharacter();
 
 	/*========================================
 			Declare variables here
@@ -81,9 +83,10 @@ private:
 	Mesh* meshList[NUM_GEOMETRY];
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
-
+	CCharacter * ptrplayer;
 	bool toggleLight;
 
+	string s_money;
 	string s_position;
 	string s_fps;
 
