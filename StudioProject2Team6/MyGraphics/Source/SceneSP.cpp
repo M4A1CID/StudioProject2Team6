@@ -243,22 +243,7 @@ void SceneSP::Update(double dt)
 	{
 		toggleLight = false;
 	}
-	if(Application::IsKeyPressed('E'))
-	{
-		if(doorIsOpening != true)
-		{
-			if(toggleDoor == false)
-			{
-				toggleDoor = true;
-			}
-			else
-			{
-				toggleDoor = false;
-			}
-			doorIsOpening = true;
-		}
-		
-	}
+	
 	UpdateUI(dt);
 	
 	camera.Update(dt);
@@ -530,22 +515,24 @@ void SceneSP::RenderDoors()
 }
 void SceneSP::UpdateDoor(double dt)
 {
-	if((doorIsOpening == true) && (toggleDoor == true))
+	if((camera.position.z < 50 && camera.position.z > 0) && (camera.position.x > -30  && camera.position.x < -10))
+	{
+			toggleDoor = true;
+	}
+	else
+	{
+		toggleDoor = false;
+	}
+
+	if(toggleDoor)
 	{
 		if(moveDoor > -8.0f)
 			moveDoor -= 10 * dt;
-		else
-		{
-			doorIsOpening = false;
-		}
-		
 	}
-	if((doorIsOpening == true) && (toggleDoor == false))
+	else
 	{
 		if(moveDoor < 0.0f)
 			moveDoor += 10 * dt;
-		else
-			doorIsOpening = false;
 	}
 }
 void SceneSP::RenderSamplestand()
