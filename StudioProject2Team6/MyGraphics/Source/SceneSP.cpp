@@ -28,7 +28,7 @@ void SceneSP::Init()
 	}
 	/*=============================================
 				Init variables here
-	=============================================*/	
+	=============================================*/
 	world_size = 3000.0f;
 	
 	initCharacter(); //Initilize the player
@@ -68,6 +68,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//skybox_left.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
+	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
+	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
 }
 void SceneSP::initCharacter()
 {
@@ -277,6 +279,7 @@ void SceneSP::Render()
 	}
 	
 	RenderMesh(meshList[GEO_AXES],false);
+
 	
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x, camera.position.y-20, camera.position.z);
@@ -289,14 +292,14 @@ void SceneSP::Render()
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
     RenderSupermarket();
-//<<<<<<< Updated upstream
+
    
 
-	RenderUI();
-//=======
 
-	
-//>>>>>>> Stashed changes
+	RenderSupermarket();
+	RenderShelves();
+
+	RenderUI();
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
@@ -414,6 +417,43 @@ void SceneSP::RenderSupermarket()
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_SUPERMARKET], false);
 	modelStack.PopMatrix();
+}
+void SceneSP::RenderShelves()
+{
+	for(int x = 0;x < 3;x++)
+	{
+		modelStack.PushMatrix();//Vege shelf
+		modelStack.Translate(25 - (x * 6),0,28);
+		modelStack.Rotate(180,0,1,0);
+		RenderMesh(meshList[GEO_SHELF], false);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();//Canned shelf
+		modelStack.Translate(25 - (x * 6),0,18);
+		RenderMesh(meshList[GEO_SHELF], false);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(25 - (x * 6),0,16);
+		modelStack.Rotate(180,0,1,0);
+		RenderMesh(meshList[GEO_SHELF], false);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(25 - (x * 6),0,6);
+		RenderMesh(meshList[GEO_SHELF], false);
+		modelStack.PopMatrix();
+		modelStack.PushMatrix();
+		modelStack.Translate(25 - (x * 6),0,4);
+		modelStack.Rotate(180,0,1,0);
+		RenderMesh(meshList[GEO_SHELF], false);
+		modelStack.PopMatrix();
+	}
+	for(int x = 0;x < 5;x++)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(38,0,27 - (x * 6));
+		modelStack.Rotate(-90,0,1,0);
+		RenderMesh(meshList[GEO_SHELF], false);
+		modelStack.PopMatrix();
+	}
 }
 void SceneSP::Exit()
 {
