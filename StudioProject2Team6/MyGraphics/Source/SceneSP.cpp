@@ -21,6 +21,7 @@ SceneSP::~SceneSP()
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
+	
 	//Initialize all meshes to NULL
 	for(int i = 0; i < NUM_GEOMETRY; ++i)
 	{
@@ -32,18 +33,18 @@ void SceneSP::Init()
 	world_size = 3000.0f;
 	
 	initCharacter(); //Initilize the player
+	initGeoType();
+
 	toggleLight = true;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
-	initGeoType();
 	
 	
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
-
-
+	
 	DeclareLightParameters(); //Declare Light parameters
 }
 void SceneSP::initGeoType()
@@ -128,9 +129,23 @@ void SceneSP::DeclareLightParameters()
 	m_parameters[U_LIGHT0_COSINNER] = glGetUniformLocation(m_programID,"lights[0].cosInner");
 	m_parameters[U_LIGHT0_EXPONENT] = glGetUniformLocation(m_programID,"lights[0].exponent");
 
-	// Get a handle for our "colorTexture" uniform
+	m_parameters[U_LIGHT1_POSITION] = glGetUniformLocation(m_programID, "lights[1].position_cameraspace");
+	m_parameters[U_LIGHT1_TYPE] = glGetUniformLocation(m_programID, "lights[1].type");
+	m_parameters[U_LIGHT1_COLOR] = glGetUniformLocation(m_programID, "lights[1].color");
+	m_parameters[U_LIGHT1_POWER] = glGetUniformLocation(m_programID, "lights[1].power");
+	m_parameters[U_LIGHT1_KC] = glGetUniformLocation(m_programID, "lights[1].kC");
+	m_parameters[U_LIGHT1_KL] = glGetUniformLocation(m_programID, "lights[1].kL");
+	m_parameters[U_LIGHT1_KQ] = glGetUniformLocation(m_programID, "lights[1].kQ");
+	m_parameters[U_LIGHT1_SPOTDIRECTION] = glGetUniformLocation(m_programID,"lights[1].spotDirection");
+	m_parameters[U_LIGHT1_COSCUTOFF] = glGetUniformLocation(m_programID,"lights[1].cosCutoff");
+	m_parameters[U_LIGHT1_COSINNER] = glGetUniformLocation(m_programID,"lights[1].cosInner");
+	m_parameters[U_LIGHT1_EXPONENT] = glGetUniformLocation(m_programID,"lights[1].exponent");
+	m_parameters[U_NUMLIGHTS] = glGetUniformLocation(m_programID,"numLights");
+	
+		// Get a handle for our "colorTexture" uniform
 	m_parameters[U_COLOR_TEXTURE_ENABLED] = glGetUniformLocation(m_programID, "colorTextureEnabled");
 	m_parameters[U_COLOR_TEXTURE] = glGetUniformLocation(m_programID, "colorTexture");
+
 
 	glUseProgram(m_programID);
 
@@ -146,6 +161,18 @@ void SceneSP::DeclareLightParameters()
 	lights[0].exponent = 3.f;
 	lights[0].spotDirection.Set(1.f, 1.f, 0.f);
 
+	lights[1].type = Light::LIGHT_POINT;
+	lights[1].position.Set(0, 0, 0);
+	lights[1].color.Set(1, 1, 1);
+	lights[1].power = 3;
+	lights[1].kC = 1.f;
+	lights[1].kL = 0.01f;
+	lights[1].kQ = 0.001f;
+	lights[1].cosCutoff = cos(Math::DegreeToRadian(45));
+	lights[1].cosInner = cos(Math::DegreeToRadian(30));
+	lights[1].exponent = 3.f;
+	lights[1].spotDirection.Set(0.f, 1.f, 0.f);
+
 	// Make sure you pass uniform parameters after glUseProgram()
 	glUniform1i(m_parameters[U_NUMLIGHTS], 1);
 	glUniform1i(m_parameters[U_LIGHT0_TYPE], lights[0].type);
@@ -158,6 +185,16 @@ void SceneSP::DeclareLightParameters()
 	glUniform1f(m_parameters[U_LIGHT0_COSINNER], lights[0].cosInner);
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], lights[0].exponent);
 
+	glUniform1i(m_parameters[U_NUMLIGHTS], 2);
+	glUniform1i(m_parameters[U_LIGHT1_TYPE], lights[1].type);
+	glUniform3fv(m_parameters[U_LIGHT1_COLOR], 1, &lights[1].color.r);
+	glUniform1f(m_parameters[U_LIGHT1_POWER], lights[1].power);
+	glUniform1f(m_parameters[U_LIGHT1_KC], lights[1].kC);
+	glUniform1f(m_parameters[U_LIGHT1_KL], lights[1].kL);
+	glUniform1f(m_parameters[U_LIGHT1_KQ], lights[1].kQ);
+	glUniform1f(m_parameters[U_LIGHT1_COSCUTOFF], lights[1].cosCutoff);
+	glUniform1f(m_parameters[U_LIGHT1_COSINNER], lights[1].cosInner);
+	glUniform1f(m_parameters[U_LIGHT1_EXPONENT], lights[1].exponent);
 
 	
 	
@@ -292,11 +329,6 @@ void SceneSP::Render()
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
     RenderSupermarket();
-
-   
-
-
-	RenderSupermarket();
 	RenderShelves();
 
 	RenderUI();
@@ -415,7 +447,7 @@ void SceneSP::RenderMesh(Mesh *mesh, bool enableLight)
 void SceneSP::RenderSupermarket()
 {
 	modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_SUPERMARKET], false);
+	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
@@ -425,25 +457,25 @@ void SceneSP::RenderShelves()
 		modelStack.PushMatrix();//Vege shelf
 		modelStack.Translate(25 - (x * 6),0,28);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], false);
+		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 		modelStack.PushMatrix();//Canned shelf
 		modelStack.Translate(25 - (x * 6),0,18);
-		RenderMesh(meshList[GEO_SHELF], false);
+		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 		modelStack.PushMatrix();
 		modelStack.Translate(25 - (x * 6),0,16);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], false);
+		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 		modelStack.PushMatrix();
 		modelStack.Translate(25 - (x * 6),0,6);
-		RenderMesh(meshList[GEO_SHELF], false);
+		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 		modelStack.PushMatrix();
 		modelStack.Translate(25 - (x * 6),0,4);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], false);
+		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 	}
 	for(int x = 0;x < 5;x++)
@@ -451,7 +483,7 @@ void SceneSP::RenderShelves()
 		modelStack.PushMatrix();
 		modelStack.Translate(38,0,27 - (x * 6));
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], false);
+		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 	}
 }
