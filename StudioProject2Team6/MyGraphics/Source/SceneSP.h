@@ -73,6 +73,8 @@ private:
 		GEO_TOP,
 		GEO_LEFT,
 		GEO_RIGHT,
+		GEO_DOOR,
+		GEO_SAMPLESTAND,
 		NUM_GEOMETRY,
 	};
 
@@ -80,9 +82,12 @@ private:
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderSupermarket();
 	void RenderShelves();
+	void RenderDoors();
+	void RenderSamplestand();
 	void DeclareLightParameters();
 	void DeclareGLEnable();
 	void UpdateUI(double dt);
+	void UpdateDoor(double dt);
 	void RenderUI();
 	void initGeoType();
 	void initCharacter();
@@ -97,9 +102,10 @@ private:
 	unsigned m_parameters[U_TOTAL];
 	CCharacter * ptrplayer;
 	bool toggleLight;
-
+	bool toggleDoor;
+	bool doorIsOpening;
 	float world_size;
-
+	float moveDoor;
 	string s_money;
 	string s_position;
 	string s_fps;

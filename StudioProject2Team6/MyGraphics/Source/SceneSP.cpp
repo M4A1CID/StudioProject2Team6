@@ -36,6 +36,9 @@ void SceneSP::Init()
 	initGeoType();
 
 	toggleLight = true;
+	toggleDoor = false;
+	doorIsOpening = false;
+	moveDoor = 0.0f;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 	
@@ -52,6 +55,10 @@ void SceneSP::initGeoType()
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//anime.tga");
 	meshList[GEO_SUPERMARKET] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//supermarket.obj");
 	meshList[GEO_SUPERMARKET]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_DOOR] = MeshBuilder::GenerateOBJ("door", "OBJ//door.obj");
+	meshList[GEO_DOOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_SAMPLESTAND] = MeshBuilder::GenerateOBJ("samplestand", "OBJ//sample_stand.obj");
+	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
 	/*========================
 			SKYBOX INIT
 	=========================*/
@@ -236,10 +243,26 @@ void SceneSP::Update(double dt)
 	{
 		toggleLight = false;
 	}
+	if(Application::IsKeyPressed('E'))
+	{
+		if(doorIsOpening != true)
+		{
+			if(toggleDoor == false)
+			{
+				toggleDoor = true;
+			}
+			else
+			{
+				toggleDoor = false;
+			}
+			doorIsOpening = true;
+		}
+		
+	}
 	UpdateUI(dt);
 	
 	camera.Update(dt);
-	
+	UpdateDoor(dt);
 }
 
 void SceneSP::RenderSkyBox()
@@ -327,8 +350,6 @@ void SceneSP::Render()
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
     RenderSupermarket();
-	RenderShelves();
-
 	RenderUI();
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
@@ -446,6 +467,9 @@ void SceneSP::RenderSupermarket()
 {
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
+	RenderShelves();
+	RenderDoors();
+	RenderSamplestand();
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
@@ -484,6 +508,52 @@ void SceneSP::RenderShelves()
 		RenderMesh(meshList[GEO_SHELF], toggleLight);
 		modelStack.PopMatrix();
 	}
+}
+void SceneSP::RenderDoors()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(moveDoor, 0.0f, 0.0f);
+	modelStack.PushMatrix();
+	modelStack.Translate(-25.0f, 0.0f, 30.5f);
+	RenderMesh(meshList[GEO_DOOR], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-moveDoor, 0.0f, 0.0f);
+	modelStack.PushMatrix();
+	modelStack.Translate(-15.2f, 11.2f, 30.5f);
+	modelStack.Rotate(180,0,0,1);
+	RenderMesh(meshList[GEO_DOOR], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+}
+void SceneSP::UpdateDoor(double dt)
+{
+	if((doorIsOpening == true) && (toggleDoor == true))
+	{
+		if(moveDoor > -8.0f)
+			moveDoor -= 10 * dt;
+		else
+		{
+			doorIsOpening = false;
+		}
+		
+	}
+	if((doorIsOpening == true) && (toggleDoor == false))
+	{
+		if(moveDoor < 0.0f)
+			moveDoor += 10 * dt;
+		else
+			doorIsOpening = false;
+	}
+}
+void SceneSP::RenderSamplestand()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f, 0.0f, 25.0f);
+	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
+	modelStack.PopMatrix();
 }
 void SceneSP::Exit()
 {
