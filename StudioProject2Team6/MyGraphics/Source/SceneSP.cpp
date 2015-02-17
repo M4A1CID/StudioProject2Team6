@@ -43,7 +43,7 @@ void SceneSP::Init()
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	//Initialize camera settings
-	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 10, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 	
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
@@ -95,11 +95,14 @@ void SceneSP::initCharacter()
 }
 void SceneSP::initItems()
 {
-	CItem sardineCan;
+	
 	sardineCan.setName("Sardine Can");
 	sardineCan.setPrice(5.0f);
 
-	ptrContainer = new CContainer(sardineCan,sardineCan,sardineCan,"ShelfOne",5,5,5);
+	shelfSardineCan.setItems(sardineCan,sardineCan,sardineCan);
+	shelfSardineCan.setPosition(19,0,28);
+	shelfSardineCan.setItemStock(5,5,5);
+	shelfSardineCan.setRotation(180.0f);
 }
 void SceneSP::DeclareGLEnable()
 {
@@ -304,66 +307,68 @@ void SceneSP::Render()
 	RenderSkyBox();	
     RenderSupermarket();
 	RenderUI();
-	RenderSardineCan();
 }
 void SceneSP::RenderSkyBox()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(camera.position.x, camera.position.y-20, camera.position.z);
+	modelStack.Translate(camera.position.x, camera.position.y-world_size/10, camera.position.z);
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);
-	modelStack.Translate(0, 0.5, -0.5f);
+	modelStack.Translate(0, 0.495, -0.495f);
 	RenderMesh(meshList[GEO_FRONT], false);
 	modelStack.PopMatrix();
 
 
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);
-	modelStack.Translate(0, 0.5, 0.5);
+	modelStack.Translate(0, 0.495, 0.495);
 	modelStack.Rotate(180, 0 , 1, 0);
 	RenderMesh(meshList[GEO_BACK], false);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);
-	modelStack.Translate(0, 1, 0);
+	modelStack.Translate(0, 0.965f, 0);
 	modelStack.Rotate(90, 1 ,0, 0);
 	RenderMesh(meshList[GEO_TOP], false);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);	
-	modelStack.Translate(-0.5, 0.5, 0); 
+	modelStack.Translate(-0.495, 0.495, 0); 
     modelStack.Rotate(90, 0 , 1, 0);
 	RenderMesh(meshList[GEO_LEFT], false);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size); 
-	modelStack.Translate(0.5, 0.5, 0);	
+	modelStack.Translate(0.495,0.495, 0);	
 	modelStack.Rotate(-90, 0 , 1, 0);
 	RenderMesh(meshList[GEO_RIGHT], false);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, -1, 0);
+	modelStack.Translate(0, -0.05f, 0);
 	modelStack.Scale( world_size, world_size, world_size);
 	modelStack.Rotate(-90, 1 ,0, 0);
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
-    RenderSupermarket();
-    modelStack.PushMatrix();
-	modelStack.Translate(-30, 0, -25);
+	
+}
+void SceneSP::RenderCashierTables()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(-30, 0, -15);
+	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], false);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -25);
+	modelStack.Translate(0, 0, -15);
+	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], false);
 	modelStack.PopMatrix();
-	RenderShelves();
-	RenderUI();
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
@@ -480,47 +485,58 @@ void SceneSP::RenderSupermarket()
 {
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
-	RenderShelves();
-	RenderDoors();
-	RenderSamplestand();
+	RenderShelves();		//Render Shelves in Supermarket
+	RenderDoors();			//Render Doors in Supermarket
+	RenderSamplestand();	//Render Sample Food Stand in Supermarket
+	RenderCashierTables();	//Render Cashier table in Supermarket
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
 {
-	for(int x = 0;x < 3;x++)
-	{
-		modelStack.PushMatrix();//Vege shelf
-		modelStack.Translate(25 - (x * 6),0,28);
-		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], toggleLight);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();//Canned shelf
-		modelStack.Translate(25 - (x * 6),0,18);
-		RenderMesh(meshList[GEO_SHELF], toggleLight);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Translate(25 - (x * 6),0,16);
-		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], toggleLight);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Translate(25 - (x * 6),0,6);
-		RenderMesh(meshList[GEO_SHELF], toggleLight);
-		modelStack.PopMatrix();
-		modelStack.PushMatrix();
-		modelStack.Translate(25 - (x * 6),0,4);
-		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], toggleLight);
-		modelStack.PopMatrix();
-	}
-	for(int x = 0;x < 5;x++)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(38,0,27 - (x * 6));
-		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_SHELF], toggleLight);
-		modelStack.PopMatrix();
-	}
+	RenderShelves(shelfSardineCan);					//Sardine shelf
+	RenderCan(shelfSardineCan,GEO_CAN_SARDINE);		//Populate Sardine shelf with cans
+}
+void SceneSP::RenderShelves(CContainer container)
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(container.getXpos(),container.getYpos(),container.getZpos());
+	modelStack.Rotate(container.getRotation(),0,1,0);
+	RenderMesh(meshList[GEO_SHELF],toggleLight);
+	modelStack.PopMatrix();
+	//for(int x = 0;x < 3;x++)
+	//{
+	//	modelStack.PushMatrix();//Vege shelf
+	//	modelStack.Translate(25 - (x * 6),0,28);
+	//	modelStack.Rotate(180,0,1,0);
+	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
+	//	modelStack.PopMatrix();
+	//	modelStack.PushMatrix();//Canned shelf
+	//	modelStack.Translate(25 - (x * 6),0,18);
+	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
+	//	modelStack.PopMatrix();
+	//	modelStack.PushMatrix();
+	//	modelStack.Translate(25 - (x * 6),0,16);
+	//	modelStack.Rotate(180,0,1,0);
+	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
+	//	modelStack.PopMatrix();
+	//	modelStack.PushMatrix();
+	//	modelStack.Translate(25 - (x * 6),0,6);
+	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
+	//	modelStack.PopMatrix();
+	//	modelStack.PushMatrix();
+	//	modelStack.Translate(25 - (x * 6),0,4);
+	//	modelStack.Rotate(180,0,1,0);
+	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
+	//	modelStack.PopMatrix();
+	//}
+	//for(int x = 0;x < 5;x++)
+	//{
+	//	modelStack.PushMatrix();
+	//	modelStack.Translate(38,0,27 - (x * 6));
+	//	modelStack.Rotate(-90,0,1,0);
+	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
+	//	modelStack.PopMatrix();
+	//}
 }
 void SceneSP::RenderDoors()
 {
@@ -569,12 +585,12 @@ void SceneSP::UpdateDoor(double dt)
 	if(toggleDoorFront)
 	{
 		if(moveDoorFront > -8.0f)
-			moveDoorFront -= 10 * dt;
+			moveDoorFront -= 10.f * dt;
 	}
 	else
 	{
 		if(moveDoorFront < 0.0f)
-			moveDoorFront += 10 * dt;
+			moveDoorFront += 10.f * dt;
 	}
 	//Back door control
 	if((camera.position.z < 0 && camera.position.z > -50) && (camera.position.x > 10  && camera.position.x < 35))
@@ -584,12 +600,12 @@ void SceneSP::UpdateDoor(double dt)
 	if(toggleDoorBack)
 	{
 		if(moveDoorBack > -8.0f)
-			moveDoorBack -= 10 * dt;
+			moveDoorBack -= 10.f * dt;
 	}
 	else
 	{
 		if(moveDoorBack < 0.0f)
-			moveDoorBack += 10 * dt;
+			moveDoorBack += 10.f * dt;
 	}
 }
 void SceneSP::RenderSamplestand()
@@ -599,27 +615,27 @@ void SceneSP::RenderSamplestand()
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
 	modelStack.PopMatrix();
 }
-void SceneSP::RenderSardineCan()
+void SceneSP::RenderCan(CContainer container, int type)
 {
-	for(int i = 0; i<ptrContainer->getFirstStock();++i)
+	for(int i = 0; i<container.getFirstStock();++i)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(21-i,4,28);
-		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
+		RenderMesh(meshList[type], toggleLight);
 		modelStack.PopMatrix();
 	}
-	for(int i = 0; i<ptrContainer->getSecondStock();++i)
+	for(int i = 0; i<container.getSecondStock();++i)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(21-i,2.3,28);
-		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
+		RenderMesh(meshList[type], toggleLight);
 		modelStack.PopMatrix();
 	}
-	for(int i = 0; i<ptrContainer->getThirdStock();++i)
+	for(int i = 0; i<container.getThirdStock();++i)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(21-i,1.2,28);
-		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
+		RenderMesh(meshList[type], toggleLight);
 		modelStack.PopMatrix();
 	}
 }

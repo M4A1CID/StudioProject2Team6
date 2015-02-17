@@ -84,10 +84,12 @@ private:
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderSupermarket();
 	void RenderShelves();
+	void RenderShelves(CContainer container);
 	void RenderDoors();
 	void RenderSamplestand();
 	void RenderUI();
-	void RenderSardineCan();
+	void RenderCan(CContainer container,int type); // Take in a CContainer location and populate it's contents
+	void RenderCashierTables();
 
 	/*======================
 		All update functions
@@ -113,8 +115,8 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 	CCharacter * ptrplayer;
-	CItem * ptrItem;
-	CContainer * ptrContainer;
+	CItem sardineCan;
+	CContainer shelfSardineCan;
 	bool toggleLight;
 	bool toggleDoorFront;
 	bool toggleDoorBack;

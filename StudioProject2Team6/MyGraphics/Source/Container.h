@@ -7,17 +7,29 @@ class CContainer
 {
 public:
 	CContainer(void);
-	CContainer(CItem first, CItem second, CItem third, string n, int firstStock, int secondStock, int thirdStock);
+	CContainer(CItem first, CItem second, CItem third, string n, int firstStock, int secondStock, int thirdStock,float posX, float posY, float posZ, float rotate);
+	~CContainer(void);
 	int getFirstStock();
 	int getSecondStock();
 	int getThirdStock();
-	~CContainer(void);
+	void setItems(CItem a,CItem b,CItem c);
+	float getXpos();
+	float getYpos();
+	float getZpos();
+	float getRotation();
+	void setPosition(float posX, float posY, float posZ);
+	void setItemStock(int a, int b, int c);
+	void setRotation(float r);
 
 private:
 	CItem item_first;
 	CItem item_second;
 	CItem item_third;
 
+	float x;
+	float y;
+	float z;
+	float rotation;
 	string name;
 
 	int firstItemStock;
