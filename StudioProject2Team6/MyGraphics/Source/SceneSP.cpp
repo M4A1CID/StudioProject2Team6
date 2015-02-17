@@ -39,8 +39,6 @@ void SceneSP::Init()
 	//Initialize camera settings
 	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 	
-	
-
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
@@ -164,7 +162,7 @@ void SceneSP::DeclareLightParameters()
 	lights[1].type = Light::LIGHT_POINT;
 	lights[1].position.Set(0, 0, 0);
 	lights[1].color.Set(1, 1, 1);
-	lights[1].power = 3;
+	lights[1].power = 1;
 	lights[1].kC = 1.f;
 	lights[1].kL = 0.01f;
 	lights[1].kQ = 0.001f;
@@ -239,6 +237,7 @@ void SceneSP::Update(double dt)
 		toggleLight = false;
 	}
 	UpdateUI(dt);
+	
 	camera.Update(dt);
 	
 }
@@ -291,7 +290,6 @@ void SceneSP::Render()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Mtx44 MVP;
-
 	viewStack.LoadIdentity();
 	viewStack.LookAt(camera.position.x, camera.position.y, camera.position.z, camera.target.x, camera.target.y, camera.target.z, camera.up.x, camera.up.y, camera.up.z);
 	modelStack.LoadIdentity();

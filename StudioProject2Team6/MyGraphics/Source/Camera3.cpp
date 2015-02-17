@@ -69,8 +69,17 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 }*/
 void Camera3::Update(double dt)
 {
-
-	static const float CAMERA_SPEED = 150.f;
+	float CAMERA_SPEED = 150.f;
+	float runMultiplyer;
+	if(!Application::IsKeyPressed(VK_SHIFT)) //Check if player is sprinting
+	{
+		runMultiplyer =0.2f;
+	}
+	else
+	{
+		runMultiplyer = 0.5f;
+	}
+	
 	if(Application::IsKeyPressed(VK_LEFT))
 	{
 		Vector3 view = (target - position).Normalized();
@@ -94,6 +103,8 @@ void Camera3::Update(double dt)
 	}
 	if(Application::IsKeyPressed(VK_UP))
 	{
+		if(limiter < 80)
+		{
 		float pitch = (float)(CAMERA_SPEED * dt);
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -104,11 +115,15 @@ void Camera3::Update(double dt)
 		rotation.SetToRotation(pitch, right.x, right.y, right.z);
 		view = rotation * view;
 		target = view + position;
+		
 		limiter +=2;
+		}
 		
 	}
 	if(Application::IsKeyPressed(VK_DOWN))
 	{
+		if(limiter>10)
+		{
 		float pitch = (float)(-CAMERA_SPEED * dt);
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
@@ -119,7 +134,9 @@ void Camera3::Update(double dt)
 		rotation.SetToRotation(pitch, right.x, right.y, right.z);
 		view = rotation * view;
 		target = view + position;
-		limiter -=2;
+		
+			limiter -=2;
+		}
 	}
 	if(Application::IsKeyPressed('A') )
 	{
@@ -131,8 +148,8 @@ void Camera3::Update(double dt)
 		Vector3 right = view.Cross(up);
 		right.y = 0;
 		right.Normalize();
-		position -= right * CAMERA_SPEED * dt;
-		target -= right * CAMERA_SPEED * dt;
+		position -= right * CAMERA_SPEED*runMultiplyer * dt;
+		target -= right * CAMERA_SPEED*runMultiplyer * dt;
 	}
 	if(Application::IsKeyPressed('D'))
 	{
@@ -142,8 +159,8 @@ void Camera3::Update(double dt)
 		Vector3 right = view.Cross(up);
 		right.y = 0;
 		right.Normalize();
-		position += right * CAMERA_SPEED * dt;
-		target += right * CAMERA_SPEED * dt;
+		position += right * CAMERA_SPEED *runMultiplyer* dt;
+		target += right * CAMERA_SPEED *runMultiplyer* dt;
 
 
 	}
@@ -153,8 +170,8 @@ void Camera3::Update(double dt)
 
 		Vector3 view = (target - position).Normalized();
 		//view.y = 0;
-		position += view * CAMERA_SPEED * dt;
-		target += view * CAMERA_SPEED * dt;
+		position += view * CAMERA_SPEED *runMultiplyer* dt;
+		target += view * CAMERA_SPEED*runMultiplyer * dt;
 
 
 	}
@@ -165,8 +182,8 @@ void Camera3::Update(double dt)
 
 		Vector3 view = (target - position).Normalized();
 		view.y = 0;
-		position -= view * CAMERA_SPEED * dt;
-		target -= view * CAMERA_SPEED * dt;
+		position -= view * CAMERA_SPEED *runMultiplyer* dt;
+		target -= view * CAMERA_SPEED*runMultiplyer * dt;
 
 
 	}
