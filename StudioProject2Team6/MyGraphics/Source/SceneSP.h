@@ -51,6 +51,12 @@ private:
 		U_LIGHT1_COSCUTOFF,
 		U_LIGHT1_COSINNER,
 		U_LIGHT1_EXPONENT,
+		GEO_FRONT,
+		GEO_BOTTOM,
+		GEO_BACK,
+		GEO_TOP,
+		GEO_LEFT,
+		GEO_RIGHT,
 		U_NUMLIGHTS,
 		//add these enum in UNIFORM_TYPE before U_TOTAL
 		U_COLOR_TEXTURE_ENABLED,
@@ -81,12 +87,15 @@ private:
 	/*========================================
 			Declare variables here
 	=========================================*/
+	
 	unsigned m_vertexArrayID;
 	Mesh* meshList[NUM_GEOMETRY];
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 	CCharacter * ptrplayer;
 	bool toggleLight;
+
+	float world_size;
 
 	string s_money;
 	string s_position;
@@ -100,9 +109,12 @@ public:
 	virtual void Update(double dt);
 	virtual void Render();
 	virtual void Exit();
-
+	
 	//Camera3 camera;
 	Camera3 camera;
+	
+	//render skybox
+	void RenderSkyBox();
 
 	MS modelStack, viewStack, projectionStack;
 
@@ -112,3 +124,4 @@ public:
 
 
 #endif
+

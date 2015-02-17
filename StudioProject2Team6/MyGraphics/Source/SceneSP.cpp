@@ -28,7 +28,9 @@ void SceneSP::Init()
 	}
 	/*=============================================
 				Init variables here
-	=============================================*/
+	=============================================*/	
+	world_size = 3000.0f;
+	
 	initCharacter(); //Initilize the player
 	toggleLight = true;
 	//Initialize camera settings
@@ -41,7 +43,7 @@ void SceneSP::Init()
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
 
-	
+
 	DeclareLightParameters(); //Declare Light parameters
 }
 void SceneSP::initGeoType()
@@ -138,6 +140,27 @@ void SceneSP::DeclareLightParameters()
 	glUniform1f(m_parameters[U_LIGHT0_COSCUTOFF], lights[0].cosCutoff);
 	glUniform1f(m_parameters[U_LIGHT0_COSINNER], lights[0].cosInner);
 	glUniform1f(m_parameters[U_LIGHT0_EXPONENT], lights[0].exponent);
+
+
+	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1), 1.f);
+	meshList[GEO_FRONT]->textureID = LoadTGA("Image//skybox_front.tga");
+
+	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1), 1.f);
+	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//skybox_bottom.tga");
+
+	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1), 1.f);
+	meshList[GEO_BACK]->textureID = LoadTGA("Image//skybox_back.tga");
+	
+
+	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1), 1.f);
+	meshList[GEO_TOP]->textureID = LoadTGA("Image//skybox_top.tga");
+	
+	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1), 1.f);
+	meshList[GEO_LEFT]->textureID = LoadTGA("Image//skybox_left.tga");
+	
+	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
+	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
+	
 }
 void SceneSP::UpdateUI(double dt)
 {
@@ -182,6 +205,49 @@ void SceneSP::Update(double dt)
 	camera.Update(dt);
 	
 }
+
+void SceneSP::RenderSkyBox()
+{
+	
+	modelStack.PushMatrix();
+	modelStack.Scale(world_size, world_size, world_size);
+	modelStack.Translate(0, 0.5, -0.5f);
+	RenderMesh(meshList[GEO_FRONT], false);
+	modelStack.PopMatrix();
+
+
+	modelStack.PushMatrix();
+	modelStack.Scale(world_size, world_size, world_size);
+	modelStack.Translate(0, 0.5, 0.5);
+	modelStack.Rotate(180, 0 , 1, 0);
+	RenderMesh(meshList[GEO_BACK], false);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Scale(world_size, world_size, world_size);
+	modelStack.Translate(0, 1, 0);
+	modelStack.Rotate(90, 1 ,0, 0);
+	RenderMesh(meshList[GEO_TOP], false);
+	modelStack.PopMatrix();
+
+	
+
+	modelStack.PushMatrix();
+	modelStack.Scale(world_size, world_size, world_size);	
+	modelStack.Translate(-0.5, 0.5, 0); 
+    modelStack.Rotate(90, 0 , 1, 0);
+	RenderMesh(meshList[GEO_LEFT], false);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Scale(world_size, world_size, world_size); 
+	modelStack.Translate(0.5, 0.5, 0);	
+	modelStack.Rotate(-90, 0 , 1, 0);
+	RenderMesh(meshList[GEO_RIGHT], false);
+	modelStack.PopMatrix();
+
+}
+
 void SceneSP::Render()
 {
 		//clear depth and color buffer
@@ -213,8 +279,26 @@ void SceneSP::Render()
 	}
 	
 	RenderMesh(meshList[GEO_AXES],false);
-	RenderSupermarket();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.position.x, camera.position.y-20, camera.position.z);
+	RenderSkyBox();	
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(0, -1, 0);
+	modelStack.Scale( world_size, world_size, world_size);
+	modelStack.Rotate(-90, 1 ,0, 0);
+	RenderMesh(meshList[GEO_BOTTOM], false);
+	modelStack.PopMatrix();
+    RenderSupermarket();
+//<<<<<<< Updated upstream
+   
+
 	RenderUI();
+//=======
+
+	
+//>>>>>>> Stashed changes
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
