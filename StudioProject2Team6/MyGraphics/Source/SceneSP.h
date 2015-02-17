@@ -102,10 +102,11 @@ private:
 	unsigned m_parameters[U_TOTAL];
 	CCharacter * ptrplayer;
 	bool toggleLight;
-	bool toggleDoor;
-	bool doorIsOpening;
+	bool toggleDoorFront;
+	bool toggleDoorBack;
 	float world_size;
-	float moveDoor;
+	float moveDoorFront;
+	float moveDoorBack;
 	string s_money;
 	string s_position;
 	string s_fps;

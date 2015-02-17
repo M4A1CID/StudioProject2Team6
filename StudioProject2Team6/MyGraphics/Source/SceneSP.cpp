@@ -36,9 +36,10 @@ void SceneSP::Init()
 	initGeoType();
 
 	toggleLight = true;
-	toggleDoor = false;
-	doorIsOpening = false;
-	moveDoor = 0.0f;
+	toggleDoorFront = false;
+	toggleDoorBack = false;
+	moveDoorFront = 0.0f;
+	moveDoorBack = 0.0f;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 0, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 	
@@ -496,8 +497,9 @@ void SceneSP::RenderShelves()
 }
 void SceneSP::RenderDoors()
 {
+	//Front doors
 	modelStack.PushMatrix();
-	modelStack.Translate(moveDoor, 0.0f, 0.0f);
+	modelStack.Translate(moveDoorFront, 0.0f, 0.0f);
 	modelStack.PushMatrix();
 	modelStack.Translate(-25.0f, 0.0f, 30.5f);
 	RenderMesh(meshList[GEO_DOOR], toggleLight);
@@ -505,9 +507,26 @@ void SceneSP::RenderDoors()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-moveDoor, 0.0f, 0.0f);
+	modelStack.Translate(-moveDoorFront, 0.0f, 0.0f);
 	modelStack.PushMatrix();
 	modelStack.Translate(-15.2f, 11.2f, 30.5f);
+	modelStack.Rotate(180,0,0,1);
+	RenderMesh(meshList[GEO_DOOR], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	//Back doors
+	modelStack.PushMatrix();
+	modelStack.Translate(moveDoorBack, 0.0f, 0.0f);
+	modelStack.PushMatrix();
+	modelStack.Translate(17.0f, 0.0f, -30.0f);
+	RenderMesh(meshList[GEO_DOOR], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-moveDoorBack, 0.0f, 0.0f);
+	modelStack.PushMatrix();
+	modelStack.Translate(26.8f, 11.2f, -30.0f);
 	modelStack.Rotate(180,0,0,1);
 	RenderMesh(meshList[GEO_DOOR], toggleLight);
 	modelStack.PopMatrix();
@@ -515,24 +534,35 @@ void SceneSP::RenderDoors()
 }
 void SceneSP::UpdateDoor(double dt)
 {
+	//Front door control
 	if((camera.position.z < 50 && camera.position.z > 0) && (camera.position.x > -30  && camera.position.x < -10))
+			toggleDoorFront = true;
+	else
+		toggleDoorFront = false;
+	if(toggleDoorFront)
 	{
-			toggleDoor = true;
+		if(moveDoorFront > -8.0f)
+			moveDoorFront -= 10 * dt;
 	}
 	else
 	{
-		toggleDoor = false;
+		if(moveDoorFront < 0.0f)
+			moveDoorFront += 10 * dt;
 	}
-
-	if(toggleDoor)
+	//Back door control
+	if((camera.position.z < 0 && camera.position.z > -50) && (camera.position.x > 10  && camera.position.x < 35))
+			toggleDoorBack = true;
+	else
+		toggleDoorBack = false;
+	if(toggleDoorBack)
 	{
-		if(moveDoor > -8.0f)
-			moveDoor -= 10 * dt;
+		if(moveDoorBack > -8.0f)
+			moveDoorBack -= 10 * dt;
 	}
 	else
 	{
-		if(moveDoor < 0.0f)
-			moveDoor += 10 * dt;
+		if(moveDoorBack < 0.0f)
+			moveDoorBack += 10 * dt;
 	}
 }
 void SceneSP::RenderSamplestand()
