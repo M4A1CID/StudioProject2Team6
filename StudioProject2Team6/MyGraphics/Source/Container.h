@@ -8,6 +8,9 @@ class CContainer
 public:
 	CContainer(void);
 	CContainer(CItem first, CItem second, CItem third, string n, int firstStock, int secondStock, int thirdStock);
+	int getFirstStock();
+	int getSecondStock();
+	int getThirdStock();
 	~CContainer(void);
 
 private:

@@ -8,12 +8,14 @@ class CItem
 {
 public:
 	CItem(void);
-	CItem(string n, double p);
+	CItem(string n, float p);
+	void setName(string n);
+	void setPrice(float p);
 	~CItem(void);
 
 private:
 	string name;
-	double price;
+	float price;
 };
 
 #endif

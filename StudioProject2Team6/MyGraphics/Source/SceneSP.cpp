@@ -8,6 +8,7 @@
 #include "LoadTGA.h"
 
 
+
 static float ROT_LIMIT = 45.f;
 static float SCALE_LIMIT = 5.f;
 SceneSP::SceneSP()
@@ -33,7 +34,8 @@ void SceneSP::Init()
 	world_size = 3000.0f;
 	
 	initCharacter(); //Initilize the player
-	initGeoType();
+	initGeoType(); //Initilize all Geo Types
+	initItems(); //Initilize all items
 
 	toggleLight = true;
 	toggleDoorFront = false;
@@ -60,6 +62,11 @@ void SceneSP::initGeoType()
 	meshList[GEO_DOOR]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_SAMPLESTAND] = MeshBuilder::GenerateOBJ("samplestand", "OBJ//sample_stand.obj");
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
+	/*=============================
+		Init all food items
+	==============================*/
+	meshList[GEO_CAN_SARDINE] = MeshBuilder::GenerateOBJ("sardineCan","OBJ//canned_food_1.obj");
+	meshList[GEO_CAN_SARDINE]->textureID = LoadTGA("Image//canned_food_1.tga");
 	/*========================
 			SKYBOX INIT
 	=========================*/
@@ -85,6 +92,14 @@ void SceneSP::initCharacter()
 {
 	ptrplayer = new CCharacter(100.0f,0,0,5,false);
 
+}
+void SceneSP::initItems()
+{
+	CItem sardineCan;
+	sardineCan.setName("Sardine Can");
+	sardineCan.setPrice(5.0f);
+
+	ptrContainer = new CContainer(sardineCan,sardineCan,sardineCan,"ShelfOne",5,5,5);
 }
 void SceneSP::DeclareGLEnable()
 {
@@ -253,10 +268,48 @@ void SceneSP::Update(double dt)
 	camera.Update(dt);
 	UpdateDoor(dt);
 }
+void SceneSP::Render()
+{
+		//clear depth and color buffer
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	Mtx44 MVP;
+	viewStack.LoadIdentity();
+	viewStack.LookAt(camera.position.x, camera.position.y, camera.position.z, camera.target.x, camera.target.y, camera.target.z, camera.up.x, camera.up.y, camera.up.z);
+	modelStack.LoadIdentity();
+
+	if(lights[0].type == Light::LIGHT_DIRECTIONAL)
+	{
+		Vector3 lightDir(lights[0].position.x, lights[0].position.y, lights[0].position.z);
+		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
+		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightDirection_cameraspace.x);
+	}
+	else if(lights[0].type == Light::LIGHT_SPOT)
+	{
+		Position lightPosition_cameraspace = viewStack.Top() * lights[0].position;
+		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
+		Vector3 spotDirection_cameraspace = viewStack.Top() * lights[0].spotDirection;
+		glUniform3fv(m_parameters[U_LIGHT0_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
+	}
+	else
+	{
+		Position lightPosition_cameraspace = viewStack.Top() * lights[0].position;
+		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
+	}
+	
+	RenderMesh(meshList[GEO_AXES],false);
+
+	
+	
+	RenderSkyBox();	
+    RenderSupermarket();
+	RenderUI();
+	RenderSardineCan();
+}
 void SceneSP::RenderSkyBox()
 {
-	
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.position.x, camera.position.y-20, camera.position.z);
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);
 	modelStack.Translate(0, 0.5, -0.5f);
@@ -291,44 +344,6 @@ void SceneSP::RenderSkyBox()
 	modelStack.Rotate(-90, 0 , 1, 0);
 	RenderMesh(meshList[GEO_RIGHT], false);
 	modelStack.PopMatrix();
-
-}
-
-void SceneSP::Render()
-{
-		//clear depth and color buffer
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-	Mtx44 MVP;
-	viewStack.LoadIdentity();
-	viewStack.LookAt(camera.position.x, camera.position.y, camera.position.z, camera.target.x, camera.target.y, camera.target.z, camera.up.x, camera.up.y, camera.up.z);
-	modelStack.LoadIdentity();
-
-	if(lights[0].type == Light::LIGHT_DIRECTIONAL)
-	{
-		Vector3 lightDir(lights[0].position.x, lights[0].position.y, lights[0].position.z);
-		Vector3 lightDirection_cameraspace = viewStack.Top() * lightDir;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightDirection_cameraspace.x);
-	}
-	else if(lights[0].type == Light::LIGHT_SPOT)
-	{
-		Position lightPosition_cameraspace = viewStack.Top() * lights[0].position;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-		Vector3 spotDirection_cameraspace = viewStack.Top() * lights[0].spotDirection;
-		glUniform3fv(m_parameters[U_LIGHT0_SPOTDIRECTION], 1, &spotDirection_cameraspace.x);
-	}
-	else
-	{
-		Position lightPosition_cameraspace = viewStack.Top() * lights[0].position;
-		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
-	}
-	
-	RenderMesh(meshList[GEO_AXES],false);
-
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(camera.position.x, camera.position.y-20, camera.position.z);
-	RenderSkyBox();	
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -583,6 +598,30 @@ void SceneSP::RenderSamplestand()
 	modelStack.Translate(0.0f, 0.0f, 25.0f);
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
 	modelStack.PopMatrix();
+}
+void SceneSP::RenderSardineCan()
+{
+	for(int i = 0; i<ptrContainer->getFirstStock();++i)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(21-i,4,28);
+		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.PopMatrix();
+	}
+	for(int i = 0; i<ptrContainer->getSecondStock();++i)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(21-i,2.3,28);
+		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.PopMatrix();
+	}
+	for(int i = 0; i<ptrContainer->getThirdStock();++i)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(21-i,1.2,28);
+		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.PopMatrix();
+	}
 }
 void SceneSP::Exit()
 {

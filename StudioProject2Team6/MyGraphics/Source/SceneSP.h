@@ -9,6 +9,7 @@
 #include "Light.h"
 #include "Utility.h"
 #include "Character.h"
+#include "Container.h"
 #include <string>
 #include <sstream>
 
@@ -75,6 +76,7 @@ private:
 		GEO_CASHIER,
 		GEO_DOOR,
 		GEO_SAMPLESTAND,
+		GEO_CAN_SARDINE,
 		NUM_GEOMETRY,
 	};
 
@@ -84,13 +86,23 @@ private:
 	void RenderShelves();
 	void RenderDoors();
 	void RenderSamplestand();
+	void RenderUI();
+	void RenderSardineCan();
+
+	/*======================
+		All update functions
+	=======================*/
+	void UpdateDoor(double dt);
+	void UpdateUI(double dt);
+	/*=======================
+		All Init functions
+	=======================*/
 	void DeclareLightParameters();
 	void DeclareGLEnable();
-	void UpdateUI(double dt);
-	void UpdateDoor(double dt);
-	void RenderUI();
 	void initGeoType();
 	void initCharacter();
+	void initItems();
+
 
 	/*========================================
 			Declare variables here
@@ -101,6 +113,8 @@ private:
 	unsigned m_programID;
 	unsigned m_parameters[U_TOTAL];
 	CCharacter * ptrplayer;
+	CItem * ptrItem;
+	CContainer * ptrContainer;
 	bool toggleLight;
 	bool toggleDoorFront;
 	bool toggleDoorBack;

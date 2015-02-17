@@ -23,3 +23,15 @@ CContainer::CContainer(CItem first, CItem second, CItem third, string n, int fir
 CContainer::~CContainer(void)
 {
 }
+int CContainer::getFirstStock(void)
+{
+	return firstItemStock;
+}
+int CContainer::getSecondStock(void)
+{
+	return secondItemStock;
+}
+int CContainer::getThirdStock(void)
+{
+	return thirdItemStock;
+}
