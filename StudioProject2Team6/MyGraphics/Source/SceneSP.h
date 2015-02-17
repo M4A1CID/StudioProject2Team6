@@ -3,7 +3,6 @@
 
 #include "Scene.h"
 #include "Mtx44.h"
-#include "Camera2.h"
 #include "Camera3.h"
 #include "Mesh.h"
 #include "MatrixStack.h"

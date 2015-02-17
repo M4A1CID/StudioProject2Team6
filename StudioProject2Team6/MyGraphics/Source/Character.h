@@ -13,7 +13,8 @@ public:
 	float getMoney();
 
 private:
-	CItem inventory1;
+	CItem inventory_first;
+	CItem inventory_second;
 	float money;
 	int look_at_axis;
 	int itemsHeld;

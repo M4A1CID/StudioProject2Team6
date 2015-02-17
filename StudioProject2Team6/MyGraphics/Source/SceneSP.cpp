@@ -181,7 +181,7 @@ void SceneSP::RenderUI()
 {
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
-	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 3, 0, 0);
+	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
 }
 void SceneSP::Update(double dt)
 {
@@ -425,6 +425,7 @@ void SceneSP::Exit()
 		if(meshList[i] != NULL)
 			delete meshList[i];
 	}
+	delete ptrplayer;
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
