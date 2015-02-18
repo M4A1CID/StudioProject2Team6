@@ -133,9 +133,14 @@ private:
 	CCharacter * ptrplayer;
 	CItem sardineCan;
 	CItem peasCan;
+	CItem brownCan;
+	CItem tomatoCan;
+	CItem beansCan;
+	CItem melonCan;
+	CItem vargaCan;
+	CItem branCan;
 	CItem cerealBox;
 	CContainer shelfSardineCan;
-	CContainer shelfPeasCan;
 	bool toggleLight;
 	bool toggleDoorFront;
 	bool toggleDoorBack;

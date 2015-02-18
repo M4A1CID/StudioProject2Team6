@@ -81,7 +81,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_6.tga");
 	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
 	meshList[GEO_CAN_BRAN]->textureID = LoadTGA("Image//canned_food_6.tga");
-
 	meshList[GEO_CEREAL] = MeshBuilder::GenerateOBJ("cerealBox","OBJ//cereal_box.obj");
 	meshList[GEO_CEREAL]->textureID = LoadTGA("Image//cereal_box.tga");
 	/*========================
@@ -119,11 +118,29 @@ void SceneSP::initItems()
 
 	peasCan.setName("Peas Can");
 	peasCan.setPrice(5.0f);
+	peasCan.setGeoType(GEO_CAN_PEAS);
+
+	brownCan.setName("Brown Can");
+	brownCan.setPrice(5.0f);
+	brownCan.setGeoType(GEO_CAN_BROWN);
+
+	tomatoCan.setName("Tomato Can");
+	tomatoCan.setPrice(5.0f);
+	tomatoCan.setGeoType(GEO_CAN_TOMATO);
+
+	beansCan.setName("Beans Can");
+	beansCan.setPrice(5.0f);
+	beansCan.setGeoType(GEO_CAN_BEANS);
+
+	melonCan.setName("Melon Can");
+	melonCan.setPrice(5.0f);
+	melonCan.setGeoType(GEO_CAN_MELON);
 
 	cerealBox.setName("Cereal Box");
 	cerealBox.setPrice(5.0f);
+	cerealBox.setGeoType(GEO_CEREAL);
 
-	shelfSardineCan.setItems(sardineCan,sardineCan,sardineCan);
+	shelfSardineCan.setItems(beansCan,sardineCan,melonCan);
 	shelfSardineCan.setPosition(19,0,28);
 	shelfSardineCan.setItemStock(5,5,5);
 	shelfSardineCan.setRotation(180.0f);
