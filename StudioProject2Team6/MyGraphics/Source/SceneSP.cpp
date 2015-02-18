@@ -77,7 +77,10 @@ void SceneSP::initGeoType()
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
 	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
 	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
+	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
 }
+
 void SceneSP::initCharacter()
 {
 	ptrplayer = new CCharacter(100.0f,0,0,5,false);
@@ -275,8 +278,6 @@ void SceneSP::RenderSkyBox()
 	RenderMesh(meshList[GEO_TOP], false);
 	modelStack.PopMatrix();
 
-	
-
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);	
 	modelStack.Translate(-0.5, 0.5, 0); 
@@ -329,6 +330,7 @@ void SceneSP::Render()
 	modelStack.Translate(camera.position.x, camera.position.y-20, camera.position.z);
 	RenderSkyBox();	
 	modelStack.PopMatrix();
+
 	modelStack.PushMatrix();
 	modelStack.Translate(0, -1, 0);
 	modelStack.Scale( world_size, world_size, world_size);
@@ -336,6 +338,16 @@ void SceneSP::Render()
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
     RenderSupermarket();
+    modelStack.PushMatrix();
+	modelStack.Translate(-30, 0, -25);
+	RenderMesh(meshList[GEO_CASHIER], false);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(0, 0, -25);
+	RenderMesh(meshList[GEO_CASHIER], false);
+	modelStack.PopMatrix();
+	RenderShelves();
 	RenderUI();
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
