@@ -83,12 +83,14 @@ private:
 		GEO_CAN_BEANS,
 		GEO_CAN_MELON,
 		GEO_CAN_VARGA,
-		GEO_CAN_BRAN,
 		GEO_CEREAL_1,
 		GEO_CEREAL_2,
 		GEO_CEREAL_3,
 		GEO_CEREAL_4,
 		GEO_CEREAL_5,
+		GEO_EASTEREGG_1,
+		GEO_EASTEREGG_2,
+		GEO_EASTEREGG_3,
 		NUM_GEOMETRY,
 	};
 	enum ROW_TYPE
@@ -148,6 +150,9 @@ private:
 	CItem cerealBox3;
 	CItem cerealBox4;
 	CItem cerealBox5;
+	CItem easterEgg1;
+	CItem easterEgg2;
+	CItem easterEgg3;
 	CContainer shelfSardineCan;
 	bool toggleLight;
 	bool toggleDoorFront;

@@ -77,10 +77,9 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAN_BEANS]->textureID = LoadTGA("Image//canned_food_5.tga");
 	meshList[GEO_CAN_MELON] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
 	meshList[GEO_CAN_MELON]->textureID = LoadTGA("Image//canned_food_6.tga");
-	meshList[GEO_CAN_VARGA] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
-	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_6.tga");
-	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
-	meshList[GEO_CAN_BRAN]->textureID = LoadTGA("Image//canned_food_6.tga");
+	meshList[GEO_CAN_VARGA] = MeshBuilder::GenerateOBJ("vargaCan","OBJ//canned_food_7.obj");
+	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_7.tga");
+	/*-----Add canned food here-----*/
 	meshList[GEO_CEREAL_1] = MeshBuilder::GenerateOBJ("cerealBox1","OBJ//cereal_box_1.obj");
 	meshList[GEO_CEREAL_1]->textureID = LoadTGA("Image//cereal_box_1.tga");
 	meshList[GEO_CEREAL_2] = MeshBuilder::GenerateOBJ("cerealBox2","OBJ//cereal_box_2.obj");
@@ -91,6 +90,15 @@ void SceneSP::initGeoType()
 	meshList[GEO_CEREAL_4]->textureID = LoadTGA("Image//cereal_box_4.tga");
 	meshList[GEO_CEREAL_5] = MeshBuilder::GenerateOBJ("cerealBox5","OBJ//cereal_box_5.obj");
 	meshList[GEO_CEREAL_5]->textureID = LoadTGA("Image//cereal_box_5.tga");
+	/*========================
+	EASTER EGG INIT
+	=========================*/
+	meshList[GEO_EASTEREGG_1] = MeshBuilder::GenerateOBJ("easterEgg1","OBJ//EasterEgg1.obj");
+	meshList[GEO_EASTEREGG_1]->textureID = LoadTGA("Image//EasterEgg1.tga");
+	meshList[GEO_EASTEREGG_2] = MeshBuilder::GenerateOBJ("easterEgg2","OBJ//EasterEgg2.obj");
+	meshList[GEO_EASTEREGG_2]->textureID = LoadTGA("Image//EasterEgg2.tga");
+	meshList[GEO_EASTEREGG_3] = MeshBuilder::GenerateOBJ("easterEgg3","OBJ//EasterEgg3.obj");
+	meshList[GEO_EASTEREGG_3]->textureID = LoadTGA("Image//EasterEgg3.tga");
 	/*========================
 	SKYBOX INIT
 	=========================*/
@@ -144,6 +152,10 @@ void SceneSP::initItems()
 	melonCan.setPrice(5.0f);
 	melonCan.setGeoType(GEO_CAN_MELON);
 
+	vargaCan.setName("Varga Can");
+	vargaCan.setPrice(5.0f);
+	vargaCan.setGeoType(GEO_CAN_VARGA);
+
 	cerealBox1.setName("Cereal Box1");
 	cerealBox1.setPrice(5.0f);
 	cerealBox1.setGeoType(GEO_CEREAL_1);
@@ -164,7 +176,19 @@ void SceneSP::initItems()
 	cerealBox5.setPrice(5.0f);
 	cerealBox5.setGeoType(GEO_CEREAL_5);
 
-	shelfSardineCan.setItems(beansCan,sardineCan,cerealBox4);
+	easterEgg1.setName("Easter Egg1");
+	easterEgg1.setPrice(5.0f);
+	easterEgg1.setGeoType(GEO_EASTEREGG_1);
+
+	easterEgg2.setName("Easter Egg2");
+	easterEgg2.setPrice(5.0f);
+	easterEgg2.setGeoType(GEO_EASTEREGG_2);
+
+	easterEgg3.setName("Easter Egg3");
+	easterEgg3.setPrice(5.0f);
+	easterEgg3.setGeoType(GEO_EASTEREGG_3);
+
+	shelfSardineCan.setItems(beansCan,sardineCan,easterEgg3);
 	shelfSardineCan.setPosition(19,0,28);
 	shelfSardineCan.setItemStock(5,5,5);
 	shelfSardineCan.setRotation(180.0f);
