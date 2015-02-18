@@ -98,6 +98,7 @@ void SceneSP::initItems()
 
 	sardineCan.setName("Sardine Can");
 	sardineCan.setPrice(5.0f);
+	sardineCan.setGeoType(GEO_CAN_SARDINE);
 
 	shelfSardineCan.setItems(sardineCan,sardineCan,sardineCan);
 	shelfSardineCan.setPosition(19,0,28);
@@ -494,8 +495,8 @@ void SceneSP::RenderSupermarket()
 void SceneSP::RenderShelves()
 {
 	RenderShelves(shelfSardineCan);					//Sardine shelf
-	RenderItem(shelfSardineCan,GEO_CAN_SARDINE,ROW_TOP);	//Populate Sardine shelf with cans
-	RenderItem(shelfSardineCan,GEO_CAN_SARDINE,ROW_BOTTOM);
+	RenderItem(shelfSardineCan,sardineCan,ROW_TOP);	//Populate Sardine shelf with cans
+	RenderItem(shelfSardineCan,sardineCan,ROW_BOTTOM);
 }
 void SceneSP::RenderShelves(CContainer container)
 {
@@ -640,7 +641,7 @@ void SceneSP::RenderItem(CContainer container, int type)
 		modelStack.PopMatrix();
 	}
 }
-void SceneSP::RenderItem(CContainer container, int type, int row)
+void SceneSP::RenderItem(CContainer container, CItem item, int row)
 {
 	if(row == ROW_TOP)
 	{
@@ -648,7 +649,7 @@ void SceneSP::RenderItem(CContainer container, int type, int row)
 		{
 			modelStack.PushMatrix();
 			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
-			RenderMesh(meshList[type], toggleLight);
+			RenderMesh(meshList[item.getGeoType()], toggleLight);
 			modelStack.PopMatrix();
 		}
 	}
@@ -658,7 +659,7 @@ void SceneSP::RenderItem(CContainer container, int type, int row)
 		{
 			modelStack.PushMatrix();
 			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
-			RenderMesh(meshList[type], toggleLight);
+			RenderMesh(meshList[item.getGeoType()], toggleLight);
 			modelStack.PopMatrix();
 		}
 	}
@@ -668,7 +669,7 @@ void SceneSP::RenderItem(CContainer container, int type, int row)
 		{
 			modelStack.PushMatrix();
 			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
-			RenderMesh(meshList[type], toggleLight);
+			RenderMesh(meshList[item.getGeoType()], toggleLight);
 			modelStack.PopMatrix();
 		}
 	}
