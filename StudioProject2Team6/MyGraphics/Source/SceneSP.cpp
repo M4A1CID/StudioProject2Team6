@@ -81,8 +81,16 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_6.tga");
 	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
 	meshList[GEO_CAN_BRAN]->textureID = LoadTGA("Image//canned_food_6.tga");
-	meshList[GEO_CEREAL] = MeshBuilder::GenerateOBJ("cerealBox","OBJ//cereal_box.obj");
-	meshList[GEO_CEREAL]->textureID = LoadTGA("Image//cereal_box.tga");
+	meshList[GEO_CEREAL_1] = MeshBuilder::GenerateOBJ("cerealBox1","OBJ//cereal_box_1.obj");
+	meshList[GEO_CEREAL_1]->textureID = LoadTGA("Image//cereal_box_1.tga");
+	meshList[GEO_CEREAL_2] = MeshBuilder::GenerateOBJ("cerealBox2","OBJ//cereal_box_2.obj");
+	meshList[GEO_CEREAL_2]->textureID = LoadTGA("Image//cereal_box_2.tga");
+	meshList[GEO_CEREAL_3] = MeshBuilder::GenerateOBJ("cerealBox3","OBJ//cereal_box_3.obj");
+	meshList[GEO_CEREAL_3]->textureID = LoadTGA("Image//cereal_box_3.tga");
+	meshList[GEO_CEREAL_4] = MeshBuilder::GenerateOBJ("cerealBox4","OBJ//cereal_box_4.obj");
+	meshList[GEO_CEREAL_4]->textureID = LoadTGA("Image//cereal_box_4.tga");
+	meshList[GEO_CEREAL_5] = MeshBuilder::GenerateOBJ("cerealBox5","OBJ//cereal_box_5.obj");
+	meshList[GEO_CEREAL_5]->textureID = LoadTGA("Image//cereal_box_5.tga");
 	/*========================
 	SKYBOX INIT
 	=========================*/
@@ -136,11 +144,27 @@ void SceneSP::initItems()
 	melonCan.setPrice(5.0f);
 	melonCan.setGeoType(GEO_CAN_MELON);
 
-	cerealBox.setName("Cereal Box");
-	cerealBox.setPrice(5.0f);
-	cerealBox.setGeoType(GEO_CEREAL);
+	cerealBox1.setName("Cereal Box1");
+	cerealBox1.setPrice(5.0f);
+	cerealBox1.setGeoType(GEO_CEREAL_1);
 
-	shelfSardineCan.setItems(beansCan,sardineCan,melonCan);
+	cerealBox2.setName("Cereal Box2");
+	cerealBox2.setPrice(5.0f);
+	cerealBox2.setGeoType(GEO_CEREAL_2);
+
+	cerealBox3.setName("Cereal Box3");
+	cerealBox3.setPrice(5.0f);
+	cerealBox3.setGeoType(GEO_CEREAL_3);
+
+	cerealBox4.setName("Cereal Box4");
+	cerealBox4.setPrice(5.0f);
+	cerealBox4.setGeoType(GEO_CEREAL_4);
+
+	cerealBox5.setName("Cereal Box5");
+	cerealBox5.setPrice(5.0f);
+	cerealBox5.setGeoType(GEO_CEREAL_5);
+
+	shelfSardineCan.setItems(beansCan,sardineCan,cerealBox4);
 	shelfSardineCan.setPosition(19,0,28);
 	shelfSardineCan.setItemStock(5,5,5);
 	shelfSardineCan.setRotation(180.0f);
