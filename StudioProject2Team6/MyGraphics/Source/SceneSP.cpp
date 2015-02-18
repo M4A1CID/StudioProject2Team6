@@ -22,17 +22,17 @@ SceneSP::~SceneSP()
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
-	
+
 	//Initialize all meshes to NULL
 	for(int i = 0; i < NUM_GEOMETRY; ++i)
 	{
 		meshList[i] = NULL;
 	}
 	/*=============================================
-				Init variables here
+	Init variables here
 	=============================================*/
 	world_size = 3000.0f;
-	
+
 	initCharacter(); //Initilize the player
 	initGeoType(); //Initilize all Geo Types
 	initItems(); //Initilize all items
@@ -44,11 +44,11 @@ void SceneSP::Init()
 	moveDoorBack = 0.0f;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 10, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
-	
+
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
-	
+
 	DeclareLightParameters(); //Declare Light parameters
 }
 void SceneSP::initGeoType()
@@ -63,12 +63,12 @@ void SceneSP::initGeoType()
 	meshList[GEO_SAMPLESTAND] = MeshBuilder::GenerateOBJ("samplestand", "OBJ//sample_stand.obj");
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
 	/*=============================
-		Init all food items
+	Init all food items
 	==============================*/
 	meshList[GEO_CAN_SARDINE] = MeshBuilder::GenerateOBJ("sardineCan","OBJ//canned_food_1.obj");
 	meshList[GEO_CAN_SARDINE]->textureID = LoadTGA("Image//canned_food_1.tga");
 	/*========================
-			SKYBOX INIT
+	SKYBOX INIT
 	=========================*/
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1), 1.f);
 	meshList[GEO_FRONT]->textureID = LoadTGA("Image//skybox_front.tga");
@@ -95,7 +95,7 @@ void SceneSP::initCharacter()
 }
 void SceneSP::initItems()
 {
-	
+
 	sardineCan.setName("Sardine Can");
 	sardineCan.setPrice(5.0f);
 
@@ -121,10 +121,10 @@ void SceneSP::DeclareGLEnable()
 	// Generate a default VAO for now
 	glGenVertexArrays(1, &m_vertexArrayID);
 	glBindVertexArray(m_vertexArrayID);
-	
+
 	//Load vertex and fragment shaders
 	m_programID = LoadShaders( "Shader//Texture.vertexshader", "Shader//Text.fragmentshader" );
-	
+
 	// Get a handle for our "MVP" uniform
 	m_parameters[U_MVP] = glGetUniformLocation(m_programID, "MVP");
 	// Make sure you pass uniform parameters after glUseProgram()
@@ -168,8 +168,8 @@ void SceneSP::DeclareLightParameters()
 	m_parameters[U_LIGHT1_COSINNER] = glGetUniformLocation(m_programID,"lights[1].cosInner");
 	m_parameters[U_LIGHT1_EXPONENT] = glGetUniformLocation(m_programID,"lights[1].exponent");
 	m_parameters[U_NUMLIGHTS] = glGetUniformLocation(m_programID,"numLights");
-	
-		// Get a handle for our "colorTexture" uniform
+
+	// Get a handle for our "colorTexture" uniform
 	m_parameters[U_COLOR_TEXTURE_ENABLED] = glGetUniformLocation(m_programID, "colorTextureEnabled");
 	m_parameters[U_COLOR_TEXTURE] = glGetUniformLocation(m_programID, "colorTexture");
 
@@ -223,13 +223,13 @@ void SceneSP::DeclareLightParameters()
 	glUniform1f(m_parameters[U_LIGHT1_COSINNER], lights[1].cosInner);
 	glUniform1f(m_parameters[U_LIGHT1_EXPONENT], lights[1].exponent);
 
-	
-	
+
+
 }
 void SceneSP::UpdateUI(double dt)
 {
 	std::stringstream ss_fps,ss_position,ss_money;
-	
+
 
 	ss_fps << 1/dt;
 	s_fps = ss_fps.str();
@@ -265,15 +265,15 @@ void SceneSP::Update(double dt)
 	{
 		toggleLight = false;
 	}
-	
+
 	UpdateUI(dt);
-	
+
 	camera.Update(dt);
 	UpdateDoor(dt);
 }
 void SceneSP::Render()
 {
-		//clear depth and color buffer
+	//clear depth and color buffer
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	Mtx44 MVP;
@@ -299,13 +299,13 @@ void SceneSP::Render()
 		Position lightPosition_cameraspace = viewStack.Top() * lights[0].position;
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
-	
+
 	RenderMesh(meshList[GEO_AXES],false);
 
-	
-	
+
+
 	RenderSkyBox();	
-    RenderSupermarket();
+	RenderSupermarket();
 	RenderUI();
 }
 void SceneSP::RenderSkyBox()
@@ -325,7 +325,7 @@ void SceneSP::RenderSkyBox()
 	modelStack.Rotate(180, 0 , 1, 0);
 	RenderMesh(meshList[GEO_BACK], false);
 	modelStack.PopMatrix();
-	
+
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);
 	modelStack.Translate(0, 0.965f, 0);
@@ -336,10 +336,10 @@ void SceneSP::RenderSkyBox()
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);	
 	modelStack.Translate(-0.495f, 0.495f, 0); 
-    modelStack.Rotate(90, 0 , 1, 0);
+	modelStack.Rotate(90, 0 , 1, 0);
 	RenderMesh(meshList[GEO_LEFT], false);
 	modelStack.PopMatrix();
-	
+
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size); 
 	modelStack.Translate(0.495f,0.495f, 0);	
@@ -354,7 +354,7 @@ void SceneSP::RenderSkyBox()
 	modelStack.Rotate(-90, 1 ,0, 0);
 	RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
-	
+
 }
 void SceneSP::RenderCashierTables()
 {
@@ -363,7 +363,7 @@ void SceneSP::RenderCashierTables()
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], false);
 	modelStack.PopMatrix();
-	
+
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -15);
 	modelStack.Rotate(180,0,1,0);
@@ -374,7 +374,7 @@ void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
 		return;
-	
+
 	glDisable(GL_DEPTH_TEST);
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform3fv(m_parameters[U_TEXT_COLOR], 1, &color.r);
@@ -400,7 +400,7 @@ void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, floa
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
 		return;
-	
+
 	glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
 	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
@@ -440,7 +440,7 @@ void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, floa
 void SceneSP::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
-	
+
 	MVP = projectionStack.Top() * viewStack.Top() * modelStack.Top();
 	glUniformMatrix4fv(m_parameters[U_MVP], 1, GL_FALSE, &MVP.a[0]);
 	if(enableLight)
@@ -494,7 +494,8 @@ void SceneSP::RenderSupermarket()
 void SceneSP::RenderShelves()
 {
 	RenderShelves(shelfSardineCan);					//Sardine shelf
-	RenderItem(shelfSardineCan,GEO_CAN_SARDINE);	//Populate Sardine shelf with cans
+	RenderItem(shelfSardineCan,GEO_CAN_SARDINE,ROW_TOP);	//Populate Sardine shelf with cans
+	RenderItem(shelfSardineCan,GEO_CAN_SARDINE,ROW_BOTTOM);
 }
 void SceneSP::RenderShelves(CContainer container)
 {
@@ -579,7 +580,7 @@ void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
 	if((camera.position.z < 50 && camera.position.z > 0) && (camera.position.x > -30  && camera.position.x < -10))
-			toggleDoorFront = true;
+		toggleDoorFront = true;
 	else
 		toggleDoorFront = false;
 	if(toggleDoorFront)
@@ -594,7 +595,7 @@ void SceneSP::UpdateDoor(double dt)
 	}
 	//Back door control
 	if((camera.position.z < 0 && camera.position.z > -50) && (camera.position.x > 10  && camera.position.x < 35))
-			toggleDoorBack = true;
+		toggleDoorBack = true;
 	else
 		toggleDoorBack = false;
 	if(toggleDoorBack)
@@ -637,6 +638,39 @@ void SceneSP::RenderItem(CContainer container, int type)
 		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
 		RenderMesh(meshList[type], toggleLight);
 		modelStack.PopMatrix();
+	}
+}
+void SceneSP::RenderItem(CContainer container, int type, int row)
+{
+	if(row == ROW_TOP)
+	{
+		for(int i = 0; i<container.getFirstStock();++i)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
+			RenderMesh(meshList[type], toggleLight);
+			modelStack.PopMatrix();
+		}
+	}
+	if(row == ROW_MIDDLE)
+	{
+		for(int i = 0; i<container.getSecondStock();++i)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
+			RenderMesh(meshList[type], toggleLight);
+			modelStack.PopMatrix();
+		}
+	}
+	if(row == ROW_BOTTOM)
+	{
+		for(int i = 0; i<container.getThirdStock();++i)
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
+			RenderMesh(meshList[type], toggleLight);
+			modelStack.PopMatrix();
+		}
 	}
 }
 void SceneSP::Exit()

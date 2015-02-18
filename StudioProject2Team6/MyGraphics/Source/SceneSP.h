@@ -79,6 +79,13 @@ private:
 		GEO_CAN_SARDINE,
 		NUM_GEOMETRY,
 	};
+	enum ROW_TYPE
+	{
+		ROW_TOP,
+		ROW_MIDDLE,
+		ROW_BOTTOM,
+		NUM_ROW,
+	};
 
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
@@ -89,6 +96,7 @@ private:
 	void RenderSamplestand();
 	void RenderUI();
 	void RenderItem(CContainer container,int type); // Take in a CContainer location and populate it's contents
+	void RenderItem(CContainer container, int type, int row);
 	void RenderCashierTables();
 
 	/*======================
