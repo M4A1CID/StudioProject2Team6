@@ -495,8 +495,8 @@ void SceneSP::RenderSupermarket()
 void SceneSP::RenderShelves()
 {
 	RenderShelves(shelfSardineCan);					//Sardine shelf
-	RenderItem(shelfSardineCan,sardineCan,ROW_TOP);	//Populate Sardine shelf with cans
-	RenderItem(shelfSardineCan,sardineCan,ROW_BOTTOM);
+	RenderItem(shelfSardineCan,shelfSardineCan.getTopItem(),ROW_TOP);	//Populate Sardine shelf with cans
+	RenderItem(shelfSardineCan,shelfSardineCan.getBottomItem(),ROW_BOTTOM);
 }
 void SceneSP::RenderShelves(CContainer container)
 {

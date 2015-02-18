@@ -59,6 +59,18 @@ float CContainer::getRotation()
 {
 	return rotation;
 }
+CItem CContainer::getTopItem()
+{
+	return item_first;
+}
+CItem CContainer::getMiddleItem()
+{
+	return item_second;
+}
+CItem CContainer::getBottomItem()
+{
+	return item_third;
+}
 void CContainer::setRotation(float r)
 {
 	rotation = r;

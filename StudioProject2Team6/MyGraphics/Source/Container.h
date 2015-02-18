@@ -17,6 +17,9 @@ public:
 	float getYpos();
 	float getZpos();
 	float getRotation();
+	CItem getTopItem();
+	CItem getMiddleItem();
+	CItem getBottomItem();
 	void setPosition(float posX, float posY, float posZ);
 	void setItemStock(int a, int b, int c);
 	void setRotation(float r);
