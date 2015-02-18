@@ -88,7 +88,7 @@ private:
 	void RenderDoors();
 	void RenderSamplestand();
 	void RenderUI();
-	void RenderCan(CContainer container,int type); // Take in a CContainer location and populate it's contents
+	void RenderItem(CContainer container,int type); // Take in a CContainer location and populate it's contents
 	void RenderCashierTables();
 
 	/*======================

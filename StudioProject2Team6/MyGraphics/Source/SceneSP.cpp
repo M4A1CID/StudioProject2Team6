@@ -494,7 +494,7 @@ void SceneSP::RenderSupermarket()
 void SceneSP::RenderShelves()
 {
 	RenderShelves(shelfSardineCan);					//Sardine shelf
-	RenderCan(shelfSardineCan,GEO_CAN_SARDINE);		//Populate Sardine shelf with cans
+	RenderItem(shelfSardineCan,GEO_CAN_SARDINE);	//Populate Sardine shelf with cans
 }
 void SceneSP::RenderShelves(CContainer container)
 {
@@ -615,7 +615,7 @@ void SceneSP::RenderSamplestand()
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
 	modelStack.PopMatrix();
 }
-void SceneSP::RenderCan(CContainer container, int type)
+void SceneSP::RenderItem(CContainer container, int type)
 {
 	for(int i = 0; i<container.getFirstStock();++i)
 	{
