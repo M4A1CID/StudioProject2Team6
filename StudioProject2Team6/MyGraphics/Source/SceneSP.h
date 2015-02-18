@@ -77,6 +77,14 @@ private:
 		GEO_DOOR,
 		GEO_SAMPLESTAND,
 		GEO_CAN_SARDINE,
+		GEO_CAN_PEAS,
+		GEO_CAN_BROWN,
+		GEO_CAN_TOMATO,
+		GEO_CAN_BEANS,
+		GEO_CAN_MELON,
+		GEO_CAN_VARGA,
+		GEO_CAN_BRAN,
+		GEO_CEREAL,
 		NUM_GEOMETRY,
 	};
 	enum ROW_TYPE
@@ -124,7 +132,10 @@ private:
 	unsigned m_parameters[U_TOTAL];
 	CCharacter * ptrplayer;
 	CItem sardineCan;
+	CItem peasCan;
+	CItem cerealBox;
 	CContainer shelfSardineCan;
+	CContainer shelfPeasCan;
 	bool toggleLight;
 	bool toggleDoorFront;
 	bool toggleDoorBack;

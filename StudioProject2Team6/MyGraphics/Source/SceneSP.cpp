@@ -67,6 +67,23 @@ void SceneSP::initGeoType()
 	==============================*/
 	meshList[GEO_CAN_SARDINE] = MeshBuilder::GenerateOBJ("sardineCan","OBJ//canned_food_1.obj");
 	meshList[GEO_CAN_SARDINE]->textureID = LoadTGA("Image//canned_food_1.tga");
+	meshList[GEO_CAN_PEAS] = MeshBuilder::GenerateOBJ("peasCan","OBJ//canned_food_2.obj");
+	meshList[GEO_CAN_PEAS]->textureID = LoadTGA("Image//canned_food_2.tga");
+	meshList[GEO_CAN_BROWN] = MeshBuilder::GenerateOBJ("brownCan","OBJ//canned_food_3.obj");
+	meshList[GEO_CAN_BROWN]->textureID = LoadTGA("Image//canned_food_3.tga");
+	meshList[GEO_CAN_TOMATO] = MeshBuilder::GenerateOBJ("tomatoCan","OBJ//canned_food_4.obj");
+	meshList[GEO_CAN_TOMATO]->textureID = LoadTGA("Image//canned_food_4.tga");
+	meshList[GEO_CAN_BEANS] = MeshBuilder::GenerateOBJ("beansCan","OBJ//canned_food_5.obj");
+	meshList[GEO_CAN_BEANS]->textureID = LoadTGA("Image//canned_food_5.tga");
+	meshList[GEO_CAN_MELON] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
+	meshList[GEO_CAN_MELON]->textureID = LoadTGA("Image//canned_food_6.tga");
+	meshList[GEO_CAN_VARGA] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
+	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_6.tga");
+	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
+	meshList[GEO_CAN_BRAN]->textureID = LoadTGA("Image//canned_food_6.tga");
+
+	meshList[GEO_CEREAL] = MeshBuilder::GenerateOBJ("cerealBox","OBJ//cereal_box.obj");
+	meshList[GEO_CEREAL]->textureID = LoadTGA("Image//cereal_box.tga");
 	/*========================
 	SKYBOX INIT
 	=========================*/
@@ -95,10 +112,16 @@ void SceneSP::initCharacter()
 }
 void SceneSP::initItems()
 {
-
+	//Init items
 	sardineCan.setName("Sardine Can");
 	sardineCan.setPrice(5.0f);
 	sardineCan.setGeoType(GEO_CAN_SARDINE);
+
+	peasCan.setName("Peas Can");
+	peasCan.setPrice(5.0f);
+
+	cerealBox.setName("Cereal Box");
+	cerealBox.setPrice(5.0f);
 
 	shelfSardineCan.setItems(sardineCan,sardineCan,sardineCan);
 	shelfSardineCan.setPosition(19,0,28);
