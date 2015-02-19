@@ -36,7 +36,7 @@ void SceneSP::Init()
 	initCharacter(); //Initilize the player
 	initGeoType(); //Initilize all Geo Types
 	initItems(); //Initilize all items
-
+	initShelves();//Initilize all shelves
 	toggleLight = true;
 	toggleDoorFront = false;
 	toggleDoorBack = false;
@@ -119,7 +119,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
 }
-
 void SceneSP::initCharacter()
 {
 	ptrplayer = new CCharacter(100.0f,0,0,5,false);
@@ -188,11 +187,52 @@ void SceneSP::initItems()
 	easterEgg3.setPrice(5.0f);
 	easterEgg3.setGeoType(GEO_EASTEREGG_3);
 
+	
+
+	
+}
+void SceneSP::initShelves()
+{
+
+	//Populate Sardine shelf
 	shelfSardineCan.setItems(beansCan,sardineCan,easterEgg3);
 	shelfSardineCan.setPosition(19,0,28);
 	shelfSardineCan.setItemStock(5,5,5);
 	shelfSardineCan.setRotation(180.0f);
+	
+	DefineItem(shelfSardineCan,shelfSardineCan.getTopItem(),ROW_TOP);	
+	DefineItem(shelfSardineCan,shelfSardineCan.getBottomItem(),ROW_BOTTOM);
 }
+void SceneSP::DefineItem(CContainer container, CItem item, int row)
+{
+	if(row == ROW_TOP)
+	{
+		for(int i = 0; i<container.getFirstStock();++i)
+		{
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
+			myItemList.push_back(ptrItem);
+		}
+	}
+	if(row == ROW_MIDDLE)
+	{
+		for(int i = 0; i<container.getSecondStock();++i)
+		{
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
+			myItemList.push_back(ptrItem);
+		}
+	}
+	if(row == ROW_BOTTOM)
+	{
+		for(int i = 0; i<container.getThirdStock();++i)
+		{
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
+			myItemList.push_back(ptrItem);
+		}
+	}
+
+	
+}
+
 void SceneSP::DeclareGLEnable()
 {
 	// Set background color to black
@@ -219,6 +259,7 @@ void SceneSP::DeclareGLEnable()
 	// Make sure you pass uniform parameters after glUseProgram()
 	glUniform1i(m_parameters[U_NUMLIGHTS], 1);
 }
+
 void SceneSP::DeclareLightParameters()
 {
 	// Get a handle for our "textColor" uniform
@@ -315,10 +356,13 @@ void SceneSP::DeclareLightParameters()
 
 
 }
+
 void SceneSP::UpdateUI(double dt)
 {
-	std::stringstream ss_fps,ss_position,ss_money;
+	std::stringstream ss_fps,ss_position,ss_money, ss_camera;
 
+	ss_camera << camera.target.x << "," << camera.target.y << "," << camera.target.z;
+	s_camera_target = ss_camera.str();
 
 	ss_fps << 1/dt;
 	s_fps = ss_fps.str();
@@ -330,12 +374,7 @@ void SceneSP::UpdateUI(double dt)
 	s_money = ss_money.str();
 
 }
-void SceneSP::RenderUI()
-{
-	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
-	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
-	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
-}
+
 void SceneSP::Update(double dt)
 {
 	if(Application::IsKeyPressed('1')) //enable back face culling
@@ -360,6 +399,49 @@ void SceneSP::Update(double dt)
 	camera.Update(dt);
 	UpdateDoor(dt);
 }
+
+void SceneSP::UpdateDoor(double dt)
+{
+	//Front door control
+	if((camera.position.z < 50 && camera.position.z > 0) && (camera.position.x > -30  && camera.position.x < -10))
+		toggleDoorFront = true;
+	else
+		toggleDoorFront = false;
+	if(toggleDoorFront)
+	{
+		if(moveDoorFront > -8.0f)
+			moveDoorFront -= 10.f * dt;
+	}
+	else
+	{
+		if(moveDoorFront < 0.0f)
+			moveDoorFront += 10.f * dt;
+	}
+	//Back door control
+	if((camera.position.z < 0 && camera.position.z > -50) && (camera.position.x > 10  && camera.position.x < 35))
+		toggleDoorBack = true;
+	else
+		toggleDoorBack = false;
+	if(toggleDoorBack)
+	{
+		if(moveDoorBack > -8.0f)
+			moveDoorBack -= 10.f * dt;
+	}
+	else
+	{
+		if(moveDoorBack < 0.0f)
+			moveDoorBack += 10.f * dt;
+	}
+}
+
+void SceneSP::RenderUI()
+{
+	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
+	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
+	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
+}
+
 void SceneSP::Render()
 {
 	//clear depth and color buffer
@@ -393,10 +475,12 @@ void SceneSP::Render()
 
 
 
-	RenderSkyBox();	
-	RenderSupermarket();
-	RenderUI();
+	RenderSkyBox();		//Renders out Skybox
+	RenderSupermarket();//Renders out Supermarket
+	RenderUI();			//Renders out UI
+	RenderItem();		//Renders out items
 }
+
 void SceneSP::RenderSkyBox()
 {
 	modelStack.PushMatrix();
@@ -445,6 +529,7 @@ void SceneSP::RenderSkyBox()
 	modelStack.PopMatrix();
 
 }
+
 void SceneSP::RenderCashierTables()
 {
 	modelStack.PushMatrix();
@@ -582,9 +667,8 @@ void SceneSP::RenderSupermarket()
 }
 void SceneSP::RenderShelves()
 {
-	RenderShelves(shelfSardineCan);					//Sardine shelf
-	RenderItem(shelfSardineCan,shelfSardineCan.getTopItem(),ROW_TOP);	//Populate Sardine shelf with cans
-	RenderItem(shelfSardineCan,shelfSardineCan.getBottomItem(),ROW_BOTTOM);
+	RenderShelves(shelfSardineCan);	//Sardine shelf
+	
 }
 void SceneSP::RenderShelves(CContainer container)
 {
@@ -593,40 +677,6 @@ void SceneSP::RenderShelves(CContainer container)
 	modelStack.Rotate(container.getRotation(),0,1,0);
 	RenderMesh(meshList[GEO_SHELF],toggleLight);
 	modelStack.PopMatrix();
-	//for(int x = 0;x < 3;x++)
-	//{
-	//	modelStack.PushMatrix();//Vege shelf
-	//	modelStack.Translate(25 - (x * 6),0,28);
-	//	modelStack.Rotate(180,0,1,0);
-	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();//Canned shelf
-	//	modelStack.Translate(25 - (x * 6),0,18);
-	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(25 - (x * 6),0,16);
-	//	modelStack.Rotate(180,0,1,0);
-	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(25 - (x * 6),0,6);
-	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
-	//	modelStack.PopMatrix();
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(25 - (x * 6),0,4);
-	//	modelStack.Rotate(180,0,1,0);
-	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
-	//	modelStack.PopMatrix();
-	//}
-	//for(int x = 0;x < 5;x++)
-	//{
-	//	modelStack.PushMatrix();
-	//	modelStack.Translate(38,0,27 - (x * 6));
-	//	modelStack.Rotate(-90,0,1,0);
-	//	RenderMesh(meshList[GEO_SHELF], toggleLight);
-	//	modelStack.PopMatrix();
-	//}
 }
 void SceneSP::RenderDoors()
 {
@@ -665,39 +715,7 @@ void SceneSP::RenderDoors()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
-void SceneSP::UpdateDoor(double dt)
-{
-	//Front door control
-	if((camera.position.z < 50 && camera.position.z > 0) && (camera.position.x > -30  && camera.position.x < -10))
-		toggleDoorFront = true;
-	else
-		toggleDoorFront = false;
-	if(toggleDoorFront)
-	{
-		if(moveDoorFront > -8.0f)
-			moveDoorFront -= 10.f * dt;
-	}
-	else
-	{
-		if(moveDoorFront < 0.0f)
-			moveDoorFront += 10.f * dt;
-	}
-	//Back door control
-	if((camera.position.z < 0 && camera.position.z > -50) && (camera.position.x > 10  && camera.position.x < 35))
-		toggleDoorBack = true;
-	else
-		toggleDoorBack = false;
-	if(toggleDoorBack)
-	{
-		if(moveDoorBack > -8.0f)
-			moveDoorBack -= 10.f * dt;
-	}
-	else
-	{
-		if(moveDoorBack < 0.0f)
-			moveDoorBack += 10.f * dt;
-	}
-}
+
 void SceneSP::RenderSamplestand()
 {
 	modelStack.PushMatrix();
@@ -705,63 +723,17 @@ void SceneSP::RenderSamplestand()
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
 	modelStack.PopMatrix();
 }
-void SceneSP::RenderItem(CContainer container, int type)
+void SceneSP::RenderItem()
 {
-	for(int i = 0; i<container.getFirstStock();++i)
+	for(int i = 0; i< myItemList.size(); ++i)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
-		RenderMesh(meshList[type], toggleLight);
-		modelStack.PopMatrix();
-	}
-	for(int i = 0; i<container.getSecondStock();++i)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
-		RenderMesh(meshList[type], toggleLight);
-		modelStack.PopMatrix();
-	}
-	for(int i = 0; i<container.getThirdStock();++i)
-	{
-		modelStack.PushMatrix();
-		modelStack.Translate(container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
-		RenderMesh(meshList[type], toggleLight);
+		modelStack.Translate(myItemList[i]->getXpos(),myItemList[i]->getYpos(),myItemList[i]->getZpos());
+		RenderMesh(meshList[myItemList[i]->getGeoType()],toggleLight);
 		modelStack.PopMatrix();
 	}
 }
-void SceneSP::RenderItem(CContainer container, CItem item, int row)
-{
-	if(row == ROW_TOP)
-	{
-		for(int i = 0; i<container.getFirstStock();++i)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
-			RenderMesh(meshList[item.getGeoType()], toggleLight);
-			modelStack.PopMatrix();
-		}
-	}
-	if(row == ROW_MIDDLE)
-	{
-		for(int i = 0; i<container.getSecondStock();++i)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
-			RenderMesh(meshList[item.getGeoType()], toggleLight);
-			modelStack.PopMatrix();
-		}
-	}
-	if(row == ROW_BOTTOM)
-	{
-		for(int i = 0; i<container.getThirdStock();++i)
-		{
-			modelStack.PushMatrix();
-			modelStack.Translate(container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
-			RenderMesh(meshList[item.getGeoType()], toggleLight);
-			modelStack.PopMatrix();
-		}
-	}
-}
+
 void SceneSP::Exit()
 {
 	// Cleanup here

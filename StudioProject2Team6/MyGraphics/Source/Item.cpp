@@ -6,11 +6,14 @@ CItem::CItem(void)
 	price = -1.00;
 	objectType = -1;
 }
-CItem::CItem(string n, float p, int type)
+CItem::CItem(string n, float p, int type, float posX, float posY, float posZ)
 {
 	name = n;
 	price = p;
 	objectType = type;
+	x = posX;
+	y = posY;
+	z = posZ;
 }
 
 
@@ -32,4 +35,36 @@ void CItem::setGeoType(int type)
 int CItem::getGeoType()
 {
 	return objectType;
+}
+void CItem::setXpos(float posX)
+{
+	x = posX;
+}
+void CItem::setYpos(float posY)
+{
+	y = posY;
+}
+void CItem::setZpos(float posZ)
+{
+	z = posZ;
+}
+float CItem::getXpos()
+{
+	return x;
+}
+float CItem::getYpos()
+{
+	return y;
+}
+float CItem::getZpos()
+{
+	return z;
+}
+string CItem::getName()
+{
+	return name;
+}
+float CItem::getPrice()
+{
+	return price;
 }

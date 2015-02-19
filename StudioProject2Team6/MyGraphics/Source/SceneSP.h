@@ -10,9 +10,11 @@
 #include "Utility.h"
 #include "Character.h"
 #include "Container.h"
+#include <vector>
 #include <string>
 #include <sstream>
 
+using std::vector;
 using std::string;
 
 class SceneSP: public Scene
@@ -101,6 +103,10 @@ private:
 		NUM_ROW,
 	};
 
+
+	/*=======================================
+				All Render Functions
+	=======================================*/
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderSupermarket();
@@ -109,23 +115,25 @@ private:
 	void RenderDoors();
 	void RenderSamplestand();
 	void RenderUI();
-	void RenderItem(CContainer container,int type); // Take in a CContainer location and populate it's contents
-	void RenderItem(CContainer container, CItem item, int row);
+	void RenderItem(); // Take in a CContainer location and populate it's contents
+	
 	void RenderCashierTables();
 
-	/*======================
-		All update functions
-	=======================*/
+	/*=======================================
+				All update functions
+	=======================================*/
 	void UpdateDoor(double dt);
 	void UpdateUI(double dt);
-	/*=======================
-		All Init functions
-	=======================*/
+	/*=======================================
+				All Init functions
+	=======================================*/
 	void DeclareLightParameters();
 	void DeclareGLEnable();
+	void DefineItem(CContainer container, CItem item, int row);
 	void initGeoType();
 	void initCharacter();
 	void initItems();
+	void initShelves();
 
 
 	/*========================================
@@ -163,7 +171,9 @@ private:
 	string s_money;
 	string s_position;
 	string s_fps;
-
+	string s_camera_target;
+	vector<CItem*> myItemList;
+	CItem * ptrItem;
 public:
 	SceneSP();
 	~SceneSP();
