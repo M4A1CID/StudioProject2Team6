@@ -773,7 +773,7 @@ void SceneSP::RenderSupermarket()
 }
 void SceneSP::RenderShelves()
 {
-	for(int i = 0; i< myContainerList.size(); ++i)
+	for(unsigned int i = 0; i< myContainerList.size(); ++i)
 	{
 		RenderShelves(myContainerList[i]);
 	}
@@ -834,7 +834,7 @@ void SceneSP::RenderSamplestand()
 }
 void SceneSP::RenderItem()
 {
-	for(int i = 0; i< myItemList.size(); ++i)
+	for(unsigned int i = 0; i< myItemList.size(); ++i)
 	{
 		if(myItemList[i]->getActiveState()) //If Item is active
 		{
@@ -851,7 +851,7 @@ void SceneSP::checkCollision()
 {
 	if(Application::IsKeyPressed('E'))
 	{
-		for(int i = 0; i<myItemList.size();++i)
+		for(unsigned int i = 0; i<myItemList.size();++i)
 		{
 			if(((camera.target.x - myItemList[i]->getXpos()) <1.f)&&
 				((camera.target.y - myItemList[i]->getYpos()) <1.f)&&
