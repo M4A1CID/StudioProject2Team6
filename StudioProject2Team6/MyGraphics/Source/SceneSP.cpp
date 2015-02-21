@@ -130,6 +130,7 @@ void SceneSP::initItems()
 	sardineCan.setName("Sardine Can");
 	sardineCan.setPrice(5.0f);
 	sardineCan.setGeoType(GEO_CAN_SARDINE);
+	
 
 	peasCan.setName("Peas Can");
 	peasCan.setPrice(5.0f);
@@ -193,39 +194,144 @@ void SceneSP::initItems()
 }
 void SceneSP::initShelves()
 {
+	//=============================================================================
+	ptrContainer = new CContainer(beansCan,beansCan,beansCan,"ShelfOne",5,5,5,14,0,28,180);
+	myContainerList.push_back(ptrContainer);	//Push back into vector list
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	//Populate Sardine shelf
-	shelfSardineCan.setItems(beansCan,sardineCan,easterEgg3);
-	shelfSardineCan.setPosition(19,0,28);
-	shelfSardineCan.setItemStock(5,5,5);
-	shelfSardineCan.setRotation(180.0f);
-	
-	DefineItem(shelfSardineCan,shelfSardineCan.getTopItem(),ROW_TOP);	
-	DefineItem(shelfSardineCan,shelfSardineCan.getBottomItem(),ROW_BOTTOM);
+	ptrContainer = new CContainer(sardineCan,sardineCan,sardineCan,"ShelfTwo",5,5,5,20,0,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(brownCan,brownCan,brownCan,"ShelfThree",5,5,5,26,0,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	//==============================================================================
+	ptrContainer = new CContainer(tomatoCan,tomatoCan,tomatoCan,"ShelfFour",5,5,5,26,0,18,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(beansCan,beansCan,beansCan,"ShelfFive",5,5,5,20,0,18,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(melonCan,melonCan,melonCan,"ShelfSix",5,5,5,14,0,18,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//==================================================================================
+	ptrContainer = new CContainer(vargaCan,vargaCan,vargaCan,"ShelfSeven",5,5,5,26,0,16,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(cerealBox1,cerealBox1,cerealBox1,"ShelfEight",5,5,5,20,0,16,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(cerealBox2,cerealBox2,cerealBox2,"ShelfNine",5,5,5,14,0,16,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//==================================================================================
+	ptrContainer = new CContainer(cerealBox3,cerealBox3,cerealBox3,"ShelfTen",5,5,5,26,0,4,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(cerealBox4,cerealBox4,cerealBox4,"ShelfEleven",5,5,5,20,0,4,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(cerealBox5,cerealBox5,cerealBox5,"ShelfTwelve",5,5,5,14,0,4,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//==================================================================================
+	ptrContainer = new CContainer(easterEgg1,easterEgg1,easterEgg1,"Shelf13",5,5,5,26,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(easterEgg2,easterEgg2,easterEgg2,"Shelf14",5,5,5,20,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrContainer = new CContainer(easterEgg3,easterEgg3,easterEgg3,"Shelf15",5,5,5,14,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//==================================================================================
+	//				FROZEN FOOD ZONE
+	//===================================================================================
+	//ptrContainer = new CContainereasterEgg1,easterEgg1,easterEgg1,"ShelfTen",5,5,5,38,0,24,270);
+	//myContainerList.push_back(ptrContainer);
+	//DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//ptrContainer = new CContainer(cerealBox4,cerealBox4,cerealBox4,"ShelfEleven",5,5,5,38,0,18,270);
+	//myContainerList.push_back(ptrContainer);
+	//DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//ptrContainer = new CContainer(cerealBox5,cerealBox5,cerealBox5,"ShelfTwelve",5,5,5,38,0,12,270);
+	//myContainerList.push_back(ptrContainer);
+	//DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 }
-void SceneSP::DefineItem(CContainer container, CItem item, int row)
+void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 {
 	if(row == ROW_TOP)
 	{
-		for(int i = 0; i<container.getFirstStock();++i)
+		for(int i = 0; i<container->getFirstStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container.getXpos()+2-i,container.getYpos()+4,container.getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+2-i,container->getYpos()+4,container->getZpos());
 			myItemList.push_back(ptrItem);
 		}
 	}
 	if(row == ROW_MIDDLE)
 	{
-		for(int i = 0; i<container.getSecondStock();++i)
+		for(int i = 0; i<container->getSecondStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container.getXpos()+2-i,container.getYpos()+2.3f,container.getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+2-i,container->getYpos()+2.3f,container->getZpos());
 			myItemList.push_back(ptrItem);
 		}
 	}
 	if(row == ROW_BOTTOM)
 	{
-		for(int i = 0; i<container.getThirdStock();++i)
+		for(int i = 0; i<container->getThirdStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container.getXpos()+2-i,container.getYpos()+1.2f,container.getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+2-i,container->getYpos()+1.2f,container->getZpos());
 			myItemList.push_back(ptrItem);
 		}
 	}
@@ -395,7 +501,7 @@ void SceneSP::Update(double dt)
 	}
 
 	UpdateUI(dt);
-
+	//checkCollision();
 	camera.Update(dt);
 	UpdateDoor(dt);
 }
@@ -667,14 +773,17 @@ void SceneSP::RenderSupermarket()
 }
 void SceneSP::RenderShelves()
 {
-	RenderShelves(shelfSardineCan);	//Sardine shelf
+	for(int i = 0; i< myContainerList.size(); ++i)
+	{
+		RenderShelves(myContainerList[i]);
+	}
 	
 }
-void SceneSP::RenderShelves(CContainer container)
+void SceneSP::RenderShelves(CContainer* container)
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(container.getXpos(),container.getYpos(),container.getZpos());
-	modelStack.Rotate(container.getRotation(),0,1,0);
+	modelStack.Translate(container->getXpos(),container->getYpos(),container->getZpos());
+	modelStack.Rotate(container->getRotation(),0,1,0);
 	RenderMesh(meshList[GEO_SHELF],toggleLight);
 	modelStack.PopMatrix();
 }
@@ -727,13 +836,34 @@ void SceneSP::RenderItem()
 {
 	for(int i = 0; i< myItemList.size(); ++i)
 	{
-		modelStack.PushMatrix();
-		modelStack.Translate(myItemList[i]->getXpos(),myItemList[i]->getYpos(),myItemList[i]->getZpos());
-		RenderMesh(meshList[myItemList[i]->getGeoType()],toggleLight);
-		modelStack.PopMatrix();
+		if(myItemList[i]->getActiveState()) //If Item is active
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(myItemList[i]->getXpos(),myItemList[i]->getYpos(),myItemList[i]->getZpos());
+			RenderMesh(meshList[myItemList[i]->getGeoType()],toggleLight);
+			modelStack.PopMatrix();
+		}
 	}
 }
 
+
+void SceneSP::checkCollision()
+{
+	if(Application::IsKeyPressed('E'))
+	{
+		for(int i = 0; i<myItemList.size();++i)
+		{
+			if(((camera.target.x - myItemList[i]->getXpos()) <1.f)&&
+				((camera.target.y - myItemList[i]->getYpos()) <1.f)&&
+				((camera.target.z - myItemList[i]->getZpos()) < 1.f)&&
+				myItemList[i]->getActiveState() == true)
+			{
+				myItemList[i]->setActiveState(false);
+			}
+		}
+	}
+	
+}
 void SceneSP::Exit()
 {
 	// Cleanup here

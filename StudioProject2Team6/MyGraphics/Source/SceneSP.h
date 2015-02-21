@@ -103,7 +103,7 @@ private:
 		NUM_ROW,
 	};
 
-
+	void checkCollision();
 	/*=======================================
 				All Render Functions
 	=======================================*/
@@ -111,12 +111,11 @@ private:
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
 	void RenderSupermarket();
 	void RenderShelves();
-	void RenderShelves(CContainer container);
+	void RenderShelves(CContainer* container);
 	void RenderDoors();
 	void RenderSamplestand();
 	void RenderUI();
 	void RenderItem(); // Take in a CContainer location and populate it's contents
-	
 	void RenderCashierTables();
 
 	/*=======================================
@@ -129,7 +128,7 @@ private:
 	=======================================*/
 	void DeclareLightParameters();
 	void DeclareGLEnable();
-	void DefineItem(CContainer container, CItem item, int row);
+	void DefineItem(CContainer* container, CItem item, int row);
 	void initGeoType();
 	void initCharacter();
 	void initItems();
@@ -152,7 +151,6 @@ private:
 	CItem beansCan;
 	CItem melonCan;
 	CItem vargaCan;
-	CItem branCan;
 	CItem cerealBox1;
 	CItem cerealBox2;
 	CItem cerealBox3;
@@ -174,6 +172,8 @@ private:
 	string s_camera_target;
 	vector<CItem*> myItemList;
 	CItem * ptrItem;
+	CContainer* ptrContainer;
+	vector<CContainer*> myContainerList;
 public:
 	SceneSP();
 	~SceneSP();

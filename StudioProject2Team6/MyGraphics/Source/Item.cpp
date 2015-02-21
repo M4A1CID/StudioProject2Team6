@@ -32,9 +32,9 @@ void CItem::setGeoType(int type)
 {
 	objectType = type;
 }
-int CItem::getGeoType()
+void CItem::setActiveState(bool setActive)
 {
-	return objectType;
+	active = setActive;
 }
 void CItem::setXpos(float posX)
 {
@@ -47,6 +47,17 @@ void CItem::setYpos(float posY)
 void CItem::setZpos(float posZ)
 {
 	z = posZ;
+}
+
+
+
+bool CItem::getActiveState()
+{
+	return active;
+}
+int CItem::getGeoType()
+{
+	return objectType;
 }
 float CItem::getXpos()
 {

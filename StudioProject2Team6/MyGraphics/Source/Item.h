@@ -15,6 +15,8 @@ public:
 	void setXpos(float posX);
 	void setYpos(float posY);
 	void setZpos(float posZ);
+	void setActiveState(bool setActive);
+	bool getActiveState();
 	float getXpos();
 	float getYpos();
 	float getZpos();
@@ -30,6 +32,7 @@ private:
 	float x;
 	float y;
 	float z;
+	bool active;
 };
 
 #endif
