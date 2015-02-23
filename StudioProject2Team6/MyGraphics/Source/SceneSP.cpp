@@ -42,6 +42,7 @@ void SceneSP::Init()
 	toggleDoorBack = false;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
+	i_sampleItems = 4;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 10, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 
@@ -210,9 +211,6 @@ void SceneSP::initItems()
 	easterEgg3.setPrice(5.0f);
 	easterEgg3.setGeoType(GEO_EASTEREGG_3);
 
-	
-
-	
 }
 void SceneSP::initShelves()
 {
@@ -526,6 +524,7 @@ void SceneSP::Update(double dt)
 	//checkCollision();
 	camera.Update(dt);
 	UpdateDoor(dt);
+	UpdateSamples(dt);
 	checkSupermarketCollision();
 	//checkShelfCollision();
 }
@@ -561,6 +560,18 @@ void SceneSP::UpdateDoor(double dt)
 	{
 		if(moveDoorBack < 0.0f)
 			moveDoorBack += 10.0f * dt;
+	}
+}
+
+void SceneSP::UpdateSamples(double dt)
+{
+	if(Application::IsKeyPressed('E'))
+	{
+		if((camera.position.x > 25.0f && camera.position.x < 35.0f) && (camera.position.z > -8.0f && camera.position.z < -2.0f))
+		{
+			i_sampleItems--;
+	
+		}
 	}
 }
 
@@ -901,12 +912,26 @@ void SceneSP::RenderDoors()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
-
+void SceneSP::RenderSamples()
+{
+	for(int x = 0; x< i_sampleItems;x++)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(1.5f - (x * 1), 3.6f, 25.0f);
+		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.PopMatrix();
+	}
+}
 void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
+	modelStack.Translate(10.0f,0.0f,-5.0f);
+	modelStack.Rotate(90.0f,0,1,0);	
+	modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, 25.0f);
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
+	modelStack.PopMatrix();
+	RenderSamples();
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();

@@ -130,6 +130,7 @@ private:
 	void RenderDoors();
 	void RenderTrolleys();
 	void RenderSamplestand();
+	void RenderSamples();
 	void RenderUI();
 	void RenderItem(); // Take in a CContainer location and populate it's contents
 	void RenderCashierTables();
@@ -139,6 +140,7 @@ private:
 	=======================================*/
 	void UpdateDoor(double dt);
 	void UpdateUI(double dt);
+	void UpdateSamples(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -182,6 +184,7 @@ private:
 	float world_size;
 	float moveDoorFront;
 	float moveDoorBack;
+	int i_sampleItems;
 	string s_money;
 	string s_position;
 	string s_fps;
