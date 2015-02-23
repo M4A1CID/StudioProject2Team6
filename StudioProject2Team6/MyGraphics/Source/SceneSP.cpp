@@ -60,6 +60,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_SUPERMARKET]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_DOOR] = MeshBuilder::GenerateOBJ("door", "OBJ//door.obj");
 	meshList[GEO_DOOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_TROLLEY] = MeshBuilder::GenerateOBJ("trolley", "OBJ//trolley.obj");
+	meshList[GEO_TROLLEY]->textureID = LoadTGA("Image//trolley.tga");
 	meshList[GEO_SAMPLESTAND] = MeshBuilder::GenerateOBJ("samplestand", "OBJ//sample_stand.obj");
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
 	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
@@ -661,15 +663,67 @@ void SceneSP::RenderCashierTables()
 	modelStack.PushMatrix();
 	modelStack.Translate(-30, 0, -15);
 	modelStack.Rotate(180,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER], false);
+	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0, 0, -15);
 	modelStack.Rotate(180,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER], false);
+	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 }
+
+void SceneSP::RenderTrolleys()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 0);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 2);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 4);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 6);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 8);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 10);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 12);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37, 0.2, 14);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+}
+
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -789,6 +843,7 @@ void SceneSP::RenderSupermarket()
 	RenderDoors();			//Render Doors in Supermarket
 	RenderSamplestand();	//Render Sample Food Stand in Supermarket
 	RenderCashierTables();	//Render Cashier table in Supermarket
+	RenderTrolleys();
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
@@ -844,6 +899,7 @@ void SceneSP::RenderDoors()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+
 void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
@@ -866,28 +922,7 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.Translate(0.0f,0.0f,-18.0f);
 	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
 	modelStack.PopMatrix();
-	modelStack.PopMatrix();
 
-	modelStack.PushMatrix();
-	modelStack.Translate(-37.0f,0.0f,20.0f);
-	modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0.0f,0.0f,-6.0f);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(0.0f,0.0f,-12.0f);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(0.0f,0.0f,-18.0f);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 }

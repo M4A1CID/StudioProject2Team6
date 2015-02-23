@@ -124,6 +124,7 @@ private:
 	void RenderShelves();
 	void RenderShelves(CContainer* container);
 	void RenderDoors();
+	void RenderTrolleys();
 	void RenderSamplestand();
 	void RenderUI();
 	void RenderItem(); // Take in a CContainer location and populate it's contents
