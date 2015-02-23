@@ -25,4 +25,9 @@
 #include "SodaCan.h"
 #include "SodaFestCan.h"
 
+static float interactionDistanceZ = 4.0f;
+static float interactionDistanceX = 1.0f;
+static float interactionDistanceY = 0.8f;
+static float interactionTimerLimiter = 0.5f;
+
 #endif

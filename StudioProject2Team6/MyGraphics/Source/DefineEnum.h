@@ -110,4 +110,6 @@ enum CHARACTER_STATE
 
 	NUM_STATE,
 };
+
+
 #endif
