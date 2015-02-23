@@ -62,6 +62,10 @@ void SceneSP::initGeoType()
 	meshList[GEO_DOOR]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_SAMPLESTAND] = MeshBuilder::GenerateOBJ("samplestand", "OBJ//sample_stand.obj");
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
+	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
+	meshList[GEO_ICEBOX]->textureID = LoadTGA("Image//ContainerTexture.tga");
+	meshList[GEO_TROLLEY] = MeshBuilder::GenerateOBJ("Trolley", "OBJ//catTrolley.obj");
+	meshList[GEO_TROLLEY]->textureID = LoadTGA("Image//catTrolley.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -79,6 +83,22 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAN_MELON]->textureID = LoadTGA("Image//canned_food_6.tga");
 	meshList[GEO_CAN_VARGA] = MeshBuilder::GenerateOBJ("vargaCan","OBJ//canned_food_7.obj");
 	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_7.tga");
+	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("branCan","OBJ//canned_food_7.obj");
+	meshList[GEO_CAN_BRAN]->textureID = LoadTGA("Image//canned_food_8.tga");
+	meshList[GEO_CAN_SODA] = MeshBuilder::GenerateOBJ("sodaCan","OBJ//canned_food_9.obj");
+	meshList[GEO_CAN_SODA]->textureID = LoadTGA("Image//canned_food_9.tga");
+	meshList[GEO_CAN_GLUWATER] = MeshBuilder::GenerateOBJ("gluwaterCan","OBJ//canned_food_10.obj");
+	meshList[GEO_CAN_GLUWATER]->textureID = LoadTGA("Image//canned_food_10.tga");
+	meshList[GEO_CAN_ROOTBEERFLOATS] = MeshBuilder::GenerateOBJ("rootbeerCan","OBJ//canned_food_11.obj");
+	meshList[GEO_CAN_ROOTBEERFLOATS]->textureID = LoadTGA("Image//canned_food_11.tga");
+	meshList[GEO_CAN_MTNDEW] = MeshBuilder::GenerateOBJ("mtndewCan","OBJ//canned_food_12.obj");
+	meshList[GEO_CAN_MTNDEW]->textureID = LoadTGA("Image//canned_food_12.tga");
+	meshList[GEO_CAN_SODAFEST] = MeshBuilder::GenerateOBJ("sodafestCan","OBJ//canned_food_13.obj");
+	meshList[GEO_CAN_SODAFEST]->textureID = LoadTGA("Image//canned_food_13.tga");
+	meshList[GEO_CAN_REDMONSTER] = MeshBuilder::GenerateOBJ("redmonsterCan","OBJ//canned_food_14&15.obj");
+	meshList[GEO_CAN_REDMONSTER]->textureID = LoadTGA("Image//canned_food_14.tga");
+	meshList[GEO_CAN_HUMANS] = MeshBuilder::GenerateOBJ("humanCan","OBJ//canned_food_14&15.obj");
+	meshList[GEO_CAN_HUMANS]->textureID = LoadTGA("Image//canned_food_15.tga");
 	/*-----Add canned food here-----*/
 	meshList[GEO_CEREAL_1] = MeshBuilder::GenerateOBJ("cerealBox1","OBJ//cereal_box_1.obj");
 	meshList[GEO_CEREAL_1]->textureID = LoadTGA("Image//cereal_box_1.tga");
@@ -118,6 +138,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	
 }
 void SceneSP::initCharacter()
 {
@@ -130,7 +151,6 @@ void SceneSP::initItems()
 	sardineCan.setName("Sardine Can");
 	sardineCan.setPrice(5.0f);
 	sardineCan.setGeoType(GEO_CAN_SARDINE);
-	
 
 	peasCan.setName("Peas Can");
 	peasCan.setPrice(5.0f);
@@ -824,12 +844,51 @@ void SceneSP::RenderDoors()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
-
-void SceneSP::RenderSamplestand()
+void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, 25.0f);
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(37.0f, 0.0f, 25.0f);
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f,0.0f,-9.0f);
+	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f,0.0f,-18.0f);
+	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-37.0f,0.0f,20.0f);
+	modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f,0.0f,-6.0f);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f,0.0f,-12.0f);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f,0.0f,-18.0f);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderItem()
