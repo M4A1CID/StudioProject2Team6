@@ -8,6 +8,7 @@
 #include "LoadTGA.h"
 
 
+
 static float ROT_LIMIT = 45.f;
 static float SCALE_LIMIT = 5.f;
 SceneSP::SceneSP()
@@ -85,23 +86,23 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAN_BEANS]->textureID = LoadTGA("Image//canned_food_5.tga");
 	meshList[GEO_CAN_MELON] = MeshBuilder::GenerateOBJ("melonCan","OBJ//canned_food_6.obj");
 	meshList[GEO_CAN_MELON]->textureID = LoadTGA("Image//canned_food_6.tga");
-	meshList[GEO_CAN_VARGA] = MeshBuilder::GenerateOBJ("vargaCan","OBJ//canned_food_7.obj");
+	meshList[GEO_CAN_VARGA] = MeshBuilder::GenerateOBJ("vargaCan","OBJ//canned_food_7&8.obj");
 	meshList[GEO_CAN_VARGA]->textureID = LoadTGA("Image//canned_food_7.tga");
-	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("branCan","OBJ//canned_food_7.obj");
+	meshList[GEO_CAN_BRAN] = MeshBuilder::GenerateOBJ("branCan","OBJ//canned_food_7&8.obj");
 	meshList[GEO_CAN_BRAN]->textureID = LoadTGA("Image//canned_food_8.tga");
 	meshList[GEO_CAN_SODA] = MeshBuilder::GenerateOBJ("sodaCan","OBJ//canned_food_9.obj");
 	meshList[GEO_CAN_SODA]->textureID = LoadTGA("Image//canned_food_9.tga");
-	meshList[GEO_CAN_GLUWATER] = MeshBuilder::GenerateOBJ("gluwaterCan","OBJ//canned_food_10.obj");
-	meshList[GEO_CAN_GLUWATER]->textureID = LoadTGA("Image//canned_food_10.tga");
-	meshList[GEO_CAN_ROOTBEERFLOATS] = MeshBuilder::GenerateOBJ("rootbeerCan","OBJ//canned_food_11.obj");
-	meshList[GEO_CAN_ROOTBEERFLOATS]->textureID = LoadTGA("Image//canned_food_11.tga");
-	meshList[GEO_CAN_MTNDEW] = MeshBuilder::GenerateOBJ("mtndewCan","OBJ//canned_food_12.obj");
-	meshList[GEO_CAN_MTNDEW]->textureID = LoadTGA("Image//canned_food_12.tga");
+	meshList[GEO_CAN_MTNDEW] = MeshBuilder::GenerateOBJ("mtndewCan","OBJ//canned_food_10.obj");
+	meshList[GEO_CAN_MTNDEW]->textureID = LoadTGA("Image//canned_food_10.tga");
+	meshList[GEO_CAN_GLUWATER] = MeshBuilder::GenerateOBJ("gluwaterCan","OBJ//canned_food_11.obj");
+	meshList[GEO_CAN_GLUWATER]->textureID = LoadTGA("Image//canned_food_11.tga");
+	meshList[GEO_CAN_ROOTBEERFLOATS] = MeshBuilder::GenerateOBJ("rootbeerfloatCan","OBJ//canned_food_12.obj");
+	meshList[GEO_CAN_ROOTBEERFLOATS]->textureID = LoadTGA("Image//canned_food_12.tga");
 	meshList[GEO_CAN_SODAFEST] = MeshBuilder::GenerateOBJ("sodafestCan","OBJ//canned_food_13.obj");
 	meshList[GEO_CAN_SODAFEST]->textureID = LoadTGA("Image//canned_food_13.tga");
-	meshList[GEO_CAN_REDMONSTER] = MeshBuilder::GenerateOBJ("redmonsterCan","OBJ//canned_food_14&15.obj");
+	meshList[GEO_CAN_REDMONSTER] = MeshBuilder::GenerateOBJ("redmonsterCan","OBJ//canned_food_14.obj");
 	meshList[GEO_CAN_REDMONSTER]->textureID = LoadTGA("Image//canned_food_14.tga");
-	meshList[GEO_CAN_HUMANS] = MeshBuilder::GenerateOBJ("humanCan","OBJ//canned_food_14&15.obj");
+	meshList[GEO_CAN_HUMANS] = MeshBuilder::GenerateOBJ("humanCan","OBJ//canned_food_15.obj");
 	meshList[GEO_CAN_HUMANS]->textureID = LoadTGA("Image//canned_food_15.tga");
 	/*-----Add canned food here-----*/
 	meshList[GEO_CEREAL_1] = MeshBuilder::GenerateOBJ("cerealBox1","OBJ//cereal_box_1.obj");
@@ -164,35 +165,35 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CSardineCan;
+	ptrClass = new CEasterEgg3;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,20,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CBrownCan;
+	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,26,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==============================================================================
-	ptrClass =  new CTomatoCan;
+	ptrClass =  new CEasterEgg1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFour",5,5,5,26,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CBeansCan;
+	ptrClass = new CCerealBox5;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFive",5,5,5,20,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CMelonCan;
+	ptrClass = new CCerealBox4;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSix",5,5,5,14,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -200,21 +201,21 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
 	//==================================================================================
-	ptrClass = new CVargaCan;
+	ptrClass = new CCerealBox1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSeven",5,5,5,26,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CCerealBox1;
+	ptrClass = new CCerealBox2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEight",5,5,5,20,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CCerealBox2;
+	ptrClass = new CCerealBox3;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfNine",5,5,5,14,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -222,21 +223,21 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
 	//==================================================================================
-	ptrClass = new CCerealBox3;
+	ptrClass = new CHumanCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTen",5,5,5,26,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CCerealBox4;
+	ptrClass = new CMtnDewCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEleven",5,5,5,20,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CCerealBox5;
+	ptrClass = new CRootBeerFloatsCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwelve",5,5,5,14,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -244,21 +245,21 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
 	//==================================================================================
-	ptrClass = new CEasterEgg1;
+	ptrClass = new CSodaCan;//RW
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf13",5,5,5,26,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CSodaFestCan;//RW
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf14",5,5,5,20,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CEasterEgg3;
+	ptrClass = new CRedMonsterCan;//RW
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf15",5,5,5,14,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -342,7 +343,6 @@ void SceneSP::DeclareGLEnable()
 	// Make sure you pass uniform parameters after glUseProgram()
 	glUniform1i(m_parameters[U_NUMLIGHTS], 1);
 }
-
 void SceneSP::DeclareLightParameters()
 {
 	// Get a handle for our "textColor" uniform
@@ -457,7 +457,17 @@ void SceneSP::UpdateUI(double dt)
 	s_money = ss_money.str();
 
 }
-
+void SceneSP::UpdateTrolley(double dt)
+{
+	if(Application::IsKeyPressed(VK_LEFT))
+	{
+		trolleyrotation += (camera.CAMERA_SPEED)*dt;
+	}
+	if(Application::IsKeyPressed(VK_RIGHT))
+	{
+		trolleyrotation -= (camera.CAMERA_SPEED)*dt;
+	}
+}
 void SceneSP::Update(double dt)
 {
 	interactionTimer+=dt;
@@ -483,15 +493,7 @@ void SceneSP::Update(double dt)
 	UpdateUI(dt);
 	checkCollision();
 	camera.Update(dt);
-
-	if(Application::IsKeyPressed(VK_LEFT))
-	{
-		trolleyrotation += (camera.CAMERA_SPEED)*dt;
-	}
-	if(Application::IsKeyPressed(VK_RIGHT))
-	{
-		trolleyrotation -= (camera.CAMERA_SPEED)*dt;
-	}
+	UpdateTrolley(dt);
 
 	UpdateDoor(dt);
 	UpdateSamples(dt);
@@ -532,7 +534,6 @@ void SceneSP::UpdateDoor(double dt)
 			moveDoorBack += 10.0f * dt;
 	}
 }
-
 void SceneSP::UpdateSamples(double dt)
 {
 	if(Application::IsKeyPressed('E'))
@@ -540,11 +541,9 @@ void SceneSP::UpdateSamples(double dt)
 		if((camera.position.x > 25.0f && camera.position.x < 35.0f) && (camera.position.z > -8.0f && camera.position.z < -2.0f))
 		{
 			i_sampleItems--;
-	
 		}
 	}
 }
-
 void SceneSP::RenderUI()
 {
 	
@@ -555,7 +554,6 @@ void SceneSP::RenderUI()
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
 }
-
 void SceneSP::Render()
 {
 	//clear depth and color buffer
@@ -595,7 +593,6 @@ void SceneSP::Render()
 	RenderItem();		//Renders out items
 	RenderUI();			//Renders out UI
 }
-
 void SceneSP::RenderSkyBox()
 {
 	modelStack.PushMatrix();
@@ -644,7 +641,6 @@ void SceneSP::RenderSkyBox()
 	modelStack.PopMatrix();
 
 }
-
 void SceneSP::RenderCashierTables()
 {
 	modelStack.PushMatrix();
@@ -659,7 +655,6 @@ void SceneSP::RenderCashierTables()
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 }
-
 void SceneSP::RenderTrolleys()
 {
 	modelStack.PushMatrix();
@@ -710,8 +705,7 @@ void SceneSP::RenderTrolleys()
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
-
-	if(true)
+	if(false)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(camera.position.x,0,camera.position.z);
@@ -985,7 +979,6 @@ void SceneSP::RenderItem()
 		}
 	}
 }
-
 void SceneSP::checkCollision()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > 0.5f)

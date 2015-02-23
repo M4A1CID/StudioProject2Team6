@@ -49,6 +49,7 @@ private:
 	/*=======================================
 				All update functions
 	=======================================*/
+	void UpdateTrolley(double dt);
 	void UpdateDoor(double dt);
 	void UpdateUI(double dt);
 	void UpdateSamples(double dt);
@@ -60,6 +61,7 @@ private:
 	void DefineItem(CContainer* container, CItem item, int row);
 	void initGeoType();
 	void initCharacter();
+	void initNPC();
 	void initItems();
 	void initShelves();
 

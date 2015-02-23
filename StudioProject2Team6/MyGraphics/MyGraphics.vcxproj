@@ -82,6 +82,7 @@
   <ItemGroup>
     <ClCompile Include="Source\Application.cpp" />
     <ClCompile Include="Source\BeansCan.cpp" />
+    <ClCompile Include="Source\BranCan.cpp" />
     <ClCompile Include="Source\BrownCan.cpp" />
     <ClCompile Include="Source\Camera.cpp" />
     <ClCompile Include="Source\Camera3.cpp" />
@@ -95,6 +96,8 @@
     <ClCompile Include="Source\EasterEgg1.cpp" />
     <ClCompile Include="Source\EasterEgg2.cpp" />
     <ClCompile Include="Source\EasterEgg3.cpp" />
+    <ClCompile Include="Source\GluWaterCan.cpp" />
+    <ClCompile Include="Source\HumanCan.cpp" />
     <ClCompile Include="Source\Item.cpp" />
     <ClCompile Include="Source\LoadOBJ.cpp" />
     <ClCompile Include="Source\LoadTGA.cpp" />
@@ -102,10 +105,15 @@
     <ClCompile Include="Source\MelonCan.cpp" />
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\MeshBuilder.cpp" />
+    <ClCompile Include="Source\MtnDewCan.cpp" />
     <ClCompile Include="Source\PeasCan.cpp" />
+    <ClCompile Include="Source\RedMonsterCan.cpp" />
+    <ClCompile Include="Source\RootBeerFloatsCan.cpp" />
     <ClCompile Include="Source\SardineCan.cpp" />
     <ClCompile Include="Source\SceneSP.cpp" />
     <ClCompile Include="Source\shader.cpp" />
+    <ClCompile Include="Source\SodaCan.cpp" />
+    <ClCompile Include="Source\SodaFestCan.cpp" />
     <ClCompile Include="Source\TomatoCan.cpp" />
     <ClCompile Include="Source\Utility.cpp" />
     <ClCompile Include="Source\VargaCan.cpp" />
@@ -113,6 +121,7 @@
   <ItemGroup>
     <ClInclude Include="Source\Application.h" />
     <ClInclude Include="Source\BeansCan.h" />
+    <ClInclude Include="Source\BranCan.h" />
     <ClInclude Include="Source\BrownCan.h" />
     <ClInclude Include="Source\Camera.h" />
     <ClInclude Include="Source\Camera3.h" />
@@ -128,6 +137,8 @@
     <ClInclude Include="Source\EasterEgg1.h" />
     <ClInclude Include="Source\EasterEgg2.h" />
     <ClInclude Include="Source\EasterEgg3.h" />
+    <ClInclude Include="Source\GluWaterCan.h" />
+    <ClInclude Include="Source\HumanCan.h" />
     <ClInclude Include="Source\Item.h" />
     <ClInclude Include="Source\Light.h" />
     <ClInclude Include="Source\LoadOBJ.h" />
@@ -136,11 +147,16 @@
     <ClInclude Include="Source\MelonCan.h" />
     <ClInclude Include="Source\Mesh.h" />
     <ClInclude Include="Source\MeshBuilder.h" />
+    <ClInclude Include="Source\MtnDewCan.h" />
     <ClInclude Include="Source\PeasCan.h" />
+    <ClInclude Include="Source\RedMonsterCan.h" />
+    <ClInclude Include="Source\RootBeerFloatsCan.h" />
     <ClInclude Include="Source\SardineCan.h" />
     <ClInclude Include="Source\Scene.h" />
     <ClInclude Include="Source\SceneSP.h" />
     <ClInclude Include="Source\shader.hpp" />
+    <ClInclude Include="Source\SodaCan.h" />
+    <ClInclude Include="Source\SodaFestCan.h" />
     <ClInclude Include="Source\TomatoCan.h" />
     <ClInclude Include="Source\Utility.h" />
     <ClInclude Include="Source\VargaCan.h" />

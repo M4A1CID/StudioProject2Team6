@@ -16,5 +16,13 @@
 #include "SardineCan.h"
 #include "TomatoCan.h"
 #include "VargaCan.h"
+#include "BranCan.h"
+#include "GluWaterCan.h"
+#include "HumanCan.h"
+#include "MtnDewCan.h"
+#include "RedMonsterCan.h"
+#include "RootBeerFloatsCan.h"
+#include "SodaCan.h"
+#include "SodaFestCan.h"
 
 #endif
