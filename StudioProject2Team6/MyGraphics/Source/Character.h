@@ -20,6 +20,11 @@ private:
 	int itemsHeld;
 	int maxItemCapacity;
 	bool inventoryIsOpened;
+	float x;
+	float y;
+	float z;
+	unsigned int characterState;
+	unsigned int characterJob;
 };
 
 #endif

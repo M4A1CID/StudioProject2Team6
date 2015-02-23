@@ -40,6 +40,7 @@ void SceneSP::Init()
 	toggleLight = true;
 	toggleDoorFront = false;
 	toggleDoorBack = false;
+	interactionTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
@@ -58,6 +59,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
 	meshList[GEO_TEXT] = MeshBuilder::GenerateText("text", 16,16);
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//anime.tga");
+	meshList[GEO_UI_SCREEN] = MeshBuilder::GenerateText("UI",1,1);
+	meshList[GEO_UI_SCREEN]->textureID = LoadTGA("Image//UI.tga");
 	meshList[GEO_SUPERMARKET] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//supermarket.obj");
 	meshList[GEO_SUPERMARKET]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_DOOR] = MeshBuilder::GenerateOBJ("door", "OBJ//door.obj");
@@ -505,6 +508,7 @@ void SceneSP::UpdateUI(double dt)
 
 void SceneSP::Update(double dt)
 {
+	interactionTimer+=dt;
 	if(Application::IsKeyPressed('1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed('2')) //disable back face culling
@@ -525,7 +529,7 @@ void SceneSP::Update(double dt)
 
 
 	UpdateUI(dt);
-	//checkCollision();
+	checkCollision();
 	camera.Update(dt);
 
 	if(Application::IsKeyPressed(VK_LEFT))
@@ -591,6 +595,9 @@ void SceneSP::UpdateSamples(double dt)
 
 void SceneSP::RenderUI()
 {
+	
+	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
+	RenderTGA(meshList[GEO_UI_SCREEN],1,40,20);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
@@ -632,8 +639,9 @@ void SceneSP::Render()
 
 	RenderSkyBox();		//Renders out Skybox
 	RenderSupermarket();//Renders out Supermarket
-	RenderUI();			//Renders out UI
+	
 	RenderItem();		//Renders out items
+	RenderUI();			//Renders out UI
 }
 
 void SceneSP::RenderSkyBox()
@@ -766,7 +774,36 @@ void SceneSP::RenderTrolleys()
 	}
 
 }
+void SceneSP::RenderTGA(Mesh* mesh, float size, float x , float y)
+{
+	if(!mesh || mesh->textureID <= 0) //Proper error check
+		return;
 
+	glDisable(GL_DEPTH_TEST);
+	Mtx44 ortho;
+	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	projectionStack.PushMatrix();
+	projectionStack.LoadMatrix(ortho);
+	viewStack.PushMatrix();
+	viewStack.LoadIdentity(); //No need camera for ortho mode
+	modelStack.PushMatrix();
+	modelStack.LoadIdentity(); //Reset modelStack
+	modelStack.Translate(x, y, 0);
+	modelStack.Scale(40, 40,40);
+	
+	RenderMesh(mesh,false);
+	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
+	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
+	glActiveTexture(GL_TEXTURE0);
+	glBindTexture(GL_TEXTURE_2D, mesh->textureID);
+	glBindTexture(GL_TEXTURE_2D, 0);
+	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
+	projectionStack.PopMatrix();
+	viewStack.PopMatrix();
+	modelStack.PopMatrix();
+
+	glEnable(GL_DEPTH_TEST);
+}
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -999,17 +1036,65 @@ void SceneSP::RenderItem()
 
 void SceneSP::checkCollision()
 {
-	if(Application::IsKeyPressed('E'))
+	if(Application::IsKeyPressed('E') && interactionTimer > 0.5f)
 	{
+		interactionTimer = 0.0f;
 		for(unsigned int i = 0; i<myItemList.size();++i)
 		{
-			if(((camera.target.x - myItemList[i]->getXpos()) <1.f)&&
-				((camera.target.y - myItemList[i]->getYpos()) <1.f)&&
-				((camera.target.z - myItemList[i]->getZpos()) < 1.f)&&
-				myItemList[i]->getActiveState() == true)
+			
+			/*if(((((camera.position.x - myItemList[i]->getXpos()) >-1.0f) || (camera.position.x + myItemList[i]->getXpos())<1.0f)) &&
+				((((camera.position.z - myItemList[i]->getZpos()) >-1.0f) || (camera.position.z + myItemList[i]->getZpos())<1.0f))&&
+				myItemList[i]->getActiveState())
 			{
 				myItemList[i]->setActiveState(false);
+				std::cout << "Item removed!";
+			}*/
+			if(camera.position.x >= myItemList[i]->getXpos()) //If camera X is greater than item X
+			{
+				if((camera.position.x - myItemList[i]->getXpos()) <0.5f) //If width is within 0.5f
+				{
+					if(camera.position.z >= myItemList[i]->getZpos()) //If camera Z is greater than item Z
+					{
+						if((camera.position.z - myItemList[i]->getZpos()) < 0.5f) //If width is within 0.5f
+						{
+							myItemList[i]->setActiveState(false);
+							std::cout << "Item removed!";
+						}
+					}
+					else if(camera.position.z < myItemList[i]->getZpos()) //If item Z is greater than camera z
+					{
+						if((myItemList[i]->getZpos() - camera.position.z) < 0.5f)//If width is within 0.5f
+						{
+							myItemList[i]->setActiveState(false);
+							std::cout << "Item removed!";
+						}
+					}
+					
+				}
 			}
+			else if(camera.position.x < myItemList[i]->getXpos())//If item X  is greater than camera X
+			{
+				if((myItemList[i]->getXpos() - camera.position.x) < 0.5f) //If width is within 0.5f
+				{
+					if(camera.position.z >= myItemList[i]->getZpos()) //If camera Z is greater than item Z
+					{
+						if((camera.position.z - myItemList[i]->getZpos()) < 0.5f) //If width is within 0.5f
+						{
+							myItemList[i]->setActiveState(false);
+							std::cout << "Item removed!";
+						}
+					}
+					else if(camera.position.z < myItemList[i]->getZpos()) //If item Z is greater than camera z
+					{
+						if((myItemList[i]->getZpos() - camera.position.z) < 0.5f)//If width is within 0.5f
+						{
+							myItemList[i]->setActiveState(false);
+							std::cout << "Item removed!";
+						}
+					}
+				}
+			}
+			
 		}
 	}
 

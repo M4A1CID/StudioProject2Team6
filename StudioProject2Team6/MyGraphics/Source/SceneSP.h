@@ -104,6 +104,7 @@ private:
 		GEO_EASTEREGG_1,
 		GEO_EASTEREGG_2,
 		GEO_EASTEREGG_3,
+		GEO_UI_SCREEN,
 		NUM_GEOMETRY,
 	};
 	enum ROW_TYPE
@@ -112,6 +113,21 @@ private:
 		ROW_MIDDLE,
 		ROW_BOTTOM,
 		NUM_ROW,
+	};
+	enum CHARACTER_JOB
+	{
+		CASHIER,
+		CUSTOMER,
+		PART_TIME_WORKER,
+		NUM_JOB,
+	};
+	enum CHARACTER_STATE
+	{
+		IDLE,
+		WALKING,
+		RUNNING,
+
+		NUM_STATE,
 	};
 	/*=======================================
 				Collision Functions
@@ -124,6 +140,7 @@ private:
 	=======================================*/
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
+	void RenderTGA(Mesh* mesh,float size, float x , float y);
 	void RenderSupermarket();
 	void RenderShelves();
 	void RenderShelves(CContainer* container);
@@ -181,6 +198,7 @@ private:
 	bool toggleLight;
 	bool toggleDoorFront;
 	bool toggleDoorBack;
+	float interactionTimer;
 	float world_size;
 	float moveDoorFront;
 	float moveDoorBack;
