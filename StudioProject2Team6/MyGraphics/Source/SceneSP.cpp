@@ -758,7 +758,7 @@ void SceneSP::RenderTrolleys()
 		{
 			modelStack.PushMatrix();
 			modelStack.Rotate((-90+trolleyrotation),0,1,0);
-			modelStack.Translate(0,10,0);
+			modelStack.Translate(-10,0,0);
 			RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 			modelStack.PopMatrix();
 		}
