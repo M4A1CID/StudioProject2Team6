@@ -49,8 +49,6 @@ void CItem::setZpos(float posZ)
 	z = posZ;
 }
 
-
-
 bool CItem::getActiveState()
 {
 	return active;

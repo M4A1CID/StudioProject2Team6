@@ -26,6 +26,20 @@ CContainer::CContainer(CItem first, CItem second, CItem third, string n, int fir
 	secondItemStock = secondStock;
 	thirdItemStock = thirdStock;
 }
+CContainer::CContainer(CItem* first, CItem* second, CItem* third, string n, int firstStock, int secondStock, int thirdStock,float posX, float posY, float posZ, float rotate)
+{
+	x = posX;
+	y = posY;
+	z = posZ;
+	item_first = *first;
+	item_second = *second;
+	item_third = *third;
+	name = n;
+	rotation = rotate;
+	firstItemStock = firstStock;
+	secondItemStock = secondStock;
+	thirdItemStock = thirdStock;
+}
 
 
 CContainer::~CContainer(void)

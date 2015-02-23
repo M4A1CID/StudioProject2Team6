@@ -8,7 +8,6 @@
 #include "LoadTGA.h"
 
 
-
 static float ROT_LIMIT = 45.f;
 static float SCALE_LIMIT = 5.f;
 SceneSP::SceneSP()
@@ -152,162 +151,115 @@ void SceneSP::initCharacter()
 }
 void SceneSP::initItems()
 {
-	//Init items
-	sardineCan.setName("Sardine Can");
-	sardineCan.setPrice(5.0f);
-	sardineCan.setGeoType(GEO_CAN_SARDINE);
-
-	peasCan.setName("Peas Can");
-	peasCan.setPrice(5.0f);
-	peasCan.setGeoType(GEO_CAN_PEAS);
-
-	brownCan.setName("Brown Can");
-	brownCan.setPrice(5.0f);
-	brownCan.setGeoType(GEO_CAN_BROWN);
-
-	tomatoCan.setName("Tomato Can");
-	tomatoCan.setPrice(5.0f);
-	tomatoCan.setGeoType(GEO_CAN_TOMATO);
-
-	beansCan.setName("Beans Can");
-	beansCan.setPrice(5.0f);
-	beansCan.setGeoType(GEO_CAN_BEANS);
-
-	melonCan.setName("Melon Can");
-	melonCan.setPrice(5.0f);
-	melonCan.setGeoType(GEO_CAN_MELON);
-
-	vargaCan.setName("Varga Can");
-	vargaCan.setPrice(5.0f);
-	vargaCan.setGeoType(GEO_CAN_VARGA);
-
-	cerealBox1.setName("Cereal Box1");
-	cerealBox1.setPrice(5.0f);
-	cerealBox1.setGeoType(GEO_CEREAL_1);
-
-	cerealBox2.setName("Cereal Box2");
-	cerealBox2.setPrice(5.0f);
-	cerealBox2.setGeoType(GEO_CEREAL_2);
-
-	cerealBox3.setName("Cereal Box3");
-	cerealBox3.setPrice(5.0f);
-	cerealBox3.setGeoType(GEO_CEREAL_3);
-
-	cerealBox4.setName("Cereal Box4");
-	cerealBox4.setPrice(5.0f);
-	cerealBox4.setGeoType(GEO_CEREAL_4);
-
-	cerealBox5.setName("Cereal Box5");
-	cerealBox5.setPrice(5.0f);
-	cerealBox5.setGeoType(GEO_CEREAL_5);
-
-	easterEgg1.setName("Easter Egg1");
-	easterEgg1.setPrice(5.0f);
-	easterEgg1.setGeoType(GEO_EASTEREGG_1);
-
-	easterEgg2.setName("Easter Egg2");
-	easterEgg2.setPrice(5.0f);
-	easterEgg2.setGeoType(GEO_EASTEREGG_2);
-
-	easterEgg3.setName("Easter Egg3");
-	easterEgg3.setPrice(5.0f);
-	easterEgg3.setGeoType(GEO_EASTEREGG_3);
-
-
-
-
+	//Init items	
+	
 }
 void SceneSP::initShelves()
 {
 	//=============================================================================
-	ptrContainer = new CContainer(beansCan,beansCan,beansCan,"ShelfOne",5,5,5,14,0,28,180);
+	ptrClass = new CBeansCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,14,0,28,180);
 	myContainerList.push_back(ptrContainer);	//Push back into vector list
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(sardineCan,sardineCan,sardineCan,"ShelfTwo",5,5,5,20,0,28,180);
+	ptrClass = new CSardineCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,20,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(brownCan,brownCan,brownCan,"ShelfThree",5,5,5,26,0,28,180);
+	ptrClass = new CBrownCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,26,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==============================================================================
-	ptrContainer = new CContainer(tomatoCan,tomatoCan,tomatoCan,"ShelfFour",5,5,5,26,0,18,0);
+	ptrClass =  new CTomatoCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFour",5,5,5,26,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(beansCan,beansCan,beansCan,"ShelfFive",5,5,5,20,0,18,0);
+	ptrClass = new CBeansCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFive",5,5,5,20,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(melonCan,melonCan,melonCan,"ShelfSix",5,5,5,14,0,18,0);
-	myContainerList.push_back(ptrContainer);
-	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
-	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
-	//==================================================================================
-	ptrContainer = new CContainer(vargaCan,vargaCan,vargaCan,"ShelfSeven",5,5,5,26,0,16,180);
-	myContainerList.push_back(ptrContainer);
-	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
-	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
-	ptrContainer = new CContainer(cerealBox1,cerealBox1,cerealBox1,"ShelfEight",5,5,5,20,0,16,180);
-	myContainerList.push_back(ptrContainer);
-	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
-	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
-	ptrContainer = new CContainer(cerealBox2,cerealBox2,cerealBox2,"ShelfNine",5,5,5,14,0,16,180);
+	ptrClass = new CMelonCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSix",5,5,5,14,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
 	//==================================================================================
-	ptrContainer = new CContainer(cerealBox3,cerealBox3,cerealBox3,"ShelfTen",5,5,5,26,0,4,180);
+	ptrClass = new CVargaCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSeven",5,5,5,26,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(cerealBox4,cerealBox4,cerealBox4,"ShelfEleven",5,5,5,20,0,4,180);
+	ptrClass = new CCerealBox1;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEight",5,5,5,20,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(cerealBox5,cerealBox5,cerealBox5,"ShelfTwelve",5,5,5,14,0,4,180);
+	ptrClass = new CCerealBox2;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfNine",5,5,5,14,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
 	//==================================================================================
-	ptrContainer = new CContainer(easterEgg1,easterEgg1,easterEgg1,"Shelf13",5,5,5,26,0,6,0);
+	ptrClass = new CCerealBox3;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTen",5,5,5,26,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(easterEgg2,easterEgg2,easterEgg2,"Shelf14",5,5,5,20,0,6,0);
+	ptrClass = new CCerealBox4;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEleven",5,5,5,20,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrContainer = new CContainer(easterEgg3,easterEgg3,easterEgg3,"Shelf15",5,5,5,14,0,6,0);
+	ptrClass = new CCerealBox5;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwelve",5,5,5,14,0,4,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	//==================================================================================
+	ptrClass = new CEasterEgg1;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf13",5,5,5,26,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CEasterEgg2;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf14",5,5,5,20,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CEasterEgg3;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf15",5,5,5,14,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
@@ -1055,7 +1007,7 @@ void SceneSP::checkCollision()
 				{
 					if(camera.position.z >= myItemList[i]->getZpos()) //If camera Z is greater than item Z
 					{
-						if((camera.position.z - myItemList[i]->getZpos()) < 0.5f) //If width is within 0.5f
+						if((camera.position.z - myItemList[i]->getZpos()) < 3.0f) //If width is within 0.5f
 						{
 							myItemList[i]->setActiveState(false);
 							std::cout << "Item removed!";
@@ -1063,7 +1015,7 @@ void SceneSP::checkCollision()
 					}
 					else if(camera.position.z < myItemList[i]->getZpos()) //If item Z is greater than camera z
 					{
-						if((myItemList[i]->getZpos() - camera.position.z) < 0.5f)//If width is within 0.5f
+						if((myItemList[i]->getZpos() - camera.position.z) < 3.0f)//If width is within 0.5f
 						{
 							myItemList[i]->setActiveState(false);
 							std::cout << "Item removed!";
@@ -1078,7 +1030,7 @@ void SceneSP::checkCollision()
 				{
 					if(camera.position.z >= myItemList[i]->getZpos()) //If camera Z is greater than item Z
 					{
-						if((camera.position.z - myItemList[i]->getZpos()) < 0.5f) //If width is within 0.5f
+						if((camera.position.z - myItemList[i]->getZpos()) < 3.0f) //If width is within 0.5f
 						{
 							myItemList[i]->setActiveState(false);
 							std::cout << "Item removed!";
@@ -1086,7 +1038,7 @@ void SceneSP::checkCollision()
 					}
 					else if(camera.position.z < myItemList[i]->getZpos()) //If item Z is greater than camera z
 					{
-						if((myItemList[i]->getZpos() - camera.position.z) < 0.5f)//If width is within 0.5f
+						if((myItemList[i]->getZpos() - camera.position.z) < 3.0f)//If width is within 0.5f
 						{
 							myItemList[i]->setActiveState(false);
 							std::cout << "Item removed!";

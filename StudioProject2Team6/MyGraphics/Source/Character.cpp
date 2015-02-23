@@ -16,7 +16,6 @@ CCharacter::CCharacter(float setMoney, int setAxis, int setItemsHeld, int setMax
 	inventoryIsOpened = setInventoryOpened;
 }
 
-
 CCharacter::~CCharacter(void)
 {
 }
