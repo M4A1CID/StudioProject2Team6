@@ -972,30 +972,65 @@ void SceneSP::checkSupermarketCollision()
 	}
 	else
 		camera.CAMERA_SPEED = 150.0f;*/
-	if((camera.position.x > -41.0f && camera.position.x < -38.0f)&& (camera.position.z > -31.0f && camera.position.z < 32.0f))
+	if((camera.position.x > -41.0f && camera.position.x < -39.5f)&& (camera.position.z > -31.0f && camera.position.z < 32.0f))
 	{
 		camera.position.x -= camera.CAMERA_SPEED*0.02;
 		camera.target.x -= camera.CAMERA_SPEED*0.02;
 	}
-	if((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -31.0f && camera.position.z < -28.0f))
+	if((camera.position.x > -39.5f && camera.position.x < -38.0f)&& (camera.position.z > -31.0f && camera.position.z < 32.0f))
+	{
+		camera.position.x += camera.CAMERA_SPEED*0.02;
+		camera.target.x += camera.CAMERA_SPEED*0.02;
+	}
+	if((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -31.0f && camera.position.z < -29.5f))
 	{
 		camera.position.z -= camera.CAMERA_SPEED*0.02;
 		camera.target.z -= camera.CAMERA_SPEED*0.02;
 	}
-	if((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f))
+	if((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -29.5f && camera.position.z < -28.0f))
 	{
 		camera.position.z += camera.CAMERA_SPEED*0.02;
 		camera.target.z += camera.CAMERA_SPEED*0.02;
 	}
-	if((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f))
+	if((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 30.5f && camera.position.z < 32.0f))
 	{
 		camera.position.z += camera.CAMERA_SPEED*0.02;
 		camera.target.z += camera.CAMERA_SPEED*0.02;
 	}
-	if((camera.position.x > 39.0f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
+		if((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 29.0f && camera.position.z < 30.5f))
+	{
+		camera.position.z -= camera.CAMERA_SPEED*0.02;
+		camera.target.z -= camera.CAMERA_SPEED*0.02;
+	}
+	if((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 30.5f && camera.position.z < 32.0f))
+	{
+		camera.position.z += camera.CAMERA_SPEED*0.02;
+		camera.target.z += camera.CAMERA_SPEED*0.02;
+	}
+		if((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 29.0f && camera.position.z < 30.5f))
+	{
+		camera.position.z -= camera.CAMERA_SPEED*0.02;
+		camera.target.z -= camera.CAMERA_SPEED*0.02;
+	}
+	if((camera.position.x > 40.5f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
 	{
 		camera.position.x += camera.CAMERA_SPEED*0.02;
 		camera.target.x += camera.CAMERA_SPEED*0.02;
+	}
+	if((camera.position.x > 39.0f && camera.position.x < 40.5f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
+	{
+		camera.position.x -= camera.CAMERA_SPEED*0.02;
+		camera.target.x -= camera.CAMERA_SPEED*0.02;
+	}
+	if((camera.position.x > 28.5f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < -29.5f))
+	{
+		camera.position.z -= camera.CAMERA_SPEED*0.02;
+		camera.target.z -= camera.CAMERA_SPEED*0.02;
+	}
+	if((camera.position.x > 28.5f && camera.position.x < 42.0f) && (camera.position.z > -29.5f && camera.position.z < -28.0f))
+	{
+		camera.position.z += camera.CAMERA_SPEED*0.02;
+		camera.target.z += camera.CAMERA_SPEED*0.02;
 	}
 }
 void SceneSP::checkShelfCollision()
