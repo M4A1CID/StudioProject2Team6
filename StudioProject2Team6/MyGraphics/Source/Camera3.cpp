@@ -169,7 +169,7 @@ void Camera3::Update(double dt)
 		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
 
 		Vector3 view = (target - position).Normalized();
-		//view.y = 0;
+		view.y = 0;
 		position += view * CAMERA_SPEED *runMultiplyer* dt;
 		target += view * CAMERA_SPEED*runMultiplyer * dt;
 

@@ -4,7 +4,7 @@ CCharacter::CCharacter(void)
 	money = -1.0f;
 	look_at_axis = 0;
 	itemsHeld = 0;
-	maxItemCapacity = 10;
+	maxItemCapacity = 8;
 	inventoryIsOpened = false;
 }
 CCharacter::CCharacter(float setMoney, int setAxis, int setItemsHeld, int setMaxItemCapacity, bool setInventoryOpened)

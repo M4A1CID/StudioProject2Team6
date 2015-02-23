@@ -3,6 +3,7 @@
 #define CHARACTER_H
 
 #include "Item.h"
+#include <vector>
 class CCharacter
 {
 public:
@@ -13,8 +14,7 @@ public:
 	float getMoney();
 
 private:
-	CItem inventory_first;
-	CItem inventory_second;
+	std::vector<CItem*> myInventoryList;
 	float money;
 	int look_at_axis;
 	int itemsHeld;

@@ -26,7 +26,7 @@ private:
 	/*=======================================
 				Collision Functions
 	=======================================*/
-	void checkCollision();
+	void checkPickUpItem();
 	void checkSupermarketCollision();
 	void checkShelfCollision();
 	/*=======================================
@@ -89,12 +89,13 @@ private:
 	string s_position;
 	string s_fps;
 	string s_camera_target;
-	vector<CItem*> myItemList;
 	CCharacter * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;
 	CContainer* ptrContainer;
-	vector<CContainer*> myContainerList;
+	vector<CContainer*> myContainerList; //Shelf vector
+	vector<CItem*> myStockList;	//Supermarket stock vector
+	vector<CItem*> myTrolleyList; //Trolley item vector
 public:
 	SceneSP();
 	~SceneSP();
