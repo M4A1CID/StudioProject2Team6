@@ -526,39 +526,41 @@ void SceneSP::Update(double dt)
 	//checkCollision();
 	camera.Update(dt);
 	UpdateDoor(dt);
+	checkSupermarketCollision();
+	//checkShelfCollision();
 }
 
 void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
-	if((camera.position.z < 50 && camera.position.z > 0) && (camera.position.x > -30  && camera.position.x < -10))
+	if((camera.position.z < 50.0f && camera.position.z > 0.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
 		toggleDoorFront = true;
 	else
 		toggleDoorFront = false;
 	if(toggleDoorFront)
 	{
 		if(moveDoorFront > -8.0f)
-			moveDoorFront -= 10.f * dt;
+			moveDoorFront -= 10.0f * dt;
 	}
 	else
 	{
 		if(moveDoorFront < 0.0f)
-			moveDoorFront += 10.f * dt;
+			moveDoorFront += 10.0f * dt;
 	}
 	//Back door control
-	if((camera.position.z < 0 && camera.position.z > -50) && (camera.position.x > 10  && camera.position.x < 35))
+	if((camera.position.z < 0.0f && camera.position.z > -50.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
 		toggleDoorBack = true;
 	else
 		toggleDoorBack = false;
 	if(toggleDoorBack)
 	{
-		if(moveDoorBack > -8.0f)
-			moveDoorBack -= 10.f * dt;
+		if(moveDoorBack > -7.0f)
+			moveDoorBack -= 10.0f * dt;
 	}
 	else
 	{
 		if(moveDoorBack < 0.0f)
-			moveDoorBack += 10.f * dt;
+			moveDoorBack += 10.0f * dt;
 	}
 }
 
@@ -885,7 +887,7 @@ void SceneSP::RenderDoors()
 	modelStack.PushMatrix();
 	modelStack.Translate(moveDoorBack, 0.0f, 0.0f);
 	modelStack.PushMatrix();
-	modelStack.Translate(17.0f, 0.0f, -30.0f);
+	modelStack.Translate(17.5f, 0.0f, -30.0f);
 	RenderMesh(meshList[GEO_DOOR], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
@@ -893,7 +895,7 @@ void SceneSP::RenderDoors()
 	modelStack.PushMatrix();
 	modelStack.Translate(-moveDoorBack, 0.0f, 0.0f);
 	modelStack.PushMatrix();
-	modelStack.Translate(26.8f, 11.2f, -30.0f);
+	modelStack.Translate(27.3f, 11.2f, -30.0f);
 	modelStack.Rotate(180,0,0,1);
 	RenderMesh(meshList[GEO_DOOR], toggleLight);
 	modelStack.PopMatrix();
@@ -940,7 +942,6 @@ void SceneSP::RenderItem()
 	}
 }
 
-
 void SceneSP::checkCollision()
 {
 	if(Application::IsKeyPressed('E'))
@@ -957,6 +958,35 @@ void SceneSP::checkCollision()
 		}
 	}
 	
+}
+void SceneSP::checkSupermarketCollision()
+{
+	if(((camera.position.x > -41.0f && camera.position.x < -38.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f)) ||
+		((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -31.0f && camera.position.z < -28.0f)) ||
+		((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
+		((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
+		((camera.position.x > 39.0f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
+		)
+	{
+			camera.CAMERA_SPEED = -150.0f;
+	}
+	else
+		camera.CAMERA_SPEED = 150.0f;
+}
+void SceneSP::checkShelfCollision()
+{
+	//if(camera.CAMERA_SPEED > 0)
+	//{
+		if(((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 26.0f && camera.position.z < 30.0f)) ||
+			((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 14.0f && camera.position.z < 19.0f)) ||
+			((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 3.0f && camera.position.z < 8.0f))
+			)
+		{
+			camera.CAMERA_SPEED = -150.0f;
+		}
+		else
+			camera.CAMERA_SPEED = 150.0f;
+	//}
 }
 void SceneSP::Exit()
 {

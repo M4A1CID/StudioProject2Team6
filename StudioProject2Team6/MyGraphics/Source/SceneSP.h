@@ -113,8 +113,12 @@ private:
 		ROW_BOTTOM,
 		NUM_ROW,
 	};
-
+	/*=======================================
+				Collision Functions
+	=======================================*/
 	void checkCollision();
+	void checkSupermarketCollision();
+	void checkShelfCollision();
 	/*=======================================
 				All Render Functions
 	=======================================*/

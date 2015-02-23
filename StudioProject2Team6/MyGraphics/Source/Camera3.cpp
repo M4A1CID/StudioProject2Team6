@@ -21,6 +21,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	right.Normalize();
 	this->up = defaultUp = right.Cross(view).Normalized();
 	limiter = 45;
+	CAMERA_SPEED = 150.f;
 }
 
 /*bool Camera3::Limit( Vector3& position,Vector3& target, int edge, float speed)
@@ -69,7 +70,6 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 }*/
 void Camera3::Update(double dt)
 {
-	float CAMERA_SPEED = 150.f;
 	float runMultiplyer;
 	if(!Application::IsKeyPressed(VK_SHIFT)) //Check if player is sprinting
 	{

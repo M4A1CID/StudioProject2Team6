@@ -19,6 +19,7 @@ public:
 	bool tableCollision(Vector3& position, Vector3& target, float speed);
 	virtual void Reset();
 	int limiter;
+	float CAMERA_SPEED;
 };
 
 #endif
