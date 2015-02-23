@@ -184,6 +184,7 @@ private:
 	float world_size;
 	float moveDoorFront;
 	float moveDoorBack;
+	float trolleyrotation;
 	int i_sampleItems;
 	string s_money;
 	string s_position;

@@ -42,6 +42,7 @@ void SceneSP::Init()
 	toggleDoorBack = false;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
+	trolleyrotation = 0.0f;
 	i_sampleItems = 4;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 10, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
@@ -67,8 +68,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
 	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
 	meshList[GEO_ICEBOX]->textureID = LoadTGA("Image//ContainerTexture.tga");
-	meshList[GEO_TROLLEY] = MeshBuilder::GenerateOBJ("Trolley", "OBJ//catTrolley.obj");
-	meshList[GEO_TROLLEY]->textureID = LoadTGA("Image//catTrolley.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -141,7 +140,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
-	
+
 }
 void SceneSP::initCharacter()
 {
@@ -210,6 +209,9 @@ void SceneSP::initItems()
 	easterEgg3.setName("Easter Egg3");
 	easterEgg3.setPrice(5.0f);
 	easterEgg3.setGeoType(GEO_EASTEREGG_3);
+
+
+
 
 }
 void SceneSP::initShelves()
@@ -356,7 +358,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 		}
 	}
 
-	
+
 }
 
 void SceneSP::DeclareGLEnable()
@@ -520,9 +522,21 @@ void SceneSP::Update(double dt)
 		toggleLight = false;
 	}
 
+
+
 	UpdateUI(dt);
 	//checkCollision();
 	camera.Update(dt);
+
+	if(Application::IsKeyPressed(VK_LEFT))
+	{
+		trolleyrotation += (camera.CAMERA_SPEED)*dt;
+	}
+	if(Application::IsKeyPressed(VK_RIGHT))
+	{
+		trolleyrotation -= (camera.CAMERA_SPEED)*dt;
+	}
+
 	UpdateDoor(dt);
 	UpdateSamples(dt);
 	checkSupermarketCollision();
@@ -735,6 +749,22 @@ void SceneSP::RenderTrolleys()
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
+
+
+	if(true)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(camera.position.x,0,camera.position.z);
+		{
+			modelStack.PushMatrix();
+			modelStack.Rotate((-90+trolleyrotation),0,1,0);
+			modelStack.Translate(0,10,0);
+			RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+			modelStack.PopMatrix();
+		}
+		modelStack.PopMatrix();
+	}
+
 }
 
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
@@ -865,7 +895,7 @@ void SceneSP::RenderShelves()
 	{
 		RenderShelves(myContainerList[i]);
 	}
-	
+
 }
 void SceneSP::RenderShelves(CContainer* container)
 {
@@ -982,18 +1012,18 @@ void SceneSP::checkCollision()
 			}
 		}
 	}
-	
+
 }
 void SceneSP::checkSupermarketCollision()
 {
 	/*if(((camera.position.x > -41.0f && camera.position.x < -38.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f)) ||
-		((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -31.0f && camera.position.z < -28.0f)) ||
-		((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
-		((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
-		((camera.position.x > 39.0f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
-		)
+	((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -31.0f && camera.position.z < -28.0f)) ||
+	((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
+	((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
+	((camera.position.x > 39.0f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
+	)
 	{
-			camera.CAMERA_SPEED = -100.0f;
+	camera.CAMERA_SPEED = -100.0f;
 	}
 	else
 		camera.CAMERA_SPEED = 150.0f;*/
@@ -1062,15 +1092,15 @@ void SceneSP::checkShelfCollision()
 {
 	//if(camera.CAMERA_SPEED > 0)
 	//{
-		if(((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 26.0f && camera.position.z < 30.0f)) ||
-			((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 14.0f && camera.position.z < 19.0f)) ||
-			((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 3.0f && camera.position.z < 8.0f))
-			)
-		{
-			camera.CAMERA_SPEED = -150.0f;
-		}
-		else
-			camera.CAMERA_SPEED = 150.0f;
+	if(((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 26.0f && camera.position.z < 30.0f)) ||
+		((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 14.0f && camera.position.z < 19.0f)) ||
+		((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 3.0f && camera.position.z < 8.0f))
+		)
+	{
+		camera.CAMERA_SPEED = -150.0f;
+	}
+	else
+		camera.CAMERA_SPEED = 150.0f;
 	//}
 }
 void SceneSP::Exit()
