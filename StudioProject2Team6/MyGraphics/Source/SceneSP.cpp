@@ -82,13 +82,13 @@ void SceneSP::initGeoType()
 	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
 	meshList[GEO_ICEBOX]->textureID = LoadTGA("Image//ContainerTexture.tga");
 	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
-	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_SHELF]->textureID = LoadTGA("Image//Shelves.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
 	meshList[GEO_FENCE] = MeshBuilder::GenerateOBJ("fence", "OBJ//Fence.obj");
-	meshList[GEO_FENCE]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	meshList[GEO_FENCE]->textureID = LoadTGA("Image//Fence.tga");
 	meshList[GEO_ELEVATOR] = MeshBuilder::GenerateOBJ("elevator", "OBJ//Elevator.obj");
-	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//Elevator.tga");
 	meshList[GEO_ELEVATORDOOR] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Elevatordoor.obj");
 	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//arm.obj");
@@ -161,8 +161,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//skybox_left.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
-	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
-	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
 	meshList[GEO_CASHIER_ARM] = MeshBuilder::GenerateOBJ("cashier arm", "OBJ//Arm.obj");
