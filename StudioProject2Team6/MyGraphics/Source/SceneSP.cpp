@@ -180,6 +180,20 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CGluWaterCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,8,0,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CMtnDewCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,2,0,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==============================================================================
 	ptrClass =  new CEasterEgg1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFour",5,5,5,26,0,18,0);
@@ -202,6 +216,19 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
+	ptrClass = new CPeasCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf18",5,5,5,8,0,18,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CSardineCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf19",5,5,5,2,0,18,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==================================================================================
 	ptrClass = new CCerealBox1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSeven",5,5,5,26,0,16,180);
@@ -224,6 +251,19 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
+	ptrClass = new CRedMonsterCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf20",5,5,5,8,0,16,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CRootBeerFloatsCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf21",5,5,5,2,0,16,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==================================================================================
 	ptrClass = new CHumanCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTen",5,5,5,26,0,4,180);
@@ -246,6 +286,19 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
+	ptrClass = new CSodaCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf22",5,5,5,8,0,4,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CSardineCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf23",5,5,5,2,0,4,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==================================================================================
 	ptrClass = new CSodaCan;//RW
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf13",5,5,5,26,0,6,0);
@@ -263,6 +316,20 @@ void SceneSP::initShelves()
 
 	ptrClass = new CRedMonsterCan;//RW
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf15",5,5,5,14,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CTomatoCan;//RW
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf24",5,5,5,8,0,6,0);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CMelonCan;//RW
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf25",5,5,5,2,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
@@ -508,7 +575,7 @@ void SceneSP::Update(double dt)
 	UpdateSamples(dt);
 	checkSupermarketCollision();
 	checkFreezerCollision();
-	//checkShelfCollision();
+	checkShelfCollision();
 }
 
 void SceneSP::UpdateDoor(double dt)
@@ -1351,18 +1418,86 @@ void SceneSP::checkSupermarketCollision()
 }
 void SceneSP::checkShelfCollision()
 {
-	//if(camera.CAMERA_SPEED > 0)
-	//{
-	if(((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 26.0f && camera.position.z < 30.0f)) ||
-		((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 14.0f && camera.position.z < 19.0f)) ||
-		((camera.position.x > 10.0f && camera.position.x < 29.0f) && (camera.position.z > 3.0f && camera.position.z < 8.0f))
-		)
+	//1st row
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ1 && camera.position.z < SboundZ2))
 	{
-		camera.CAMERA_SPEED = -150.0f;
+		diffZ = camera.position.z - (SboundZ1);
+		camera.position.z = SboundZ1;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
 	}
-	else
-		camera.CAMERA_SPEED = 150.0f;
-	//}
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
+	{
+		diffX = camera.position.x - (SboundX1);
+		camera.position.x = SboundX1;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
+	{
+		diffX = camera.position.x - (SboundX2);
+		camera.position.x = SboundX2;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	//2nd row
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ4 && camera.position.z < SboundZ5))
+	{
+		diffZ = camera.position.z - (SboundZ4);
+		camera.position.z = SboundZ4;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ6 && camera.position.z < SboundZ7))
+	{
+		diffZ = camera.position.z - (SboundZ7);
+		camera.position.z = SboundZ7;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
+	{
+		diffX = camera.position.x - (SboundX1);
+		camera.position.x = SboundX1;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
+	{
+		diffX = camera.position.x - (SboundX2);
+		camera.position.x = SboundX2;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	//3rd row
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ9 && camera.position.z < SboundZ10))
+	{
+		diffZ = camera.position.z - (SboundZ9);
+		camera.position.z = SboundZ9;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ11 && camera.position.z < SboundZ12))
+	{
+		diffZ = camera.position.z - (SboundZ12);
+		camera.position.z = SboundZ12;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
+	{
+		diffX = camera.position.x - (SboundX1);
+		camera.position.x = SboundX1;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
+	{
+		diffX = camera.position.x - (SboundX2);
+		camera.position.x = SboundX2;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
 }
 void SceneSP::checkFreezerCollision()
 {
