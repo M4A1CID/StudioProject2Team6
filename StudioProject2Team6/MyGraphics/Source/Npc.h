@@ -11,9 +11,23 @@ public:
 	int getLegType();
 	int getArmType();
 
+	float getLeftArm();
+	float getRightArm();
+	float getLeftLeg();
+	float getRightLeg();
+
+	void setLeftArm(float r);
+	void setRightArm(float r);
+	void setLeftLeg(float r);
+	void setRightLeg(float r);
+
 private:
 	int GeoHeadType;
 	int GeoArmType;
 	int GeoLegType;
+	float rotateLeftArm;
+	float rotateRightArm;
+	float rotateLeftLeg;
+	float rotateRightLeg;
 };
 

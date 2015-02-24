@@ -1035,26 +1035,28 @@ void SceneSP::RenderCharacter(CNpc* npc)
 	//head and body
 	RenderMesh(meshList[npc->getHeadType()], toggleLight);
 
-	//arm
+	//Left arm
 	modelStack.PushMatrix();
 	modelStack.Translate(0.3 , 0.3, 0);
-	modelStack.Rotate(90,0,1,0);
+	modelStack.Rotate(npc->getLeftArm(),0,1,0);
 	RenderMesh(meshList[npc->getArmType()], toggleLight);
 	modelStack.PopMatrix();
-	//arm
+	//Right arm
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.3 , 0.3, 0);
-	modelStack.Rotate(270,0, 1,0);
+	modelStack.Rotate(npc->getRightArm(),0, 1,0);
 	RenderMesh(meshList[npc->getArmType()], toggleLight);
 	modelStack.PopMatrix();
 	//leg and feet
 	modelStack.PushMatrix();
 	modelStack.Translate(0.2, 0, 0);
+	modelStack.Rotate(npc->getLeftLeg(),1,0,0);
 	RenderMesh(meshList[npc->getLegType()], toggleLight);
 	modelStack.PopMatrix();
 	//leg and feet 
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.2, 0, 0);
+	modelStack.Rotate(npc->getRightLeg(),1,0,0);
 	RenderMesh(meshList[npc->getLegType()], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
