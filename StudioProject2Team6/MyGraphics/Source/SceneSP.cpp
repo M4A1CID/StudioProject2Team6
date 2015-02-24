@@ -398,7 +398,7 @@ void SceneSP::addToInventory(CItem* pickedUp)
 		ptrplayer->setInventory(pickedUp);
 		std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
 		std::cout<< "Current itms held: " << ptrplayer->getItemHeld() << std::endl;
-	
+		interactionTimer = 0.0f;
 }
 void SceneSP::DeclareGLEnable()
 {
@@ -579,7 +579,7 @@ void SceneSP::Update(double dt)
 	UpdateTrolley(dt);
 
 	UpdateDoor(dt);
-	UpdateSamples(dt);
+	UpdateSamples();
 	checkSupermarketCollision();
 	checkFreezerCollision();
 	checkShelfCollision();
@@ -618,12 +618,13 @@ void SceneSP::UpdateDoor(double dt)
 			moveDoorBack += 10.0f * dt;
 	}
 }
-void SceneSP::UpdateSamples(double dt)
+void SceneSP::UpdateSamples()
 {
-	if(Application::IsKeyPressed('E'))
+	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 	{
 		if((camera.position.x > 25.0f && camera.position.x < 35.0f) && (camera.position.z > -8.0f && camera.position.z < -2.0f))
 		{
+			interactionTimer = 0.0f;
 			i_sampleItems--;
 		}
 	}
@@ -1167,7 +1168,7 @@ void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 	{
-		interactionTimer = 0.0f;
+		
 		for(unsigned int i = 0; i<myStockList.size();++i)
 		{
 

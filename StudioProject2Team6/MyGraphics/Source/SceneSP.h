@@ -58,7 +58,7 @@ private:
 	void UpdateTrolley(double dt);
 	void UpdateDoor(double dt);
 	void UpdateUI(double dt);
-	void UpdateSamples(double dt);
+	void UpdateSamples();
 	/*=======================================
 				All Init functions
 	=======================================*/
