@@ -46,7 +46,7 @@ void SceneSP::Init()
 	trolleyrotation = 0.0f;
 	i_sampleItems = 4;
 	//Initialize camera settings
-	camera.Init(Vector3(0, 10, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
+	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
@@ -293,7 +293,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 	{
 		for(int i = 0; i<container->getFirstStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+2-i,container->getYpos()+4,container->getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+RenderItemTopRowXOffSet-i,container->getYpos()+RenderItemTopRowYOffSet,container->getZpos());
 			myStockList.push_back(ptrItem);
 		}
 	}
@@ -301,7 +301,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 	{
 		for(int i = 0; i<container->getSecondStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+2-i,container->getYpos()+2.3f,container->getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+RenderItemMiddleRowXOffSet-i,container->getYpos()+RenderItemMiddleRowYOffSet,container->getZpos());
 			myStockList.push_back(ptrItem);
 		}
 	}
@@ -309,7 +309,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 	{
 		for(int i = 0; i<container->getThirdStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+2-i,container->getYpos()+1.2f,container->getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+RenderItemBottomRowXOffSet-i,container->getYpos()+RenderItemBottomRowYOffSet,container->getZpos());
 			myStockList.push_back(ptrItem);
 		}
 	}
@@ -491,7 +491,7 @@ void SceneSP::Update(double dt)
 
 
 	UpdateUI(dt);
-	checkCollision();
+	checkPickUpItem();
 	camera.Update(dt);
 	UpdateTrolley(dt);
 
@@ -979,14 +979,14 @@ void SceneSP::RenderItem()
 		}
 	}
 }
-void SceneSP::checkCollision()
+void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 	{
 		interactionTimer = 0.0f;
 		for(unsigned int i = 0; i<myStockList.size();++i)
 		{
-			
+
 			if(myStockList[i]->getActiveState())
 			{
 				if(camera.target.x >= myStockList[i]->getXpos()) //If camera X is greater than item X
@@ -997,21 +997,25 @@ void SceneSP::checkCollision()
 						{
 							if((camera.target.z - myStockList[i]->getZpos()) < interactionDistanceZ) //If width is within interactionDistanceZ
 							{
-								if(camera.target.y > myStockList[i]->getYpos())
+								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									if((camera.target.y - myStockList[i]->getYpos()) < interactionDistanceY)
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+								}
+								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
+								{
+									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
 									}
 								}
-								else
+								else //Looking at bottom row
 								{
-									if((myStockList[i]->getYpos() - camera.position.y) < interactionDistanceY)
+									if(camera.target.y < interactionDistanceYMin)
 									{
-
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
@@ -1023,26 +1027,31 @@ void SceneSP::checkCollision()
 						{
 							if((myStockList[i]->getZpos() - camera.target.z) < interactionDistanceZ)//If width is within interactionDistanceZ
 							{
-								if(camera.target.y > myStockList[i]->getYpos())
+								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									if((camera.target.y - myStockList[i]->getYpos()) < interactionDistanceY)
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+								}
+								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
+								{
+									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+									}
+								}
+								else //Looking at bottom row
+								{
+									if(camera.target.y < interactionDistanceYMin)
+									{
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
 								}
-								else
-								{
-									if((myStockList[i]->getYpos() - camera.position.y) < interactionDistanceY)
-									{
 
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									}
-								}
 							}
 						}
 
@@ -1056,52 +1065,62 @@ void SceneSP::checkCollision()
 						{
 							if((camera.target.z - myStockList[i]->getZpos()) < interactionDistanceZ) //If width is within interactionDistanceZ
 							{
-								if(camera.target.y > myStockList[i]->getYpos())
+								if((camera.target.y > interactionDistanceYMax) && (myStockList[i]->getYpos() > interactionDistanceYMax)) //If looking at top row
 								{
-									if(((camera.target.y - (myStockList[i]->getYpos()+1.0f)) < interactionDistanceY) && (camera.target.y - myStockList[i]->getYpos()) > 0.f)
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+								}
+								else if (camera.target.y >= interactionDistanceYMin && camera.target.y <= interactionDistanceYMax) //If looking at middle row
+								{
+									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
 								}
-								else
+								else //Looking at bottom row
 								{
-									if(((myStockList[i]->getYpos() - camera.position.y) < interactionDistanceY) && ((myStockList[i]->getYpos() - camera.position.y) > 0.f))
+									if(camera.target.y < interactionDistanceYMin)
 									{
-
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
 								}
+
 							}
 						}
 						else if(camera.target.z < myStockList[i]->getZpos()) //If item Z is greater than camera z
 						{
 							if((myStockList[i]->getZpos() - camera.target.z) < interactionDistanceZ)//If width is within interactionDistanceZ
 							{
-								if(camera.target.y > myStockList[i]->getYpos())
+								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									if(((camera.target.y - (myStockList[i]->getYpos()+1.0f)) < interactionDistanceY) && (camera.target.y - myStockList[i]->getYpos()) > 0.f)
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+								}
+								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
+								{
+									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+									}
+								}
+								else //Looking at bottom row
+								{
+									if(camera.target.y < interactionDistanceYMin)
+									{
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
 								}
-								else
-								{
-									if(((myStockList[i]->getYpos() - camera.position.y) < interactionDistanceY) && ((myStockList[i]->getYpos() - camera.position.y) >0.f))
-									{
 
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									}
-								}
 							}
 						}
 					}

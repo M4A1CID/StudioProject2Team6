@@ -26,7 +26,7 @@ private:
 	/*=======================================
 				Collision Functions
 	=======================================*/
-	void checkCollision();
+	void checkPickUpItem();
 	void checkSupermarketCollision();
 	void checkShelfCollision();
 	/*=======================================
