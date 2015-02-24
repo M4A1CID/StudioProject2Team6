@@ -64,6 +64,7 @@ private:
 	void UpdateDoor(double dt);
 	void UpdateUI(double dt);
 	void UpdateSamples();
+	void UpdateElevator(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -73,7 +74,6 @@ private:
 	void initGeoType();
 	void initCharacter();
 	void initNPC();
-	void initItems();
 	void initShelves();
 
 
@@ -91,13 +91,15 @@ private:
 	bool toggleDoorFront;
 	bool toggleDoorBack;
 	float interactionTimer;
-	float world_size;
 	float moveDoorFront;
 	float moveDoorBack;
 	float trolleyrotation;
 	float diffX;
 	float diffZ;
 	float charactersrotation;
+	float elevatorDoorY;
+	float elevatorY;
+	bool elevatorDoorOpening;
 	int i_sampleItems;
 	string s_money;
 	string s_position;
