@@ -90,6 +90,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_ELEVATORDOOR] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Elevatordoor.obj");
 	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//arm.obj");
+	meshList[GEO_HANDS]->textureID = LoadTGA("Image//cashier.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -391,27 +393,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
-	//==================================================================================
-	//				FROZEN FOOD ZONE
-	//===================================================================================
-	//ptrContainer = new CContainereasterEgg1,easterEgg1,easterEgg1,"ShelfTen",5,5,5,38,0,24,270);
-	//myContainerList.push_back(ptrContainer);
-	//DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
-	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
-	//ptrContainer = new CContainer(cerealBox4,cerealBox4,cerealBox4,"ShelfEleven",5,5,5,38,0,18,270);
-	//myContainerList.push_back(ptrContainer);
-	//DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
-	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
-	//ptrContainer = new CContainer(cerealBox5,cerealBox5,cerealBox5,"ShelfTwelve",5,5,5,38,0,12,270);
-	//myContainerList.push_back(ptrContainer);
-	//DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
-	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 }
 
 void SceneSP::DefineItem(CContainer* container, CItem item, int row)
@@ -745,12 +726,9 @@ void SceneSP::Render()
 	RenderMesh(meshList[GEO_AXES],false);
 
 
-
+	RenderHand();
 	RenderSkyBox();		//Renders out Skybox
 	RenderSupermarket();//Renders out Supermarket
-	RenderFence();
-	RenderElevator();
-
 	RenderCharacters();//Render out characters
 	RenderItem();		//Renders out items
 	RenderUI();			//Renders out UI
@@ -931,7 +909,7 @@ void SceneSP::RenderTrolleys()
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
-	if(true)
+	if(false)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(camera.position.x,0,camera.position.z);
@@ -945,6 +923,46 @@ void SceneSP::RenderTrolleys()
 		modelStack.PopMatrix();
 	}
 
+}
+void SceneSP::RenderHand()
+{
+	//Free will hands
+	    modelStack.PushMatrix();
+		modelStack.Translate(camera.position.x,0,camera.position.z);
+		{
+			modelStack.PushMatrix();
+			modelStack.Rotate((180+trolleyrotation),0,1,0);
+			modelStack.Rotate(-45,1,0,0);
+			modelStack.Translate(0.5,-1.5,2.5);
+			RenderMesh(meshList[GEO_HANDS], toggleLight);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();
+			modelStack.Rotate((180+trolleyrotation),0,1,0);
+			modelStack.Rotate(-45,1,0,0);
+			modelStack.Translate(-0.2,-1.5,2.5);
+			RenderMesh(meshList[GEO_HANDS], toggleLight);
+			modelStack.PopMatrix();
+		}
+		modelStack.PopMatrix();
+
+	/*//Hands on trolley
+		modelStack.PushMatrix();
+		modelStack.Translate(camera.position.x,0,camera.position.z);
+		{
+			modelStack.PushMatrix();
+			modelStack.Rotate((180+trolleyrotation),0,1,0);
+			modelStack.Translate(-0.25,0,-0.7);
+			RenderMesh(meshList[GEO_HANDS], toggleLight);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();
+			modelStack.Rotate((180+trolleyrotation),0,1,0);
+			modelStack.Translate(0.6,0,-0.7);
+			RenderMesh(meshList[GEO_HANDS], toggleLight);
+			modelStack.PopMatrix();
+		}
+		modelStack.PopMatrix();*/
 }
 void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 {
@@ -1171,7 +1189,9 @@ void SceneSP::RenderSupermarket()
 	RenderDoors();			//Render Doors in Supermarket
 	RenderSamplestand();	//Render Sample Food Stand in Supermarket
 	RenderCashierTables();	//Render Cashier table in Supermarket
-	RenderTrolleys();
+	RenderFence();          //Render Fence in Supermarket
+	RenderElevator();       //Render Elevator in Supermarket
+	RenderTrolleys();       //Render Trolleys in Supermarket
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()

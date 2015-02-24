@@ -55,6 +55,7 @@ private:
 	void RenderElevator();
 	void RenderCharacters();
 	void RenderCharacter(CNpc* npc);
+	void RenderHand();
 	/*=======================================
 				All update functions
 	=======================================*/
