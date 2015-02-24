@@ -145,6 +145,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	meshList[GEO_FENCE] = MeshBuilder::GenerateOBJ("cashier", "OBJ//Fence.obj");
+	meshList[GEO_FENCE]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
 
 }
 void SceneSP::initCharacter()
@@ -722,63 +724,94 @@ void SceneSP::RenderSkyBox()
 void SceneSP::RenderCashierTables()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(-30, 0, -15);
+	modelStack.Translate(-26, 0, -15);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(0, 0, -15);
+	modelStack.Translate(-30.5, 2.5, -18);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-30.5, 2.5, -12);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-16, 0, -15);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-11, 0.2, -15);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-6, 0, -15);
+	modelStack.Rotate(180,0,1,0);
+	RenderMesh(meshList[GEO_CASHIER], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-1, 0.2, -15);
+	modelStack.Rotate(0,0,1,0);
+	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+	modelStack.PopMatrix();
+
+
 }
 void SceneSP::RenderTrolleys()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 0);
+	modelStack.Translate(-37, 0.2, 13);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 2);
+	modelStack.Translate(-37, 0.2, 15);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 4);
+	modelStack.Translate(-37, 0.2, 17);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 6);
+	modelStack.Translate(-37, 0.2, 19);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 8);
+	modelStack.Translate(-37, 0.2, 21);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 10);
+	modelStack.Translate(-37, 0.2, 23);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 12);
+	modelStack.Translate(-37, 0.2, 25);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 14);
+	modelStack.Translate(-37, 0.2, 27);
 	modelStack.Rotate(0,0,1,0);
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
