@@ -31,21 +31,22 @@ void SceneSP::Init()
 	/*=============================================
 	Init variables here
 	=============================================*/
-	world_size = 3000.0f;
 
 	initCharacter(); //Initilize the player
 	initGeoType(); //Initilize all Geo Types
-	initItems(); //Initilize all items
 	initShelves();//Initilize all shelves
 	toggleLight = true;
 	toggleDoorFront = false;
 	toggleDoorBack = false;
+	elevatorDoorOpening = false;
 	interactionTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
 	diffX = 0.0f;
 	diffZ = 0.0f;
+	elevatorY = 0.f;
+	elevatorDoorY = 0.f;
 	charactersrotation = 20.0f;
 	i_sampleItems = 4;
 	//Initialize camera settings
@@ -208,12 +209,17 @@ void SceneSP::initCharacter()
 {
 	ptrplayer = new CPlayer(100,0,8);
 
-	ptrNPC = new CNpc(0,0,0,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
+	ptrNPC = new CNpc(0,0,-4,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
-}
-void SceneSP::initItems()
-{
-	//Init items	
+
+	ptrNPC = new CNpc(4,0,-4,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+
+	ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+
+	ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);
 }
 
 void SceneSP::initShelves()
@@ -609,7 +615,7 @@ void SceneSP::Update(double dt)
 	checkPickUpItem();
 	camera.Update(dt);
 	UpdateTrolley(dt);
-
+	UpdateElevator(dt);
 	UpdateDoor(dt);
 	UpdateSamples();
 	checkSupermarketCollision();
@@ -640,7 +646,47 @@ void SceneSP::Update(double dt)
 	if(Application::IsKeyPressed('F'))
 		Cashier.rotateA -= (float) 50 * dt;
 }
+void SceneSP::UpdateElevator(double dt)
+{
+	//If player is within elevator interaction boundary
+	if(camera.position.x > checkElevatorXposMin && camera.position.x < checkElevatorXposMax)
+	{
+		if(camera.position.z > checkElevatorZposMin && camera.position.z < checkElevatorZposMax)
+		{
+			if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+			{
+				if(elevatorDoorOpening) //Check toggling
+				{
+					interactionTimer = 0;
+					elevatorDoorOpening = false;
+				}
+				else
+				{
+					interactionTimer = 0;
+					elevatorDoorOpening = true;
+				}
+			}
+		}
+	}
 
+
+	//Handle opening and closing here
+	if(elevatorDoorOpening) //if door is going up
+	{
+
+		if(!(elevatorDoorY > checkElevatorYposMax))
+		{
+			elevatorDoorY+=dt*5;
+		}
+	}
+	else //if door is closing
+	{
+		if(!(elevatorDoorY < checkElevatorYposMin))
+		{
+			elevatorDoorY-= dt*5;
+		}
+	}
+}
 void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
@@ -786,11 +832,11 @@ void SceneSP::RenderSkyBox()
 void SceneSP::RenderElevator()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(RenderElevatorPosX, 0, RenderElevatorPosZ);
+	modelStack.Translate(RenderElevatorPosX, elevatorY, RenderElevatorPosZ);
 	RenderMesh(meshList[GEO_ELEVATOR], toggleLight);
 	modelStack.PushMatrix();
 
-	modelStack.Translate(ElevatorDoorPosX, 0,ElevatorDoorPosY);
+	modelStack.Translate(ElevatorDoorPosX, elevatorDoorY,ElevatorDoorPosZ);
 	RenderMesh(meshList[GEO_ELEVATORDOOR], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();     

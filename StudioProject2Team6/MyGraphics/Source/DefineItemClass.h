@@ -25,26 +25,6 @@
 #include "SodaCan.h"
 #include "SodaFestCan.h"
 
-static float interactionDistanceZ = 4.0f;
-static float interactionDistanceX = 1.0f;
-static float interactionDistanceYMax = 4.7f;
-static float interactionDistanceYMin = 4.0f;
-static float interactionTimerLimiter = 0.5f;
 
-//Render item X position offset
-static float RenderItemTopRowXOffSet = 2.0f;
-static float RenderItemMiddleRowXOffSet = 2.0f;
-static float RenderItemBottomRowXOffSet = 2.0f;
-
-//Render item Y position offset
-static float RenderItemTopRowYOffSet = 5.05f;
-static float RenderItemMiddleRowYOffSet = 2.95f;
-static float RenderItemBottomRowYOffSet = 1.4f;
-
-//Render Elevator Lift position
-static float RenderElevatorPosX = -35.f;
-static float RenderElevatorPosZ = -25.f;
-static float ElevatorDoorPosX = 0.3f;
-static float ElevatorDoorPosY = 3.45f;
 
 #endif
