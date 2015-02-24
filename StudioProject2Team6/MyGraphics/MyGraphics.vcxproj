@@ -134,6 +134,7 @@
     <ClInclude Include="Source\Container.h" />
     <ClInclude Include="Source\DefineEnum.h" />
     <ClInclude Include="Source\DefineItemClass.h" />
+    <ClInclude Include="Source\DefineValues.h" />
     <ClInclude Include="Source\EasterEgg1.h" />
     <ClInclude Include="Source\EasterEgg2.h" />
     <ClInclude Include="Source\EasterEgg3.h" />

@@ -500,6 +500,7 @@ void SceneSP::Update(double dt)
 	UpdateDoor(dt);
 	UpdateSamples(dt);
 	checkSupermarketCollision();
+	checkFreezerCollision();
 	//checkShelfCollision();
 }
 
@@ -1269,6 +1270,23 @@ void SceneSP::checkShelfCollision()
 	else
 		camera.CAMERA_SPEED = 150.0f;
 	//}
+}
+void SceneSP::checkFreezerCollision()
+{
+	if((camera.position.x > FboundX1 && camera.position.x < FboundX3) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ2))
+	{
+		diffX = camera.position.x - (FboundX1);
+		camera.position.x = FboundX1;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > FboundX3 && camera.position.x < FboundX2) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ3))
+	{
+		diffZ = camera.position.z - (FboundZ1);
+		camera.position.z = FboundZ1;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
 }
 void SceneSP::Exit()
 {

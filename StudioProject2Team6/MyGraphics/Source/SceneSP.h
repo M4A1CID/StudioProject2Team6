@@ -30,6 +30,7 @@ private:
 	void checkPickUpItem();
 	void checkSupermarketCollision();
 	void checkShelfCollision();
+	void checkFreezerCollision();
 	/*=======================================
 				All Render Functions
 	=======================================*/
