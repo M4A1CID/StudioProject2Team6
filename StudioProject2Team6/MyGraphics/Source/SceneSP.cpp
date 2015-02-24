@@ -977,17 +977,18 @@ void SceneSP::RenderHand()
 	    modelStack.PushMatrix();
 		modelStack.Translate(camera.position.x,0,camera.position.z);
 		{
+			/*
 			modelStack.PushMatrix();
 			modelStack.Rotate((180+trolleyrotation),0,1,0);
 			modelStack.Rotate(-45,1,0,0);
 			modelStack.Translate(0.5,-1.5,2.5);
 			RenderMesh(meshList[GEO_HANDS], toggleLight);
 			modelStack.PopMatrix();
-
+			*/
 			modelStack.PushMatrix();
 			modelStack.Rotate((180+trolleyrotation),0,1,0);
-			modelStack.Rotate(-45,1,0,0);
 			modelStack.Translate(-0.2,-1.5,2.5);
+			modelStack.Rotate(-45,1,0,0);
 			RenderMesh(meshList[GEO_HANDS], toggleLight);
 			modelStack.PopMatrix();
 		}
