@@ -3,6 +3,7 @@
 #define CHARACTER_H
 
 #include "Item.h"
+#include "DefineEnum.h"
 #include <vector>
 class CCharacter
 {
@@ -12,6 +13,10 @@ public:
 	~CCharacter(void);
 
 	float getMoney();
+	int getMaxItemCapacity();
+	int getItemHeld();
+	std::vector<CItem*> getVector();
+	void setInventory(CItem* pickedUp);
 
 private:
 	std::vector<CItem*> myInventoryList;

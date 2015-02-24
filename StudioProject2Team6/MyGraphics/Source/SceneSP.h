@@ -31,12 +31,14 @@ private:
 	void checkSupermarketCollision();
 	void checkShelfCollision();
 	void checkFreezerCollision();
+	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
 	=======================================*/
 	void RenderText(Mesh* mesh, std::string text, Color color);
 	void RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y);
-	void RenderTGA(Mesh* mesh,float size, float x , float y);
+	void RenderTGAUI(Mesh* mesh,float size, float x , float y);
+	void RenderTGAInventory(Mesh* mesh,float size, float x , float y);
 	void RenderSupermarket();
 	void RenderShelves();
 	void RenderShelves(CContainer* container);
@@ -47,7 +49,7 @@ private:
 	void RenderUI();
 	void RenderItem(); // Take in a CContainer location and populate it's contents
 	void RenderCashierTables();
-
+	void RenderInventory();
 	/*=======================================
 				All update functions
 	=======================================*/
