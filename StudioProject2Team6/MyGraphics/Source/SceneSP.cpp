@@ -973,8 +973,6 @@ void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 
 	glEnable(GL_DEPTH_TEST);
 }
-	glEnable(GL_DEPTH_TEST);
-}
 void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -1038,6 +1036,7 @@ void SceneSP::RenderCashier()
 		modelStack.PopMatrix();
 }
 
+
 void SceneSP::RenderCharacters()
 {
 	//	modelStack.PushMatrix();
@@ -1050,10 +1049,12 @@ void SceneSP::RenderCharacters()
 	////--------------------------------------------------------------
 
 		modelStack.PushMatrix();
+		modelStack.Translate(0.0 , 0.0, 0.0);//translate everything
+		modelStack.PushMatrix();
+
 	//head and body
 	RenderMesh(meshList[GEO_CASHIER_HEADBODY], toggleLight);
-	//modelStack.Translate(-0.3 , 3.5, 0);
-	//modelStack.Rotate(270,0, 1,0);
+
 	//arm
 	modelStack.PushMatrix();
 	modelStack.Translate(0.3 , 3.3, 0);
@@ -1077,36 +1078,41 @@ void SceneSP::RenderCharacters()
 	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
 	modelStack.PopMatrix();
 		modelStack.PopMatrix();
+		modelStack.PopMatrix();
 	
-	//////////////////////////////////////////////////////////////////
+	/*******************************************************************/
+		modelStack.PushMatrix();
+		modelStack.Translate(5.0, 0.0, 0.0);//translate everything
+		modelStack.PushMatrix();
 
-			modelStack.PushMatrix();
 	//head and body
 	RenderMesh(meshList[GEO_DRUNKMAN_HEADBODY], toggleLight);
-	modelStack.Translate(5, 0.4, 0);
-	//modelStack.Rotate(270,0, 1,0);
+	/*modelStack.Translate(-0.3 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);*/
+
 	//arm
 	modelStack.PushMatrix();
-	modelStack.Translate(5.2 , 3.5, 0);
+	modelStack.Translate(0.3 , 3.3, 0);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
 	modelStack.PopMatrix();
 	//arm
 	modelStack.PushMatrix();
-	modelStack.Translate(4.8 , 3.5, 0);
+	modelStack.Translate(-0.3 , 3.3, 0);
 	modelStack.Rotate(270,0, 1,0);
 	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
 	modelStack.PopMatrix();
 	//leg and feet
 	modelStack.PushMatrix();
-	modelStack.Translate(4.8, 0, 0);
+	modelStack.Translate(0.2, 0, 0);
 	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
 	modelStack.PopMatrix();
 	//leg and feet 
 	modelStack.PushMatrix();
-	modelStack.Translate(5.2, 0, 0);
+	modelStack.Translate(-0.2, 0, 0);
 	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
 	modelStack.PopMatrix();
+		modelStack.PopMatrix();
 		modelStack.PopMatrix();
 	
 	/*modelStack.PushMatrix();
@@ -1137,6 +1143,38 @@ void SceneSP::RenderCharacters()
 	modelStack.PopMatrix();*/
 
 	/////////////////////////////////////////////////////////////////////////
+		
+		modelStack.PushMatrix();
+		modelStack.Translate(10.0 , 0.0, 0.0);//translate everything
+		modelStack.PushMatrix();
+
+	//head and body
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_HEADBODY], toggleLight);
+
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(0.3 , 3.3, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3 , 3.3, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet
+	modelStack.PushMatrix();
+	modelStack.Translate(0.2, 0, 0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet 
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.2, 0, 0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PopMatrix();
+		modelStack.PopMatrix();
 
 	/*modelStack.PushMatrix();
 	modelStack.Translate(10.2 , 3.5, 0);
@@ -1167,6 +1205,38 @@ void SceneSP::RenderCharacters()
 */
 	///////////////////////////////////////////////////////////////////////////
 
+		modelStack.PushMatrix();
+		modelStack.Translate(-5.0 , 0, 0.0);//translate everything
+		modelStack.PushMatrix();
+
+	//head and body
+	RenderMesh(meshList[GEO_NormalNpc1_HEADBODY], toggleLight);
+
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(0.3 , 3.3, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3 , 3.3, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet
+	modelStack.PushMatrix();
+	modelStack.Translate(0.2, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet 
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.2, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PopMatrix();
+		modelStack.PopMatrix();
+
 	/*modelStack.PushMatrix();
 	modelStack.Translate(-4.8 , 3.5, 0);
 	modelStack.Rotate(90,0,1,0);
@@ -1195,6 +1265,39 @@ void SceneSP::RenderCharacters()
 	modelStack.PopMatrix();*/
 
 	////////////////////////////////////////////////////////////////////////////////
+
+	    modelStack.PushMatrix();
+		modelStack.Translate(-10.0 , 0.0, 0.0);//translate everything
+		modelStack.PushMatrix();
+
+//head and body
+	RenderMesh(meshList[GEO_NormalNpc2_HEADBODY], toggleLight);
+
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(0.3 , 3.3, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3 , 3.3, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet
+	modelStack.PushMatrix();
+	modelStack.Translate(0.2, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet 
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.2, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PopMatrix();
+		modelStack.PopMatrix();
+
 
 	/*modelStack.PushMatrix();
 	modelStack.Translate(-9.8 , 3.5, 0);
