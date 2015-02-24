@@ -106,7 +106,9 @@
     <ClCompile Include="Source\Mesh.cpp" />
     <ClCompile Include="Source\MeshBuilder.cpp" />
     <ClCompile Include="Source\MtnDewCan.cpp" />
+    <ClCompile Include="Source\Npc.cpp" />
     <ClCompile Include="Source\PeasCan.cpp" />
+    <ClCompile Include="Source\Player.cpp" />
     <ClCompile Include="Source\RedMonsterCan.cpp" />
     <ClCompile Include="Source\RootBeerFloatsCan.cpp" />
     <ClCompile Include="Source\SardineCan.cpp" />
@@ -149,7 +151,9 @@
     <ClInclude Include="Source\Mesh.h" />
     <ClInclude Include="Source\MeshBuilder.h" />
     <ClInclude Include="Source\MtnDewCan.h" />
+    <ClInclude Include="Source\Npc.h" />
     <ClInclude Include="Source\PeasCan.h" />
+    <ClInclude Include="Source\Player.h" />
     <ClInclude Include="Source\RedMonsterCan.h" />
     <ClInclude Include="Source\RootBeerFloatsCan.h" />
     <ClInclude Include="Source\SardineCan.h" />

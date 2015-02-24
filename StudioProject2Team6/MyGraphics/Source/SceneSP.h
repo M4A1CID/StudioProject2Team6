@@ -10,7 +10,7 @@
 #include "MatrixStack.h"
 #include "Light.h"
 #include "Utility.h"
-#include "Character.h"
+#include "Player.h"
 #include "Container.h"
 #include "DefineValues.h"
 #include <vector>
@@ -100,7 +100,7 @@ private:
 	string s_position;
 	string s_fps;
 	string s_camera_target;
-	CCharacter * ptrplayer;
+	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;
 	CContainer* ptrContainer;

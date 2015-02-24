@@ -204,7 +204,7 @@ void SceneSP::initGeoType()
 }
 void SceneSP::initCharacter()
 {
-	ptrplayer = new CCharacter(100.0f,0,0,8,false);
+	ptrplayer = new CPlayer(100,0,8);
 
 }
 void SceneSP::initItems()
@@ -805,13 +805,15 @@ void SceneSP::RenderSkyBox()
 void SceneSP::RenderElevator()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(-35, 0, -25);
+	modelStack.Translate(RenderElevatorPosX, 0, RenderElevatorPosZ);
 	RenderMesh(meshList[GEO_ELEVATOR], toggleLight);
-	modelStack.PopMatrix();     
 	modelStack.PushMatrix();
-	modelStack.Translate(-35, 0, -21.6);
+	
+	modelStack.Translate(ElevatorDoorPosX, 0,ElevatorDoorPosY);
 	RenderMesh(meshList[GEO_ELEVATORDOOR], toggleLight);
 	modelStack.PopMatrix();
+	modelStack.PopMatrix();     
+
 }
 void SceneSP::RenderFence()
 {

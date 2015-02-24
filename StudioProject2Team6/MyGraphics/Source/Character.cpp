@@ -1,43 +1,57 @@
 #include "Character.h"
 CCharacter::CCharacter(void)
 {
-	money = -1.0f;
-	look_at_axis = 0;
-	itemsHeld = 0;
-	maxItemCapacity = 8;
-	inventoryIsOpened = false;
-	characterState = IDLE;
+
 }
-CCharacter::CCharacter(float setMoney, int setAxis, int setItemsHeld, int setMaxItemCapacity, bool setInventoryOpened)
+CCharacter::CCharacter(float posX, float posY, float posZ, int state, int job)
 {
-	money = setMoney;
-	look_at_axis = setAxis;
-	itemsHeld = setItemsHeld;
-	maxItemCapacity = setMaxItemCapacity;
-	inventoryIsOpened = setInventoryOpened;
+	x = posX;
+	y = posY;
+	z = posZ;
+	characterState = state;
+	characterJob = job;
 }
 
 CCharacter::~CCharacter(void)
 {
 }
-
-float CCharacter::getMoney()
+int CCharacter::getCharacterJob()
 {
-	return money;
+	return characterJob;
 }
-int CCharacter::getItemHeld()
+int CCharacter::getCharacterState()
 {
-	return myInventoryList.size();
+	return characterState;
 }
-int CCharacter::getMaxItemCapacity()
+float CCharacter::getXpos()
 {
-	return maxItemCapacity;
+	return x;
 }
-void CCharacter::setInventory(CItem* pickedUp)
+float CCharacter::getYpos()
 {
-	myInventoryList.push_back(pickedUp);
+	return y;
 }
-std::vector<CItem*> CCharacter::getVector()
+float CCharacter::getZpos()
 {
-	return myInventoryList;
+	return z;
+}
+void CCharacter::setXpos(float posX)
+{
+	x = posX;
+}
+void CCharacter::setYpos(float posY)
+{
+	y = posY;
+}
+void CCharacter::setZpos(float posZ)
+{
+	z = posZ;
+}
+void CCharacter::setCharacterState(int state)
+{
+	characterState = state;
+}
+void CCharacter::setCharacterJob(int jobNum)
+{
+	characterJob = jobNum;
 }

@@ -9,22 +9,22 @@ class CCharacter
 {
 public:
 	CCharacter(void);
-	CCharacter(float setMoney, int setAxis, int setItemsHeld, int setMaxItemCapacity, bool setInventoryOpened);
+	CCharacter(float posX, float posY, float posZ, int state, int job);
 	~CCharacter(void);
-
-	float getMoney();
-	int getMaxItemCapacity();
-	int getItemHeld();
-	std::vector<CItem*> getVector();
-	void setInventory(CItem* pickedUp);
+	int getCharacterState();
+	float getXpos();
+	float getYpos();
+	float getZpos();
+	int getCharacterJob();
+	void setCharacterJob(int jobNum);
+	void setCharacterState(int state);
+	void setXpos(float posX);
+	void setYpos(float posY);
+	void setZpos(float posZ);
+	
 
 private:
-	std::vector<CItem*> myInventoryList;
-	float money;
-	int look_at_axis;
-	int itemsHeld;
-	int maxItemCapacity;
-	bool inventoryIsOpened;
+	
 	float x;
 	float y;
 	float z;
