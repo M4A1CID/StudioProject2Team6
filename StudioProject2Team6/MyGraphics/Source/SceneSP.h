@@ -11,6 +11,7 @@
 #include "Light.h"
 #include "Utility.h"
 #include "Player.h"
+#include "Npc.h"
 #include "Container.h"
 #include "DefineValues.h"
 #include <vector>
@@ -53,7 +54,7 @@ private:
 	void RenderFence();
 	void RenderElevator();
 	void RenderCharacters();
-	void RenderCashier();
+	void RenderCharacter(CNpc* npc);
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -103,10 +104,12 @@ private:
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;
+	CNpc * ptrNPC;
 	CContainer* ptrContainer;
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector
 	vector<CItem*> myTrolleyList; //Trolley item vector
+	vector<CNpc*> myNPCList;
 	struct Transformations
 	{
 		float translateX;

@@ -44,7 +44,7 @@ static float RenderItemBottomRowYOffSet = 1.4f;
 //Render Elevator Lift position
 static float RenderElevatorPosX = -35.f;
 static float RenderElevatorPosZ = -25.f;
-static float ElevatorDoorPosX = -35.f;
-static float ElevatorDoorPosY = 21.6f;
+static float ElevatorDoorPosX = 0.3f;
+static float ElevatorDoorPosY = 3.45f;
 
 #endif

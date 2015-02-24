@@ -60,7 +60,7 @@ void SceneSP::Init()
 	////////////////////////////////////////////
 	Cashier.translateX = 0;
 	Cashier.translateY = 0;
-    Cashier.translateZ = 0;
+	Cashier.translateZ = 0;
 	Cashier.rotateA = 0;
 }
 void SceneSP::initGeoType()
@@ -176,7 +176,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_DRUNKMAN_LEGANDFEET] = MeshBuilder::GenerateOBJ("drunkman head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_DRUNKMAN_LEGANDFEET]->textureID = LoadTGA("Image//Drunkman.tga");
 	///////////////////////////////////////////////////////////////////////
-	
+
 	meshList[GEO_LOGISTICSTAFF_ARM] = MeshBuilder::GenerateOBJ("logisticstaff arm", "OBJ//Arm.obj");
 	meshList[GEO_LOGISTICSTAFF_ARM]->textureID = LoadTGA("Image//Logisticstaff.tga");
 	meshList[GEO_LOGISTICSTAFF_HEADBODY] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//headandbody.obj");
@@ -193,7 +193,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_NormalNpc1_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	//////////////////////////////////////////////////////////////////////////////
 
-	
+
 	meshList[GEO_NormalNpc2_ARM] = MeshBuilder::GenerateOBJ("NormalNpc2 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc2_ARM]->textureID = LoadTGA("Image//NormalNpc2.tga");
 	meshList[GEO_NormalNpc2_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//headandbody.obj");
@@ -206,6 +206,8 @@ void SceneSP::initCharacter()
 {
 	ptrplayer = new CPlayer(100,0,8);
 
+	ptrNPC = new CNpc(0,0,0,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
+	myNPCList.push_back(ptrNPC);
 }
 void SceneSP::initItems()
 {
@@ -443,11 +445,11 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 }
 void SceneSP::addToInventory(CItem* pickedUp)
 {
-	
-		ptrplayer->setInventory(pickedUp);
-		std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
-		std::cout<< "Current itms held: " << ptrplayer->getItemHeld() << std::endl;
-		interactionTimer = 0.0f;
+
+	ptrplayer->setInventory(pickedUp);
+	std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
+	std::cout<< "Current itms held: " << ptrplayer->getItemHeld() << std::endl;
+	interactionTimer = 0.0f;
 }
 void SceneSP::DeclareGLEnable()
 {
@@ -703,7 +705,7 @@ void SceneSP::UpdateSamples()
 }
 void SceneSP::RenderUI()
 {
-	
+
 	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
 	RenderTGAUI(meshList[GEO_UI_SCREEN],1,40,20);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
@@ -748,7 +750,7 @@ void SceneSP::Render()
 	RenderSupermarket();//Renders out Supermarket
 	RenderFence();
 	RenderElevator();
-	
+
 	RenderCharacters();//Render out characters
 	RenderItem();		//Renders out items
 	RenderUI();			//Renders out UI
@@ -808,7 +810,7 @@ void SceneSP::RenderElevator()
 	modelStack.Translate(RenderElevatorPosX, 0, RenderElevatorPosZ);
 	RenderMesh(meshList[GEO_ELEVATOR], toggleLight);
 	modelStack.PushMatrix();
-	
+
 	modelStack.Translate(ElevatorDoorPosX, 0,ElevatorDoorPosY);
 	RenderMesh(meshList[GEO_ELEVATORDOOR], toggleLight);
 	modelStack.PopMatrix();
@@ -871,7 +873,7 @@ void SceneSP::RenderCashierTables()
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(-6, 0, -15);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
@@ -960,7 +962,7 @@ void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(x, y, 0);
 	modelStack.Scale(40, 40,40);
-	
+
 	RenderMesh(mesh,false);
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
@@ -991,7 +993,7 @@ void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
 	modelStack.LoadIdentity(); //Reset modelStack
 	modelStack.Translate(x, y, 0);
 	modelStack.Scale(size, size,size);
-	
+
 	RenderMesh(mesh,false);
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 1);
 	glUniform1i(m_parameters[U_LIGHTENABLED], 0);
@@ -1005,330 +1007,48 @@ void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
 
 	glEnable(GL_DEPTH_TEST);
 }
-void SceneSP::RenderCashier()
+void SceneSP::RenderCharacter(CNpc* npc)
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 3.5, 0);
+	modelStack.Translate(npc->getXpos() , npc->getYpos(), npc->getZpos());//translate everything
+	modelStack.PushMatrix();
+
+	//head and body
+	RenderMesh(meshList[npc->getHeadType()], toggleLight);
+
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(0.3 , 0.3, 0);
 	modelStack.Rotate(90,0,1,0);
-		modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
+	RenderMesh(meshList[npc->getArmType()], toggleLight);
 	modelStack.PopMatrix();
-
+	//arm
 	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.5, 0);
+	modelStack.Translate(-0.3 , 0.3, 0);
 	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
+	RenderMesh(meshList[npc->getArmType()], toggleLight);
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.5, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_CASHIER_HEADBODY], toggleLight);
-	modelStack.PopMatrix();
-
+	//leg and feet
 	modelStack.PushMatrix();
 	modelStack.Translate(0.2, 0, 0);
-	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
+	RenderMesh(meshList[npc->getLegType()], toggleLight);
 	modelStack.PopMatrix();
-	
+	//leg and feet 
 	modelStack.PushMatrix();
 	modelStack.Translate(-0.2, 0, 0);
-	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
+	RenderMesh(meshList[npc->getLegType()], toggleLight);
 	modelStack.PopMatrix();
-		modelStack.PopMatrix();
+	modelStack.PopMatrix();
+	modelStack.PopMatrix();
 }
 
 
 void SceneSP::RenderCharacters()
 {
-	//	modelStack.PushMatrix();
-	//////------------------------------------------------------------
-	////Doreamon Translation & Transformations code here
-	//modelStack.Translate(Cashier.translateX, Cashier.translateY, Cashier.translateZ);
-	//modelStack.Translate(0.3 , 3.5, 0);
-	//modelStack.Rotate(90,0,1,0);
-	//modelStack.Rotate(Cashier.rotateA, 0, 1, 0);
-	////--------------------------------------------------------------
-
-		modelStack.PushMatrix();
-		modelStack.Translate(0.0 , 0.0, 0.0);//translate everything
-		modelStack.PushMatrix();
-
-	//head and body
-	RenderMesh(meshList[GEO_CASHIER_HEADBODY], toggleLight);
-
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 3.3, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.3, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet
-	modelStack.PushMatrix();
-	modelStack.Translate(0.2, 0, 0);
-	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet 
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.2, 0, 0);
-	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-	
-	/*******************************************************************/
-		modelStack.PushMatrix();
-		modelStack.Translate(5.0, 0.0, 0.0);//translate everything
-		modelStack.PushMatrix();
-
-	//head and body
-	RenderMesh(meshList[GEO_DRUNKMAN_HEADBODY], toggleLight);
-	/*modelStack.Translate(-0.3 , 3.5, 0);
-	modelStack.Rotate(270,0, 1,0);*/
-
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 3.3, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.3, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet
-	modelStack.PushMatrix();
-	modelStack.Translate(0.2, 0, 0);
-	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet 
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.2, 0, 0);
-	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-	
-	/*modelStack.PushMatrix();
-	modelStack.Translate(5.2 , 3.5, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(4.8 , 3.5, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight); 
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(5, 0.4, 0);
-	RenderMesh(meshList[GEO_DRUNKMAN_HEADBODY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(4.8, 0, 0);
-	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(5.2, 0, 0);
-	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();*/
-
-	/////////////////////////////////////////////////////////////////////////
-		
-		modelStack.PushMatrix();
-		modelStack.Translate(10.0 , 0.0, 0.0);//translate everything
-		modelStack.PushMatrix();
-
-	//head and body
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_HEADBODY], toggleLight);
-
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 3.3, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.3, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet
-	modelStack.PushMatrix();
-	modelStack.Translate(0.2, 0, 0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet 
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.2, 0, 0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-
-	/*modelStack.PushMatrix();
-	modelStack.Translate(10.2 , 3.5, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(9.8 , 3.5, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(10, 0.4, 0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_HEADBODY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(9.8, 0, 0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(10.2, 0, 0);
-	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-*/
-	///////////////////////////////////////////////////////////////////////////
-
-		modelStack.PushMatrix();
-		modelStack.Translate(-5.0 , 0, 0.0);//translate everything
-		modelStack.PushMatrix();
-
-	//head and body
-	RenderMesh(meshList[GEO_NormalNpc1_HEADBODY], toggleLight);
-
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 3.3, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.3, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet
-	modelStack.PushMatrix();
-	modelStack.Translate(0.2, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet 
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.2, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-
-	/*modelStack.PushMatrix();
-	modelStack.Translate(-4.8 , 3.5, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-5.2 , 3.5, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-5, 0.4, 0);
-	RenderMesh(meshList[GEO_NormalNpc1_HEADBODY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-5.2, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(-4.8, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();*/
-
-	////////////////////////////////////////////////////////////////////////////////
-
-	    modelStack.PushMatrix();
-		modelStack.Translate(-10.0 , 0.0, 0.0);//translate everything
-		modelStack.PushMatrix();
-
-//head and body
-	RenderMesh(meshList[GEO_NormalNpc2_HEADBODY], toggleLight);
-
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 3.3, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//arm
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 3.3, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet
-	modelStack.PushMatrix();
-	modelStack.Translate(0.2, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	//leg and feet 
-	modelStack.PushMatrix();
-	modelStack.Translate(-0.2, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-		modelStack.PopMatrix();
-		modelStack.PopMatrix();
-
-
-	/*modelStack.PushMatrix();
-	modelStack.Translate(-9.8 , 3.5, 0);
-	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-10.2 , 3.5, 0);
-	modelStack.Rotate(270,0, 1,0);
-	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-10, 0.4, 0);
-	RenderMesh(meshList[GEO_NormalNpc2_HEADBODY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-10.2, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(-9.8, 0, 0);
-	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
-	modelStack.PopMatrix();*/
-	
-
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		RenderCharacter(myNPCList[i]);
+	}
 }
 
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
@@ -1572,7 +1292,7 @@ void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 	{
-		
+
 		for(unsigned int i = 0; i<myStockList.size();++i)
 		{
 
@@ -1780,7 +1500,7 @@ void SceneSP::checkSupermarketCollision()
 	camera.CAMERA_SPEED = -100.0f;
 	}
 	else
-		camera.CAMERA_SPEED = 150.0f;*/
+	camera.CAMERA_SPEED = 150.0f;*/
 	if((camera.position.x > boundX1 && camera.position.x < boundX2) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
 	{
 		/*camera.position.x -= camera.CAMERA_SPEED*0.02;
@@ -1801,7 +1521,7 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX1 && camera.position.x < boundX5) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
 	{
-	/*	camera.position.z -= camera.CAMERA_SPEED*0.02;
+		/*	camera.position.z -= camera.CAMERA_SPEED*0.02;
 		camera.target.z -= camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ1);
 		camera.position.z = boundZ1;
@@ -1819,7 +1539,7 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX1 && camera.position.x < boundX6) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
 	{
-	/*	camera.position.z += camera.CAMERA_SPEED*0.02;
+		/*	camera.position.z += camera.CAMERA_SPEED*0.02;
 		camera.target.z += camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ2);
 		camera.position.z = boundZ2;
@@ -1844,7 +1564,7 @@ void SceneSP::checkSupermarketCollision()
 		camera.target.z -= diffZ;
 		diffZ = 0.0f;
 	}
-		if((camera.position.x > -12.0f && camera.position.x < boundX4) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
+	if((camera.position.x > -12.0f && camera.position.x < boundX4) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
 	{
 		//camera.position.z -= camera.CAMERA_SPEED*0.02;
 		//camera.target.z -= camera.CAMERA_SPEED*0.02;
