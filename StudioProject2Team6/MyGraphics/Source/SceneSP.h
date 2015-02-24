@@ -50,6 +50,8 @@ private:
 	void RenderItem(); // Take in a CContainer location and populate it's contents
 	void RenderCashierTables();
 	void RenderInventory();
+	void RenderFence();
+	void RenderElevator();
 	/*=======================================
 				All update functions
 	=======================================*/

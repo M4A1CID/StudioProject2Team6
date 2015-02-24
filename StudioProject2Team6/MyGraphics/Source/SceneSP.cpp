@@ -73,6 +73,16 @@ void SceneSP::initGeoType()
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
 	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
 	meshList[GEO_ICEBOX]->textureID = LoadTGA("Image//ContainerTexture.tga");
+	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
+	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
+	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	meshList[GEO_FENCE] = MeshBuilder::GenerateOBJ("fence", "OBJ//Fence.obj");
+	meshList[GEO_FENCE]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	meshList[GEO_ELEVATOR] = MeshBuilder::GenerateOBJ("elevator", "OBJ//Elevator.obj");
+	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_ELEVATORDOOR] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Elevatordoor.obj");
+	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -141,12 +151,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//skybox_left.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
-	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
-	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
-	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
-	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
-	meshList[GEO_FENCE] = MeshBuilder::GenerateOBJ("cashier", "OBJ//Fence.obj");
-	meshList[GEO_FENCE]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+
 
 }
 void SceneSP::initCharacter()
@@ -668,7 +673,8 @@ void SceneSP::Render()
 
 	RenderSkyBox();		//Renders out Skybox
 	RenderSupermarket();//Renders out Supermarket
-
+	RenderFence();
+	RenderElevator();
 	RenderItem();		//Renders out items
 	RenderUI();			//Renders out UI
 	RenderInventory();	//Render inventory after UI to place above
@@ -721,6 +727,59 @@ void SceneSP::RenderSkyBox()
 	modelStack.PopMatrix();
 
 }
+void SceneSP::RenderElevator()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(-35, 0, -25);
+	RenderMesh(meshList[GEO_ELEVATOR], toggleLight);
+	modelStack.PopMatrix();     
+	modelStack.PushMatrix();
+	modelStack.Translate(-35, 0, -21.6);
+	RenderMesh(meshList[GEO_ELEVATORDOOR], toggleLight);
+	modelStack.PopMatrix();
+}
+void SceneSP::RenderFence()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(-22.9, 2.5, -26);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-22.9, 2.5, -21.1);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-22.9, 2.5, -16);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-30.5, 2.5, -18);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-30.5, 2.5, -12.1);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-12.9, 2.5, -21.1);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-12.9, 2.5, -16);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.9, 2.5, -21.1);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.9, 2.5, -16);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+}
 void SceneSP::RenderCashierTables()
 {
 	modelStack.PushMatrix();
@@ -730,38 +789,15 @@ void SceneSP::RenderCashierTables()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-30.5, 2.5, -18);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_FENCE], toggleLight);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(-30.5, 2.5, -12);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_FENCE], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
 	modelStack.Translate(-16, 0, -15);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
-	modelStack.Translate(-11, 0.2, -15);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
 	modelStack.Translate(-6, 0, -15);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
-	modelStack.PopMatrix();
-
-		modelStack.PushMatrix();
-	modelStack.Translate(-1, 0.2, -15);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
 
@@ -816,14 +852,14 @@ void SceneSP::RenderTrolleys()
 	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 	modelStack.PopMatrix();
 
-	if(false)
+	if(true)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(camera.position.x,0,camera.position.z);
 		{
 			modelStack.PushMatrix();
-			modelStack.Rotate((-90+trolleyrotation),0,1,0);
-			modelStack.Translate(-10,0,0);
+			modelStack.Rotate((180+trolleyrotation),0,1,0);
+			modelStack.Translate(0,0,3.5);
 			RenderMesh(meshList[GEO_TROLLEY], toggleLight);
 			modelStack.PopMatrix();
 		}
