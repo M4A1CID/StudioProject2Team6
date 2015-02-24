@@ -100,7 +100,9 @@ private:
 	float elevatorDoorY;
 	float elevatorY;
 	bool elevatorDoorOpening;
+	bool elevatorSecondFloor;
 	int i_sampleItems;
+	bool elevatorIdle;
 	string s_money;
 	string s_position;
 	string s_fps;

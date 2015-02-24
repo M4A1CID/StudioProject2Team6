@@ -39,6 +39,7 @@ void SceneSP::Init()
 	toggleDoorFront = false;
 	toggleDoorBack = false;
 	elevatorDoorOpening = false;
+	elevatorSecondFloor = false;
 	interactionTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
@@ -47,6 +48,7 @@ void SceneSP::Init()
 	diffZ = 0.0f;
 	elevatorY = 0.f;
 	elevatorDoorY = 0.f;
+	elevatorIdle = true; // Set default elevator to IDLE
 	charactersrotation = 20.0f;
 	i_sampleItems = 4;
 	//Initialize camera settings
@@ -653,23 +655,68 @@ void SceneSP::UpdateElevator(double dt)
 	{
 		if(camera.position.z > checkElevatorZposMin && camera.position.z < checkElevatorZposMax)
 		{
-			if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+
+			if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter && elevatorIdle)
 			{
 				if(elevatorDoorOpening) //Check toggling
 				{
 					interactionTimer = 0;
 					elevatorDoorOpening = false;
+					std::cout << "Door closing!" << std::endl;
 				}
 				else
 				{
 					interactionTimer = 0;
 					elevatorDoorOpening = true;
+					std::cout << "Door opening!" << std::endl;
+
+				}
+			}
+			//If player is INSIDE elevator
+			if(camera.position.x > checkInnerElevatorXposMin && camera.position.x < checkInnerElevatorXposMax)
+			{
+				if(camera.position.z > checkInnerElevatorZposMin && camera.position.z < checkInnerElevatorZposMax)
+				{
+					//if elevator door is closed
+					if(!elevatorDoorOpening)
+					{
+						if(!(elevatorSecondFloor))
+						{
+							//Move elevator up
+							camera.position.y += dt;
+							camera.target.y +=dt;
+							elevatorY+=dt;
+							elevatorIdle = false;
+						}
+						else if(elevatorSecondFloor)
+						{
+							//Move elevator down
+							camera.position.y-=dt;
+							camera.target.y-=dt;
+							elevatorY-=dt;
+							elevatorIdle = false;
+						}
+					}
 				}
 			}
 		}
 	}
 
 
+
+	//Handle second floor boolean here
+	if(elevatorY > secondFloorYpositionMax)
+	{
+		elevatorIdle = true;
+		elevatorDoorOpening = true;
+		elevatorSecondFloor = true;
+	}
+	if(elevatorY < secondFloorYpositionMin)
+	{
+		elevatorIdle = true;
+		elevatorDoorOpening = true;
+		elevatorSecondFloor = false;
+	}
 	//Handle opening and closing here
 	if(elevatorDoorOpening) //if door is going up
 	{
