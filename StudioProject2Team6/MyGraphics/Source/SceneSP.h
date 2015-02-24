@@ -12,6 +12,7 @@
 #include "Utility.h"
 #include "Character.h"
 #include "Container.h"
+#include "DefineValues.h"
 #include <vector>
 #include <string>
 #include <sstream>
@@ -84,6 +85,8 @@ private:
 	float moveDoorFront;
 	float moveDoorBack;
 	float trolleyrotation;
+	float diffX;
+	float diffZ;
 	int i_sampleItems;
 	string s_money;
 	string s_position;
