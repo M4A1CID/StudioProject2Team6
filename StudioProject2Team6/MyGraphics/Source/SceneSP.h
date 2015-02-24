@@ -32,6 +32,7 @@ private:
 	void checkSupermarketCollision();
 	void checkShelfCollision();
 	void checkFreezerCollision();
+	void checkCashierCollision();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions

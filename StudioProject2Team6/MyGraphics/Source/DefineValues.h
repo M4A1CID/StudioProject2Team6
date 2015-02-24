@@ -23,17 +23,17 @@ static float boundZ6 = -28.0f;
 =======================================*/
 static float FboundX1 = 34.0f;
 static float FboundX2 = 40.0f;
-static float FboundX3 = 35.0f;
+static float FboundX3 = 36.0f;
 static float FboundZ1 = 2.0f;
 static float FboundZ2 = 30.0f;
-static float FboundZ3 = 3.0f;
+static float FboundZ3 = 4.0f;
 /*=======================================
 		Shelf bounds values
 =======================================*/
 static float SboundX1 = -2.0f;
 static float SboundX2 = 30.0f;
-static float SboundX3 = -1.0f;
-static float SboundX4 = 29.0f;
+static float SboundX3 = 0.0f;
+static float SboundX4 = 28.0f;
 static float SboundX5 = 26.0f;
 static float SboundZ1 = 26.0f;
 static float SboundZ2 = 27.0f;
@@ -48,3 +48,23 @@ static float SboundZ10 = 3.0f;
 static float SboundZ11 = 7.0f;
 static float SboundZ12 = 9.0f;
 static float SboundZ13 = 6.9f;
+/*=======================================
+		Cashier table bounds values
+=======================================*/
+static float CboundX1 = -3.5f;
+static float CboundX2 = -1.5f;
+static float CboundX3 = -9.0f;
+static float CboundX4 = -7.0f;
+static float CboundX5 = -13.5f;
+static float CboundX6 = -11.5f;
+static float CboundX7 = -20.0f;
+static float CboundX8 = -18.0f;
+static float CboundX9 = -23.5f;
+static float CboundX10 = -21.5f;
+static float CboundX11 = -31.0f;
+static float CboundX12 = -29.0f;
+static float CboundZ1 = -25.0f;
+static float CboundZ2 = -12.0f;
+static float CboundZ3 = -14.0f;
+static float CboundZ4 = -23.0f;
+static float CboundZ5 = -29.0f;

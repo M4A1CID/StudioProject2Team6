@@ -615,6 +615,7 @@ void SceneSP::Update(double dt)
 	checkSupermarketCollision();
 	checkFreezerCollision();
 	checkShelfCollision();
+	checkCashierCollision();
 	if(Application::IsKeyPressed('U'))
 		Cashier.translateY += (float) 50 * dt;
 	//Down
@@ -1728,6 +1729,89 @@ void SceneSP::checkFreezerCollision()
 		camera.position.z = FboundZ1;
 		camera.target.z -= diffZ;
 		diffZ = 0.0f;
+	}
+}
+void SceneSP::checkCashierCollision()
+{
+	//Cashier table 1
+	if((camera.position.x > CboundX1 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+	{
+		diffX = camera.position.x - (CboundX2);
+		camera.position.x = CboundX2;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+	{
+		diffZ = camera.position.z - (CboundZ2);
+		camera.position.z = CboundZ2;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > CboundX3 && camera.position.x < CboundX4) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+	{
+		diffX = camera.position.x - (CboundX3);
+		camera.position.x = CboundX3;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
+	{
+		diffZ = camera.position.z - (CboundZ1);
+		camera.position.z = CboundZ1;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	//Cashier table 2
+	if((camera.position.x > CboundX5 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+	{
+		diffX = camera.position.x - (CboundX6);
+		camera.position.x = CboundX6;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+	{
+		diffZ = camera.position.z - (CboundZ2);
+		camera.position.z = CboundZ2;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > CboundX7 && camera.position.x < CboundX8) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+	{
+		diffX = camera.position.x - (CboundX7);
+		camera.position.x = CboundX7;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
+	{
+		diffZ = camera.position.z - (CboundZ1);
+		camera.position.z = CboundZ1;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	//Cashier table 3
+	if((camera.position.x > CboundX9 && camera.position.x < CboundX10) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
+	{
+		diffX = camera.position.x - (CboundX10);
+		camera.position.x = CboundX10;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
+	}
+	if((camera.position.x > CboundX11 && camera.position.x < CboundX10) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+	{
+		diffZ = camera.position.z - (CboundZ2);
+		camera.position.z = CboundZ2;
+		camera.target.z -= diffZ;
+		diffZ = 0.0f;
+	}
+	if((camera.position.x > CboundX11 && camera.position.x < CboundX12) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
+	{
+		diffX = camera.position.x - (CboundX11);
+		camera.position.x = CboundX11;
+		camera.target.x -= diffX;
+		diffX = 0.0f;
 	}
 }
 void SceneSP::Exit()
