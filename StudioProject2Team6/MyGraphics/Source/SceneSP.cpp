@@ -491,7 +491,7 @@ void SceneSP::Update(double dt)
 
 
 	UpdateUI(dt);
-	checkCollision();
+	checkPickUpItem();
 	camera.Update(dt);
 	UpdateTrolley(dt);
 
