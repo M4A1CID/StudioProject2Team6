@@ -46,6 +46,7 @@ void SceneSP::Init()
 	trolleyrotation = 0.0f;
 	diffX = 0.0f;
 	diffZ = 0.0f;
+	charactersrotation = 20.0f;
 	i_sampleItems = 4;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
@@ -55,6 +56,12 @@ void SceneSP::Init()
 	projectionStack.LoadMatrix(projection);
 
 	DeclareLightParameters(); //Declare Light parameters
+
+	////////////////////////////////////////////
+	Cashier.translateX = 0;
+	Cashier.translateY = 0;
+    Cashier.translateZ = 0;
+	Cashier.rotateA = 0;
 }
 void SceneSP::initGeoType()
 {
@@ -151,7 +158,48 @@ void SceneSP::initGeoType()
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//skybox_left.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
+	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
+	meshList[GEO_SHELF]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
+	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	meshList[GEO_CASHIER_ARM] = MeshBuilder::GenerateOBJ("cashier arm", "OBJ//Arm.obj");
+	meshList[GEO_CASHIER_ARM]->textureID = LoadTGA("Image//cashier.tga");
+	meshList[GEO_CASHIER_HEADBODY] = MeshBuilder::GenerateOBJ("cashier head and body", "OBJ//headandbody.obj");
+	meshList[GEO_CASHIER_HEADBODY]->textureID = LoadTGA("Image//cashier.tga");
+	meshList[GEO_CASHIER_LEGANDFEET] = MeshBuilder::GenerateOBJ("cashier head and body", "OBJ//legandfeet.obj");
+	meshList[GEO_CASHIER_LEGANDFEET]->textureID = LoadTGA("Image//cashier.tga");
+	/////////////////////////////////////////////////////////////////////
+	meshList[GEO_DRUNKMAN_ARM] = MeshBuilder::GenerateOBJ("drunkman arm", "OBJ//Arm.obj");
+	meshList[GEO_DRUNKMAN_ARM]->textureID = LoadTGA("Image//Drunkman.tga");
+	meshList[GEO_DRUNKMAN_HEADBODY] = MeshBuilder::GenerateOBJ("drunkman head and body", "OBJ//headandbody.obj");
+	meshList[GEO_DRUNKMAN_HEADBODY]->textureID = LoadTGA("Image//Drunkman.tga");
+	meshList[GEO_DRUNKMAN_LEGANDFEET] = MeshBuilder::GenerateOBJ("drunkman head and body", "OBJ//legandfeet.obj");
+	meshList[GEO_DRUNKMAN_LEGANDFEET]->textureID = LoadTGA("Image//Drunkman.tga");
+	///////////////////////////////////////////////////////////////////////
+	
+	meshList[GEO_LOGISTICSTAFF_ARM] = MeshBuilder::GenerateOBJ("logisticstaff arm", "OBJ//Arm.obj");
+	meshList[GEO_LOGISTICSTAFF_ARM]->textureID = LoadTGA("Image//Logisticstaff.tga");
+	meshList[GEO_LOGISTICSTAFF_HEADBODY] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//headandbody.obj");
+	meshList[GEO_LOGISTICSTAFF_HEADBODY]->textureID = LoadTGA("Image//Logisticstaff.tga");
+	meshList[GEO_LOGISTICSTAFF_LEGANDFEET] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//legandfeet.obj");
+	meshList[GEO_LOGISTICSTAFF_LEGANDFEET]->textureID = LoadTGA("Image//Logisticstaff.tga");
+	/////////////////////////////////////////////////////////////////////////////
 
+	meshList[GEO_NormalNpc1_ARM] = MeshBuilder::GenerateOBJ("NormalNpc1 arm", "OBJ//Arm.obj");
+	meshList[GEO_NormalNpc1_ARM]->textureID = LoadTGA("Image//NormalNpc1.tga");
+	meshList[GEO_NormalNpc1_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//headandbody.obj");
+	meshList[GEO_NormalNpc1_HEADBODY]->textureID = LoadTGA("Image//NormalNpc1.tga");
+	meshList[GEO_NormalNpc1_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//legandfeet.obj");
+	meshList[GEO_NormalNpc1_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc1.tga");
+	//////////////////////////////////////////////////////////////////////////////
+
+	
+	meshList[GEO_NormalNpc2_ARM] = MeshBuilder::GenerateOBJ("NormalNpc2 arm", "OBJ//Arm.obj");
+	meshList[GEO_NormalNpc2_ARM]->textureID = LoadTGA("Image//NormalNpc2.tga");
+	meshList[GEO_NormalNpc2_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//headandbody.obj");
+	meshList[GEO_NormalNpc2_HEADBODY]->textureID = LoadTGA("Image//NormalNpc2.tga");
+	meshList[GEO_NormalNpc2_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//legandfeet.obj");
+	meshList[GEO_NormalNpc2_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc2.tga");
 
 }
 void SceneSP::initCharacter()
@@ -162,8 +210,8 @@ void SceneSP::initCharacter()
 void SceneSP::initItems()
 {
 	//Init items	
-	
 }
+
 void SceneSP::initShelves()
 {
 	//=============================================================================
@@ -363,6 +411,7 @@ void SceneSP::initShelves()
 	//DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	//DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 }
+
 void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 {
 	if(row == ROW_TOP)
@@ -583,6 +632,29 @@ void SceneSP::Update(double dt)
 	checkSupermarketCollision();
 	checkFreezerCollision();
 	checkShelfCollision();
+	if(Application::IsKeyPressed('U'))
+		Cashier.translateY += (float) 50 * dt;
+	//Down
+	if(Application::IsKeyPressed('5'))
+		Cashier.translateY -= (float) 50 * dt;
+	//Back
+	if(Application::IsKeyPressed('6'))
+		Cashier.translateX += (float) 50 * dt;
+	//Front
+	if(Application::IsKeyPressed('7'))
+		Cashier.translateX -= (float) 50 * dt;
+	//Right
+	if(Application::IsKeyPressed('8'))
+		Cashier.translateZ += (float) 50 * dt;
+	//Left
+	if(Application::IsKeyPressed('9'))
+		Cashier.translateZ -= (float) 50 * dt;
+	//Rotate anti clockwise
+	if(Application::IsKeyPressed('T'))
+		Cashier.rotateA += (float) 50 * dt;
+	//Rotate clockwise
+	if(Application::IsKeyPressed('F'))
+		Cashier.rotateA -= (float) 50 * dt;
 }
 
 void SceneSP::UpdateDoor(double dt)
@@ -676,6 +748,8 @@ void SceneSP::Render()
 	RenderSupermarket();//Renders out Supermarket
 	RenderFence();
 	RenderElevator();
+	
+	RenderCharacters();//Render out characters
 	RenderItem();		//Renders out items
 	RenderUI();			//Renders out UI
 	RenderInventory();	//Render inventory after UI to place above
@@ -896,6 +970,9 @@ void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 	viewStack.PopMatrix();
 	modelStack.PopMatrix();
 
+
+	glEnable(GL_DEPTH_TEST);
+}
 	glEnable(GL_DEPTH_TEST);
 }
 void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
@@ -928,6 +1005,227 @@ void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
 
 	glEnable(GL_DEPTH_TEST);
 }
+void SceneSP::RenderCashier()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(0.3 , 3.5, 0);
+	modelStack.Rotate(90,0,1,0);
+		modelStack.PushMatrix();
+	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_CASHIER_HEADBODY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(0.2, 0, 0);
+	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.2, 0, 0);
+	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PopMatrix();
+}
+
+void SceneSP::RenderCharacters()
+{
+	//	modelStack.PushMatrix();
+	//////------------------------------------------------------------
+	////Doreamon Translation & Transformations code here
+	//modelStack.Translate(Cashier.translateX, Cashier.translateY, Cashier.translateZ);
+	//modelStack.Translate(0.3 , 3.5, 0);
+	//modelStack.Rotate(90,0,1,0);
+	//modelStack.Rotate(Cashier.rotateA, 0, 1, 0);
+	////--------------------------------------------------------------
+
+		modelStack.PushMatrix();
+	//head and body
+	RenderMesh(meshList[GEO_CASHIER_HEADBODY], toggleLight);
+	//modelStack.Translate(-0.3 , 3.5, 0);
+	//modelStack.Rotate(270,0, 1,0);
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(0.3 , 3.3, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.3 , 3.3, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_CASHIER_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet
+	modelStack.PushMatrix();
+	modelStack.Translate(0.2, 0, 0);
+	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet 
+	modelStack.PushMatrix();
+	modelStack.Translate(-0.2, 0, 0);
+	RenderMesh(meshList[GEO_CASHIER_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PopMatrix();
+	
+	//////////////////////////////////////////////////////////////////
+
+			modelStack.PushMatrix();
+	//head and body
+	RenderMesh(meshList[GEO_DRUNKMAN_HEADBODY], toggleLight);
+	modelStack.Translate(5, 0.4, 0);
+	//modelStack.Rotate(270,0, 1,0);
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(5.2 , 3.5, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//arm
+	modelStack.PushMatrix();
+	modelStack.Translate(4.8 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet
+	modelStack.PushMatrix();
+	modelStack.Translate(4.8, 0, 0);
+	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	//leg and feet 
+	modelStack.PushMatrix();
+	modelStack.Translate(5.2, 0, 0);
+	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PopMatrix();
+	
+	/*modelStack.PushMatrix();
+	modelStack.Translate(5.2 , 3.5, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(4.8 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_DRUNKMAN_ARM], toggleLight); 
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(5, 0.4, 0);
+	RenderMesh(meshList[GEO_DRUNKMAN_HEADBODY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(4.8, 0, 0);
+	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(5.2, 0, 0);
+	RenderMesh(meshList[GEO_DRUNKMAN_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();*/
+
+	/////////////////////////////////////////////////////////////////////////
+
+	/*modelStack.PushMatrix();
+	modelStack.Translate(10.2 , 3.5, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(9.8 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(10, 0.4, 0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_HEADBODY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(9.8, 0, 0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(10.2, 0, 0);
+	RenderMesh(meshList[GEO_LOGISTICSTAFF_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+*/
+	///////////////////////////////////////////////////////////////////////////
+
+	/*modelStack.PushMatrix();
+	modelStack.Translate(-4.8 , 3.5, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-5.2 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_NormalNpc1_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-5, 0.4, 0);
+	RenderMesh(meshList[GEO_NormalNpc1_HEADBODY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-5.2, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(-4.8, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc1_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();*/
+
+	////////////////////////////////////////////////////////////////////////////////
+
+	/*modelStack.PushMatrix();
+	modelStack.Translate(-9.8 , 3.5, 0);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-10.2 , 3.5, 0);
+	modelStack.Rotate(270,0, 1,0);
+	RenderMesh(meshList[GEO_NormalNpc2_ARM], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-10, 0.4, 0);
+	RenderMesh(meshList[GEO_NormalNpc2_HEADBODY], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-10.2, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(-9.8, 0, 0);
+	RenderMesh(meshList[GEO_NormalNpc2_LEGANDFEET], toggleLight);
+	modelStack.PopMatrix();*/
+	
+
+}
+
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -954,6 +1252,7 @@ void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
+
 void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check

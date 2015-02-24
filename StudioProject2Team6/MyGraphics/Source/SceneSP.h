@@ -52,6 +52,8 @@ private:
 	void RenderInventory();
 	void RenderFence();
 	void RenderElevator();
+	void RenderCharacters();
+	void RenderCashier();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -92,6 +94,7 @@ private:
 	float trolleyrotation;
 	float diffX;
 	float diffZ;
+	float charactersrotation;
 	int i_sampleItems;
 	string s_money;
 	string s_position;
@@ -104,6 +107,13 @@ private:
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector
 	vector<CItem*> myTrolleyList; //Trolley item vector
+	struct Transformations
+	{
+		float translateX;
+		float translateY;
+		float translateZ;
+		float rotateA;
+	};
 public:
 	SceneSP();
 	~SceneSP();
@@ -122,6 +132,7 @@ public:
 	MS modelStack, viewStack, projectionStack;
 
 	Light lights[2];
+	Transformations Cashier;
 	void RenderMesh(Mesh *mesh, bool enableLight);
 };
 
