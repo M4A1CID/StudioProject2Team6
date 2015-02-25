@@ -96,6 +96,7 @@
     <ClCompile Include="Source\EasterEgg1.cpp" />
     <ClCompile Include="Source\EasterEgg2.cpp" />
     <ClCompile Include="Source\EasterEgg3.cpp" />
+    <ClCompile Include="Source\EmptyItem.cpp" />
     <ClCompile Include="Source\GluWaterCan.cpp" />
     <ClCompile Include="Source\HumanCan.cpp" />
     <ClCompile Include="Source\Item.cpp" />
@@ -140,6 +141,7 @@
     <ClInclude Include="Source\EasterEgg1.h" />
     <ClInclude Include="Source\EasterEgg2.h" />
     <ClInclude Include="Source\EasterEgg3.h" />
+    <ClInclude Include="Source\EmptyItem.h" />
     <ClInclude Include="Source\GluWaterCan.h" />
     <ClInclude Include="Source\HumanCan.h" />
     <ClInclude Include="Source\Item.h" />

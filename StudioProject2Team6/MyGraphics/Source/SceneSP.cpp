@@ -28,11 +28,18 @@ void SceneSP::Init()
 	{
 		meshList[i] = NULL;
 	}
+
 	/*=============================================
 	Init variables here
 	=============================================*/
 	i_menuHandle = MAIN_MENU;
 	initCharacter(); //Initilize the player
+	//Initialize all Inventory to NULL
+	ptrItem = new CEmptyItem;
+	for(int i = 0; i< ptrplayer->getMaxItemCapacity();++i)
+	{
+		ptrplayer->setInventory(ptrItem);
+	}
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
 	toggleLight = true;
@@ -51,11 +58,13 @@ void SceneSP::Init()
 	handrotationleftandright = 0.0f;
 	diffX = 0.0f;
 	diffZ = 0.0f;
+	ptrInvSelect = NULL;
 	elevatorY = 0.f;
 	elevatorDoorY = 0.f;
 	elevatorIdle = true; // Set default elevator to IDLE
 	charactersrotation = 20.0f;
 	i_sampleItems = 4;
+	inventoryPointing=0;
 	selectionPointing = MENU_START;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
@@ -442,7 +451,8 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 }
 void SceneSP::addToInventory(CItem* pickedUp)
 {
-	ptrplayer->setInventory(pickedUp);
+
+	ptrplayer->setInventory(pickedUp,inventoryPointing);
 	std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
 	std::cout<< "Current itms held: " << ptrplayer->getItemHeld() << std::endl;
 	interactionTimer = 0.0f;
@@ -637,63 +647,63 @@ void SceneSP::UpdateMenu()
 }
 void SceneSP::UpdatePlaying(double dt)
 {
-	if(Application::IsKeyPressed('1')) //enable back face culling
-			glEnable(GL_CULL_FACE);
-		if(Application::IsKeyPressed('2')) //disable back face culling
-			glDisable(GL_CULL_FACE);
-		if(Application::IsKeyPressed('3'))
-			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-		if(Application::IsKeyPressed('4'))
-			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-		if(Application::IsKeyPressed('5'))
-		{
-			toggleLight = true;
-		}
-		if(Application::IsKeyPressed('6'))
-		{
-			toggleLight = false;
-		}
+	if(Application::IsKeyPressed(VK_F1)) //enable back face culling
+		glEnable(GL_CULL_FACE);
+	if(Application::IsKeyPressed(VK_F2)) //disable back face culling
+		glDisable(GL_CULL_FACE);
+	if(Application::IsKeyPressed(VK_F3))
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+	if(Application::IsKeyPressed(VK_F4))
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+	if(Application::IsKeyPressed(VK_F5))
+	{
+		toggleLight = true;
+	}
+	if(Application::IsKeyPressed(VK_F6))
+	{
+		toggleLight = false;
+	}
 
 
-
-		UpdateUI(dt);
-		checkPickUpItem();
-		if(!IsIntugofwar)
-			camera.UpdateMovement(dt);
-		camera.UpdateView(dt);
-		UpdateTrolley(dt);
-		UpdateElevator(dt);
-		UpdateDoor(dt);
-		UpdateSamples();
-		UpdateTugofwar(dt);
-		checkSupermarketCollision();
-		checkFreezerCollision();
-		checkShelfCollision();
-		checkCashierCollision();
-		checkElevatorCollision();
-		if(Application::IsKeyPressed('U'))
-			Cashier.translateY += (float) 50 * dt;
-		//Down
-		if(Application::IsKeyPressed('5'))
-			Cashier.translateY -= (float) 50 * dt;
-		//Back
-		if(Application::IsKeyPressed('6'))
-			Cashier.translateX += (float) 50 * dt;
-		//Front
-		if(Application::IsKeyPressed('7'))
-			Cashier.translateX -= (float) 50 * dt;
-		//Right
-		if(Application::IsKeyPressed('8'))
-			Cashier.translateZ += (float) 50 * dt;
-		//Left
-		if(Application::IsKeyPressed('9'))
-			Cashier.translateZ -= (float) 50 * dt;
-		//Rotate anti clockwise
-		if(Application::IsKeyPressed('T'))
-			Cashier.rotateA += (float) 50 * dt;
-		//Rotate clockwise
-		if(Application::IsKeyPressed('F'))
-			Cashier.rotateA -= (float) 50 * dt;
+	UpdatePlayerSelection();
+	UpdateUI(dt);
+	checkPickUpItem();
+	if(!IsIntugofwar)
+		camera.UpdateMovement(dt);
+	camera.UpdateView(dt);
+	UpdateTrolley(dt);
+	UpdateElevator(dt);
+	UpdateDoor(dt);
+	UpdateSamples();
+	UpdateTugofwar(dt);
+	checkSupermarketCollision();
+	checkFreezerCollision();
+	checkShelfCollision();
+	checkCashierCollision();
+	checkElevatorCollision();
+	if(Application::IsKeyPressed('U'))
+		Cashier.translateY += (float) 50 * dt;
+	//Down
+	if(Application::IsKeyPressed('5'))
+		Cashier.translateY -= (float) 50 * dt;
+	//Back
+	if(Application::IsKeyPressed('6'))
+		Cashier.translateX += (float) 50 * dt;
+	//Front
+	if(Application::IsKeyPressed('7'))
+		Cashier.translateX -= (float) 50 * dt;
+	//Right
+	if(Application::IsKeyPressed('8'))
+		Cashier.translateZ += (float) 50 * dt;
+	//Left
+	if(Application::IsKeyPressed('9'))
+		Cashier.translateZ -= (float) 50 * dt;
+	//Rotate anti clockwise
+	if(Application::IsKeyPressed('T'))
+		Cashier.rotateA += (float) 50 * dt;
+	//Rotate clockwise
+	if(Application::IsKeyPressed('F'))
+		Cashier.rotateA -= (float) 50 * dt;
 }
 void SceneSP::Update(double dt)
 {
@@ -827,6 +837,82 @@ void SceneSP::UpdateDoor(double dt)
 			moveDoorBack += 10.0f * dt;
 	}
 }
+void SceneSP::UpdatePlayerSelection()
+{
+	if(Application::IsKeyPressed('1'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(0);
+			inventoryPointing = 0;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('2'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(1);
+			inventoryPointing =1;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('3'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(2);
+			inventoryPointing =2;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('4'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(3);
+			inventoryPointing =3;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('5'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(4);
+			inventoryPointing =4;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('6'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(5);
+			inventoryPointing =5;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('7'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(6);
+			inventoryPointing =6;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+	if(Application::IsKeyPressed('8'))
+	{
+		if(ptrplayer->getItemHeld()>0)
+		{
+			ptrInvSelect = ptrplayer->getItem(7);
+			inventoryPointing =7;
+			std::cout << ptrInvSelect->getName();
+		}
+	}
+
+}
 void SceneSP::UpdateSamples()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -935,7 +1021,7 @@ void SceneSP::Render()
 	case MAIN_MENU:
 		//do menu here
 		RenderMainMenu();
-		
+
 		break;
 	case GAME_PLAYING:
 		RenderHand();
@@ -1141,42 +1227,42 @@ void SceneSP::RenderTrolleys()
 void SceneSP::RenderHand()
 {
 	//Free will hands
-	    modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
-		{
-			/*
-			modelStack.PushMatrix();
-			modelStack.Rotate((180+trolleyrotation),0,1,0);
-			modelStack.Rotate(-45,1,0,0);
-			modelStack.Translate(0.5,-1.5,2.5);
-			RenderMesh(meshList[GEO_HANDS], toggleLight);
-			modelStack.PopMatrix();
-			*/
-			modelStack.PushMatrix();
-			modelStack.Rotate((180+handrotationleftandright),0,1,0);
-			modelStack.Translate(-0.2,-4.5,-1);
-			RenderMesh(meshList[GEO_HANDS], toggleLight);
-			modelStack.PopMatrix();
-		}
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
+	{
+		/*
+		modelStack.PushMatrix();
+		modelStack.Rotate((180+trolleyrotation),0,1,0);
+		modelStack.Rotate(-45,1,0,0);
+		modelStack.Translate(0.5,-1.5,2.5);
+		RenderMesh(meshList[GEO_HANDS], toggleLight);
 		modelStack.PopMatrix();
+		*/
+		modelStack.PushMatrix();
+		modelStack.Rotate((180+handrotationleftandright),0,1,0);
+		modelStack.Translate(-0.2,-4.5,-1);
+		RenderMesh(meshList[GEO_HANDS], toggleLight);
+		modelStack.PopMatrix();
+	}
+	modelStack.PopMatrix();
 
 	/*//Hands on trolley
-		modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x,0,camera.position.z);
-		{
-			modelStack.PushMatrix();
-			modelStack.Rotate((180+trolleyrotation),0,1,0);
-			modelStack.Translate(-0.25,0,-0.7);
-			RenderMesh(meshList[GEO_HANDS], toggleLight);
-			modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.position.x,0,camera.position.z);
+	{
+	modelStack.PushMatrix();
+	modelStack.Rotate((180+trolleyrotation),0,1,0);
+	modelStack.Translate(-0.25,0,-0.7);
+	RenderMesh(meshList[GEO_HANDS], toggleLight);
+	modelStack.PopMatrix();
 
-			modelStack.PushMatrix();
-			modelStack.Rotate((180+trolleyrotation),0,1,0);
-			modelStack.Translate(0.6,0,-0.7);
-			RenderMesh(meshList[GEO_HANDS], toggleLight);
-			modelStack.PopMatrix();
-		}
-		modelStack.PopMatrix();*/
+	modelStack.PushMatrix();
+	modelStack.Rotate((180+trolleyrotation),0,1,0);
+	modelStack.Translate(0.6,0,-0.7);
+	RenderMesh(meshList[GEO_HANDS], toggleLight);
+	modelStack.PopMatrix();
+	}
+	modelStack.PopMatrix();*/
 }
 void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 {
@@ -1560,7 +1646,7 @@ void SceneSP::checkPickUpItem()
 							{
 								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 									{
 										addToInventory(myStockList[i]);
 										myStockList[i]->setActiveState(false);
@@ -1572,26 +1658,30 @@ void SceneSP::checkPickUpItem()
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 							}
@@ -1602,38 +1692,44 @@ void SceneSP::checkPickUpItem()
 							{
 								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 									{
 										addToInventory(myStockList[i]);
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
+
 								}
 								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 
@@ -1652,38 +1748,44 @@ void SceneSP::checkPickUpItem()
 							{
 								if((camera.target.y > interactionDistanceYMax) && (myStockList[i]->getYpos() > interactionDistanceYMax)) //If looking at top row
 								{
-									if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 									{
 										addToInventory(myStockList[i]);
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
+
 								}
 								else if (camera.target.y >= interactionDistanceYMin && camera.target.y <= interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 
@@ -1695,38 +1797,44 @@ void SceneSP::checkPickUpItem()
 							{
 								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 									{
 										addToInventory(myStockList[i]);
 										myStockList[i]->setActiveState(false);
 										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 										break;
 									}
+
 								}
 								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										if(ptrplayer->getItemHeld() < ptrplayer->getMaxItemCapacity())
+
+										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 										{
 											addToInventory(myStockList[i]);
 											myStockList[i]->setActiveState(false);
 											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
 											break;
 										}
+
 									}
 								}
 

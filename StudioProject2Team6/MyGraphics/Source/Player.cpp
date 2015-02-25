@@ -20,7 +20,10 @@ CPlayer::CPlayer(float setMoney, int setItemsHeld, int setMaxItemCapacity)
 CPlayer::~CPlayer(void)
 {
 }
-
+CItem* CPlayer::getItem(int i)
+{
+	return myInventoryList[i];
+}
 float CPlayer::getMoney()
 {
 	return money;
@@ -37,7 +40,15 @@ void CPlayer::setInventory(CItem* pickedUp)
 {
 	myInventoryList.push_back(pickedUp);
 }
+void CPlayer::setInventory(CItem* pickedUp, int slot)
+{
+	myInventoryList[slot] = pickedUp;
+}
 std::vector<CItem*> CPlayer::getVector()
 {
 	return myInventoryList;
+}
+void CPlayer::setMoney(float newMoney)
+{
+	money = newMoney;
 }
