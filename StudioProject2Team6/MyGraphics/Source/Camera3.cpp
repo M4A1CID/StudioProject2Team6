@@ -134,7 +134,7 @@ void Camera3::UpdateMovement(double dt)
 void Camera3::UpdateView(double dt)
 {
 	
-	if(Application::IsKeyPressed(VK_LEFT))
+	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
 		Vector3 view = (target - position).Normalized();
 		float yaw = (float)(CAMERA_SPEED * dt);
@@ -145,7 +145,7 @@ void Camera3::UpdateView(double dt)
 		target = view + position;
 
 	}
-	if(Application::IsKeyPressed(VK_RIGHT))
+	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
 		Vector3 view = (target - position).Normalized();
 		float yaw = (float)(-CAMERA_SPEED * dt);
@@ -155,7 +155,7 @@ void Camera3::UpdateView(double dt)
 		up = rotation * up;
 		target = view + position;
 	}
-	if(Application::IsKeyPressed(VK_UP))
+	if(Application::IsKeyPressed(VK_UP)&& !Application::IsKeyPressed('R'))
 	{
 		if(limiter < 80)
 		{
@@ -174,7 +174,7 @@ void Camera3::UpdateView(double dt)
 		}
 		
 	}
-	if(Application::IsKeyPressed(VK_DOWN))
+	if(Application::IsKeyPressed(VK_DOWN)&& !Application::IsKeyPressed('R'))
 	{
 		if(limiter>10)
 		{

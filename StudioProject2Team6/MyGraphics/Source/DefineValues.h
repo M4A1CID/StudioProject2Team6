@@ -126,3 +126,6 @@ static float menuTImerLimiter = 0.2f;
 
 //Tug of war limiter
 static float TugofwarTimerLimiter = 0.3f;
+
+//Item rotation speed
+static float itemRotationSpeedMultiplyer =60.f;
