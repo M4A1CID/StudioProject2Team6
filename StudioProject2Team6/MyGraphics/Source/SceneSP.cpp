@@ -1064,6 +1064,7 @@ void SceneSP::Render()
 		RenderItem();		//Renders out items
 		RenderUI();			//Renders out UI
 		RenderInventory();	//Render inventory after UI to place above
+		RenderTug();
 		break;
 	}
 }
@@ -1614,6 +1615,16 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 
 
 	modelStack.PopMatrix();
+}
+void SceneSP::RenderTug()
+{
+	if(IsIntugofwar)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(camera.position.x-5, camera.position.y-2, camera.position.z);
+		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.PopMatrix();
+	}
 }
 void SceneSP::RenderItem()
 {

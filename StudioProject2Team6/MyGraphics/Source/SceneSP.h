@@ -58,6 +58,7 @@ private:
 	void RenderCharacters();
 	void RenderCharacter(CNpc* npc);
 	void RenderHand();
+	void RenderTug();
 	void RenderMainMenu();
 	/*=======================================
 				All update functions
