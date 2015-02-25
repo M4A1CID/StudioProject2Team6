@@ -1142,7 +1142,7 @@ void SceneSP::RenderHand()
 {
 	//Free will hands
 	    modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x,0,camera.position.z);
+		modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
 		{
 			/*
 			modelStack.PushMatrix();
@@ -1154,7 +1154,7 @@ void SceneSP::RenderHand()
 			*/
 			modelStack.PushMatrix();
 			modelStack.Rotate((180+handrotationleftandright),0,1,0);
-			modelStack.Translate(-0.2,0,0);
+			modelStack.Translate(-0.2,-4.5,-1);
 			RenderMesh(meshList[GEO_HANDS], toggleLight);
 			modelStack.PopMatrix();
 		}
