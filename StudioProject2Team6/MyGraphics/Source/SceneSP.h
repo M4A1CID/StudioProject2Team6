@@ -57,6 +57,7 @@ private:
 	void RenderCharacters();
 	void RenderCharacter(CNpc* npc);
 	void RenderHand();
+	void RenderMainMenu();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -65,6 +66,8 @@ private:
 	void UpdateUI(double dt);
 	void UpdateSamples();
 	void UpdateElevator(double dt);
+	void UpdateMenu();
+	void UpdatePlaying(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -102,6 +105,7 @@ private:
 	bool elevatorDoorOpening;
 	bool elevatorSecondFloor;
 	int i_sampleItems;
+	int i_menuHandle;
 	bool elevatorIdle;
 	string s_money;
 	string s_position;
@@ -111,6 +115,7 @@ private:
 	CItem * ptrItem;
 	CItem * ptrClass;
 	CNpc * ptrNPC;
+	int selectionPointing;
 	CContainer* ptrContainer;
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector
