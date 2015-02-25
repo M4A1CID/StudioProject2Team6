@@ -57,6 +57,7 @@ void SceneSP::Init()
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
 	handrotationleftandright = 0.0f;
+	handtranslation = 0.0f;
 	diffX = 0.0f;
 	diffZ = 0.0f;
 	elevatorY = 0.f;
@@ -390,35 +391,35 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	//==================================================================================
-	ptrClass = new CSodaCan;//RW
+	ptrClass = new CSodaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf13",5,5,5,26,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CSodaFestCan;//RW
+	ptrClass = new CSodaFestCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf14",5,5,5,20,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CRedMonsterCan;//RW
+	ptrClass = new CRedMonsterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf15",5,5,5,14,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CTomatoCan;//RW
+	ptrClass = new CTomatoCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf24",5,5,5,8,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CMelonCan;//RW
+	ptrClass = new CMelonCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf25",5,5,5,2,0,6,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -612,6 +613,22 @@ void SceneSP::UpdateTrolley(double dt)
 	{
 		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
 	}
+	if(Application::IsKeyPressed('I') || PunchTimerLimiter == false)
+	{
+		if(PunchTimerLimiter == true)
+		{
+			PunchTimerLimiter = false;
+		}
+		else
+		{
+			handtranslation += (10.0f)*dt;
+			if(handtranslation > 1.0f)
+			{
+				PunchTimerLimiter = true;
+				handtranslation = 0.0f;
+			}
+		}
+	}
 }
 void SceneSP::UpdateMenu()
 {
@@ -704,6 +721,26 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdatePlayerSelection();
 	UpdateUI(dt);
 	UpdateItemRotation(dt);
+	if(Application::IsKeyPressed('1')) //enable back face culling
+		glEnable(GL_CULL_FACE);
+	if(Application::IsKeyPressed('2')) //disable back face culling
+		glDisable(GL_CULL_FACE);
+	if(Application::IsKeyPressed('3'))
+		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+	if(Application::IsKeyPressed('4'))
+		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+	if(Application::IsKeyPressed('5'))
+	{
+		toggleLight = true;
+	}
+	if(Application::IsKeyPressed('6'))
+	{
+		toggleLight = false;
+	}
+
+
+
+	UpdateUI(dt);
 	checkPickUpItem();
 	if(!IsIntugofwar)
 		camera.UpdateMovement(dt);
@@ -1233,6 +1270,23 @@ void SceneSP::RenderHand()
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
 
+	{
+		/*
+		modelStack.PushMatrix();
+		modelStack.Rotate((180+trolleyrotation),0,1,0);
+		modelStack.Rotate(-45,1,0,0);
+		modelStack.Translate(0.5,-1.5,2.5);
+		RenderMesh(meshList[GEO_HANDS], toggleLight);
+		modelStack.PopMatrix();
+		*/
+		modelStack.PushMatrix();
+		modelStack.Rotate((180+handrotationleftandright),0,1,0);
+		modelStack.Translate(-0.2,-4.5,-1+handtranslation);
+		RenderMesh(meshList[GEO_HANDS], toggleLight);
+		modelStack.PopMatrix();
+	}
+	modelStack.PopMatrix();
+
 	/*
 	modelStack.PushMatrix();
 	modelStack.Rotate((180+trolleyrotation),0,1,0);
@@ -1245,8 +1299,6 @@ void SceneSP::RenderHand()
 	modelStack.Rotate((180+handrotationleftandright),0,1,0);
 	modelStack.Translate(-0.2,-4.5,-1);
 	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	
-	modelStack.PopMatrix();
 	
 	modelStack.PopMatrix();
 
