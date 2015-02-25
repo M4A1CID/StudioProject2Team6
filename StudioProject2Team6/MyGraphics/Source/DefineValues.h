@@ -102,3 +102,11 @@ static float checkElevatorZposMin = -28.5f;
 static float checkElevatorZposMax = -5.f;
 static float checkElevatorYposMin = 0.f;
 static float checkElevatorYposMax = 10.f;
+
+//Inner bound checking for Elevator
+static float checkInnerElevatorXposMin = -39.f;
+static float checkInnerElevatorXposMax = -32.f;
+static float checkInnerElevatorZposMin = -29.f;
+static float checkInnerElevatorZposMax = -23.f;
+static float secondFloorYpositionMax = 17.f;
+static float secondFloorYpositionMin = 0.0f;
