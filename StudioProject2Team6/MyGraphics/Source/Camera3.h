@@ -14,7 +14,8 @@ public:
 	Camera3();
 	~Camera3();
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
-	virtual void Update(double dt);
+	virtual void UpdateMovement(double dt);
+	virtual void UpdateView(double dt);
 	bool Limit(Vector3& position, Vector3& target, int edge, float speed);
 	bool tableCollision(Vector3& position, Vector3& target, float speed);
 	virtual void Reset();

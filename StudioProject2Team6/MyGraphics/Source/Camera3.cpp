@@ -68,7 +68,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 		return true;
 	}
 }*/
-void Camera3::Update(double dt)
+void Camera3::UpdateMovement(double dt)
 {
 	float runMultiplyer;
 	if(!Application::IsKeyPressed(VK_SHIFT)) //Check if player is sprinting
@@ -79,6 +79,60 @@ void Camera3::Update(double dt)
 	{
 		runMultiplyer = 0.5f;
 	}
+
+	if(Application::IsKeyPressed('A') )
+	{
+
+		//if(Limit(position,target, 150, CAMERA_SPEED)) //Limit to Skybox
+
+
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		position -= right * CAMERA_SPEED*runMultiplyer * dt;
+		target -= right * CAMERA_SPEED*runMultiplyer * dt;
+	}
+	if(Application::IsKeyPressed('D'))
+	{
+		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
+
+		Vector3 view = (target - position).Normalized();
+		Vector3 right = view.Cross(up);
+		right.y = 0;
+		right.Normalize();
+		position += right * CAMERA_SPEED *runMultiplyer* dt;
+		target += right * CAMERA_SPEED *runMultiplyer* dt;
+
+
+	}
+	if(Application::IsKeyPressed('W'))
+	{
+		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
+
+		Vector3 view = (target - position).Normalized();
+		view.y = 0;
+		position += view * CAMERA_SPEED *runMultiplyer* dt;
+		target += view * CAMERA_SPEED*runMultiplyer * dt;
+
+
+	}
+	if(Application::IsKeyPressed('S'))
+	{
+
+		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
+
+		Vector3 view = (target - position).Normalized();
+		view.y = 0;
+		position -= view * CAMERA_SPEED *runMultiplyer* dt;
+		target -= view * CAMERA_SPEED*runMultiplyer * dt;
+
+
+	}
+}
+
+void Camera3::UpdateView(double dt)
+{
 	
 	if(Application::IsKeyPressed(VK_LEFT))
 	{
@@ -137,55 +191,6 @@ void Camera3::Update(double dt)
 		
 			limiter -=2;
 		}
-	}
-	if(Application::IsKeyPressed('A') )
-	{
-
-		//if(Limit(position,target, 150, CAMERA_SPEED)) //Limit to Skybox
-
-
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		position -= right * CAMERA_SPEED*runMultiplyer * dt;
-		target -= right * CAMERA_SPEED*runMultiplyer * dt;
-	}
-	if(Application::IsKeyPressed('D'))
-	{
-		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
-
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		position += right * CAMERA_SPEED *runMultiplyer* dt;
-		target += right * CAMERA_SPEED *runMultiplyer* dt;
-
-
-	}
-	if(Application::IsKeyPressed('W'))
-	{
-		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
-
-		Vector3 view = (target - position).Normalized();
-		view.y = 0;
-		position += view * CAMERA_SPEED *runMultiplyer* dt;
-		target += view * CAMERA_SPEED*runMultiplyer * dt;
-
-
-	}
-	if(Application::IsKeyPressed('S'))
-	{
-
-		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
-
-		Vector3 view = (target - position).Normalized();
-		view.y = 0;
-		position -= view * CAMERA_SPEED *runMultiplyer* dt;
-		target -= view * CAMERA_SPEED*runMultiplyer * dt;
-
-
 	}
 }
 

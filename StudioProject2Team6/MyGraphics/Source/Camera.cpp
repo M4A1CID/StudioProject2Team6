@@ -25,7 +25,7 @@ void Camera::Reset()
 	up.Set(0, 1, 0);
 }
 
-void Camera::Update(double dt)
+void Camera::UpdateMovement(double dt)
 {
 	static const float CAMERA_SPEED = 200.f;
 	if(Application::IsKeyPressed(VK_LEFT) || Application::IsKeyPressed('A'))
@@ -44,4 +44,8 @@ void Camera::Update(double dt)
 	{
 		position.y -= (float)(CAMERA_SPEED * 0.2 * dt);
 	}
+}
+void Camera::UpdateView(double dt)
+{
+
 }

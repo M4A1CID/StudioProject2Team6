@@ -33,6 +33,7 @@ private:
 	void checkShelfCollision();
 	void checkFreezerCollision();
 	void checkCashierCollision();
+	void checkElevatorCollision();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
@@ -68,6 +69,7 @@ private:
 	void UpdateElevator(double dt);
 	void UpdateMenu();
 	void UpdatePlaying(double dt);
+	void UpdateTugofwar(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -104,9 +106,14 @@ private:
 	float elevatorY;
 	bool elevatorDoorOpening;
 	bool elevatorSecondFloor;
+	
+	bool win;
+	bool lose;
+	bool showTuginstruction;
 	int i_sampleItems;
 	int i_menuHandle;
 	bool elevatorIdle;
+	bool IsIntugofwar;
 	string s_money;
 	string s_position;
 	string s_fps;
@@ -128,6 +135,7 @@ private:
 		float translateZ;
 		float rotateA;
 	};
+
 public:
 	SceneSP();
 	~SceneSP();
@@ -144,7 +152,7 @@ public:
 	void RenderSkyBox();
 
 	MS modelStack, viewStack, projectionStack;
-
+	
 	Light lights[2];
 	Transformations Cashier;
 	void RenderMesh(Mesh *mesh, bool enableLight);

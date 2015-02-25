@@ -40,6 +40,10 @@ void SceneSP::Init()
 	toggleDoorBack = false;
 	elevatorDoorOpening = false;
 	elevatorSecondFloor = false;
+	IsIntugofwar = false;
+	win = false;
+	lose = false;
+	showTuginstruction = false;
 	interactionTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
@@ -653,15 +657,19 @@ void SceneSP::UpdatePlaying(double dt)
 
 		UpdateUI(dt);
 		checkPickUpItem();
-		camera.Update(dt);
+		if(!IsIntugofwar)
+			camera.UpdateMovement(dt);
+		camera.UpdateView(dt);
 		UpdateTrolley(dt);
 		UpdateElevator(dt);
 		UpdateDoor(dt);
 		UpdateSamples();
+		UpdateTugofwar(dt);
 		checkSupermarketCollision();
 		checkFreezerCollision();
 		checkShelfCollision();
 		checkCashierCollision();
+		checkElevatorCollision();
 		if(Application::IsKeyPressed('U'))
 			Cashier.translateY += (float) 50 * dt;
 		//Down
@@ -829,6 +837,51 @@ void SceneSP::UpdateSamples()
 		}
 	}
 }
+void SceneSP::UpdateTugofwar(double dt)
+{
+	if(Application::IsKeyPressed('J') && (IsIntugofwar == false))//Initiate tug of war conditions
+	{//Initiate tug of war sequence
+		IsIntugofwar = true;
+		diffX = camera.position.x - 20;
+		diffZ = camera.position.z - 0;
+		camera.position.x = 20;
+		camera.position.z = 0;
+		camera.target.x -= diffX;
+		camera.target.z -= diffZ;
+		diffX = diffZ = 0;
+		showTuginstruction = true;
+	}
+	if(Application::IsKeyPressed(VK_SPACE) && (showTuginstruction == true))
+	{//Stop showing tug of war instructions
+		showTuginstruction = false;
+	}
+	if(IsIntugofwar == true && showTuginstruction == false)
+	{//While in tug of war sequence
+		camera.position.x -= 0.001*camera.CAMERA_SPEED;
+		camera.target.x -= 0.001*camera.CAMERA_SPEED;
+		if(Application::IsKeyPressed(VK_SPACE) && interactionTimer > TugofwarTimerLimiter)
+		{//update camera based on tugs
+			interactionTimer = 0.0f;
+			camera.position.x += 0.025*camera.CAMERA_SPEED;
+			camera.target.x += 0.025*camera.CAMERA_SPEED;
+		}
+		if(camera.position.x > 32)//win condition
+		{
+			IsIntugofwar = false;
+			win = true;
+		}
+		if(camera.position.x < 3)//lose condition
+		{
+			IsIntugofwar = false;
+			lose = true;
+		}
+	}
+	if(Application::IsKeyPressed('A') || Application::IsKeyPressed('S') || Application::IsKeyPressed('D') || Application::IsKeyPressed('W'))
+	{//reset win/lose message
+		win = false;
+		lose = false;
+	}
+}
 void SceneSP::RenderUI()
 {
 
@@ -838,6 +891,12 @@ void SceneSP::RenderUI()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
+	if(win)
+		RenderTextOnScreen(meshList[GEO_TEXT], "YOU WIN!!!!", Color(0, 1, 0), 4, 5, 5);
+	if(lose)
+		RenderTextOnScreen(meshList[GEO_TEXT], "YOU LOSE!!!!", Color(0, 1, 0), 4, 5, 5);
+	if(showTuginstruction)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'space' to tug!", Color(0, 1, 0), 3, 3, 9);
 }
 void SceneSP::Render()
 {
@@ -965,11 +1024,11 @@ void SceneSP::RenderFence()
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-30.5, 2.5, -18);
+	modelStack.Translate(-30.5, 2.5, -21.1);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(-30.5, 2.5, -12.1);
+	modelStack.Translate(-30.5, 2.5, -16.0);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 
@@ -1807,185 +1866,241 @@ void SceneSP::checkSupermarketCollision()
 }
 void SceneSP::checkShelfCollision()
 {
-	//1st row
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ1 && camera.position.z < SboundZ2))
+	if(camera.position.y < 10)
 	{
-		diffZ = camera.position.z - (SboundZ1);
-		camera.position.z = SboundZ1;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
-	{
-		diffX = camera.position.x - (SboundX1);
-		camera.position.x = SboundX1;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
-	{
-		diffX = camera.position.x - (SboundX2);
-		camera.position.x = SboundX2;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	//2nd row
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ4 && camera.position.z < SboundZ5))
-	{
-		diffZ = camera.position.z - (SboundZ4);
-		camera.position.z = SboundZ4;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ6 && camera.position.z < SboundZ7))
-	{
-		diffZ = camera.position.z - (SboundZ7);
-		camera.position.z = SboundZ7;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
-	{
-		diffX = camera.position.x - (SboundX1);
-		camera.position.x = SboundX1;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
-	{
-		diffX = camera.position.x - (SboundX2);
-		camera.position.x = SboundX2;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	//3rd row
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ9 && camera.position.z < SboundZ10))
-	{
-		diffZ = camera.position.z - (SboundZ9);
-		camera.position.z = SboundZ9;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ11 && camera.position.z < SboundZ12))
-	{
-		diffZ = camera.position.z - (SboundZ12);
-		camera.position.z = SboundZ12;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
-	{
-		diffX = camera.position.x - (SboundX1);
-		camera.position.x = SboundX1;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
-	{
-		diffX = camera.position.x - (SboundX2);
-		camera.position.x = SboundX2;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		//1st row
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ1 && camera.position.z < SboundZ2))
+		{
+			diffZ = camera.position.z - (SboundZ1);
+			camera.position.z = SboundZ1;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
+		{
+			diffX = camera.position.x - (SboundX1);
+			camera.position.x = SboundX1;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
+		{
+			diffX = camera.position.x - (SboundX2);
+			camera.position.x = SboundX2;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		//2nd row
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ4 && camera.position.z < SboundZ5))
+		{
+			diffZ = camera.position.z - (SboundZ4);
+			camera.position.z = SboundZ4;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ6 && camera.position.z < SboundZ7))
+		{
+			diffZ = camera.position.z - (SboundZ7);
+			camera.position.z = SboundZ7;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
+		{
+			diffX = camera.position.x - (SboundX1);
+			camera.position.x = SboundX1;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
+		{
+			diffX = camera.position.x - (SboundX2);
+			camera.position.x = SboundX2;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		//3rd row
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ9 && camera.position.z < SboundZ10))
+		{
+			diffZ = camera.position.z - (SboundZ9);
+			camera.position.z = SboundZ9;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ11 && camera.position.z < SboundZ12))
+		{
+			diffZ = camera.position.z - (SboundZ12);
+			camera.position.z = SboundZ12;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
+		{
+			diffX = camera.position.x - (SboundX1);
+			camera.position.x = SboundX1;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
+		{
+			diffX = camera.position.x - (SboundX2);
+			camera.position.x = SboundX2;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
 	}
 }
 void SceneSP::checkFreezerCollision()
 {
-	if((camera.position.x > FboundX1 && camera.position.x < FboundX3) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ2))
+	if(camera.position.y < 10)
 	{
-		diffX = camera.position.x - (FboundX1);
-		camera.position.x = FboundX1;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > FboundX3 && camera.position.x < FboundX2) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ3))
-	{
-		diffZ = camera.position.z - (FboundZ1);
-		camera.position.z = FboundZ1;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		if((camera.position.x > FboundX1 && camera.position.x < FboundX3) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ2))
+		{
+			diffX = camera.position.x - (FboundX1);
+			camera.position.x = FboundX1;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > FboundX3 && camera.position.x < FboundX2) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ3))
+		{
+			diffZ = camera.position.z - (FboundZ1);
+			camera.position.z = FboundZ1;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
 	}
 }
 void SceneSP::checkCashierCollision()
 {
-	//Cashier table 1
-	if((camera.position.x > CboundX1 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+	if(camera.position.y < 10)
 	{
-		diffX = camera.position.x - (CboundX2);
-		camera.position.x = CboundX2;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		//Cashier table 1
+		if((camera.position.x > CboundX1 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		{
+			diffX = camera.position.x - (CboundX2);
+			camera.position.x = CboundX2;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+		{
+			diffZ = camera.position.z - (CboundZ2);
+			camera.position.z = CboundZ2;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > CboundX3 && camera.position.x < CboundX4) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		{
+			diffX = camera.position.x - (CboundX3);
+			camera.position.x = CboundX3;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
+		{
+			diffZ = camera.position.z - (CboundZ1);
+			camera.position.z = CboundZ1;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		//Cashier table 2
+		if((camera.position.x > CboundX5 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		{
+			diffX = camera.position.x - (CboundX6);
+			camera.position.x = CboundX6;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+		{
+			diffZ = camera.position.z - (CboundZ2);
+			camera.position.z = CboundZ2;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > CboundX7 && camera.position.x < CboundX8) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		{
+			diffX = camera.position.x - (CboundX7);
+			camera.position.x = CboundX7;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
+		{
+			diffZ = camera.position.z - (CboundZ1);
+			camera.position.z = CboundZ1;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		//Cashier table 3
+		if((camera.position.x > CboundX9 && camera.position.x < CboundX10) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
+		{
+			diffX = camera.position.x - (CboundX10);
+			camera.position.x = CboundX10;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > CboundX11 && camera.position.x < CboundX10) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+		{
+			diffZ = camera.position.z - (CboundZ2);
+			camera.position.z = CboundZ2;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > CboundX11 && camera.position.x < CboundX12) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
+		{
+			diffX = camera.position.x - (CboundX11);
+			camera.position.x = CboundX11;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
 	}
-	if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+}
+void SceneSP::checkElevatorCollision()
+{
+	if(camera.position.y < 10)
 	{
-		diffZ = camera.position.z - (CboundZ2);
-		camera.position.z = CboundZ2;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		if((camera.position.x > EboundX1 && camera.position.x < EboundX2) && (camera.position.z > EboundZ1 && camera.position.z < EboundZ2))
+		{//Inner
+			diffX = camera.position.x - (EboundX1);
+			camera.position.x = EboundX1;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
 	}
-	if((camera.position.x > CboundX3 && camera.position.x < CboundX4) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+	if(camera.position.y > 10)
 	{
-		diffX = camera.position.x - (CboundX3);
-		camera.position.x = CboundX3;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		if((camera.position.x > EboundX1 && camera.position.x < EboundX2) && (camera.position.z > EboundZ1 && camera.position.z < EboundZ3))
+		{//Inner top
+			diffX = camera.position.x - (EboundX1);
+			camera.position.x = EboundX1;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > EboundX2 && camera.position.x < EboundX3) && (camera.position.z > EboundZ1 && camera.position.z < EboundZ3))
+		{//Outer top
+			diffX = camera.position.x - (EboundX3);
+			camera.position.x = EboundX3;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
 	}
-	if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
+	if(!elevatorDoorOpening)
 	{
-		diffZ = camera.position.z - (CboundZ1);
-		camera.position.z = CboundZ1;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	//Cashier table 2
-	if((camera.position.x > CboundX5 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
-	{
-		diffX = camera.position.x - (CboundX6);
-		camera.position.x = CboundX6;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
-	{
-		diffZ = camera.position.z - (CboundZ2);
-		camera.position.z = CboundZ2;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > CboundX7 && camera.position.x < CboundX8) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
-	{
-		diffX = camera.position.x - (CboundX7);
-		camera.position.x = CboundX7;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
-	{
-		diffZ = camera.position.z - (CboundZ1);
-		camera.position.z = CboundZ1;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	//Cashier table 3
-	if((camera.position.x > CboundX9 && camera.position.x < CboundX10) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
-	{
-		diffX = camera.position.x - (CboundX10);
-		camera.position.x = CboundX10;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
-	}
-	if((camera.position.x > CboundX11 && camera.position.x < CboundX10) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
-	{
-		diffZ = camera.position.z - (CboundZ2);
-		camera.position.z = CboundZ2;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
-	}
-	if((camera.position.x > CboundX11 && camera.position.x < CboundX12) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
-	{
-		diffX = camera.position.x - (CboundX11);
-		camera.position.x = CboundX11;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		if((camera.position.x > RenderElevatorPosX-4 && camera.position.x < RenderElevatorPosX+4) && (camera.position.z > RenderElevatorPosZ+4 && camera.position.z < RenderElevatorPosZ+6))
+		{//Outer elevator door
+			diffZ = camera.position.z - (RenderElevatorPosZ+6);
+			camera.position.z = RenderElevatorPosZ+6;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > RenderElevatorPosX-4 && camera.position.x < RenderElevatorPosX+4) && (camera.position.z > RenderElevatorPosZ+2 && camera.position.z < RenderElevatorPosZ+4))
+		{//Inner elevator door
+			diffZ = camera.position.z - (RenderElevatorPosZ+2);
+			camera.position.z = RenderElevatorPosZ+2;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
 	}
 }
 void SceneSP::Exit()

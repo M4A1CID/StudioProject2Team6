@@ -68,7 +68,15 @@ static float CboundZ2 = -12.0f;
 static float CboundZ3 = -14.0f;
 static float CboundZ4 = -23.0f;
 static float CboundZ5 = -29.0f;
-
+/*=======================================
+		Elevator bounds values
+=======================================*/
+static float EboundX1 = -32.0f;
+static float EboundX2 = -31.0f;
+static float EboundX3 = -29.0f;
+static float EboundZ1 = -28.5f;
+static float EboundZ2 = -13.0f;
+static float EboundZ3 = -21.0f;
 //World size for skybox
 static float world_size = 3000.0f;
 
@@ -114,3 +122,6 @@ static float secondFloorYpositionMin = 0.0f;
 //Timer limiters
 static float interactionTimerLimiter = 0.5f;
 static float menuTImerLimiter = 0.2f;
+
+//Tug of war limiter
+static float TugofwarTimerLimiter = 0.3f;
