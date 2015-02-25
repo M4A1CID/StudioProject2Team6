@@ -31,7 +31,7 @@ void SceneSP::Init()
 	/*=============================================
 	Init variables here
 	=============================================*/
-
+	i_menuHandle = MAIN_MENU;
 	initCharacter(); //Initilize the player
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
@@ -51,6 +51,7 @@ void SceneSP::Init()
 	elevatorIdle = true; // Set default elevator to IDLE
 	charactersrotation = 20.0f;
 	i_sampleItems = 4;
+	selectionPointing = MENU_START;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 
@@ -95,6 +96,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//arm.obj");
 	meshList[GEO_HANDS]->textureID = LoadTGA("Image//cashier.tga");
+	meshList[GEO_MAIN_MENU_TITLE] = MeshBuilder::GenerateText("MenuSupermarket",1,1);
+	meshList[GEO_MAIN_MENU_TITLE]->textureID = LoadTGA("Image//Menu_Supermarket.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -589,62 +592,112 @@ void SceneSP::UpdateTrolley(double dt)
 		trolleyrotation -= (camera.CAMERA_SPEED)*dt;
 	}
 }
+void SceneSP::UpdateMenu()
+{
+	if(interactionTimer > menuTImerLimiter)
+	{
+		if(Application::IsKeyPressed(VK_DOWN))
+		{
+			if(selectionPointing < NUM_BUTTON-1)
+			{
+				interactionTimer = 0;
+				selectionPointing++;
+			}
+			else
+			{
+				interactionTimer = 0;
+				selectionPointing = MENU_START; //RESET TO START
+			}
+		}
+		if(Application::IsKeyPressed(VK_UP))
+		{
+			if(selectionPointing > MENU_START)
+			{
+				interactionTimer = 0;
+				selectionPointing--;
+			}
+			else
+			{
+				interactionTimer = 0;
+				selectionPointing = MENU_EXIT; //RESET TO EXIT
+			}
+		}
+
+		if(Application::IsKeyPressed(VK_RETURN))
+		{
+			if(selectionPointing == MENU_START)
+				i_menuHandle = GAME_PLAYING;
+		}
+	}
+}
+void SceneSP::UpdatePlaying(double dt)
+{
+	if(Application::IsKeyPressed('1')) //enable back face culling
+			glEnable(GL_CULL_FACE);
+		if(Application::IsKeyPressed('2')) //disable back face culling
+			glDisable(GL_CULL_FACE);
+		if(Application::IsKeyPressed('3'))
+			glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
+		if(Application::IsKeyPressed('4'))
+			glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
+		if(Application::IsKeyPressed('5'))
+		{
+			toggleLight = true;
+		}
+		if(Application::IsKeyPressed('6'))
+		{
+			toggleLight = false;
+		}
+
+
+
+		UpdateUI(dt);
+		checkPickUpItem();
+		camera.Update(dt);
+		UpdateTrolley(dt);
+		UpdateElevator(dt);
+		UpdateDoor(dt);
+		UpdateSamples();
+		checkSupermarketCollision();
+		checkFreezerCollision();
+		checkShelfCollision();
+		checkCashierCollision();
+		if(Application::IsKeyPressed('U'))
+			Cashier.translateY += (float) 50 * dt;
+		//Down
+		if(Application::IsKeyPressed('5'))
+			Cashier.translateY -= (float) 50 * dt;
+		//Back
+		if(Application::IsKeyPressed('6'))
+			Cashier.translateX += (float) 50 * dt;
+		//Front
+		if(Application::IsKeyPressed('7'))
+			Cashier.translateX -= (float) 50 * dt;
+		//Right
+		if(Application::IsKeyPressed('8'))
+			Cashier.translateZ += (float) 50 * dt;
+		//Left
+		if(Application::IsKeyPressed('9'))
+			Cashier.translateZ -= (float) 50 * dt;
+		//Rotate anti clockwise
+		if(Application::IsKeyPressed('T'))
+			Cashier.rotateA += (float) 50 * dt;
+		//Rotate clockwise
+		if(Application::IsKeyPressed('F'))
+			Cashier.rotateA -= (float) 50 * dt;
+}
 void SceneSP::Update(double dt)
 {
 	interactionTimer+=dt;
-	if(Application::IsKeyPressed('1')) //enable back face culling
-		glEnable(GL_CULL_FACE);
-	if(Application::IsKeyPressed('2')) //disable back face culling
-		glDisable(GL_CULL_FACE);
-	if(Application::IsKeyPressed('3'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-	if(Application::IsKeyPressed('4'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-	if(Application::IsKeyPressed('5'))
+	if(i_menuHandle == MAIN_MENU)
 	{
-		toggleLight = true;
+		UpdateMenu();
 	}
-	if(Application::IsKeyPressed('6'))
+	if(i_menuHandle == GAME_PLAYING)
 	{
-		toggleLight = false;
+		UpdatePlaying(dt);
 	}
 
-
-
-	UpdateUI(dt);
-	checkPickUpItem();
-	camera.Update(dt);
-	UpdateTrolley(dt);
-	UpdateElevator(dt);
-	UpdateDoor(dt);
-	UpdateSamples();
-	checkSupermarketCollision();
-	checkFreezerCollision();
-	checkShelfCollision();
-	checkCashierCollision();
-	if(Application::IsKeyPressed('U'))
-		Cashier.translateY += (float) 50 * dt;
-	//Down
-	if(Application::IsKeyPressed('5'))
-		Cashier.translateY -= (float) 50 * dt;
-	//Back
-	if(Application::IsKeyPressed('6'))
-		Cashier.translateX += (float) 50 * dt;
-	//Front
-	if(Application::IsKeyPressed('7'))
-		Cashier.translateX -= (float) 50 * dt;
-	//Right
-	if(Application::IsKeyPressed('8'))
-		Cashier.translateZ += (float) 50 * dt;
-	//Left
-	if(Application::IsKeyPressed('9'))
-		Cashier.translateZ -= (float) 50 * dt;
-	//Rotate anti clockwise
-	if(Application::IsKeyPressed('T'))
-		Cashier.rotateA += (float) 50 * dt;
-	//Rotate clockwise
-	if(Application::IsKeyPressed('F'))
-		Cashier.rotateA -= (float) 50 * dt;
 }
 void SceneSP::UpdateElevator(double dt)
 {
@@ -815,16 +868,25 @@ void SceneSP::Render()
 		glUniform3fv(m_parameters[U_LIGHT0_POSITION], 1, &lightPosition_cameraspace.x);
 	}
 
-	RenderMesh(meshList[GEO_AXES],false);
+	//RenderMesh(meshList[GEO_AXES],false);
 
-
-	RenderHand();
-	RenderSkyBox();		//Renders out Skybox
-	RenderSupermarket();//Renders out Supermarket
-	RenderCharacters();//Render out characters
-	RenderItem();		//Renders out items
-	RenderUI();			//Renders out UI
-	RenderInventory();	//Render inventory after UI to place above
+	switch(i_menuHandle)
+	{
+	case MAIN_MENU:
+		//do menu here
+		RenderMainMenu();
+		
+		break;
+	case GAME_PLAYING:
+		RenderHand();
+		RenderSkyBox();		//Renders out Skybox
+		RenderSupermarket();//Renders out Supermarket
+		RenderCharacters();//Render out characters
+		RenderItem();		//Renders out items
+		RenderUI();			//Renders out UI
+		RenderInventory();	//Render inventory after UI to place above
+		break;
+	}
 }
 void SceneSP::RenderSkyBox()
 {
@@ -1154,7 +1216,25 @@ void SceneSP::RenderCharacter(CNpc* npc)
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
-
+void SceneSP::RenderMainMenu()
+{
+	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(0, 1, 0), 2, 17, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Credits", Color(0, 1, 0), 2, 17, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 2, 17, 13);
+	if(selectionPointing == MENU_START)//If pointing at START button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 1, 0), 2, 17, 15);
+	}
+	if(selectionPointing == MENU_CREDIT)//If pointing at START button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Credits", Color(1, 1, 0), 2, 17, 14);
+	}
+	if(selectionPointing == MENU_EXIT)//If pointing at START button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(1, 1, 0), 2, 17, 13);
+	}
+}
 
 void SceneSP::RenderCharacters()
 {

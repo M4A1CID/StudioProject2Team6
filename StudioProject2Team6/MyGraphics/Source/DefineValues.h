@@ -77,7 +77,7 @@ static float interactionDistanceZ = 4.0f;
 static float interactionDistanceX = 1.0f;
 static float interactionDistanceYMax = 4.7f;
 static float interactionDistanceYMin = 4.0f;
-static float interactionTimerLimiter = 0.5f;
+
 
 //Render item X position offset
 static float RenderItemTopRowXOffSet = 2.0f;
@@ -110,3 +110,7 @@ static float checkInnerElevatorZposMin = -29.f;
 static float checkInnerElevatorZposMax = -23.f;
 static float secondFloorYpositionMax = 17.f;
 static float secondFloorYpositionMin = 0.0f;
+
+//Timer limiters
+static float interactionTimerLimiter = 0.5f;
+static float menuTImerLimiter = 0.2f;
