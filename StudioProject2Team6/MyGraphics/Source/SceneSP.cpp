@@ -48,6 +48,7 @@ void SceneSP::Init()
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
+	handrotationleftandright = 0.0f;
 	diffX = 0.0f;
 	diffZ = 0.0f;
 	elevatorY = 0.f;
@@ -98,7 +99,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//Elevator.tga");
 	meshList[GEO_ELEVATORDOOR] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Elevatordoor.obj");
 	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
-	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//arm.obj");
+	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//playerArm.obj");
 	meshList[GEO_HANDS]->textureID = LoadTGA("Image//cashier.tga");
 	meshList[GEO_MAIN_MENU_TITLE] = MeshBuilder::GenerateText("MenuSupermarket",1,1);
 	meshList[GEO_MAIN_MENU_TITLE]->textureID = LoadTGA("Image//Menu_Supermarket.tga");
@@ -165,7 +166,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1), 1.f);
 	meshList[GEO_BACK]->textureID = LoadTGA("Image//back.tga");
 	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1), 1.f);
-	meshList[GEO_TOP]->textureID = LoadTGA("Image//skybox_top.tga");
+	meshList[GEO_TOP]->textureID = LoadTGA("Image//top.tga");
 	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1), 1.f);
 	meshList[GEO_LEFT]->textureID = LoadTGA("Image//left.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
@@ -589,11 +590,11 @@ void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT))
 	{
-		trolleyrotation += (camera.CAMERA_SPEED)*dt;
+		handrotationleftandright += (camera.CAMERA_SPEED)*dt;
 	}
 	if(Application::IsKeyPressed(VK_RIGHT))
 	{
-		trolleyrotation -= (camera.CAMERA_SPEED)*dt;
+		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
 	}
 }
 void SceneSP::UpdateMenu()
@@ -968,7 +969,7 @@ void SceneSP::RenderSkyBox()
 	modelStack.PushMatrix();
 	modelStack.Scale(world_size, world_size, world_size);
 	modelStack.Translate(0, 0.965f, 0);
-	modelStack.Rotate(90, 1 ,0, 0);
+	modelStack.Rotate(90, 1 ,0 ,0);
 	RenderMesh(meshList[GEO_TOP], false);
 	modelStack.PopMatrix();
 
@@ -1152,9 +1153,8 @@ void SceneSP::RenderHand()
 			modelStack.PopMatrix();
 			*/
 			modelStack.PushMatrix();
-			modelStack.Rotate((180+trolleyrotation),0,1,0);
-			modelStack.Translate(-0.2,-1.5,2.5);
-			modelStack.Rotate(-45,1,0,0);
+			modelStack.Rotate((180+handrotationleftandright),0,1,0);
+			modelStack.Translate(-0.2,0,0);
 			RenderMesh(meshList[GEO_HANDS], toggleLight);
 			modelStack.PopMatrix();
 		}

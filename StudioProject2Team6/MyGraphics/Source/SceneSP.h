@@ -99,6 +99,7 @@ private:
 	float moveDoorFront;
 	float moveDoorBack;
 	float trolleyrotation;
+	float handrotationleftandright;
 	float diffX;
 	float diffZ;
 	float charactersrotation;
