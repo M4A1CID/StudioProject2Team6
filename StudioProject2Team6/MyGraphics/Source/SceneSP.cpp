@@ -1742,21 +1742,8 @@ void SceneSP::checkPickUpItem()
 }
 void SceneSP::checkSupermarketCollision()
 {
-	/*if(((camera.position.x > -41.0f && camera.position.x < -38.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f)) ||
-	((camera.position.x > -41.0f && camera.position.x < 14.0f) && (camera.position.z > -31.0f && camera.position.z < -28.0f)) ||
-	((camera.position.x > -41.0f && camera.position.x < -27.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
-	((camera.position.x > -12.0f && camera.position.x < 42.0f) && (camera.position.z > 29.0f && camera.position.z < 32.0f)) ||
-	((camera.position.x > 39.0f && camera.position.x < 42.0f) && (camera.position.z > -31.0f && camera.position.z < 32.0f))
-	)
-	{
-	camera.CAMERA_SPEED = -100.0f;
-	}
-	else
-	camera.CAMERA_SPEED = 150.0f;*/
 	if((camera.position.x > boundX1 && camera.position.x < boundX2) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
 	{
-		/*camera.position.x -= camera.CAMERA_SPEED*0.02;
-		camera.target.x -= camera.CAMERA_SPEED*0.02;*/
 		diffX = camera.position.x - (boundX1);
 		camera.position.x = boundX1;
 		camera.target.x -= diffX;
@@ -1764,8 +1751,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX2 && camera.position.x < boundX3) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
 	{
-		/*camera.position.x += camera.CAMERA_SPEED*0.02;
-		camera.target.x += camera.CAMERA_SPEED*0.02;*/
 		diffX = camera.position.x - (boundX3);
 		camera.position.x = boundX3;
 		camera.target.x -= diffX;
@@ -1773,8 +1758,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX1 && camera.position.x < boundX5) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
 	{
-		/*	camera.position.z -= camera.CAMERA_SPEED*0.02;
-		camera.target.z -= camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ1);
 		camera.position.z = boundZ1;
 		camera.target.z -= diffZ;
@@ -1782,8 +1765,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX1 && camera.position.x < boundX5) && (camera.position.z > boundZ3 && camera.position.z < boundZ6))
 	{
-		/*camera.position.z += camera.CAMERA_SPEED*0.02;
-		camera.target.z += camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ6);
 		camera.position.z = boundZ6;
 		camera.target.z -= diffZ;
@@ -1791,8 +1772,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX1 && camera.position.x < boundX6) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
 	{
-		/*	camera.position.z += camera.CAMERA_SPEED*0.02;
-		camera.target.z += camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ2);
 		camera.position.z = boundZ2;
 		camera.target.z -= diffZ;
@@ -1800,26 +1779,20 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX1 && camera.position.x < boundX6) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
 	{
-		/*camera.position.z -= camera.CAMERA_SPEED*0.02;
-		camera.target.z -= camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ5);
 		camera.position.z = boundZ5;
 		camera.target.z -= diffZ;
 		diffZ = 0.0f;
 	}
-	if((camera.position.x > -12.0f && camera.position.x < boundX4) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
+	if((camera.position.x > boundX10 && camera.position.x < boundX4) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
 	{
-		/*camera.position.z += camera.CAMERA_SPEED*0.02;
-		camera.target.z += camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ2);
 		camera.position.z = boundZ2;
 		camera.target.z -= diffZ;
 		diffZ = 0.0f;
 	}
-	if((camera.position.x > -12.0f && camera.position.x < boundX4) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
+	if((camera.position.x > boundX10 && camera.position.x < boundX4) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
 	{
-		//camera.position.z -= camera.CAMERA_SPEED*0.02;
-		//camera.target.z -= camera.CAMERA_SPEED*0.02;
 		diffZ = camera.position.z - (boundZ5);
 		camera.position.z = boundZ5;
 		camera.target.z -= diffZ;
@@ -1827,8 +1800,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX7 && camera.position.x < boundX4) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
 	{
-		/*camera.position.x += camera.CAMERA_SPEED*0.02;
-		camera.target.x += camera.CAMERA_SPEED*0.02;*/
 		diffX = camera.position.x - (boundX4);
 		camera.position.x = boundX4;
 		camera.target.x -= diffX;
@@ -1836,8 +1807,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX8 && camera.position.x < boundX7) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
 	{
-		/*camera.position.x -= camera.CAMERA_SPEED*0.02;
-		camera.target.x -= camera.CAMERA_SPEED*0.02;*/
 		diffX = camera.position.x - (boundX8);
 		camera.position.x = boundX8;
 		camera.target.x -= diffX;
@@ -1845,8 +1814,6 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX9 && camera.position.x < boundX4) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
 	{
-		/*camera.position.z -= camera.CAMERA_SPEED*0.02;
-		camera.target.z -= camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ1);
 		camera.position.z = boundZ1;
 		camera.target.z -= diffZ;
@@ -1854,12 +1821,41 @@ void SceneSP::checkSupermarketCollision()
 	}
 	if((camera.position.x > boundX9 && camera.position.x < boundX4) && (camera.position.z > boundZ3 && camera.position.z < boundZ6))
 	{
-		/*camera.position.z += camera.CAMERA_SPEED*0.02;
-		camera.target.z += camera.CAMERA_SPEED*0.02;*/
 		diffZ = camera.position.z - (boundZ6);
 		camera.position.z = boundZ6;
 		camera.target.z -= diffZ;
 		diffZ = 0.0f;
+	}
+	if(camera.position.y > 10)
+	{//top floor
+		if((camera.position.x > boundX6 && camera.position.x < boundX10) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
+		{
+			diffZ = camera.position.z - (boundZ2);
+			camera.position.z = boundZ2;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > boundX6 && camera.position.x < boundX10) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
+		{
+			diffZ = camera.position.z - (boundZ5);
+			camera.position.z = boundZ5;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > boundX5 && camera.position.x < boundX9) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
+		{
+			diffZ = camera.position.z - (boundZ1);
+			camera.position.z = boundZ1;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > boundX5 && camera.position.x < boundX9) && (camera.position.z > boundZ3 && camera.position.z < boundZ6))
+		{
+			diffZ = camera.position.z - (boundZ6);
+			camera.position.z = boundZ6;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
 	}
 }
 void SceneSP::checkShelfCollision()

@@ -3,21 +3,22 @@
 /*=======================================
 		Supermarket bounds values
 =======================================*/
-static float boundX1 =-41.0f;
+static float boundX1 =-41.5f;
 static float boundX2 = -39.5f;
-static float boundX3 =-38.0f;
-static float boundX4 = 42.0f;
+static float boundX3 =-37.5f;
+static float boundX4 = 42.5f;
 static float boundX5 = 14.0f;
 static float boundX6 = -27.0f;
 static float boundX7 = 40.5f;
-static float boundX8 =39.0f;
+static float boundX8 =38.5f;
 static float boundX9 = 28.5f;
-static float boundZ1 = -31.0f;
-static float boundZ2 = 32.0f;
+static float boundX10 = -12.0f;
+static float boundZ1 = -31.5f;
+static float boundZ2 = 32.5f;
 static float boundZ3 = -29.5f;
 static float boundZ4 = 30.5f;
-static float boundZ5 = 29.0f;
-static float boundZ6 = -28.0f;
+static float boundZ5 = 28.5f;
+static float boundZ6 = -27.5f;
 /*=======================================
 		Freezer bounds values
 =======================================*/
