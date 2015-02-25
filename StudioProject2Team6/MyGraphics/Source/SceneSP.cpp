@@ -159,17 +159,17 @@ void SceneSP::initGeoType()
 	SKYBOX INIT
 	=========================*/
 	meshList[GEO_FRONT] = MeshBuilder::GenerateQuad("front", Color(1, 1, 1), 1.f);
-	meshList[GEO_FRONT]->textureID = LoadTGA("Image//skybox_front.tga");
+	meshList[GEO_FRONT]->textureID = LoadTGA("Image//front.tga");
 	meshList[GEO_BOTTOM] = MeshBuilder::GenerateQuad("bottom", Color(1, 1, 1), 1.f,true);
 	meshList[GEO_BOTTOM]->textureID = LoadTGA("Image//skybox_bottom.tga",true);
 	meshList[GEO_BACK] = MeshBuilder::GenerateQuad("back", Color(1, 1, 1), 1.f);
-	meshList[GEO_BACK]->textureID = LoadTGA("Image//skybox_back.tga");
+	meshList[GEO_BACK]->textureID = LoadTGA("Image//back.tga");
 	meshList[GEO_TOP] = MeshBuilder::GenerateQuad("top", Color(1, 1, 1), 1.f);
 	meshList[GEO_TOP]->textureID = LoadTGA("Image//skybox_top.tga");
 	meshList[GEO_LEFT] = MeshBuilder::GenerateQuad("left", Color(1, 1, 1), 1.f);
-	meshList[GEO_LEFT]->textureID = LoadTGA("Image//skybox_left.tga");
+	meshList[GEO_LEFT]->textureID = LoadTGA("Image//left.tga");
 	meshList[GEO_RIGHT] = MeshBuilder::GenerateQuad("right", Color(1, 1, 1), 1.f);
-	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//skybox_right.tga");
+	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//right.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
 	meshList[GEO_CASHIER_ARM] = MeshBuilder::GenerateOBJ("cashier arm", "OBJ//Arm.obj");
@@ -212,6 +212,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_NormalNpc2_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc2.tga");
 
 }
+
+
 void SceneSP::initCharacter()
 {
 	ptrplayer = new CPlayer(100,0,8);
@@ -439,7 +441,6 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 }
 void SceneSP::addToInventory(CItem* pickedUp)
 {
-
 	ptrplayer->setInventory(pickedUp);
 	std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
 	std::cout<< "Current itms held: " << ptrplayer->getItemHeld() << std::endl;
@@ -567,7 +568,6 @@ void SceneSP::DeclareLightParameters()
 
 
 }
-
 void SceneSP::UpdateUI(double dt)
 {
 	std::stringstream ss_fps,ss_position,ss_money, ss_camera;
@@ -1275,6 +1275,7 @@ void SceneSP::RenderCharacter(CNpc* npc)
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+
 void SceneSP::RenderMainMenu()
 {
 	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
@@ -1294,7 +1295,6 @@ void SceneSP::RenderMainMenu()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(1, 1, 0), 2, 17, 13);
 	}
 }
-
 void SceneSP::RenderCharacters()
 {
 	for(int i = 0; i< myNPCList.size(); ++i)
@@ -1302,7 +1302,6 @@ void SceneSP::RenderCharacters()
 		RenderCharacter(myNPCList[i]);
 	}
 }
-
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -1329,7 +1328,6 @@ void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
-
 void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
