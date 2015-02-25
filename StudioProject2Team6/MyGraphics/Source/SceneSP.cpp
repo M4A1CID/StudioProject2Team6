@@ -40,6 +40,7 @@ void SceneSP::Init()
 	{
 		ptrplayer->setInventory(ptrItem);
 	}
+	ptrInvSelect = ptrplayer->getItem(0);
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
 	toggleLight = true;
@@ -58,9 +59,10 @@ void SceneSP::Init()
 	handrotationleftandright = 0.0f;
 	diffX = 0.0f;
 	diffZ = 0.0f;
-	ptrInvSelect = NULL;
 	elevatorY = 0.f;
 	elevatorDoorY = 0.f;
+	itemYrotation = 0.f;
+	itemXrotation = 0.f;
 	elevatorIdle = true; // Set default elevator to IDLE
 	charactersrotation = 20.0f;
 	i_sampleItems = 4;
@@ -598,11 +600,11 @@ void SceneSP::UpdateUI(double dt)
 }
 void SceneSP::UpdateTrolley(double dt)
 {
-	if(Application::IsKeyPressed(VK_LEFT))
+	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
 		handrotationleftandright += (camera.CAMERA_SPEED)*dt;
 	}
-	if(Application::IsKeyPressed(VK_RIGHT))
+	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
 		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
 	}
@@ -641,8 +643,38 @@ void SceneSP::UpdateMenu()
 		if(Application::IsKeyPressed(VK_RETURN))
 		{
 			if(selectionPointing == MENU_START)
+			{
 				i_menuHandle = GAME_PLAYING;
+			}
+			if(selectionPointing == MENU_EXIT)
+			{
+				
+			}
 		}
+	}
+}
+void SceneSP::UpdateItemRotation(double dt)
+{
+	if(Application::IsKeyPressed(VK_RIGHT)&& Application::IsKeyPressed('R'))
+	{
+		itemYrotation+=dt*itemRotationSpeedMultiplyer;
+	}
+	if(Application::IsKeyPressed(VK_LEFT) && Application::IsKeyPressed('R'))
+	{
+		itemYrotation-=dt*itemRotationSpeedMultiplyer;
+	}
+	if(Application::IsKeyPressed(VK_DOWN)&& Application::IsKeyPressed('R'))
+	{
+		itemXrotation+=dt*itemRotationSpeedMultiplyer;
+	}
+	if(Application::IsKeyPressed(VK_UP) && Application::IsKeyPressed('R'))
+	{
+		itemXrotation-=dt*itemRotationSpeedMultiplyer;
+	}
+	if(!Application::IsKeyPressed('R'))
+	{
+		itemXrotation = 0.f;
+		itemYrotation = 0.f;
 	}
 }
 void SceneSP::UpdatePlaying(double dt)
@@ -663,10 +695,11 @@ void SceneSP::UpdatePlaying(double dt)
 	{
 		toggleLight = false;
 	}
-
+	
 
 	UpdatePlayerSelection();
 	UpdateUI(dt);
+	UpdateItemRotation(dt);
 	checkPickUpItem();
 	if(!IsIntugofwar)
 		camera.UpdateMovement(dt);
@@ -1098,61 +1131,61 @@ void SceneSP::RenderElevator()
 void SceneSP::RenderFence()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(-22.9, 2.5, -26);
+	modelStack.Translate(-22.9f, 2.5f, -26.f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(-22.9, 2.5, -21.1);
+	modelStack.Translate(-22.9f, 2.5f, -21.1f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(-22.9, 2.5, -16);
-	RenderMesh(meshList[GEO_FENCE], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-30.5, 2.5, -21.1);
-	RenderMesh(meshList[GEO_FENCE], toggleLight);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(-30.5, 2.5, -16.0);
+	modelStack.Translate(-22.9f, 2.5f, -16.f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-12.9, 2.5, -21.1);
+	modelStack.Translate(-30.5f, 2.5f, -21.1f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(-12.9, 2.5, -16);
+	modelStack.Translate(-30.5f, 2.5f, -16.0f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-2.9, 2.5, -21.1);
+	modelStack.Translate(-12.9f, 2.5f, -21.1f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(-2.9, 2.5, -16);
+	modelStack.Translate(-12.9f, 2.5f, -16.f);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.9f, 2.5f, -21.1f);
+	RenderMesh(meshList[GEO_FENCE], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-2.9f, 2.5f, -16.f);
 	RenderMesh(meshList[GEO_FENCE], toggleLight);
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderCashierTables()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(-26, 0, -15);
+	modelStack.Translate(-26.f, 0.f, -15.f);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-16, 0, -15);
+	modelStack.Translate(-16.f, 0.f, -15.f);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-	modelStack.Translate(-6, 0, -15);
+	modelStack.Translate(-6.f, 0.f, -15.f);
 	modelStack.Rotate(180,0,1,0);
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
@@ -1161,53 +1194,14 @@ void SceneSP::RenderCashierTables()
 }
 void SceneSP::RenderTrolleys()
 {
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 13);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 15);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 17);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 19);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 21);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 23);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 25);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-37, 0.2, 27);
-	modelStack.Rotate(0,0,1,0);
-	RenderMesh(meshList[GEO_TROLLEY], toggleLight);
-	modelStack.PopMatrix();
+	for(float i=0; i<8;++i)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(-37.f, 0.2f, 13.f+(i*2));
+		modelStack.Rotate(0,0,1,0);
+		RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+		modelStack.PopMatrix();
+	}
 
 	if(false)
 	{
@@ -1226,26 +1220,41 @@ void SceneSP::RenderTrolleys()
 }
 void SceneSP::RenderHand()
 {
+	
 	//Free will hands
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
-	{
-		/*
-		modelStack.PushMatrix();
-		modelStack.Rotate((180+trolleyrotation),0,1,0);
-		modelStack.Rotate(-45,1,0,0);
-		modelStack.Translate(0.5,-1.5,2.5);
-		RenderMesh(meshList[GEO_HANDS], toggleLight);
-		modelStack.PopMatrix();
-		*/
-		modelStack.PushMatrix();
-		modelStack.Rotate((180+handrotationleftandright),0,1,0);
-		modelStack.Translate(-0.2,-4.5,-1);
-		RenderMesh(meshList[GEO_HANDS], toggleLight);
-		modelStack.PopMatrix();
-	}
+
+	/*
+	modelStack.PushMatrix();
+	modelStack.Rotate((180+trolleyrotation),0,1,0);
+	modelStack.Rotate(-45,1,0,0);
+	modelStack.Translate(0.5,-1.5,2.5);
+	RenderMesh(meshList[GEO_HANDS], toggleLight);
+	modelStack.PopMatrix();
+	*/
+	modelStack.PushMatrix();
+	modelStack.Rotate((180+handrotationleftandright),0,1,0);
+	modelStack.Translate(-0.2,-4.5,-1);
+	RenderMesh(meshList[GEO_HANDS], toggleLight);
+	
+	modelStack.PopMatrix();
+	
 	modelStack.PopMatrix();
 
+	//Render ITEM on HAND
+	//TODO: Inspect rotation
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);
+	modelStack.Rotate(handrotationleftandright+itemYrotation,0,1,0);
+	modelStack.Rotate(itemXrotation,1,0,0);
+	modelStack.Scale(0.5f,0.5f,0.5f);
+	if(ptrInvSelect->getName() != emptyItem.getName())
+	{
+		RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
+	}
+	modelStack.PopMatrix();
 	/*//Hands on trolley
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,0,camera.position.z);
@@ -1383,7 +1392,7 @@ void SceneSP::RenderMainMenu()
 }
 void SceneSP::RenderCharacters()
 {
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
 		RenderCharacter(myNPCList[i]);
 	}
@@ -1621,7 +1630,7 @@ void SceneSP::RenderItem()
 }
 void SceneSP::RenderInventory()
 {
-	for(unsigned int i = 0; i< ptrplayer->getItemHeld();++i)
+	for( int i = 0; i< ptrplayer->getItemHeld();++i)
 	{
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
 	}

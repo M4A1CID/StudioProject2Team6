@@ -71,6 +71,7 @@ private:
 	void UpdatePlaying(double dt);
 	void UpdateTugofwar(double dt);
 	void UpdatePlayerSelection();
+	void UpdateItemRotation(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -106,6 +107,8 @@ private:
 	float charactersrotation;
 	float elevatorDoorY;
 	float elevatorY;
+	float itemYrotation;
+	float itemXrotation;
 	bool elevatorDoorOpening;
 	bool elevatorSecondFloor;
 	CEmptyItem emptyItem;
