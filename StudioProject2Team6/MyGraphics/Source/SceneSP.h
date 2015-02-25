@@ -70,6 +70,7 @@ private:
 	void UpdateMenu();
 	void UpdatePlaying(double dt);
 	void UpdateTugofwar(double dt);
+	void UpdatePlayerSelection();
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -122,8 +123,10 @@ private:
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;
+	CItem * ptrInvSelect;
 	CNpc * ptrNPC;
 	int selectionPointing;
+	int inventoryPointing;
 	CContainer* ptrContainer;
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector

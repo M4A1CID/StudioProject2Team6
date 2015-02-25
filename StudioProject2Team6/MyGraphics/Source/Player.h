@@ -20,5 +20,7 @@ public:
 	int getItemHeld();
 	std::vector<CItem*> getVector();
 	void setInventory(CItem* pickedUp);
+	void setInventory(CItem* pickedUp, int slot);
+	CItem* getItem(int i);
 };
 
