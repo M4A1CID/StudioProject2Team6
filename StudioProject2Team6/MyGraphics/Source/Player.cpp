@@ -48,3 +48,7 @@ std::vector<CItem*> CPlayer::getVector()
 {
 	return myInventoryList;
 }
+void CPlayer::setMoney(float newMoney)
+{
+	money = newMoney;
+}

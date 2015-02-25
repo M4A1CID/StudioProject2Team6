@@ -28,7 +28,7 @@ void SceneSP::Init()
 	{
 		meshList[i] = NULL;
 	}
-	
+
 	/*=============================================
 	Init variables here
 	=============================================*/
@@ -1646,35 +1646,35 @@ void SceneSP::checkPickUpItem()
 							{
 								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									
+
+									addToInventory(myStockList[i]);
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+
 								}
 								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 							}
@@ -1685,35 +1685,35 @@ void SceneSP::checkPickUpItem()
 							{
 								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									
+
+									addToInventory(myStockList[i]);
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+
 								}
 								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 
@@ -1732,35 +1732,35 @@ void SceneSP::checkPickUpItem()
 							{
 								if((camera.target.y > interactionDistanceYMax) && (myStockList[i]->getYpos() > interactionDistanceYMax)) //If looking at top row
 								{
-									
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									
+
+									addToInventory(myStockList[i]);
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+
 								}
 								else if (camera.target.y >= interactionDistanceYMin && camera.target.y <= interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 
@@ -1772,35 +1772,35 @@ void SceneSP::checkPickUpItem()
 							{
 								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
 								{
-									
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									
+
+									addToInventory(myStockList[i]);
+									myStockList[i]->setActiveState(false);
+									std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+									break;
+
 								}
 								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
 								{
 									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 								else //Looking at bottom row
 								{
 									if(camera.target.y < interactionDistanceYMin)
 									{
-										
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										
+
+										addToInventory(myStockList[i]);
+										myStockList[i]->setActiveState(false);
+										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
+										break;
+
 									}
 								}
 
