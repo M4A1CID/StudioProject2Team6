@@ -242,14 +242,15 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(-6,17,28,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 
+	//Enter & exit
 	ptrNPC = new CNpc(4,0,-4,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(8,0,-4,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
-	myNPCList.push_back(ptrNPC);
+	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	//myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
-	myNPCList.push_back(ptrNPC);
+	//ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	//myNPCList.push_back(ptrNPC);
 }
 void SceneSP::initShelves()
 {
@@ -1130,8 +1131,9 @@ void SceneSP::UpdateSamples()
 }
 void SceneSP::UpdateTugofwar(double dt)
 {
-	if((Application::IsKeyPressed('E') && (IsIntugofwar == false))&&
-		((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13))
+	if(((Application::IsKeyPressed('E') && (IsIntugofwar == false))&&
+		((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)))&&
+		camera.position.y < 10
 		)//Initiate tug of war conditions
 	{//Initiate tug of war sequence
 		IsIntugofwar = true;
@@ -1216,8 +1218,8 @@ void SceneSP::RenderTugofwarUI()
 		RenderTextOnScreen(meshList[GEO_TEXT], "YOU LOSE!!!!", Color(0, 1, 0), 4, 5, 5);
 	if(showTuginstruction)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'space' to tug!", Color(0, 1, 0), 3, 3, 9);
-	if(((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)) &&
-		IsIntugofwar == false
+	if((((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)) &&
+		IsIntugofwar == false) && camera.position.y <10
 		)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
@@ -1570,13 +1572,13 @@ void SceneSP::RenderCharacter(CNpc* npc)
 	modelStack.PopMatrix();
 	//leg and feet
 	modelStack.PushMatrix();
-	modelStack.Translate(0.2, 0, 0);
+	modelStack.Translate(0.2, 2.3, 0);
 	modelStack.Rotate(npc->getLeftLeg(),1,0,0);
 	RenderMesh(meshList[npc->getLegType()], toggleLight);
 	modelStack.PopMatrix();
 	//leg and feet 
 	modelStack.PushMatrix();
-	modelStack.Translate(-0.2, 0, 0);
+	modelStack.Translate(-0.2, 2.3, 0);
 	modelStack.Rotate(npc->getRightLeg(),1,0,0);
 	RenderMesh(meshList[npc->getLegType()], toggleLight);
 	modelStack.PopMatrix();
