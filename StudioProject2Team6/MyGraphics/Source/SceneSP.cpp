@@ -96,7 +96,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_STORAGEANDOFFICE] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//PartofSuperMarket.obj");
 	meshList[GEO_STORAGEANDOFFICE]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_DOOR] = MeshBuilder::GenerateOBJ("door", "OBJ//door.obj");
-	meshList[GEO_DOOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_DOOR]->textureID = LoadTGA("Image//UI.tga");
 	meshList[GEO_TROLLEY] = MeshBuilder::GenerateOBJ("trolley", "OBJ//trolley.obj");
 	meshList[GEO_TROLLEY]->textureID = LoadTGA("Image//trolley.tga");
 	meshList[GEO_SAMPLESTAND] = MeshBuilder::GenerateOBJ("samplestand", "OBJ//sample_stand.obj");
@@ -236,7 +236,7 @@ void SceneSP::initCharacter()
 	ptrplayer = new CPlayer(100,0,8);
 
 	//Tug of war NPC
-	ptrNPC = new CNpc(4,5,-4,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,TUG_OF_WAR_GUY);
+	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,TUG_OF_WAR_GUY);
 	myNPCList.push_back(ptrNPC);
 
 	ptrNPC = new CNpc(0,0,-4,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
@@ -662,6 +662,10 @@ void SceneSP::UpdateUI(double dt)
 	s_money = ss_money.str();
 
 }
+void SceneSP::UpdateAI(double dt)
+{
+	UpdateTugofwarguy(dt);
+}
 void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
@@ -779,6 +783,8 @@ void SceneSP::UpdatePlaying(double dt)
 
 	UpdatePlayerSelection();
 	UpdateUI(dt);
+	UpdateTugofwar(dt);
+	UpdateAI(dt);
 	UpdateItemRotation(dt);
 	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
@@ -808,7 +814,6 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateElevator(dt);
 	UpdateDoor(dt);
 	UpdateSamples();
-	UpdateTugofwar(dt);
 	checkSupermarketCollision();
 	checkFreezerCollision();
 	checkShelfCollision();
@@ -1059,7 +1064,9 @@ void SceneSP::UpdateSamples()
 }
 void SceneSP::UpdateTugofwar(double dt)
 {
-	if(Application::IsKeyPressed('J') && (IsIntugofwar == false))//Initiate tug of war conditions
+	if((Application::IsKeyPressed('E') && (IsIntugofwar == false))&&
+		((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13))
+		)//Initiate tug of war conditions
 	{//Initiate tug of war sequence
 		IsIntugofwar = true;
 		diffX = camera.position.x - 20;
@@ -1068,9 +1075,6 @@ void SceneSP::UpdateTugofwar(double dt)
 		camera.position.z = 0;
 		camera.target.x -= diffX;
 		camera.target.z -=diffZ;
-		/*camera.target.x = 19.005;
-		camera.target.y = 4.41066;
-		camera.target.z = 0.0443127;*/
 		diffX = diffZ = 0;
 		showTuginstruction = true;
 	}
@@ -1105,6 +1109,24 @@ void SceneSP::UpdateTugofwar(double dt)
 		lose = false;
 	}
 }
+void SceneSP::UpdateTugofwarguy(double dt)
+{
+	if(!IsIntugofwar)
+	{
+		myNPCList[0]->setRotation(0);
+		myNPCList[0]->setXpos(7.0f);
+		myNPCList[0]->setZpos(0.5f);
+		myNPCList[0]->setLeftArm(30);
+		myNPCList[0]->setRightArm(-30);
+	}
+	else //if(IsIntugofwar)
+	{
+		myNPCList[0]->setRotation(90);
+		myNPCList[0]->setXpos(camera.position.x - 4);
+		myNPCList[0]->setZpos(camera.position.z);
+		myNPCList[0]->setLeftArm(40);
+	}
+}
 void SceneSP::RenderUI()
 {
 
@@ -1114,12 +1136,23 @@ void SceneSP::RenderUI()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
+	RenderTugofwarUI();
+}
+void SceneSP::RenderTugofwarUI()
+{
 	if(win)
 		RenderTextOnScreen(meshList[GEO_TEXT], "YOU WIN!!!!", Color(0, 1, 0), 4, 5, 5);
 	if(lose)
 		RenderTextOnScreen(meshList[GEO_TEXT], "YOU LOSE!!!!", Color(0, 1, 0), 4, 5, 5);
 	if(showTuginstruction)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'space' to tug!", Color(0, 1, 0), 3, 3, 9);
+	if(((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)) &&
+		IsIntugofwar == false
+		)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "partake in a Tug-of-war!", Color(0, 1, 0), 3, 1, 9);
+	}
 }
 void SceneSP::Render()
 {
@@ -1162,12 +1195,12 @@ void SceneSP::Render()
 	case GAME_PLAYING:
 		RenderHand();
 		RenderSkyBox();		//Renders out Skybox
-		RenderSupermarket();//Renders out Supermarket
 		RenderCharacters();//Render out characters
 		RenderItem();		//Renders out items
-		RenderUI();			//Renders out UI
 		RenderInventory();	//Render inventory after UI to place above
 		RenderTug();
+		RenderSupermarket();//Renders out Supermarket
+		RenderUI();			//Renders out UI
 		break;
 	}
 }
@@ -1443,6 +1476,7 @@ void SceneSP::RenderCharacter(CNpc* npc)
 {
 	modelStack.PushMatrix();
 	modelStack.Translate(npc->getXpos() , npc->getYpos(), npc->getZpos());//translate everything
+	modelStack.Rotate(npc->getRotation(),0,1,0);
 	modelStack.PushMatrix();
 
 	//head and body
@@ -1450,13 +1484,13 @@ void SceneSP::RenderCharacter(CNpc* npc)
 
 	//Left arm
 	modelStack.PushMatrix();
-	modelStack.Translate(0.3 , 0.3, 0);
+	modelStack.Translate(0.3 , 0.0, 0);
 	modelStack.Rotate(npc->getLeftArm(),0,1,0);
 	RenderMesh(meshList[npc->getArmType()], toggleLight);
 	modelStack.PopMatrix();
 	//Right arm
 	modelStack.PushMatrix();
-	modelStack.Translate(-0.3 , 0.3, 0);
+	modelStack.Translate(-0.3 , 0.0, 0);
 	modelStack.Rotate(npc->getRightArm(),0, 1,0);
 	RenderMesh(meshList[npc->getArmType()], toggleLight);
 	modelStack.PopMatrix();
@@ -1618,12 +1652,12 @@ void SceneSP::RenderSupermarket()
 	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
 	RenderMesh(meshList[GEO_STORAGEANDOFFICE], toggleLight);
 	RenderShelves();		//Render Shelves in Supermarket
-	RenderDoors();			//Render Doors in Supermarket
 	RenderSamplestand();	//Render Sample Food Stand in Supermarket
 	RenderCashierTables();	//Render Cashier table in Supermarket
 	RenderFence();          //Render Fence in Supermarket
 	RenderElevator();       //Render Elevator in Supermarket
 	RenderTrolleys();       //Render Trolleys in Supermarket
+	RenderDoors();			//Render Doors in Supermarket
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
@@ -1754,28 +1788,10 @@ void SceneSP::RenderTug()
 {
 	if(IsIntugofwar)
 	{
-		/*modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x-2, camera.position.y-2, camera.position.z);
-		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
-		modelStack.PopMatrix();*/
-
 		modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
-		{
-			/*
-			modelStack.PushMatrix();
-			modelStack.Rotate((180+trolleyrotation),0,1,0);
-			modelStack.Rotate(-45,1,0,0);
-			modelStack.Translate(0.5,-1.5,2.5);
-			RenderMesh(meshList[GEO_HANDS], toggleLight);
-			modelStack.PopMatrix();
-			*/
-			modelStack.PushMatrix();
-			modelStack.Rotate((180+handrotationleftandright),0,1,0);
-			modelStack.Translate(2,0,0);
-			RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
-			modelStack.PopMatrix();
-		}
+		modelStack.Translate(myNPCList[0]->getXpos()+2,myNPCList[0]->getYpos()+3.6,myNPCList[0]->getZpos()-1);
+		modelStack.Rotate(90,0,0,1);
+		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
 		modelStack.PopMatrix();
 	}
 }
@@ -1799,6 +1815,7 @@ void SceneSP::RenderInventory()
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
 	}
 }
+
 void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)

@@ -16,6 +16,7 @@ CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int s
 	setCharacterJob(job);
 	setCharacterState(state);
 
+	rotation = 0.0f;
 	rotateLeftArm = 90.f;
 	rotateRightArm = 270.f;
 	rotateLeftLeg = 0.f;
@@ -55,6 +56,10 @@ float CNpc::getRightLeg()
 {
 	return rotateRightLeg;
 }
+float CNpc::getRotation()
+{
+	return rotation;
+}
 
 void CNpc::setLeftArm(float r)
 {
@@ -71,4 +76,8 @@ void CNpc::setLeftLeg(float r)
 void CNpc::setRightLeg(float r)
 {
 	rotateRightLeg = r;
+}
+void CNpc::setRotation(float r)
+{
+	rotation = r;
 }

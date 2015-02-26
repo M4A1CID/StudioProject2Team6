@@ -50,6 +50,7 @@ private:
 	void RenderSamplestand();
 	void RenderSamples();
 	void RenderUI();
+	void RenderTugofwarUI();
 	void RenderItem(); // Take in a CContainer location and populate it's contents
 	void RenderCashierTables();
 	void RenderInventory();
@@ -63,6 +64,7 @@ private:
 	/*=======================================
 				All update functions
 	=======================================*/
+	void UpdateAI(double dt);
 	void UpdateTrolley(double dt);
 	void UpdateDoor(double dt);
 	void UpdateUI(double dt);
@@ -73,6 +75,7 @@ private:
 	void UpdateTugofwar(double dt);
 	void UpdatePlayerSelection();
 	void UpdateItemRotation(double dt);
+	void UpdateTugofwarguy(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
