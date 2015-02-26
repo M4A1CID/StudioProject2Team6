@@ -695,44 +695,108 @@ void SceneSP::UpdateTrolley(double dt)
 }
 void SceneSP::UpdateMenu()
 {
-	if(interactionTimer > menuTImerLimiter)
+	//If at main menu
+	if(i_menuHandle == MAIN_MENU)
 	{
-		if(Application::IsKeyPressed(VK_DOWN))
+		if(interactionTimer > menuTImerLimiter)
 		{
-			if(selectionPointing < NUM_BUTTON-1)
+			if(Application::IsKeyPressed(VK_DOWN))
 			{
-				interactionTimer = 0;
-				selectionPointing++;
+				if(selectionPointing < MENU_EXIT)
+				{
+					interactionTimer = 0;
+					selectionPointing++;
+				}
+				else
+				{
+					interactionTimer = 0;
+					selectionPointing = MENU_START; //RESET TO START
+				}
 			}
-			else
+			if(Application::IsKeyPressed(VK_UP))
 			{
-				interactionTimer = 0;
-				selectionPointing = MENU_START; //RESET TO START
+				if(selectionPointing > MENU_START)
+				{
+					interactionTimer = 0;
+					selectionPointing--;
+				}
+				else
+				{
+					interactionTimer = 0;
+					selectionPointing = MENU_EXIT; //RESET TO EXIT
+				}
 			}
-		}
-		if(Application::IsKeyPressed(VK_UP))
-		{
-			if(selectionPointing > MENU_START)
-			{
-				interactionTimer = 0;
-				selectionPointing--;
-			}
-			else
-			{
-				interactionTimer = 0;
-				selectionPointing = MENU_EXIT; //RESET TO EXIT
-			}
-		}
 
-		if(Application::IsKeyPressed(VK_RETURN))
-		{
-			if(selectionPointing == MENU_START)
+			if(Application::IsKeyPressed(VK_RETURN))
 			{
-				i_menuHandle = GAME_PLAYING;
+				if(selectionPointing == MENU_START)
+				{
+					interactionTimer = 0;
+					selectionPointing = MENU_FREE_ROAM;
+					i_menuHandle = SUB_MENU;
+					
+				}
+				if(selectionPointing == MENU_EXIT)
+				{
+					interactionTimer = 0;
+					//Exit shit here
+				}
 			}
-			if(selectionPointing == MENU_EXIT)
+		}
+	}
+
+	//If at SUB/Character menu 
+	if(i_menuHandle == SUB_MENU)
+	{
+		
+		if(interactionTimer > menuTImerLimiter)
+		{
+			if(Application::IsKeyPressed(VK_DOWN))
 			{
-				
+				if(selectionPointing < MENU_EASTER_EGG_HUNT)
+				{
+					interactionTimer = 0;
+					selectionPointing++;
+					
+				}
+				else
+				{
+					interactionTimer = 0;
+					selectionPointing = MENU_FREE_ROAM;
+				}
+			}
+			if(Application::IsKeyPressed(VK_UP))
+			{
+				if(selectionPointing > MENU_FREE_ROAM)
+				{
+					interactionTimer = 0;
+					selectionPointing--;
+					
+				}
+				else
+				{
+					interactionTimer= 0;
+					selectionPointing = MENU_EASTER_EGG_HUNT;
+				}
+			}
+			if(Application::IsKeyPressed(VK_RETURN))
+			{
+				if(selectionPointing == MENU_FREE_ROAM)
+				{
+					//FREE ROAM HERE
+					i_menuHandle = GAME_PLAYING;
+					
+				}
+				if(selectionPointing == MENU_TREASURE_HUNT)
+				{
+					//DO TREASURE HUNT HERE
+					i_menuHandle = GAME_PLAYING;
+				}
+				if(selectionPointing == MENU_EASTER_EGG_HUNT)
+				{
+					//DO EASTER EGG HUNT HERE
+					i_menuHandle == GAME_PLAYING;
+				}
 			}
 		}
 	}
@@ -846,7 +910,7 @@ void SceneSP::UpdatePlaying(double dt)
 void SceneSP::Update(double dt)
 {
 	interactionTimer+=dt;
-	if(i_menuHandle == MAIN_MENU)
+	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU)
 	{
 		UpdateMenu();
 	}
@@ -1192,6 +1256,10 @@ void SceneSP::Render()
 		RenderMainMenu();
 
 		break;
+		//Do sub menu here
+	case SUB_MENU:
+		RenderSubMenu();
+		break;
 	case GAME_PLAYING:
 		RenderHand();
 		RenderSkyBox();		//Renders out Skybox
@@ -1512,20 +1580,39 @@ void SceneSP::RenderCharacter(CNpc* npc)
 void SceneSP::RenderMainMenu()
 {
 	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
-	RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(0, 1, 0), 2, 17, 15);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Credits", Color(0, 1, 0), 2, 17, 14);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(0, 1, 0), 2, 17, 13);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(0, 1, 0), 2, 17, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_CREDIT], Color(0, 1, 0), 2, 17, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(0, 1, 0), 2, 17, 13);
 	if(selectionPointing == MENU_START)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "START", Color(1, 1, 0), 2, 17, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(1, 1, 0), 2, 17, 15);
 	}
 	if(selectionPointing == MENU_CREDIT)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Credits", Color(1, 1, 0), 2, 17, 14);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_CREDIT], Color(1, 1, 0), 2, 17, 14);
 	}
 	if(selectionPointing == MENU_EXIT)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Exit", Color(1, 1, 0), 2, 17, 13);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(1, 1, 0), 2, 17, 13);
+	}
+}
+void SceneSP::RenderSubMenu()
+{
+	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(0, 1, 0), 2, 17, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(0, 1, 0), 2, 17, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(0, 1, 0), 2, 17, 13);
+	if(selectionPointing == MENU_FREE_ROAM)//If pointing at START button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(1, 1, 0), 2, 17, 15);
+	}
+	if(selectionPointing == MENU_TREASURE_HUNT)//If pointing at START button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(1, 1, 0), 2, 17, 14);
+	}
+	if(selectionPointing == MENU_EASTER_EGG_HUNT)//If pointing at START button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0), 2, 17, 13);
 	}
 }
 void SceneSP::RenderCharacters()

@@ -61,6 +61,7 @@ private:
 	void RenderHand();
 	void RenderTug();
 	void RenderMainMenu();
+	void RenderSubMenu();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -101,6 +102,8 @@ private:
 	bool toggleLight;
 	bool toggleDoorFront;
 	bool toggleDoorBack;
+	bool elevatorDoorOpening;
+	bool elevatorSecondFloor;
 	float interactionTimer;
 	float moveDoorFront;
 	float moveDoorBack;
@@ -114,8 +117,7 @@ private:
 	float elevatorY;
 	float itemYrotation;
 	float itemXrotation;
-	bool elevatorDoorOpening;
-	bool elevatorSecondFloor;
+	
 	CEmptyItem emptyItem;
 	bool win;
 	bool lose;

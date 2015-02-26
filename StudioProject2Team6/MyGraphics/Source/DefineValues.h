@@ -131,3 +131,6 @@ static float TugofwarTimerLimiter = 0.3f;
 static float itemRotationSpeedMultiplyer =60.f;
 //Punch limiter
 static bool PunchTimerLimiter = true;
+
+//Menu string text
+static std::string menuTextArray[6] = {"START","Credits","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt"};
