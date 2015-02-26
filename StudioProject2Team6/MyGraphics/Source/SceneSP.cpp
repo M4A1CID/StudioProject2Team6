@@ -864,33 +864,39 @@ void SceneSP::UpdatePlaying(double dt)
 	}
 	if(b_crouching)
 	{
-		//First floor crouching
-		if(camera.position.y>3.1f && camera.position.y < 4.6f)
+		if(elevatorIdle)
 		{
-			camera.position.y-=dt*5;
-			camera.target.y -=dt*5;
-		}
-		//Second floor crouching
-		if(camera.position.y > 19.1f && camera.position.y < 23.1f)
-		{
-			camera.position.y-=dt*5;
-			camera.target.y -=dt*5;
+			//First floor crouching
+			if(camera.position.y>3.1f && camera.position.y < 4.6f)
+			{
+				camera.position.y-=dt*5;
+				camera.target.y -=dt*5;
+			}
+			//Second floor crouching
+			if(camera.position.y > 19.1f && camera.position.y < 23.1f)
+			{
+				camera.position.y-=dt*5;
+				camera.target.y -=dt*5;
+			}
 		}
 		
 	}
 	else
 	{
-		//First floor crouching
-		if(camera.position.y <= 4.5f && camera.position.y >= 3.0f)
+		if(elevatorIdle)
 		{
-			camera.position.y+=dt*5;
-			camera.target.y+=dt*5;
-		}
-		//Second floor crouching
-		if(camera.position.y <21.5f && camera.position.y >= 19.f)
-		{
-			camera.position.y+=dt*5;
-			camera.target.y+=dt*5;
+			//First floor crouching
+			if(camera.position.y <= 4.5f && camera.position.y >= 2.0f)
+			{
+				camera.position.y+=dt*5;
+				camera.target.y+=dt*5;
+			}
+			//Second floor crouching
+			if(camera.position.y <21.5f && camera.position.y >= 19.f)
+			{
+				camera.position.y+=dt*5;
+				camera.target.y+=dt*5;
+			}
 		}
 	}
 
