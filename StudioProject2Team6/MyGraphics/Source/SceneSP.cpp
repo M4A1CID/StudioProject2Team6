@@ -667,6 +667,7 @@ void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
 }
+
 void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
@@ -1007,10 +1008,6 @@ void SceneSP::UpdateElevator(double dt)
 		}
 	}
 }
-void SceneSP::UpdateDrunkman(double dt)
-{
-
-}
 void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
@@ -1178,6 +1175,11 @@ void SceneSP::UpdateTugofwar(double dt)
 		lose = false;
 	}
 }
+void SceneSP::UpdateDrunkman(double dt)
+{
+	myNPCList[1]->setRotation(90);
+
+}
 void SceneSP::UpdateTugofwarguy(double dt)
 {
 	if(!IsIntugofwar)
@@ -1198,7 +1200,6 @@ void SceneSP::UpdateTugofwarguy(double dt)
 }
 void SceneSP::RenderUI()
 {
-
 	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
 	RenderTGAUI(meshList[GEO_UI_SCREEN],1,40,20);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
@@ -1270,10 +1271,10 @@ void SceneSP::Render()
 		RenderSkyBox();		//Renders out Skybox
 		RenderCharacters();//Render out characters
 		RenderItem();		//Renders out items
-		RenderInventory();	//Render inventory after UI to place above
 		RenderTug();
 		RenderSupermarket();//Renders out Supermarket
 		RenderUI();			//Renders out UI
+		RenderInventory();	//Render inventory after UI to place above
 		break;
 	}
 }
@@ -1842,8 +1843,14 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.Translate(0.0f,0.0f,-18.0f);
 	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
 	modelStack.PopMatrix();
-
 	modelStack.PopMatrix();
+
+	//-37.f, 0.2f, 13.f
+	modelStack.PushMatrix();
+	modelStack.Translate(-37.f, 0.0f, 0.0f);
+	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	modelStack.PopMatrix();
+
 	//16,17,-28
 	modelStack.PushMatrix();
 	modelStack.Translate(13.0f, 17.0f, -26.0f);
@@ -1907,7 +1914,6 @@ void SceneSP::RenderInventory()
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
 	}
 }
-
 void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
