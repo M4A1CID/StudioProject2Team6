@@ -120,6 +120,8 @@ static float checkInnerElevatorXposMin = -39.f;
 static float checkInnerElevatorXposMax = -32.f;
 static float checkInnerElevatorZposMin = -29.f;
 static float checkInnerElevatorZposMax = -23.f;
+
+
 static float secondFloorYpositionMax = 17.f;
 static float secondFloorYpositionMin = 0.0f;
 
@@ -147,6 +149,7 @@ static float TugofwarTimerLimiter = 0.3f;
 
 //Item rotation speed
 static float itemRotationSpeedMultiplyer =60.f;
+
 //Punch limiter
 static bool PunchTimerLimiter = true;
 

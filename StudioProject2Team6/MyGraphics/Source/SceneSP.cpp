@@ -33,6 +33,7 @@ void SceneSP::Init()
 	Init variables here
 	=============================================*/
 	i_menuHandle = MAIN_MENU;
+	i_drunkmanAct = DRUNKIDLE;
 	initCharacter(); //Initilize the player
 	//Initialize all Inventory to NULL
 	ptrItem = new CEmptyItem;
@@ -221,6 +222,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_NormalNpc1_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_NormalNpc1_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	//////////////////////////////////////////////////////////////////////////////
+
+
 	meshList[GEO_NormalNpc2_ARM] = MeshBuilder::GenerateOBJ("NormalNpc2 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc2_ARM]->textureID = LoadTGA("Image//NormalNpc2.tga");
 	meshList[GEO_NormalNpc2_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//headandbody.obj");
@@ -242,16 +245,47 @@ void SceneSP::initCharacter()
 	//Tug of war NPC
 	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,TUG_OF_WAR_GUY);
 	myNPCList.push_back(ptrNPC);
-	//-12,17,28
-	ptrNPC = new CNpc(-6,17,28,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
+	//Drunkman NPC
+	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
-
 	//Walk around supermarket
 	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
-
 	//Ghost npc
 	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,IDLE,GHOST_GUY);
+	myNPCList.push_back(ptrNPC);
+	//cashier 1
+	ptrNPC = new CNpc(-26,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
+	myNPCList.push_back(ptrNPC);
+	//cashier 2
+	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
+	myNPCList.push_back(ptrNPC);
+	//cashier 3
+	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
+	myNPCList.push_back(ptrNPC);
+
+	//Customer at cashier 2
+	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+
+	//Customer at cashier 3
+	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
 
 	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
@@ -675,6 +709,7 @@ void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
 	UpdateWalkingman(dt);
+	UpdateDrunkmanguy(dt);
 	UpdateGhostman(dt);
 }
 void SceneSP::UpdateTrolley(double dt)
@@ -903,8 +938,10 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdatePlayerSelection();
 	UpdateUI(dt);
 	UpdateTugofwar(dt);
+	UpdateDrunkman(dt);
 	UpdateAI(dt);
 	UpdateItemRotation(dt);
+
 	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed('F2')) //disable back face culling
@@ -1066,9 +1103,8 @@ void SceneSP::UpdateElevator(double dt)
 void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
-	if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
+	if((camera.position.z < 50.0f && camera.position.z > 0.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
 		toggleDoorFront = true;
-	
 	else
 		toggleDoorFront = false;
 	if(toggleDoorFront)
@@ -1234,8 +1270,44 @@ void SceneSP::UpdateTugofwar(double dt)
 }
 void SceneSP::UpdateDrunkman(double dt)
 {
-	myNPCList[1]->setRotation(90);
+	if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
+		&&(camera.position.z > 26 && camera.position.z < 28)
+		&&(camera.position.x > -5 && camera.position.x < -2.5)
+		&&(camera.position.y > 16 && camera.position.y < 25))
+	{
+		i_drunkmanAct = DRUNKCARRY;
+	}
 
+	if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKCARRY)	
+		&&(camera.position.z < 50.0f && camera.position.z > 0.0f) 
+		&&(camera.position.x > -30.0f  && camera.position.x < -10.0f)
+		&&(camera.position.y > 1.0f  && camera.position.y < 16.0f))
+	{
+		i_drunkmanAct = DRUNKOUTSIDE;
+	}
+}
+void SceneSP::UpdateDrunkmanguy(double dt)
+{
+	if(i_drunkmanAct == DRUNKIDLE)
+	{
+		myNPCList[1]->setRotation(180);
+		myNPCList[1]->setLeftLeg(-90);
+		myNPCList[1]->setRightLeg(-90);
+		myNPCList[1]->setLeftArm(20);
+		myNPCList[1]->setRightArm(-20);
+	}
+	else if(i_drunkmanAct == DRUNKCARRY)
+	{
+		myNPCList[1]->setXpos(camera.position.x);
+		myNPCList[1]->setYpos(camera.position.y);
+		myNPCList[1]->setZpos(camera.position.z);
+	}
+	else
+	{
+		myNPCList[1]->setXpos(-25);
+		myNPCList[1]->setYpos(-2);
+		myNPCList[1]->setZpos(60);
+	}
 }
 void SceneSP::UpdateTugofwarguy(double dt)
 {
@@ -1364,6 +1436,7 @@ void SceneSP::RenderUI()
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
 	RenderTugofwarUI();
+	RenderDrunkmanUI();
 }
 void SceneSP::RenderTugofwarUI()
 {
@@ -1379,6 +1452,28 @@ void SceneSP::RenderTugofwarUI()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
 		RenderTextOnScreen(meshList[GEO_TEXT], "partake in a Tug-of-war!", Color(0, 1, 0), 3, 1, 9);
+	}
+}
+void SceneSP::RenderDrunkmanUI()
+{
+	if((i_drunkmanAct == DRUNKIDLE)	
+		&&(camera.position.z > 26.0f && camera.position.z < 28.0f)
+		&&(camera.position.x > -5.0f && camera.position.x < -2.5f)
+		&&(camera.position.y > 16.0f && camera.position.y < 25.0f))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "carry the drunk man", Color(0, 1, 0), 3, 3, 9);
+		RenderTextOnScreen(meshList[GEO_TEXT], "to the entrance", Color(0, 1, 0), 3, 6, 8);
+	}
+
+	if(i_drunkmanAct == DRUNKCARRY
+		&&(camera.position.z < 50.0f && camera.position.z > 0.0f) 
+		&&(camera.position.x > -30.0f  && camera.position.x < -10.0f)
+		&&(camera.position.y > 1.0f  && camera.position.y < 16.0f))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "throw the drunk man", Color(0, 1, 0), 3, 3, 9);
+		RenderTextOnScreen(meshList[GEO_TEXT], "out of the store", Color(0, 1, 0), 3, 6, 8);
 	}
 }
 void SceneSP::Render()
@@ -1592,7 +1687,6 @@ void SceneSP::RenderHand()
 	//Free will hands
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
-
 	{
 		/*
 		modelStack.PushMatrix();

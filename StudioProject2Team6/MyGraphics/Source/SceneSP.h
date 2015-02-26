@@ -54,6 +54,7 @@ private:
 	void RenderSamples();
 	void RenderUI();
 	void RenderTugofwarUI();
+	void RenderDrunkmanUI();
 	void RenderItem(); // Take in a CContainer location and populate it's contents
 	void RenderCashierTables();
 	void RenderInventory();
@@ -78,10 +79,11 @@ private:
 	void UpdateMenu();
 	void UpdatePlaying(double dt);
 	void UpdateTugofwar(double dt);
+	void UpdateDrunkman(double dt);
 	void UpdatePlayerSelection();
 	void UpdateItemRotation(double dt);
 	void UpdateTugofwarguy(double dt);
-	void UpdateDrunkman(double dt);
+	void UpdateDrunkmanguy(double dt);
 	void UpdateWalkingman(double dt);
 	void UpdateGhostman(double dt);
 	/*=======================================
@@ -132,6 +134,7 @@ private:
 	bool b_crouching;
 	int i_sampleItems;
 	int i_menuHandle;
+	int i_drunkmanAct;
 	bool elevatorIdle;
 	bool IsIntugofwar;
 	string s_money;
