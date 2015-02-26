@@ -959,17 +959,17 @@ void SceneSP::UpdateElevator(double dt)
 						if(!(elevatorSecondFloor))
 						{
 							//Move elevator up
-							camera.position.y += dt;
-							camera.target.y +=dt;
-							elevatorY+=dt;
+							camera.position.y += dt*elevatorSpeed;
+							camera.target.y +=dt*elevatorSpeed;
+							elevatorY+=dt*elevatorSpeed;
 							elevatorIdle = false;
 						}
 						else if(elevatorSecondFloor)
 						{
 							//Move elevator down
-							camera.position.y-=dt;
-							camera.target.y-=dt;
-							elevatorY-=dt;
+							camera.position.y-=dt*elevatorSpeed;
+							camera.target.y-=dt*elevatorSpeed;
+							elevatorY-=dt*elevatorSpeed;
 							elevatorIdle = false;
 						}
 					}
@@ -1974,221 +1974,47 @@ void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 	{
-
+		float magnitudeFromTarget = 0.f;
+		float magnitudeFromPosition = 0.f;
+		float previous = 99.0f;
+		int chosen = 0;
 		for(unsigned int i = 0; i<myStockList.size();++i)
 		{
-
-			if(myStockList[i]->getActiveState())
+			if(myStockList[i]->getActiveState()) //If Item is available for taking
 			{
-				if(camera.target.x >= myStockList[i]->getXpos()) //If camera X is greater than item X
+				//Distance between Camera Target and Item position = Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
+				magnitudeFromTarget = sqrt( (camera.target.x - myStockList[i]->getXpos()+itemXoffset) *(camera.target.x - myStockList[i]->getXpos()+itemXoffset) 
+					+ (camera.target.y - myStockList[i]->getYpos()+itemYoffset) * (camera.target.y - myStockList[i]->getYpos()+itemYoffset) 
+					+ (camera.target.z - myStockList[i]->getZpos()+itemZoffset) * (camera.target.z - myStockList[i]->getZpos()+itemZoffset));
+
+				
+				//Get lowest magnitude of Item from target
+				if(previous > magnitudeFromTarget)
 				{
-					if(((camera.target.x - myStockList[i]->getXpos()) <interactionDistanceX)&& (camera.target.x - myStockList[i]->getXpos()) >-interactionDistanceX) //If width is within 0.5f
+					previous = magnitudeFromTarget;
+
+					//Distance between Camera Position and Item position= Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
+					magnitudeFromPosition = sqrt( (camera.position.x - myStockList[i]->getXpos()+itemXoffset) *(camera.position.x - myStockList[i]->getXpos()+itemXoffset) 
+						+ (camera.position.y - myStockList[i]->getYpos()+itemYoffset) * (camera.position.y - myStockList[i]->getYpos()+itemYoffset) 
+						+ (camera.position.z - myStockList[i]->getZpos()+itemZoffset) * (camera.position.z - myStockList[i]->getZpos()+itemZoffset));
+
+					if(magnitudeFromPosition <= interactionDistance)
 					{
-						if(camera.target.z >= myStockList[i]->getZpos()) //If camera Z is greater than item Z
+						chosen = i;
+						if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 						{
-							if((camera.target.z - myStockList[i]->getZpos()) < interactionDistanceZ) //If width is within interactionDistanceZ
-							{
-								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
-								{
-									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-									{
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									}
-								}
-								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
-								{
-									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-								else //Looking at bottom row
-								{
-									if(camera.target.y < interactionDistanceYMin)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-							}
-						}
-						else if(camera.target.z < myStockList[i]->getZpos()) //If item Z is greater than camera z
-						{
-							if((myStockList[i]->getZpos() - camera.target.z) < interactionDistanceZ)//If width is within interactionDistanceZ
-							{
-								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
-								{
-
-									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-									{
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									}
-
-								}
-								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
-								{
-									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-								else //Looking at bottom row
-								{
-									if(camera.target.y < interactionDistanceYMin)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-
-							}
-						}
-
-					}
-				}
-				else if(camera.target.x < myStockList[i]->getXpos())//If item X  is greater than camera X
-				{
-					if((myStockList[i]->getXpos() - camera.target.x) < interactionDistanceX && (myStockList[i]->getXpos() - camera.target.x) > -interactionDistanceX) //If width is within 0.5f
-					{
-						if(camera.target.z >= myStockList[i]->getZpos()) //If camera Z is greater than item Z
-						{
-							if((camera.target.z - myStockList[i]->getZpos()) < interactionDistanceZ) //If width is within interactionDistanceZ
-							{
-								if((camera.target.y > interactionDistanceYMax) && (myStockList[i]->getYpos() > interactionDistanceYMax)) //If looking at top row
-								{
-
-									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-									{
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									}
-
-								}
-								else if (camera.target.y >= interactionDistanceYMin && camera.target.y <= interactionDistanceYMax) //If looking at middle row
-								{
-									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-								else //Looking at bottom row
-								{
-									if(camera.target.y < interactionDistanceYMin)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-
-							}
-						}
-						else if(camera.target.z < myStockList[i]->getZpos()) //If item Z is greater than camera z
-						{
-							if((myStockList[i]->getZpos() - camera.target.z) < interactionDistanceZ)//If width is within interactionDistanceZ
-							{
-								if(camera.target.y > interactionDistanceYMax && myStockList[i]->getYpos() > interactionDistanceYMax) //If looking at top row
-								{
-
-									if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-									{
-										addToInventory(myStockList[i]);
-										myStockList[i]->setActiveState(false);
-										std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-										break;
-									}
-
-								}
-								else if (camera.target.y > interactionDistanceYMin && camera.target.y < interactionDistanceYMax) //If looking at middle row
-								{
-									if(myStockList[i]->getYpos()+2 >= interactionDistanceYMin && myStockList[i]->getYpos()<=interactionDistanceYMax)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-								else //Looking at bottom row
-								{
-									if(camera.target.y < interactionDistanceYMin)
-									{
-
-										if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-										{
-											addToInventory(myStockList[i]);
-											myStockList[i]->setActiveState(false);
-											std::cout << "Item " <<myStockList[i]->getName() << " removed! \n";
-											break;
-										}
-
-									}
-								}
-
-							}
+							addToInventory(myStockList[chosen]);
+							myStockList[chosen]->setActiveState(false);
+							std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
 						}
 					}
 				}
+
 			}
-
 		}
+		
+		
+
 	}
 
 }

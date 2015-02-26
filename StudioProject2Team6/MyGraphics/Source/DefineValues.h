@@ -82,11 +82,13 @@ static float EboundZ3 = -21.0f;
 static float world_size = 3000.0f;
 
 //Interaction distance checks
-static float interactionDistanceZ = 4.0f;
-static float interactionDistanceX = 1.0f;
-static float interactionDistanceYMax = 4.7f;
-static float interactionDistanceYMin = 4.0f;
+static float interactionDistance = 3.5f;
+static float interactionDistanceFirstFloorY = 3.0f;
 
+//Item XYZ offset
+static float itemXoffset = 0.0f;
+static float itemYoffset = -2.0f;
+static float itemZoffset = 0.0f;
 
 //Render item X position offset
 static float RenderItemTopRowXOffSet = 2.0f;
@@ -120,6 +122,8 @@ static float checkInnerElevatorZposMax = -23.f;
 static float secondFloorYpositionMax = 17.f;
 static float secondFloorYpositionMin = 0.0f;
 
+static float elevatorSpeed = 5.0f;
+
 //Bound checking for RETURN POINT
 static float returnPointBoxPosX = -37.f;
 static float returnPointBoxPosY = 0.f;
@@ -147,3 +151,4 @@ static bool PunchTimerLimiter = true;
 
 //Menu string text
 static std::string menuTextArray[6] = {"START","Credits","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt"};
+
