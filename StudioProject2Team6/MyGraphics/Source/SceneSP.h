@@ -35,6 +35,7 @@ private:
 	void checkCashierCollision();
 	void checkElevatorCollision();
 	void checkReturnPoint();
+	void checkNPCCollision();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
@@ -80,7 +81,7 @@ private:
 	void UpdateItemRotation(double dt);
 	void UpdateTugofwarguy(double dt);
 	void UpdateDrunkman(double dt);
-	
+	void UpdateWalkingman(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/

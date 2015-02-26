@@ -242,8 +242,8 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(-6,17,28,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 
-	//Enter & exit
-	ptrNPC = new CNpc(4,0,-4,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	//Walk around supermarket
+	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
 
 	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
@@ -666,8 +666,8 @@ void SceneSP::UpdateUI(double dt)
 void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
+	UpdateWalkingman(dt);
 }
-
 void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
@@ -886,6 +886,7 @@ void SceneSP::UpdatePlaying(double dt)
 	checkCashierCollision();
 	checkElevatorCollision();
 	checkReturnPoint();
+	checkNPCCollision();
 	if(Application::IsKeyPressed('U'))
 		Cashier.translateY += (float) 50 * dt;
 	//Down
@@ -1188,7 +1189,7 @@ void SceneSP::UpdateTugofwarguy(double dt)
 	{
 		myNPCList[0]->setRotation(0);
 		myNPCList[0]->setXpos(7.0f);
-		myNPCList[0]->setZpos(0.5f);
+		myNPCList[0]->setZpos(1.5f);
 		myNPCList[0]->setLeftArm(30);
 		myNPCList[0]->setRightArm(-30);
 	}
@@ -1198,6 +1199,51 @@ void SceneSP::UpdateTugofwarguy(double dt)
 		myNPCList[0]->setXpos(camera.position.x - 4);
 		myNPCList[0]->setZpos(camera.position.z);
 		myNPCList[0]->setLeftArm(40);
+	}
+}
+void SceneSP::UpdateWalkingman(double dt)
+{
+	myNPCList[2]->setLeftArm(20);
+	myNPCList[2]->setRightArm(-20);
+	if(myNPCList[2]->getCharacterState()==0)
+	{
+		myNPCList[2]->setZpos(myNPCList[2]->getZpos()+(5 * dt));
+		if(myNPCList[2]->getZpos() > 22)
+		{
+			myNPCList[2]->setCharacterState(1);
+			myNPCList[2]->setRotation(90);
+			myNPCList[2]->setZpos(21);
+		}
+	}
+	if(myNPCList[2]->getCharacterState()==1)
+	{
+		myNPCList[2]->setXpos(myNPCList[2]->getXpos()+(5 * dt));
+		if(myNPCList[2]->getXpos() > 33)
+		{
+			myNPCList[2]->setCharacterState(2);
+			myNPCList[2]->setRotation(180);
+			myNPCList[2]->setXpos(32);
+		}
+	}
+	if(myNPCList[2]->getCharacterState()==2)
+	{
+		myNPCList[2]->setZpos(myNPCList[2]->getZpos()-(5 * dt));
+		if(myNPCList[2]->getZpos() < 12)
+		{
+			myNPCList[2]->setCharacterState(3);
+			myNPCList[2]->setRotation(-90);
+			myNPCList[2]->setZpos(13);
+		}
+	}
+	if(myNPCList[2]->getCharacterState()==3)
+	{
+		myNPCList[2]->setXpos(myNPCList[2]->getXpos()-(5 * dt));
+		if(myNPCList[2]->getXpos() < -6)
+		{
+			myNPCList[2]->setCharacterState(0);
+			myNPCList[2]->setRotation(0);
+			myNPCList[2]->setXpos(-5);
+		}
 	}
 }
 void SceneSP::RenderUI()
@@ -2522,6 +2568,49 @@ void SceneSP::checkReturnPoint()
 					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 					
 				}
+			}
+		}
+	}
+}
+void SceneSP::checkNPCCollision()
+{
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
+	{
+		if((camera.position.y - myNPCList[i]->getYpos() < 10) && (camera.position.y - myNPCList[i]->getYpos() > 0))
+		{
+			//check z
+			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()+2) && 
+				(camera.position.z > myNPCList[i]->getZpos()+1 && camera.position.z < myNPCList[i]->getZpos()+2))
+			{
+				diffZ = camera.position.z - (myNPCList[i]->getZpos()+2);
+				camera.position.z = myNPCList[i]->getZpos()+2;
+				camera.target.z -= diffZ;
+				diffZ = 0.0f;
+			}
+			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()+2) && 
+				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()-1))
+			{
+				diffZ = camera.position.z - (myNPCList[i]->getZpos()-2);
+				camera.position.z = myNPCList[i]->getZpos()-2;
+				camera.target.z -= diffZ;
+				diffZ = 0.0f;
+			}
+			//check x
+			if((camera.position.x > myNPCList[i]->getXpos()+1 && camera.position.x < myNPCList[i]->getXpos()+2) && 
+				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()+2))
+			{
+				diffX = camera.position.x - (myNPCList[i]->getXpos()+2);
+				camera.position.x = myNPCList[i]->getXpos()+2;
+				camera.target.x -= diffX;
+				diffX = 0.0f;
+			}
+			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()-1) && 
+				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()+2))
+			{
+				diffX = camera.position.x - (myNPCList[i]->getXpos()-2);
+				camera.position.x = myNPCList[i]->getXpos()-2;
+				camera.target.x -= diffX;
+				diffX = 0.0f;
 			}
 		}
 	}
