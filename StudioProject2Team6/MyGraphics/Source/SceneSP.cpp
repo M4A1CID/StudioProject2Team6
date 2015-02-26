@@ -238,14 +238,14 @@ void SceneSP::initCharacter()
 	//Tug of war NPC
 	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,TUG_OF_WAR_GUY);
 	myNPCList.push_back(ptrNPC);
-
-	ptrNPC = new CNpc(0,0,-4,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
+	//-12,17,28
+	ptrNPC = new CNpc(-6,17,28,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 
 	ptrNPC = new CNpc(4,0,-4,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(8,0,-4,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
 	myNPCList.push_back(ptrNPC);
 
 	ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
@@ -428,6 +428,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
 	//Second layer
 	ptrClass = new CBeansCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,-12,17,28,180);
@@ -1005,6 +1006,10 @@ void SceneSP::UpdateElevator(double dt)
 			elevatorDoorY-= dt*5;
 		}
 	}
+}
+void SceneSP::UpdateDrunkman(double dt)
+{
+
 }
 void SceneSP::UpdateDoor(double dt)
 {

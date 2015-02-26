@@ -77,6 +77,7 @@ private:
 	void UpdatePlayerSelection();
 	void UpdateItemRotation(double dt);
 	void UpdateTugofwarguy(double dt);
+	void UpdateDrunkman(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
