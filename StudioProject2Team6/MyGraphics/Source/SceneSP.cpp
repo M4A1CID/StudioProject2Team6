@@ -93,6 +93,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_UI_SCREEN]->textureID = LoadTGA("Image//UI.tga");
 	meshList[GEO_SUPERMARKET] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//supermarket.obj");
 	meshList[GEO_SUPERMARKET]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_STORAGEANDOFFICE] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//PartofSuperMarket.obj");
+	meshList[GEO_STORAGEANDOFFICE]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_DOOR] = MeshBuilder::GenerateOBJ("door", "OBJ//door.obj");
 	meshList[GEO_DOOR]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_TROLLEY] = MeshBuilder::GenerateOBJ("trolley", "OBJ//trolley.obj");
@@ -101,6 +103,10 @@ void SceneSP::initGeoType()
 	meshList[GEO_SAMPLESTAND]->textureID = LoadTGA("Image//sample_stand.tga");
 	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
 	meshList[GEO_ICEBOX]->textureID = LoadTGA("Image//ContainerTexture.tga");
+	meshList[GEO_MEATSHELF] = MeshBuilder::GenerateOBJ("meatshelf", "OBJ//meatshelf.obj");
+	meshList[GEO_MEATSHELF]->textureID = LoadTGA("Image//ContainerTexture.tga");
+	meshList[GEO_FOODSHELF] = MeshBuilder::GenerateOBJ("foodshelf", "OBJ//FoodShelf.obj");
+	meshList[GEO_FOODSHELF]->textureID = LoadTGA("Image//ContainerTexture.tga");
 	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
 	meshList[GEO_SHELF]->textureID = LoadTGA("Image//Shelves.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
@@ -225,8 +231,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_NormalNpc2_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc2.tga");
 
 }
-
-
 void SceneSP::initCharacter()
 {
 	ptrplayer = new CPlayer(100,0,8);
@@ -247,7 +251,6 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 }
-
 void SceneSP::initShelves()
 {
 	//=============================================================================
@@ -425,8 +428,64 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-}
+	//Second layer
+	ptrClass = new CBeansCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,-12,17,28,180);
+	myContainerList.push_back(ptrContainer);	//Push back into vector list
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
+	ptrClass = new CEasterEgg3;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,-18,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CEasterEgg2;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,-24,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CGluWaterCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,-30,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CMtnDewCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,-36,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	//==================================================================================
+	ptrClass = new CEasterEgg2;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,4,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CGluWaterCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,10,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+
+	ptrClass = new CMtnDewCan;
+	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,16,17,28,180);
+	myContainerList.push_back(ptrContainer);
+	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
+	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	//==================================================================================
+}
 void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 {
 	if(row == ROW_TOP)
@@ -613,7 +672,7 @@ void SceneSP::UpdateTrolley(double dt)
 	{
 		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
 	}
-	if(Application::IsKeyPressed('I') || PunchTimerLimiter == false)
+	if(Application::IsKeyPressed('E') || PunchTimerLimiter == false)
 	{
 		if(PunchTimerLimiter == true)
 		{
@@ -621,7 +680,7 @@ void SceneSP::UpdateTrolley(double dt)
 		}
 		else
 		{
-			handtranslation += (10.0f)*dt;
+			handtranslation += (2.0f)*dt;
 			if(handtranslation > 1.0f)
 			{
 				PunchTimerLimiter = true;
@@ -721,15 +780,15 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdatePlayerSelection();
 	UpdateUI(dt);
 	UpdateItemRotation(dt);
-	if(Application::IsKeyPressed('1')) //enable back face culling
+	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
-	if(Application::IsKeyPressed('2')) //disable back face culling
+	if(Application::IsKeyPressed('F2')) //disable back face culling
 		glDisable(GL_CULL_FACE);
-	if(Application::IsKeyPressed('3'))
+	if(Application::IsKeyPressed('F3'))
 		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-	if(Application::IsKeyPressed('4'))
+	if(Application::IsKeyPressed('F4'))
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-	if(Application::IsKeyPressed('5'))
+	if(Application::IsKeyPressed('F5'))
 	{
 		toggleLight = true;
 	}
@@ -1287,20 +1346,6 @@ void SceneSP::RenderHand()
 	}
 	modelStack.PopMatrix();
 
-	/*
-	modelStack.PushMatrix();
-	modelStack.Rotate((180+trolleyrotation),0,1,0);
-	modelStack.Rotate(-45,1,0,0);
-	modelStack.Translate(0.5,-1.5,2.5);
-	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	modelStack.PopMatrix();
-	*/
-	modelStack.PushMatrix();
-	modelStack.Rotate((180+handrotationleftandright),0,1,0);
-	modelStack.Translate(-0.2,-4.5,-1);
-	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	
-	modelStack.PopMatrix();
 
 	//Render ITEM on HAND
 	//TODO: Inspect rotation
@@ -1430,7 +1475,6 @@ void SceneSP::RenderCharacter(CNpc* npc)
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
-
 void SceneSP::RenderMainMenu()
 {
 	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
@@ -1572,6 +1616,7 @@ void SceneSP::RenderSupermarket()
 {
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
+	RenderMesh(meshList[GEO_STORAGEANDOFFICE], toggleLight);
 	RenderShelves();		//Render Shelves in Supermarket
 	RenderDoors();			//Render Doors in Supermarket
 	RenderSamplestand();	//Render Sample Food Stand in Supermarket
@@ -1672,8 +1717,38 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
 	modelStack.PopMatrix();
 
-
 	modelStack.PopMatrix();
+	//16,17,-28
+	modelStack.PushMatrix();
+	modelStack.Translate(13.0f, 17.0f, -26.0f);
+	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(1.0f, 17.0f, -26.0f);
+	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-11.0f, 17.0f, -26.0f);
+	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.0f, 17.0f, -26.0f);
+	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,0.0f,11.0f);
+	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,17.0f,0.0f);
+	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+	modelStack.PopMatrix();
+
 }
 void SceneSP::RenderTug()
 {
