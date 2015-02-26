@@ -522,7 +522,6 @@ void SceneSP::addToInventory(CItem* pickedUp)
 
 	ptrplayer->setInventory(pickedUp,inventoryPointing);
 	std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
-	std::cout<< "Current itms held: " << ptrplayer->getItemHeld() << std::endl;
 	interactionTimer = 0.0f;
 }
 void SceneSP::DeclareGLEnable()
@@ -865,7 +864,7 @@ void SceneSP::UpdatePlaying(double dt)
 	{
 		toggleLight = true;
 	}
-	if(Application::IsKeyPressed('6'))
+	if(Application::IsKeyPressed('F6'))
 	{
 		toggleLight = false;
 	}
@@ -886,6 +885,7 @@ void SceneSP::UpdatePlaying(double dt)
 	checkShelfCollision();
 	checkCashierCollision();
 	checkElevatorCollision();
+	checkReturnPoint();
 	if(Application::IsKeyPressed('U'))
 		Cashier.translateY += (float) 50 * dt;
 	//Down
@@ -1752,7 +1752,11 @@ void SceneSP::RenderSupermarket()
 	RenderFence();          //Render Fence in Supermarket
 	RenderElevator();       //Render Elevator in Supermarket
 	RenderTrolleys();       //Render Trolleys in Supermarket
-	RenderDoors();			//Render Doors in Supermarket
+	RenderReturnPoint();	//Render Return Point in Supermarket
+
+
+	RenderDoors();			//Render Alpha Doors AFTER EVERYTHING in Supermarket
+	
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
@@ -1818,6 +1822,14 @@ void SceneSP::RenderSamples()
 		modelStack.PopMatrix();
 	}
 }
+void SceneSP::RenderReturnPoint()
+{
+	//-37.f, 0.2f, 13.f
+	modelStack.PushMatrix();
+	modelStack.Translate(returnPointBoxPosX, returnPointBoxPosY, returnPointBoxPosZ);
+	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	modelStack.PopMatrix();
+}
 void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
@@ -1847,11 +1859,7 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
-	//-37.f, 0.2f, 13.f
-	modelStack.PushMatrix();
-	modelStack.Translate(-37.f, 0.0f, 0.0f);
-	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
-	modelStack.PopMatrix();
+	
 
 	//16,17,-28
 	modelStack.PushMatrix();
@@ -2492,6 +2500,29 @@ void SceneSP::checkElevatorCollision()
 			camera.position.z = RenderElevatorPosZ+2;
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
+		}
+	}
+}
+void SceneSP::checkReturnPoint()
+{
+	//If triggering interaction
+	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+	{
+		//If within RETURN POINT boundary
+		if((camera.position.x > returnPointBoxPosX-returnPointBoxWidthOffset)&& camera.position.x < (returnPointBoxPosX+returnPointBoxInteractionWidth+returnPointBoxWidthOffset))
+		{
+			if(camera.position.z > (returnPointBoxPosZ - returnPointBoxInteractionLength) && camera.position.z < (returnPointBoxPosZ + returnPointBoxInteractionLength))
+			{
+				if(camera.position.y > returnPointBoxPosY && camera.position.y < (returnPointBoxPosY + returnPointBoxInteractionHeight))
+				{
+					//Is within boundary
+					interactionTimer = 0;
+					std::cout << "Item returned: " <<ptrplayer->getItem(inventoryPointing)->getName() << std::endl;
+					ptrplayer->setInventory(&emptyItem,inventoryPointing);
+					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
+					
+				}
+			}
 		}
 	}
 }

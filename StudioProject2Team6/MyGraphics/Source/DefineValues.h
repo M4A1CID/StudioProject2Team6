@@ -120,6 +120,19 @@ static float checkInnerElevatorZposMax = -23.f;
 static float secondFloorYpositionMax = 17.f;
 static float secondFloorYpositionMin = 0.0f;
 
+//Bound checking for RETURN POINT
+static float returnPointBoxPosX = -37.f;
+static float returnPointBoxPosY = 0.f;
+static float returnPointBoxPosZ = 0.f;
+//Width, Length, Height for RETURN POINT
+static float returnPointBoxWidth = 4.0f; //Use this for collision?
+static float returnPointBoxLength = 4.0f;//Use this for collision?
+static float returnPointBoxHeight = 4.0f;//Use this for collision?
+static float returnPointBoxWidthOffset = 2.f;
+static float returnPointBoxInteractionLength = 7.5f;
+static float returnPointBoxInteractionWidth = 4.0f;
+static float returnPointBoxInteractionHeight = 7.0f;
+
 //Timer limiters
 static float interactionTimerLimiter = 0.5f;
 static float menuTImerLimiter = 0.2f;

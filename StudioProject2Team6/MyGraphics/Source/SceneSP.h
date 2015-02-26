@@ -34,6 +34,7 @@ private:
 	void checkFreezerCollision();
 	void checkCashierCollision();
 	void checkElevatorCollision();
+	void checkReturnPoint();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
@@ -60,6 +61,7 @@ private:
 	void RenderCharacter(CNpc* npc);
 	void RenderHand();
 	void RenderTug();
+	void RenderReturnPoint();
 	void RenderMainMenu();
 	void RenderSubMenu();
 	/*=======================================
@@ -78,6 +80,7 @@ private:
 	void UpdateItemRotation(double dt);
 	void UpdateTugofwarguy(double dt);
 	void UpdateDrunkman(double dt);
+	
 	/*=======================================
 				All Init functions
 	=======================================*/
