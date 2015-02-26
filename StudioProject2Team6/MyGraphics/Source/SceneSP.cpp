@@ -2247,87 +2247,43 @@ void SceneSP::checkSupermarketCollision()
 }
 void SceneSP::checkShelfCollision()
 {
-	if(camera.position.y < 10)
+	for(unsigned int i = 0; i< myContainerList.size(); ++i)
 	{
-		//1st row
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ1 && camera.position.z < SboundZ2))
+		if((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0))
 		{
-			diffZ = camera.position.z - (SboundZ1);
-			camera.position.z = SboundZ1;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
-		{
-			diffX = camera.position.x - (SboundX1);
-			camera.position.x = SboundX1;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ2 && camera.position.z < SboundZ3))
-		{
-			diffX = camera.position.x - (SboundX2);
-			camera.position.x = SboundX2;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		//2nd row
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ4 && camera.position.z < SboundZ5))
-		{
-			diffZ = camera.position.z - (SboundZ4);
-			camera.position.z = SboundZ4;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ6 && camera.position.z < SboundZ7))
-		{
-			diffZ = camera.position.z - (SboundZ7);
-			camera.position.z = SboundZ7;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
-		{
-			diffX = camera.position.x - (SboundX1);
-			camera.position.x = SboundX1;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ5 && camera.position.z < SboundZ8))
-		{
-			diffX = camera.position.x - (SboundX2);
-			camera.position.x = SboundX2;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		//3rd row
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ9 && camera.position.z < SboundZ10))
-		{
-			diffZ = camera.position.z - (SboundZ9);
-			camera.position.z = SboundZ9;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX2) && (camera.position.z > SboundZ11 && camera.position.z < SboundZ12))
-		{
-			diffZ = camera.position.z - (SboundZ12);
-			camera.position.z = SboundZ12;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > SboundX1 && camera.position.x < SboundX3) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
-		{
-			diffX = camera.position.x - (SboundX1);
-			camera.position.x = SboundX1;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > SboundX4 && camera.position.x < SboundX2) && (camera.position.z > SboundZ10 && camera.position.z < SboundZ13))
-		{
-			diffX = camera.position.x - (SboundX2);
-			camera.position.x = SboundX2;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			//std::cout<<myContainerList[i]->getXpos()<<std::endl;
+			if((camera.position.x > (myContainerList[i]->getXpos()+(ShelfWidthX/2)) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
+				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
+			{
+				diffX = camera.position.x - (myContainerList[i]->getXpos()+ShelfWidthX);
+				camera.position.x = myContainerList[i]->getXpos()+ShelfWidthX;
+				camera.target.x -= diffX;
+				diffX = 0.0f;
+			}
+			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()-(ShelfWidthX/2))) && 
+				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
+			{
+				diffX = camera.position.x - (myContainerList[i]->getXpos()-ShelfWidthX);
+				camera.position.x = myContainerList[i]->getXpos()-ShelfWidthX;
+				camera.target.x -= diffX;
+				diffX = 0.0f;
+			}
+			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
+				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()-(ShelfWidthZ/2))))
+			{
+				diffZ = camera.position.z - (myContainerList[i]->getZpos()-ShelfWidthZ);
+				camera.position.z = myContainerList[i]->getZpos()-ShelfWidthZ;
+				camera.target.z -= diffZ;
+				diffZ = 0.0f;
+			}
+			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
+				(camera.position.z > (myContainerList[i]->getZpos()+(ShelfWidthZ/2)) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
+			{
+				diffZ = camera.position.z - (myContainerList[i]->getZpos()+ShelfWidthZ);
+				camera.position.z = myContainerList[i]->getZpos()+ShelfWidthZ;
+				camera.target.z -= diffZ;
+				diffZ = 0.0f;
+			}
 		}
 	}
 }
