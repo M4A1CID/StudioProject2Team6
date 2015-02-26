@@ -78,6 +78,23 @@ static float EboundX3 = -29.0f;
 static float EboundZ1 = -28.5f;
 static float EboundZ2 = -13.0f;
 static float EboundZ3 = -21.0f;
+/*=======================================
+		Ghost man values
+=======================================*/
+static float GhostNpcInitLeg = 180.0f;
+static float GhostNpcInitRot = 180.0f;
+static float GhostNpcResetYPos = -2.0f;
+static float GhostNpcAppearBoundX1 = -30.0f;
+static float GhostNpcAppearBoundX2 = -10.0f;
+static float GhostNpcAppearBoundZ1 = 45.0f;
+static float GhostNpcAppearBoundZ2 = 15.0f;
+static float GhostNpcAppearBoundZ3 = 30.0f;
+static float GhostNpcMoveBoundX1 = -10.0f;
+static float GhostNpcMoveBoundX2 = -30.0f;
+static float GhostNpcMoveBoundY1 = 6.0f;
+static float GhostNpcMoveBoundY2 = -2.0f;
+static float GhostNpcMoveSpd = 4.0f;
+
 //World size for skybox
 static float world_size = 3000.0f;
 

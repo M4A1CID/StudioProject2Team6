@@ -83,6 +83,7 @@ private:
 	void UpdateTugofwarguy(double dt);
 	void UpdateDrunkman(double dt);
 	void UpdateWalkingman(double dt);
+	void UpdateGhostman(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/

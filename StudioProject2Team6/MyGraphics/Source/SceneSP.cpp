@@ -221,15 +221,19 @@ void SceneSP::initGeoType()
 	meshList[GEO_NormalNpc1_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_NormalNpc1_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	//////////////////////////////////////////////////////////////////////////////
-
-
 	meshList[GEO_NormalNpc2_ARM] = MeshBuilder::GenerateOBJ("NormalNpc2 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc2_ARM]->textureID = LoadTGA("Image//NormalNpc2.tga");
 	meshList[GEO_NormalNpc2_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//headandbody.obj");
 	meshList[GEO_NormalNpc2_HEADBODY]->textureID = LoadTGA("Image//NormalNpc2.tga");
 	meshList[GEO_NormalNpc2_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_NormalNpc2_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc2.tga");
-
+	/*=============================================================================*/
+	meshList[GEO_GHOSTNPC_LEGANDFEET] = MeshBuilder::GenerateOBJ("GhostNpc leg and feet", "OBJ//legandfeet.obj");
+	meshList[GEO_GHOSTNPC_LEGANDFEET] ->textureID = LoadTGA("Image//GhostNPC.tga");
+	meshList[GEO_GHOSTNPC_HEADANDBODY] = MeshBuilder::GenerateOBJ("GhostNpc head and body", "OBJ//headandbody.obj");
+	meshList[GEO_GHOSTNPC_HEADANDBODY]->textureID = LoadTGA("Image//GhostNPC.tga");
+	meshList[GEO_GHOSTNPC_ARM] = MeshBuilder::GenerateOBJ("GhostNpc arm", "OBJ//Arm.obj");
+	meshList[GEO_GHOSTNPC_ARM]->textureID = LoadTGA("Image//GhostNPC.tga");
 }
 void SceneSP::initCharacter()
 {
@@ -244,6 +248,10 @@ void SceneSP::initCharacter()
 
 	//Walk around supermarket
 	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
+	myNPCList.push_back(ptrNPC);
+
+	//Ghost npc
+	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,IDLE,GHOST_GUY);
 	myNPCList.push_back(ptrNPC);
 
 	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
@@ -667,6 +675,7 @@ void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
 	UpdateWalkingman(dt);
+	UpdateGhostman(dt);
 }
 void SceneSP::UpdateTrolley(double dt)
 {
@@ -1051,8 +1060,9 @@ void SceneSP::UpdateElevator(double dt)
 void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
-	if((camera.position.z < 50.0f && camera.position.z > 0.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
+	if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
 		toggleDoorFront = true;
+	
 	else
 		toggleDoorFront = false;
 	if(toggleDoorFront)
@@ -1282,6 +1292,61 @@ void SceneSP::UpdateWalkingman(double dt)
 			myNPCList[2]->setRotation(0);
 			myNPCList[2]->setXpos(-5);
 		}
+	}
+}
+void SceneSP::UpdateGhostman(double dt)
+{
+	static bool GisFlying = false;
+	static bool GFlyDir = true;
+	static bool GMoveDir = true;
+	myNPCList[3]->setLeftLeg(GhostNpcInitLeg);
+	myNPCList[3]->setRightLeg(GhostNpcInitLeg);
+	myNPCList[3]->setRotation(GhostNpcInitRot);
+	if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
+		camera.position.z > GhostNpcAppearBoundZ3
+		)
+		myNPCList[3]->setCharacterState(1);
+	else
+		myNPCList[3]->setCharacterState(0);
+	if(myNPCList[3]->getCharacterState() == 0)
+	{
+		if(GisFlying == false)
+		{
+			myNPCList[3]->setYpos(GhostNpcResetYPos);
+			GisFlying = true;
+		}
+		else
+		{
+			if(GFlyDir == true)
+			{
+				myNPCList[3]->setYpos(myNPCList[3]->getYpos() + GhostNpcMoveSpd * dt);
+				if(myNPCList[3]->getYpos() > GhostNpcMoveBoundY1)
+					GFlyDir = false;
+			}
+			else
+			{
+				myNPCList[3]->setYpos(myNPCList[3]->getYpos() - GhostNpcMoveSpd * dt);
+				if(myNPCList[3]->getYpos() < GhostNpcMoveBoundY2)
+					GFlyDir = true;
+			}
+			if(GMoveDir == true)
+			{
+				myNPCList[3]->setXpos(myNPCList[3]->getXpos() + GhostNpcMoveSpd * dt);
+				if(myNPCList[3]->getXpos() > GhostNpcMoveBoundX1)
+					GMoveDir = false;
+			}
+			else
+			{
+				myNPCList[3]->setXpos(myNPCList[3]->getXpos() - GhostNpcMoveSpd * dt);
+				if(myNPCList[3]->getXpos() < GhostNpcMoveBoundX2)
+					GMoveDir = true;
+			}
+		}
+	}
+	if(myNPCList[3]->getCharacterState() == 1)
+	{
+		myNPCList[3]->setYpos(-10);
+		GisFlying = false;
 	}
 }
 void SceneSP::RenderUI()
