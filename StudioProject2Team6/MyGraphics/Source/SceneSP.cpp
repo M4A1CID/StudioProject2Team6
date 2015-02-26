@@ -230,6 +230,10 @@ void SceneSP::initCharacter()
 {
 	ptrplayer = new CPlayer(100,0,8);
 
+	//Tug of war NPC
+	ptrNPC = new CNpc(4,5,-4,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,TUG_OF_WAR_GUY);
+	myNPCList.push_back(ptrNPC);
+
 	ptrNPC = new CNpc(0,0,-4,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 
@@ -967,7 +971,10 @@ void SceneSP::UpdateTugofwar(double dt)
 		camera.position.x = 20;
 		camera.position.z = 0;
 		camera.target.x -= diffX;
-		camera.target.z -= diffZ;
+		camera.target.z -=diffZ;
+		/*camera.target.x = 19.005;
+		camera.target.y = 4.41066;
+		camera.target.z = 0.0443127;*/
 		diffX = diffZ = 0;
 		showTuginstruction = true;
 	}
@@ -1620,9 +1627,28 @@ void SceneSP::RenderTug()
 {
 	if(IsIntugofwar)
 	{
-		modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x-5, camera.position.y-2, camera.position.z);
+		/*modelStack.PushMatrix();
+		modelStack.Translate(camera.position.x-2, camera.position.y-2, camera.position.z);
 		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+		modelStack.PopMatrix();*/
+
+		modelStack.PushMatrix();
+		modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
+		{
+			/*
+			modelStack.PushMatrix();
+			modelStack.Rotate((180+trolleyrotation),0,1,0);
+			modelStack.Rotate(-45,1,0,0);
+			modelStack.Translate(0.5,-1.5,2.5);
+			RenderMesh(meshList[GEO_HANDS], toggleLight);
+			modelStack.PopMatrix();
+			*/
+			modelStack.PushMatrix();
+			modelStack.Rotate((180+handrotationleftandright),0,1,0);
+			modelStack.Translate(2,0,0);
+			RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+			modelStack.PopMatrix();
+		}
 		modelStack.PopMatrix();
 	}
 }

@@ -80,6 +80,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Source\AIPaths.cpp" />
     <ClCompile Include="Source\Application.cpp" />
     <ClCompile Include="Source\BeansCan.cpp" />
     <ClCompile Include="Source\BranCan.cpp" />
@@ -122,6 +123,7 @@
     <ClCompile Include="Source\VargaCan.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\AIPaths.h" />
     <ClInclude Include="Source\Application.h" />
     <ClInclude Include="Source\BeansCan.h" />
     <ClInclude Include="Source\BranCan.h" />
