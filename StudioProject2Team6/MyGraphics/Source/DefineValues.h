@@ -87,7 +87,7 @@ static float interactionDistanceFirstFloorY = 3.0f;
 
 //Item XYZ offset
 static float itemXoffset = 0.0f;
-static float itemYoffset = -2.0f;
+static float itemYoffset = -1.0f;
 static float itemZoffset = 0.0f;
 
 //Render item X position offset

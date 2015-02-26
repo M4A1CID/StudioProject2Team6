@@ -128,6 +128,7 @@ private:
 	bool win;
 	bool lose;
 	bool showTuginstruction;
+	bool b_crouching;
 	int i_sampleItems;
 	int i_menuHandle;
 	bool elevatorIdle;

@@ -24,50 +24,6 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	CAMERA_SPEED = 150.f;
 }
 
-/*bool Camera3::Limit( Vector3& position,Vector3& target, int edge, float speed)
-{
-	speed *= 0.02;
-
-	if(position.x < -edge)
-	{
-		position.x += speed;
-		target.x += speed;
-	}
-
-	if(position.x > edge)
-	{
-		position.x -= speed;
-		target.x -= speed;
-	}
-
-	if(position.y < -edge)
-	{
-		position.y += speed;
-		target.y += speed;
-	}
-
-	if(position.y > edge)
-	{
-		position.y -= speed;
-		target.y -= speed;
-	}
-
-	if(position.z < -edge)
-	{
-		position.z += speed;
-		target.z += speed;
-	}
-
-	if(position.z > edge)
-	{
-		position.z -= speed;
-		target.z -= speed;
-	}
-	else
-	{
-		return true;
-	}
-}*/
 void Camera3::UpdateMovement(double dt)
 {
 	float runMultiplyer;
@@ -79,6 +35,7 @@ void Camera3::UpdateMovement(double dt)
 	{
 		runMultiplyer = 0.5f;
 	}
+	
 
 	if(Application::IsKeyPressed('A') )
 	{
