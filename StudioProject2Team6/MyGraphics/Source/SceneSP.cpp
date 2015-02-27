@@ -250,9 +250,18 @@ void SceneSP::initCharacter()
 	//Drunkman NPC
 	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
+
+
+
 	//Walk around supermarket
 	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
+	//Walk around supermarket
+	ptrNPC = new CNpc(9,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
+	myNPCList.push_back(ptrNPC);
+
+
+
 	//Ghost npc
 	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,IDLE,GHOST_GUY);
 	myNPCList.push_back(ptrNPC);
@@ -1345,103 +1354,116 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 }
 void SceneSP::UpdateWalkingman(double dt)
 {
-	myNPCList[2]->setLeftArm(WalkingNpcInitArm);
-	myNPCList[2]->setRightArm(-WalkingNpcInitArm);
-	UpdateLegAnimation(dt,2,WalkingNpcMoveSpd);
-	if(myNPCList[2]->getCharacterState()==STATE_FORWARD)
+	for(int i = 0; i < myNPCList.size(); ++i)
 	{
-		myNPCList[2]->setZpos(myNPCList[2]->getZpos()+(WalkingNpcMoveSpd * dt));
-		if(myNPCList[2]->getZpos() > 22)
+		if(myNPCList[i]->getCharacterJob() == WALKING_GUY)
 		{
-			myNPCList[2]->setCharacterState(STATE_LEFT);
-			myNPCList[2]->setRotation(90);
-			myNPCList[2]->setZpos(21);
+			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
+			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+			UpdateLegAnimation(dt,2,WalkingNpcMoveSpd);
+			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
+			{
+				myNPCList[i]->setZpos(myNPCList[2]->getZpos()+(WalkingNpcMoveSpd * dt));
+				if(myNPCList[i]->getZpos() > 22)
+				{
+					myNPCList[i]->setCharacterState(STATE_LEFT);
+					myNPCList[i]->setRotation(90);
+					myNPCList[i]->setZpos(21);
+				}
+			}
+			if(myNPCList[i]->getCharacterState()==STATE_LEFT)
+			{
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(WalkingNpcMoveSpd * dt));
+				if(myNPCList[i]->getXpos() > 33)
+				{
+					myNPCList[i]->setCharacterState(STATE_BACKWARD);
+					myNPCList[i]->setRotation(180);
+					myNPCList[i]->setXpos(32);
+				}
+			}
+			if(myNPCList[i]->getCharacterState()==STATE_BACKWARD)
+			{
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(WalkingNpcMoveSpd * dt));
+				if(myNPCList[i]->getZpos() < 12)
+				{
+					myNPCList[i]->setCharacterState(STATE_RIGHT);
+					myNPCList[i]->setRotation(-90);
+					myNPCList[i]->setZpos(13);
+				}
+			}
+			if(myNPCList[i]->getCharacterState()==STATE_RIGHT)
+			{
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(WalkingNpcMoveSpd * dt));
+				if(myNPCList[i]->getXpos() < -6)
+				{
+					myNPCList[i]->setCharacterState(STATE_FORWARD);
+					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setXpos(-5);
+				}
+			}
 		}
 	}
-	if(myNPCList[2]->getCharacterState()==STATE_LEFT)
-	{
-		myNPCList[2]->setXpos(myNPCList[2]->getXpos()+(WalkingNpcMoveSpd * dt));
-		if(myNPCList[2]->getXpos() > 33)
-		{
-			myNPCList[2]->setCharacterState(STATE_BACKWARD);
-			myNPCList[2]->setRotation(180);
-			myNPCList[2]->setXpos(32);
-		}
-	}
-	if(myNPCList[2]->getCharacterState()==STATE_BACKWARD)
-	{
-		myNPCList[2]->setZpos(myNPCList[2]->getZpos()-(WalkingNpcMoveSpd * dt));
-		if(myNPCList[2]->getZpos() < 12)
-		{
-			myNPCList[2]->setCharacterState(STATE_RIGHT);
-			myNPCList[2]->setRotation(-90);
-			myNPCList[2]->setZpos(13);
-		}
-	}
-	if(myNPCList[2]->getCharacterState()==STATE_RIGHT)
-	{
-		myNPCList[2]->setXpos(myNPCList[2]->getXpos()-(WalkingNpcMoveSpd * dt));
-		if(myNPCList[2]->getXpos() < -6)
-		{
-			myNPCList[2]->setCharacterState(STATE_FORWARD);
-			myNPCList[2]->setRotation(0);
-			myNPCList[2]->setXpos(-5);
-		}
-	}
+
 }
 void SceneSP::UpdateGhostman(double dt)
 {
-	static bool GisFlying = false;
-	static bool GFlyDir = true;
-	static bool GMoveDir = true;
-	myNPCList[3]->setLeftLeg(GhostNpcInitLeg);
-	myNPCList[3]->setRightLeg(GhostNpcInitLeg);
-	myNPCList[3]->setRotation(GhostNpcInitRot);
-	if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
-		camera.position.z > GhostNpcAppearBoundZ3
-		)
-		myNPCList[3]->setCharacterState(1);
-	else
-		myNPCList[3]->setCharacterState(0);
-	if(myNPCList[3]->getCharacterState() == 0)
+	for(int i = 0; i< myNPCList.size(); ++i)
 	{
-		if(GisFlying == false)
+		if(myNPCList[i]->getCharacterJob() == GHOST_GUY)
 		{
-			myNPCList[3]->setYpos(GhostNpcResetYPos);
-			GisFlying = true;
-		}
-		else
-		{
-			if(GFlyDir == true)
-			{
-				myNPCList[3]->setYpos(myNPCList[3]->getYpos() + GhostNpcMoveSpd * dt);
-				if(myNPCList[3]->getYpos() > GhostNpcMoveBoundY1)
-					GFlyDir = false;
-			}
+			static bool GisFlying = false;
+			static bool GFlyDir = true;
+			static bool GMoveDir = true;
+			myNPCList[i]->setLeftLeg(GhostNpcInitLeg);
+			myNPCList[i]->setRightLeg(GhostNpcInitLeg);
+			myNPCList[i]->setRotation(GhostNpcInitRot);
+			if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
+				camera.position.z > GhostNpcAppearBoundZ3
+				)
+				myNPCList[i]->setCharacterState(1);
 			else
+				myNPCList[i]->setCharacterState(0);
+			if(myNPCList[i]->getCharacterState() == 0)
 			{
-				myNPCList[3]->setYpos(myNPCList[3]->getYpos() - GhostNpcMoveSpd * dt);
-				if(myNPCList[3]->getYpos() < GhostNpcMoveBoundY2)
-					GFlyDir = true;
+				if(GisFlying == false)
+				{
+					myNPCList[i]->setYpos(GhostNpcResetYPos);
+					GisFlying = true;
+				}
+				else
+				{
+					if(GFlyDir == true)
+					{
+						myNPCList[i]->setYpos(myNPCList[i]->getYpos() + GhostNpcMoveSpd * dt);
+						if(myNPCList[i]->getYpos() > GhostNpcMoveBoundY1)
+							GFlyDir = false;
+					}
+					else
+					{
+						myNPCList[i]->setYpos(myNPCList[i]->getYpos() - GhostNpcMoveSpd * dt);
+						if(myNPCList[i]->getYpos() < GhostNpcMoveBoundY2)
+							GFlyDir = true;
+					}
+					if(GMoveDir == true)
+					{
+						myNPCList[i]->setXpos(myNPCList[i]->getXpos() + GhostNpcMoveSpd * dt);
+						if(myNPCList[i]->getXpos() > GhostNpcMoveBoundX1)
+							GMoveDir = false;
+					}
+					else
+					{
+						myNPCList[i]->setXpos(myNPCList[i]->getXpos() - GhostNpcMoveSpd * dt);
+						if(myNPCList[i]->getXpos() < GhostNpcMoveBoundX2)
+							GMoveDir = true;
+					}
+				}
 			}
-			if(GMoveDir == true)
+			if(myNPCList[i]->getCharacterState() == 1)
 			{
-				myNPCList[3]->setXpos(myNPCList[3]->getXpos() + GhostNpcMoveSpd * dt);
-				if(myNPCList[3]->getXpos() > GhostNpcMoveBoundX1)
-					GMoveDir = false;
-			}
-			else
-			{
-				myNPCList[3]->setXpos(myNPCList[3]->getXpos() - GhostNpcMoveSpd * dt);
-				if(myNPCList[3]->getXpos() < GhostNpcMoveBoundX2)
-					GMoveDir = true;
+				myNPCList[i]->setYpos(-10);
+				GisFlying = false;
 			}
 		}
-	}
-	if(myNPCList[3]->getCharacterState() == 1)
-	{
-		myNPCList[3]->setYpos(-10);
-		GisFlying = false;
 	}
 }
 void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)
