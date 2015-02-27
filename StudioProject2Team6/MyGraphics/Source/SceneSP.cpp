@@ -250,14 +250,11 @@ void SceneSP::initCharacter()
 	//Drunkman NPC
 	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
-
-
-
 	//Walk around supermarket
 	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
 	//Walk around supermarket
-	ptrNPC = new CNpc(9,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
+	ptrNPC = new CNpc(-5,0,5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
 
 
@@ -1360,45 +1357,41 @@ void SceneSP::UpdateWalkingman(double dt)
 		{
 			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
-			UpdateLegAnimation(dt,2,WalkingNpcMoveSpd);
+			UpdateLegAnimation(dt,i,WalkingNpcMoveSpd);
 			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
 			{
-				myNPCList[i]->setZpos(myNPCList[2]->getZpos()+(WalkingNpcMoveSpd * dt));
-				if(myNPCList[i]->getZpos() > 22)
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(WalkingNpcMoveSpd * dt));
+				if(myNPCList[i]->getZpos() > 21)
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
 					myNPCList[i]->setRotation(90);
-					myNPCList[i]->setZpos(21);
 				}
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_LEFT)
 			{
 				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(WalkingNpcMoveSpd * dt));
-				if(myNPCList[i]->getXpos() > 33)
+				if(myNPCList[i]->getXpos() > 32)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
 					myNPCList[i]->setRotation(180);
-					myNPCList[i]->setXpos(32);
 				}
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_BACKWARD)
 			{
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(WalkingNpcMoveSpd * dt));
-				if(myNPCList[i]->getZpos() < 12)
+				if(myNPCList[i]->getZpos() < 13)
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
 					myNPCList[i]->setRotation(-90);
-					myNPCList[i]->setZpos(13);
 				}
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_RIGHT)
 			{
 				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(WalkingNpcMoveSpd * dt));
-				if(myNPCList[i]->getXpos() < -6)
+				if(myNPCList[i]->getXpos() < -5)
 				{
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 					myNPCList[i]->setRotation(0);
-					myNPCList[i]->setXpos(-5);
 				}
 			}
 		}
@@ -1469,6 +1462,10 @@ void SceneSP::UpdateGhostman(double dt)
 void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)
 {
 	static bool rotateDir = false;
+	if(myNPCList[NPCnum]->getLeftLeg()>maxlegRot)
+		rotateDir = true;
+	if(myNPCList[NPCnum]->getLeftLeg()<-maxlegRot)
+		rotateDir = false;
 	if(rotateDir == false)
 		myNPCList[NPCnum]->setLeftLeg(myNPCList[NPCnum]->getLeftLeg() + (speed * spdMod * dt));
 	else
@@ -1477,10 +1474,7 @@ void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)
 		myNPCList[NPCnum]->setRightLeg(myNPCList[NPCnum]->getRightLeg() - (speed * spdMod * dt));
 	else
 		myNPCList[NPCnum]->setRightLeg(myNPCList[NPCnum]->getRightLeg() + (speed * spdMod * dt));
-	if(myNPCList[NPCnum]->getLeftLeg()>maxlegRot)
-		rotateDir = true;
-	if(myNPCList[NPCnum]->getLeftLeg()<-maxlegRot)
-		rotateDir = false;
+
 }
 void SceneSP::RenderUI()
 {
