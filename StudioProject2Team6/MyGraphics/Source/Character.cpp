@@ -23,6 +23,10 @@ int CCharacter::getCharacterState()
 {
 	return characterState;
 }
+int CCharacter::getAnimationType()
+{
+	return animationType;
+}
 float CCharacter::getXpos()
 {
 	return x;
@@ -54,4 +58,8 @@ void CCharacter::setCharacterState(int state)
 void CCharacter::setCharacterJob(int jobNum)
 {
 	characterJob = jobNum;
+}
+void CCharacter::setAnimationType(int type)
+{
+	animationType = type;
 }

@@ -89,6 +89,7 @@ private:
 	void UpdateWalkingman(double dt);
 	void UpdateLogisticman(double dt);
 	void UpdateGhostman(double dt);
+	void UpdateLookingman(double dt);
 	void UpdateLegAnimation(double dt,int NPCnum, float speed);
 	
 	/*=======================================

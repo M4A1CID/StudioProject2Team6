@@ -4,7 +4,7 @@ class CNpc : public CCharacter
 {
 public:
 	CNpc(void);
-	CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state, int job);
+	CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state,int type, int job);
 	~CNpc(void);
 
 	int getHeadType();
@@ -16,12 +16,14 @@ public:
 	float getRightArm();
 	float getLeftLeg();
 	float getRightLeg();
+	float getmoveSpd();
 
 	void setRotation(float r);
 	void setLeftArm(float r);
 	void setRightArm(float r);
 	void setLeftLeg(float r);
 	void setRightLeg(float r);
+	void setmoveSpd(float r);
 
 private:
 	int GeoHeadType;
@@ -32,5 +34,6 @@ private:
 	float rotateRightArm;
 	float rotateLeftLeg;
 	float rotateRightLeg;
+	float moveSpd;
 };
 

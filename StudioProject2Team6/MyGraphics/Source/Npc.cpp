@@ -5,7 +5,7 @@ CNpc::CNpc(void)
 {
 
 }
-CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state, int job)
+CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state, int type, int job)
 {
 	setXpos(posX);
 	setYpos(posY);
@@ -15,12 +15,14 @@ CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int s
 	GeoLegType = leg;
 	setCharacterJob(job);
 	setCharacterState(state);
+	setAnimationType(type);
 
 	rotation = 0.0f;
 	rotateLeftArm = 90.f;
 	rotateRightArm = 270.f;
 	rotateLeftLeg = 0.f;
 	rotateRightLeg = 0.f;
+	moveSpd = 5.0f;
 }
 
 
@@ -60,6 +62,10 @@ float CNpc::getRotation()
 {
 	return rotation;
 }
+float CNpc::getmoveSpd()
+{
+	return moveSpd;
+}
 
 void CNpc::setLeftArm(float r)
 {
@@ -80,4 +86,8 @@ void CNpc::setRightLeg(float r)
 void CNpc::setRotation(float r)
 {
 	rotation = r;
+}
+void CNpc::setmoveSpd(float r)
+{
+	moveSpd = r;
 }

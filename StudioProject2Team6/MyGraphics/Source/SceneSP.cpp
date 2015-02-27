@@ -245,69 +245,70 @@ void SceneSP::initCharacter()
 	ptrplayer = new CPlayer(100,0,8);
 
 	//Tug of war NPC
-	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,TUG_OF_WAR_GUY);
+	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,TUG_OF_WAR_GUY);
 	myNPCList.push_back(ptrNPC);
 	//Drunkman NPC
-	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,IDLE,DRUNKMAN);
+	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 	//Walk around supermarket
-	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
+	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
-	//Walk around supermarket
-	ptrNPC = new CNpc(-5,0,5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,WALKING_GUY);
+	ptrNPC = new CNpc(-5,0,7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
-
+	//Look at stuff
+	ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
+	myNPCList.push_back(ptrNPC);
 
 
 	//Ghost npc
-	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,IDLE,GHOST_GUY);
+	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY);
 	myNPCList.push_back(ptrNPC);
 	//cashier 1
-	ptrNPC = new CNpc(-26,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
+	ptrNPC = new CNpc(-26,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
 	myNPCList.push_back(ptrNPC);
 	//cashier 2
-	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
+	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
 	myNPCList.push_back(ptrNPC);
 	//cashier 3
-	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,IDLE,CASHIER);
+	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
 	myNPCList.push_back(ptrNPC);
 
 	//Customer at cashier 2
-	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
 
 	//Customer at cashier 3
-	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
 
 	//Logistic staff at level 2
-	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
 	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
@@ -733,6 +734,14 @@ void SceneSP::UpdateAI(double dt)
 	UpdateWalkingman(dt);
 	UpdateDrunkmanguy(dt);
 	UpdateGhostman(dt);
+	UpdateLookingman(dt);
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getAnimationType() == WALKING)
+		{
+			UpdateLegAnimation(dt,i,myNPCList[i]->getmoveSpd());
+		}
+	}
 }
 void SceneSP::UpdateTrolley(double dt)
 {
@@ -1355,44 +1364,45 @@ void SceneSP::UpdateWalkingman(double dt)
 	{
 		if(myNPCList[i]->getCharacterJob() == WALKING_GUY)
 		{
+			myNPCList[i]->setAnimationType(WALKING);
+			myNPCList[i]->setmoveSpd(5.0f);
 			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
-			UpdateLegAnimation(dt,i,WalkingNpcMoveSpd);
 			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
 			{
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(WalkingNpcMoveSpd * dt));
 				if(myNPCList[i]->getZpos() > 21)
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
 					myNPCList[i]->setRotation(90);
 				}
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_LEFT)
 			{
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(WalkingNpcMoveSpd * dt));
 				if(myNPCList[i]->getXpos() > 32)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
 					myNPCList[i]->setRotation(180);
 				}
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * dt));
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_BACKWARD)
 			{
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(WalkingNpcMoveSpd * dt));
 				if(myNPCList[i]->getZpos() < 13)
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
 					myNPCList[i]->setRotation(-90);
 				}
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_RIGHT)
 			{
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(WalkingNpcMoveSpd * dt));
 				if(myNPCList[i]->getXpos() < -5)
 				{
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 					myNPCList[i]->setRotation(0);
 				}
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * dt));
 			}
 		}
 	}
@@ -1457,6 +1467,25 @@ void SceneSP::UpdateGhostman(double dt)
 				GisFlying = false;
 			}
 		}
+	}
+}
+void SceneSP::UpdateLookingman(double dt)
+{
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == LOOKING_GUY)
+		{
+			if(Application::IsKeyPressed('O'))//test code
+				myNPCList[i]->setRotation(180.0f);
+			/*if(myNPCList[i]->getCharacterState == */
+			if(interactionTimer > NPCLookLimiter)
+			{
+				interactionTimer = 0.0f;
+				myNPCList[i]->setRotation(90.0f);
+			}
+
+		}
+
 	}
 }
 void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)

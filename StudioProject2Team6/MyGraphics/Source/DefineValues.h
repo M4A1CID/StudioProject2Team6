@@ -82,7 +82,8 @@ static float GhostNpcMoveSpd = 4.0f;
 		Walking man values
 =======================================*/
 static float WalkingNpcInitArm = 20.0f;
-static float WalkingNpcMoveSpd = 5.0f;
+//Looking man npc
+static float NPCLookLimiter = 10.0f;
 
 //Leg Animation
 static float spdMod = 13.0f;
