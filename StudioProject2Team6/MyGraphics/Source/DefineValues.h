@@ -31,8 +31,8 @@ static float FboundZ3 = 4.0f;
 /*=======================================
 		Shelf bounds values
 =======================================*/
-static float ShelfWidthX = 5.0f;
-static float ShelfWidthZ = 3.0f;
+static float ShelfWidthX = 6.5f;
+static float ShelfWidthZ = 2.0f;
 /*=======================================
 		Cashier table bounds values
 =======================================*/
@@ -78,6 +78,15 @@ static float GhostNpcMoveBoundX2 = -30.0f;
 static float GhostNpcMoveBoundY1 = 6.0f;
 static float GhostNpcMoveBoundY2 = -2.0f;
 static float GhostNpcMoveSpd = 4.0f;
+/*=======================================
+		Walking man values
+=======================================*/
+static float WalkingNpcInitArm = 20.0f;
+static float WalkingNpcMoveSpd = 5.0f;
+
+//Leg Animation
+static float spdMod = 13.0f;
+static float maxlegRot = 35.0f;
 
 //World size for skybox
 static float world_size = 3000.0f;

@@ -89,6 +89,8 @@ private:
 	void UpdateWalkingman(double dt);
 	void UpdateLogisticman(double dt);
 	void UpdateGhostman(double dt);
+	void UpdateLegAnimation(double dt,int NPCnum, float speed);
+	
 	/*=======================================
 				All Init functions
 	=======================================*/
