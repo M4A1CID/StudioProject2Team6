@@ -1894,10 +1894,21 @@ void SceneSP::RenderHand()
 		RenderMesh(meshList[GEO_HANDS], toggleLight);
 		modelStack.PopMatrix();
 		*/
+
+		/*=============================
+				Put item on hand
+		=============================*/
 		modelStack.PushMatrix();
 		modelStack.Rotate((180+handrotationleftandright),0,1,0);
 		modelStack.Translate(-0.2,-4.5,-1+handtranslation);
 		RenderMesh(meshList[GEO_HANDS], toggleLight);
+		if(ptrInvSelect->getName() != emptyItem.getName() && !(Application::IsKeyPressed('R')))
+		{
+			modelStack.PushMatrix();
+			modelStack.Translate(-0.6,3.5,3);
+			RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
+			modelStack.PopMatrix();
+		}
 		modelStack.PopMatrix();
 	}
 	modelStack.PopMatrix();
@@ -1905,17 +1916,20 @@ void SceneSP::RenderHand()
 
 	//Render ITEM on HAND
 	//TODO: Inspect rotation
-	
-	modelStack.PushMatrix();
-	modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);
-	modelStack.Rotate(handrotationleftandright+itemYrotation,0,1,0);
-	modelStack.Rotate(itemXrotation,1,0,0);
-	modelStack.Scale(0.5f,0.5f,0.5f);
-	if(ptrInvSelect->getName() != emptyItem.getName())
+	if(Application::IsKeyPressed('R'))
 	{
-		RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
+		modelStack.PushMatrix();
+		modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);
+		///modelStack.Translate(0.5,0,0.5);
+		modelStack.Rotate(handrotationleftandright+itemYrotation,0,1,0);
+		modelStack.Rotate(itemXrotation,1,0,0);
+		modelStack.Scale(0.5f,0.5f,0.5f);
+		if(ptrInvSelect->getName() != emptyItem.getName())
+		{
+			RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
+		}
+		modelStack.PopMatrix();
 	}
-	modelStack.PopMatrix();
 	/*//Hands on trolley
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,0,camera.position.z);
