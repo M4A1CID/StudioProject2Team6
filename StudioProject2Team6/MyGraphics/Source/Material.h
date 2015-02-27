@@ -24,10 +24,10 @@ struct Material
 	float kShininess;
 	Material()
 	{
-		kAmbient.Set(0.1f, 0.1f, 0.1f);
-		kDiffuse.Set(0.6f, 0.6f, 0.6f);
-		kSpecular.Set(0.3f, 0.3f, 0.3f);
-		kShininess = 1.f;
+		kAmbient.Set(0.35f, 0.35f, 0.35f);
+		kDiffuse.Set(0.3f, 0.3f, 0.3f);
+		kSpecular.Set(0.1f, 0.1f, 0.1f);
+		kShininess = 0.5f;
 	}
 };
 #endif
