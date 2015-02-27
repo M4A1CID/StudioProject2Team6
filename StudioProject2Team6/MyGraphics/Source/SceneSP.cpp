@@ -306,7 +306,7 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(26,17,26,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(30,17,-23,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(27,17,-23,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
 	ptrNPC = new CNpc(38,0,-5,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
@@ -1363,7 +1363,7 @@ void SceneSP::UpdateWalkingman(double dt)
 		if(myNPCList[i]->getCharacterJob() == WALKING_GUY)
 		{
 			myNPCList[i]->setAnimationType(WALKING);
-			myNPCList[i]->setmoveSpd(500.0f);
+			myNPCList[i]->setmoveSpd(5.0f);
 			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
 			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
@@ -1575,19 +1575,40 @@ void SceneSP::UpdateLogisticman(double dt)
 				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 		       	myNPCList[i]->setRightArm(-WalkingNpcInitArm);
 		    	myNPCList[i]->setRotation(270.0f);
-				if(LogisticinteractionTimer > NPCLookLimiter)
+				if(LogisticinteractionTimer > NPCLookLimiter && (myNPCList[i]->getZpos() < -20.f))
 				{
-					myNPCList[i]->setRotation(180.0f);
+					myNPCList[i]->setRotation(0.0f);
 					myNPCList[i]->setAnimationType(WALKING);
 		     	    myNPCList[i]->setmoveSpd(5.0f);
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 				}
+				if(LogisticinteractionTimer > NPCLookLimiter && (myNPCList[i]->getZpos() > 24.f))
+				{
+					myNPCList[i]->setRotation(180.0f);
+					myNPCList[i]->setAnimationType(WALKING);
+		     	    myNPCList[i]->setmoveSpd(5.0f);
+					myNPCList[i]->setCharacterState(STATE_BACKWARD);
+				}
+				
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
+				if(myNPCList[i]->getZpos() > 24.f)
+				{
+					LogisticinteractionTimer = 0;
+					myNPCList[i]->setAnimationType(IDLE);
+		     	    myNPCList[i]->setmoveSpd(0.0f);
+					myNPCList[i]->setLeftLeg(0.0f);
+					myNPCList[i]->setRightLeg(0.0f);
+					myNPCList[i]->setCharacterState(STATE_ACTIVE);
+				}
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*(dt)));
+			}
+			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
+			{
 				if(myNPCList[i]->getZpos() < -20.f)
 				{
-					//LogisticinteractionTimer = 0;
+					LogisticinteractionTimer = 0;
 					myNPCList[i]->setAnimationType(IDLE);
 		     	    myNPCList[i]->setmoveSpd(0.0f);
 					myNPCList[i]->setLeftLeg(0.0f);
@@ -1596,6 +1617,7 @@ void SceneSP::UpdateLogisticman(double dt)
 				}
 				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*(dt)));
 			}
+
 		}
 	}
 }
