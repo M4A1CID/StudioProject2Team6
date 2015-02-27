@@ -14,11 +14,9 @@ static float SCALE_LIMIT = 5.f;
 SceneSP::SceneSP()
 {
 }
-
 SceneSP::~SceneSP()
 {
 }
-
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
