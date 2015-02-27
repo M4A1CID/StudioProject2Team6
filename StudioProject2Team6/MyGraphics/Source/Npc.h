@@ -39,4 +39,3 @@ private:
 	float moveSpd;
 	bool IsActive;
 };
-

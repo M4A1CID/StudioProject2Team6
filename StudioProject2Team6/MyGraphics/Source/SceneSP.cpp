@@ -875,7 +875,7 @@ void SceneSP::UpdateMenu()
 				if(selectionPointing == MENU_EASTER_EGG_HUNT)
 				{
 					//DO EASTER EGG HUNT HERE
-					i_menuHandle == GAME_PLAYING;
+					i_menuHandle = GAME_PLAYING;
 				}
 			}
 		}
@@ -1620,7 +1620,10 @@ void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)
 		myNPCList[NPCnum]->setRightLeg(myNPCList[NPCnum]->getRightLeg() - (speed * spdMod * dt));
 	else
 		myNPCList[NPCnum]->setRightLeg(myNPCList[NPCnum]->getRightLeg() + (speed * spdMod * dt));
-
+	if(myNPCList[NPCnum]->getLeftLeg()>maxlegRot)
+		rotateDir = true;
+	if(myNPCList[NPCnum]->getLeftLeg()<-maxlegRot)
+		rotateDir = false;
 }
 void SceneSP::RenderUI()
 {
@@ -2515,29 +2518,28 @@ void SceneSP::checkPickUpItem()
 					chosen = i;
 					isWithinInteractionItem = true;
 					s_item_name = myStockList[chosen]->getName();
-					if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
-					{
-						if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
-						{
-							addToInventory(myStockList[chosen]);
-							myStockList[chosen]->setActiveState(false);
-							std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
-						}
-					}
 				}
 				else
 				{
 					isWithinInteractionItem = false;
 				}
 
+
+
 			}
-			
+
 		}
 
-
-
 	}
-
+	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+	{
+		if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
+		{
+			addToInventory(myStockList[chosen]);
+			myStockList[chosen]->setActiveState(false);
+			std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
+		}
+	}
 }
 void SceneSP::checkSupermarketCollision()
 {
