@@ -118,10 +118,14 @@ void SceneSP::initGeoType()
 	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//Elevator.tga");
 	meshList[GEO_ELEVATORDOOR] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Elevatordoor.obj");
 	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
-	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//playerArm.obj");
+	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("playerhand", "OBJ//playerArm.obj");
 	meshList[GEO_HANDS]->textureID = LoadTGA("Image//cashier.tga");
 	meshList[GEO_MAIN_MENU_TITLE] = MeshBuilder::GenerateText("MenuSupermarket",1,1);
 	meshList[GEO_MAIN_MENU_TITLE]->textureID = LoadTGA("Image//Menu_Supermarket.tga");
+	meshList[GEO_BOX] = MeshBuilder::GenerateOBJ("box", "OBJ//box.obj");
+	meshList[GEO_BOX]->textureID = LoadTGA("Image//cashier.tga");
+	meshList[GEO_OFFICECOMPUTER] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//office.obj");
+	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//cashier.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -222,8 +226,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_NormalNpc1_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_NormalNpc1_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	//////////////////////////////////////////////////////////////////////////////
-
-
 	meshList[GEO_NormalNpc2_ARM] = MeshBuilder::GenerateOBJ("NormalNpc2 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc2_ARM]->textureID = LoadTGA("Image//NormalNpc2.tga");
 	meshList[GEO_NormalNpc2_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//headandbody.obj");
@@ -286,6 +288,20 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
 	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+
+	//Logistic staff at level 2
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(12,17,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
 	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
@@ -1103,7 +1119,7 @@ void SceneSP::UpdateElevator(double dt)
 void SceneSP::UpdateDoor(double dt)
 {
 	//Front door control
-	if((camera.position.z < 50.0f && camera.position.z > 0.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
+	if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
 		toggleDoorFront = true;
 	else
 		toggleDoorFront = false;
@@ -1268,6 +1284,24 @@ void SceneSP::UpdateTugofwar(double dt)
 		lose = false;
 	}
 }
+void SceneSP::UpdateTugofwarguy(double dt)
+{
+	if(!IsIntugofwar)
+	{
+		myNPCList[0]->setRotation(0);
+		myNPCList[0]->setXpos(7.0f);
+		myNPCList[0]->setZpos(1.5f);
+		myNPCList[0]->setLeftArm(30);
+		myNPCList[0]->setRightArm(-30);
+	}
+	else //if(IsIntugofwar)
+	{
+		myNPCList[0]->setRotation(90);
+		myNPCList[0]->setXpos(camera.position.x - 4);
+		myNPCList[0]->setZpos(camera.position.z);
+		myNPCList[0]->setLeftArm(40);
+	}
+}
 void SceneSP::UpdateDrunkman(double dt)
 {
 	if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
@@ -1279,7 +1313,7 @@ void SceneSP::UpdateDrunkman(double dt)
 	}
 
 	if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKCARRY)	
-		&&(camera.position.z < 50.0f && camera.position.z > 0.0f) 
+		&&(camera.position.z < 45.0f && camera.position.z > 15.0f)
 		&&(camera.position.x > -30.0f  && camera.position.x < -10.0f)
 		&&(camera.position.y > 1.0f  && camera.position.y < 16.0f))
 	{
@@ -1307,24 +1341,6 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 		myNPCList[1]->setXpos(-25);
 		myNPCList[1]->setYpos(-2);
 		myNPCList[1]->setZpos(60);
-	}
-}
-void SceneSP::UpdateTugofwarguy(double dt)
-{
-	if(!IsIntugofwar)
-	{
-		myNPCList[0]->setRotation(0);
-		myNPCList[0]->setXpos(7.0f);
-		myNPCList[0]->setZpos(1.5f);
-		myNPCList[0]->setLeftArm(30);
-		myNPCList[0]->setRightArm(-30);
-	}
-	else //if(IsIntugofwar)
-	{
-		myNPCList[0]->setRotation(90);
-		myNPCList[0]->setXpos(camera.position.x - 4);
-		myNPCList[0]->setZpos(camera.position.z);
-		myNPCList[0]->setLeftArm(40);
 	}
 }
 void SceneSP::UpdateWalkingman(double dt)
@@ -1467,7 +1483,7 @@ void SceneSP::RenderDrunkmanUI()
 	}
 
 	if(i_drunkmanAct == DRUNKCARRY
-		&&(camera.position.z < 50.0f && camera.position.z > 0.0f) 
+		&&(camera.position.z < 45.0f && camera.position.z > 15.0f)
 		&&(camera.position.x > -30.0f  && camera.position.x < -10.0f)
 		&&(camera.position.y > 1.0f  && camera.position.y < 16.0f))
 	{
@@ -1995,6 +2011,8 @@ void SceneSP::RenderSupermarket()
 	modelStack.PushMatrix();
 	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
 	RenderMesh(meshList[GEO_STORAGEANDOFFICE], toggleLight);
+	RenderOffice();
+	RenderStorage();
 	RenderShelves();		//Render Shelves in Supermarket
 	RenderSamplestand();	//Render Sample Food Stand in Supermarket
 	RenderCashierTables();	//Render Cashier table in Supermarket
@@ -2173,6 +2191,113 @@ void SceneSP::RenderInventory()
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
 	}
 }
+void SceneSP::RenderOffice()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(37.0f, 17.0f, 14.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(37.0f, 17.0f, 18.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(37.0f, 17.0f, 22.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(37.0f, 17.0f, 26.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(22.0f, 17.0f, 14.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(22.0f, 17.0f, 18.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(23.0f, 17.0f, 22.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(23.0f, 17.0f, 26.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+	modelStack.PopMatrix();
+
+}
+void SceneSP::RenderStorage()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(36.0f, 17.0f, -14.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(36.0f, 17.0f, -18.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(36.0f, 17.0f, -22.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(36.0f, 17.0f, -26.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(24.0f, 17.0f, -14.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(24.0f, 17.0f, -18.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(24.0f, 17.0f, -22.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(24.0f, 17.0f, -26.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(30.0f, 17.0f, -26.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+}
 void SceneSP::checkPickUpItem()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -2345,7 +2470,7 @@ void SceneSP::checkShelfCollision()
 	{
 		if((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0))
 		{
-			//std::cout<<myContainerList[i]->getXpos()<<std::endl;
+			std::cout<<myContainerList[i]->getXpos()<<std::endl; //right, items facing (front)
 			if((camera.position.x > (myContainerList[i]->getXpos()+(ShelfWidthX/2)) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
 				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
 			{
@@ -2353,7 +2478,7 @@ void SceneSP::checkShelfCollision()
 				camera.position.x = myContainerList[i]->getXpos()+ShelfWidthX;
 				camera.target.x -= diffX;
 				diffX = 0.0f;
-			}
+			}//left
 			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()-(ShelfWidthX/2))) && 
 				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
 			{

@@ -67,6 +67,8 @@ private:
 	void RenderReturnPoint();
 	void RenderMainMenu();
 	void RenderSubMenu();
+	void RenderOffice();
+	void RenderStorage();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -85,6 +87,7 @@ private:
 	void UpdateTugofwarguy(double dt);
 	void UpdateDrunkmanguy(double dt);
 	void UpdateWalkingman(double dt);
+	void UpdateLogisticman(double dt);
 	void UpdateGhostman(double dt);
 	/*=======================================
 				All Init functions
