@@ -18,6 +18,7 @@ public:
 	float getRightLeg();
 	float getmoveSpd();
 	bool getActive();
+	bool getlegRotDir();
 
 	void setRotation(float r);
 	void setLeftArm(float r);
@@ -26,6 +27,7 @@ public:
 	void setRightLeg(float r);
 	void setmoveSpd(float r);
 	void setActive(bool active);
+	void setlegRotDir(bool dir);
 
 private:
 	int GeoHeadType;
@@ -38,4 +40,5 @@ private:
 	float rotateRightLeg;
 	float moveSpd;
 	bool IsActive;
+	bool legRotDir;
 };

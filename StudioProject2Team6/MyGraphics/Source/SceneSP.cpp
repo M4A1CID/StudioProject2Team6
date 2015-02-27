@@ -738,13 +738,7 @@ void SceneSP::UpdateAI(double dt)
 	UpdateGhostman(dt);
 	UpdateLookingman(dt);
 	UpdateLogisticman(dt);
-	for(int i = 0; i< myNPCList.size(); ++i)
-	{
-		if(myNPCList[i]->getAnimationType() == WALKING)
-		{
-			UpdateLegAnimation(dt,i,myNPCList[i]->getmoveSpd());
-		}
-	}
+	UpdateLegAnimation(dt);
 }
 void SceneSP::UpdateTrolley(double dt)
 {
@@ -1369,7 +1363,7 @@ void SceneSP::UpdateWalkingman(double dt)
 		if(myNPCList[i]->getCharacterJob() == WALKING_GUY)
 		{
 			myNPCList[i]->setAnimationType(WALKING);
-			myNPCList[i]->setmoveSpd(5.0f);
+			myNPCList[i]->setmoveSpd(500.0f);
 			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
 			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
@@ -1442,25 +1436,25 @@ void SceneSP::UpdateGhostman(double dt)
 				{
 					if(GFlyDir == true)
 					{
-						myNPCList[i]->setYpos(myNPCList[i]->getYpos() + GhostNpcMoveSpd * dt);
+						myNPCList[i]->setYpos(myNPCList[i]->getYpos() + myNPCList[i]->getmoveSpd() * dt);
 						if(myNPCList[i]->getYpos() > GhostNpcMoveBoundY1)
 							GFlyDir = false;
 					}
 					else
 					{
-						myNPCList[i]->setYpos(myNPCList[i]->getYpos() - GhostNpcMoveSpd * dt);
+						myNPCList[i]->setYpos(myNPCList[i]->getYpos() - myNPCList[i]->getmoveSpd() * dt);
 						if(myNPCList[i]->getYpos() < GhostNpcMoveBoundY2)
 							GFlyDir = true;
 					}
 					if(GMoveDir == true)
 					{
-						myNPCList[i]->setXpos(myNPCList[i]->getXpos() + GhostNpcMoveSpd * dt);
+						myNPCList[i]->setXpos(myNPCList[i]->getXpos() + myNPCList[i]->getmoveSpd() * dt);
 						if(myNPCList[i]->getXpos() > GhostNpcMoveBoundX1)
 							GMoveDir = false;
 					}
 					else
 					{
-						myNPCList[i]->setXpos(myNPCList[i]->getXpos() - GhostNpcMoveSpd * dt);
+						myNPCList[i]->setXpos(myNPCList[i]->getXpos() - myNPCList[i]->getmoveSpd() * dt);
 						if(myNPCList[i]->getXpos() < GhostNpcMoveBoundX2)
 							GMoveDir = true;
 					}
@@ -1605,25 +1599,26 @@ void SceneSP::UpdateLogisticman(double dt)
 		}
 	}
 }
-void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)
+void SceneSP::UpdateLegAnimation(double dt)
 {
-	static bool rotateDir = false;
-	if(myNPCList[NPCnum]->getLeftLeg()>maxlegRot)
-		rotateDir = true;
-	if(myNPCList[NPCnum]->getLeftLeg()<-maxlegRot)
-		rotateDir = false;
-	if(rotateDir == false)
-		myNPCList[NPCnum]->setLeftLeg(myNPCList[NPCnum]->getLeftLeg() + (speed * spdMod * dt));
-	else
-		myNPCList[NPCnum]->setLeftLeg(myNPCList[NPCnum]->getLeftLeg() - (speed * spdMod * dt));
-	if(rotateDir == false)
-		myNPCList[NPCnum]->setRightLeg(myNPCList[NPCnum]->getRightLeg() - (speed * spdMod * dt));
-	else
-		myNPCList[NPCnum]->setRightLeg(myNPCList[NPCnum]->getRightLeg() + (speed * spdMod * dt));
-	if(myNPCList[NPCnum]->getLeftLeg()>maxlegRot)
-		rotateDir = true;
-	if(myNPCList[NPCnum]->getLeftLeg()<-maxlegRot)
-		rotateDir = false;
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getAnimationType() == WALKING)
+		{
+			if(myNPCList[i]->getLeftLeg()>(maxlegRot))
+				myNPCList[i]->setlegRotDir(true);
+			if(myNPCList[i]->getLeftLeg()<(-maxlegRot))
+				myNPCList[i]->setlegRotDir(false);
+			if(myNPCList[i]->getlegRotDir() == false)
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
+			else
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
+			if(myNPCList[i]->getlegRotDir() == false)
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
+			else
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
+		}
+	}
 }
 void SceneSP::RenderUI()
 {

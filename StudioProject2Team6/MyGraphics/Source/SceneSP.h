@@ -90,7 +90,7 @@ private:
 	void UpdateLogisticman(double dt);
 	void UpdateGhostman(double dt);
 	void UpdateLookingman(double dt);
-	void UpdateLegAnimation(double dt,int NPCnum, float speed);
+	void UpdateLegAnimation(double dt);
 	
 	/*=======================================
 				All Init functions
