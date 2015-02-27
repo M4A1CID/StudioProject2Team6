@@ -2531,7 +2531,7 @@ void SceneSP::checkPickUpItem()
 		}
 
 	}
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter && myStockList[chosen]->getActiveState() && (magnitudeFromPosition <= interactionDistance))
 	{
 		if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 		{
