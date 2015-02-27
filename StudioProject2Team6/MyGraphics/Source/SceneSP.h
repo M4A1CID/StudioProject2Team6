@@ -120,6 +120,7 @@ private:
 	bool elevatorDoorOpening;
 	bool elevatorSecondFloor;
 	float interactionTimer;
+	float LogisticinteractionTimer;
 	float moveDoorFront;
 	float moveDoorBack;
 	float trolleyrotation;

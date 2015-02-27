@@ -52,6 +52,7 @@ void SceneSP::Init()
 	lose = false;
 	showTuginstruction = false;
 	interactionTimer = 0.0f;
+	LogisticinteractionTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
@@ -296,16 +297,16 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 
 	//Logistic staff at level 2  //O(37.0f, 17.0f, 16.0f),S(36.0f, 17.0f, -14.0f)
-	ptrNPC = new CNpc(30,17,18,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(28,17,25,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_ACTIVE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(26,17,25,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(26,17,26,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(30,17,-23,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(30,17,-23,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(38,0,-5,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	ptrNPC = new CNpc(38,0,-5,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
 	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
@@ -732,6 +733,7 @@ void SceneSP::UpdateAI(double dt)
 	UpdateDrunkmanguy(dt);
 	UpdateGhostman(dt);
 	UpdateLookingman(dt);
+	UpdateLogisticman(dt);
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getAnimationType() == WALKING)
@@ -1031,6 +1033,7 @@ void SceneSP::UpdatePlaying(double dt)
 }
 void SceneSP::Update(double dt)
 {
+	LogisticinteractionTimer+=dt;
 	interactionTimer+=dt;
 	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU)
 	{
@@ -1554,6 +1557,48 @@ void SceneSP::UpdateLookingman(double dt)
 			}
 		}
 
+	}
+}
+void SceneSP::UpdateLogisticman(double dt)
+{
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == PART_TIME_WORKER)
+		{
+			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
+			{
+			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
+			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+			myNPCList[i]->setRotation(270.0f);
+			}
+
+			if(myNPCList[i]->getCharacterState() == STATE_ACTIVE)
+			{
+				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
+		       	myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+		    	myNPCList[i]->setRotation(270.0f);
+				if(LogisticinteractionTimer > NPCLookLimiter)
+				{
+					myNPCList[i]->setRotation(180.0f);
+					myNPCList[i]->setAnimationType(WALKING);
+		     	    myNPCList[i]->setmoveSpd(5.0f);
+					myNPCList[i]->setCharacterState(STATE_FORWARD);
+				}
+			}
+			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
+			{
+				if(myNPCList[i]->getZpos() < -20.f)
+				{
+					//LogisticinteractionTimer = 0;
+					myNPCList[i]->setAnimationType(IDLE);
+		     	    myNPCList[i]->setmoveSpd(0.0f);
+					myNPCList[i]->setLeftLeg(0.0f);
+					myNPCList[i]->setRightLeg(0.0f);
+					myNPCList[i]->setCharacterState(STATE_ACTIVE);
+				}
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*(dt)));
+			}
+		}
 	}
 }
 void SceneSP::UpdateLegAnimation(double dt, int NPCnum, float speed)
