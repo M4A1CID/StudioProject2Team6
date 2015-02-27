@@ -28,7 +28,7 @@ void SceneSP::Init()
 	}
 
 	/*=============================================
-	Init variables here
+			Init variables here
 	=============================================*/
 	i_menuHandle = MAIN_MENU;
 	i_drunkmanAct = DRUNKIDLE;
@@ -51,6 +51,7 @@ void SceneSP::Init()
 	win = false;
 	lose = false;
 	showTuginstruction = false;
+	isWithinInteractionItem = false;
 	interactionTimer = 0.0f;
 	LogisticinteractionTimer = 0.0f;
 	moveDoorFront = 0.0f;
@@ -91,6 +92,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_TEXT]->textureID = LoadTGA("Image//anime.tga");
 	meshList[GEO_UI_SCREEN] = MeshBuilder::GenerateText("UI",1,1);
 	meshList[GEO_UI_SCREEN]->textureID = LoadTGA("Image//UI.tga");
+	meshList[GEO_ITEM_SELECT] = MeshBuilder::GenerateText("ItemSelection",1,1);
+	meshList[GEO_ITEM_SELECT]->textureID = LoadTGA("Image//selectionHighlight.tga");
 	meshList[GEO_SUPERMARKET] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//supermarket.obj");
 	meshList[GEO_SUPERMARKET]->textureID = LoadTGA("Image//supermarket.tga");
 	meshList[GEO_STORAGEANDOFFICE] = MeshBuilder::GenerateOBJ("supermarket", "OBJ//PartofSuperMarket.obj");
@@ -724,6 +727,7 @@ void SceneSP::UpdateUI(double dt)
 
 	ss_money << ptrplayer->getMoney();
 	s_money = ss_money.str();
+
 
 }
 void SceneSP::UpdateAI(double dt)
@@ -1622,6 +1626,11 @@ void SceneSP::RenderUI()
 {
 	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
 	RenderTGAUI(meshList[GEO_UI_SCREEN],1,40,20);
+	if(isWithinInteractionItem) //If player is able to pick up
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pick up " +s_item_name,Color(0,1,0),2,1,16);
+	}
+	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5,22.5+(inventoryPointing*5.0),2.5f);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
@@ -2365,6 +2374,7 @@ void SceneSP::RenderInventory()
 	for( int i = 0; i< ptrplayer->getItemHeld();++i)
 	{
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
+		
 	}
 }
 void SceneSP::RenderOffice()
@@ -2476,35 +2486,37 @@ void SceneSP::RenderStorage()
 }
 void SceneSP::checkPickUpItem()
 {
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+
+	float magnitudeFromTarget = 0.f;
+	float magnitudeFromPosition = 0.f;
+	float previous = 99.0f;
+	int chosen = 0;
+	for(unsigned int i = 0; i<myStockList.size();++i)
 	{
-		float magnitudeFromTarget = 0.f;
-		float magnitudeFromPosition = 0.f;
-		float previous = 99.0f;
-		int chosen = 0;
-		for(unsigned int i = 0; i<myStockList.size();++i)
+		if(myStockList[i]->getActiveState()) //If Item is available for taking
 		{
-			if(myStockList[i]->getActiveState()) //If Item is available for taking
+			//Distance between Camera Target and Item position = Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
+			magnitudeFromTarget = sqrt( (camera.target.x - myStockList[i]->getXpos()+itemXoffset) *(camera.target.x - myStockList[i]->getXpos()+itemXoffset) 
+				+ (camera.target.y - myStockList[i]->getYpos()+itemYoffset) * (camera.target.y - myStockList[i]->getYpos()+itemYoffset) 
+				+ (camera.target.z - myStockList[i]->getZpos()+itemZoffset) * (camera.target.z - myStockList[i]->getZpos()+itemZoffset));
+
+
+			//Get lowest magnitude of Item from target
+			if(previous > magnitudeFromTarget)
 			{
-				//Distance between Camera Target and Item position = Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
-				magnitudeFromTarget = sqrt( (camera.target.x - myStockList[i]->getXpos()+itemXoffset) *(camera.target.x - myStockList[i]->getXpos()+itemXoffset) 
-					+ (camera.target.y - myStockList[i]->getYpos()+itemYoffset) * (camera.target.y - myStockList[i]->getYpos()+itemYoffset) 
-					+ (camera.target.z - myStockList[i]->getZpos()+itemZoffset) * (camera.target.z - myStockList[i]->getZpos()+itemZoffset));
+				previous = magnitudeFromTarget;
+				//Distance between Camera Position and Item position= Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
+				magnitudeFromPosition = sqrt( (camera.position.x - myStockList[i]->getXpos()+itemXoffset) *(camera.position.x - myStockList[i]->getXpos()+itemXoffset) 
+					+ (camera.position.y - myStockList[i]->getYpos()+itemYoffset) * (camera.position.y - myStockList[i]->getYpos()+itemYoffset) 
+					+ (camera.position.z - myStockList[i]->getZpos()+itemZoffset) * (camera.position.z - myStockList[i]->getZpos()+itemZoffset));
 
-				
-				//Get lowest magnitude of Item from target
-				if(previous > magnitudeFromTarget)
+				if(magnitudeFromPosition <= interactionDistance)
 				{
-					previous = magnitudeFromTarget;
-
-					//Distance between Camera Position and Item position= Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
-					magnitudeFromPosition = sqrt( (camera.position.x - myStockList[i]->getXpos()+itemXoffset) *(camera.position.x - myStockList[i]->getXpos()+itemXoffset) 
-						+ (camera.position.y - myStockList[i]->getYpos()+itemYoffset) * (camera.position.y - myStockList[i]->getYpos()+itemYoffset) 
-						+ (camera.position.z - myStockList[i]->getZpos()+itemZoffset) * (camera.position.z - myStockList[i]->getZpos()+itemZoffset));
-
-					if(magnitudeFromPosition <= interactionDistance)
+					chosen = i;
+					isWithinInteractionItem = true;
+					s_item_name = myStockList[chosen]->getName();
+					if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 					{
-						chosen = i;
 						if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 						{
 							addToInventory(myStockList[chosen]);
@@ -2513,11 +2525,16 @@ void SceneSP::checkPickUpItem()
 						}
 					}
 				}
+				else
+				{
+					isWithinInteractionItem = false;
+				}
 
 			}
+			
 		}
-		
-		
+
+
 
 	}
 

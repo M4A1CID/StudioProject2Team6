@@ -139,6 +139,7 @@ private:
 	bool lose;
 	bool showTuginstruction;
 	bool b_crouching;
+	bool isWithinInteractionItem;
 	int i_sampleItems;
 	int i_menuHandle;
 	int i_drunkmanAct;
@@ -148,6 +149,7 @@ private:
 	string s_position;
 	string s_fps;
 	string s_camera_target;
+	string s_item_name;
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;
