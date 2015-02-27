@@ -92,6 +92,7 @@ private:
 	void UpdateGhostman(double dt);		//Update Ghost NPC
 	void UpdateCustomer(double dt);
 	void UpdateLookingman(double dt);	//Update NPC that looks at shelves
+	void UpdateChattingman(double dt);
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
 	

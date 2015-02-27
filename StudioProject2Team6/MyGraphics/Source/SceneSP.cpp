@@ -265,7 +265,9 @@ void SceneSP::initCharacter()
 	//Look at stuff
 	ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
 	myNPCList.push_back(ptrNPC);
-
+	//Chatting
+	ptrNPC = new CNpc(11,17,25,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CHATTING_GUY);
+	myNPCList.push_back(ptrNPC);
 
 	//Ghost npc
 	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY);
@@ -755,6 +757,7 @@ void SceneSP::UpdateAI(double dt)
 	UpdateLookingman(dt);
 	UpdateLogisticman(dt);
 	UpdateCustomer(dt);
+	UpdateChattingman(dt);
 	UpdateLegAnimation(dt);
 }
 void SceneSP::UpdateTrolley(double dt)
@@ -1323,7 +1326,7 @@ void SceneSP::UpdateTugofwarguy(double dt)
 {
 	if(!IsIntugofwar)
 	{
-		myNPCList[0]->setRotation(0);
+		myNPCList[0]->setYRotation(0);
 		myNPCList[0]->setXpos(7.0f);
 		myNPCList[0]->setZpos(1.5f);
 		myNPCList[0]->setLeftArm(30);
@@ -1331,7 +1334,7 @@ void SceneSP::UpdateTugofwarguy(double dt)
 	}
 	else //if(IsIntugofwar)
 	{
-		myNPCList[0]->setRotation(90);
+		myNPCList[0]->setYRotation(90);
 		myNPCList[0]->setXpos(camera.position.x - 4);
 		myNPCList[0]->setZpos(camera.position.z);
 		myNPCList[0]->setLeftArm(40);
@@ -1339,43 +1342,59 @@ void SceneSP::UpdateTugofwarguy(double dt)
 }
 void SceneSP::UpdateDrunkman(double dt)
 {
-	if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
-		&&(camera.position.z > 26 && camera.position.z < 28)
-		&&(camera.position.x > -5 && camera.position.x < -2.5)
-		&&(camera.position.y > 16 && camera.position.y < 25))
+	for(int i = 0; i < myNPCList.size(); ++i)
 	{
-		i_drunkmanAct = DRUNKCARRY;
-	}
+		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
+		{
+			if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
+				/*&&(camera.position.z > 26 && camera.position.z < 28)
+				&&(camera.position.x > -5 && camera.position.x < -2.5)
+				&&(camera.position.y > 16 && camera.position.y < 25))*/
+				&&(camera.position.z > myNPCList[i]->getZpos()-6 && camera.position.z <myNPCList[i]->getZpos()+6)
+				&&(camera.position.x > myNPCList[i]->getXpos()-6 && camera.position.x < myNPCList[i]->getXpos()+6)
+				//&&((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0)))
+				)
+			{
+				i_drunkmanAct = DRUNKCARRY;
+			}
 
-	if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKCARRY)	
-		&&(camera.position.z < 45.0f && camera.position.z > 15.0f)
-		&&(camera.position.x > -30.0f  && camera.position.x < -10.0f)
-		&&(camera.position.y > 1.0f  && camera.position.y < 16.0f))
-	{
-		i_drunkmanAct = DRUNKOUTSIDE;
+			if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKCARRY)	
+				&&(camera.position.z < 45.0f && camera.position.z > 15.0f)
+				&&(camera.position.x > -30.0f  && camera.position.x < -10.0f)
+				&&(camera.position.y > 1.0f  && camera.position.y < 16.0f))
+			{
+				i_drunkmanAct = DRUNKOUTSIDE;
+			}
+		}
 	}
 }
 void SceneSP::UpdateDrunkmanguy(double dt)
 {
-	if(i_drunkmanAct == DRUNKIDLE)
+	for(int i = 0; i < myNPCList.size(); ++i)
 	{
-		myNPCList[1]->setRotation(180);
-		myNPCList[1]->setLeftLeg(-90);
-		myNPCList[1]->setRightLeg(-90);
-		myNPCList[1]->setLeftArm(20);
-		myNPCList[1]->setRightArm(-20);
-	}
-	else if(i_drunkmanAct == DRUNKCARRY)
-	{
-		myNPCList[1]->setXpos(camera.position.x);
-		myNPCList[1]->setYpos(camera.position.y);
-		myNPCList[1]->setZpos(camera.position.z);
-	}
-	else
-	{
-		myNPCList[1]->setXpos(-25);
-		myNPCList[1]->setYpos(-2);
-		myNPCList[1]->setZpos(60);
+		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
+		{
+			if(i_drunkmanAct == DRUNKIDLE)
+			{
+				myNPCList[i]->setYRotation(180);
+				myNPCList[i]->setLeftLeg(-90);
+				myNPCList[i]->setRightLeg(-90);
+				myNPCList[i]->setLeftArm(20);
+				myNPCList[i]->setRightArm(-20);
+			}
+			else if(i_drunkmanAct == DRUNKCARRY)
+			{
+				myNPCList[i]->setXpos(camera.position.x);
+				myNPCList[i]->setYpos(camera.position.y);
+				myNPCList[i]->setZpos(camera.position.z);
+			}
+			else
+			{
+				myNPCList[i]->setXpos(-25);
+				myNPCList[i]->setYpos(-2);
+				myNPCList[i]->setZpos(60);
+			}
+		}
 	}
 }
 void SceneSP::UpdateWalkingman(double dt)
@@ -1393,7 +1412,7 @@ void SceneSP::UpdateWalkingman(double dt)
 				if(myNPCList[i]->getZpos() > 21)
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
-					myNPCList[i]->setRotation(90);
+					myNPCList[i]->setYRotation(90);
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
 			}
@@ -1402,7 +1421,7 @@ void SceneSP::UpdateWalkingman(double dt)
 				if(myNPCList[i]->getXpos() > 32)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
-					myNPCList[i]->setRotation(180);
+					myNPCList[i]->setYRotation(180);
 				}
 				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * dt));
 			}
@@ -1411,7 +1430,7 @@ void SceneSP::UpdateWalkingman(double dt)
 				if(myNPCList[i]->getZpos() < 13)
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
-					myNPCList[i]->setRotation(-90);
+					myNPCList[i]->setYRotation(-90);
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
 			}
@@ -1420,7 +1439,7 @@ void SceneSP::UpdateWalkingman(double dt)
 				if(myNPCList[i]->getXpos() < -5)
 				{
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
-					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setYRotation(0);
 				}
 				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * dt));
 			}
@@ -1439,7 +1458,7 @@ void SceneSP::UpdateGhostman(double dt)
 			static bool GMoveDir = true;
 			myNPCList[i]->setLeftLeg(GhostNpcInitLeg);
 			myNPCList[i]->setRightLeg(GhostNpcInitLeg);
-			myNPCList[i]->setRotation(GhostNpcInitRot);
+			myNPCList[i]->setYRotation(GhostNpcInitRot);
 			if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
 				camera.position.z > GhostNpcAppearBoundZ3
 				)
@@ -1508,7 +1527,7 @@ void SceneSP::UpdateLookingman(double dt)
 				if(interactionTimer > NPCLookLimiter)
 				{
 					interactionTimer = 0.0f;
-					myNPCList[i]->setRotation(myNPCList[i]->getRotation()+90.0f);
+					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()+90.0f);
 					myNPCList[i]->setCharacterState(STATE_LEFT);
 					if(counter == 2)
 						myNPCList[i]->setCharacterState(STATE_BACKWARD);
@@ -1523,7 +1542,7 @@ void SceneSP::UpdateLookingman(double dt)
 				if(myNPCList[i]->getXpos() > 26 && counter == 0)
 				{
 					myNPCList[i]->setCharacterState(STATE_IDLE);
-					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setYRotation(0);
 					counter = 1;
 				}
 				if(myNPCList[i]->getXpos() > 32 && counter == 1)
@@ -1534,7 +1553,7 @@ void SceneSP::UpdateLookingman(double dt)
 				if(myNPCList[i]->getXpos() > 1.5 && counter == 4)
 				{
 					myNPCList[i]->setXpos(1.5);
-					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setYRotation(0);
 					myNPCList[i]->setCharacterState(STATE_IDLE);
 					counter = 0;
 				}
@@ -1544,7 +1563,7 @@ void SceneSP::UpdateLookingman(double dt)
 			{
 				if(myNPCList[i]->getZpos() < 9)
 				{
-					myNPCList[i]->setRotation(-90);
+					myNPCList[i]->setYRotation(-90);
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
@@ -1553,13 +1572,13 @@ void SceneSP::UpdateLookingman(double dt)
 			{
 				if(myNPCList[i]->getXpos() < 8 && counter == 2)
 				{
-					myNPCList[i]->setRotation(180);
+					myNPCList[i]->setYRotation(180);
 					myNPCList[i]->setCharacterState(STATE_IDLE);
 					counter = 3;
 				}
 				if(myNPCList[i]->getXpos() < -8 && counter == 3)
 				{
-					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setYRotation(0);
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 					counter = 4;
 				}
@@ -1570,7 +1589,7 @@ void SceneSP::UpdateLookingman(double dt)
 				if(myNPCList[i]->getZpos() > 25.0f)
 				{
 					myNPCList[i]->setZpos(25.0f);
-					myNPCList[i]->setRotation(90);
+					myNPCList[i]->setYRotation(90);
 					myNPCList[i]->setCharacterState(STATE_LEFT);
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
@@ -1816,10 +1835,38 @@ void SceneSP::UpdateCustomer(double dt)
 	RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();*/
 }
-void SceneSP::UpdateLegAnimation(double dt)
+void SceneSP::UpdateChattingman(double dt)
 {
+	if(Application::IsKeyPressed('K'))
+		camera.position.y = 21;
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
+		if(myNPCList[i]->getCharacterJob() == PART_TIME_WORKER)
+		{
+			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
+			{
+				myNPCList[i]->setLeftLeg(0.0f);//reset leg rotations
+				myNPCList[i]->setRightLeg(0.0f);
+				myNPCList[i]->setAnimationType(IDLE);
+				if(interactionTimer > NPCLookLimiter)
+				{
+					interactionTimer = 0.0f;
+					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()+180.0f);
+					myNPCList[i]->setAnimationType(STATE_BACKWARD);
+				}
+			}
+		}
+	}
+}
+void SceneSP::UpdateLegAnimation(double dt)
+{
+	static int multiplier = 1;
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getAnimationType() == RUNNING)
+			multiplier = 2;
+		else
+			multiplier = 1;
 		if(myNPCList[i]->getAnimationType() == WALKING)
 		{
 			if(myNPCList[i]->getLeftLeg()>(maxlegRot))
@@ -1827,13 +1874,13 @@ void SceneSP::UpdateLegAnimation(double dt)
 			if(myNPCList[i]->getLeftLeg()<(-maxlegRot))
 				myNPCList[i]->setlegRotDir(false);
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
 			else
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
 			else
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
 		}
 	}
 }
@@ -2231,7 +2278,9 @@ void SceneSP::RenderCharacter(CNpc* npc)
 {
 	modelStack.PushMatrix();
 	modelStack.Translate(npc->getXpos() , npc->getYpos(), npc->getZpos());//translate everything
-	modelStack.Rotate(npc->getRotation(),0,1,0);
+	modelStack.Rotate(npc->getYRotation(),0,1,0);
+	modelStack.Rotate(npc->getXRotation(),1,0,0);
+	modelStack.Rotate(npc->getZRotation(),0,0,1);
 	modelStack.PushMatrix();
 
 	//head and body

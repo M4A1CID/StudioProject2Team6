@@ -4,7 +4,7 @@
 CPeasCan::CPeasCan(void)
 {
 	setName("Peas Can");
-	setPrice(5.0f);
+	setPrice(50.0f);
 	setGeoType(GEO_CAN_PEAS);
 }
 

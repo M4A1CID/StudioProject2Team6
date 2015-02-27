@@ -17,7 +17,9 @@ CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int s
 	setCharacterState(state);
 	setAnimationType(type);
 
-	rotation = 0.0f;
+	Yrotation = 0.0f;
+	Xrotation = 0.0f;
+	Zrotation = 0.0f;
 	rotateLeftArm = 90.f;
 	rotateRightArm = 270.f;
 	rotateLeftLeg = 0.f;
@@ -60,9 +62,17 @@ float CNpc::getRightLeg()
 {
 	return rotateRightLeg;
 }
-float CNpc::getRotation()
+float CNpc::getYRotation()
 {
-	return rotation;
+	return Yrotation;
+}
+float CNpc::getXRotation()
+{
+	return Xrotation;
+}
+float CNpc::getZRotation()
+{
+	return Zrotation;
 }
 float CNpc::getmoveSpd()
 {
@@ -93,9 +103,17 @@ void CNpc::setRightLeg(float r)
 {
 	rotateRightLeg = r;
 }
-void CNpc::setRotation(float r)
+void CNpc::setYRotation(float r)
 {
-	rotation = r;
+	Yrotation = r;
+}
+void CNpc::setXRotation(float r)
+{
+	Xrotation = r;
+}
+void CNpc::setZRotation(float r)
+{
+	Zrotation = r;
 }
 void CNpc::setmoveSpd(float r)
 {
