@@ -256,7 +256,7 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(-5,0,7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
 	//Look at stuff
-	ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
+	ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
 	myNPCList.push_back(ptrNPC);
 
 
@@ -1423,11 +1423,12 @@ void SceneSP::UpdateGhostman(double dt)
 			if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
 				camera.position.z > GhostNpcAppearBoundZ3
 				)
-				myNPCList[i]->setCharacterState(1);
+				myNPCList[i]->setCharacterState(STATE_IDLE);
 			else
-				myNPCList[i]->setCharacterState(0);
-			if(myNPCList[i]->getCharacterState() == 0)
+				myNPCList[i]->setCharacterState(STATE_FORWARD);
+			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
+				myNPCList[i]->setActive(true);
 				if(GisFlying == false)
 				{
 					myNPCList[i]->setYpos(GhostNpcResetYPos);
@@ -1461,29 +1462,99 @@ void SceneSP::UpdateGhostman(double dt)
 					}
 				}
 			}
-			if(myNPCList[i]->getCharacterState() == 1)
+			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
 			{
 				myNPCList[i]->setYpos(-10);
 				GisFlying = false;
+				myNPCList[i]->setActive(false);
 			}
 		}
 	}
 }
 void SceneSP::UpdateLookingman(double dt)
 {
+	static int counter = 0;
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == LOOKING_GUY)
 		{
-			if(Application::IsKeyPressed('O'))//test code
-				myNPCList[i]->setRotation(180.0f);
-			/*if(myNPCList[i]->getCharacterState == */
-			if(interactionTimer > NPCLookLimiter)
+			myNPCList[i]->setLeftArm(30);
+			myNPCList[i]->setRightArm(-30);
+			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
 			{
-				interactionTimer = 0.0f;
-				myNPCList[i]->setRotation(90.0f);
+				myNPCList[i]->setLeftLeg(0.0f);//reset leg rotations
+				myNPCList[i]->setRightLeg(0.0f);
+				myNPCList[i]->setAnimationType(IDLE);
+				if(interactionTimer > NPCLookLimiter)
+				{
+					interactionTimer = 0.0f;
+					myNPCList[i]->setRotation(myNPCList[i]->getRotation()+90.0f);
+					myNPCList[i]->setCharacterState(STATE_LEFT);
+					if(counter == 2)
+						myNPCList[i]->setCharacterState(STATE_BACKWARD);
+					if(counter == 3)
+						myNPCList[i]->setCharacterState(STATE_RIGHT);
+				}
 			}
-
+			else
+				myNPCList[i]->setAnimationType(WALKING);
+			if(myNPCList[i]->getCharacterState() == STATE_LEFT)
+			{
+				if(myNPCList[i]->getXpos() > 26 && counter == 0)
+				{
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					myNPCList[i]->setRotation(0);
+					counter = 1;
+				}
+				if(myNPCList[i]->getXpos() > 32 && counter == 1)
+				{
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					counter = 2;
+				}
+				if(myNPCList[i]->getXpos() > 1.5 && counter == 4)
+				{
+					myNPCList[i]->setXpos(1.5);
+					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					counter = 0;
+				}
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * dt));
+			}
+			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
+			{
+				if(myNPCList[i]->getZpos() < 9)
+				{
+					myNPCList[i]->setRotation(-90);
+					myNPCList[i]->setCharacterState(STATE_RIGHT);
+				}
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
+			}
+			if(myNPCList[i]->getCharacterState() == STATE_RIGHT)
+			{
+				if(myNPCList[i]->getXpos() < 8 && counter == 2)
+				{
+					myNPCList[i]->setRotation(180);
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					counter = 3;
+				}
+				if(myNPCList[i]->getXpos() < -8 && counter == 3)
+				{
+					myNPCList[i]->setRotation(0);
+					myNPCList[i]->setCharacterState(STATE_FORWARD);
+					counter = 4;
+				}
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * dt));
+			}
+			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
+			{
+				if(myNPCList[i]->getZpos() > 25.0f)
+				{
+					myNPCList[i]->setZpos(25.0f);
+					myNPCList[i]->setRotation(90);
+					myNPCList[i]->setCharacterState(STATE_LEFT);
+				}
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
+			}
 		}
 
 	}
@@ -1954,7 +2025,8 @@ void SceneSP::RenderCharacters()
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
-		RenderCharacter(myNPCList[i]);
+		if(myNPCList[i]->getActive()==true)
+			RenderCharacter(myNPCList[i]);
 	}
 }
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)

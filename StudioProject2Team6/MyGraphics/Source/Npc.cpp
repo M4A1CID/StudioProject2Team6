@@ -23,6 +23,7 @@ CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int s
 	rotateLeftLeg = 0.f;
 	rotateRightLeg = 0.f;
 	moveSpd = 5.0f;
+	IsActive = true;
 }
 
 
@@ -66,6 +67,10 @@ float CNpc::getmoveSpd()
 {
 	return moveSpd;
 }
+bool CNpc::getActive()
+{
+	return IsActive;
+}
 
 void CNpc::setLeftArm(float r)
 {
@@ -90,4 +95,8 @@ void CNpc::setRotation(float r)
 void CNpc::setmoveSpd(float r)
 {
 	moveSpd = r;
+}
+void CNpc::setActive(bool active)
+{
+	IsActive = active;
 }
