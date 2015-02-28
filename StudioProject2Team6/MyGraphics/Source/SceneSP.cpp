@@ -47,6 +47,7 @@ void SceneSP::Init()
 	toggleDoorBack = false;
 	elevatorDoorOpening = false;
 	elevatorSecondFloor = false;
+	b_inspection = false;
 	IsIntugofwar = false;
 	win = false;
 	lose = false;
@@ -730,6 +731,17 @@ void SceneSP::UpdateUI(double dt)
 
 
 }
+void SceneSP::UpdateItemInspection()
+{
+	if(Application::IsKeyPressed('R'))
+	{
+		b_inspection = true;
+	}
+	else
+	{
+		b_inspection = false;
+	}
+}
 void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
@@ -969,7 +981,7 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateDrunkman(dt);
 	UpdateAI(dt);
 	UpdateItemRotation(dt);
-
+	UpdateItemInspection();
 	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed('F2')) //disable back face culling
@@ -1938,7 +1950,7 @@ void SceneSP::RenderHand()
 
 	//Render ITEM on HAND
 	//TODO: Inspect rotation
-	if(Application::IsKeyPressed('R'))
+	if(b_inspection)
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);

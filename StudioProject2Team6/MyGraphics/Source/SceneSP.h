@@ -72,25 +72,26 @@ private:
 	/*=======================================
 				All update functions
 	=======================================*/
-	void UpdateAI(double dt);
-	void UpdateTrolley(double dt);
-	void UpdateDoor(double dt);
-	void UpdateUI(double dt);
-	void UpdateSamples();
-	void UpdateElevator(double dt);
-	void UpdateMenu();
-	void UpdatePlaying(double dt);
-	void UpdateTugofwar(double dt);
-	void UpdateDrunkman(double dt);
-	void UpdatePlayerSelection();
-	void UpdateItemRotation(double dt);
-	void UpdateTugofwarguy(double dt);
-	void UpdateDrunkmanguy(double dt);
-	void UpdateWalkingman(double dt);
-	void UpdateLogisticman(double dt);
-	void UpdateGhostman(double dt);
-	void UpdateLookingman(double dt);
-	void UpdateLegAnimation(double dt);
+	void UpdateAI(double dt);			//Update AI 
+	void UpdateTrolley(double dt);		//Update trolley
+	void UpdateDoor(double dt);			//Update supermarket door
+	void UpdateUI(double dt);			//Update Game User Interface
+	void UpdateSamples();				//Update sample food stand
+	void UpdateElevator(double dt);		//Update elevator in supermarket
+	void UpdateMenu();					//Update Main Menus
+	void UpdatePlaying(double dt);		//Update application while game is playing
+	void UpdateTugofwar(double dt);		//Update the Tug-Of-War mini game
+	void UpdateDrunkman(double dt);		//Update Drunk Man NPC
+	void UpdatePlayerSelection();		//Update what the player is selecting
+	void UpdateItemRotation(double dt);	//Update player inspection 
+	void UpdateTugofwarguy(double dt);	//Update Tug-Of-War NPC
+	void UpdateDrunkmanguy(double dt);	//Update Drunk-Man NPC
+	void UpdateWalkingman(double dt);	//Update Walking-man NPC
+	void UpdateLogisticman(double dt);	//Update Logistic-man NPC
+	void UpdateGhostman(double dt);		//Update Ghost NPC
+	void UpdateLookingman(double dt);	//Update NPC that looks at shelves
+	void UpdateLegAnimation(double dt);	//Update NPC leg animation
+	void UpdateItemInspection();		//Update player holding and rotating the item
 	
 	/*=======================================
 				All Init functions
@@ -139,6 +140,7 @@ private:
 	bool lose;
 	bool showTuginstruction;
 	bool b_crouching;
+	bool b_inspection;
 	bool isWithinInteractionItem;
 	int i_sampleItems;
 	int i_menuHandle;
