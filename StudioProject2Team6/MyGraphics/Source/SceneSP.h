@@ -69,6 +69,7 @@ private:
 	void RenderSubMenu();
 	void RenderOffice();
 	void RenderStorage();
+	void RenderBuilding();
 	/*=======================================
 				All update functions
 	=======================================*/

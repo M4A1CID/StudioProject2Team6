@@ -129,6 +129,8 @@ void SceneSP::initGeoType()
 	meshList[GEO_BOX]->textureID = LoadTGA("Image//box.tga");
 	meshList[GEO_OFFICECOMPUTER] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//office.obj");
 	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//Office.tga");
+	meshList[GEO_BUILDING] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Building.obj");
+	meshList[GEO_BUILDING]->textureID = LoadTGA("Image//Office.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -1760,6 +1762,7 @@ void SceneSP::Render()
 		RenderCharacters();//Render out characters
 		RenderItem();		//Renders out items
 		RenderTug();
+		RenderBuilding();
 		RenderSupermarket();//Renders out Supermarket
 		RenderUI();			//Renders out UI
 		RenderInventory();	//Render inventory after UI to place above
@@ -2393,7 +2396,29 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.Translate(-19.0f,17.0f,0.0f);
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
 	modelStack.PopMatrix();
-
+}
+void SceneSP::RenderBuilding()
+{
+		modelStack.PushMatrix();
+	modelStack.Translate(150.0f,0.0f,75.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(150.0f,0.0f,225.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(-150.0f,0.0f,75.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(-150.0f,0.0f,225.0f);
+	modelStack.Rotate(270,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
 }
 void SceneSP::RenderTug()
 {
