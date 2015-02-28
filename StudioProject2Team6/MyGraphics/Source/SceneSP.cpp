@@ -870,17 +870,21 @@ void SceneSP::UpdateMenu()
 				if(selectionPointing == MENU_FREE_ROAM)
 				{
 					//FREE ROAM HERE
+					ptrplayer->setCharacterJob(PLAY_FREE_ROAM);
 					i_menuHandle = GAME_PLAYING;
+					
 					
 				}
 				if(selectionPointing == MENU_TREASURE_HUNT)
 				{
 					//DO TREASURE HUNT HERE
+					ptrplayer->setCharacterJob(PLAY_TREASURE_HUNT);
 					i_menuHandle = GAME_PLAYING;
 				}
 				if(selectionPointing == MENU_EASTER_EGG_HUNT)
 				{
 					//DO EASTER EGG HUNT HERE
+					ptrplayer->setCharacterJob(PLAY_EASTER_EGG);
 					i_menuHandle = GAME_PLAYING;
 				}
 			}
