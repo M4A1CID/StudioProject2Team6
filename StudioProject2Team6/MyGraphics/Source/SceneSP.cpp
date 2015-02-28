@@ -107,9 +107,9 @@ void SceneSP::initGeoType()
 	meshList[GEO_ICEBOX] = MeshBuilder::GenerateOBJ("Icebox", "OBJ//Container.obj");
 	meshList[GEO_ICEBOX]->textureID = LoadTGA("Image//ContainerTexture.tga");
 	meshList[GEO_MEATSHELF] = MeshBuilder::GenerateOBJ("meatshelf", "OBJ//meatshelf.obj");
-	meshList[GEO_MEATSHELF]->textureID = LoadTGA("Image//ContainerTexture.tga");
+	meshList[GEO_MEATSHELF]->textureID = LoadTGA("Image//Meatshelf.tga");
 	meshList[GEO_FOODSHELF] = MeshBuilder::GenerateOBJ("foodshelf", "OBJ//FoodShelf.obj");
-	meshList[GEO_FOODSHELF]->textureID = LoadTGA("Image//ContainerTexture.tga");
+	meshList[GEO_FOODSHELF]->textureID = LoadTGA("Image//Foodshelf.tga");
 	meshList[GEO_SHELF] = MeshBuilder::GenerateOBJ("shelf", "OBJ//shelf.obj");
 	meshList[GEO_SHELF]->textureID = LoadTGA("Image//Shelves.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
@@ -119,15 +119,15 @@ void SceneSP::initGeoType()
 	meshList[GEO_ELEVATOR] = MeshBuilder::GenerateOBJ("elevator", "OBJ//Elevator.obj");
 	meshList[GEO_ELEVATOR]->textureID = LoadTGA("Image//Elevator.tga");
 	meshList[GEO_ELEVATORDOOR] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Elevatordoor.obj");
-	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//supermarket.tga");
+	meshList[GEO_ELEVATORDOOR]->textureID = LoadTGA("Image//UI.tga");
 	meshList[GEO_HANDS] = MeshBuilder::GenerateOBJ("playerhand", "OBJ//playerArm.obj");
 	meshList[GEO_HANDS]->textureID = LoadTGA("Image//cashier.tga");
 	meshList[GEO_MAIN_MENU_TITLE] = MeshBuilder::GenerateText("MenuSupermarket",1,1);
 	meshList[GEO_MAIN_MENU_TITLE]->textureID = LoadTGA("Image//Menu_Supermarket.tga");
 	meshList[GEO_BOX] = MeshBuilder::GenerateOBJ("box", "OBJ//box.obj");
-	meshList[GEO_BOX]->textureID = LoadTGA("Image//cashier.tga");
+	meshList[GEO_BOX]->textureID = LoadTGA("Image//box.tga");
 	meshList[GEO_OFFICECOMPUTER] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//office.obj");
-	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//cashier.tga");
+	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//Office.tga");
 	/*=============================
 	Init all food items
 	==============================*/
