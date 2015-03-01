@@ -18,6 +18,7 @@
 #include <string>
 #include <sstream>
 #include <cmath>
+#include <ctime>
 
 using std::vector;
 using std::string;
@@ -169,7 +170,8 @@ private:
 	CContainer* ptrContainer;
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector
-	vector<CItem*> myTrolleyList; //Trolley item vector
+	vector<CItem*> myTreasureList; //Treasure item vector
+	vector<CItem*> myCheckList; //Check list for items
 	vector<CNpc*> myNPCList;
 	struct Transformations
 	{

@@ -160,6 +160,8 @@ static float TugofwarTimerLimiter = 0.3f;
 //Item rotation speed
 static float itemRotationSpeedMultiplyer =60.f;
 
+static int i_total_items_to_find = 3;
+
 //Punch limiter
 static bool PunchTimerLimiter = true;
 
