@@ -826,6 +826,7 @@ void SceneSP::UpdateAI(double dt)
 	UpdateLogisticman(dt);
 	UpdateCustomer(dt);
 	UpdateChattingman(dt);
+	UpdateShoppers(dt);
 	UpdateLegAnimation(dt);
 }
 void SceneSP::UpdateTrolley(double dt)
@@ -1862,7 +1863,7 @@ void SceneSP::UpdateCustomer(double dt)
 		{
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_FORWARD)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
-			{//-10,4,-10
+			{
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
@@ -1874,7 +1875,7 @@ void SceneSP::UpdateCustomer(double dt)
 			}
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_RIGHT)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
-			{ //z=-27 //z=-18
+			{
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
@@ -1898,14 +1899,14 @@ void SceneSP::UpdateCustomer(double dt)
 			}
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
-			{ //z=-27 //z=-18
+			{
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
 				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
 				if(myNPCList[i]->getZpos() >= -100 && myNPCList[i]->getZpos() <= -97)
 				{
-					myNPCList[i]->setCharacterState(STATE_IDLE);
+					myNPCList[i]->setCharacterState(STATE_REACTIVATE);
 				}
 			}
 
@@ -2052,6 +2053,18 @@ void SceneSP::UpdateChattingman(double dt)
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
 			}
+			}
+			}
+			}
+void SceneSP::UpdateShoppers(double dt)
+{//-20,0,216
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_REACTIVATE)
+		{
+			myNPCList[i]->setXpos(-20);
+			myNPCList[i]->setYpos(0);
+			myNPCList[i]->setZpos(216);
 		}
 	}
 }
@@ -2885,25 +2898,24 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 }
 void SceneSP::RenderBuilding()
 {
-	
 	modelStack.PushMatrix();
-	modelStack.Translate(150.0f,0.0f,75.0f);
+	modelStack.Translate(75.0f,0.0f,75.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(75.0f,0.0f,225.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-75.0f,0.0f,75.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
-	modelStack.Translate(150.0f,0.0f,225.0f);
+	modelStack.Translate(-75.0f,0.0f,225.0f);
 	modelStack.Rotate(90,0,1,0);
-	RenderMesh(meshList[GEO_BUILDING], toggleLight);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(-150.0f,0.0f,75.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BUILDING], toggleLight);
-	modelStack.PopMatrix();
-	modelStack.PushMatrix();
-	modelStack.Translate(-150.0f,0.0f,225.0f);
-	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
 }

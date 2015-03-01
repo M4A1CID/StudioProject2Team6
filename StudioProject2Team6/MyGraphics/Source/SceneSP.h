@@ -93,7 +93,8 @@ private:
 	void UpdateWalkingman(double dt);	//Update Walking-man NPC
 	void UpdateLogisticman(double dt);	//Update Logistic-man NPC
 	void UpdateGhostman(double dt);		//Update Ghost NPC
-	void UpdateCustomer(double dt);
+	void UpdateCustomer(double dt);     //Update Customer NPC
+	void UpdateShoppers(double dt); 
 	void UpdateLookingman(double dt);	//Update NPC that looks at shelves
 	void UpdateChattingman(double dt);
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
