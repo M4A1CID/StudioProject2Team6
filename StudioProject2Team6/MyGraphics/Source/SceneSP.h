@@ -90,6 +90,7 @@ private:
 	void UpdateWalkingman(double dt);	//Update Walking-man NPC
 	void UpdateLogisticman(double dt);	//Update Logistic-man NPC
 	void UpdateGhostman(double dt);		//Update Ghost NPC
+	void UpdateCustomer(double dt);
 	void UpdateLookingman(double dt);	//Update NPC that looks at shelves
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
@@ -123,6 +124,7 @@ private:
 	bool elevatorSecondFloor;
 	float interactionTimer;
 	float LogisticinteractionTimer;
+	float CustomerinteractionTimer;
 	float moveDoorFront;
 	float moveDoorBack;
 	float trolleyrotation;
@@ -146,6 +148,7 @@ private:
 	int i_sampleItems;
 	int i_menuHandle;
 	int i_drunkmanAct;
+	int i_CashierAct;
 	bool elevatorIdle;
 	bool IsIntugofwar;
 	string s_money;

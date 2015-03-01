@@ -28,10 +28,11 @@ void SceneSP::Init()
 	}
 
 	/*=============================================
-			Init variables here
+	Init variables here
 	=============================================*/
 	i_menuHandle = MAIN_MENU;
 	i_drunkmanAct = DRUNKIDLE;
+	i_CashierAct = LOOKATCUSTOMER;
 	initCharacter(); //Initilize the player
 	//Initialize all Inventory to NULL
 	ptrItem = new CEmptyItem;
@@ -55,6 +56,7 @@ void SceneSP::Init()
 	isWithinInteractionItem = false;
 	interactionTimer = 0.0f;
 	LogisticinteractionTimer = 0.0f;
+	CustomerinteractionTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
@@ -752,6 +754,7 @@ void SceneSP::UpdateAI(double dt)
 	UpdateGhostman(dt);
 	UpdateLookingman(dt);
 	UpdateLogisticman(dt);
+	UpdateCustomer(dt);
 	UpdateLegAnimation(dt);
 }
 void SceneSP::UpdateTrolley(double dt)
@@ -822,7 +825,7 @@ void SceneSP::UpdateMenu()
 					interactionTimer = 0;
 					selectionPointing = MENU_FREE_ROAM;
 					i_menuHandle = SUB_MENU;
-					
+
 				}
 				if(selectionPointing == MENU_EXIT)
 				{
@@ -836,7 +839,7 @@ void SceneSP::UpdateMenu()
 	//If at SUB/Character menu 
 	if(i_menuHandle == SUB_MENU)
 	{
-		
+
 		if(interactionTimer > menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
@@ -845,7 +848,7 @@ void SceneSP::UpdateMenu()
 				{
 					interactionTimer = 0;
 					selectionPointing++;
-					
+
 				}
 				else
 				{
@@ -859,7 +862,7 @@ void SceneSP::UpdateMenu()
 				{
 					interactionTimer = 0;
 					selectionPointing--;
-					
+
 				}
 				else
 				{
@@ -874,8 +877,8 @@ void SceneSP::UpdateMenu()
 					//FREE ROAM HERE
 					ptrplayer->setCharacterJob(PLAY_FREE_ROAM);
 					i_menuHandle = GAME_PLAYING;
-					
-					
+
+
 				}
 				if(selectionPointing == MENU_TREASURE_HUNT)
 				{
@@ -960,7 +963,7 @@ void SceneSP::UpdatePlaying(double dt)
 				camera.target.y -=dt*5;
 			}
 		}
-		
+
 	}
 	else
 	{
@@ -1049,6 +1052,7 @@ void SceneSP::UpdatePlaying(double dt)
 }
 void SceneSP::Update(double dt)
 {
+	CustomerinteractionTimer+=dt;
 	LogisticinteractionTimer+=dt;
 	interactionTimer+=dt;
 	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU)
@@ -1583,31 +1587,31 @@ void SceneSP::UpdateLogisticman(double dt)
 		{
 			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
 			{
-			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
-			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
-			myNPCList[i]->setRotation(270.0f);
+				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
+				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+				myNPCList[i]->setRotation(270.0f);
 			}
 
 			if(myNPCList[i]->getCharacterState() == STATE_ACTIVE)
 			{
 				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
-		       	myNPCList[i]->setRightArm(-WalkingNpcInitArm);
-		    	myNPCList[i]->setRotation(270.0f);
+				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+				myNPCList[i]->setRotation(270.0f);
 				if(LogisticinteractionTimer > NPCLookLimiter && (myNPCList[i]->getZpos() < -20.f))
 				{
 					myNPCList[i]->setRotation(0.0f);
 					myNPCList[i]->setAnimationType(WALKING);
-		     	    myNPCList[i]->setmoveSpd(5.0f);
+					myNPCList[i]->setmoveSpd(5.0f);
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 				}
 				if(LogisticinteractionTimer > NPCLookLimiter && (myNPCList[i]->getZpos() > 24.f))
 				{
 					myNPCList[i]->setRotation(180.0f);
 					myNPCList[i]->setAnimationType(WALKING);
-		     	    myNPCList[i]->setmoveSpd(5.0f);
+					myNPCList[i]->setmoveSpd(5.0f);
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
 				}
-				
+
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
@@ -1615,7 +1619,7 @@ void SceneSP::UpdateLogisticman(double dt)
 				{
 					LogisticinteractionTimer = 0;
 					myNPCList[i]->setAnimationType(IDLE);
-		     	    myNPCList[i]->setmoveSpd(0.0f);
+					myNPCList[i]->setmoveSpd(0.0f);
 					myNPCList[i]->setLeftLeg(0.0f);
 					myNPCList[i]->setRightLeg(0.0f);
 					myNPCList[i]->setCharacterState(STATE_ACTIVE);
@@ -1628,7 +1632,7 @@ void SceneSP::UpdateLogisticman(double dt)
 				{
 					LogisticinteractionTimer = 0;
 					myNPCList[i]->setAnimationType(IDLE);
-		     	    myNPCList[i]->setmoveSpd(0.0f);
+					myNPCList[i]->setmoveSpd(0.0f);
 					myNPCList[i]->setLeftLeg(0.0f);
 					myNPCList[i]->setRightLeg(0.0f);
 					myNPCList[i]->setCharacterState(STATE_ACTIVE);
@@ -1638,6 +1642,179 @@ void SceneSP::UpdateLogisticman(double dt)
 
 		}
 	}
+}
+void SceneSP::UpdateCustomer(double dt)
+{
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		for(int j = 0; j< myNPCList.size(); ++j)
+		{
+			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_ACTIVE)
+				&&(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_ACTIVE)
+				&&(myNPCList[i]->getXpos()==myNPCList[j]->getXpos()))
+			{
+				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
+				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+				if(i_CashierAct==LOOKATCUSTOMER)
+				{
+					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
+					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
+					if(CustomerinteractionTimer > 10.0f)
+					{
+						CustomerinteractionTimer = 0;
+						i_CashierAct = LOOKATSCREEN;
+					}
+				}
+				if(i_CashierAct==LOOKATSCREEN)
+				{
+					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
+					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
+					myNPCList[j]->setRotation(-20.0f);
+					if(CustomerinteractionTimer > 10.0f)
+					{
+						CustomerinteractionTimer = 0;
+						i_CashierAct = LOOKATITEM;
+					}
+				}
+				if(i_CashierAct==LOOKATITEM)
+				{
+					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
+					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
+					myNPCList[j]->setRotation(20.0f);
+					if(CustomerinteractionTimer > 10.0f)
+					{
+						CustomerinteractionTimer = 0;
+						i_CashierAct = LOOKATCUSTOMER;
+						myNPCList[i]->setCharacterState(STATE_FORWARD);
+						myNPCList[j]->setCharacterState(STATE_IDLE);
+					}
+				}
+			}
+		}
+	}
+
+	for(int i = 0; i< myNPCList.size(); ++i)
+	{
+		for(int j = 0; j< myNPCList.size(); ++j)
+		{
+			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_FORWARD)
+				&&(myNPCList[j]->getCharacterJob() == CASHIER))
+			{//-10,4,-10
+				myNPCList[i]->setAnimationType(WALKING);
+				myNPCList[i]->setmoveSpd(1.0f);
+				myNPCList[i]->setRotation(90);
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
+				if(myNPCList[i]->getXpos() >= (myNPCList[j]->getXpos()+5) && myNPCList[i]->getXpos() <= (myNPCList[j]->getXpos()+8))
+				{
+					myNPCList[i]->setCharacterState(STATE_RIGHT);
+				}
+			}
+			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_RIGHT)
+				&&(myNPCList[j]->getCharacterJob() == CASHIER))
+			{ //z=-27 //z=-18
+				myNPCList[i]->setAnimationType(WALKING);
+				myNPCList[i]->setmoveSpd(1.0f);
+				myNPCList[i]->setRotation(180);
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+				if(myNPCList[i]->getZpos() >= (myNPCList[j]->getZpos()-9) && myNPCList[i]->getZpos() <= (myNPCList[j]->getZpos()-8))
+				{
+					myNPCList[i]->setCharacterState(STATE_LEFT);
+				}
+			}
+			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_LEFT)
+				&&(myNPCList[j]->getCharacterJob() == CASHIER))
+			{
+				myNPCList[i]->setAnimationType(WALKING);
+				myNPCList[i]->setmoveSpd(3.0f);
+				myNPCList[i]->setRotation(90);
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
+				if(myNPCList[i]->getXpos() >= 23 && myNPCList[i]->getXpos() <= 25)
+				{
+					myNPCList[i]->setCharacterState(STATE_BACKWARD);
+				}
+			}
+			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_BACKWARD)
+				&&(myNPCList[j]->getCharacterJob() == CASHIER))
+			{ //z=-27 //z=-18
+				myNPCList[i]->setAnimationType(WALKING);
+				myNPCList[i]->setmoveSpd(3.0f);
+				myNPCList[i]->setRotation(180);
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+				if(myNPCList[i]->getZpos() >= -100 && myNPCList[i]->getZpos() <= -97)
+				{
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+				}
+			}
+
+			if(myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_IDLE)
+			{
+				myNPCList[i]->setRotation(180.0f);
+				if(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_IDLE)
+				{
+					if (((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) <= 7) && ((myNPCList[i]->getXpos()) == (myNPCList[j]->getXpos())))
+					{
+						myNPCList[i]->setAnimationType(IDLE);
+				        myNPCList[i]->setLeftLeg(0.0f);
+				        myNPCList[i]->setRightLeg(0.0f);
+						myNPCList[j]->setCharacterState(STATE_ACTIVE);
+						myNPCList[i]->setCharacterState(STATE_ACTIVE);
+					}
+					else if(((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) >= 7) && ((myNPCList[i]->getXpos()) == (myNPCList[j]->getXpos())))
+					{
+						myNPCList[i]->setAnimationType(WALKING);
+						myNPCList[i]->setmoveSpd(1.0f);
+						myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+					}
+				}
+				myNPCList[i]->setAnimationType(IDLE);
+			myNPCList[i]->setLeftLeg(0.0f);
+			myNPCList[i]->setRightLeg(0.0f);
+			}
+		}
+	}
+
+
+	/*
+	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
+	myNPCList.push_back(ptrNPC);
+	//cashier 3
+	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
+	myNPCList.push_back(ptrNPC);
+	//Customer at cashier 2
+	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.f, 0.f, -15.f);
+	modelStack.Rotate(180,0,1,0);
+	RenderMesh(meshList[GEO_CASHIER], toggleLight);
+	modelStack.PopMatrix();
+
+
+	//Customer at cashier 3
+	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-6.f, 0.f, -15.f);
+	modelStack.Rotate(180,0,1,0);
+	RenderMesh(meshList[GEO_CASHIER], toggleLight);
+	modelStack.PopMatrix();*/
 }
 void SceneSP::UpdateLegAnimation(double dt)
 {
@@ -1922,7 +2099,7 @@ void SceneSP::RenderTrolleys()
 }
 void SceneSP::RenderHand()
 {
-	
+
 	//Free will hands
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
@@ -1937,7 +2114,7 @@ void SceneSP::RenderHand()
 		*/
 
 		/*=============================
-				Put item on hand
+		Put item on hand
 		=============================*/
 		modelStack.PushMatrix();
 		modelStack.Rotate((180+handrotationleftandright),0,1,0);
@@ -2261,7 +2438,7 @@ void SceneSP::RenderSupermarket()
 
 
 	RenderDoors();			//Render Alpha Doors AFTER EVERYTHING in Supermarket
-	
+
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderShelves()
@@ -2364,7 +2541,7 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
-	
+
 
 	//16,17,-28
 	modelStack.PushMatrix();
@@ -2399,22 +2576,22 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 }
 void SceneSP::RenderBuilding()
 {
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(150.0f,0.0f,75.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(150.0f,0.0f,225.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(-150.0f,0.0f,75.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(-150.0f,0.0f,225.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
@@ -2449,7 +2626,7 @@ void SceneSP::RenderInventory()
 	for( int i = 0; i< ptrplayer->getItemHeld();++i)
 	{
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
-		
+
 	}
 }
 void SceneSP::RenderOffice()
@@ -2478,7 +2655,7 @@ void SceneSP::RenderOffice()
 	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(22.0f, 17.0f, 14.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
@@ -2511,43 +2688,43 @@ void SceneSP::RenderStorage()
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(36.0f, 17.0f, -18.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(36.0f, 17.0f, -22.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(36.0f, 17.0f, -26.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(24.0f, 17.0f, -14.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(24.0f, 17.0f, -18.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(24.0f, 17.0f, -22.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
+	modelStack.PushMatrix();
 	modelStack.Translate(24.0f, 17.0f, -26.0f);
 	modelStack.Rotate(270,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
@@ -2943,7 +3120,7 @@ void SceneSP::checkReturnPoint()
 					std::cout << "Item returned: " <<ptrplayer->getItem(inventoryPointing)->getName() << std::endl;
 					ptrplayer->setInventory(&emptyItem,inventoryPointing);
 					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
-					
+
 				}
 			}
 		}
