@@ -133,6 +133,11 @@ void SceneSP::initGeoType()
 	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//Office.tga");
 	meshList[GEO_BUILDING] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Building.obj");
 	meshList[GEO_BUILDING]->textureID = LoadTGA("Image//Office.tga");
+	meshList[GEO_CAGE] = MeshBuilder::GenerateQuad("cage", Color(1, 1, 1), 1.0f);
+	meshList[GEO_CAGE]->textureID = LoadTGA("Image//TheCage.tga");
+	meshList[GEO_CAGEWALL] = MeshBuilder::GenerateQuad("cage", Color(0, 0, 0), 1.0f);
+	meshList[GEO_GABEN] = MeshBuilder::GenerateText("gaben",1,1);
+	meshList[GEO_GABEN]->textureID = LoadTGA("Image//AllHailGabe.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -278,6 +283,9 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 	//Chatting
 	ptrNPC = new CNpc(11,17,25,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CHATTING_GUY);
+	myNPCList.push_back(ptrNPC);
+	//idle
+	ptrNPC = new CNpc(-2,17,-22,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,IDLE_GUY);
 	myNPCList.push_back(ptrNPC);
 
 	//Ghost npc
@@ -1029,6 +1037,8 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateAI(dt);
 	UpdateItemRotation(dt);
 	UpdateItemInspection();
+	UpdateCage(dt);
+	UpdateGaben(dt);
 	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed('F2')) //disable back face culling
@@ -1050,20 +1060,15 @@ void SceneSP::UpdatePlaying(double dt)
 
 	UpdateUI(dt);
 	checkPickUpItem();
-	if(!IsIntugofwar)
+	if(!IsIntugofwar && !caged)
 		camera.UpdateMovement(dt);
 	camera.UpdateView(dt);
 	UpdateTrolley(dt);
 	UpdateElevator(dt);
 	UpdateDoor(dt);
 	UpdateSamples();
-	checkSupermarketCollision();
-	checkFreezerCollision();
-	checkShelfCollision();
-	checkCashierCollision();
-	checkElevatorCollision();
+	checkCollision();
 	checkReturnPoint();
-	checkNPCCollision();
 	if(Application::IsKeyPressed('U'))
 		Cashier.translateY += (float) 50 * dt;
 	//Down
@@ -1199,6 +1204,7 @@ void SceneSP::UpdateElevator(double dt)
 }
 void SceneSP::UpdateDoor(double dt)
 {
+	static bool test = false;
 	//Front door control
 	if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
 		toggleDoorFront = true;
@@ -1215,10 +1221,27 @@ void SceneSP::UpdateDoor(double dt)
 			moveDoorFront += 10.0f * dt;
 	}
 	//Back door control
-	if((camera.position.z < 0.0f && camera.position.z > -50.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
-		toggleDoorBack = true;
-	else
-		toggleDoorBack = false;
+	for(int i = 0; i < myNPCList.size(); ++i)//check npc pos
+	{
+		if(((myNPCList[i]->getZpos() < -15.0f && myNPCList[i]->getZpos() > -40.0f) && (myNPCList[i]->getXpos() > 10.0f && myNPCList[i]->getXpos() < 35.0f))&&
+			myNPCList[i]->getYpos()<5
+			)
+		{
+			toggleDoorBack = true;
+			test = true;
+			break;
+		}
+		else
+			toggleDoorBack = false;
+	}
+	if(!test)
+	{
+		if((camera.position.z < -15.0f && camera.position.z > -40.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
+			toggleDoorBack = true;
+		else
+			toggleDoorBack = false;
+	}
+	test = false;
 	if(toggleDoorBack)
 	{
 		if(moveDoorBack > -7.0f)
@@ -1763,7 +1786,7 @@ void SceneSP::UpdateCustomer(double dt)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
 			{//-10,4,-10
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(1.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
 				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
 				if(myNPCList[i]->getXpos() >= (myNPCList[j]->getXpos()+5) && myNPCList[i]->getXpos() <= (myNPCList[j]->getXpos()+8))
@@ -1775,9 +1798,9 @@ void SceneSP::UpdateCustomer(double dt)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
 			{ //z=-27 //z=-18
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(1.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos() - (myNPCList[i]->getmoveSpd()*dt));
 				if(myNPCList[i]->getZpos() >= (myNPCList[j]->getZpos()-9) && myNPCList[i]->getZpos() <= (myNPCList[j]->getZpos()-8))
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
@@ -1787,7 +1810,7 @@ void SceneSP::UpdateCustomer(double dt)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
 			{
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(3.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
 				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
 				if(myNPCList[i]->getXpos() >= 23 && myNPCList[i]->getXpos() <= 25)
@@ -1799,7 +1822,7 @@ void SceneSP::UpdateCustomer(double dt)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
 			{ //z=-27 //z=-18
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(3.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
 				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
 				if(myNPCList[i]->getZpos() >= -100 && myNPCList[i]->getZpos() <= -97)
@@ -1885,6 +1908,8 @@ void SceneSP::UpdateChattingman(double dt)
 	static float Xcon = 0;
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
+		if(myNPCList[i]->getCharacterJob() == IDLE_GUY)
+			myNPCList[i]->setYRotation(180.0f);
 		if(myNPCList[i]->getCharacterJob() == CHATTING_GUY)
 		{
 			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
@@ -1910,7 +1935,7 @@ void SceneSP::UpdateChattingman(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 			{
-				if(myNPCList[i]->getZpos() < Zcon - 45)
+				if(myNPCList[i]->getZpos() < Zcon - 47)
 				{
 					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()+90);
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
@@ -1938,10 +1963,13 @@ void SceneSP::UpdateChattingman(double dt)
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
-				if(myNPCList[i]->getZpos() > Zcon+50)
+				if(myNPCList[i]->getZpos() > Zcon+47)
 				{
 					myNPCList[i]->setYRotation(0);
 					myNPCList[i]->setCharacterState(STATE_IDLE);
+					myNPCList[i]->setNPCTimer(0.0f);
+					myNPCList[i]->setXpos(11.0f);
+					myNPCList[i]->setZpos(25.0f);
 					counter = 0;
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
@@ -1973,6 +2001,63 @@ void SceneSP::UpdateLegAnimation(double dt)
 			else
 				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
 		}
+	}
+}
+void SceneSP::UpdateCage(double dt)
+{
+	if(Application::IsKeyPressed('E') && ((camera.position.x > 42.5f && camera.position.x < 46.0f) && (camera.position.z < -23.0f && camera.position.z > -27.0f)))
+	{
+		diffX = camera.position.x-0.0f;
+		diffZ = camera.position.z-(65.0f);
+		diffY = camera.position.y-(-30.0f);
+		camera.position.y = -30.0f;
+		camera.target.y -= diffY;
+		camera.position.x = 0.0f;
+		camera.target.x -= diffX;
+		camera.position.z = 65.0f;
+		camera.target.z -= diffZ;
+		diffX = diffZ = diffY = 0.0f;
+		caged = true;
+	}
+	if(caged)
+	{
+		cagedPos += 10 * dt;
+		if(cagedPos > 60)
+		{
+			caged = false;
+			cagedPos = -75.0f;
+			diffX = camera.position.x-(0.0f);
+			diffZ = camera.position.z-(100.0f);
+			diffY = camera.position.y-(4.5f);
+			camera.position.y = 4.5f;
+			camera.target.y -= diffY;
+			camera.position.x = 0.0f;
+			camera.target.x -= diffX;
+			camera.position.z = 100.0f;
+			camera.target.z -= diffZ;
+			diffX = diffZ = diffY = 0.0f;
+		}
+	}
+}
+void SceneSP::UpdateGaben(double dt)
+{
+	if(Application::IsKeyPressed('G')&&summonG == 0)
+		summonG++;
+	if(Application::IsKeyPressed('A')&&summonG == 1)
+		summonG++;
+	if(Application::IsKeyPressed('B')&&summonG == 2)
+		summonG++;
+	if(Application::IsKeyPressed('E')&&summonG == 3)
+		summonG++;
+	if(Application::IsKeyPressed('N')&&summonG == 4)
+		gabed = true;
+	if(gabed)
+		moveG += 20 * dt;
+	if(moveG > 95)
+	{
+		summonG = 0;
+		moveG = 0.0f;
+		gabed = false;
 	}
 }
 void SceneSP::RenderUI()
@@ -2079,6 +2164,7 @@ void SceneSP::Render()
 		RenderTug();
 		RenderBuilding();
 		RenderSupermarket();//Renders out Supermarket
+		RenderCage();
 		RenderUI();			//Renders out UI
 		RenderInventory();	//Render inventory after UI to place above
 		break;
@@ -2877,6 +2963,58 @@ void SceneSP::RenderStorage()
 	RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 }
+void SceneSP::RenderCage()
+{
+	if(gabed)
+		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
+	if(caged)
+	{
+		modelStack.PushMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(0.0f, -30.0f, cagedPos);
+		modelStack.Scale(50.0f,50.0f,50.0f);
+		RenderMesh(meshList[GEO_CAGE], true);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();//bot
+		modelStack.Translate(0.0f, -30.0f, 70.0f);
+		modelStack.Scale(50.0f,50.0f,50.0f);
+		modelStack.Rotate(180.0f,1,0,0);
+		RenderMesh(meshList[GEO_CAGEWALL], true);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();//bot
+		modelStack.Translate(0.0f, -54.0f, 0.0f);
+		modelStack.Scale(50.0f,50.0f,150.0f);
+		modelStack.Rotate(-90.0f,1,0,0);
+		RenderMesh(meshList[GEO_CAGEWALL], true);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();//top
+		modelStack.Translate(0.0f, -6.0f, 0.0f);
+		modelStack.Scale(50.0f,50.0f,150.0f);
+		modelStack.Rotate(90.0f,1,0,0);
+		RenderMesh(meshList[GEO_CAGEWALL], true);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(-24.0f, -29.0f, 0.0f);
+		modelStack.Scale(50.0f,50.0f,150.0f);
+		modelStack.Rotate(90.0f,0,1,0);
+		RenderMesh(meshList[GEO_CAGEWALL], true);
+		modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+		modelStack.Translate(24.0f, -29.0f, 0.0f);
+		modelStack.Scale(50.0f,50.0f,150.0f);
+		modelStack.Rotate(-90.0f,0,1,0);
+		RenderMesh(meshList[GEO_CAGEWALL], true);
+		modelStack.PopMatrix();
+
+		modelStack.PopMatrix();
+	}
+}
 void SceneSP::checkPickUpItem()
 {
 
@@ -2928,6 +3066,66 @@ void SceneSP::checkPickUpItem()
 			addToInventory(myStockList[chosen]);
 			myStockList[chosen]->setActiveState(false);
 			std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
+		}
+	}
+}
+void SceneSP::checkCollision()
+{
+	checkSupermarketCollision();
+	checkFreezerCollision();
+	checkCashierCollision();
+	checkElevatorCollision();
+	checkObjectCollision(13.0f, 17.0f, -26.0f, 8.0f, 4.0f);//meat shelves
+	checkObjectCollision(1.0f, 17.0f, -26.0f, 8.0f, 4.0f);
+	checkObjectCollision(-11.0f, 17.0f, -26.0f, 8.0f, 4.0f);
+	checkObjectCollision(-23.0f, 17.0f, -26.0f, 8.0f, 4.0f);
+	checkObjectCollision(-21.0f, 0.0f, 11.0f, 5.0f, 5.0f);//food stand
+	checkObjectCollision(-19.0f, 17.0f, 0.0f, 5.0f, 5.0f);
+	checkObjectCollision(-37.0f, 0.0f, 0.0f, 4.0f, 6.0f);
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)//NPC collision
+	{
+		checkObjectCollision(myNPCList[i]->getXpos(),myNPCList[i]->getYpos(), myNPCList[i]->getZpos(), 2.0f, 2.0f);
+	}
+	for(unsigned int i = 0; i< myContainerList.size(); ++i)//Shelf collision
+	{
+		checkObjectCollision(myContainerList[i]->getXpos(), myContainerList[i]->getYpos(), myContainerList[i]->getZpos(), ShelfWidthX, ShelfWidthZ);
+	}
+}
+void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ)
+{
+	if((camera.position.y - posY < 10) && (camera.position.y - posY > 0))
+	{
+		if((camera.position.x > (posX + widthX - (Coffset)) && camera.position.x < (posX + widthX)) && 
+			(camera.position.z > (posZ - widthZ + (Coffset/2)) && camera.position.z < (posZ + widthZ - (Coffset/2))))
+		{
+			diffX = camera.position.x - (posX + widthX);
+			camera.position.x = posX + widthX;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > (posX - widthX) && camera.position.x < (posX - widthX + (Coffset/2))) && 
+			(camera.position.z > (posZ - widthZ + (Coffset / 2)) && camera.position.z < (posZ + widthZ - (Coffset / 2))))
+		{
+			diffX = camera.position.x - (posX - widthX);
+			camera.position.x = posX- widthX;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > (posX - widthX) && camera.position.x < (posX + widthX)) && 
+			(camera.position.z > (posZ - widthZ) && camera.position.z < (posZ - widthZ + Coffset)))
+		{
+			diffZ = camera.position.z - (posZ - widthZ);
+			camera.position.z = posZ - widthZ;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > (posX - widthX) && camera.position.x < (posX + widthX)) && 
+			(camera.position.z > (posZ + widthZ - Coffset) && camera.position.z < (posZ + widthZ)))
+		{
+			diffZ = camera.position.z - (posZ + widthZ);
+			camera.position.z = posZ + widthZ;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
 		}
 	}
 }
@@ -3048,46 +3246,21 @@ void SceneSP::checkSupermarketCollision()
 			diffZ = 0.0f;
 		}
 	}
-}
-void SceneSP::checkShelfCollision()
-{
-	for(unsigned int i = 0; i< myContainerList.size(); ++i)
+	if(camera.position.y < 10)
 	{
-		if((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0))
+		if((camera.position.x > -36 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 39))
 		{
-			//std::cout<<myContainerList[i]->getXpos()<<std::endl;
-			if((camera.position.x > (myContainerList[i]->getXpos()+(ShelfWidthX-2)) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
-				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ+1) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ-1)))
-			{
-				diffX = camera.position.x - (myContainerList[i]->getXpos()+ShelfWidthX);
-				camera.position.x = myContainerList[i]->getXpos()+ShelfWidthX;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()-(ShelfWidthX-2))) && 
-				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ+1) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ-1)))
-			{
-				diffX = camera.position.x - (myContainerList[i]->getXpos()-ShelfWidthX);
-				camera.position.x = myContainerList[i]->getXpos()-ShelfWidthX;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
-				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()-(ShelfWidthZ-2))))
-			{
-				diffZ = camera.position.z - (myContainerList[i]->getZpos()-ShelfWidthZ);
-				camera.position.z = myContainerList[i]->getZpos()-ShelfWidthZ;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
-				(camera.position.z > (myContainerList[i]->getZpos()+(ShelfWidthZ-2)) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
-			{
-				diffZ = camera.position.z - (myContainerList[i]->getZpos()+ShelfWidthZ);
-				camera.position.z = myContainerList[i]->getZpos()+ShelfWidthZ;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
+			diffX = camera.position.x - (-34);
+			camera.position.x = -34;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > -38 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 12))
+		{
+			diffZ = camera.position.z - (10);
+			camera.position.z = 10;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
 		}
 	}
 }
@@ -3263,49 +3436,6 @@ void SceneSP::checkReturnPoint()
 					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 
 				}
-			}
-		}
-	}
-}
-void SceneSP::checkNPCCollision()
-{
-	for(unsigned int i = 0; i< myNPCList.size(); ++i)
-	{
-		if((camera.position.y - myNPCList[i]->getYpos() < 10) && (camera.position.y - myNPCList[i]->getYpos() > 0))
-		{
-			//check z
-			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()+2) && 
-				(camera.position.z > myNPCList[i]->getZpos()+1 && camera.position.z < myNPCList[i]->getZpos()+2))
-			{
-				diffZ = camera.position.z - (myNPCList[i]->getZpos()+2);
-				camera.position.z = myNPCList[i]->getZpos()+2;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()+2) && 
-				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()-1))
-			{
-				diffZ = camera.position.z - (myNPCList[i]->getZpos()-2);
-				camera.position.z = myNPCList[i]->getZpos()-2;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-			//check x
-			if((camera.position.x > myNPCList[i]->getXpos()+1 && camera.position.x < myNPCList[i]->getXpos()+2) && 
-				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()+2))
-			{
-				diffX = camera.position.x - (myNPCList[i]->getXpos()+2);
-				camera.position.x = myNPCList[i]->getXpos()+2;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()-1) && 
-				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()+2))
-			{
-				diffX = camera.position.x - (myNPCList[i]->getXpos()-2);
-				camera.position.x = myNPCList[i]->getXpos()-2;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
 			}
 		}
 	}

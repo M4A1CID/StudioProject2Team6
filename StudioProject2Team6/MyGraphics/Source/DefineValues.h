@@ -89,6 +89,19 @@ static float NPCLookLimiter = 10.0f;
 static float spdMod = 13.0f;
 static float maxlegRot = 35.0f;
 
+//Collision offset
+static float Coffset = 2.0f;
+
+//Cage
+static bool caged = false;
+static float cagedPos = -75.0f;
+static float diffY = 0.0f;
+
+//Gaben
+static bool gabed = false;
+static int summonG = 0;
+static float moveG = 0.0f;
+
 //World size for skybox
 static float world_size = 3000.0f;
 
