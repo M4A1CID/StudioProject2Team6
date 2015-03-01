@@ -2576,6 +2576,7 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 }
 void SceneSP::RenderBuilding()
 {
+	
 	modelStack.PushMatrix();
 	modelStack.Translate(150.0f,0.0f,75.0f);
 	modelStack.Rotate(90,0,1,0);
