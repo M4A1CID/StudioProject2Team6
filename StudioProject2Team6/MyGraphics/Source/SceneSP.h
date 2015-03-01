@@ -19,6 +19,7 @@
 #include <sstream>
 #include <cmath>
 #include <ctime>
+#include "SFML\Audio.hpp"
 
 using std::vector;
 using std::string;
@@ -181,6 +182,8 @@ private:
 		float rotateA;
 	};
 
+	//Sound Buffers
+	sf::Music music;
 public:
 	SceneSP();
 	~SceneSP();
