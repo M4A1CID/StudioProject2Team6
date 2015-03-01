@@ -25,6 +25,7 @@ CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int s
 	rotateLeftLeg = 0.f;
 	rotateRightLeg = 0.f;
 	moveSpd = 5.0f;
+	NPCTimer = 0.0f;
 	IsActive = true;
 	legRotDir = false;
 }
@@ -78,6 +79,10 @@ float CNpc::getmoveSpd()
 {
 	return moveSpd;
 }
+float CNpc::getNPCTimer()
+{
+	return NPCTimer;
+}
 bool CNpc::getActive()
 {
 	return IsActive;
@@ -118,6 +123,10 @@ void CNpc::setZRotation(float r)
 void CNpc::setmoveSpd(float r)
 {
 	moveSpd = r;
+}
+void CNpc::setNPCTimer(float timer)
+{
+	NPCTimer = timer;
 }
 void CNpc::setActive(bool active)
 {

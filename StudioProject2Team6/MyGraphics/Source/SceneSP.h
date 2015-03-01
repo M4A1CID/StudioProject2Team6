@@ -95,6 +95,7 @@ private:
 	void UpdateChattingman(double dt);
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
+	void UpdateAITimer(double dt);
 	
 	/*=======================================
 				All Init functions
