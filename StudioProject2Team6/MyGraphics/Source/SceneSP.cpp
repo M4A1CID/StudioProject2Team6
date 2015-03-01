@@ -721,7 +721,7 @@ void SceneSP::DeclareLightParameters()
 }
 void SceneSP::UpdateUI(double dt)
 {
-	std::stringstream ss_fps,ss_position,ss_money, ss_camera;
+	std::stringstream ss_fps,ss_position,ss_money, ss_camera,ss_item_price;
 
 	ss_camera << camera.target.x << "," << camera.target.y << "," << camera.target.z;
 	s_camera_target = ss_camera.str();
@@ -735,6 +735,8 @@ void SceneSP::UpdateUI(double dt)
 	ss_money << ptrplayer->getMoney();
 	s_money = ss_money.str();
 
+	ss_item_price <<  ptrplayer->getItem(inventoryPointing)->getPrice();
+	s_item_price = ss_item_price.str();
 
 }
 void SceneSP::UpdateItemInspection()
@@ -1948,8 +1950,19 @@ void SceneSP::RenderUI()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pick up " +s_item_name,Color(0,1,0),2,1,16);
 	}
+	//If player is inspecting the item
+	if(b_inspection)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,5);
+	}
+	//If player is within return point zone
+	if(checkReturnPoint())
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,5);
+	}
 	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5,22.5+(inventoryPointing*5.0),2.5f);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
+	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2,0,27);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
@@ -3209,17 +3222,18 @@ void SceneSP::checkElevatorCollision()
 		}
 	}
 }
-void SceneSP::checkReturnPoint()
+bool SceneSP::checkReturnPoint()
 {
-	//If triggering interaction
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+	
+	//If within RETURN POINT boundary
+	if((camera.position.x > returnPointBoxPosX-returnPointBoxWidthOffset)&& camera.position.x < (returnPointBoxPosX+returnPointBoxInteractionWidth+returnPointBoxWidthOffset))
 	{
-		//If within RETURN POINT boundary
-		if((camera.position.x > returnPointBoxPosX-returnPointBoxWidthOffset)&& camera.position.x < (returnPointBoxPosX+returnPointBoxInteractionWidth+returnPointBoxWidthOffset))
+		if(camera.position.z > (returnPointBoxPosZ - returnPointBoxInteractionLength) && camera.position.z < (returnPointBoxPosZ + returnPointBoxInteractionLength))
 		{
-			if(camera.position.z > (returnPointBoxPosZ - returnPointBoxInteractionLength) && camera.position.z < (returnPointBoxPosZ + returnPointBoxInteractionLength))
+			if(camera.position.y > returnPointBoxPosY && camera.position.y < (returnPointBoxPosY + returnPointBoxInteractionHeight))
 			{
-				if(camera.position.y > returnPointBoxPosY && camera.position.y < (returnPointBoxPosY + returnPointBoxInteractionHeight))
+				//If triggering interaction
+				if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 				{
 					//Is within boundary
 					interactionTimer = 0;
@@ -3228,8 +3242,13 @@ void SceneSP::checkReturnPoint()
 					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 
 				}
+				return true;
 			}
 		}
+	}
+	else
+	{
+		return false;
 	}
 }
 void SceneSP::checkNPCCollision()

@@ -35,7 +35,7 @@ private:
 	void checkFreezerCollision();
 	void checkCashierCollision();
 	void checkElevatorCollision();
-	void checkReturnPoint();
+	bool checkReturnPoint();
 	void checkNPCCollision();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
@@ -158,6 +158,7 @@ private:
 	string s_fps;
 	string s_camera_target;
 	string s_item_name;
+	string s_item_price;
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;

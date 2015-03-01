@@ -165,4 +165,4 @@ static bool PunchTimerLimiter = true;
 
 //Menu string text
 static std::string menuTextArray[6] = {"START","Credits","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt"};
-
+static std::string s_UI_Play_Mode[3] = {"Free Roam","Treasure Hunt", "Easter Egg Hunt"};
