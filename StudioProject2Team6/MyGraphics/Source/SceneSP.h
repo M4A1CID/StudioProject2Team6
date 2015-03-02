@@ -39,6 +39,8 @@ private:
 	void checkCashierCollision();
 	void checkElevatorCollision();
 	bool checkReturnPoint();
+	void checkWinLose();
+	void resetGame();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
@@ -67,8 +69,9 @@ private:
 	void RenderHand();
 	void RenderTug();
 	void RenderReturnPoint();
-	void RenderMainMenu();
-	void RenderSubMenu();
+	void RenderMainMenu();		//Render Main Menu Screen
+	void RenderSubMenu();		//Render Sub/Start Menu Screen
+	void RenderWinLoseMenu();	//Render Win/Lose Menu Screen
 	void RenderOffice();
 	void RenderStorage();
 	void RenderBuilding();
@@ -82,7 +85,10 @@ private:
 	void UpdateUI(double dt);			//Update Game User Interface
 	void UpdateSamples();				//Update sample food stand
 	void UpdateElevator(double dt);		//Update elevator in supermarket
-	void UpdateMenu();					//Update Main Menus
+	void UpdateMenu();					//Update Menus
+	void UpdateMainMenu();
+	void UpdateStartMenu();
+	void UpdateWinLoseMenu();
 	void UpdatePlaying(double dt);		//Update application while game is playing
 	void UpdateTugofwar(double dt);		//Update the Tug-Of-War mini game
 	void UpdateDrunkman(double dt);		//Update Drunk Man NPC
