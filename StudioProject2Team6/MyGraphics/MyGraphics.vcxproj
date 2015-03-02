@@ -120,6 +120,11 @@
     <ClCompile Include="Source\TomatoCan.cpp" />
     <ClCompile Include="Source\Utility.cpp" />
     <ClCompile Include="Source\VargaCan.cpp" />
+    <ClCompile Include="Source\Winebottle1.cpp" />
+    <ClCompile Include="Source\Winebottle2.cpp" />
+    <ClCompile Include="Source\Winebottle3.cpp" />
+    <ClCompile Include="Source\Winebottle4.cpp" />
+    <ClCompile Include="Source\Winebottle5.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\Application.h" />
@@ -168,6 +173,11 @@
     <ClInclude Include="Source\Utility.h" />
     <ClInclude Include="Source\VargaCan.h" />
     <ClInclude Include="Source\Vertex.h" />
+    <ClInclude Include="Source\Winebottle1.h" />
+    <ClInclude Include="Source\Winebottle2.h" />
+    <ClInclude Include="Source\Winebottle3.h" />
+    <ClInclude Include="Source\Winebottle4.h" />
+    <ClInclude Include="Source\Winebottle5.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Shader\Shading.fragmentshader" />

@@ -32,13 +32,13 @@ private:
 				Collision Functions
 	=======================================*/
 	void checkPickUpItem();
+	void checkCollision();
+	void checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ);
 	void checkSupermarketCollision();
-	void checkShelfCollision();
 	void checkFreezerCollision();
 	void checkCashierCollision();
 	void checkElevatorCollision();
 	bool checkReturnPoint();
-	void checkNPCCollision();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
@@ -72,6 +72,7 @@ private:
 	void RenderOffice();
 	void RenderStorage();
 	void RenderBuilding();
+	void RenderCage();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -98,7 +99,9 @@ private:
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
 	void UpdateAITimer(double dt);
-	
+	void UpdatePaying(double dt);       //Update paying activity
+	void UpdateCage(double dt);
+	void UpdateGaben(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
