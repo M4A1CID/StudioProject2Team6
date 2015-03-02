@@ -178,6 +178,19 @@ void SceneSP::initGeoType()
 	meshList[GEO_CEREAL_5] = MeshBuilder::GenerateOBJ("cerealBox5","OBJ//cereal_box_5.obj");
 	meshList[GEO_CEREAL_5]->textureID = LoadTGA("Image//cereal_box_5.tga");
 	/*========================
+	WINEBOTTLE INIT
+	=========================*/
+	meshList[GEO_WINEBOTTLE_1] = MeshBuilder::GenerateOBJ("WINEBOTTLE1","OBJ//winebottle_1.obj");
+	meshList[GEO_WINEBOTTLE_1]->textureID = LoadTGA("Image//Wine_1.tga");
+	meshList[GEO_WINEBOTTLE_2] = MeshBuilder::GenerateOBJ("WINEBOTTLE2","OBJ//winebottle_2.obj");
+	meshList[GEO_WINEBOTTLE_2]->textureID = LoadTGA("Image/Wine_2.tga");
+	meshList[GEO_WINEBOTTLE_3] = MeshBuilder::GenerateOBJ("WINEBOTTLE3","OBJ//winebottle_3.obj");
+	meshList[GEO_WINEBOTTLE_3]->textureID = LoadTGA("Image//Wine_3.tga");
+	meshList[GEO_WINEBOTTLE_4] = MeshBuilder::GenerateOBJ("WINEBOTTLE4","OBJ//winebottle_4.obj");
+	meshList[GEO_WINEBOTTLE_4]->textureID = LoadTGA("Image//Wine_4.tga");
+	meshList[GEO_WINEBOTTLE_5] = MeshBuilder::GenerateOBJ("WINEBOTTLE5","OBJ//winebottle_5.obj");
+	meshList[GEO_WINEBOTTLE_5]->textureID = LoadTGA("Image//Wine_5.tga");
+	/*========================
 	EASTER EGG INIT
 	=========================*/
 	meshList[GEO_EASTEREGG_1] = MeshBuilder::GenerateOBJ("easterEgg1","OBJ//EasterEgg1.obj");
@@ -217,7 +230,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_DRUNKMAN_LEGANDFEET] = MeshBuilder::GenerateOBJ("drunkman head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_DRUNKMAN_LEGANDFEET]->textureID = LoadTGA("Image//Drunkman.tga");
 	///////////////////////////////////////////////////////////////////////
-
 	meshList[GEO_LOGISTICSTAFF_ARM] = MeshBuilder::GenerateOBJ("logisticstaff arm", "OBJ//Arm.obj");
 	meshList[GEO_LOGISTICSTAFF_ARM]->textureID = LoadTGA("Image//Logisticstaff.tga");
 	meshList[GEO_LOGISTICSTAFF_HEADBODY] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//headandbody.obj");
@@ -225,7 +237,6 @@ void SceneSP::initGeoType()
 	meshList[GEO_LOGISTICSTAFF_LEGANDFEET] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_LOGISTICSTAFF_LEGANDFEET]->textureID = LoadTGA("Image//Logisticstaff.tga");
 	/////////////////////////////////////////////////////////////////////////////
-
 	meshList[GEO_NormalNpc1_ARM] = MeshBuilder::GenerateOBJ("NormalNpc1 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc1_ARM]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	meshList[GEO_NormalNpc1_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//headandbody.obj");
@@ -319,11 +330,11 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(38,0,-5,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
-	//ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
-	//myNPCList.push_back(ptrNPC);
+	/*ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	myNPCList.push_back(ptrNPC);
 
-	//ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
-	//myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
+	myNPCList.push_back(ptrNPC);*/
 }
 void SceneSP::initShelves()
 {
@@ -545,14 +556,14 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
+	//==================================================================================
 	ptrClass = new CGluWaterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,10,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
+	//==================================================================================
 	ptrClass = new CMtnDewCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,16,17,28,180);
 	myContainerList.push_back(ptrContainer);
@@ -760,6 +771,30 @@ void SceneSP::UpdateAI(double dt)
 	UpdateChattingman(dt);
 	UpdateLegAnimation(dt);
 }
+
+//void SceneSP::UpdatePaying(double dt)
+//{
+//	float container;//total amt
+//	//check area
+//	if ((camera.position.x > -27.0f && camera.position.z < -16.0f) || (camera.position.x > -17.0f && camera.position.z < -16.0f) || (camera.position.x > -7.0f && camera.position.z < -16.0f))
+//	{
+//		if (Application::IsKeyPressed('E'))
+//		{
+//				for (int i = 0; i < ptrplayer->getItemHeld(); ++i)
+//
+//					{
+//
+//						
+//
+//					}
+//				//check if there is enough money to pay
+//				if (container > getMoney, getMoney--)
+//					//pay money
+//					getMoney--;
+//		}
+//	}
+//}
+
 void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
