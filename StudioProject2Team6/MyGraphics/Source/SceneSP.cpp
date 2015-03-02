@@ -30,13 +30,13 @@ void SceneSP::Init()
 	/*===============================
 			Music and Sound here
 	==============================*/
-	if(!music.openFromFile(backgroundSound))
+	/*if(!music.openFromFile(backgroundSound))
 	{
 		std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 	}
 	music.setLoop(true);
 	music.setVolume(50.0f);
-	music.play();
+	music.play();*/
 	
 
 	/*=============================================
@@ -217,6 +217,12 @@ void SceneSP::initGeoType()
 	meshList[GEO_EASTEREGG_2]->textureID = LoadTGA("Image//EasterEgg2.tga");
 	meshList[GEO_EASTEREGG_3] = MeshBuilder::GenerateOBJ("easterEgg3","OBJ//EasterEgg3.obj");
 	meshList[GEO_EASTEREGG_3]->textureID = LoadTGA("Image//EasterEgg3.tga");
+	meshList[GEO_EASTEREGG_4] = MeshBuilder::GenerateOBJ("No time","OBJ//EasterEgg4,5,6.obj");
+	meshList[GEO_EASTEREGG_4]->textureID = LoadTGA("Image//EasterEgg4.tga");
+	meshList[GEO_EASTEREGG_5] = MeshBuilder::GenerateOBJ("easterEgg5","OBJ//EasterEgg4,5,6.obj");
+	meshList[GEO_EASTEREGG_5]->textureID = LoadTGA("Image//EasterEgg5.tga");
+	meshList[GEO_EASTEREGG_6] = MeshBuilder::GenerateOBJ("Nic Cage","OBJ//EasterEgg4,5,6.obj");
+	meshList[GEO_EASTEREGG_6]->textureID = LoadTGA("Image//EasterEgg6.tga");
 	/*========================
 	SKYBOX INIT
 	=========================*/
@@ -828,10 +834,16 @@ void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
-		handrotationleftandright += (camera.CAMERA_SPEED)*dt;
+		if(reversed)
+			handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
+		else
+			handrotationleftandright += (camera.CAMERA_SPEED)*dt;
 	}
 	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
+		if(reversed)
+			handrotationleftandright += (camera.CAMERA_SPEED)*dt;
+		else
 		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
 	}
 	if(Application::IsKeyPressed('E') || PunchTimerLimiter == false)
@@ -1030,6 +1042,28 @@ void SceneSP::UpdateItemRotation(double dt)
 		itemYrotation = 0.f;
 	}
 }
+void SceneSP::UpdateEasteregg(double dt)
+{	
+	std::stringstream ss_easterCounter;
+	ss_easterCounter << getCounter;
+	s_easter_counter = ss_easterCounter.str();
+	easterTimer += dt;
+	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
+	{
+		UpdateMiscEasteregg(dt);
+		UpdateCage(dt);
+		UpdateGaben(dt);
+		UpdateTroll(dt);
+		if(getCounter == 4)
+		{
+			winEaster = true;
+		}
+		if(winEaster == true && Application::IsKeyPressed(VK_RETURN))
+		{
+			closeEaster = true;
+		}
+	}
+}
 void SceneSP::UpdatePlaying(double dt)
 {
 	checkWinLose();
@@ -1102,8 +1136,8 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateAI(dt);
 	UpdateItemRotation(dt);
 	UpdateItemInspection();
-	UpdateCage(dt);
-	UpdateGaben(dt);
+	UpdateEasteregg(dt);
+	reverseTimer += dt;
 	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed('F2')) //disable back face culling
@@ -1127,8 +1161,8 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateUI(dt);
 	checkPickUpItem();
 	if(!IsIntugofwar && !caged)
-		camera.UpdateMovement(dt);
-	camera.UpdateView(dt);
+		camera.UpdateMovement(dt,reversed);
+	camera.UpdateView(dt,reversed);
 	UpdateTrolley(dt);
 	UpdateElevator(dt);
 	UpdateDoor(dt);
@@ -1444,7 +1478,6 @@ void SceneSP::UpdatePaying()
 
 	
 }
-
 void SceneSP::UpdateSamples()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -2164,7 +2197,7 @@ void SceneSP::UpdateLegAnimation(double dt)
 }
 void SceneSP::UpdateCage(double dt)
 {
-	if(Application::IsKeyPressed('E') && ((camera.position.x > 42.5f && camera.position.x < 46.0f) && (camera.position.z < -23.0f && camera.position.z > -27.0f)))
+	if(Application::IsKeyPressed('E') && ((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)))
 	{
 		diffX = camera.position.x-0.0f;
 		diffZ = camera.position.z-(65.0f);
@@ -2177,10 +2210,26 @@ void SceneSP::UpdateCage(double dt)
 		camera.target.z -= diffZ;
 		diffX = diffZ = diffY = 0.0f;
 		caged = true;
+		if(easterTimer > easterLimiter)
+		{
+			easterTimer = resetValue;
+			if(!music.openFromFile(jawsSound))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+		}
+		if(!getCaged)
+		{
+			getCaged = true;
+			getCounter++;
+		}
 	}
 	if(caged)
 	{
-		cagedPos += 10 * dt;
+		cagedPos += 15 * dt;
 		if(cagedPos > 60)
 		{
 			caged = false;
@@ -2209,7 +2258,21 @@ void SceneSP::UpdateGaben(double dt)
 	if(Application::IsKeyPressed('E')&&summonG == 3)
 		summonG++;
 	if(Application::IsKeyPressed('N')&&summonG == 4)
+	{
 		gabed = true;
+		if(!music.openFromFile(gabenSound))
+		{
+			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+		}
+		music.setLoop(false);
+		music.setVolume(50.0f);
+		music.play();
+		if(!getGabed)
+		{
+			getGabed = true;
+			getCounter++;
+		}
+	}
 	if(gabed)
 		moveG += 20 * dt;
 	if(moveG > 95)
@@ -2217,6 +2280,82 @@ void SceneSP::UpdateGaben(double dt)
 		summonG = 0;
 		moveG = 0.0f;
 		gabed = false;
+	}
+}
+void SceneSP::UpdateTroll(double dt)
+{
+	if((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24))
+	{
+		if((camera.position.y > 10 && reversed == false) && Application::IsKeyPressed('E'))
+		{
+			if(easterTimer > easterLimiter)
+			{
+				easterTimer = resetValue;
+				if(!music.openFromFile(trollSound))
+				{
+					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+				}
+				music.setLoop(false);
+				music.setVolume(50.0f);
+				music.play();
+			}
+			easterTimer = 0.0f;
+			reversed = true;
+			reverseTimer = 0.0f;
+			if(!getTrolled)
+			{
+				getTrolled = true;
+				getCounter++;
+			}
+		}
+	}
+	if(reverseTimer > reverseLimiter)
+		reversed = false;
+}
+void SceneSP::UpdateMiscEasteregg(double dt)
+{
+	if(((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24)) ||
+		((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)) ||
+		((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f))
+		)
+	{
+		inRange = true;
+	}
+	else
+		inRange = false;
+	if((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f) && Application::IsKeyPressed('E'))
+	{
+		if(easterTimer > easterLimiter)
+		{
+			easterTimer = 0.0f;
+			if(!music.openFromFile(noTimeSound))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+			if(!getTimed)
+			{
+				getTimed = true;
+				getCounter++;
+			}
+		}
+	}
+}
+void SceneSP::RenderEasteregg()
+{
+	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
+	{
+		RenderCage();
+		RenderTroll();
+		RenderMiscEastereggs();
+		//RenderTextOnScreen(meshList[GEO_TEXT],"Easter eggs found : " +s_easter_counter,Color(0,1,0),2,1,16);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter, Color(1, 0, 0), 2.5,0, 20);
+		if(inRange)
+			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,6);
+		if(winEaster)
+			RenderTextOnScreen(meshList[GEO_TEXT],"You found all the easter eggs!",Color(0,1,0),3,10,10);
 	}
 }
 void SceneSP::RenderUI()
@@ -2346,9 +2485,10 @@ void SceneSP::Render()
 		RenderCharacters();//Render out characters
 		RenderItem();		//Renders out items
 		RenderTug();
+		RenderBeerstand();
 		RenderBuilding();
 		RenderSupermarket();//Renders out Supermarket
-		RenderCage();
+		RenderEasteregg();
 		RenderUI();			//Renders out UI
 		RenderInventory();	//Render inventory after UI to place above
 		break;
@@ -2896,7 +3036,7 @@ void SceneSP::RenderSamples()
 	for(int x = 0; x< i_sampleItems;x++)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(1.5f - (x * 1), 3.6f, 25.0f);
+		modelStack.Translate(1.5f - (x * 1), 3.6f, 0.0f);
 		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
 		modelStack.PopMatrix();
 	}
@@ -2912,12 +3052,9 @@ void SceneSP::RenderReturnPoint()
 void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(10.0f,0.0f,-5.0f);
+	modelStack.Translate(35.0f,0.0f,-5.0f);
 	modelStack.Rotate(90.0f,0,1,0);	
-	modelStack.PushMatrix();
-	modelStack.Translate(0.0f, 0.0f, 25.0f);
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
-	modelStack.PopMatrix();
 	RenderSamples();
 	modelStack.PopMatrix();
 
@@ -2960,10 +3097,49 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.Translate(-23.0f, 17.0f, -26.0f);
 	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
 	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
+}
+void SceneSP::RenderBeerstand()
+{
+	modelStack.PushMatrix();//1st floor
 	modelStack.Translate(-21.0f,0.0f,11.0f);
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,3.6f,11.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,1.6f,13.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,1.6f,8.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.5f,1.6f,11.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.5f,1.6f,8.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.5f,1.6f,13.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-18.5f,1.6f,11.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-18.5f,1.6f,8.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-18.5f,1.6f,13.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
@@ -2978,6 +3154,7 @@ void SceneSP::RenderBuilding()
 	modelStack.Rotate(-90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
+
 	modelStack.PushMatrix();
 	modelStack.Translate(75.0f,0.0f,225.0f);
 	modelStack.Rotate(-90,0,1,0);
@@ -3079,54 +3256,22 @@ void SceneSP::RenderOffice()
 }
 void SceneSP::RenderStorage()
 {
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -14.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -18.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -22.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -26.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -14.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -18.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -22.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -26.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
+	for(int i=0;i<4;i++)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(36.0f, 17.0f, -14.0f-(i*4));
+		modelStack.Rotate(270,0,1,0);
+		RenderMesh(meshList[GEO_BOX], toggleLight);
+		modelStack.PopMatrix();
+	}
+	for(int i=0;i<4;i++)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(24.0f, 17.0f, -14.0f-(i*4));
+		modelStack.Rotate(270,0,1,0);
+		RenderMesh(meshList[GEO_BOX], toggleLight);
+		modelStack.PopMatrix();
+	}
 	modelStack.PushMatrix();
 	modelStack.Translate(30.0f, 17.0f, -26.0f);
 	modelStack.Rotate(90,0,1,0);
@@ -3135,8 +3280,10 @@ void SceneSP::RenderStorage()
 }
 void SceneSP::RenderCage()
 {
-	if(gabed)
-		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
+	modelStack.PushMatrix();
+	modelStack.Translate(42.7f, 0.0f, -27.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_6], toggleLight);
+	modelStack.PopMatrix();
 	if(caged)
 	{
 		modelStack.PushMatrix();
@@ -3184,6 +3331,24 @@ void SceneSP::RenderCage()
 
 		modelStack.PopMatrix();
 	}
+}
+void SceneSP::RenderTroll()
+{
+	if(reversed)
+		RenderTextOnScreen(meshList[GEO_TEXT], "Reversed!", Color(0, 1, 0), 2, 25, 5);
+	modelStack.PushMatrix();
+	modelStack.Translate(33.0f, 17.0f, -27.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_3], toggleLight);
+	modelStack.PopMatrix();
+}
+void SceneSP::RenderMiscEastereggs()
+{
+	if(gabed)
+		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
+	modelStack.PushMatrix();
+	modelStack.Translate(38.7f, 0.0f, -5.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_4], toggleLight);
+	modelStack.PopMatrix();
 }
 void SceneSP::checkPickUpItem()
 {
@@ -3244,7 +3409,6 @@ void SceneSP::checkPickUpItem()
 void SceneSP::checkCollision()
 {
 	checkSupermarketCollision();
-	checkFreezerCollision();
 	checkCashierCollision();
 	checkElevatorCollision();
 	checkObjectCollision(13.0f, 17.0f, -26.0f, 8.0f, 4.0f);//meat shelves
@@ -3254,14 +3418,23 @@ void SceneSP::checkCollision()
 	checkObjectCollision(-21.0f, 0.0f, 11.0f, 5.0f, 5.0f);//food stand
 	checkObjectCollision(-19.0f, 17.0f, 0.0f, 5.0f, 5.0f);
 	checkObjectCollision(-37.0f, 0.0f, 0.0f, 4.0f, 6.0f);
+	checkObjectCollision(37.0f, 0.0f, 25.0f, 4.0f, 5.5f);//freezer
+	checkObjectCollision(37.0f, 0.0f, 16.0f, 4.0f, 5.5f);
+	checkObjectCollision(37.0f, 0.0f, 7.0f, 4.0f, 5.5f);
+	checkObjectCollision(30.0f, 17.0f, -26.0f, 3.0f, 3.0f);//boxes
+	for(int i = 0; i<4;i++)
+	{
+		checkObjectCollision(36.0f, 17.0f, -14.0f-(4*i), 3.0f, 3.0f);//boxes
+		checkObjectCollision(24.0f, 17.0f, -14.0f-(4*i), 3.0f, 3.0f);
+		checkObjectCollision(37.0f, 17.0f, 14.0f+(4*i), 3.0f, 3.0f);//computers
+		checkObjectCollision(24.0f, 17.0f, 14.0f+(4*i), 3.0f, 3.0f);
+	}
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)//NPC collision
-	{
 		checkObjectCollision(myNPCList[i]->getXpos(),myNPCList[i]->getYpos(), myNPCList[i]->getZpos(), 2.0f, 2.0f);
-	}
 	for(unsigned int i = 0; i< myContainerList.size(); ++i)//Shelf collision
-	{
 		checkObjectCollision(myContainerList[i]->getXpos(), myContainerList[i]->getYpos(), myContainerList[i]->getZpos(), ShelfWidthX, ShelfWidthZ);
-	}
+	checkObjectCollision(35.0f, 0.0f, -5.0f, 2.0f, 4.0f);//sample stand
+	checkObjectCollision(150.0f, 0.0f, 75.0f, 32.0f, 32.0f);//outside buildings
 }
 void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ)
 {
@@ -3283,7 +3456,7 @@ void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float wid
 			camera.target.x -= diffX;
 			diffX = 0.0f;
 		}
-		if((camera.position.x > (posX - widthX) && camera.position.x < (posX + widthX)) && 
+		if((camera.position.x > (posX - widthX+ (Coffset / 2)) && camera.position.x < (posX + widthX)- (Coffset / 2)) && 
 			(camera.position.z > (posZ - widthZ) && camera.position.z < (posZ - widthZ + Coffset)))
 		{
 			diffZ = camera.position.z - (posZ - widthZ);
@@ -3291,7 +3464,7 @@ void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float wid
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
-		if((camera.position.x > (posX - widthX) && camera.position.x < (posX + widthX)) && 
+		if((camera.position.x > (posX - widthX+ (Coffset / 2)) && camera.position.x < (posX + widthX)- (Coffset / 2)) && 
 			(camera.position.z > (posZ + widthZ - Coffset) && camera.position.z < (posZ + widthZ)))
 		{
 			diffZ = camera.position.z - (posZ + widthZ);
@@ -3417,6 +3590,27 @@ void SceneSP::checkSupermarketCollision()
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
+		if((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > -23 && camera.position.z < -8))
+		{//logistic staff room
+			diffX = camera.position.x - (18);
+			camera.position.x = 18;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > 18 && camera.position.x < 26) && (camera.position.z > -8-2 && camera.position.z < -8))
+		{
+			diffZ = camera.position.z - (-8);
+			camera.position.z = -8;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > 31 && camera.position.x < 39) && (camera.position.z > -8-2 && camera.position.z < -8))
+		{
+			diffZ = camera.position.z - (-8);
+			camera.position.z = -8;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
 	}
 	if(camera.position.y < 10)
 	{
@@ -3431,26 +3625,6 @@ void SceneSP::checkSupermarketCollision()
 		{
 			diffZ = camera.position.z - (10);
 			camera.position.z = 10;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-	}
-}
-void SceneSP::checkFreezerCollision()
-{
-	if(camera.position.y < 10)
-	{
-		if((camera.position.x > FboundX1 && camera.position.x < FboundX3) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ2))
-		{
-			diffX = camera.position.x - (FboundX1);
-			camera.position.x = FboundX1;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > FboundX3 && camera.position.x < FboundX2) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ3))
-		{
-			diffZ = camera.position.z - (FboundZ1);
-			camera.position.z = FboundZ1;
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
@@ -3646,6 +3820,17 @@ void SceneSP::checkWinLose()
 		{
 			i_menuHandle = WIN_LOSE_MENU;
 		}
+	}
+	if(closeEaster)
+	{
+		getCaged = false;
+		getGabed = false;
+		getTrolled = false;
+		getTimed = false;
+		getCounter = 0;
+		winEaster = false;
+		closeEaster = false;
+		i_menuHandle = WIN_LOSE_MENU;
 	}
 }
 void SceneSP::Exit()

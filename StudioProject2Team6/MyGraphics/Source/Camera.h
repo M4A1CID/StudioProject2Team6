@@ -14,8 +14,8 @@ public:
 	~Camera();
 	virtual void Init(const Vector3& pos, const Vector3& target, const Vector3& up);
 	virtual void Reset();
-	virtual void UpdateMovement(double dt);
-	virtual void UpdateView(double dt);
+	virtual void UpdateMovement(double dt, bool reverse);
+	virtual void UpdateView(double dt, bool reverse);
 };
 
 #endif

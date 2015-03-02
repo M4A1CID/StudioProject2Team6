@@ -69,6 +69,7 @@ private:
 	void RenderHand();
 	void RenderTug();
 	void RenderReturnPoint();
+	void RenderBeerstand();
 	void RenderMainMenu();		//Render Main Menu Screen
 	void RenderSubMenu();		//Render Sub/Start Menu Screen
 	void RenderWinLoseMenu();	//Render Win/Lose Menu Screen
@@ -76,6 +77,9 @@ private:
 	void RenderStorage();
 	void RenderBuilding();
 	void RenderCage();
+	void RenderTroll();
+	void RenderMiscEastereggs();
+	void RenderEasteregg();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -109,6 +113,9 @@ private:
 	void UpdatePaying();       //Update paying activity
 	void UpdateCage(double dt);
 	void UpdateGaben(double dt);
+	void UpdateTroll(double dt);
+	void UpdateMiscEasteregg(double dt);
+	void UpdateEasteregg(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -173,6 +180,7 @@ private:
 	string s_camera_target;
 	string s_item_name;
 	string s_item_price;
+	string s_easter_counter;
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;

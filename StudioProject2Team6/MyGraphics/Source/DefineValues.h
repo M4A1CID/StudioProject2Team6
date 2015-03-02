@@ -92,6 +92,18 @@ static float maxlegRot = 35.0f;
 //Collision offset
 static float Coffset = 2.0f;
 
+//Easteregg gamemode
+static bool winEaster = false;
+static bool closeEaster = false;
+static bool inRange = false;
+static float easterLimiter = 2.0f;
+static float easterTimer = 2.0f;
+static int getCounter = 0;
+static bool getCaged = false;
+static bool getGabed = false;
+static bool getTrolled = false;
+static bool getTimed = false;
+
 //Cage
 static bool caged = false;
 static float cagedPos = -75.0f;
@@ -101,6 +113,11 @@ static float diffY = 0.0f;
 static bool gabed = false;
 static int summonG = 0;
 static float moveG = 0.0f;
+
+//troll
+static bool reversed = false;
+static float reverseTimer = 0.0f;
+static float reverseLimiter = 5.0f;
 
 //World size for skybox
 static float world_size = 3000.0f;
@@ -185,4 +202,12 @@ static std::string s_UI_Play_Mode[3] = {"Free Roam","Treasure Hunt", "Easter Egg
 static std::string backgroundSound = "Sound\\Carefree.ogg";
 static std::string clearText = "CLEAR!";
 
+//Sounds
+static std::string gabenSound = "Sound/holy.ogg";
+static std::string noTimeSound = "Sound/time.ogg";
+static std::string jawsSound = "Sound/jaws.ogg";
+static std::string trollSound = "Sound/troll.ogg";
 
+//reset value
+static float resetValue = 0.0f;
+static int resetIntValue = 0;
