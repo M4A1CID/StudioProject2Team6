@@ -99,7 +99,7 @@ private:
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
 	void UpdateAITimer(double dt);
-	void UpdatePaying(double dt);       //Update paying activity
+	void UpdatePaying();       //Update paying activity
 	void UpdateCage(double dt);
 	void UpdateGaben(double dt);
 	/*=======================================
@@ -129,6 +129,8 @@ private:
 	bool toggleDoorBack;
 	bool elevatorDoorOpening;
 	bool elevatorSecondFloor;
+	bool b_isWithinInteractionItem;
+	bool b_isWithinPayingCashier;
 	float interactionTimer;
 	float LogisticinteractionTimer;
 	float CustomerinteractionTimer;
@@ -151,7 +153,7 @@ private:
 	bool showTuginstruction;
 	bool b_crouching;
 	bool b_inspection;
-	bool isWithinInteractionItem;
+	
 	int i_sampleItems;
 	int i_menuHandle;
 	int i_drunkmanAct;

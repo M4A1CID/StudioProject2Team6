@@ -61,11 +61,12 @@ void SceneSP::Init()
 	elevatorDoorOpening = false;
 	elevatorSecondFloor = false;
 	b_inspection = false;
+	b_isWithinPayingCashier = false;
 	IsIntugofwar = false;
 	win = false;
 	lose = false;
 	showTuginstruction = false;
-	isWithinInteractionItem = false;
+	b_isWithinInteractionItem = false;
 	interactionTimer = 0.0f;
 	LogisticinteractionTimer = 0.0f;
 	CustomerinteractionTimer = 0.0f;
@@ -1088,7 +1089,7 @@ void SceneSP::UpdatePlaying(double dt)
 	}
 
 	
-	UpdatePaying(dt);//Update playing paying
+	UpdatePaying();//Update playing paying
 
 	UpdateUI(dt);
 	checkPickUpItem();
@@ -1363,29 +1364,40 @@ void SceneSP::UpdatePlayerSelection()
 	}
 
 }
-void SceneSP::UpdatePaying(double dt)
+void SceneSP::UpdatePaying()
 {
-	//Init total sum
-	float total = 0;
-
 	//If player is within paying zone of cashier
-	if((camera.position.x > -27.0f && camera.position.x < -23.0f) && (camera.position.z > -11.f && camera.position.z < -7.0f) && (camera.position.y >3.0f && camera.position.y < 5.0f))
+	if((camera.position.x > -29.0f && camera.position.x < -23.0f) && (camera.position.z > -13.f && camera.position.z < -7.0f) && (camera.position.y >3.0f && camera.position.y < 5.0f))
 	{
+		b_isWithinPayingCashier = true;
 		//If player is paying
 		if (Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 		{
-			//Reset the intereaction timer
-			interactionTimer = 0;
-			//Calculate the total price of current player inventory
-			for(int i = 0; i< ptrplayer->getVector().size();++i)
+			//If player money is greater than price of item
+			if(ptrplayer->getMoney() >= ptrplayer->getVector()[inventoryPointing]->getPrice())
 			{
-				std::cout << "Item paid: " << ptrplayer->getVector()[i]->getName() << std::endl;
-				total += ptrplayer->getVector()[i]->getPrice();
+				//Reset the intereaction timer
+				interactionTimer = 0;
+				std::cout << "Item paid: " << ptrplayer->getVector()[inventoryPointing]->getName() << std::endl;
+				//Deduct from player money total price
+				ptrplayer->setMoney(ptrplayer->getMoney() - ptrplayer->getVector()[inventoryPointing]->getPrice());
+
+				//Check if item paid is == random checklist items
+				for(int i = 0; i<myCheckList.size();++i)
+				{
+					if(ptrplayer->getVector()[inventoryPointing]->getName() == myCheckList[i]->getName())
+					{
+						myCheckList[i]->setName("CLEAR!");
+					}
+				}
+				ptrplayer->setInventory(ptrEmpty,inventoryPointing);
+				ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 			}
-			//Deduct from player money total price
-			ptrplayer->setMoney(ptrplayer->getMoney()-total);
-			
 		}
+	}
+	else
+	{
+		b_isWithinPayingCashier = false;
 	}
 }
 
@@ -2124,19 +2136,24 @@ void SceneSP::RenderUI()
 {
 	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
 	RenderTGAUI(meshList[GEO_UI_SCREEN],1,40,20);
-	if(isWithinInteractionItem) //If player is able to pick up
+	if(b_isWithinInteractionItem) //If player is able to pick up
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pick up " +s_item_name,Color(0,1,0),2,1,16);
 	}
 	//If player is inspecting the item
 	if(b_inspection)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,5);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,7);
 	}
-	//If player is within return point zone
-	if(checkReturnPoint())
+	//If player is within return point zone and holding an item
+	if(checkReturnPoint() && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,5);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,6);
+	}
+	//If player is within Cashier zone and holding an item
+	if(b_isWithinPayingCashier && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pay for " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,6);
 	}
 	//If treasure hunting mode chosen
 	if(ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
@@ -2440,7 +2457,6 @@ void SceneSP::RenderHand()
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);
-		///modelStack.Translate(0.5,0,0.5);
 		modelStack.Rotate(handrotationleftandright+itemYrotation,0,1,0);
 		modelStack.Rotate(itemXrotation,1,0,0);
 		modelStack.Scale(0.5f,0.5f,0.5f);
@@ -2450,23 +2466,6 @@ void SceneSP::RenderHand()
 		}
 		modelStack.PopMatrix();
 	}
-	/*//Hands on trolley
-	modelStack.PushMatrix();
-	modelStack.Translate(camera.position.x,0,camera.position.z);
-	{
-	modelStack.PushMatrix();
-	modelStack.Rotate((180+trolleyrotation),0,1,0);
-	modelStack.Translate(-0.25,0,-0.7);
-	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Rotate((180+trolleyrotation),0,1,0);
-	modelStack.Translate(0.6,0,-0.7);
-	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	modelStack.PopMatrix();
-	}
-	modelStack.PopMatrix();*/
 }
 void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 {
@@ -3122,13 +3121,13 @@ void SceneSP::checkPickUpItem()
 				if(magnitudeFromPosition <= interactionDistance)
 				{
 					chosen = i;
-					isWithinInteractionItem = true;
+					b_isWithinInteractionItem = true;
 					s_item_name = myStockList[chosen]->getName();
 				}
 				else
 				{
 					
-					isWithinInteractionItem = false;
+					b_isWithinInteractionItem = false;
 				}
 
 
@@ -3138,13 +3137,14 @@ void SceneSP::checkPickUpItem()
 		}
 
 	}
-	if(Application::IsKeyPressed('E') && (interactionTimer > interactionTimerLimiter) && myStockList[chosen]->getActiveState() && isWithinInteractionItem)
+	if(Application::IsKeyPressed('E') && (interactionTimer > interactionTimerLimiter) && myStockList[chosen]->getActiveState() && b_isWithinInteractionItem)
 	{
 		if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 		{
 			addToInventory(myStockList[chosen]);
 			myStockList[chosen]->setActiveState(false);
 			std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
+			ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 		}
 	}
 }

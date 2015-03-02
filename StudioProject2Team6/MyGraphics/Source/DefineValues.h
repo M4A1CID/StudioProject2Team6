@@ -174,6 +174,7 @@ static float TugofwarTimerLimiter = 0.3f;
 static float itemRotationSpeedMultiplyer =60.f;
 
 static int i_total_items_to_find = 3;
+static CItem* ptrEmpty = new CEmptyItem;
 
 //Punch limiter
 static bool PunchTimerLimiter = true;
