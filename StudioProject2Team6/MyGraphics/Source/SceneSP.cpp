@@ -1087,7 +1087,8 @@ void SceneSP::UpdatePlaying(double dt)
 		toggleLight = false;
 	}
 
-
+	
+	UpdatePaying(dt);//Update playing paying
 
 	UpdateUI(dt);
 	checkPickUpItem();
@@ -1362,6 +1363,32 @@ void SceneSP::UpdatePlayerSelection()
 	}
 
 }
+void SceneSP::UpdatePaying(double dt)
+{
+	//Init total sum
+	float total = 0;
+
+	//If player is within paying zone of cashier
+	if((camera.position.x > -27.0f && camera.position.x < -23.0f) && (camera.position.z > -11.f && camera.position.z < -7.0f) && (camera.position.y >3.0f && camera.position.y < 5.0f))
+	{
+		//If player is paying
+		if (Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+		{
+			//Reset the intereaction timer
+			interactionTimer = 0;
+			//Calculate the total price of current player inventory
+			for(int i = 0; i< ptrplayer->getVector().size();++i)
+			{
+				std::cout << "Item paid: " << ptrplayer->getVector()[i]->getName() << std::endl;
+				total += ptrplayer->getVector()[i]->getPrice();
+			}
+			//Deduct from player money total price
+			ptrplayer->setMoney(ptrplayer->getMoney()-total);
+			
+		}
+	}
+}
+
 void SceneSP::UpdateSamples()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -3100,6 +3127,7 @@ void SceneSP::checkPickUpItem()
 				}
 				else
 				{
+					
 					isWithinInteractionItem = false;
 				}
 
@@ -3110,7 +3138,7 @@ void SceneSP::checkPickUpItem()
 		}
 
 	}
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter && myStockList[chosen]->getActiveState() && (magnitudeFromPosition <= interactionDistance))
+	if(Application::IsKeyPressed('E') && (interactionTimer > interactionTimerLimiter) && myStockList[chosen]->getActiveState() && isWithinInteractionItem)
 	{
 		if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 		{
