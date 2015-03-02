@@ -1907,6 +1907,12 @@ void SceneSP::UpdateCustomer(double dt)
 				if(myNPCList[i]->getZpos() >= -100 && myNPCList[i]->getZpos() <= -97)
 				{
 					myNPCList[i]->setCharacterState(STATE_REACTIVATE);
+					myNPCList[i]->setXpos(-20);
+				    myNPCList[i]->setYpos(0);
+				    myNPCList[i]->setZpos(216);
+					myNPCList[i]->setAnimationType(IDLE);
+					myNPCList[i]->setLeftLeg(0);
+					myNPCList[i]->setRightLeg(0);
 				}
 			}
 
@@ -1936,49 +1942,6 @@ void SceneSP::UpdateCustomer(double dt)
 			}
 		}
 	}
-
-
-	/*
-	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
-	myNPCList.push_back(ptrNPC);
-	//cashier 3
-	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
-	myNPCList.push_back(ptrNPC);
-	//Customer at cashier 2
-	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	modelStack.PushMatrix();
-	modelStack.Translate(-16.f, 0.f, -15.f);
-	modelStack.Rotate(180,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER], toggleLight);
-	modelStack.PopMatrix();
-
-
-	//Customer at cashier 3
-	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-6.f, 0.f, -15.f);
-	modelStack.Rotate(180,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER], toggleLight);
-	modelStack.PopMatrix();*/
 }
 void SceneSP::UpdateChattingman(double dt)
 {
@@ -2059,14 +2022,58 @@ void SceneSP::UpdateChattingman(double dt)
 void SceneSP::UpdateShoppers(double dt)
 {//-20,0,216
 	for(int i = 0; i < myNPCList.size(); ++i)
-	{
-		if(myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_REACTIVATE)
-		{
-			myNPCList[i]->setXpos(-20);
-			myNPCList[i]->setYpos(0);
-			myNPCList[i]->setZpos(216);
+	{//216
+		for(int j = 0; j < myNPCList.size(); ++j)
+		{//216
+			if(myNPCList[j]->getCharacterJob() == CUSTOMER && myNPCList[j]->getCharacterState() == STATE_REACTIVATE)
+			{//50
+				{
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(myNPCList[j]->getmoveSpd()));
+					if(myNPCList[j]->getZpos() < 52 && myNPCList[j]->getZpos() > 48)
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+					    myNPCList[j]->setmoveSpd(0.0f);
+					}
+				}
+				if( myNPCList[j]->getCharacterJob() == LOOKING_GUY && myNPCList[j]->getCharacterState() != STATE_IDLE)
+				{
+
+				}
+			}
 		}
 	}
+	//ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
+
+	/*
+	if(myNPCList[i]->getXpos() > 26 && counter == 0)
+				{
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					myNPCList[i]->setYRotation(0);
+					counter = 1;
+				}
+				if(myNPCList[i]->getXpos() > 32 && counter == 1)
+				{
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					counter = 2;
+				}
+				if(myNPCList[i]->getXpos() > 1.5 && counter == 4)
+				{
+					myNPCList[i]->setXpos(1.5);
+					myNPCList[i]->setYRotation(0);
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					counter = 0;
+				}
+
+								if(myNPCList[i]->getXpos() < 8 && counter == 2)
+				{
+					myNPCList[i]->setYRotation(180);
+					myNPCList[i]->setCharacterState(STATE_IDLE);
+					counter = 3;
+				}
+	*/
+
 }
 void SceneSP::UpdateLegAnimation(double dt)
 {
