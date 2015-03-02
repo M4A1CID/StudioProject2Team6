@@ -1497,6 +1497,7 @@ void SceneSP::UpdateDrunkman(double dt)
 				&&(camera.position.y > 16 && camera.position.y < 25))*/
 				&&(camera.position.z > myNPCList[i]->getZpos()-6 && camera.position.z <myNPCList[i]->getZpos()+6)
 				&&(camera.position.x > myNPCList[i]->getXpos()-6 && camera.position.x < myNPCList[i]->getXpos()+6)
+				&&(camera.position.y > myNPCList[i]->getYpos())
 				//&&((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0)))
 				)
 			{
@@ -1815,7 +1816,7 @@ void SceneSP::UpdateCustomer(double dt)
 		{
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_ACTIVE)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_ACTIVE)
-				&&(myNPCList[i]->getXpos()==myNPCList[j]->getXpos()))
+				&&((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)))
 			{
 				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
@@ -1867,7 +1868,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
 				if(myNPCList[i]->getXpos() >= (myNPCList[j]->getXpos()+5) && myNPCList[i]->getXpos() <= (myNPCList[j]->getXpos()+8))
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
@@ -1879,7 +1880,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos() - (myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos() - (2*dt));
 				if(myNPCList[i]->getZpos() >= (myNPCList[j]->getZpos()-9) && myNPCList[i]->getZpos() <= (myNPCList[j]->getZpos()-8))
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
@@ -1891,7 +1892,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
 				if(myNPCList[i]->getXpos() >= 23 && myNPCList[i]->getXpos() <= 25)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
@@ -1903,16 +1904,11 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(2*dt));
 				if(myNPCList[i]->getZpos() >= -100 && myNPCList[i]->getZpos() <= -97)
 				{
+
 					myNPCList[i]->setCharacterState(STATE_REACTIVATE);
-					myNPCList[i]->setXpos(-20);
-				    myNPCList[i]->setYpos(0);
-				    myNPCList[i]->setZpos(216);
-					myNPCList[i]->setAnimationType(IDLE);
-					myNPCList[i]->setLeftLeg(0);
-					myNPCList[i]->setRightLeg(0);
 				}
 			}
 
@@ -1921,7 +1917,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setYRotation(180.0f);
 				if(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_IDLE)
 				{
-					if (((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) <= 7) && ((myNPCList[i]->getXpos()) == (myNPCList[j]->getXpos())))
+					if (((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) <= 7) && ((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)) )
 					{
 						myNPCList[i]->setAnimationType(IDLE);
 				        myNPCList[i]->setLeftLeg(0.0f);
@@ -1929,7 +1925,7 @@ void SceneSP::UpdateCustomer(double dt)
 						myNPCList[j]->setCharacterState(STATE_ACTIVE);
 						myNPCList[i]->setCharacterState(STATE_ACTIVE);
 					}
-					else if(((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) >= 7) && ((myNPCList[i]->getXpos()) == (myNPCList[j]->getXpos())))
+					else if(((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) >= 7) && ((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)))
 					{
 						myNPCList[i]->setAnimationType(WALKING);
 						myNPCList[i]->setmoveSpd(1.0f);
@@ -2016,74 +2012,102 @@ void SceneSP::UpdateChattingman(double dt)
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
 			}
-			}
-			}
-			}
+		}
+	}
+}
 void SceneSP::UpdateShoppers(double dt)
-{//-20,0,216
+{
 	for(int i = 0; i < myNPCList.size(); ++i)
-	{//216
-		for(int j = 0; j < myNPCList.size(); ++j)
-		{//216
-			if(myNPCList[j]->getCharacterJob() == CUSTOMER && myNPCList[j]->getCharacterState() == STATE_REACTIVATE)
-			{//50
+	{
+		if(myNPCList[i]->getCharacterJob() == LOOKING_GUY)
+		{
+			for(int j = 0; j < myNPCList.size(); ++j)
+			{
+				if(myNPCList[j]->getCharacterJob() == CUSTOMER && myNPCList[j]->getCharacterState() == STATE_REACTIVATE)
 				{
-					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setXpos(-20);
+					myNPCList[j]->setYpos(0);
+					myNPCList[j]->setZpos(216);
+					myNPCList[j]->setAnimationType(IDLE);
+					myNPCList[j]->setmoveSpd(0);
+					myNPCList[j]->setLeftLeg(0);
+					myNPCList[j]->setRightLeg(0);
+					myNPCList[j]->setCharacterJob(SHOPPERS);
+					myNPCList[j]->setCharacterState(STATE_FORWARD);
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_FORWARD)
+				{
 					myNPCList[j]->setmoveSpd(5.0f);
-					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(myNPCList[j]->getmoveSpd()));
-					if(myNPCList[j]->getZpos() < 52 && myNPCList[j]->getZpos() > 48)
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
+					if(((myNPCList[j]->getZpos()) < 24) && ((myNPCList[j]->getZpos()) > 22))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
-					    myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_RIGHT);
 					}
 				}
-				if( myNPCList[j]->getCharacterJob() == LOOKING_GUY && myNPCList[j]->getCharacterState() != STATE_IDLE)
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_RIGHT)
 				{
-
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(90);
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5*dt));
+					if((myNPCList[j]->getXpos() > 30) && (myNPCList[j]->getXpos() < 32))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_BACKWARD);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_BACKWARD)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(180);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
+					if((myNPCList[j]->getZpos() > 10) && (myNPCList[j]->getZpos() < 12))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_LEFT);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_LEFT)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(270);
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())-(5*dt));
+					if((myNPCList[j]->getXpos() > -16.3) && (myNPCList[j]->getXpos() < -15.7))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_IDLE);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_IDLE)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(180);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
+					if(((myNPCList[j]->getZpos()) < -7) && ((myNPCList[j]->getZpos()) > -8))//-16,0,-7
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterJob(CUSTOMER);
+						myNPCList[j]->setCharacterState(STATE_IDLE);
+					}
 				}
 			}
 		}
 	}
-	//ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
-
-	/*
-	if(myNPCList[i]->getXpos() > 26 && counter == 0)
-				{
-					myNPCList[i]->setCharacterState(STATE_IDLE);
-					myNPCList[i]->setYRotation(0);
-					counter = 1;
-				}
-				if(myNPCList[i]->getXpos() > 32 && counter == 1)
-				{
-					myNPCList[i]->setCharacterState(STATE_IDLE);
-					counter = 2;
-				}
-				if(myNPCList[i]->getXpos() > 1.5 && counter == 4)
-				{
-					myNPCList[i]->setXpos(1.5);
-					myNPCList[i]->setYRotation(0);
-					myNPCList[i]->setCharacterState(STATE_IDLE);
-					counter = 0;
-				}
-
-								if(myNPCList[i]->getXpos() < 8 && counter == 2)
-				{
-					myNPCList[i]->setYRotation(180);
-					myNPCList[i]->setCharacterState(STATE_IDLE);
-					counter = 3;
-				}
-	*/
-
 }
 void SceneSP::UpdateLegAnimation(double dt)
 {
-	static int multiplier = 1;
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
-		if(myNPCList[i]->getAnimationType() == RUNNING)
-			multiplier = 2;
-		else
-			multiplier = 1;
 		if(myNPCList[i]->getAnimationType() == WALKING)
 		{
 			if(myNPCList[i]->getLeftLeg()>(maxlegRot))
@@ -2091,13 +2115,13 @@ void SceneSP::UpdateLegAnimation(double dt)
 			if(myNPCList[i]->getLeftLeg()<(-maxlegRot))
 				myNPCList[i]->setlegRotDir(false);
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
 			else
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
 			else
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
 		}
 	}
 }
