@@ -27,6 +27,18 @@ void SceneSP::Init()
 		meshList[i] = NULL;
 	}
 
+	/*===============================
+			Music and Sound here
+	==============================*/
+	if(!music.openFromFile(backgroundSound))
+	{
+		std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+	}
+	music.setLoop(true);
+	music.setVolume(7.0f);
+	music.play();
+	
+
 	/*=============================================
 	Init variables here
 	=============================================*/
@@ -1109,6 +1121,8 @@ void SceneSP::Update(double dt)
 	LogisticinteractionTimer+=dt;
 	interactionTimer+=dt;
 	UpdateAITimer(dt);
+
+	
 	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU)
 	{
 		UpdateMenu();
@@ -3359,6 +3373,11 @@ void SceneSP::Exit()
 			delete meshList[i];
 	}
 	delete ptrplayer;
+	delete ptrClass;
+	delete ptrContainer;
+	delete ptrItem;
+	delete ptrNPC;
+	music.stop();
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
