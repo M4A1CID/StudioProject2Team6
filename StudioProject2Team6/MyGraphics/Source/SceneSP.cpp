@@ -960,6 +960,7 @@ void SceneSP::UpdateMenu()
 					{
 						random =  rand()%myTreasureList.size();
 						myCheckList.push_back(myTreasureList[random]); //New item to find everytime
+						myTreasureList.erase(myTreasureList.begin()+random);
 					}
 					ptrplayer->setCharacterJob(PLAY_TREASURE_HUNT);
 					i_menuHandle = GAME_PLAYING;
@@ -1381,15 +1382,20 @@ void SceneSP::UpdatePaying()
 				std::cout << "Item paid: " << ptrplayer->getVector()[inventoryPointing]->getName() << std::endl;
 				//Deduct from player money total price
 				ptrplayer->setMoney(ptrplayer->getMoney() - ptrplayer->getVector()[inventoryPointing]->getPrice());
-
+				
 				//Check if item paid is == random checklist items
 				for(int i = 0; i<myCheckList.size();++i)
 				{
-					if(ptrplayer->getVector()[inventoryPointing]->getName() == myCheckList[i]->getName())
+
+					if(ptrplayer->getVector()[inventoryPointing]->getName() == myCheckList[i]->getName()
+						&& ptrplayer->getVector()[inventoryPointing]->getPrice() == myCheckList[i]->getPrice()
+						&& ptrplayer->getVector()[inventoryPointing]->getGeoType() == myCheckList[i]->getGeoType())
 					{
 						myCheckList[i]->setName("CLEAR!");
 					}
 				}
+
+				//Set inventory to empty afterwards
 				ptrplayer->setInventory(ptrEmpty,inventoryPointing);
 				ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 			}
