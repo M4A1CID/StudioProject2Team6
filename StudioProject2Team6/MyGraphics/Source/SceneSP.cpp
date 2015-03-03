@@ -975,10 +975,12 @@ void SceneSP::UpdateMainMenu()
 					i_menuHandle = SUB_MENU;
 
 				}
-				if(selectionPointing == MENU_EXIT)
+				if(selectionPointing == MENU_INSTRUCTIONS)
 				{
 					interactionTimer = 0;
-					//Exit shit here
+					//Instruction Page
+					i_menuHandle = INSTRUCTION_MENU;
+					selectionPointing = MENU_BACK;
 				}
 			}
 		}
@@ -1062,6 +1064,23 @@ void SceneSP::UpdateWinLoseMenu()
 		}
 	}
 }
+void SceneSP::UpdateInstructionMenu()
+{
+	if(interactionTimer > menuTImerLimiter)
+	{
+		if(Application::IsKeyPressed(VK_RETURN))
+		{
+			if(selectionPointing == MENU_BACK)
+			{
+				interactionTimer = 0;
+				selectionPointing = MENU_START;
+				i_menuHandle = MAIN_MENU;
+
+			}
+
+		}
+	}
+}
 void SceneSP::UpdateMenu()
 {
 	//If at main menu
@@ -1074,6 +1093,10 @@ void SceneSP::UpdateMenu()
 	if(i_menuHandle == SUB_MENU)
 	{
 		UpdateStartMenu();
+	}
+	if(i_menuHandle == INSTRUCTION_MENU)
+	{
+		UpdateInstructionMenu();
 	}
 	//If at Win/Lose Menu
 	if(i_menuHandle == WIN_LOSE_MENU)
@@ -1297,7 +1320,7 @@ void SceneSP::Update(double dt)
 	UpdateAITimer(dt);
 
 	
-	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU || i_menuHandle == WIN_LOSE_MENU)
+	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU || i_menuHandle == WIN_LOSE_MENU || i_menuHandle == INSTRUCTION_MENU)
 	{
 		UpdateMenu();
 	}
@@ -2686,15 +2709,25 @@ void SceneSP::Render()
 
 	switch(i_menuHandle)
 	{
+
 	case MAIN_MENU:
 		//do menu here
+		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderMainMenu();
 		break;
 		//Do sub menu here
 	case SUB_MENU:
+		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderSubMenu();
+
+		break;
+	case INSTRUCTION_MENU:
+		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+		//Do instructio Menu here
+		RenderInstructionMenu();
 		break;
 	case WIN_LOSE_MENU:
+		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderWinLoseMenu();
 		break;
 	case GAME_PLAYING:
@@ -3014,17 +3047,17 @@ void SceneSP::RenderCharacter(CNpc* npc)
 
 void SceneSP::RenderMainMenu()
 {
-	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(0, 1, 0), 2, 17, 15);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_CREDIT], Color(0, 1, 0), 2, 17, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(0, 1, 0), 2, 17, 14);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(0, 1, 0), 2, 17, 13);
 	if(selectionPointing == MENU_START)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(1, 1, 0), 2, 17, 15);
 	}
-	if(selectionPointing == MENU_CREDIT)//If pointing at START button
+	if(selectionPointing == MENU_INSTRUCTIONS)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_CREDIT], Color(1, 1, 0), 2, 17, 14);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(1, 1, 0), 2, 17, 14);
 	}
 	if(selectionPointing == MENU_EXIT)//If pointing at START button
 	{
@@ -3033,7 +3066,7 @@ void SceneSP::RenderMainMenu()
 }
 void SceneSP::RenderSubMenu()
 {
-	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(0, 1, 0), 2, 17, 15);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(0, 1, 0), 2, 17, 14);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(0, 1, 0), 2, 17, 13);
@@ -3052,7 +3085,7 @@ void SceneSP::RenderSubMenu()
 }
 void SceneSP::RenderWinLoseMenu()
 {
-	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	
 	if(b_is_Stealing)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"You stole items from the store!", Color(1, 0, 0), 2, 5, 13);
@@ -3061,6 +3094,19 @@ void SceneSP::RenderWinLoseMenu()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"You found all items from the store!", Color(0, 1, 0), 2, 3, 13);
 	}
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 5);
+}
+void SceneSP::RenderInstructionMenu()
+{
+	RenderTextOnScreen(meshList[GEO_TEXT], "Arrow keys to look", Color(0, 1, 0), 2, 2, 20);
+	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to Move", Color(0, 1, 0), 2, 2, 19);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact with the world", Color(0, 1, 0), 2, 2, 17);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'R' to inspect held item", Color(0, 1, 0), 2, 2, 16);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Use '1' to '8' for inventory select", Color(0, 1, 0), 2, 2, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press SHIFT to run",Color(0, 1, 0), 2, 2, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press Ctrl to crouch", Color(0, 1, 0), 2, 2, 13);
+
+
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 5);
 }
 void SceneSP::RenderCharacters()

@@ -68,9 +68,10 @@ private:
 	void RenderTug();
 	void RenderReturnPoint();
 	void RenderBeerstand();
-	void RenderMainMenu();		//Render Main Menu Screen
-	void RenderSubMenu();		//Render Sub/Start Menu Screen
-	void RenderWinLoseMenu();	//Render Win/Lose Menu Screen
+	void RenderMainMenu();			//Render Main Menu Screen
+	void RenderSubMenu();			//Render Sub/Start Menu Screen
+	void RenderWinLoseMenu();		//Render Win/Lose Menu Screen
+	void RenderInstructionMenu();	//Render instruction Screen
 	void RenderOffice();
 	void RenderStorage();
 	void RenderBuilding();
@@ -90,10 +91,11 @@ private:
 	void UpdateUI(double dt);			//Update Game User Interface
 	void UpdateSamples();				//Update sample food stand
 	void UpdateElevator(double dt);		//Update elevator in supermarket
-	void UpdateMenu();					//Update Menus
-	void UpdateMainMenu();
-	void UpdateStartMenu();
-	void UpdateWinLoseMenu();
+	void UpdateMenu();					//Update Menus into 1 function
+	void UpdateMainMenu();				//Update Main Menu
+	void UpdateStartMenu();				//Update Start Menu with play scenarios
+	void UpdateWinLoseMenu();			//Update winning and losing screen
+	void UpdateInstructionMenu();		//Update instruction menu
 	void UpdatePlaying(double dt);		//Update application while game is playing
 	void UpdateTugofwar(double dt);		//Update the Tug-Of-War mini game
 	void UpdateDrunkman(double dt);		//Update Drunk Man NPC
