@@ -382,7 +382,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+
 
 	ptrClass = new CGluWaterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,8,0,28,180);
@@ -438,7 +438,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 	//==================================================================================
 	ptrClass = new CCerealBox1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSeven",5,5,5,26,0,16,180);
@@ -494,7 +493,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+
 
 	ptrClass = new CRootBeerFloatsCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwelve",5,5,5,14,0,4,180);
@@ -502,7 +501,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CSodaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf22",5,5,5,8,0,4,180);
@@ -542,7 +540,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CTomatoCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf24",5,5,5,8,0,6,0);
@@ -567,7 +564,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CEasterEgg3;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,-18,17,28,180);
@@ -575,7 +571,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+	
 
 	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,-24,17,28,180);
@@ -591,7 +587,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+
 
 	ptrClass = new CMtnDewCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,-36,17,28,180);
@@ -599,7 +595,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+	
 	//==================================================================================
 	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,4,17,28,180);
@@ -615,7 +611,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+	
 
 	ptrClass = new CMtnDewCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,16,17,28,180);
@@ -623,7 +619,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	//==================================================================================
 }
@@ -856,12 +851,9 @@ void SceneSP::UpdateTrolley(double dt)
 		}
 	}
 }
-void SceneSP::UpdateMenu()
+void SceneSP::UpdateMainMenu()
 {
-	//If at main menu
-	if(i_menuHandle == MAIN_MENU)
-	{
-		if(interactionTimer > menuTImerLimiter)
+	if(interactionTimer > menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
 			{
@@ -906,13 +898,10 @@ void SceneSP::UpdateMenu()
 				}
 			}
 		}
-	}
-
-	//If at SUB/Character menu 
-	if(i_menuHandle == SUB_MENU)
-	{
-
-		if(interactionTimer > menuTImerLimiter)
+}
+void SceneSP::UpdateStartMenu()
+{
+	if(interactionTimer > menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
 			{
@@ -974,7 +963,48 @@ void SceneSP::UpdateMenu()
 				}
 			}
 		}
+}
+void SceneSP::UpdateWinLoseMenu()
+{
+	selectionPointing = MENU_BACK;
+	//Reset the world
+	
+	if(Application::IsKeyPressed(VK_RETURN))
+	{
+		if(selectionPointing == MENU_BACK)
+		{
+			//TO DO 
+			resetGame();
+		}
 	}
+}
+void SceneSP::UpdateMenu()
+{
+	//If at main menu
+	if(i_menuHandle == MAIN_MENU)
+	{
+		UpdateMainMenu();
+	}
+
+	//If at SUB/Character menu 
+	if(i_menuHandle == SUB_MENU)
+	{
+		UpdateStartMenu();
+	}
+	//If at Win/Lose Menu
+	if(i_menuHandle == WIN_LOSE_MENU)
+	{
+		UpdateWinLoseMenu();
+	}
+}
+void SceneSP::resetGame()
+{
+	myNPCList.clear();
+	myCheckList.clear();
+	myContainerList.clear();
+	myStockList.clear();
+	myTreasureList.clear();
+	Init();
 }
 void SceneSP::UpdateItemRotation(double dt)
 {
@@ -1002,6 +1032,7 @@ void SceneSP::UpdateItemRotation(double dt)
 }
 void SceneSP::UpdatePlaying(double dt)
 {
+	checkWinLose();
 	if(Application::IsKeyPressed(VK_F1)) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed(VK_F2)) //disable back face culling
@@ -1104,6 +1135,7 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateSamples();
 	checkCollision();
 	checkReturnPoint();
+	
 	if(Application::IsKeyPressed('U'))
 		Cashier.translateY += (float) 50 * dt;
 	//Down
@@ -1143,14 +1175,15 @@ void SceneSP::Update(double dt)
 	UpdateAITimer(dt);
 
 	
-	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU)
+	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU || i_menuHandle == WIN_LOSE_MENU)
 	{
 		UpdateMenu();
 	}
-	if(i_menuHandle == GAME_PLAYING)
+	if(i_menuHandle == GAME_PLAYING )
 	{
 		UpdatePlaying(dt);
 	}
+	
 
 }
 void SceneSP::UpdateElevator(double dt)
@@ -1392,7 +1425,7 @@ void SceneSP::UpdatePaying()
 						&& ptrplayer->getVector()[inventoryPointing]->getPrice() == myCheckList[i]->getPrice()
 						&& ptrplayer->getVector()[inventoryPointing]->getGeoType() == myCheckList[i]->getGeoType())
 					{
-						myCheckList[i]->setName("CLEAR!");
+						myCheckList[i]->setName(clearText);
 					}
 				}
 
@@ -1406,6 +1439,10 @@ void SceneSP::UpdatePaying()
 	{
 		b_isWithinPayingCashier = false;
 	}
+
+	
+
+	
 }
 
 void SceneSP::UpdateSamples()
@@ -2295,11 +2332,13 @@ void SceneSP::Render()
 	case MAIN_MENU:
 		//do menu here
 		RenderMainMenu();
-
 		break;
 		//Do sub menu here
 	case SUB_MENU:
 		RenderSubMenu();
+		break;
+	case WIN_LOSE_MENU:
+		RenderWinLoseMenu();
 		break;
 	case GAME_PLAYING:
 		RenderHand();
@@ -2654,6 +2693,11 @@ void SceneSP::RenderSubMenu()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0), 2, 17, 13);
 	}
+}
+void SceneSP::RenderWinLoseMenu()
+{
+	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 13);
 }
 void SceneSP::RenderCharacters()
 {
@@ -3580,6 +3624,28 @@ bool SceneSP::checkReturnPoint()
 	else
 	{
 		return false;
+	}
+}
+void SceneSP::checkWinLose()
+{
+	if((camera.position.x >12 && camera.position.x < 33) && camera.position.z <-31)
+	{
+		//Init pass check to 0
+		int checklistPass = 0;
+		for(int i = 0; i< myCheckList.size();++i)
+		{
+			//Check number of items cleared
+			if(myCheckList[i]->getName() == clearText)
+			{
+				++checklistPass;
+			}
+		}
+
+		//Check if Total clear is equal to checklist size
+		if(checklistPass == myCheckList.size())
+		{
+			i_menuHandle = WIN_LOSE_MENU;
+		}
 	}
 }
 void SceneSP::Exit()
