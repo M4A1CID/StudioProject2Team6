@@ -291,7 +291,7 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,TUG_OF_WAR_GUY);
 	myNPCList.push_back(ptrNPC);
 	//Drunkman NPC
-	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN);
+	ptrNPC = new CNpc(-6,17.7,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 	//Walk around supermarket
 	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY);
@@ -1557,13 +1557,9 @@ void SceneSP::UpdateDrunkman(double dt)
 		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
 		{
 			if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
-				/*&&(camera.position.z > 26 && camera.position.z < 28)
-				&&(camera.position.x > -5 && camera.position.x < -2.5)
-				&&(camera.position.y > 16 && camera.position.y < 25))*/
 				&&(camera.position.z > myNPCList[i]->getZpos()-6 && camera.position.z <myNPCList[i]->getZpos()+6)
 				&&(camera.position.x > myNPCList[i]->getXpos()-6 && camera.position.x < myNPCList[i]->getXpos()+6)
 				&&(camera.position.y > myNPCList[i]->getYpos())
-				//&&((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0)))
 				)
 			{
 				i_drunkmanAct = DRUNKCARRY;
@@ -1588,21 +1584,18 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 			if(i_drunkmanAct == DRUNKIDLE)
 			{
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setLeftLeg(-90);
-				myNPCList[i]->setRightLeg(-90);
-				myNPCList[i]->setLeftArm(20);
-				myNPCList[i]->setRightArm(-20);
+				myNPCList[i]->setXRotation(90);
 			}
 			else if(i_drunkmanAct == DRUNKCARRY)
 			{
 				myNPCList[i]->setXpos(camera.position.x);
-				myNPCList[i]->setYpos(camera.position.y);
-				myNPCList[i]->setZpos(camera.position.z);
+				myNPCList[i]->setYpos(camera.position.y+2);
+				myNPCList[i]->setZpos(camera.position.z+3);
 			}
 			else
 			{
 				myNPCList[i]->setXpos(-25);
-				myNPCList[i]->setYpos(-2);
+				myNPCList[i]->setYpos(0.7);
 				myNPCList[i]->setZpos(60);
 			}
 		}
@@ -3175,6 +3168,69 @@ void SceneSP::RenderBeerstand()
 	modelStack.PushMatrix();
 	modelStack.Translate(-19.0f,17.0f,0.0f);
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,20.6f,0.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,18.6f,2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,18.6f,-2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.5f,18.6f,0.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.5f,18.6f,2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.5f,18.6f,-2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.5f,18.6f,0.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.5f,18.6f,2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.5f,18.6f,-2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-8.0f,17.0f,27.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-8.0f,17.0f,25.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-8.0f,17.0f,29.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-4.0f,17.0f,29.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-4.0f,17.0f,25.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
 	modelStack.PopMatrix();
 }
 void SceneSP::RenderBuilding()
