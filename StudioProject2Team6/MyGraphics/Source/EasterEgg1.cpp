@@ -3,7 +3,7 @@
 
 CEasterEgg1::CEasterEgg1(void)
 {
-	setName("Easter Egg1");
+	setName("Doge food");
 	setPrice(5.0f);
 	setGeoType(GEO_EASTEREGG_1);
 }

@@ -103,6 +103,13 @@ static bool getCaged = false;
 static bool getGabed = false;
 static bool getTrolled = false;
 static bool getTimed = false;
+static bool getRicked = false;
+const int numEastereggs = 5;
+
+//Winning easter egg message
+const std::string winEasterArray[10] = {"Y","o","u"," ","f","o","u","n","d"," "};
+const std::string winEasterArray1[10] = {"a","l","l"," ","t","h","e"," ","e","a"};
+const std::string winEasterArray2[10] = {"s","t","e","r"," ","e","g","g","s","!"};
 
 //Cage
 static bool caged = false;
@@ -203,11 +210,8 @@ static std::string backgroundSound = "Sound\\Carefree.ogg";
 static std::string clearText = "CLEAR!";
 
 //Sounds
-static std::string gabenSound = "Sound/holy.ogg";
-static std::string noTimeSound = "Sound/time.ogg";
-static std::string jawsSound = "Sound/jaws.ogg";
-static std::string trollSound = "Sound/troll.ogg";
+const std::string soundFXArray[5] = {"Sound/holy.ogg","Sound/time.ogg","Sound/jaws.ogg","Sound/troll.ogg","Sound/rick.ogg"};
 
 //reset value
-static float resetValue = 0.0f;
-static int resetIntValue = 0;
+const float resetValue = 0.0f;
+const int resetIntValue = 0;

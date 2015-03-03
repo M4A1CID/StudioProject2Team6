@@ -150,6 +150,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAGE] = MeshBuilder::GenerateQuad("cage", Color(1, 1, 1), 1.0f);
 	meshList[GEO_CAGE]->textureID = LoadTGA("Image//TheCage.tga");
 	meshList[GEO_CAGEWALL] = MeshBuilder::GenerateQuad("cage", Color(0, 0, 0), 1.0f);
+	meshList[GEO_CAGEWALL]->textureID = LoadTGA("Image//TheCage.tga");
 	meshList[GEO_GABEN] = MeshBuilder::GenerateText("gaben",1,1);
 	meshList[GEO_GABEN]->textureID = LoadTGA("Image//AllHailGabe.tga");
 	/*=============================
@@ -369,7 +370,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg3;
+	ptrClass = new CBranCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,20,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -377,13 +378,13 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CVargaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,26,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CGluWaterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,8,0,28,180);
@@ -401,7 +402,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 	//==============================================================================
-	ptrClass =  new CEasterEgg1;
+	ptrClass =  new CTomatoCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFour",5,5,5,26,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -409,7 +410,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox5;
+	ptrClass = new CMelonCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFive",5,5,5,20,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -417,7 +418,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox4;
+	ptrClass = new CRedMonsterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSix",5,5,5,14,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -439,8 +440,9 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
-	ptrClass = new CCerealBox1;
+	ptrClass = new CBrownCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSeven",5,5,5,26,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -448,29 +450,26 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox2;
+	ptrClass = new CSardineCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEight",5,5,5,20,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox3;
+	ptrClass = new CPeasCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfNine",5,5,5,14,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CRedMonsterCan;
+	ptrClass = new CEasterEgg1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf20",5,5,5,8,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CRootBeerFloatsCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf21",5,5,5,2,0,16,180);
@@ -480,13 +479,12 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 	//==================================================================================
-	ptrClass = new CHumanCan;
+	ptrClass = new CBrownCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTen",5,5,5,26,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CMtnDewCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEleven",5,5,5,20,0,4,180);
@@ -495,7 +493,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-
 	ptrClass = new CRootBeerFloatsCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwelve",5,5,5,14,0,4,180);
 	myContainerList.push_back(ptrContainer);
@@ -503,21 +500,19 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CSodaCan;
+	ptrClass = new CVargaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf22",5,5,5,8,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row;
 
-	ptrClass = new CSardineCan;
+	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf23",5,5,5,2,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 	//==================================================================================
 	ptrClass = new CSodaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf13",5,5,5,26,0,6,0);
@@ -548,7 +543,6 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CMelonCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf25",5,5,5,2,0,6,0);
@@ -556,25 +550,25 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	myTreasureList.push_back(ptrClass);
 
 	//Second layer
-	ptrClass = new CBeansCan;
+	ptrClass = new CCerealBox1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,-12,17,28,180);
 	myContainerList.push_back(ptrContainer);	//Push back into vector list
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg3;
+	ptrClass = new CCerealBox2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,-18,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CCerealBox3;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,-24,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -582,23 +576,23 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CGluWaterCan;
+	ptrClass = new CCerealBox4;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,-30,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-
-	ptrClass = new CMtnDewCan;
+	ptrClass = new CCerealBox5;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,-36,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CEasterEgg1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,4,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -606,21 +600,21 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CGluWaterCan;
+	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,10,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CMtnDewCan;
+	ptrClass = new CHumanCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,16,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
 }
 void SceneSP::DefineItem(CContainer* container, CItem item, int row)
@@ -1049,7 +1043,7 @@ void SceneSP::UpdateEasteregg(double dt)
 		UpdateCage(dt);
 		UpdateGaben(dt);
 		UpdateTroll(dt);
-		if(getCounter == 4)
+		if(getCounter == numEastereggs)
 		{
 			winEaster = true;
 		}
@@ -2228,7 +2222,7 @@ void SceneSP::UpdateCage(double dt)
 		if(easterTimer > easterLimiter)
 		{
 			easterTimer = resetValue;
-			if(!music.openFromFile(jawsSound))
+			if(!music.openFromFile(soundFXArray[2]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 			}
@@ -2275,7 +2269,7 @@ void SceneSP::UpdateGaben(double dt)
 	if(Application::IsKeyPressed('N')&&summonG == 4)
 	{
 		gabed = true;
-		if(!music.openFromFile(gabenSound))
+		if(!music.openFromFile(soundFXArray[0]))
 		{
 			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 		}
@@ -2306,7 +2300,7 @@ void SceneSP::UpdateTroll(double dt)
 			if(easterTimer > easterLimiter)
 			{
 				easterTimer = resetValue;
-				if(!music.openFromFile(trollSound))
+				if(!music.openFromFile(soundFXArray[3]))
 				{
 					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 				}
@@ -2331,19 +2325,20 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 {
 	if(((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24)) ||
 		((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)) ||
-		((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f))
+		((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f)) ||
+		((camera.position.x > -29.5f && camera.position.x < -28.0f) && (camera.position.z < -20.0f && camera.position.z > -22.5f))//rroll
 		)
 	{
-		inRange = true;
+		inRange = true;//display interaction text
 	}
 	else
 		inRange = false;
 	if((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f) && Application::IsKeyPressed('E'))
-	{
+	{//no time easter egg
 		if(easterTimer > easterLimiter)
 		{
 			easterTimer = 0.0f;
-			if(!music.openFromFile(noTimeSound))
+			if(!music.openFromFile(soundFXArray[1]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 			}
@@ -2357,6 +2352,25 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 			}
 		}
 	}
+	if((camera.position.x > -29.5f && camera.position.x < -28.0f) && (camera.position.z < -20.0f && camera.position.z > -22.5f) && Application::IsKeyPressed('E'))
+	{
+		if(easterTimer > easterLimiter)
+		{
+			easterTimer = 0.0f;
+			if(!music.openFromFile(soundFXArray[4]))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+			if(!getRicked)
+			{
+				getRicked = true;
+				getCounter++;
+			}
+		}
+	}
 }
 void SceneSP::RenderEasteregg()
 {
@@ -2365,13 +2379,33 @@ void SceneSP::RenderEasteregg()
 		RenderCage();
 		RenderTroll();
 		RenderMiscEastereggs();
-		//RenderTextOnScreen(meshList[GEO_TEXT],"Easter eggs found : " +s_easter_counter,Color(0,1,0),2,1,16);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter, Color(1, 0, 0), 2.5,0, 20);
 		if(inRange)
-			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,6);
+			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,16);
 		if(winEaster)
-			RenderTextOnScreen(meshList[GEO_TEXT],"You found all the easter eggs!",Color(0,1,0),3,10,10);
+		{
+			for(int i = 0;i<10;i++)
+			{
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray[i],Color(0+0.1*i,0,1-0.1*i),3,2+0.8*i,9.7);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray1[i],Color(0,1-0.1*i,0+0.1*i),3,10+0.8*i,9.7);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray2[i],Color(1-0.1*i,0+0.1*i,0),3,18+0.8*i,9.7);
+			}
+			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'enter' to continue",Color(1,1,0),2,8,13);
+		}
 	}
+}
+void SceneSP::RenderMiscEastereggs()
+{
+	if(gabed)
+		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
+	modelStack.PushMatrix();
+	modelStack.Translate(38.7f, 0.0f, -5.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_4], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-29.5f, 17.0f, -26.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_5], toggleLight);
+	modelStack.PopMatrix();
 }
 void SceneSP::RenderUI()
 {
@@ -3418,73 +3452,64 @@ void SceneSP::RenderStorage()
 void SceneSP::RenderCage()
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(42.7f, 0.0f, -27.0f);
-	RenderMesh(meshList[GEO_EASTEREGG_6], toggleLight);
+		modelStack.Translate(42.7f, 0.0f, -27.0f);
+		RenderMesh(meshList[GEO_EASTEREGG_6], toggleLight);
 	modelStack.PopMatrix();
 	if(caged)
 	{
 		modelStack.PushMatrix();
 
-		modelStack.PushMatrix();
-		modelStack.Translate(0.0f, -30.0f, cagedPos);
-		modelStack.Scale(50.0f,50.0f,50.0f);
-		RenderMesh(meshList[GEO_CAGE], true);
-		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+				modelStack.Translate(0.0f, -30.0f, cagedPos);
+				modelStack.Scale(50.0f,50.0f,50.0f);
+				RenderMesh(meshList[GEO_CAGE], true);
+			modelStack.PopMatrix();
 
-		modelStack.PushMatrix();//bot
-		modelStack.Translate(0.0f, -30.0f, 70.0f);
-		modelStack.Scale(50.0f,50.0f,50.0f);
-		modelStack.Rotate(180.0f,1,0,0);
-		RenderMesh(meshList[GEO_CAGEWALL], true);
-		modelStack.PopMatrix();
+			modelStack.PushMatrix();//bot
+				modelStack.Translate(0.0f, -30.0f, 70.0f);
+				modelStack.Scale(50.0f,50.0f,50.0f);
+				modelStack.Rotate(180.0f,1,0,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
 
-		modelStack.PushMatrix();//bot
-		modelStack.Translate(0.0f, -54.0f, 0.0f);
-		modelStack.Scale(50.0f,50.0f,150.0f);
-		modelStack.Rotate(-90.0f,1,0,0);
-		RenderMesh(meshList[GEO_CAGEWALL], true);
-		modelStack.PopMatrix();
+			modelStack.PushMatrix();//bot
+				modelStack.Translate(0.0f, -54.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(-90.0f,1,0,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
 
-		modelStack.PushMatrix();//top
-		modelStack.Translate(0.0f, -6.0f, 0.0f);
-		modelStack.Scale(50.0f,50.0f,150.0f);
-		modelStack.Rotate(90.0f,1,0,0);
-		RenderMesh(meshList[GEO_CAGEWALL], true);
-		modelStack.PopMatrix();
+			modelStack.PushMatrix();//top
+				modelStack.Translate(0.0f, -6.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(90.0f,1,0,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
-		modelStack.Translate(-24.0f, -29.0f, 0.0f);
-		modelStack.Scale(50.0f,50.0f,150.0f);
-		modelStack.Rotate(90.0f,0,1,0);
-		RenderMesh(meshList[GEO_CAGEWALL], true);
-		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+				modelStack.Translate(-24.0f, -29.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(90.0f,0,1,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
 
-		modelStack.PushMatrix();
-		modelStack.Translate(24.0f, -29.0f, 0.0f);
-		modelStack.Scale(50.0f,50.0f,150.0f);
-		modelStack.Rotate(-90.0f,0,1,0);
-		RenderMesh(meshList[GEO_CAGEWALL], true);
-		modelStack.PopMatrix();
+			modelStack.PushMatrix();
+				modelStack.Translate(24.0f, -29.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(-90.0f,0,1,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
 
 		modelStack.PopMatrix();
 	}
 }
 void SceneSP::RenderTroll()
 {
-	if(reversed)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Reversed!", Color(0, 1, 0), 2, 25, 5);
+	if(reversed)	//RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Reversed!", Color(1, 1, 0), 3, 18, 19);
 	modelStack.PushMatrix();
-	modelStack.Translate(33.0f, 17.0f, -27.0f);
-	RenderMesh(meshList[GEO_EASTEREGG_3], toggleLight);
-	modelStack.PopMatrix();
-}
-void SceneSP::RenderMiscEastereggs()
-{
-	if(gabed)
-		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
-	modelStack.PushMatrix();
-	modelStack.Translate(38.7f, 0.0f, -5.0f);
-	RenderMesh(meshList[GEO_EASTEREGG_4], toggleLight);
+		modelStack.Translate(33.0f, 17.0f, -27.0f);
+		RenderMesh(meshList[GEO_EASTEREGG_3], toggleLight);
 	modelStack.PopMatrix();
 }
 void SceneSP::checkPickUpItem()
