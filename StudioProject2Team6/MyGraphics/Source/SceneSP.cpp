@@ -55,6 +55,7 @@ void SceneSP::Init()
 	ptrInvSelect = ptrplayer->getItem(0);
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
+	b_is_Stealing = false;
 	toggleLight = true;
 	toggleDoorFront = false;
 	toggleDoorBack = false;
@@ -2858,7 +2859,15 @@ void SceneSP::RenderSubMenu()
 void SceneSP::RenderWinLoseMenu()
 {
 	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 13);
+	if(b_is_Stealing)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"You stole items from the store!", Color(1, 0, 0), 2, 5, 13);
+	}
+	else
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"You found all items from the store!", Color(0, 1, 0), 2, 3, 13);
+	}
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 5);
 }
 void SceneSP::RenderCharacters()
 {
@@ -3874,7 +3883,8 @@ bool SceneSP::checkReturnPoint()
 }
 void SceneSP::checkWinLose()
 {
-	if((camera.position.x >12 && camera.position.x < 33) && camera.position.z <-31)
+	//If player is exiting by Exit Gate and in Treasure hunter mode
+	if((camera.position.x >12 && camera.position.x < 33) && camera.position.z <-31 &&  ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
 	{
 		//Init pass check to 0
 		int checklistPass = 0;
@@ -3886,6 +3896,7 @@ void SceneSP::checkWinLose()
 				++checklistPass;
 			}
 		}
+		
 
 		//Check if Total clear is equal to checklist size
 		if(checklistPass == myCheckList.size())
@@ -3893,6 +3904,22 @@ void SceneSP::checkWinLose()
 			i_menuHandle = WIN_LOSE_MENU;
 		}
 	}
+	if((((camera.position.x >12 && camera.position.x < 33) && camera.position.z <-31)||((camera.position.x >-29 && camera.position.x < -10)&& camera.position.z >30)) 
+		&&  ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
+	{
+		//Search through player's inventory
+		for(int i = 0; i< ptrplayer->getVector().size(); ++i)
+		{
+			//If player has existing item when walking out, player is stealing
+			if(ptrplayer->getVector()[i]->getName() != ptrEmpty->getName())
+			{
+				b_is_Stealing = true;
+				i_menuHandle = WIN_LOSE_MENU;
+			}
+		}
+	}
+
+
 	if(closeEaster)
 	{
 		getCaged = false;
