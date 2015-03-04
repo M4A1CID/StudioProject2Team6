@@ -4,7 +4,7 @@
 CHumanCan::CHumanCan(void)
 {
 	setName("Human Can");
-	setPrice(5.0f);
+	setPrice(20.0f);
 	setGeoType(GEO_CAN_HUMANS);
 }
 

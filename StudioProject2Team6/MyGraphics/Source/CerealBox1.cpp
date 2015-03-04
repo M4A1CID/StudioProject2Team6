@@ -3,8 +3,8 @@
 
 CCerealBox1::CCerealBox1(void)
 {
-	setName("Cereal Box1");
-	setPrice(5.0f);
+	setName("Milk Oties");
+	setPrice(8.0f);
 	setGeoType(GEO_CEREAL_1);
 }
 

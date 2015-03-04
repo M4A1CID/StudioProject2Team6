@@ -310,7 +310,7 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 
 	//Ghost npc
-	ptrNPC = new CNpc(-20,-2,35,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY);
+	ptrNPC = new CNpc(-20,-2,45,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY);
 	myNPCList.push_back(ptrNPC);
 	//cashier 1
 	ptrNPC = new CNpc(-26,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
@@ -583,7 +583,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 	myTreasureList.push_back(ptrClass);
-
+	
 	ptrClass = new CCerealBox5;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,-36,17,28,180);
 	myContainerList.push_back(ptrContainer);
@@ -1034,8 +1034,11 @@ void SceneSP::UpdateItemRotation(double dt)
 void SceneSP::UpdateEasteregg(double dt)
 {	
 	std::stringstream ss_easterCounter;
+	std::stringstream ss_easterCount;
 	ss_easterCounter << getCounter;
+	ss_easterCount << numEastereggs;
 	s_easter_counter = ss_easterCounter.str();
+	s_easter_count = ss_easterCount.str();
 	easterTimer += dt;
 	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
 	{
@@ -1075,6 +1078,17 @@ void SceneSP::UpdatePlaying(double dt)
 	if(Application::IsKeyPressed(VK_CONTROL))
 	{
 		b_crouching = true;
+		if(Application::IsKeyPressed(VK_SHIFT)&&easterTimer > easterLimiter2)
+		{
+			easterTimer = 0.0f;
+			if(!music.openFromFile(soundFXArray[5]))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+		}
 	}
 	else
 	{
@@ -1298,27 +1312,12 @@ void SceneSP::UpdateElevator(double dt)
 void SceneSP::UpdateDoor(double dt)
 {
 	static bool test = false;
-	//Front door control
-	if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
-		toggleDoorFront = true;
-	else
-		toggleDoorFront = false;
-	if(toggleDoorFront)
-	{
-		if(moveDoorFront > -8.0f)
-			moveDoorFront -= 10.0f * dt;
-	}
-	else
-	{
-		if(moveDoorFront < 0.0f)
-			moveDoorFront += 10.0f * dt;
-	}
-	//Back door control
+	static bool test2 = false;
 	for(int i = 0; i < myNPCList.size(); ++i)//check npc pos
 	{
 		if(((myNPCList[i]->getZpos() < -15.0f && myNPCList[i]->getZpos() > -40.0f) && (myNPCList[i]->getXpos() > 10.0f && myNPCList[i]->getXpos() < 35.0f))&&
 			myNPCList[i]->getYpos()<5
-			)
+			)//Back door control
 		{
 			toggleDoorBack = true;
 			test = true;
@@ -1327,6 +1326,19 @@ void SceneSP::UpdateDoor(double dt)
 		else
 			toggleDoorBack = false;
 	}
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(((myNPCList[i]->getZpos() < 45.0f && myNPCList[i]->getZpos() > 15.0f) && (myNPCList[i]->getXpos() > -30.0f  && myNPCList[i]->getXpos() < -10.0f))&&
+			myNPCList[i]->getYpos()<5
+			)
+		{
+			toggleDoorFront = true;
+			test2 = true;
+			break;
+		}
+		else
+			toggleDoorFront = false;
+	}
 	if(!test)
 	{
 		if((camera.position.z < -15.0f && camera.position.z > -40.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
@@ -1334,7 +1346,15 @@ void SceneSP::UpdateDoor(double dt)
 		else
 			toggleDoorBack = false;
 	}
+	if(!test2)
+	{
+		if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f && camera.position.x < -10.0f))
+			toggleDoorFront = true;
+		else
+			toggleDoorFront = false;
+	}
 	test = false;
+	test2 = false;
 	if(toggleDoorBack)
 	{
 		if(moveDoorBack > -7.0f)
@@ -1344,6 +1364,16 @@ void SceneSP::UpdateDoor(double dt)
 	{
 		if(moveDoorBack < 0.0f)
 			moveDoorBack += 10.0f * dt;
+	}
+	if(toggleDoorFront)
+	{
+		if(moveDoorFront > -8.0f)
+			moveDoorFront -= 10.0f * dt;
+	}
+	else
+	{
+		if(moveDoorFront < 0.0f)
+			moveDoorFront += 10.0f * dt;
 	}
 }
 void SceneSP::UpdatePlayerSelection()
@@ -1657,6 +1687,7 @@ void SceneSP::UpdateGhostman(double dt)
 			myNPCList[i]->setLeftLeg(GhostNpcInitLeg);
 			myNPCList[i]->setRightLeg(GhostNpcInitLeg);
 			myNPCList[i]->setYRotation(GhostNpcInitRot);
+			myNPCList[i]->setmoveSpd(7.0f);
 			if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
 				camera.position.z > GhostNpcAppearBoundZ3
 				)
@@ -2379,7 +2410,7 @@ void SceneSP::RenderEasteregg()
 		RenderCage();
 		RenderTroll();
 		RenderMiscEastereggs();
-		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter, Color(1, 0, 0), 2.5,0, 20);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter+"/"+s_easter_count, Color(1, 0, 0), 2.5,0, 20);
 		if(inRange)
 			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,16);
 		if(winEaster)
@@ -3571,7 +3602,6 @@ void SceneSP::checkPickUpItem()
 void SceneSP::checkCollision()
 {
 	checkSupermarketCollision();
-	checkCashierCollision();
 	checkElevatorCollision();
 	checkObjectCollision(13.0f, 17.0f, -26.0f, 8.0f, 4.0f);//meat shelves
 	checkObjectCollision(1.0f, 17.0f, -26.0f, 8.0f, 4.0f);
@@ -3583,6 +3613,9 @@ void SceneSP::checkCollision()
 	checkObjectCollision(37.0f, 0.0f, 25.0f, 4.0f, 5.5f);//freezer
 	checkObjectCollision(37.0f, 0.0f, 16.0f, 4.0f, 5.5f);
 	checkObjectCollision(37.0f, 0.0f, 7.0f, 4.0f, 5.5f);
+	checkObjectCollision(-26.0f, 0.0f, -20.0f, 5.0f, 11.0f);//cashier tables
+	checkObjectCollision(-16.0f, 0.0f, -18.0f, 4.0f, 7.5f);
+	checkObjectCollision(-6.0f, 0.0f, -18.0f, 4.0f, 7.5f);
 	checkObjectCollision(30.0f, 17.0f, -26.0f, 3.0f, 3.0f);//boxes
 	for(int i = 0; i<4;i++)
 	{
@@ -3596,7 +3629,22 @@ void SceneSP::checkCollision()
 	for(unsigned int i = 0; i< myContainerList.size(); ++i)//Shelf collision
 		checkObjectCollision(myContainerList[i]->getXpos(), myContainerList[i]->getYpos(), myContainerList[i]->getZpos(), ShelfWidthX, ShelfWidthZ);
 	checkObjectCollision(35.0f, 0.0f, -5.0f, 2.0f, 4.0f);//sample stand
-	checkObjectCollision(150.0f, 0.0f, 75.0f, 32.0f, 32.0f);//outside buildings
+	checkObjectCollision(75.0f, 0.0f, 65.0f, 32.0f, 32.0f);//outside buildings
+	checkObjectCollision(75.0f, 0.0f, 130.0f, 32.0f, 32.0f);
+	checkObjectCollision(75.0f, 0.0f, 195.0f, 32.0f, 32.0f);
+	checkObjectCollision(75.0f, 0.0f, -65.0f, 32.0f, 32.0f);
+	checkObjectCollision(75.0f, 0.0f, -130.0f, 32.0f, 32.0f);
+	checkObjectCollision(75.0f, 0.0f, -195.0f, 32.0f, 32.0f);
+	checkObjectCollision(-75.0f, 0.0f, 65.0f, 32.0f, 32.0f);
+	checkObjectCollision(-75.0f, 0.0f, 130.0f, 32.0f, 32.0f);
+	checkObjectCollision(-75.0f, 0.0f, 195.0f, 32.0f, 32.0f);
+	checkObjectCollision(-75.0f, 0.0f, -65.0f, 32.0f, 32.0f);
+	checkObjectCollision(-75.0f, 0.0f, -130.0f, 32.0f, 32.0f);
+	checkObjectCollision(-75.0f, 0.0f, -195.0f, 32.0f, 32.0f);
+	checkObjectCollision(23.0f, 17.0f, 11.0f, 5.5f, 3.0f);//logistic staff room
+	checkObjectCollision(36.0f, 17.0f, 11.0f, 4.0f, 3.0f);
+	checkObjectCollision(23.0f, 17.0f, -11.0f, 5.5f, 3.0f);
+	checkObjectCollision(36.0f, 17.0f, -11.0f, 4.0f, 3.0f);
 }
 void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ)
 {
@@ -3610,7 +3658,7 @@ void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float wid
 			camera.target.x -= diffX;
 			diffX = 0.0f;
 		}
-		if((camera.position.x > (posX - widthX) && camera.position.x < (posX - widthX + (Coffset/2))) && 
+		if((camera.position.x > (posX - widthX) && camera.position.x < (posX - widthX + Coffset)) && 
 			(camera.position.z > (posZ - widthZ + (Coffset / 2)) && camera.position.z < (posZ + widthZ - (Coffset / 2))))
 		{
 			diffX = camera.position.x - (posX - widthX);
@@ -3752,28 +3800,17 @@ void SceneSP::checkSupermarketCollision()
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
-		if((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > -23 && camera.position.z < -8))
+		if(((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > -23 && camera.position.z < -8)) ||
+			((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > 10 && camera.position.z < 26.5f))
+			)
 		{//logistic staff room
 			diffX = camera.position.x - (18);
 			camera.position.x = 18;
 			camera.target.x -= diffX;
 			diffX = 0.0f;
 		}
-		if((camera.position.x > 18 && camera.position.x < 26) && (camera.position.z > -8-2 && camera.position.z < -8))
-		{
-			diffZ = camera.position.z - (-8);
-			camera.position.z = -8;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+		
 		}
-		if((camera.position.x > 31 && camera.position.x < 39) && (camera.position.z > -8-2 && camera.position.z < -8))
-		{
-			diffZ = camera.position.z - (-8);
-			camera.position.z = -8;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-	}
 	if(camera.position.y < 10)
 	{
 		if((camera.position.x > -36 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 39))
@@ -3790,89 +3827,31 @@ void SceneSP::checkSupermarketCollision()
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
-	}
-}
-void SceneSP::checkCashierCollision()
-{
-	if(camera.position.y < 10)
-	{
-		//Cashier table 1
-		if((camera.position.x > CboundX1 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		if(camera.position.z > 222 && camera.position.z < 225)
 		{
-			diffX = camera.position.x - (CboundX2);
-			camera.position.x = CboundX2;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
-		{
-			diffZ = camera.position.z - (CboundZ2);
-			camera.position.z = CboundZ2;
+			diffZ = camera.position.z - (222);
+			camera.position.z = 222;
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
-		if((camera.position.x > CboundX3 && camera.position.x < CboundX4) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		if(camera.position.z > -225 && camera.position.z < -222)
 		{
-			diffX = camera.position.x - (CboundX3);
-			camera.position.x = CboundX3;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > CboundX3 && camera.position.x < CboundX2) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
-		{
-			diffZ = camera.position.z - (CboundZ1);
-			camera.position.z = CboundZ1;
+			diffZ = camera.position.z - (-222);
+			camera.position.z = -222;
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
-		//Cashier table 2
-		if((camera.position.x > CboundX5 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
+		if(camera.position.x > 104 && camera.position.x < 107)
 		{
-			diffX = camera.position.x - (CboundX6);
-			camera.position.x = CboundX6;
+			diffX = camera.position.x - (104);
+			camera.position.x = 104;
 			camera.target.x -= diffX;
 			diffX = 0.0f;
 		}
-		if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
+		if(camera.position.x > -107 && camera.position.x < -104)
 		{
-			diffZ = camera.position.z - (CboundZ2);
-			camera.position.z = CboundZ2;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > CboundX7 && camera.position.x < CboundX8) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ2))
-		{
-			diffX = camera.position.x - (CboundX7);
-			camera.position.x = CboundX7;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > CboundX7 && camera.position.x < CboundX6) && (camera.position.z > CboundZ1 && camera.position.z < CboundZ4))
-		{
-			diffZ = camera.position.z - (CboundZ1);
-			camera.position.z = CboundZ1;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		//Cashier table 3
-		if((camera.position.x > CboundX9 && camera.position.x < CboundX10) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
-		{
-			diffX = camera.position.x - (CboundX10);
-			camera.position.x = CboundX10;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
-		}
-		if((camera.position.x > CboundX11 && camera.position.x < CboundX10) && (camera.position.z > CboundZ3 && camera.position.z < CboundZ2))
-		{
-			diffZ = camera.position.z - (CboundZ2);
-			camera.position.z = CboundZ2;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
-		}
-		if((camera.position.x > CboundX11 && camera.position.x < CboundX12) && (camera.position.z > CboundZ5 && camera.position.z < CboundZ2))
-		{
-			diffX = camera.position.x - (CboundX11);
-			camera.position.x = CboundX11;
+			diffX = camera.position.x - (-104);
+			camera.position.x = -104;
 			camera.target.x -= diffX;
 			diffX = 0.0f;
 		}

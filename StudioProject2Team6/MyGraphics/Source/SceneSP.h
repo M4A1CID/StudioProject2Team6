@@ -35,8 +35,6 @@ private:
 	void checkCollision();
 	void checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ);
 	void checkSupermarketCollision();
-	void checkFreezerCollision();
-	void checkCashierCollision();
 	void checkElevatorCollision();
 	bool checkReturnPoint();
 	void checkWinLose();
@@ -182,6 +180,7 @@ private:
 	string s_item_name;
 	string s_item_price;
 	string s_easter_counter;
+	string s_easter_count;
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;

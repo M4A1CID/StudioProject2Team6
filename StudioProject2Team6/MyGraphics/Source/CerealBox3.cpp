@@ -3,8 +3,8 @@
 
 CCerealBox3::CCerealBox3(void)
 {
-	setName("Cereal Box3");
-	setPrice(5.0f);
+	setName("Cookie cereal");
+	setPrice(9.0f);
 	setGeoType(GEO_CEREAL_3);
 }
 
