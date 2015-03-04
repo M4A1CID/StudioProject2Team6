@@ -207,10 +207,13 @@ static bool PunchTimerLimiter = true;
 static std::string menuTextArray[8] = {"START","Instructions","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt","Resume game","Back to main menu"};
 static std::string s_UI_Play_Mode[3] = {"Free Roam","Treasure Hunt", "Easter Egg Hunt"};
 static std::string backgroundSound = "Sound\\Carefree.ogg";
+static std::string ambientSound = "Sound\\ambient.ogg";
 static std::string clearText = "CLEAR!";
 
 //Sounds
-const std::string soundFXArray[6] = {"Sound/holy.ogg","Sound/time.ogg","Sound/jaws.ogg","Sound/troll.ogg","Sound/rick.ogg","Sound/sonic.ogg"};
+const std::string soundFXArray[9] = {"Sound/holy.ogg","Sound/time.ogg","Sound/jaws.ogg","Sound/troll.ogg","Sound/rick.ogg",
+									"Sound/sonic.ogg","Sound/ding.ogg","Sound/door.ogg","Sound/eat.ogg"};
+const float soundLimiter = 3.0f;
 
 //reset value
 const float resetValue = 0.0f;

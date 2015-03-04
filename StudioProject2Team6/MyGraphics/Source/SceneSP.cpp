@@ -28,13 +28,13 @@ void SceneSP::Init()
 	/*===============================
 			Music and Sound here
 	==============================*/
-	/*if(!music.openFromFile(backgroundSound))
+	if(!music.openFromFile(backgroundSound))
 	{
 		std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 	}
 	music.setLoop(true);
 	music.setVolume(50.0f);
-	music.play();*/
+	music.play();
 	
 
 	/*=============================================
@@ -63,6 +63,7 @@ void SceneSP::Init()
 	elevatorSecondFloor = false;
 	b_inspection = false;
 	b_isWithinPayingCashier = false;
+	b_dinged = true;
 	IsIntugofwar = false;
 	win = false;
 	lose = false;
@@ -71,6 +72,7 @@ void SceneSP::Init()
 	interactionTimer = 0.0f;
 	LogisticinteractionTimer = 0.0f;
 	CustomerinteractionTimer = 0.0f;
+	f_soundTimer = 0.0f;
 	moveDoorFront = 0.0f;
 	moveDoorBack = 0.0f;
 	trolleyrotation = 0.0f;
@@ -886,7 +888,7 @@ void SceneSP::UpdateEasterEggGuy(double dt)
 					myNPCList[i]->setActive(true);
 					//translation code
 
-					myNPCList[i]->setYpos(myNPCList[i]->getYpos()+myNPCList[i]->getmoveSpd() * dt);
+					myNPCList[i]->setYpos(myNPCList[i]->getYpos()+myNPCList[i]->getmoveSpd() * static_cast<float>(dt));
 					if(myNPCList[i]->getYpos()>23)
 					myNPCList[i]->setYpos(17.0f);
 
@@ -900,7 +902,6 @@ void SceneSP::UpdateEasterEggGuy(double dt)
 		}
 	}
 }	
-
 void SceneSP::UpdateBuildingGuy(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -949,9 +950,7 @@ void SceneSP::UpdateBuildingGuy(double dt)
 
 		
 	}
-}
-
-                   
+}                   
 void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
@@ -1074,7 +1073,7 @@ void SceneSP::UpdateStartMenu()
 					//FREE ROAM HERE
 					ptrplayer->setCharacterJob(PLAY_FREE_ROAM);
 					i_menuHandle = GAME_PLAYING;
-
+					music.stop();
 
 				}
 				if(selectionPointing == MENU_TREASURE_HUNT)
@@ -1090,12 +1089,14 @@ void SceneSP::UpdateStartMenu()
 					}
 					ptrplayer->setCharacterJob(PLAY_TREASURE_HUNT);
 					i_menuHandle = GAME_PLAYING;
+					music.stop();
 				}
 				if(selectionPointing == MENU_EASTER_EGG_HUNT)
 				{
 					//DO EASTER EGG HUNT HERE
 					ptrplayer->setCharacterJob(PLAY_EASTER_EGG);
 					i_menuHandle = GAME_PLAYING;
+					music.stop();
 				}
 			}
 		}
@@ -1267,6 +1268,20 @@ void SceneSP::UpdateEasteregg(double dt)
 }
 void SceneSP::UpdatePlaying(double dt)
 {
+	//3d sound
+	music.setPosition(0.0f, 0.0f, 0.0f);
+	sf::Listener::setPosition(camera.position.x, camera.position.y, camera.position.z);
+	sf::Listener::setGlobalVolume(800.f);
+	if(music.getStatus() == false)
+	{
+		if(!music.openFromFile(ambientSound))
+		{
+			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+		}
+		music.setLoop(true);
+		music.setVolume(50.0f);
+		music.play();
+	}
 	checkWinLose();
 	if(Application::IsKeyPressed(VK_F1)) //enable back face culling
 		glEnable(GL_CULL_FACE);
@@ -1388,7 +1403,7 @@ void SceneSP::Update(double dt)
 	LogisticinteractionTimer+=float(dt);
 	interactionTimer+=float(dt);
 	UpdateAITimer(dt);
-
+	f_soundTimer += float(dt);
 	
 	if(i_menuHandle == GAME_PLAYING )
 	{
@@ -1477,13 +1492,28 @@ void SceneSP::UpdateElevator(double dt)
 		if(!(elevatorDoorY > checkElevatorYposMax))
 		{
 			elevatorDoorY+=float(dt)*5;
-		}
+			b_dinged = false;
+		}		
 	}
 	else //if door is closing
 	{
 		if(!(elevatorDoorY < checkElevatorYposMin))
 		{
 			elevatorDoorY-= float(dt)*5;
+		}
+		else
+		{
+			if(b_dinged == false)
+			{
+				b_dinged = true;
+				if(!sound.openFromFile(soundFXArray[6]))
+				{
+					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+				}
+				sound.setLoop(false);
+				sound.setVolume(50.0f);
+				sound.play();
+			}
 		}
 	}
 }
@@ -1511,6 +1541,7 @@ void SceneSP::UpdateDoor(double dt)
 {
 	static bool test = false;
 	static bool test2 = false;
+	static bool sounded = false;
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)//check npc pos
 	{
 		if(((myNPCList[i]->getZpos() < -15.0f && myNPCList[i]->getZpos() > -40.0f) && (myNPCList[i]->getXpos() > 10.0f && myNPCList[i]->getXpos() < 35.0f))&&
@@ -1556,23 +1587,47 @@ void SceneSP::UpdateDoor(double dt)
 	if(toggleDoorBack)
 	{
 		if(moveDoorBack > -7.0f)
+		{
 			moveDoorBack -= 10.0f * float(dt);
+			sounded = true;
+		}
 	}
 	else
 	{
 		if(moveDoorBack < 0.0f)
+		{
 			moveDoorBack += 10.0f * float(dt);
+			sounded = true;
+		}
 	}
 	if(toggleDoorFront)
 	{
 		if(moveDoorFront > -8.0f)
+		{
 			moveDoorFront -= 10.0f * float(dt);
+			sounded = true;
+		}
 	}
 	else
 	{
 		if(moveDoorFront < 0.0f)
+		{
 			moveDoorFront += 10.0f * float(dt);
+			sounded = true;
+		}
 	}
+	if((sounded == true && f_soundTimer > soundLimiter)&&camera.position.y<10.0f)
+	{
+		f_soundTimer = 0.0f;
+		if(!sound.openFromFile(soundFXArray[7]))
+		{
+			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+		}
+		sound.setLoop(false);
+		sound.setVolume(800.0f);
+		sound.play();
+	}
+	sounded = false;
 }
 void SceneSP::UpdatePlayerSelection()
 {
@@ -1703,6 +1758,13 @@ void SceneSP::UpdateSamples()
 		{
 			interactionTimer = 0.0f;
 			i_sampleItems--;
+			if(!sound.openFromFile(soundFXArray[8]))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			sound.setLoop(false);
+			sound.setVolume(50.0f);
+			sound.play();
 		}
 	}
 }
@@ -2487,13 +2549,13 @@ void SceneSP::UpdateCage(double dt)
 		if(easterTimer > easterLimiter)
 		{
 			easterTimer = resetValue;
-			if(!music.openFromFile(soundFXArray[2]))
+			if(!easter.openFromFile(soundFXArray[2]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 			}
-			music.setLoop(false);
-			music.setVolume(50.0f);
-			music.play();
+			easter.setLoop(false);
+			easter.setVolume(50.0f);
+			easter.play();
 		}
 		if(!getCaged)
 		{
@@ -2534,13 +2596,13 @@ void SceneSP::UpdateGaben(double dt)
 	if(Application::IsKeyPressed('N')&&summonG == 4)
 	{
 		gabed = true;
-		if(!music.openFromFile(soundFXArray[0]))
+		if(!easter.openFromFile(soundFXArray[0]))
 		{
 			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 		}
-		music.setLoop(false);
-		music.setVolume(50.0f);
-		music.play();
+		easter.setLoop(false);
+		easter.setVolume(50.0f);
+		easter.play();
 		if(!getGabed)
 		{
 			getGabed = true;
@@ -2565,13 +2627,13 @@ void SceneSP::UpdateTroll(double dt)
 			if(easterTimer > easterLimiter)
 			{
 				easterTimer = resetValue;
-				if(!music.openFromFile(soundFXArray[3]))
+				if(!easter.openFromFile(soundFXArray[3]))
 				{
 					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 				}
-				music.setLoop(false);
-				music.setVolume(50.0f);
-				music.play();
+				easter.setLoop(false);
+				easter.setVolume(50.0f);
+				easter.play();
 			}
 			easterTimer = 0.0f;
 			reversed = true;
@@ -2603,13 +2665,13 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 		if(easterTimer > easterLimiter)
 		{
 			easterTimer = 0.0f;
-			if(!music.openFromFile(soundFXArray[1]))
+			if(!easter.openFromFile(soundFXArray[1]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 			}
-			music.setLoop(false);
-			music.setVolume(50.0f);
-			music.play();
+			easter.setLoop(false);
+			easter.setVolume(50.0f);
+			easter.play();
 			if(!getTimed)
 			{
 				getTimed = true;
@@ -2622,13 +2684,13 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 		if(easterTimer > easterLimiter)
 		{
 			easterTimer = 0.0f;
-			if(!music.openFromFile(soundFXArray[4]))
+			if(!easter.openFromFile(soundFXArray[4]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 			}
-			music.setLoop(false);
-			music.setVolume(50.0f);
-			music.play();
+			easter.setLoop(false);
+			easter.setVolume(50.0f);
+			easter.play();
 			if(!getRicked)
 			{
 				getRicked = true;
@@ -4467,6 +4529,8 @@ void SceneSP::Exit()
 	delete ptrItem;
 	delete ptrNPC;
 	music.stop();
+	sound.stop();
+	easter.stop();
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }

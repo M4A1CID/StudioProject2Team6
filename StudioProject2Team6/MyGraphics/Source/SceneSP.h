@@ -156,6 +156,7 @@ private:
 	bool b_isWithinInteractionItem;
 	bool b_isWithinPayingCashier;
 	bool b_is_Stealing;
+	bool b_dinged;
 	bool falling;
 	float interactionTimer;
 	float LogisticinteractionTimer;
@@ -173,6 +174,7 @@ private:
 	float itemYrotation;
 	float itemXrotation;
 	float ATMMoney;
+	float f_soundTimer;
 	
 	CEmptyItem emptyItem;
 	bool win;
@@ -219,6 +221,8 @@ private:
 
 	//Sound Buffers
 	sf::Music music;
+	sf::Music sound;
+	sf::Music easter;
 public:
 	SceneSP();
 	~SceneSP();
