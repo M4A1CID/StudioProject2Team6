@@ -83,6 +83,7 @@ private:
 	void RenderTroll();
 	void RenderMiscEastereggs();
 	void RenderEasteregg();
+	void RenderATM();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -193,6 +194,7 @@ private:
 	string s_item_price;
 	string s_easter_counter;
 	string s_easter_count;
+	string s_atm_balance;
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;

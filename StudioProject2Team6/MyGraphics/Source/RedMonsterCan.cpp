@@ -1,6 +1,11 @@
 #include "RedMonsterCan.h"
 
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 CRedMonsterCan::CRedMonsterCan(void)
 {
 		setName("RedMonster Can");
@@ -8,7 +13,12 @@ CRedMonsterCan::CRedMonsterCan(void)
 	setGeoType(GEO_CAN_REDMONSTER);
 }
 
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 CRedMonsterCan::~CRedMonsterCan(void)
 {
 }

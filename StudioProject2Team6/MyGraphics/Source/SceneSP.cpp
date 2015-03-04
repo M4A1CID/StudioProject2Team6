@@ -152,8 +152,9 @@ void SceneSP::initGeoType()
 	meshList[GEO_CAGEWALL]->textureID = LoadTGA("Image//TheCage.tga");
 	meshList[GEO_GABEN] = MeshBuilder::GenerateText("gaben",1,1);
 	meshList[GEO_GABEN]->textureID = LoadTGA("Image//AllHailGabe.tga");//GEO_FERRIS
-	meshList[GEO_FERRIS] = MeshBuilder::GenerateOBJ("gaben", "OBJ//FerrisWheel.obj");
+	meshList[GEO_FERRIS] = MeshBuilder::GenerateOBJ("Ferris wheel", "OBJ//FerrisWheel.obj");
 	meshList[GEO_FERRIS]->textureID = LoadTGA("Image//Building.tga");
+	meshList[GEO_ATM] = MeshBuilder::GenerateOBJ("ATM", "OBJ//atm.obj");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -1439,8 +1440,11 @@ void SceneSP::UpdateElevator(double dt)
 }
 void SceneSP::UpdateATM()
 {
+	std::stringstream ss_atmBalance;
+	ss_atmBalance << ATMMoney;
+	s_atm_balance = ss_atmBalance.str();
 	//check area//-15 //38
-	if ((camera.position.x > -20 && camera.position.x < 10) && (camera.position.z > 30 && camera.position.z < 40))
+	if ((camera.position.x > -6 && camera.position.x < 7) && (camera.position.z > 32 && camera.position.z < 40))
 	{
 		//if pressed E
 		if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -2775,7 +2779,6 @@ void SceneSP::Render()
 		break;
 	}
 }
-
 void SceneSP::RenderSkyBox()
 {	
 	modelStack.PushMatrix();
@@ -3074,7 +3077,6 @@ void SceneSP::RenderCharacter(CNpc* npc)
 		
 	modelStack.PopMatrix();
 }
-
 void SceneSP::RenderMainMenu()
 {
 	
@@ -3290,7 +3292,7 @@ void SceneSP::RenderSupermarket()
 	RenderElevator();       //Render Elevator in Supermarket
 	RenderTrolleys();       //Render Trolleys in Supermarket
 	RenderReturnPoint();	//Render Return Point in Supermarket
-
+	RenderATM();
 
 
 	RenderDoors();			//Render Alpha Doors AFTER EVERYTHING in Supermarket
@@ -3384,7 +3386,19 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 		RenderSamples();
 	modelStack.PopMatrix();
 }
-
+void SceneSP::RenderATM()
+{
+	modelStack.PushMatrix();
+	modelStack.Translate(0.0f, 0.0f, 32.0f);
+	modelStack.Rotate(180.0f,0,1,0);
+	RenderMesh(meshList[GEO_ATM], toggleLight);
+	modelStack.PopMatrix();
+	if ((camera.position.x > -6 && camera.position.x < 7) && (camera.position.z > 32 && camera.position.z < 40))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to withdraw",Color(0,1,0),2,1,16);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Balance:"+s_atm_balance, Color(1, 1, 0), 3, 16.5, 19);
+	}
+}
 void SceneSP::RenderIceBox()
 {
 	modelStack.PushMatrix();
@@ -3404,8 +3418,6 @@ void SceneSP::RenderIceBox()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
-
-
 void SceneSP::RenderMeatShelf()
 {
 	//16,17,-28
@@ -3558,7 +3570,6 @@ void SceneSP::RenderBeerstand()
 		RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
 	modelStack.PopMatrix();
 }
-
 void SceneSP::RenderBuilding()
 {
 	modelStack.PushMatrix();
@@ -3876,6 +3887,7 @@ void SceneSP::checkCollision()
 	checkObjectCollision(-26.0f, 0.0f, -20.0f, 5.0f, 11.0f);//cashier tables
 	checkObjectCollision(-16.0f, 0.0f, -18.0f, 4.0f, 7.5f);
 	checkObjectCollision(-6.0f, 0.0f, -18.0f, 4.0f, 7.5f);
+	checkObjectCollision(0.0f, 0.0f, 32.0f, 3.0f, 4.0f);//atm
 	checkObjectCollision(30.0f, 17.0f, -26.0f, 3.0f, 3.0f);//boxes
 	for(int i = 0; i<4;i++)
 	{
