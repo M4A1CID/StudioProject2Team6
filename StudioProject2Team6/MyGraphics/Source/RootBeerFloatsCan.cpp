@@ -1,6 +1,11 @@
 #include "RootBeerFloatsCan.h"
 
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 CRootBeerFloatsCan::CRootBeerFloatsCan(void)
 {
 	setName("RootBeerFloat Can");
@@ -8,7 +13,12 @@ CRootBeerFloatsCan::CRootBeerFloatsCan(void)
 	setGeoType(GEO_CAN_ROOTBEERFLOATS);
 }
 
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 CRootBeerFloatsCan::~CRootBeerFloatsCan(void)
 {
 }
