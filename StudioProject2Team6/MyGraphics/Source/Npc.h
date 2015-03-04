@@ -4,7 +4,7 @@ class CNpc : public CCharacter
 {
 public:
 	CNpc(void);
-	CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state,int type, int job);
+	CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state,int type, int job,bool active);
 	~CNpc(void);
 
 	int getHeadType();
