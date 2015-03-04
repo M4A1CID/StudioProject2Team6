@@ -142,9 +142,9 @@ void SceneSP::initGeoType()
 	meshList[GEO_MAIN_MENU_TITLE]->textureID = LoadTGA("Image//Menu_Supermarket.tga");
 	meshList[GEO_BOX] = MeshBuilder::GenerateOBJ("box", "OBJ//box.obj");
 	meshList[GEO_BOX]->textureID = LoadTGA("Image//box.tga");
-	meshList[GEO_OFFICECOMPUTER] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//office.obj");
+	meshList[GEO_OFFICECOMPUTER] = MeshBuilder::GenerateOBJ("office computer", "OBJ//office.obj");
 	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//Office.tga");
-	meshList[GEO_BUILDING] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Building.obj");
+	meshList[GEO_BUILDING] = MeshBuilder::GenerateOBJ("building", "OBJ//Building.obj");
 	meshList[GEO_BUILDING]->textureID = LoadTGA("Image//Building.tga");
 	meshList[GEO_CAGE] = MeshBuilder::GenerateQuad("cage", Color(1, 1, 1), 1.0f);
 	meshList[GEO_CAGE]->textureID = LoadTGA("Image//TheCage.tga");
@@ -155,6 +155,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_FERRIS] = MeshBuilder::GenerateOBJ("Ferris wheel", "OBJ//FerrisWheel.obj");
 	meshList[GEO_FERRIS]->textureID = LoadTGA("Image//FerrisWheel.tga");
 	meshList[GEO_ATM] = MeshBuilder::GenerateOBJ("ATM", "OBJ//atm.obj");
+    meshList[GEO_ATM]->textureID = LoadTGA("Image//atm.tga");
 	/*=============================
 	Init all food items
 	==============================*/
