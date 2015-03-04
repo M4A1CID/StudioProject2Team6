@@ -54,6 +54,7 @@ void SceneSP::Init()
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
 	b_is_Stealing = false;
+	b_crouching = false;
 	toggleLight = true;
 	toggleDoorFront = false;
 	toggleDoorBack = false;
@@ -296,110 +297,110 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,TUG_OF_WAR_GUY,true);
 	myNPCList.push_back(ptrNPC);
 	//Drunkman NPC
-	ptrNPC = new CNpc(-6,17.7,27,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN,true);
+	ptrNPC = new CNpc(-6.f,17.7f,27.f,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Walk around supermarket
-	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY,true);
+	ptrNPC = new CNpc(-5.f,0.f,13.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY,true);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(-5,0,7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY,true);
+	ptrNPC = new CNpc(-5.f,0.f,7.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Look at stuff
-	ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY,true);
+	ptrNPC = new CNpc(1.5f,0.f,25.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY,true);
 	myNPCList.push_back(ptrNPC);
 	//Chatting
-	ptrNPC = new CNpc(11,17,25,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CHATTING_GUY,true);
+	ptrNPC = new CNpc(11.f,17.f,25.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CHATTING_GUY,true);
 	myNPCList.push_back(ptrNPC);
 	//idle
-	ptrNPC = new CNpc(-2,17,-22,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,IDLE_GUY,true);
+	ptrNPC = new CNpc(-2.f,17.f,-22.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,IDLE_GUY,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Ghost npc
-	ptrNPC = new CNpc(-20,-2,45,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY,true);
+	ptrNPC = new CNpc(-20.f,-2.f,45.f,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY,true);
 	myNPCList.push_back(ptrNPC);
 	//cashier 1
-	ptrNPC = new CNpc(-26,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
+	ptrNPC = new CNpc(-26.f,0.f,-18.f,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
 	myNPCList.push_back(ptrNPC);
 	//cashier 2
-	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
+	ptrNPC = new CNpc(-16.f,0.f,-18.f,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
 	myNPCList.push_back(ptrNPC);
 	//cashier 3
-	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
+	ptrNPC = new CNpc(-6.f,0.f,-18.f,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Customer at cashier 2
-	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-16.f,0.f,-11.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-16.f,0.f,-9.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-16.f,0.f,-7.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-16.f,0.f,-5.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
 	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Customer at cashier 3
-	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-6.f,0.f,-11.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-6.f,0.f,-9.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-6.f,0.f,-7.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-6.f,0.f,-5.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
+	ptrNPC = new CNpc(-6.f,0.f,-3.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER,true);
 	myNPCList.push_back(ptrNPC);
 	
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(150,0,110,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(150.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(155,0,105,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(155.f,0.f,105.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(160,0,100,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(160.f,0.f,100.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(165,0,95,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(165.f,0.f,95.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-150,0,110,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-150.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-155,0,105,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-155.f,0.f,105.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-160,0,100,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-160.f,0.f,100.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-165,0,95,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-165.f,0.f,95.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Logistic staff at level 2  //O(37.0f, 17.0f, 16.0f),S(36.0f, 17.0f, -14.0f)
-	ptrNPC = new CNpc(28,17,25,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_ACTIVE,IDLE,PART_TIME_WORKER,true);
+	ptrNPC = new CNpc(28.f,17.f,25.f,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_ACTIVE,IDLE,PART_TIME_WORKER,true);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(26,17,26,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER,true);
+	ptrNPC = new CNpc(26.f,17.f,26.f,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER,true);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(27,17,-23,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER,true);
+	ptrNPC = new CNpc(27.f,17.f,-23.f,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER,true);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(38,0,-5,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER,true);
+	ptrNPC = new CNpc(38.f,0.f,-5.f,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER,true);
 	myNPCList.push_back(ptrNPC);
 
 	//EasterEggGuy
-    ptrNPC = new CNpc(10,17,-25,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,EASTER_EGG_GUY,false);
+    ptrNPC = new CNpc(10.f,17.f,-25.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,EASTER_EGG_GUY,false);
 	myNPCList.push_back(ptrNPC);
 
 	//for(int i = 0; i < myNPCList.size(); ++i)
@@ -887,15 +888,15 @@ void SceneSP::UpdateEasterEggGuy(double dt)
 	{
 		if ((camera.position.x > 0.0f && camera.position.x < 11.0f) &&(camera.position.z > -26.0f && camera.position.z < 0.0f ))
 		{
-			for(int i = 0; i < myNPCList.size(); ++i)
+			for(unsigned int i = 0; i < myNPCList.size(); ++i)
 			{
 				if(myNPCList[i]->getCharacterJob() == EASTER_EGG_GUY)
 				{
 					myNPCList[i]->setActive(true);
 					//translation code
-					myNPCList[i]->setYpos(myNPCList[i]->getYpos()+myNPCList[i]->getmoveSpd() * dt);
-					if(myNPCList[i]->getYpos()>23)
-						myNPCList[i]->setYpos(17.0f);
+					myNPCList[i]->setYpos(myNPCList[i]->getYpos()+myNPCList[i]->getmoveSpd() * static_cast<float>(dt));
+					if(myNPCList[i]->getYpos()>23.f)
+						myNPCList[i]->setYpos(17.f);
 				}
 			}
 			
@@ -909,16 +910,16 @@ void SceneSP::UpdateTrolley(double dt)
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
 		if(reversed)
-			handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
+			handrotationleftandright -= (camera.CAMERA_SPEED)*float(dt);
 		else
-			handrotationleftandright += (camera.CAMERA_SPEED)*dt;
+			handrotationleftandright += (camera.CAMERA_SPEED)*float(dt);
 	}
 	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
 		if(reversed)
-			handrotationleftandright += (camera.CAMERA_SPEED)*dt;
+			handrotationleftandright += (camera.CAMERA_SPEED)*float(dt);
 		else
-		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
+		handrotationleftandright -= (camera.CAMERA_SPEED)*float(dt);
 	}
 	if(Application::IsKeyPressed('E') || PunchTimerLimiter == false)
 	{
@@ -928,7 +929,7 @@ void SceneSP::UpdateTrolley(double dt)
 		}
 		else
 		{
-			handtranslation += (2.0f)*dt;
+			handtranslation += (2.0f)*float(dt);
 			if(handtranslation > 1.0f)
 			{
 				PunchTimerLimiter = true;
@@ -1032,8 +1033,8 @@ void SceneSP::UpdateStartMenu()
 				if(selectionPointing == MENU_TREASURE_HUNT)
 				{
 					//DO TREASURE HUNT HERE
-					int random =0;
-					std::srand(time(0)); //Seed the random number generator
+					unsigned int random =0;
+					std::srand((unsigned int)time(0)); //Seed the random number generator
 					for(int i = 0; i< i_total_items_to_find; ++i)
 					{
 						random =  rand()%myTreasureList.size();
@@ -1172,19 +1173,19 @@ void SceneSP::UpdateItemRotation(double dt)
 {
 	if(Application::IsKeyPressed(VK_RIGHT)&& Application::IsKeyPressed('R'))
 	{
-		itemYrotation+=dt*itemRotationSpeedMultiplyer;
+		itemYrotation+=float(dt)*itemRotationSpeedMultiplyer;
 	}
 	if(Application::IsKeyPressed(VK_LEFT) && Application::IsKeyPressed('R'))
 	{
-		itemYrotation-=dt*itemRotationSpeedMultiplyer;
+		itemYrotation-=float(dt)*itemRotationSpeedMultiplyer;
 	}
 	if(Application::IsKeyPressed(VK_DOWN)&& Application::IsKeyPressed('R'))
 	{
-		itemXrotation+=dt*itemRotationSpeedMultiplyer;
+		itemXrotation+=float(dt)*itemRotationSpeedMultiplyer;
 	}
 	if(Application::IsKeyPressed(VK_UP) && Application::IsKeyPressed('R'))
 	{
-		itemXrotation-=dt*itemRotationSpeedMultiplyer;
+		itemXrotation-=float(dt)*itemRotationSpeedMultiplyer;
 	}
 	if(!Application::IsKeyPressed('R'))
 	{
@@ -1200,7 +1201,7 @@ void SceneSP::UpdateEasteregg(double dt)
 	ss_easterCount << numEastereggs;
 	s_easter_counter = ss_easterCounter.str();
 	s_easter_count = ss_easterCount.str();
-	easterTimer += dt;
+	easterTimer += float(dt);
 	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
 	{
 		UpdateMiscEasteregg(dt);
@@ -1267,35 +1268,35 @@ void SceneSP::UpdatePlaying(double dt)
 		if(elevatorIdle)
 		{
 			//First floor crouching
-			if(camera.position.y>3.1f && camera.position.y < 4.6f)
+			if(camera.position.y>3.1f && camera.position.y < 4.7f)
 			{
-				camera.position.y-=dt*5;
-				camera.target.y -=dt*5;
+				camera.position.y-=float(dt)*5;
+				camera.target.y -=float(dt)*5;
 			}
 			//Second floor crouching
-			if(camera.position.y > 19.1f && camera.position.y < 23.1f)
+			if(camera.position.y > 19.1f && camera.position.y < 22.f)
 			{
-				camera.position.y-=dt*5;
-				camera.target.y -=dt*5;
+				camera.position.y-=float(dt)*5;
+				camera.target.y -=float(dt)*5;
 			}
 		}
 
 	}
-	else
+	else //Not crouching anymore
 	{
 		if(elevatorIdle)
 		{
 			//First floor crouching
 			if(camera.position.y <= 4.5f && camera.position.y >= 2.0f)
 			{
-				camera.position.y+=dt*5;
-				camera.target.y+=dt*5;
+				camera.position.y+=float(dt)*5;
+				camera.target.y+=float(dt)*5;
 			}
 			//Second floor crouching
 			if(camera.position.y <21.5f && camera.position.y >= 19.f)
 			{
-				camera.position.y+=dt*5;
-				camera.target.y+=dt*5;
+				camera.position.y+=float(dt)*5;
+				camera.target.y+=float(dt)*5;
 			}
 		}
 	}
@@ -1309,7 +1310,7 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateItemInspection();
 	UpdateEasteregg(dt);
 	UpdateATM();
-	reverseTimer += dt;
+	reverseTimer += float(dt);
 	
 	UpdatePaying();//Update playing paying
 
@@ -1329,16 +1330,16 @@ void SceneSP::UpdatePlaying(double dt)
 }
 void SceneSP::UpdateAITimer(double dt)
 {
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
-		myNPCList[i]->setNPCTimer(myNPCList[i]->getNPCTimer()+dt);
+		myNPCList[i]->setNPCTimer(myNPCList[i]->getNPCTimer()+static_cast<float>(dt));
 	}
 }
 void SceneSP::Update(double dt)
 {
-	CustomerinteractionTimer+=dt;
-	LogisticinteractionTimer+=dt;
-	interactionTimer+=dt;
+	CustomerinteractionTimer+=float(dt);
+	LogisticinteractionTimer+=float(dt);
+	interactionTimer+=float(dt);
 	UpdateAITimer(dt);
 
 	
@@ -1388,17 +1389,17 @@ void SceneSP::UpdateElevator(double dt)
 						if(!(elevatorSecondFloor))
 						{
 							//Move elevator up
-							camera.position.y += dt*elevatorSpeed;
-							camera.target.y +=dt*elevatorSpeed;
-							elevatorY+=dt*elevatorSpeed;
+							camera.position.y += float(dt)*elevatorSpeed;
+							camera.target.y +=float(dt)*elevatorSpeed;
+							elevatorY+=float(dt)*elevatorSpeed;
 							elevatorIdle = false;
 						}
 						else if(elevatorSecondFloor)
 						{
 							//Move elevator down
-							camera.position.y-=dt*elevatorSpeed;
-							camera.target.y-=dt*elevatorSpeed;
-							elevatorY-=dt*elevatorSpeed;
+							camera.position.y-=float(dt)*elevatorSpeed;
+							camera.target.y-=float(dt)*elevatorSpeed;
+							elevatorY-=float(dt)*elevatorSpeed;
 							elevatorIdle = false;
 						}
 					}
@@ -1428,14 +1429,14 @@ void SceneSP::UpdateElevator(double dt)
 
 		if(!(elevatorDoorY > checkElevatorYposMax))
 		{
-			elevatorDoorY+=dt*5;
+			elevatorDoorY+=float(dt)*5;
 		}
 	}
 	else //if door is closing
 	{
 		if(!(elevatorDoorY < checkElevatorYposMin))
 		{
-			elevatorDoorY-= dt*5;
+			elevatorDoorY-= float(dt)*5;
 		}
 	}
 }
@@ -1463,7 +1464,7 @@ void SceneSP::UpdateDoor(double dt)
 {
 	static bool test = false;
 	static bool test2 = false;
-	for(int i = 0; i < myNPCList.size(); ++i)//check npc pos
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)//check npc pos
 	{
 		if(((myNPCList[i]->getZpos() < -15.0f && myNPCList[i]->getZpos() > -40.0f) && (myNPCList[i]->getXpos() > 10.0f && myNPCList[i]->getXpos() < 35.0f))&&
 			myNPCList[i]->getYpos()<5
@@ -1476,7 +1477,7 @@ void SceneSP::UpdateDoor(double dt)
 		else
 			toggleDoorBack = false;
 	}
-	for(int i = 0; i < myNPCList.size(); ++i)
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
 		if(((myNPCList[i]->getZpos() < 45.0f && myNPCList[i]->getZpos() > 15.0f) && (myNPCList[i]->getXpos() > -30.0f  && myNPCList[i]->getXpos() < -10.0f))&&
 			myNPCList[i]->getYpos()<5
@@ -1508,22 +1509,22 @@ void SceneSP::UpdateDoor(double dt)
 	if(toggleDoorBack)
 	{
 		if(moveDoorBack > -7.0f)
-			moveDoorBack -= 10.0f * dt;
+			moveDoorBack -= 10.0f * float(dt);
 	}
 	else
 	{
 		if(moveDoorBack < 0.0f)
-			moveDoorBack += 10.0f * dt;
+			moveDoorBack += 10.0f * float(dt);
 	}
 	if(toggleDoorFront)
 	{
 		if(moveDoorFront > -8.0f)
-			moveDoorFront -= 10.0f * dt;
+			moveDoorFront -= 10.0f * float(dt);
 	}
 	else
 	{
 		if(moveDoorFront < 0.0f)
-			moveDoorFront += 10.0f * dt;
+			moveDoorFront += 10.0f * float(dt);
 	}
 }
 void SceneSP::UpdatePlayerSelection()
@@ -1621,7 +1622,7 @@ void SceneSP::UpdatePaying()
 				ptrplayer->setMoney(ptrplayer->getMoney() - ptrplayer->getVector()[inventoryPointing]->getPrice());
 				
 				//Check if item paid is == random checklist items
-				for(int i = 0; i<myCheckList.size();++i)
+				for(unsigned int i = 0; i<myCheckList.size();++i)
 				{
 
 					if(ptrplayer->getVector()[inventoryPointing]->getName() == myCheckList[i]->getName()
@@ -1681,13 +1682,13 @@ void SceneSP::UpdateTugofwar(double dt)
 	}
 	if(IsIntugofwar == true && showTuginstruction == false)
 	{//While in tug of war sequence
-		camera.position.x -= 0.001*camera.CAMERA_SPEED;
-		camera.target.x -= 0.001*camera.CAMERA_SPEED;
+		camera.position.x -= 0.001f*camera.CAMERA_SPEED;
+		camera.target.x -= 0.001f*camera.CAMERA_SPEED;
 		if(Application::IsKeyPressed(VK_SPACE) && interactionTimer > TugofwarTimerLimiter)
 		{//update camera based on tugs
 			interactionTimer = 0.0f;
-			camera.position.x += 0.025*camera.CAMERA_SPEED;
-			camera.target.x += 0.025*camera.CAMERA_SPEED;
+			camera.position.x += 0.025f*camera.CAMERA_SPEED;
+			camera.target.x += 0.025f*camera.CAMERA_SPEED;
 		}
 		if(camera.position.x > 32)//win condition
 		{
@@ -1726,7 +1727,7 @@ void SceneSP::UpdateTugofwarguy(double dt)
 }
 void SceneSP::UpdateDrunkman(double dt)
 {
-	for(int i = 0; i < myNPCList.size(); ++i)
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
 		{
@@ -1751,7 +1752,7 @@ void SceneSP::UpdateDrunkman(double dt)
 }
 void SceneSP::UpdateDrunkmanguy(double dt)
 {
-	for(int i = 0; i < myNPCList.size(); ++i)
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
 		{
@@ -1768,16 +1769,16 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 			}
 			else
 			{
-				myNPCList[i]->setXpos(-25);
-				myNPCList[i]->setYpos(0.7);
-				myNPCList[i]->setZpos(60);
+				myNPCList[i]->setXpos(-25.f);
+				myNPCList[i]->setYpos(0.7f);
+				myNPCList[i]->setZpos(60.f);
 			}
 		}
 	}
 }
 void SceneSP::UpdateWalkingmanoutside(double dt)
 {
-	for(int i = 0; i < myNPCList.size(); ++i)
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == WALKING_GUY_OUTSIDE)
 		{
@@ -1791,7 +1792,7 @@ void SceneSP::UpdateWalkingmanoutside(double dt)
 					myNPCList[i]->setYRotation(180);
 
 				}
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*(dt)));
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*float(dt)));
 			
 				
 			}
@@ -1805,7 +1806,7 @@ void SceneSP::UpdateWalkingmanoutside(double dt)
 					myNPCList[i]->setYRotation(0);
 	
 				}
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*(dt)));
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*float(dt)));
 			}
 
 		}
@@ -1813,7 +1814,7 @@ void SceneSP::UpdateWalkingmanoutside(double dt)
 }
 void SceneSP::UpdateWalkingman(double dt)
 {
-	for(int i = 0; i < myNPCList.size(); ++i)
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == WALKING_GUY)
 		{
@@ -1823,39 +1824,39 @@ void SceneSP::UpdateWalkingman(double dt)
 			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
 			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
 			{
-				if(myNPCList[i]->getZpos() > 21)
+				if(myNPCList[i]->getZpos() > 21.f)
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
-					myNPCList[i]->setYRotation(90);
+					myNPCList[i]->setYRotation(90.f);
 				}
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_LEFT)
 			{
-				if(myNPCList[i]->getXpos() > 32)
+				if(myNPCList[i]->getXpos() > 32.f)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
-					myNPCList[i]->setYRotation(180);
+					myNPCList[i]->setYRotation(180.f);
 				}
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_BACKWARD)
 			{
-				if(myNPCList[i]->getZpos() < 13)
+				if(myNPCList[i]->getZpos() < 13.f)
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
-					myNPCList[i]->setYRotation(-90);
+					myNPCList[i]->setYRotation(-90.f);
 				}
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState()==STATE_RIGHT)
 			{
-				if(myNPCList[i]->getXpos() < -5)
+				if(myNPCList[i]->getXpos() < -5.f)
 				{
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
-					myNPCList[i]->setYRotation(0);
+					myNPCList[i]->setYRotation(0.f);
 				}
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 		}
 	}
@@ -1863,7 +1864,7 @@ void SceneSP::UpdateWalkingman(double dt)
 }
 void SceneSP::UpdateGhostman(double dt)
 {
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == GHOST_GUY)
 		{
@@ -1892,25 +1893,25 @@ void SceneSP::UpdateGhostman(double dt)
 				{
 					if(GFlyDir == true)
 					{
-						myNPCList[i]->setYpos(myNPCList[i]->getYpos() + myNPCList[i]->getmoveSpd() * dt);
+						myNPCList[i]->setYpos(myNPCList[i]->getYpos() + myNPCList[i]->getmoveSpd() * float(dt));
 						if(myNPCList[i]->getYpos() > GhostNpcMoveBoundY1)
 							GFlyDir = false;
 					}
 					else
 					{
-						myNPCList[i]->setYpos(myNPCList[i]->getYpos() - myNPCList[i]->getmoveSpd() * dt);
+						myNPCList[i]->setYpos(myNPCList[i]->getYpos() - myNPCList[i]->getmoveSpd() * float(dt));
 						if(myNPCList[i]->getYpos() < GhostNpcMoveBoundY2)
 							GFlyDir = true;
 					}
 					if(GMoveDir == true)
 					{
-						myNPCList[i]->setXpos(myNPCList[i]->getXpos() + myNPCList[i]->getmoveSpd() * dt);
+						myNPCList[i]->setXpos(myNPCList[i]->getXpos() + myNPCList[i]->getmoveSpd() * float(dt));
 						if(myNPCList[i]->getXpos() > GhostNpcMoveBoundX1)
 							GMoveDir = false;
 					}
 					else
 					{
-						myNPCList[i]->setXpos(myNPCList[i]->getXpos() - myNPCList[i]->getmoveSpd() * dt);
+						myNPCList[i]->setXpos(myNPCList[i]->getXpos() - myNPCList[i]->getmoveSpd() * float(dt));
 						if(myNPCList[i]->getXpos() < GhostNpcMoveBoundX2)
 							GMoveDir = true;
 					}
@@ -1918,7 +1919,7 @@ void SceneSP::UpdateGhostman(double dt)
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
 			{
-				myNPCList[i]->setYpos(-10);
+				myNPCList[i]->setYpos(-10.f);
 				GisFlying = false;
 				myNPCList[i]->setActive(false);
 			}
@@ -1928,7 +1929,7 @@ void SceneSP::UpdateGhostman(double dt)
 void SceneSP::UpdateLookingman(double dt)
 {
 	static int counter = 0;
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == LOOKING_GUY)
 		{
@@ -1972,32 +1973,32 @@ void SceneSP::UpdateLookingman(double dt)
 					myNPCList[i]->setCharacterState(STATE_IDLE);
 					counter = 0;
 				}
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 			{
 				if(myNPCList[i]->getZpos() < 9)
 				{
-					myNPCList[i]->setYRotation(-90);
+					myNPCList[i]->setYRotation(-90.f);
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
 				}
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_RIGHT)
 			{
 				if(myNPCList[i]->getXpos() < 8 && counter == 2)
 				{
-					myNPCList[i]->setYRotation(180);
+					myNPCList[i]->setYRotation(180.f);
 					myNPCList[i]->setCharacterState(STATE_IDLE);
 					counter = 3;
 				}
 				if(myNPCList[i]->getXpos() < -8 && counter == 3)
 				{
-					myNPCList[i]->setYRotation(0);
+					myNPCList[i]->setYRotation(0.f);
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 					counter = 4;
 				}
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
@@ -2007,7 +2008,7 @@ void SceneSP::UpdateLookingman(double dt)
 					myNPCList[i]->setYRotation(90);
 					myNPCList[i]->setCharacterState(STATE_LEFT);
 				}
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 		}
 
@@ -2015,7 +2016,7 @@ void SceneSP::UpdateLookingman(double dt)
 }
 void SceneSP::UpdateLogisticman(double dt)
 {
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == PART_TIME_WORKER)
 		{
@@ -2058,7 +2059,7 @@ void SceneSP::UpdateLogisticman(double dt)
 					myNPCList[i]->setRightLeg(0.0f);
 					myNPCList[i]->setCharacterState(STATE_ACTIVE);
 				}
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*(dt)));
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 			{
@@ -2071,7 +2072,7 @@ void SceneSP::UpdateLogisticman(double dt)
 					myNPCList[i]->setRightLeg(0.0f);
 					myNPCList[i]->setCharacterState(STATE_ACTIVE);
 				}
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*(dt)));
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*float(dt)));
 			}
 
 		}
@@ -2079,9 +2080,9 @@ void SceneSP::UpdateLogisticman(double dt)
 }
 void SceneSP::UpdateCustomer(double dt)
 {
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
-		for(int j = 0; j< myNPCList.size(); ++j)
+		for(unsigned int j = 0; j< myNPCList.size(); ++j)
 		{
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_ACTIVE)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_ACTIVE)
@@ -2127,18 +2128,18 @@ void SceneSP::UpdateCustomer(double dt)
 		}
 	}
 
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
-		for(int j = 0; j< myNPCList.size(); ++j)
+		for(unsigned int j = 0; j< myNPCList.size(); ++j)
 		{
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_FORWARD)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
 			{
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
-				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
-				if(myNPCList[i]->getXpos() >= (myNPCList[j]->getXpos()+5) && myNPCList[i]->getXpos() <= (myNPCList[j]->getXpos()+8))
+				myNPCList[i]->setYRotation(90.f);
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*float(dt)));
+				if(myNPCList[i]->getXpos() >= (myNPCList[j]->getXpos()+5.f) && myNPCList[i]->getXpos() <= (myNPCList[j]->getXpos()+8.f))
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
 				}
@@ -2149,8 +2150,8 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos() - (2*dt));
-				if(myNPCList[i]->getZpos() >= (myNPCList[j]->getZpos()-9) && myNPCList[i]->getZpos() <= (myNPCList[j]->getZpos()-8))
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos() - (2*float(dt)));
+				if(myNPCList[i]->getZpos() >= (myNPCList[j]->getZpos()-9.f) && myNPCList[i]->getZpos() <= (myNPCList[j]->getZpos()-8.f))
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
 				}
@@ -2161,8 +2162,8 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
-				if(myNPCList[i]->getXpos() >= 23 && myNPCList[i]->getXpos() <= 25)
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*float(dt)));
+				if(myNPCList[i]->getXpos() >= 23.f && myNPCList[i]->getXpos() <= 25.f)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
 				}
@@ -2173,7 +2174,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(2*dt));
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(2*float(dt)));
 				if(myNPCList[i]->getZpos() >= -131 && myNPCList[i]->getZpos() <= -129)
 				{
 				   myNPCList[i]->setCharacterState(STATE_INTOBUILDING);
@@ -2185,7 +2186,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*float(dt)));
 				if(myNPCList[i]->getXpos() >= 74 && myNPCList[i]->getXpos() <= 76)
 				{
 					myNPCList[i]->setCharacterState(STATE_REACTIVATE);
@@ -2209,7 +2210,7 @@ void SceneSP::UpdateCustomer(double dt)
 					{
 						myNPCList[i]->setAnimationType(WALKING);
 						myNPCList[i]->setmoveSpd(1.0f);
-						myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+						myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*float(dt)));
 					}
 				}
 			myNPCList[i]->setAnimationType(IDLE);
@@ -2224,7 +2225,7 @@ void SceneSP::UpdateChattingman(double dt)
 	static int counter = 0;
 	static float Zcon = 0;
 	static float Xcon = 0;
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == IDLE_GUY)
 			myNPCList[i]->setYRotation(180.0f);
@@ -2259,7 +2260,7 @@ void SceneSP::UpdateChattingman(double dt)
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
 					counter = 1;
 				}
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_RIGHT)
 			{
@@ -2268,16 +2269,16 @@ void SceneSP::UpdateChattingman(double dt)
 					myNPCList[i]->setCharacterState(STATE_IDLE);
 					myNPCList[i]->setNPCTimer(0.0f);
 				}
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_LEFT)
 			{
 				if(myNPCList[i]->getXpos() > Xcon + 11)
 				{
-					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()-90);
+					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()-90.f);
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 				}
-				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setXpos(myNPCList[i]->getXpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
@@ -2290,28 +2291,28 @@ void SceneSP::UpdateChattingman(double dt)
 					myNPCList[i]->setZpos(25.0f);
 					counter = 0;
 				}
-				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
 		}
 	}
 }
 void SceneSP::UpdateShoppers(double dt)
 {
-	for(int i = 0; i < myNPCList.size(); ++i)
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getCharacterJob() == LOOKING_GUY)
 		{
-			for(int j = 0; j < myNPCList.size(); ++j)
+			for(unsigned int j = 0; j < myNPCList.size(); ++j)
 			{
 				if(myNPCList[j]->getCharacterJob() == CUSTOMER && myNPCList[j]->getCharacterState() == STATE_REACTIVATE)
 				{
-					myNPCList[j]->setXpos(-75);
-					myNPCList[j]->setYpos(0);
-					myNPCList[j]->setZpos(195);
+					myNPCList[j]->setXpos(-75.f);
+					myNPCList[j]->setYpos(0.f);
+					myNPCList[j]->setZpos(195.f);
 					myNPCList[j]->setAnimationType(IDLE);
-					myNPCList[j]->setmoveSpd(0);
-					myNPCList[j]->setLeftLeg(0);
-					myNPCList[j]->setRightLeg(0);
+					myNPCList[j]->setmoveSpd(0.f);
+					myNPCList[j]->setLeftLeg(0.f);
+					myNPCList[j]->setRightLeg(0.f);
 					myNPCList[j]->setCharacterJob(SHOPPERS);
 					myNPCList[j]->setCharacterState(STATE_ACTIVE);
 				}
@@ -2319,9 +2320,9 @@ void SceneSP::UpdateShoppers(double dt)
 				{
 					myNPCList[j]->setmoveSpd(5.0f);
 					myNPCList[j]->setAnimationType(WALKING);
-					myNPCList[j]->setYRotation(90);
-					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5*dt));
-					if(((myNPCList[j]->getXpos()) < -19) && ((myNPCList[j]->getXpos()) > -21))
+					myNPCList[j]->setYRotation(90.f);
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5*float(dt)));
+					if(((myNPCList[j]->getXpos()) < -19.f) && ((myNPCList[j]->getXpos()) > -21.f))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
 						myNPCList[j]->setmoveSpd(0.0f);
@@ -2332,9 +2333,9 @@ void SceneSP::UpdateShoppers(double dt)
 				{
 					myNPCList[j]->setmoveSpd(5.0f);
 					myNPCList[j]->setAnimationType(WALKING);
-					myNPCList[j]->setYRotation(180);
-					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
-					if(((myNPCList[j]->getZpos()) < 24) && ((myNPCList[j]->getZpos()) > 22))
+					myNPCList[j]->setYRotation(180.f);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*float(dt)));
+					if(((myNPCList[j]->getZpos()) < 24.f) && ((myNPCList[j]->getZpos()) > 22.f))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
 						myNPCList[j]->setmoveSpd(0.0f);
@@ -2346,8 +2347,8 @@ void SceneSP::UpdateShoppers(double dt)
 					myNPCList[j]->setmoveSpd(5.0f);
 					myNPCList[j]->setAnimationType(WALKING);
 					myNPCList[j]->setYRotation(90);
-					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5*dt));
-					if((myNPCList[j]->getXpos() > 30) && (myNPCList[j]->getXpos() < 32))
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5.f*float(dt)));
+					if((myNPCList[j]->getXpos() > 30.f) && (myNPCList[j]->getXpos() < 32.f))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
 						myNPCList[j]->setmoveSpd(0.0f);
@@ -2358,9 +2359,9 @@ void SceneSP::UpdateShoppers(double dt)
 				{
 					myNPCList[j]->setmoveSpd(5.0f);
 					myNPCList[j]->setAnimationType(WALKING);
-					myNPCList[j]->setYRotation(180);
-					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
-					if((myNPCList[j]->getZpos() > 10) && (myNPCList[j]->getZpos() < 12))
+					myNPCList[j]->setYRotation(180.f);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*float(dt)));
+					if((myNPCList[j]->getZpos() > 10.f) && (myNPCList[j]->getZpos() < 12.f))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
 						myNPCList[j]->setmoveSpd(0.0f);
@@ -2372,8 +2373,8 @@ void SceneSP::UpdateShoppers(double dt)
 					myNPCList[j]->setmoveSpd(5.0f);
 					myNPCList[j]->setAnimationType(WALKING);
 					myNPCList[j]->setYRotation(270);
-					myNPCList[j]->setXpos((myNPCList[j]->getXpos())-(5*dt));
-					if((myNPCList[j]->getXpos() > -16.3) && (myNPCList[j]->getXpos() < -15.7))
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())-(5*float(dt)));
+					if((myNPCList[j]->getXpos() > -16.3f) && (myNPCList[j]->getXpos() < -15.7f))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
 						myNPCList[j]->setmoveSpd(0.0f);
@@ -2385,8 +2386,8 @@ void SceneSP::UpdateShoppers(double dt)
 					myNPCList[j]->setmoveSpd(5.0f);
 					myNPCList[j]->setAnimationType(WALKING);
 					myNPCList[j]->setYRotation(180);
-					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
-					if(((myNPCList[j]->getZpos()) < -9) && ((myNPCList[j]->getZpos()) > -10))
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5.f*float(dt)));
+					if(((myNPCList[j]->getZpos()) < -9.f) && ((myNPCList[j]->getZpos()) > -10.f))
 					{
 						myNPCList[j]->setAnimationType(IDLE);
 						myNPCList[j]->setmoveSpd(0.0f);
@@ -2402,7 +2403,7 @@ void SceneSP::UpdateShoppers(double dt)
 }
 void SceneSP::UpdateLegAnimation(double dt)
 {
-	for(int i = 0; i< myNPCList.size(); ++i)
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)
 	{
 		if(myNPCList[i]->getAnimationType() == WALKING)
 		{
@@ -2411,13 +2412,13 @@ void SceneSP::UpdateLegAnimation(double dt)
 			if(myNPCList[i]->getLeftLeg()<(-maxlegRot))
 				myNPCList[i]->setlegRotDir(false);
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
 			else
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
 			else
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
 		}
 	}
 }
@@ -2455,7 +2456,7 @@ void SceneSP::UpdateCage(double dt)
 	}
 	if(caged)
 	{
-		cagedPos += 15 * dt;
+		cagedPos += 15 * float(dt);
 		if(cagedPos > 60)
 		{
 			caged = false;
@@ -2500,7 +2501,7 @@ void SceneSP::UpdateGaben(double dt)
 		}
 	}
 	if(gabed)
-		moveG += 20 * dt;
+		moveG += 20 * float(dt);
 	if(moveG > 95)
 	{
 		summonG = 0;
@@ -2603,9 +2604,9 @@ void SceneSP::RenderEasteregg()
 		{
 			for(int i = 0;i<10;i++)
 			{
-				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray[i],Color(0+0.1*i,0,1-0.1*i),3,2+0.8*i,9.7);
-				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray1[i],Color(0,1-0.1*i,0+0.1*i),3,10+0.8*i,9.7);
-				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray2[i],Color(1-0.1*i,0+0.1*i,0),3,18+0.8*i,9.7);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray[i],Color(0.f+0.1f*i,0,1.f-0.1f*i),3.f,2+0.8f*i,9.7f);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray1[i],Color(0.f,1.f-0.1f*i,0.f+0.1f*i),3.f,10.f+0.8f*i,9.7f);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray2[i],Color(1.f-0.1f*i,0+0.1f*i,0),3.f,18.f+0.8f*i,9.7f);
 			}
 			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'enter' to continue",Color(1,1,0),2,8,13);
 		}
@@ -2652,13 +2653,13 @@ void SceneSP::RenderUI()
 	{
 		for(int i = 0; i<i_total_items_to_find;++i)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], myCheckList[i]->getName(), Color(0, 1, 0), 2,0, 3+i);
+			RenderTextOnScreen(meshList[GEO_TEXT], myCheckList[i]->getName(), Color(0, 1, 0), 2.f,0.f, 3.f+i);
 		}
 	}
-	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5,22.5+(inventoryPointing*5.0),2.5f);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
-	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2,0,27);
-	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
+	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5.f,22.5f+(inventoryPointing*5.0f),2.5f);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3.f,0.f, 19.f);
+	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2.f,0.f,27.f);
+	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3.f,0.f, 1.f);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
 	RenderTugofwarUI();
 	RenderDrunkmanUI();
@@ -2947,12 +2948,12 @@ void SceneSP::RenderHand()
 		=============================*/
 		modelStack.PushMatrix();
 			modelStack.Rotate((180+handrotationleftandright),0,1,0);
-			modelStack.Translate(-0.2,-4.5,-1+handtranslation);
+			modelStack.Translate(-0.2f,-4.5f,-1.f+handtranslation);
 			RenderMesh(meshList[GEO_HANDS], toggleLight);
 			if(ptrInvSelect->getName() != emptyItem.getName() && !(Application::IsKeyPressed('R')))
 			{
 			modelStack.PushMatrix();
-				modelStack.Translate(-0.6,3.5,3);
+				modelStack.Translate(-0.6f,3.5f,3.f);
 				RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
 			modelStack.PopMatrix();
 
@@ -3052,26 +3053,26 @@ void SceneSP::RenderCharacter(CNpc* npc)
 
 			//Left arm
 			modelStack.PushMatrix();
-				modelStack.Translate(0.3 , 0.0, 0);
-				modelStack.Rotate(npc->getLeftArm(),0,1,0);
+				modelStack.Translate(0.3f , 0.f, 0.f);
+				modelStack.Rotate(npc->getLeftArm(),0.f,1.f,0.f);
 				RenderMesh(meshList[npc->getArmType()], toggleLight);
 			modelStack.PopMatrix();
 				//Right arm
 			modelStack.PushMatrix();
-				modelStack.Translate(-0.3 , 0.0, 0);
-				modelStack.Rotate(npc->getRightArm(),0, 1,0);
+				modelStack.Translate(-0.3f , 0.f, 0.f);
+				modelStack.Rotate(npc->getRightArm(),0.f, 1.f,0.f);
 				RenderMesh(meshList[npc->getArmType()], toggleLight);
 			modelStack.PopMatrix();
 			//leg and feet
 			modelStack.PushMatrix();
-				modelStack.Translate(0.2, 2.3, 0);
-				modelStack.Rotate(npc->getLeftLeg(),1,0,0);
+				modelStack.Translate(0.2f, 2.3f, 0.f);
+				modelStack.Rotate(npc->getLeftLeg(),1.f,0.f,0.f);
 				RenderMesh(meshList[npc->getLegType()], toggleLight);
 			modelStack.PopMatrix();
 			//leg and feet 
 			modelStack.PushMatrix();
-				modelStack.Translate(-0.2, 2.3, 0);
-				modelStack.Rotate(npc->getRightLeg(),1,0,0);
+				modelStack.Translate(-0.2f, 2.3f, 0.f);
+				modelStack.Rotate(npc->getRightLeg(),1.f,0.f,0.f);
 				RenderMesh(meshList[npc->getLegType()], toggleLight);
 			modelStack.PopMatrix();
 
@@ -3791,7 +3792,7 @@ void SceneSP::RenderTug()
 	if(IsIntugofwar)
 	{
 		modelStack.PushMatrix();
-			modelStack.Translate(myNPCList[0]->getXpos()+2,myNPCList[0]->getYpos()+3.6,myNPCList[0]->getZpos()-1);
+			modelStack.Translate(myNPCList[0]->getXpos()+2.f,myNPCList[0]->getYpos()+3.6f,myNPCList[0]->getZpos()-1.f);
 			modelStack.Rotate(90,0,0,1);
 			RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
 		modelStack.PopMatrix();
@@ -3814,7 +3815,7 @@ void SceneSP::RenderInventory()
 {
 	for( int i = 0; i< ptrplayer->getItemHeld();++i)
 	{
-		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3,22.3+(i*5),0.5);
+		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3.f,22.3f+(i*5.f),0.5f);
 	}
 }
 void SceneSP::RenderOffice()
@@ -4361,7 +4362,7 @@ void SceneSP::checkWinLose()
 	{
 		//Init pass check to 0
 		int checklistPass = 0;
-		for(int i = 0; i< myCheckList.size();++i)
+		for(unsigned int i = 0; i< myCheckList.size();++i)
 		{
 			//Check number of items cleared
 			if(myCheckList[i]->getName() == clearText)
@@ -4381,7 +4382,7 @@ void SceneSP::checkWinLose()
 		&&  ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
 	{
 		//Search through player's inventory
-		for(int i = 0; i< ptrplayer->getVector().size(); ++i)
+		for(unsigned int i = 0; i< ptrplayer->getVector().size(); ++i)
 		{
 			//If player has existing item when walking out, player is stealing
 			if(ptrplayer->getVector()[i]->getName() != ptrEmpty->getName())
