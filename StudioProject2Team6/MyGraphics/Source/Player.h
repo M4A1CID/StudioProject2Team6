@@ -21,6 +21,7 @@ public:
 	std::vector<CItem*> getVector();
 	void setInventory(CItem* pickedUp);
 	void setInventory(CItem* pickedUp, int slot);
+	void setInventory(CItem pickedUp, int slot);
 	void setMoney(float newMoney);
 	CItem* getItem(int i);
 

@@ -24,7 +24,7 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	CAMERA_SPEED = 150.f;
 }
 
-void Camera3::UpdateMovement(double dt)
+void Camera3::UpdateMovement(double dt, bool reverse)
 {
 	float runMultiplyer;
 	if(!Application::IsKeyPressed(VK_SHIFT)) //Check if player is sprinting
@@ -35,77 +35,93 @@ void Camera3::UpdateMovement(double dt)
 	{
 		runMultiplyer = 0.5f;
 	}
-	
-
 	if(Application::IsKeyPressed('A') )
 	{
-
-		//if(Limit(position,target, 150, CAMERA_SPEED)) //Limit to Skybox
-
-
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
 		right.y = 0;
 		right.Normalize();
+		if(reverse)
+		{
+			position += right * CAMERA_SPEED *runMultiplyer* dt;
+			target += right * CAMERA_SPEED *runMultiplyer* dt;
+		}else
+		{
 		position -= right * CAMERA_SPEED*runMultiplyer * dt;
 		target -= right * CAMERA_SPEED*runMultiplyer * dt;
+		}
 	}
 	if(Application::IsKeyPressed('D'))
 	{
-		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
-
 		Vector3 view = (target - position).Normalized();
 		Vector3 right = view.Cross(up);
 		right.y = 0;
 		right.Normalize();
+		if(reverse)
+		{
+			position -= right * CAMERA_SPEED*runMultiplyer * dt;
+			target -= right * CAMERA_SPEED*runMultiplyer * dt;
+		}else
+		{
 		position += right * CAMERA_SPEED *runMultiplyer* dt;
 		target += right * CAMERA_SPEED *runMultiplyer* dt;
-
-
+		}
 	}
 	if(Application::IsKeyPressed('W'))
 	{
-		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
-
 		Vector3 view = (target - position).Normalized();
 		view.y = 0;
-		position += view * CAMERA_SPEED *runMultiplyer* dt;
-		target += view * CAMERA_SPEED*runMultiplyer * dt;
-
-
+		if(reverse)
+		{
+			position -= view * CAMERA_SPEED *runMultiplyer* dt;
+			target -= view * CAMERA_SPEED*runMultiplyer * dt;
+		}else
+		{
+			position += view * CAMERA_SPEED *runMultiplyer* dt;
+			target += view * CAMERA_SPEED*runMultiplyer * dt;
+		}
 	}
 	if(Application::IsKeyPressed('S'))
 	{
-
-		//if(Limit(position,target,  150, CAMERA_SPEED)) //Limit to Skybox
-
 		Vector3 view = (target - position).Normalized();
 		view.y = 0;
-		position -= view * CAMERA_SPEED *runMultiplyer* dt;
-		target -= view * CAMERA_SPEED*runMultiplyer * dt;
-
-
+		if(reverse)
+		{
+			position += view * CAMERA_SPEED *runMultiplyer* dt;
+			target += view * CAMERA_SPEED*runMultiplyer * dt;
+		}else
+		{
+			position -= view * CAMERA_SPEED *runMultiplyer* dt;
+			target -= view * CAMERA_SPEED*runMultiplyer * dt;
+		}
 	}
 }
 
-void Camera3::UpdateView(double dt)
+void Camera3::UpdateView(double dt, bool reverse)
 {
 	
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
+		float yaw;
 		Vector3 view = (target - position).Normalized();
-		float yaw = (float)(CAMERA_SPEED * dt);
+		if(reverse)
+			yaw = (float)(-CAMERA_SPEED * dt);
+		else
+			yaw = (float)(CAMERA_SPEED * dt);
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
 		view = rotation * view;
 		up = rotation * up;
 		target = view + position;
-
 	}
 	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
+		float yaw;
 		Vector3 view = (target - position).Normalized();
-		float yaw = (float)(-CAMERA_SPEED * dt);
+		if(reverse)
+			yaw = (float)(CAMERA_SPEED * dt);
+		else
+			yaw = (float)(-CAMERA_SPEED * dt);
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
 		view = rotation * view;
@@ -116,36 +132,34 @@ void Camera3::UpdateView(double dt)
 	{
 		if(limiter < 80)
 		{
-		float pitch = (float)(CAMERA_SPEED * dt);
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		up = right.Cross(view).Normalized();
-		Mtx44 rotation;
-		rotation.SetToRotation(pitch, right.x, right.y, right.z);
-		view = rotation * view;
-		target = view + position;
-		
-		limiter +=2;
+			float pitch = (float)(CAMERA_SPEED * dt);
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			right.y = 0;
+			right.Normalize();
+			up = right.Cross(view).Normalized();
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = view + position;
+			limiter +=2;
 		}
-		
+
 	}
 	if(Application::IsKeyPressed(VK_DOWN)&& !Application::IsKeyPressed('R'))
 	{
 		if(limiter>10)
 		{
-		float pitch = (float)(-CAMERA_SPEED * dt);
-		Vector3 view = (target - position).Normalized();
-		Vector3 right = view.Cross(up);
-		right.y = 0;
-		right.Normalize();
-		up = right.Cross(view).Normalized();
-		Mtx44 rotation;
-		rotation.SetToRotation(pitch, right.x, right.y, right.z);
-		view = rotation * view;
-		target = view + position;
-		
+			float pitch = (float)(-CAMERA_SPEED * dt);
+			Vector3 view = (target - position).Normalized();
+			Vector3 right = view.Cross(up);
+			right.y = 0;
+			right.Normalize();
+			up = right.Cross(view).Normalized();
+			Mtx44 rotation;
+			rotation.SetToRotation(pitch, right.x, right.y, right.z);
+			view = rotation * view;
+			target = view + position;
 			limiter -=2;
 		}
 	}

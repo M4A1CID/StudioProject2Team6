@@ -18,6 +18,8 @@
 #include <string>
 #include <sstream>
 #include <cmath>
+#include <ctime>
+#include "SFML\Audio.hpp"
 
 using std::vector;
 using std::string;
@@ -30,13 +32,15 @@ private:
 				Collision Functions
 	=======================================*/
 	void checkPickUpItem();
+	void checkCollision();
+	void checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ);
 	void checkSupermarketCollision();
-	void checkShelfCollision();
 	void checkFreezerCollision();
 	void checkCashierCollision();
 	void checkElevatorCollision();
-	void checkReturnPoint();
-	void checkNPCCollision();
+	bool checkReturnPoint();
+	void checkWinLose();
+	void resetGame();
 	void addToInventory(CItem* pickedUp);
 	/*=======================================
 				All Render Functions
@@ -65,14 +69,20 @@ private:
 	void RenderHand();
 	void RenderTug();
 	void RenderReturnPoint();
-	void RenderMainMenu();
-	void RenderSubMenu();
+	void RenderBeerstand();
+	void RenderMainMenu();		//Render Main Menu Screen
+	void RenderSubMenu();		//Render Sub/Start Menu Screen
+	void RenderWinLoseMenu();	//Render Win/Lose Menu Screen
 	void RenderOffice();
 	void RenderStorage();
 	void RenderBuilding();
 	void RenderIceBox();
 	void RenderMeatShelf();
 	void RenderFoodShelf();
+	void RenderCage();
+	void RenderTroll();
+	void RenderMiscEastereggs();
+	void RenderEasteregg();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -82,7 +92,10 @@ private:
 	void UpdateUI(double dt);			//Update Game User Interface
 	void UpdateSamples();				//Update sample food stand
 	void UpdateElevator(double dt);		//Update elevator in supermarket
-	void UpdateMenu();					//Update Main Menus
+	void UpdateMenu();					//Update Menus
+	void UpdateMainMenu();
+	void UpdateStartMenu();
+	void UpdateWinLoseMenu();
 	void UpdatePlaying(double dt);		//Update application while game is playing
 	void UpdateTugofwar(double dt);		//Update the Tug-Of-War mini game
 	void UpdateDrunkman(double dt);		//Update Drunk Man NPC
@@ -95,15 +108,23 @@ private:
 	void UpdateWalkingmanoutsideoppdir(double dt);//Update Walking-man NPC opp dir
 	void UpdateLogisticman(double dt);	//Update Logistic-man NPC
 	void UpdateGhostman(double dt);		//Update Ghost NPC
-	void UpdateCustomer(double dt);
+	void UpdateCustomer(double dt);     //Update Customer NPC
+	void UpdateShoppers(double dt); 
 	void UpdateLookingman(double dt);	//Update NPC that looks at shelves
 	void UpdateChattingman(double dt);
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
 	void UpdateAITimer(double dt);
-	void UpdatePaying(double dt);       //Update paying activity
-	void UpdateEasterEgg(double dt);    //Update easter egg
-	
+	void UpdatePaying();       //Update paying activity
+	void UpdateCage(double dt);
+	void UpdateGaben(double dt);
+	void UpdateTroll(double dt);
+	void UpdateMiscEasteregg(double dt);
+	void UpdateEasteregg(double dt);
+	void UpdateEasterEggGuy(double dt); 
+	void UpdateATM(); //Update ATM
+	void UpdatePeople(double dt);
+	void UpdateLyingMan(double dt);
 	/*=======================================
 				All Init functions
 	=======================================*/
@@ -114,8 +135,6 @@ private:
 	void initCharacter();
 	void initNPC();
 	void initShelves();
-
-
 	/*========================================
 			Declare variables here
 	=========================================*/
@@ -131,6 +150,9 @@ private:
 	bool toggleDoorBack;
 	bool elevatorDoorOpening;
 	bool elevatorSecondFloor;
+	bool b_isWithinInteractionItem;
+	bool b_isWithinPayingCashier;
+	bool b_is_Stealing;
 	float interactionTimer;
 	float LogisticinteractionTimer;
 	float CustomerinteractionTimer;
@@ -146,6 +168,7 @@ private:
 	float elevatorY;
 	float itemYrotation;
 	float itemXrotation;
+	float ATMMoney;
 	
 	CEmptyItem emptyItem;
 	bool win;
@@ -153,7 +176,7 @@ private:
 	bool showTuginstruction;
 	bool b_crouching;
 	bool b_inspection;
-	bool isWithinInteractionItem;
+	
 	int i_sampleItems;
 	int i_menuHandle;
 	int i_drunkmanAct;
@@ -165,6 +188,8 @@ private:
 	string s_fps;
 	string s_camera_target;
 	string s_item_name;
+	string s_item_price;
+	string s_easter_counter;
 	CPlayer * ptrplayer;
 	CItem * ptrItem;
 	CItem * ptrClass;
@@ -175,7 +200,8 @@ private:
 	CContainer* ptrContainer;
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector
-	vector<CItem*> myTrolleyList; //Trolley item vector
+	vector<CItem*> myTreasureList; //Treasure item vector
+	vector<CItem*> myCheckList; //Check list for items
 	vector<CNpc*> myNPCList;
 	struct Transformations
 	{
@@ -185,6 +211,8 @@ private:
 		float rotateA;
 	};
 
+	//Sound Buffers
+	sf::Music music;
 public:
 	SceneSP();
 	~SceneSP();

@@ -89,6 +89,43 @@ static float NPCLookLimiter = 10.0f;
 static float spdMod = 13.0f;
 static float maxlegRot = 35.0f;
 
+//Collision offset
+static float Coffset = 2.0f;
+
+//Easteregg gamemode
+static bool winEaster = false;
+static bool closeEaster = false;
+static bool inRange = false;
+static float easterLimiter = 2.0f;
+static float easterTimer = 2.0f;
+static int getCounter = 0;
+static bool getCaged = false;
+static bool getGabed = false;
+static bool getTrolled = false;
+static bool getTimed = false;
+static bool getRicked = false;
+const int numEastereggs = 5;
+
+//Winning easter egg message
+const std::string winEasterArray[10] = {"Y","o","u"," ","f","o","u","n","d"," "};
+const std::string winEasterArray1[10] = {"a","l","l"," ","t","h","e"," ","e","a"};
+const std::string winEasterArray2[10] = {"s","t","e","r"," ","e","g","g","s","!"};
+
+//Cage
+static bool caged = false;
+static float cagedPos = -75.0f;
+static float diffY = 0.0f;
+
+//Gaben
+static bool gabed = false;
+static int summonG = 0;
+static float moveG = 0.0f;
+
+//troll
+static bool reversed = false;
+static float reverseTimer = 0.0f;
+static float reverseLimiter = 5.0f;
+
 //World size for skybox
 static float world_size = 3000.0f;
 
@@ -160,9 +197,21 @@ static float TugofwarTimerLimiter = 0.3f;
 //Item rotation speed
 static float itemRotationSpeedMultiplyer =60.f;
 
+static int i_total_items_to_find = 3;
+static CItem* ptrEmpty = new CEmptyItem;
+
 //Punch limiter
 static bool PunchTimerLimiter = true;
 
 //Menu string text
-static std::string menuTextArray[6] = {"START","Credits","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt"};
+static std::string menuTextArray[7] = {"START","Credits","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt","Back"};
+static std::string s_UI_Play_Mode[3] = {"Free Roam","Treasure Hunt", "Easter Egg Hunt"};
+static std::string backgroundSound = "Sound\\Carefree.ogg";
+static std::string clearText = "CLEAR!";
 
+//Sounds
+const std::string soundFXArray[5] = {"Sound/holy.ogg","Sound/time.ogg","Sound/jaws.ogg","Sound/troll.ogg","Sound/rick.ogg"};
+
+//reset value
+const float resetValue = 0.0f;
+const int resetIntValue = 0;

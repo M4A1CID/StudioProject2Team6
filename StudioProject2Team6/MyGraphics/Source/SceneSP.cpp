@@ -25,6 +25,18 @@ void SceneSP::Init()
 		meshList[i] = NULL;
 	}
 
+	/*===============================
+			Music and Sound here
+	==============================*/
+	/*if(!music.openFromFile(backgroundSound))
+	{
+		std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+	}
+	music.setLoop(true);
+	music.setVolume(50.0f);
+	music.play();*/
+	
+
 	/*=============================================
 	Init variables here
 	=============================================*/
@@ -41,17 +53,19 @@ void SceneSP::Init()
 	ptrInvSelect = ptrplayer->getItem(0);
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
+	b_is_Stealing = false;
 	toggleLight = true;
 	toggleDoorFront = false;
 	toggleDoorBack = false;
 	elevatorDoorOpening = false;
 	elevatorSecondFloor = false;
 	b_inspection = false;
+	b_isWithinPayingCashier = false;
 	IsIntugofwar = false;
 	win = false;
 	lose = false;
 	showTuginstruction = false;
-	isWithinInteractionItem = false;
+	b_isWithinInteractionItem = false;
 	interactionTimer = 0.0f;
 	LogisticinteractionTimer = 0.0f;
 	CustomerinteractionTimer = 0.0f;
@@ -73,6 +87,7 @@ void SceneSP::Init()
 	selectionPointing = MENU_START;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
+	ATMMoney = 50.0f;
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
@@ -130,7 +145,15 @@ void SceneSP::initGeoType()
 	meshList[GEO_OFFICECOMPUTER] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//office.obj");
 	meshList[GEO_OFFICECOMPUTER]->textureID = LoadTGA("Image//Office.tga");
 	meshList[GEO_BUILDING] = MeshBuilder::GenerateOBJ("elevatordoor", "OBJ//Building.obj");
-	meshList[GEO_BUILDING]->textureID = LoadTGA("Image//Office.tga");
+	meshList[GEO_BUILDING]->textureID = LoadTGA("Image//Building.tga");
+	meshList[GEO_CAGE] = MeshBuilder::GenerateQuad("cage", Color(1, 1, 1), 1.0f);
+	meshList[GEO_CAGE]->textureID = LoadTGA("Image//TheCage.tga");
+	meshList[GEO_CAGEWALL] = MeshBuilder::GenerateQuad("cage", Color(0, 0, 0), 1.0f);
+	meshList[GEO_CAGEWALL]->textureID = LoadTGA("Image//TheCage.tga");
+	meshList[GEO_GABEN] = MeshBuilder::GenerateText("gaben",1,1);
+	meshList[GEO_GABEN]->textureID = LoadTGA("Image//AllHailGabe.tga");
+	meshList[GEO_BALL] = MeshBuilder::GenerateText("orange",1,1);
+	meshList[GEO_BALL]->textureID = LoadTGA("Image//orange.tga");
 	/*=============================
 	Init all food items
 	==============================*/
@@ -197,6 +220,12 @@ void SceneSP::initGeoType()
 	meshList[GEO_EASTEREGG_2]->textureID = LoadTGA("Image//EasterEgg2.tga");
 	meshList[GEO_EASTEREGG_3] = MeshBuilder::GenerateOBJ("easterEgg3","OBJ//EasterEgg3.obj");
 	meshList[GEO_EASTEREGG_3]->textureID = LoadTGA("Image//EasterEgg3.tga");
+	meshList[GEO_EASTEREGG_4] = MeshBuilder::GenerateOBJ("No time","OBJ//EasterEgg4,5,6.obj");
+	meshList[GEO_EASTEREGG_4]->textureID = LoadTGA("Image//EasterEgg4.tga");
+	meshList[GEO_EASTEREGG_5] = MeshBuilder::GenerateOBJ("easterEgg5","OBJ//EasterEgg4,5,6.obj");
+	meshList[GEO_EASTEREGG_5]->textureID = LoadTGA("Image//EasterEgg5.tga");
+	meshList[GEO_EASTEREGG_6] = MeshBuilder::GenerateOBJ("Nic Cage","OBJ//EasterEgg4,5,6.obj");
+	meshList[GEO_EASTEREGG_6]->textureID = LoadTGA("Image//EasterEgg6.tga");
 	/*========================
 	SKYBOX INIT
 	=========================*/
@@ -265,7 +294,7 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,TUG_OF_WAR_GUY);
 	myNPCList.push_back(ptrNPC);
 	//Drunkman NPC
-	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN);
+	ptrNPC = new CNpc(-6,17.7,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
 
 	//Walk around supermarket
@@ -280,6 +309,9 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 	//Chatting
 	ptrNPC = new CNpc(11,17,25,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CHATTING_GUY);
+	myNPCList.push_back(ptrNPC);
+	//idle
+	ptrNPC = new CNpc(-2,17,-22,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,IDLE_GUY);
 	myNPCList.push_back(ptrNPC);
 
 	//Ghost npc
@@ -376,7 +408,30 @@ void SceneSP::initCharacter()
 		}
 	}
 
-	
+	//People
+    ptrNPC = new CNpc(30, 0, -28,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,PEOPLE);
+	myNPCList.push_back(ptrNPC);
+
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == PEOPLE)
+		{
+			myNPCList[i]->setActive(false);
+		}
+	}
+
+	//LYINGMAN
+	ptrNPC = new CNpc(30, 0, -28,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,LYINGMAN);
+	myNPCList.push_back(ptrNPC);
+
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == LYINGMAN)
+		{
+			myNPCList[i]->setActive(false);
+		}
+	}
+
 }
 void SceneSP::initShelves()
 {
@@ -387,20 +442,23 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg3;
+	ptrClass = new CBranCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,20,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CVargaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,26,0,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CGluWaterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,8,0,28,180);
@@ -408,6 +466,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CMtnDewCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,2,0,28,180);
@@ -415,27 +474,31 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 	//==============================================================================
-	ptrClass =  new CEasterEgg1;
+	ptrClass =  new CTomatoCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFour",5,5,5,26,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox5;
+	ptrClass = new CMelonCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfFive",5,5,5,20,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox4;
+	ptrClass = new CRedMonsterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSix",5,5,5,14,0,18,0);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CPeasCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf18",5,5,5,8,0,18,0);
@@ -443,6 +506,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CSardineCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf19",5,5,5,2,0,18,0);
@@ -450,29 +514,31 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
-	ptrClass = new CCerealBox1;
+	ptrClass = new CBrownCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfSeven",5,5,5,26,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CCerealBox2;
+	ptrClass = new CSardineCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfEight",5,5,5,20,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CCerealBox3;
+	ptrClass = new CPeasCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfNine",5,5,5,14,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CRedMonsterCan;
+	ptrClass = new CEasterEgg1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf20",5,5,5,8,0,16,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -485,8 +551,9 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
-	ptrClass = new CHumanCan;
+	ptrClass = new CBrownCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTen",5,5,5,26,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -507,14 +574,14 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
-	ptrClass = new CSodaCan;
+	ptrClass = new CVargaCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf22",5,5,5,8,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
-	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row;
 
-	ptrClass = new CSardineCan;
+	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf23",5,5,5,2,0,4,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
@@ -527,6 +594,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CSodaFestCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf14",5,5,5,20,0,6,0);
@@ -534,6 +602,7 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
 	ptrClass = new CRedMonsterCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf15",5,5,5,14,0,6,0);
@@ -557,61 +626,69 @@ void SceneSP::initShelves()
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
 
 	//Second layer
-	ptrClass = new CBeansCan;
+	ptrClass = new CCerealBox1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,-12,17,28,180);
 	myContainerList.push_back(ptrContainer);	//Push back into vector list
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg3;
+	ptrClass = new CCerealBox2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfTwo",5,5,5,-18,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CCerealBox3;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,-24,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CGluWaterCan;
+	ptrClass = new CCerealBox4;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,-30,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 
-	ptrClass = new CMtnDewCan;
+	ptrClass = new CCerealBox5;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,-36,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
-	ptrClass = new CEasterEgg2;
+	ptrClass = new CEasterEgg1;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfThree",5,5,5,4,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	//==================================================================================
-	ptrClass = new CGluWaterCan;
+	myTreasureList.push_back(ptrClass);
+
+	ptrClass = new CEasterEgg2;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf16",5,5,5,10,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
-	//==================================================================================
-	ptrClass = new CMtnDewCan;
+	myTreasureList.push_back(ptrClass);
+
+	ptrClass = new CHumanCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"Shelf17",5,5,5,16,17,28,180);
 	myContainerList.push_back(ptrContainer);
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
 	DefineItem(ptrContainer,ptrContainer->getBottomItem(),ROW_BOTTOM);	//Bottom row
+	myTreasureList.push_back(ptrClass);
 	//==================================================================================
 }
 void SceneSP::DefineItem(CContainer* container, CItem item, int row)
@@ -774,7 +851,7 @@ void SceneSP::DeclareLightParameters()
 }
 void SceneSP::UpdateUI(double dt)
 {
-	std::stringstream ss_fps,ss_position,ss_money, ss_camera;
+	std::stringstream ss_fps,ss_position,ss_money, ss_camera,ss_item_price;
 
 	ss_camera << camera.target.x << "," << camera.target.y << "," << camera.target.z;
 	s_camera_target = ss_camera.str();
@@ -788,6 +865,8 @@ void SceneSP::UpdateUI(double dt)
 	ss_money << ptrplayer->getMoney();
 	s_money = ss_money.str();
 
+	ss_item_price <<  ptrplayer->getItem(inventoryPointing)->getPrice();
+	s_item_price = ss_item_price.str();
 
 }
 void SceneSP::UpdateItemInspection()
@@ -813,32 +892,12 @@ void SceneSP::UpdateAI(double dt)
 	UpdateLogisticman(dt);
 	UpdateCustomer(dt);
 	UpdateChattingman(dt);
+	UpdateShoppers(dt);
 	UpdateLegAnimation(dt);
+	UpdatePeople(dt);
 }
 
-//void SceneSP::UpdatePaying(double dt)
-//{
-//	float container;//total amt
-//	//check area
-//	if ((camera.position.x > -27.0f && camera.position.z < -16.0f) || (camera.position.x > -17.0f && camera.position.z < -16.0f) || (camera.position.x > -7.0f && camera.position.z < -16.0f))
-//	{
-//		if (Application::IsKeyPressed('E'))
-//		{
-//				for (int i = 0; i < ptrplayer->getItemHeld(); ++i)
-//
-//					{
-//
-//						
-//
-//					}
-//				//check if there is enough money to pay
-//				if (container > getMoney, getMoney--)
-//					//pay money
-//					getMoney--;
-//		}
-//	}
-//}
-void SceneSP::UpdateEasterEgg(double dt)
+void SceneSP::UpdateEasterEggGuy(double dt)
 {
 	//x , y, z
 	//10,17,-25
@@ -866,14 +925,21 @@ void SceneSP::UpdateEasterEgg(double dt)
 
 }	
 
+
 void SceneSP::UpdateTrolley(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
-		handrotationleftandright += (camera.CAMERA_SPEED)*dt;
+		if(reversed)
+			handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
+		else
+			handrotationleftandright += (camera.CAMERA_SPEED)*dt;
 	}
 	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
+		if(reversed)
+			handrotationleftandright += (camera.CAMERA_SPEED)*dt;
+		else
 		handrotationleftandright -= (camera.CAMERA_SPEED)*dt;
 	}
 	if(Application::IsKeyPressed('E') || PunchTimerLimiter == false)
@@ -893,12 +959,9 @@ void SceneSP::UpdateTrolley(double dt)
 		}
 	}
 }
-void SceneSP::UpdateMenu()
+void SceneSP::UpdateMainMenu()
 {
-	//If at main menu
-	if(i_menuHandle == MAIN_MENU)
-	{
-		if(interactionTimer > menuTImerLimiter)
+	if(interactionTimer > menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
 			{
@@ -943,13 +1006,10 @@ void SceneSP::UpdateMenu()
 				}
 			}
 		}
-	}
-
-	//If at SUB/Character menu 
-	if(i_menuHandle == SUB_MENU)
-	{
-
-		if(interactionTimer > menuTImerLimiter)
+}
+void SceneSP::UpdateStartMenu()
+{
+	if(interactionTimer > menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
 			{
@@ -992,6 +1052,14 @@ void SceneSP::UpdateMenu()
 				if(selectionPointing == MENU_TREASURE_HUNT)
 				{
 					//DO TREASURE HUNT HERE
+					int random =0;
+					std::srand(time(0)); //Seed the random number generator
+					for(int i = 0; i< i_total_items_to_find; ++i)
+					{
+						random =  rand()%myTreasureList.size();
+						myCheckList.push_back(myTreasureList[random]); //New item to find everytime
+						myTreasureList.erase(myTreasureList.begin()+random);
+					}
 					ptrplayer->setCharacterJob(PLAY_TREASURE_HUNT);
 					i_menuHandle = GAME_PLAYING;
 				}
@@ -1003,7 +1071,48 @@ void SceneSP::UpdateMenu()
 				}
 			}
 		}
+}
+void SceneSP::UpdateWinLoseMenu()
+{
+	selectionPointing = MENU_BACK;
+	//Reset the world
+	
+	if(Application::IsKeyPressed(VK_RETURN))
+	{
+		if(selectionPointing == MENU_BACK)
+		{
+			//TO DO 
+			resetGame();
+		}
 	}
+}
+void SceneSP::UpdateMenu()
+{
+	//If at main menu
+	if(i_menuHandle == MAIN_MENU)
+	{
+		UpdateMainMenu();
+	}
+
+	//If at SUB/Character menu 
+	if(i_menuHandle == SUB_MENU)
+	{
+		UpdateStartMenu();
+	}
+	//If at Win/Lose Menu
+	if(i_menuHandle == WIN_LOSE_MENU)
+	{
+		UpdateWinLoseMenu();
+	}
+}
+void SceneSP::resetGame()
+{
+	myNPCList.clear();
+	myCheckList.clear();
+	myContainerList.clear();
+	myStockList.clear();
+	myTreasureList.clear();
+	Init();
 }
 void SceneSP::UpdateItemRotation(double dt)
 {
@@ -1029,8 +1138,31 @@ void SceneSP::UpdateItemRotation(double dt)
 		itemYrotation = 0.f;
 	}
 }
+void SceneSP::UpdateEasteregg(double dt)
+{	
+	std::stringstream ss_easterCounter;
+	ss_easterCounter << getCounter;
+	s_easter_counter = ss_easterCounter.str();
+	easterTimer += dt;
+	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
+	{
+		UpdateMiscEasteregg(dt);
+		UpdateCage(dt);
+		UpdateGaben(dt);
+		UpdateTroll(dt);
+		if(getCounter == numEastereggs)
+		{
+			winEaster = true;
+		}
+		if(winEaster == true && Application::IsKeyPressed(VK_RETURN))
+		{
+			closeEaster = true;
+		}
+	}
+}
 void SceneSP::UpdatePlaying(double dt)
 {
+	checkWinLose();
 	if(Application::IsKeyPressed(VK_F1)) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed(VK_F2)) //disable back face culling
@@ -1100,6 +1232,9 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateAI(dt);
 	UpdateItemRotation(dt);
 	UpdateItemInspection();
+	UpdateEasteregg(dt);
+	UpdateATM();
+	reverseTimer += dt;
 	if(Application::IsKeyPressed('F1')) //enable back face culling
 		glEnable(GL_CULL_FACE);
 	if(Application::IsKeyPressed('F2')) //disable back face culling
@@ -1117,25 +1252,22 @@ void SceneSP::UpdatePlaying(double dt)
 		toggleLight = false;
 	}
 
-
+	
+	UpdatePaying();//Update playing paying
 
 	UpdateUI(dt);
 	checkPickUpItem();
-	if(!IsIntugofwar)
-		camera.UpdateMovement(dt);
-	camera.UpdateView(dt);
+	if(!IsIntugofwar && !caged)
+		camera.UpdateMovement(dt,reversed);
+	camera.UpdateView(dt,reversed);
 	UpdateTrolley(dt);
 	UpdateElevator(dt);
 	UpdateDoor(dt);
 	UpdateSamples();
-	UpdateEasterEgg(dt);
-	checkSupermarketCollision();
-	checkFreezerCollision();
-	checkShelfCollision();
-	checkCashierCollision();
-	checkElevatorCollision();
+	UpdateEasterEggGuy(dt);
+	checkCollision();
 	checkReturnPoint();
-	checkNPCCollision();
+	
 	if(Application::IsKeyPressed('U'))
 		Cashier.translateY += (float) 50 * dt;
 	//Down
@@ -1174,13 +1306,71 @@ void SceneSP::Update(double dt)
 	LogisticinteractionTimer+=dt;
 	interactionTimer+=dt;
 	UpdateAITimer(dt);
-	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU)
+
+	
+	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU || i_menuHandle == WIN_LOSE_MENU)
 	{
 		UpdateMenu();
 	}
-	if(i_menuHandle == GAME_PLAYING)
+	if(i_menuHandle == GAME_PLAYING )
 	{
 		UpdatePlaying(dt);
+	}
+	
+
+}
+
+void SceneSP::UpdateLyingMan(double dt)
+{
+	
+	if(Application::IsKeyPressed('E'))
+	{
+		//x->-30 z->20
+	if ((camera.position.x > -40 && camera.position.x < -20) && (camera.position.z > 10 && camera.position.z < 30))
+		
+		{
+			for(int i = 0; i < myNPCList.size(); ++i)
+			{
+				if(myNPCList[i]->getCharacterJob() == LYINGMAN)
+				{
+					myNPCList[i]->setActive(true);
+					//translation code
+					//rotate X-90
+					myNPCList[i]->setXpos(myNPCList[i]->getXpos()-myNPCList[i]->getmoveSpd() * dt);
+					myNPCList[i]->setXRotation(90);
+				}
+			}
+			
+		}
+	}
+		
+
+
+}
+
+
+void SceneSP::UpdatePeople(double dt)		
+{
+	
+	if(Application::IsKeyPressed('E'))
+	{
+		//x->-30 z->20
+	if ((camera.position.x > -40 && camera.position.x < -20) && (camera.position.z > 10 && camera.position.z < 30))
+		
+		{
+			for(int i = 0; i < myNPCList.size(); ++i)
+			{
+				if(myNPCList[i]->getCharacterJob() == PEOPLE)
+				{
+					myNPCList[i]->setActive(true);
+					//translation code
+					myNPCList[i]->setXpos(myNPCList[i]->getXpos()-myNPCList[i]->getmoveSpd() * dt);
+					if(myNPCList[i]->getXpos()<10)
+						myNPCList[i]->setXpos(30.0f);
+				}
+			}
+			
+		}
 	}
 
 }
@@ -1270,8 +1460,27 @@ void SceneSP::UpdateElevator(double dt)
 		}
 	}
 }
+
+void SceneSP::UpdateATM()
+{
+	//check area//-15 //38
+	if ((camera.position.x > -20 && camera.position.x < 0) && (camera.position.z > 30 && camera.position.z < 40))
+	{
+		//if pressed E
+		if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+		{
+			if(ATMMoney > 0)//deduct money from atm
+			{
+				interactionTimer = 0.0f;
+				ptrplayer->setMoney(ptrplayer->getMoney()+5.0f);
+				ATMMoney -= 5.0f;
+			}
+		}
+	}
+}
 void SceneSP::UpdateDoor(double dt)
 {
+	static bool test = false;
 	//Front door control
 	if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f  && camera.position.x < -10.0f))
 		toggleDoorFront = true;
@@ -1288,10 +1497,27 @@ void SceneSP::UpdateDoor(double dt)
 			moveDoorFront += 10.0f * dt;
 	}
 	//Back door control
-	if((camera.position.z < 0.0f && camera.position.z > -50.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
-		toggleDoorBack = true;
-	else
-		toggleDoorBack = false;
+	for(int i = 0; i < myNPCList.size(); ++i)//check npc pos
+	{
+		if(((myNPCList[i]->getZpos() < -15.0f && myNPCList[i]->getZpos() > -40.0f) && (myNPCList[i]->getXpos() > 10.0f && myNPCList[i]->getXpos() < 35.0f))&&
+			myNPCList[i]->getYpos()<5
+			)
+		{
+			toggleDoorBack = true;
+			test = true;
+			break;
+		}
+		else
+			toggleDoorBack = false;
+	}
+	if(!test)
+	{
+		if((camera.position.z < -15.0f && camera.position.z > -40.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
+			toggleDoorBack = true;
+		else
+			toggleDoorBack = false;
+	}
+	test = false;
 	if(toggleDoorBack)
 	{
 		if(moveDoorBack > -7.0f)
@@ -1380,6 +1606,51 @@ void SceneSP::UpdatePlayerSelection()
 	}
 
 }
+void SceneSP::UpdatePaying()
+{
+	//If player is within paying zone of cashier
+	if((camera.position.x > -29.0f && camera.position.x < -23.0f) && (camera.position.z > -13.f && camera.position.z < -7.0f) && (camera.position.y >3.0f && camera.position.y < 5.0f))
+	{
+		b_isWithinPayingCashier = true;
+		//If player is paying
+		if (Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+		{
+			//If player money is greater than price of item
+			if(ptrplayer->getMoney() >= ptrplayer->getVector()[inventoryPointing]->getPrice())
+			{
+				//Reset the intereaction timer
+				interactionTimer = 0;
+				std::cout << "Item paid: " << ptrplayer->getVector()[inventoryPointing]->getName() << std::endl;
+				//Deduct from player money total price
+				ptrplayer->setMoney(ptrplayer->getMoney() - ptrplayer->getVector()[inventoryPointing]->getPrice());
+				
+				//Check if item paid is == random checklist items
+				for(int i = 0; i<myCheckList.size();++i)
+				{
+
+					if(ptrplayer->getVector()[inventoryPointing]->getName() == myCheckList[i]->getName()
+						&& ptrplayer->getVector()[inventoryPointing]->getPrice() == myCheckList[i]->getPrice()
+						&& ptrplayer->getVector()[inventoryPointing]->getGeoType() == myCheckList[i]->getGeoType())
+					{
+						myCheckList[i]->setName(clearText);
+					}
+				}
+
+				//Set inventory to empty afterwards
+				ptrplayer->setInventory(ptrEmpty,inventoryPointing);
+				ptrInvSelect = ptrplayer->getItem(inventoryPointing);
+			}
+		}
+	}
+	else
+	{
+		b_isWithinPayingCashier = false;
+	}
+
+	
+
+	
+}
 void SceneSP::UpdateSamples()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -1465,12 +1736,9 @@ void SceneSP::UpdateDrunkman(double dt)
 		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
 		{
 			if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
-				/*&&(camera.position.z > 26 && camera.position.z < 28)
-				&&(camera.position.x > -5 && camera.position.x < -2.5)
-				&&(camera.position.y > 16 && camera.position.y < 25))*/
 				&&(camera.position.z > myNPCList[i]->getZpos()-6 && camera.position.z <myNPCList[i]->getZpos()+6)
 				&&(camera.position.x > myNPCList[i]->getXpos()-6 && camera.position.x < myNPCList[i]->getXpos()+6)
-				//&&((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0)))
+				&&(camera.position.y > myNPCList[i]->getYpos())
 				)
 			{
 				i_drunkmanAct = DRUNKCARRY;
@@ -1487,6 +1755,7 @@ void SceneSP::UpdateDrunkman(double dt)
 	}
 }
 
+
 void SceneSP::UpdateDrunkmanguy(double dt)
 {
 	for(int i = 0; i < myNPCList.size(); ++i)
@@ -1496,28 +1765,25 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 			if(i_drunkmanAct == DRUNKIDLE)
 			{
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setLeftLeg(-90);
-				myNPCList[i]->setRightLeg(-90);
-				myNPCList[i]->setLeftArm(20);
-				myNPCList[i]->setRightArm(-20);
+				myNPCList[i]->setXRotation(90);
 			}
 			else if(i_drunkmanAct == DRUNKCARRY)
 			{
 				myNPCList[i]->setXpos(camera.position.x);
-				myNPCList[i]->setYpos(camera.position.y);
-				myNPCList[i]->setZpos(camera.position.z);
+				myNPCList[i]->setYpos(camera.position.y+2);
+				myNPCList[i]->setZpos(camera.position.z+3);
 			}
 			else
 			{
 				myNPCList[i]->setXpos(-25);
-				myNPCList[i]->setYpos(-2);
+				myNPCList[i]->setYpos(0.7);
 				myNPCList[i]->setZpos(60);
 			}
 		}
 	}
 }
 
-	
+
 void SceneSP::UpdateWalkingmanoutside(double dt)
 {
 	for(int i = 0; i < myNPCList.size(); ++i)
@@ -1831,7 +2097,7 @@ void SceneSP::UpdateCustomer(double dt)
 		{
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_ACTIVE)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_ACTIVE)
-				&&(myNPCList[i]->getXpos()==myNPCList[j]->getXpos()))
+				&&((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)))
 			{
 				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
 				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
@@ -1842,10 +2108,10 @@ void SceneSP::UpdateCustomer(double dt)
 					if(CustomerinteractionTimer > 10.0f)
 					{
 						CustomerinteractionTimer = 0;
-						i_CashierAct = LOOKATSCREEN;
+						i_CashierAct = LOOKATITEM;
 					}
 				}
-				if(i_CashierAct==LOOKATSCREEN)
+				if(i_CashierAct==LOOKATITEM)
 				{
 					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
 					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
@@ -1853,10 +2119,10 @@ void SceneSP::UpdateCustomer(double dt)
 					if(CustomerinteractionTimer > 10.0f)
 					{
 						CustomerinteractionTimer = 0;
-						i_CashierAct = LOOKATITEM;
+						i_CashierAct = LOOKATSCREEN;
 					}
 				}
-				if(i_CashierAct==LOOKATITEM)
+				if(i_CashierAct==LOOKATSCREEN)
 				{
 					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
 					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
@@ -1879,11 +2145,11 @@ void SceneSP::UpdateCustomer(double dt)
 		{
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_FORWARD)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
-			{//-10,4,-10
+			{
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(1.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
 				if(myNPCList[i]->getXpos() >= (myNPCList[j]->getXpos()+5) && myNPCList[i]->getXpos() <= (myNPCList[j]->getXpos()+8))
 				{
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
@@ -1891,11 +2157,11 @@ void SceneSP::UpdateCustomer(double dt)
 			}
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_RIGHT)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
-			{ //z=-27 //z=-18
+			{
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(1.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos() - (2*dt));
 				if(myNPCList[i]->getZpos() >= (myNPCList[j]->getZpos()-9) && myNPCList[i]->getZpos() <= (myNPCList[j]->getZpos()-8))
 				{
 					myNPCList[i]->setCharacterState(STATE_LEFT);
@@ -1905,9 +2171,9 @@ void SceneSP::UpdateCustomer(double dt)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
 			{
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(3.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(90);
-				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*dt));
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
 				if(myNPCList[i]->getXpos() >= 23 && myNPCList[i]->getXpos() <= 25)
 				{
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
@@ -1915,15 +2181,27 @@ void SceneSP::UpdateCustomer(double dt)
 			}
 			if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER))
-			{ //z=-27 //z=-18
+			{
 				myNPCList[i]->setAnimationType(WALKING);
-				myNPCList[i]->setmoveSpd(3.0f);
+				myNPCList[i]->setmoveSpd(5.0f);
 				myNPCList[i]->setYRotation(180);
-				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
-				if(myNPCList[i]->getZpos() >= -100 && myNPCList[i]->getZpos() <= -97)
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(2*dt));
+				if(myNPCList[i]->getZpos() >= -131 && myNPCList[i]->getZpos() <= -129)
 				{
-					myNPCList[i]->setCharacterState(STATE_IDLE);
+				   myNPCList[i]->setCharacterState(STATE_INTOBUILDING);
 				}
+			}
+						if((myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_INTOBUILDING)
+				&&(myNPCList[j]->getCharacterJob() == CASHIER))
+			{
+				myNPCList[i]->setAnimationType(WALKING);
+				myNPCList[i]->setmoveSpd(5.0f);
+				myNPCList[i]->setYRotation(90);
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(2*dt));
+				if(myNPCList[i]->getXpos() >= 74 && myNPCList[i]->getXpos() <= 76)
+				{
+					myNPCList[i]->setCharacterState(STATE_REACTIVATE);
+				}//
 			}
 
 			if(myNPCList[i]->getCharacterJob() == CUSTOMER && myNPCList[i]->getCharacterState() == STATE_IDLE)
@@ -1931,7 +2209,7 @@ void SceneSP::UpdateCustomer(double dt)
 				myNPCList[i]->setYRotation(180.0f);
 				if(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_IDLE)
 				{
-					if (((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) <= 7) && ((myNPCList[i]->getXpos()) == (myNPCList[j]->getXpos())))
+					if (((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) <= 7) && ((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)) )
 					{
 						myNPCList[i]->setAnimationType(IDLE);
 				        myNPCList[i]->setLeftLeg(0.0f);
@@ -1939,7 +2217,7 @@ void SceneSP::UpdateCustomer(double dt)
 						myNPCList[j]->setCharacterState(STATE_ACTIVE);
 						myNPCList[i]->setCharacterState(STATE_ACTIVE);
 					}
-					else if(((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) >= 7) && ((myNPCList[i]->getXpos()) == (myNPCList[j]->getXpos())))
+					else if(((myNPCList[i]->getZpos() - myNPCList[j]->getZpos()) >= 7) && ((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)))
 					{
 						myNPCList[i]->setAnimationType(WALKING);
 						myNPCList[i]->setmoveSpd(1.0f);
@@ -1960,6 +2238,8 @@ void SceneSP::UpdateChattingman(double dt)
 	static float Xcon = 0;
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
+		if(myNPCList[i]->getCharacterJob() == IDLE_GUY)
+			myNPCList[i]->setYRotation(180.0f);
 		if(myNPCList[i]->getCharacterJob() == CHATTING_GUY)
 		{
 			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
@@ -1985,7 +2265,7 @@ void SceneSP::UpdateChattingman(double dt)
 				myNPCList[i]->setAnimationType(WALKING);
 			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 			{
-				if(myNPCList[i]->getZpos() < Zcon - 45)
+				if(myNPCList[i]->getZpos() < Zcon - 47)
 				{
 					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()+90);
 					myNPCList[i]->setCharacterState(STATE_RIGHT);
@@ -2013,10 +2293,13 @@ void SceneSP::UpdateChattingman(double dt)
 			}
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
-				if(myNPCList[i]->getZpos() > Zcon+50)
+				if(myNPCList[i]->getZpos() > Zcon+47)
 				{
 					myNPCList[i]->setYRotation(0);
 					myNPCList[i]->setCharacterState(STATE_IDLE);
+					myNPCList[i]->setNPCTimer(0.0f);
+					myNPCList[i]->setXpos(11.0f);
+					myNPCList[i]->setZpos(25.0f);
 					counter = 0;
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * dt));
@@ -2024,15 +2307,115 @@ void SceneSP::UpdateChattingman(double dt)
 		}
 	}
 }
+void SceneSP::UpdateShoppers(double dt)
+{
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == LOOKING_GUY)
+		{
+			for(int j = 0; j < myNPCList.size(); ++j)
+			{
+				if(myNPCList[j]->getCharacterJob() == CUSTOMER && myNPCList[j]->getCharacterState() == STATE_REACTIVATE)
+				{
+					myNPCList[j]->setXpos(-75);
+					myNPCList[j]->setYpos(0);
+					myNPCList[j]->setZpos(195);
+					myNPCList[j]->setAnimationType(IDLE);
+					myNPCList[j]->setmoveSpd(0);
+					myNPCList[j]->setLeftLeg(0);
+					myNPCList[j]->setRightLeg(0);
+					myNPCList[j]->setCharacterJob(SHOPPERS);
+					myNPCList[j]->setCharacterState(STATE_ACTIVE);
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_ACTIVE)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(90);
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5*dt));
+					if(((myNPCList[j]->getXpos()) < -19) && ((myNPCList[j]->getXpos()) > -21))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_FORWARD);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_FORWARD)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(180);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
+					if(((myNPCList[j]->getZpos()) < 24) && ((myNPCList[j]->getZpos()) > 22))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_RIGHT);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_RIGHT)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(90);
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())+(5*dt));
+					if((myNPCList[j]->getXpos() > 30) && (myNPCList[j]->getXpos() < 32))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_BACKWARD);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_BACKWARD)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(180);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
+					if((myNPCList[j]->getZpos() > 10) && (myNPCList[j]->getZpos() < 12))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_LEFT);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_LEFT)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(270);
+					myNPCList[j]->setXpos((myNPCList[j]->getXpos())-(5*dt));
+					if((myNPCList[j]->getXpos() > -16.3) && (myNPCList[j]->getXpos() < -15.7))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setCharacterState(STATE_IDLE);
+					}
+				}
+				if(myNPCList[j]->getCharacterJob() == SHOPPERS && myNPCList[j]->getCharacterState() == STATE_IDLE)
+				{
+					myNPCList[j]->setmoveSpd(5.0f);
+					myNPCList[j]->setAnimationType(WALKING);
+					myNPCList[j]->setYRotation(180);
+					myNPCList[j]->setZpos((myNPCList[j]->getZpos())-(5*dt));
+					if(((myNPCList[j]->getZpos()) < -9) && ((myNPCList[j]->getZpos()) > -10))
+					{
+						myNPCList[j]->setAnimationType(IDLE);
+						myNPCList[j]->setmoveSpd(0.0f);
+						myNPCList[j]->setLeftArm(90.0f);
+						myNPCList[j]->setRightArm(270.0f);
+						myNPCList[j]->setCharacterJob(CUSTOMER);
+						myNPCList[j]->setCharacterState(STATE_IDLE);
+					}
+				}
+			}
+		}
+	}
+}
 void SceneSP::UpdateLegAnimation(double dt)
 {
-	static int multiplier = 1;
 	for(int i = 0; i< myNPCList.size(); ++i)
 	{
-		if(myNPCList[i]->getAnimationType() == RUNNING)
-			multiplier = 2;
-		else
-			multiplier = 1;
 		if(myNPCList[i]->getAnimationType() == WALKING)
 		{
 			if(myNPCList[i]->getLeftLeg()>(maxlegRot))
@@ -2040,27 +2423,253 @@ void SceneSP::UpdateLegAnimation(double dt)
 			if(myNPCList[i]->getLeftLeg()<(-maxlegRot))
 				myNPCList[i]->setlegRotDir(false);
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
 			else
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * dt));
 			else
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * multiplier * dt));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * dt));
 		}
 	}
+}
+void SceneSP::UpdateCage(double dt)
+{
+	if(Application::IsKeyPressed('E') && ((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)))
+	{
+		diffX = camera.position.x-0.0f;
+		diffZ = camera.position.z-(65.0f);
+		diffY = camera.position.y-(-30.0f);
+		camera.position.y = -30.0f;
+		camera.target.y -= diffY;
+		camera.position.x = 0.0f;
+		camera.target.x -= diffX;
+		camera.position.z = 65.0f;
+		camera.target.z -= diffZ;
+		diffX = diffZ = diffY = 0.0f;
+		caged = true;
+		if(easterTimer > easterLimiter)
+		{
+			easterTimer = resetValue;
+			if(!music.openFromFile(soundFXArray[2]))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+		}
+		if(!getCaged)
+		{
+			getCaged = true;
+			getCounter++;
+		}
+	}
+	if(caged)
+	{
+		cagedPos += 15 * dt;
+		if(cagedPos > 60)
+		{
+			caged = false;
+			cagedPos = -75.0f;
+			diffX = camera.position.x-(0.0f);
+			diffZ = camera.position.z-(100.0f);
+			diffY = camera.position.y-(4.5f);
+			camera.position.y = 4.5f;
+			camera.target.y -= diffY;
+			camera.position.x = 0.0f;
+			camera.target.x -= diffX;
+			camera.position.z = 100.0f;
+			camera.target.z -= diffZ;
+			diffX = diffZ = diffY = 0.0f;
+		}
+	}
+}
+void SceneSP::UpdateGaben(double dt)
+{
+	if(Application::IsKeyPressed('G')&&summonG == 0)
+		summonG++;
+	if(Application::IsKeyPressed('A')&&summonG == 1)
+		summonG++;
+	if(Application::IsKeyPressed('B')&&summonG == 2)
+		summonG++;
+	if(Application::IsKeyPressed('E')&&summonG == 3)
+		summonG++;
+	if(Application::IsKeyPressed('N')&&summonG == 4)
+	{
+		gabed = true;
+		if(!music.openFromFile(soundFXArray[0]))
+		{
+			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+		}
+		music.setLoop(false);
+		music.setVolume(50.0f);
+		music.play();
+		if(!getGabed)
+		{
+			getGabed = true;
+			getCounter++;
+		}
+	}
+	if(gabed)
+		moveG += 20 * dt;
+	if(moveG > 95)
+	{
+		summonG = 0;
+		moveG = 0.0f;
+		gabed = false;
+	}
+}
+void SceneSP::UpdateTroll(double dt)
+{
+	if((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24))
+	{
+		if((camera.position.y > 10 && reversed == false) && Application::IsKeyPressed('E'))
+		{
+			if(easterTimer > easterLimiter)
+			{
+				easterTimer = resetValue;
+				if(!music.openFromFile(soundFXArray[3]))
+				{
+					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+				}
+				music.setLoop(false);
+				music.setVolume(50.0f);
+				music.play();
+			}
+			easterTimer = 0.0f;
+			reversed = true;
+			reverseTimer = 0.0f;
+			if(!getTrolled)
+			{
+				getTrolled = true;
+				getCounter++;
+			}
+		}
+	}
+	if(reverseTimer > reverseLimiter)
+		reversed = false;
+}
+void SceneSP::UpdateMiscEasteregg(double dt)
+{
+	if(((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24)) ||
+		((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)) ||
+		((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f)) ||
+		((camera.position.x > -29.5f && camera.position.x < -28.0f) && (camera.position.z < -20.0f && camera.position.z > -22.5f))//rroll
+		)
+	{
+		inRange = true;//display interaction text
+	}
+	else
+		inRange = false;
+	if((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f) && Application::IsKeyPressed('E'))
+	{//no time easter egg
+		if(easterTimer > easterLimiter)
+		{
+			easterTimer = 0.0f;
+			if(!music.openFromFile(soundFXArray[1]))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+			if(!getTimed)
+			{
+				getTimed = true;
+				getCounter++;
+			}
+		}
+	}
+	if((camera.position.x > -29.5f && camera.position.x < -28.0f) && (camera.position.z < -20.0f && camera.position.z > -22.5f) && Application::IsKeyPressed('E'))
+	{
+		if(easterTimer > easterLimiter)
+		{
+			easterTimer = 0.0f;
+			if(!music.openFromFile(soundFXArray[4]))
+			{
+				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+			}
+			music.setLoop(false);
+			music.setVolume(50.0f);
+			music.play();
+			if(!getRicked)
+			{
+				getRicked = true;
+				getCounter++;
+			}
+		}
+	}
+}
+void SceneSP::RenderEasteregg()
+{
+	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
+	{
+		RenderCage();
+		RenderTroll();
+		RenderMiscEastereggs();
+		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter, Color(1, 0, 0), 2.5,0, 20);
+		if(inRange)
+			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,16);
+		if(winEaster)
+		{
+			for(int i = 0;i<10;i++)
+			{
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray[i],Color(0+0.1*i,0,1-0.1*i),3,2+0.8*i,9.7);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray1[i],Color(0,1-0.1*i,0+0.1*i),3,10+0.8*i,9.7);
+				RenderTextOnScreen(meshList[GEO_TEXT],winEasterArray2[i],Color(1-0.1*i,0+0.1*i,0),3,18+0.8*i,9.7);
+			}
+			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'enter' to continue",Color(1,1,0),2,8,13);
+		}
+	}
+}
+void SceneSP::RenderMiscEastereggs()
+{
+	if(gabed)
+		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
+	modelStack.PushMatrix();
+	modelStack.Translate(38.7f, 0.0f, -5.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_4], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-29.5f, 17.0f, -26.0f);
+	RenderMesh(meshList[GEO_EASTEREGG_5], toggleLight);
+	modelStack.PopMatrix();
 }
 void SceneSP::RenderUI()
 {
 	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
 	RenderTGAUI(meshList[GEO_UI_SCREEN],1,40,20);
-	if(isWithinInteractionItem) //If player is able to pick up
+	if(b_isWithinInteractionItem) //If player is able to pick up
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pick up " +s_item_name,Color(0,1,0),2,1,16);
 	}
+	//If player is inspecting the item
+	if(b_inspection)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,7);
+	}
+	//If player is within return point zone and holding an item
+	if(checkReturnPoint() && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,6);
+	}
+	//If player is within Cashier zone and holding an item
+	if(b_isWithinPayingCashier && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pay for " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,6);
+	}
+	//If treasure hunting mode chosen
+	if(ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
+	{
+		for(int i = 0; i<i_total_items_to_find;++i)
+		{
+			RenderTextOnScreen(meshList[GEO_TEXT], myCheckList[i]->getName(), Color(0, 1, 0), 2,0, 3+i);
+		}
+	}
 	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5,22.5+(inventoryPointing*5.0),2.5f);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Target: "+ s_camera_target, Color(0, 1, 0), 2,0, 3);
+	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2,0,27);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3,0, 1);
 	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
 	RenderTugofwarUI();
@@ -2140,11 +2749,13 @@ void SceneSP::Render()
 	case MAIN_MENU:
 		//do menu here
 		RenderMainMenu();
-
 		break;
 		//Do sub menu here
 	case SUB_MENU:
 		RenderSubMenu();
+		break;
+	case WIN_LOSE_MENU:
+		RenderWinLoseMenu();
 		break;
 	case GAME_PLAYING:
 		RenderHand();
@@ -2152,13 +2763,16 @@ void SceneSP::Render()
 		RenderCharacters();//Render out characters
 		RenderItem();		//Renders out items
 		RenderTug();
+		RenderBeerstand();
 		RenderBuilding();
 		RenderSupermarket();//Renders out Supermarket
+		RenderEasteregg();
 		RenderUI();			//Renders out UI
 		RenderInventory();	//Render inventory after UI to place above
 		break;
 	}
 }
+
 void SceneSP::RenderSkyBox()
 {
 	modelStack.PushMatrix();
@@ -2351,7 +2965,6 @@ void SceneSP::RenderHand()
 	{
 		modelStack.PushMatrix();
 		modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);
-		///modelStack.Translate(0.5,0,0.5);
 		modelStack.Rotate(handrotationleftandright+itemYrotation,0,1,0);
 		modelStack.Rotate(itemXrotation,1,0,0);
 		modelStack.Scale(0.5f,0.5f,0.5f);
@@ -2361,23 +2974,6 @@ void SceneSP::RenderHand()
 		}
 		modelStack.PopMatrix();
 	}
-	//Hands on trolley
-	modelStack.PushMatrix();
-	modelStack.Translate(camera.position.x,0,camera.position.z);
-	{
-	modelStack.PushMatrix();
-	modelStack.Rotate((180+trolleyrotation),0,1,0);
-	modelStack.Translate(-0.25,0,-0.7);
-	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Rotate((180+trolleyrotation),0,1,0);
-	modelStack.Translate(0.6,0,-0.7);
-	RenderMesh(meshList[GEO_HANDS], toggleLight);
-	modelStack.PopMatrix();
-	}
-	modelStack.PopMatrix();
 }
 void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 {
@@ -2479,6 +3075,7 @@ void SceneSP::RenderCharacter(CNpc* npc)
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+
 void SceneSP::RenderMainMenu()
 {
 	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
@@ -2516,6 +3113,19 @@ void SceneSP::RenderSubMenu()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0), 2, 17, 13);
 	}
+}
+void SceneSP::RenderWinLoseMenu()
+{
+	RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+	if(b_is_Stealing)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"You stole items from the store!", Color(1, 0, 0), 2, 5, 13);
+	}
+	else
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT],"You found all items from the store!", Color(0, 1, 0), 2, 3, 13);
+	}
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 5);
 }
 void SceneSP::RenderCharacters()
 {
@@ -2652,6 +3262,7 @@ void SceneSP::RenderSupermarket()
 	RenderReturnPoint();	//Render Return Point in Supermarket
 
 
+
 	RenderDoors();			//Render Alpha Doors AFTER EVERYTHING in Supermarket
 
 	modelStack.PopMatrix();
@@ -2714,7 +3325,7 @@ void SceneSP::RenderSamples()
 	for(int x = 0; x< i_sampleItems;x++)
 	{
 		modelStack.PushMatrix();
-		modelStack.Translate(1.5f - (x * 1), 3.6f, 25.0f);
+		modelStack.Translate(1.5f - (x * 1), 3.6f, 0.0f);
 		RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
 		modelStack.PopMatrix();
 	}
@@ -2730,12 +3341,9 @@ void SceneSP::RenderReturnPoint()
 void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
-	modelStack.Translate(10.0f,0.0f,-5.0f);
+	modelStack.Translate(35.0f,0.0f,-5.0f);
 	modelStack.Rotate(90.0f,0,1,0);	
-	modelStack.PushMatrix();
-	modelStack.Translate(0.0f, 0.0f, 25.0f);
 	RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
-	modelStack.PopMatrix();
 	RenderSamples();
 	modelStack.PopMatrix();
 }
@@ -2784,41 +3392,191 @@ void SceneSP::RenderMeatShelf()
 	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
 	modelStack.PopMatrix();
 }
-
-void SceneSP::RenderFoodShelf()
+void SceneSP::RenderBeerstand()
 {
-	modelStack.PushMatrix();
+	modelStack.PushMatrix();//1st floor
 	modelStack.Translate(-21.0f,0.0f,11.0f);
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,3.6f,11.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,1.6f,13.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(-21.0f,1.6f,8.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.5f,1.6f,11.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.5f,1.6f,8.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-23.5f,1.6f,13.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-18.5f,1.6f,11.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-18.5f,1.6f,8.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-18.5f,1.6f,13.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-19.0f,17.0f,0.0f);
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
 	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,20.6f,0.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,18.6f,2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+		modelStack.PushMatrix();
+	modelStack.Translate(-19.0f,18.6f,-2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.5f,18.6f,0.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.5f,18.6f,2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-21.5f,18.6f,-2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.5f,18.6f,0.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.5f,18.6f,2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+	modelStack.PushMatrix();
+	modelStack.Translate(-16.5f,18.6f,-2.5f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-8.0f,17.0f,27.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-8.0f,17.0f,25.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-8.0f,17.0f,29.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-4.0f,17.0f,29.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+	modelStack.PopMatrix();
+
+		modelStack.PushMatrix();
+	modelStack.Translate(-4.0f,17.0f,25.0f);
+	RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+	modelStack.PopMatrix();
 }
 
 void SceneSP::RenderBuilding()
 {
+	modelStack.PushMatrix();
+	modelStack.Translate(75.0f,0.0f,65.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(75.0f,0.0f,130.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
-	modelStack.Translate(150.0f,0.0f,75.0f);
+	modelStack.Translate(75.0f,0.0f,195.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(-75.0f,0.0f,65.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
+	
 	modelStack.PushMatrix();
-	modelStack.Translate(150.0f,0.0f,225.0f);
+	modelStack.Translate(-75.0f,0.0f,130.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
+
 	modelStack.PushMatrix();
-	modelStack.Translate(-150.0f,0.0f,75.0f);
-	modelStack.Rotate(270,0,1,0);
+	modelStack.Translate(-75.0f,0.0f,195.0f);
+	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
+
+
 	modelStack.PushMatrix();
-	modelStack.Translate(-150.0f,0.0f,225.0f);
-	modelStack.Rotate(270,0,1,0);
+	modelStack.Translate(75.0f,0.0f,-65.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(75.0f,0.0f,-130.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(75.0f,0.0f,-195.0f);
+	modelStack.Rotate(-90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(-75.0f,0.0f,-65.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+	
+	modelStack.PushMatrix();
+	modelStack.Translate(-75.0f,0.0f,-130.0f);
+	modelStack.Rotate(90,0,1,0);
+	RenderMesh(meshList[GEO_BUILDING], toggleLight);
+	modelStack.PopMatrix();
+
+	modelStack.PushMatrix();
+	modelStack.Translate(-75.0f,0.0f,-195.0f);
+	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
 }
@@ -2907,58 +3665,89 @@ void SceneSP::RenderOffice()
 }
 void SceneSP::RenderStorage()
 {
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -14.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -18.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -22.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(36.0f, 17.0f, -26.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -14.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -18.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -22.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
-	modelStack.PushMatrix();
-	modelStack.Translate(24.0f, 17.0f, -26.0f);
-	modelStack.Rotate(270,0,1,0);
-	RenderMesh(meshList[GEO_BOX], toggleLight);
-	modelStack.PopMatrix();
-
+	for(int i=0;i<4;i++)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(36.0f, 17.0f, -14.0f-(i*4));
+		modelStack.Rotate(270,0,1,0);
+		RenderMesh(meshList[GEO_BOX], toggleLight);
+		modelStack.PopMatrix();
+	}
+	for(int i=0;i<4;i++)
+	{
+		modelStack.PushMatrix();
+		modelStack.Translate(24.0f, 17.0f, -14.0f-(i*4));
+		modelStack.Rotate(270,0,1,0);
+		RenderMesh(meshList[GEO_BOX], toggleLight);
+		modelStack.PopMatrix();
+	}
 	modelStack.PushMatrix();
 	modelStack.Translate(30.0f, 17.0f, -26.0f);
 	modelStack.Rotate(90,0,1,0);
 	RenderMesh(meshList[GEO_BOX], toggleLight);
+	modelStack.PopMatrix();
+}
+void SceneSP::RenderCage()
+{
+	modelStack.PushMatrix();
+		modelStack.Translate(42.7f, 0.0f, -27.0f);
+		RenderMesh(meshList[GEO_EASTEREGG_6], toggleLight);
+	modelStack.PopMatrix();
+	if(caged)
+	{
+		modelStack.PushMatrix();
+
+			modelStack.PushMatrix();
+				modelStack.Translate(0.0f, -30.0f, cagedPos);
+				modelStack.Scale(50.0f,50.0f,50.0f);
+				RenderMesh(meshList[GEO_CAGE], true);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();//bot
+				modelStack.Translate(0.0f, -30.0f, 70.0f);
+				modelStack.Scale(50.0f,50.0f,50.0f);
+				modelStack.Rotate(180.0f,1,0,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();//bot
+				modelStack.Translate(0.0f, -54.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(-90.0f,1,0,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();//top
+				modelStack.Translate(0.0f, -6.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(90.0f,1,0,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();
+				modelStack.Translate(-24.0f, -29.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(90.0f,0,1,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
+
+			modelStack.PushMatrix();
+				modelStack.Translate(24.0f, -29.0f, 0.0f);
+				modelStack.Scale(50.0f,50.0f,150.0f);
+				modelStack.Rotate(-90.0f,0,1,0);
+				RenderMesh(meshList[GEO_CAGEWALL], true);
+			modelStack.PopMatrix();
+
+		modelStack.PopMatrix();
+	}
+}
+void SceneSP::RenderTroll()
+{
+	if(reversed)	//RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Reversed!", Color(1, 1, 0), 3, 18, 19);
+	modelStack.PushMatrix();
+		modelStack.Translate(33.0f, 17.0f, -27.0f);
+		RenderMesh(meshList[GEO_EASTEREGG_3], toggleLight);
 	modelStack.PopMatrix();
 }
 void SceneSP::checkPickUpItem()
@@ -2990,12 +3779,13 @@ void SceneSP::checkPickUpItem()
 				if(magnitudeFromPosition <= interactionDistance)
 				{
 					chosen = i;
-					isWithinInteractionItem = true;
+					b_isWithinInteractionItem = true;
 					s_item_name = myStockList[chosen]->getName();
 				}
 				else
 				{
-					isWithinInteractionItem = false;
+					
+					b_isWithinInteractionItem = false;
 				}
 
 
@@ -3005,13 +3795,82 @@ void SceneSP::checkPickUpItem()
 		}
 
 	}
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter && myStockList[chosen]->getActiveState() && (magnitudeFromPosition <= interactionDistance))
+	if(Application::IsKeyPressed('E') && (interactionTimer > interactionTimerLimiter) && myStockList[chosen]->getActiveState() && b_isWithinInteractionItem)
 	{
 		if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
 		{
 			addToInventory(myStockList[chosen]);
 			myStockList[chosen]->setActiveState(false);
 			std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
+			ptrInvSelect = ptrplayer->getItem(inventoryPointing);
+		}
+	}
+}
+void SceneSP::checkCollision()
+{
+	checkSupermarketCollision();
+	checkCashierCollision();
+	checkElevatorCollision();
+	checkObjectCollision(13.0f, 17.0f, -26.0f, 8.0f, 4.0f);//meat shelves
+	checkObjectCollision(1.0f, 17.0f, -26.0f, 8.0f, 4.0f);
+	checkObjectCollision(-11.0f, 17.0f, -26.0f, 8.0f, 4.0f);
+	checkObjectCollision(-23.0f, 17.0f, -26.0f, 8.0f, 4.0f);
+	checkObjectCollision(-21.0f, 0.0f, 11.0f, 5.0f, 5.0f);//food stand
+	checkObjectCollision(-19.0f, 17.0f, 0.0f, 5.0f, 5.0f);
+	checkObjectCollision(-37.0f, 0.0f, 0.0f, 4.0f, 6.0f);
+	checkObjectCollision(37.0f, 0.0f, 25.0f, 4.0f, 5.5f);//freezer
+	checkObjectCollision(37.0f, 0.0f, 16.0f, 4.0f, 5.5f);
+	checkObjectCollision(37.0f, 0.0f, 7.0f, 4.0f, 5.5f);
+	checkObjectCollision(30.0f, 17.0f, -26.0f, 3.0f, 3.0f);//boxes
+	for(int i = 0; i<4;i++)
+	{
+		checkObjectCollision(36.0f, 17.0f, -14.0f-(4*i), 3.0f, 3.0f);//boxes
+		checkObjectCollision(24.0f, 17.0f, -14.0f-(4*i), 3.0f, 3.0f);
+		checkObjectCollision(37.0f, 17.0f, 14.0f+(4*i), 3.0f, 3.0f);//computers
+		checkObjectCollision(24.0f, 17.0f, 14.0f+(4*i), 3.0f, 3.0f);
+	}
+	for(unsigned int i = 0; i< myNPCList.size(); ++i)//NPC collision
+		checkObjectCollision(myNPCList[i]->getXpos(),myNPCList[i]->getYpos(), myNPCList[i]->getZpos(), 2.0f, 2.0f);
+	for(unsigned int i = 0; i< myContainerList.size(); ++i)//Shelf collision
+		checkObjectCollision(myContainerList[i]->getXpos(), myContainerList[i]->getYpos(), myContainerList[i]->getZpos(), ShelfWidthX, ShelfWidthZ);
+	checkObjectCollision(35.0f, 0.0f, -5.0f, 2.0f, 4.0f);//sample stand
+	checkObjectCollision(150.0f, 0.0f, 75.0f, 32.0f, 32.0f);//outside buildings
+}
+void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ)
+{
+	if((camera.position.y - posY < 10) && (camera.position.y - posY > 0))
+	{
+		if((camera.position.x > (posX + widthX - (Coffset)) && camera.position.x < (posX + widthX)) && 
+			(camera.position.z > (posZ - widthZ + (Coffset/2)) && camera.position.z < (posZ + widthZ - (Coffset/2))))
+		{
+			diffX = camera.position.x - (posX + widthX);
+			camera.position.x = posX + widthX;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > (posX - widthX) && camera.position.x < (posX - widthX + (Coffset/2))) && 
+			(camera.position.z > (posZ - widthZ + (Coffset / 2)) && camera.position.z < (posZ + widthZ - (Coffset / 2))))
+		{
+			diffX = camera.position.x - (posX - widthX);
+			camera.position.x = posX- widthX;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > (posX - widthX+ (Coffset / 2)) && camera.position.x < (posX + widthX)- (Coffset / 2)) && 
+			(camera.position.z > (posZ - widthZ) && camera.position.z < (posZ - widthZ + Coffset)))
+		{
+			diffZ = camera.position.z - (posZ - widthZ);
+			camera.position.z = posZ - widthZ;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > (posX - widthX+ (Coffset / 2)) && camera.position.x < (posX + widthX)- (Coffset / 2)) && 
+			(camera.position.z > (posZ + widthZ - Coffset) && camera.position.z < (posZ + widthZ)))
+		{
+			diffZ = camera.position.z - (posZ + widthZ);
+			camera.position.z = posZ + widthZ;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
 		}
 	}
 }
@@ -3131,65 +3990,41 @@ void SceneSP::checkSupermarketCollision()
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
-	}
-}
-void SceneSP::checkShelfCollision()
-{
-	for(unsigned int i = 0; i< myContainerList.size(); ++i)
-	{
-		if((camera.position.y - myContainerList[i]->getYpos() < 10) && (camera.position.y - myContainerList[i]->getYpos() > 0))
-		{
-			//std::cout<<myContainerList[i]->getXpos()<<std::endl;
-			if((camera.position.x > (myContainerList[i]->getXpos()+(ShelfWidthX-2)) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
-				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ+1) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ-1)))
-			{
-				diffX = camera.position.x - (myContainerList[i]->getXpos()+ShelfWidthX);
-				camera.position.x = myContainerList[i]->getXpos()+ShelfWidthX;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()-(ShelfWidthX-2))) && 
-				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ+1) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ-1)))
-			{
-				diffX = camera.position.x - (myContainerList[i]->getXpos()-ShelfWidthX);
-				camera.position.x = myContainerList[i]->getXpos()-ShelfWidthX;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
-				(camera.position.z > (myContainerList[i]->getZpos()-ShelfWidthZ) && camera.position.z < (myContainerList[i]->getZpos()-(ShelfWidthZ-2))))
-			{
-				diffZ = camera.position.z - (myContainerList[i]->getZpos()-ShelfWidthZ);
-				camera.position.z = myContainerList[i]->getZpos()-ShelfWidthZ;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-			if((camera.position.x > (myContainerList[i]->getXpos()-ShelfWidthX) && camera.position.x < (myContainerList[i]->getXpos()+ShelfWidthX)) && 
-				(camera.position.z > (myContainerList[i]->getZpos()+(ShelfWidthZ-2)) && camera.position.z < (myContainerList[i]->getZpos()+ShelfWidthZ)))
-			{
-				diffZ = camera.position.z - (myContainerList[i]->getZpos()+ShelfWidthZ);
-				camera.position.z = myContainerList[i]->getZpos()+ShelfWidthZ;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-		}
-	}
-}
-void SceneSP::checkFreezerCollision()
-{
-	if(camera.position.y < 10)
-	{
-		if((camera.position.x > FboundX1 && camera.position.x < FboundX3) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ2))
-		{
-			diffX = camera.position.x - (FboundX1);
-			camera.position.x = FboundX1;
+		if((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > -23 && camera.position.z < -8))
+		{//logistic staff room
+			diffX = camera.position.x - (18);
+			camera.position.x = 18;
 			camera.target.x -= diffX;
 			diffX = 0.0f;
 		}
-		if((camera.position.x > FboundX3 && camera.position.x < FboundX2) && (camera.position.z > FboundZ1 && camera.position.z < FboundZ3))
+		if((camera.position.x > 18 && camera.position.x < 26) && (camera.position.z > -8-2 && camera.position.z < -8))
 		{
-			diffZ = camera.position.z - (FboundZ1);
-			camera.position.z = FboundZ1;
+			diffZ = camera.position.z - (-8);
+			camera.position.z = -8;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+		if((camera.position.x > 31 && camera.position.x < 39) && (camera.position.z > -8-2 && camera.position.z < -8))
+		{
+			diffZ = camera.position.z - (-8);
+			camera.position.z = -8;
+			camera.target.z -= diffZ;
+			diffZ = 0.0f;
+		}
+	}
+	if(camera.position.y < 10)
+	{
+		if((camera.position.x > -36 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 39))
+		{
+			diffX = camera.position.x - (-34);
+			camera.position.x = -34;
+			camera.target.x -= diffX;
+			diffX = 0.0f;
+		}
+		if((camera.position.x > -38 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 12))
+		{
+			diffZ = camera.position.z - (10);
+			camera.position.z = 10;
 			camera.target.z -= diffZ;
 			diffZ = 0.0f;
 		}
@@ -3328,17 +4163,18 @@ void SceneSP::checkElevatorCollision()
 		}
 	}
 }
-void SceneSP::checkReturnPoint()
+bool SceneSP::checkReturnPoint()
 {
-	//If triggering interaction
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+	
+	//If within RETURN POINT boundary
+	if((camera.position.x > returnPointBoxPosX-returnPointBoxWidthOffset)&& camera.position.x < (returnPointBoxPosX+returnPointBoxInteractionWidth+returnPointBoxWidthOffset))
 	{
-		//If within RETURN POINT boundary
-		if((camera.position.x > returnPointBoxPosX-returnPointBoxWidthOffset)&& camera.position.x < (returnPointBoxPosX+returnPointBoxInteractionWidth+returnPointBoxWidthOffset))
+		if(camera.position.z > (returnPointBoxPosZ - returnPointBoxInteractionLength) && camera.position.z < (returnPointBoxPosZ + returnPointBoxInteractionLength))
 		{
-			if(camera.position.z > (returnPointBoxPosZ - returnPointBoxInteractionLength) && camera.position.z < (returnPointBoxPosZ + returnPointBoxInteractionLength))
+			if(camera.position.y > returnPointBoxPosY && camera.position.y < (returnPointBoxPosY + returnPointBoxInteractionHeight))
 			{
-				if(camera.position.y > returnPointBoxPosY && camera.position.y < (returnPointBoxPosY + returnPointBoxInteractionHeight))
+				//If triggering interaction
+				if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
 				{
 					//Is within boundary
 					interactionTimer = 0;
@@ -3347,51 +4183,72 @@ void SceneSP::checkReturnPoint()
 					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
 
 				}
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+	}
+	else
+	{
+		return false;
+	}
+}
+void SceneSP::checkWinLose()
+{
+	//If player is exiting by Exit Gate and in Treasure hunter mode
+	if((camera.position.x >12 && camera.position.x < 33) && camera.position.z <-31 &&  ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
+	{
+		//Init pass check to 0
+		int checklistPass = 0;
+		for(int i = 0; i< myCheckList.size();++i)
+		{
+			//Check number of items cleared
+			if(myCheckList[i]->getName() == clearText)
+			{
+				++checklistPass;
+			}
+		}
+		
+
+		//Check if Total clear is equal to checklist size
+		if(checklistPass == myCheckList.size())
+		{
+			i_menuHandle = WIN_LOSE_MENU;
+		}
+	}
+	if((((camera.position.x >12 && camera.position.x < 33) && camera.position.z <-31)||((camera.position.x >-29 && camera.position.x < -10)&& camera.position.z >30)) 
+		&&  ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
+	{
+		//Search through player's inventory
+		for(int i = 0; i< ptrplayer->getVector().size(); ++i)
+		{
+			//If player has existing item when walking out, player is stealing
+			if(ptrplayer->getVector()[i]->getName() != ptrEmpty->getName())
+			{
+				b_is_Stealing = true;
+				i_menuHandle = WIN_LOSE_MENU;
 			}
 		}
 	}
-}
-void SceneSP::checkNPCCollision()
-{
-	for(unsigned int i = 0; i< myNPCList.size(); ++i)
+
+
+	if(closeEaster)
 	{
-		if((camera.position.y - myNPCList[i]->getYpos() < 10) && (camera.position.y - myNPCList[i]->getYpos() > 0))
-		{
-			//check z
-			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()+2) && 
-				(camera.position.z > myNPCList[i]->getZpos()+1 && camera.position.z < myNPCList[i]->getZpos()+2))
-			{
-				diffZ = camera.position.z - (myNPCList[i]->getZpos()+2);
-				camera.position.z = myNPCList[i]->getZpos()+2;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()+2) && 
-				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()-1))
-			{
-				diffZ = camera.position.z - (myNPCList[i]->getZpos()-2);
-				camera.position.z = myNPCList[i]->getZpos()-2;
-				camera.target.z -= diffZ;
-				diffZ = 0.0f;
-			}
-			//check x
-			if((camera.position.x > myNPCList[i]->getXpos()+1 && camera.position.x < myNPCList[i]->getXpos()+2) && 
-				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()+2))
-			{
-				diffX = camera.position.x - (myNPCList[i]->getXpos()+2);
-				camera.position.x = myNPCList[i]->getXpos()+2;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-			if((camera.position.x > myNPCList[i]->getXpos()-2 && camera.position.x < myNPCList[i]->getXpos()-1) && 
-				(camera.position.z > myNPCList[i]->getZpos()-2 && camera.position.z < myNPCList[i]->getZpos()+2))
-			{
-				diffX = camera.position.x - (myNPCList[i]->getXpos()-2);
-				camera.position.x = myNPCList[i]->getXpos()-2;
-				camera.target.x -= diffX;
-				diffX = 0.0f;
-			}
-		}
+		getCaged = false;
+		getGabed = false;
+		getTrolled = false;
+		getTimed = false;
+		getCounter = 0;
+		winEaster = false;
+		closeEaster = false;
+		i_menuHandle = WIN_LOSE_MENU;
 	}
 }
 void SceneSP::Exit()
@@ -3403,6 +4260,11 @@ void SceneSP::Exit()
 			delete meshList[i];
 	}
 	delete ptrplayer;
+	delete ptrClass;
+	delete ptrContainer;
+	delete ptrItem;
+	delete ptrNPC;
+	music.stop();
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
