@@ -182,7 +182,7 @@ private:
 	bool showTuginstruction;
 	bool b_crouching;
 	bool b_inspection;
-	
+	int i_total_items_to_find;
 	int i_sampleItems;
 	int i_menuHandle;
 	int i_drunkmanAct;

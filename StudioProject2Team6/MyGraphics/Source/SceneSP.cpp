@@ -40,6 +40,7 @@ void SceneSP::Init()
 	/*=============================================
 	Init variables here
 	=============================================*/
+	i_total_items_to_find = 0;
 	i_menuHandle = MAIN_MENU;
 	i_drunkmanAct = DRUNKIDLE;
 	i_CashierAct = LOOKATCUSTOMER;
@@ -845,7 +846,7 @@ void SceneSP::UpdateUI(double dt)
 	ss_camera << camera.target.x << "," << camera.target.y << "," << camera.target.z;
 	s_camera_target = ss_camera.str();
 
-	ss_fps << 1/dt;
+	ss_fps << int(1/dt);
 	s_fps = ss_fps.str();
 
 	ss_position << camera.position.x << "," << camera.position.y << "," << camera.position.z;
@@ -1093,6 +1094,7 @@ void SceneSP::UpdateStartMenu()
 					//DO TREASURE HUNT HERE
 					unsigned int random =0;
 					std::srand((unsigned int)time(0)); //Seed the random number generator
+					i_total_items_to_find = rand()%3+3;
 					for(int i = 0; i< i_total_items_to_find; ++i)
 					{
 						random =  rand()%myTreasureList.size();
@@ -2744,7 +2746,7 @@ void SceneSP::RenderEasteregg()
 		RenderCage();
 		RenderTroll();
 		RenderMiscEastereggs();
-		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter+"/"+s_easter_count, Color(1, 0, 0), 2.5,0, 20);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter+"/"+s_easter_count, Color(1, 0, 0), 2.5,0, 31);
 		if(inRange)
 			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,16);
 		if(winEaster)
@@ -2778,53 +2780,53 @@ void SceneSP::RenderUI()
 	RenderTGAUI(meshList[GEO_UI_SCREEN],1,40,20);
 	if(b_isWithinInteractionItem) //If player is able to pick up
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pick up " +s_item_name,Color(0,1,0),2,1,16);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pick up " +s_item_name,Color(1.0f,1.0f,0.5f),2,20,20);
 	}
 	//If player is inspecting the item
 	if(b_inspection)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,7);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,19);
 	}
 	//If player is within return point zone and holding an item
 	if(checkReturnPoint() && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,6);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(1.0f,1.0f,0.5f),2,20,20);
 	}
 	//If player is within Cashier zone and holding an item
 	if(b_isWithinPayingCashier && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pay for " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,1,6);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pay for " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,20,20);
 	}
 	//If treasure hunting mode chosen
 	if(ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
 	{
 		for(int i = 0; i<i_total_items_to_find;++i)
 		{
-			RenderTextOnScreen(meshList[GEO_TEXT], myCheckList[i]->getName(), Color(0, 1, 0), 2.f,0.f, 3.f+i);
+			RenderTextOnScreen(meshList[GEO_TEXT], myCheckList[i]->getName(), Color(1.0f,1.0f,0.5f), 2.f,0.f, 7.f+i);
 		}
+		RenderTextOnScreen(meshList[GEO_TEXT], "Checklist:", Color(1.0f,0.f,0.f), 3.f,0.f, 4.f+i_total_items_to_find);
 	}
 	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5.f,22.5f+(inventoryPointing*5.0f),2.5f);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3.f,0.f, 19.f);
-	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2.f,0.f,27.f);
-	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(0, 1, 0), 3.f,0.f, 1.f);
-	RenderTextOnScreen(meshList[GEO_TEXT], "(X,Y,Z): "+ s_position, Color(0, 1, 0), 2, 0, 0);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3.f,0.f, 28.f);
+	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2.f,0.f,41.f);
+	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(1, 0, 0), 3.f,45.f, 28.f);
 	RenderTugofwarUI();
 	RenderDrunkmanUI();
 }
 void SceneSP::RenderTugofwarUI()
 {
 	if(win)
-		RenderTextOnScreen(meshList[GEO_TEXT], "YOU WIN!!!!", Color(0, 1, 0), 4, 5, 5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "YOU WIN!!!!", Color(0, 1, 1), 4, 15, 5);
 	if(lose)
-		RenderTextOnScreen(meshList[GEO_TEXT], "YOU LOSE!!!!", Color(0, 1, 0), 4, 5, 5);
+		RenderTextOnScreen(meshList[GEO_TEXT], "YOU LOSE!!!!", Color(0, 1, 1), 4, 15, 5);
 	if(showTuginstruction)
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'space' to tug!", Color(0, 1, 0), 3, 3, 9);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'space' to tug!", Color(0, 1, 1), 3, 15, 9);
 	if((((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)) &&
 		IsIntugofwar == false) && camera.position.y <10
 		)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
-		RenderTextOnScreen(meshList[GEO_TEXT], "partake in a Tug-of-war!", Color(0, 1, 0), 3, 1, 9);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 1), 3, 15, 10);
+		RenderTextOnScreen(meshList[GEO_TEXT], "partake in a Tug-of-war!", Color(0, 1, 1), 3, 10, 9);
 	}
 }
 void SceneSP::RenderDrunkmanUI()
@@ -3230,39 +3232,39 @@ void SceneSP::RenderCharacter(CNpc* npc)
 void SceneSP::RenderMainMenu()
 {
 	
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(0, 1, 0), 2, 17, 15);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(0, 1, 0), 2, 17, 14);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(0, 1, 0), 2, 17, 13);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(0, 1, 0), 3, 23, 16);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(0, 1, 0), 3, 20, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(0, 1, 0), 3, 23, 14);
 	if(selectionPointing == MENU_START)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(1, 1, 0), 2, 17, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(1, 1, 0), 3, 23, 16);
 	}
 	if(selectionPointing == MENU_INSTRUCTIONS)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(1, 1, 0), 2, 17, 14);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(1, 1, 0), 3, 20, 15);
 	}
 	if(selectionPointing == MENU_EXIT)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(1, 1, 0), 2, 17, 13);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(1, 1, 0),  3, 23, 14);
 	}
 }
 void SceneSP::RenderSubMenu()
 {
 	
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(0, 1, 0), 2, 17, 15);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(0, 1, 0), 2, 17, 14);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(0, 1, 0), 2, 17, 13);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(0, 1, 0), 3, 22, 16);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(0, 1, 0), 3, 20, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(0, 1, 0), 3, 19, 14);
 	if(selectionPointing == MENU_FREE_ROAM)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(1, 1, 0), 2, 17, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(1, 1, 0), 3, 22, 16);
 	}
 	if(selectionPointing == MENU_TREASURE_HUNT)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(1, 1, 0), 2, 17, 14);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(1, 1, 0),3, 20, 15);
 	}
 	if(selectionPointing == MENU_EASTER_EGG_HUNT)//If pointing at START button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0), 2, 17, 13);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0),  3, 19, 14);
 	}
 }
 void SceneSP::RenderWinLoseMenu()
@@ -3270,41 +3272,42 @@ void SceneSP::RenderWinLoseMenu()
 	
 	if(b_is_Stealing)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"You stole items from the store!", Color(1, 0, 0), 2, 5, 13);
+		RenderTextOnScreen(meshList[GEO_TEXT],"You stole items from the store!", Color(1, 0, 0), 3, 12, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Shoptheft is a serious crime!", Color(1, 0, 0), 3, 13, 14);
 	}
 	else
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"You found all items from the store!", Color(0, 1, 0), 2, 3, 13);
+		RenderTextOnScreen(meshList[GEO_TEXT],"You found all items from the store!", Color(0, 1, 0), 3, 12, 15);
 	}
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 12, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 3, 19, 5);
 }
 void SceneSP::RenderInstructionMenu()
 {
-	RenderTextOnScreen(meshList[GEO_TEXT], "Arrow keys to look", Color(0, 1, 0), 2, 2, 20);
-	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to Move", Color(0, 1, 0), 2, 2, 19);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'P' to pause", Color(0, 1, 0), 2, 2, 18);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact with the world", Color(0, 1, 0), 2, 2, 17);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'R' to inspect held item", Color(0, 1, 0), 2, 2, 16);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Use '1' to '8' for inventory select", Color(0, 1, 0), 2, 2, 15);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press SHIFT to run",Color(0, 1, 0), 2, 2, 14);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press Ctrl to crouch", Color(0, 1, 0), 2, 2, 13);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press Esc to end application", Color(0, 1, 0), 2, 2, 10);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Arrow keys to look", Color(0, 1, 0), 3, 2, 20);
+	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to Move", Color(0, 1, 0), 3, 2, 19);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'P' to pause", Color(0, 1, 0), 3, 2, 18);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact with the world", Color(0, 1, 0), 3, 2, 17);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'R' to inspect held item", Color(0, 1, 0), 3, 2, 16);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Use '1' to '8' for inventory select", Color(0, 1, 0), 3, 2, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press SHIFT to run",Color(0, 1, 0), 3, 2, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press Ctrl to crouch", Color(0, 1, 0), 3, 2, 13);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press Esc to end application", Color(0, 1, 0), 3, 2, 10);
 
 
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 12, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0),  3, 19, 5);
 }
 void SceneSP::RenderPauseMenu()
 {
 
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(0, 1, 0), 2, 12, 15);
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(0, 1, 0), 2, 12, 14);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(0, 1, 0), 3, 21, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(0, 1, 0), 3, 18, 14);
 	if(selectionPointing == MENU_RESUME) //If pointing at Resume button
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(1, 1, 0), 2, 12, 15);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(1, 1, 0), 3, 21, 15);
 	}
 	if(selectionPointing == MENU_BACK)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 12, 14);
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 3, 18, 14);
 	}
 }
 void SceneSP::RenderCharacters()
@@ -3348,7 +3351,7 @@ void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, floa
 
 	glDisable(GL_DEPTH_TEST);
 	Mtx44 ortho;
-	ortho.SetToOrtho(0, 80, 0, 60, -10, 10); //size of screen UI
+	ortho.SetToOrtho(0, 160, 0, 90, -10, 10); //size of screen UI
 	projectionStack.PushMatrix();
 	projectionStack.LoadMatrix(ortho);
 	viewStack.PushMatrix();
