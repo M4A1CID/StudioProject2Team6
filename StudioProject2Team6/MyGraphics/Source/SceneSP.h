@@ -108,8 +108,8 @@ private:
 	void UpdateTugofwarguy(double dt);	//Update Tug-Of-War NPC
 	void UpdateDrunkmanguy(double dt);	//Update Drunk-Man NPC
 	void UpdateWalkingman(double dt);	//Update Walking-man NPC
-	void UpdateWalkingmanoutside(double dt);//Update Walking-man NPC
-	void UpdateWalkingmanoutsideoppdir(double dt);//Update Walking-man NPC opp dir
+	void UpdateWalkingmanoutsideX(double dt);//Update Walking-man NPC
+	void UpdateWalkingmanoutsideZ(double dt);//Update Walking-man NPC opp dir
 	void UpdateLogisticman(double dt);	//Update Logistic-man NPC
 	void UpdateGhostman(double dt);		//Update Ghost NPC
 	void UpdateCustomer(double dt);     //Update Customer NPC

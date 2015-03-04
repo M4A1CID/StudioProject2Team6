@@ -358,35 +358,46 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 	
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(150.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(106.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(109.5f,0.f,-200.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(113.f,0.f,200.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(116.5f,0.f,10.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-106.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-109.5f,0.f,-200.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-113.f,0.f,200.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(-116.5f,0.f,10.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
 
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(155.f,0.f,105.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(50.0f,0.f,60.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
-
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(160.f,0.f,100.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-50.0f,0.f,68.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
-
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(165.f,0.f,95.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-10.0f,0.f,123.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
-
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-150.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(80.0f,0.f,132.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
-
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-155.f,0.f,105.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(20.0f,0.f,193.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
-
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-160.f,0.f,100.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(-10.0f,0.f,198.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
-
-	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(-165.f,0.f,95.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE,true);
+	ptrNPC = new CNpc(80.0f,0.f,-57.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(10.0f,0.f,-64.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
+	myNPCList.push_back(ptrNPC);
+	ptrNPC = new CNpc(80.0f,0.f,-70.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
+	myNPCList.push_back(ptrNPC);
+		ptrNPC = new CNpc(-50.0f,0.f,-125.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
+	myNPCList.push_back(ptrNPC);
+		ptrNPC = new CNpc(-80.0f,0.f,-134.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
+	myNPCList.push_back(ptrNPC);
+		ptrNPC = new CNpc(70.0f,0.f,-191.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
 	myNPCList.push_back(ptrNPC);
 
 	//Logistic staff at level 2  //O(37.0f, 17.0f, 16.0f),S(36.0f, 17.0f, -14.0f)
@@ -862,7 +873,8 @@ void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
 	UpdateWalkingman(dt);
-	UpdateWalkingmanoutside(dt);
+	UpdateWalkingmanoutsideX(dt);
+	UpdateWalkingmanoutsideZ(dt);
 	UpdateDrunkmanguy(dt);
 	UpdateGhostman(dt);
 	UpdateLookingman(dt);
@@ -1571,14 +1583,20 @@ void SceneSP::UpdateDoor(double dt)
 	if(!test)
 	{
 		if((camera.position.z < -15.0f && camera.position.z > -40.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
+		{
 			toggleDoorBack = true;
+			sounded = true;
+		}
 		else
 			toggleDoorBack = false;
 	}
 	if(!test2)
 	{
 		if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f && camera.position.x < -10.0f))
+		{
 			toggleDoorFront = true;
+			sounded = true;
+		}
 		else
 			toggleDoorFront = false;
 	}
@@ -1589,7 +1607,6 @@ void SceneSP::UpdateDoor(double dt)
 		if(moveDoorBack > -7.0f)
 		{
 			moveDoorBack -= 10.0f * float(dt);
-			sounded = true;
 		}
 	}
 	else
@@ -1597,7 +1614,6 @@ void SceneSP::UpdateDoor(double dt)
 		if(moveDoorBack < 0.0f)
 		{
 			moveDoorBack += 10.0f * float(dt);
-			sounded = true;
 		}
 	}
 	if(toggleDoorFront)
@@ -1605,7 +1621,6 @@ void SceneSP::UpdateDoor(double dt)
 		if(moveDoorFront > -8.0f)
 		{
 			moveDoorFront -= 10.0f * float(dt);
-			sounded = true;
 		}
 	}
 	else
@@ -1613,7 +1628,6 @@ void SceneSP::UpdateDoor(double dt)
 		if(moveDoorFront < 0.0f)
 		{
 			moveDoorFront += 10.0f * float(dt);
-			sounded = true;
 		}
 	}
 	if((sounded == true && f_soundTimer > soundLimiter)&&camera.position.y<10.0f)
@@ -1885,16 +1899,44 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 		}
 	}
 }
-void SceneSP::UpdateWalkingmanoutside(double dt)
+void SceneSP::UpdateWalkingmanoutsideX(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
-		if(myNPCList[i]->getCharacterJob() == WALKING_GUY_OUTSIDE)
+		if(myNPCList[i]->getCharacterJob() == WALKING_GUY_OUTSIDE_X)
 		{
-			
 			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
 			{
-				if(myNPCList[i]->getZpos() > 190.f)
+				myNPCList[i]->setYRotation(90);
+				if(myNPCList[i]->getXpos() > 90.f)
+				{
+					myNPCList[i]->setCharacterState(STATE_BACKWARD);
+				}
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())+(myNPCList[i]->getmoveSpd()*float(dt)));
+			}
+			
+			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
+			{ 
+				myNPCList[i]->setYRotation(-90);
+				if(myNPCList[i]->getXpos() < -90.f)
+				{
+					myNPCList[i]->setCharacterState(STATE_FORWARD);
+				}
+				myNPCList[i]->setXpos((myNPCList[i]->getXpos())-(myNPCList[i]->getmoveSpd()*float(dt)));
+			}
+
+		}
+	}
+}
+void SceneSP::UpdateWalkingmanoutsideZ(double dt)
+{
+	for(unsigned int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == WALKING_GUY_OUTSIDE_Z)
+		{
+			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
+			{
+				if(myNPCList[i]->getZpos() > 222.f)
 				{
 					
 					myNPCList[i]->setCharacterState(STATE_BACKWARD);
@@ -1902,18 +1944,14 @@ void SceneSP::UpdateWalkingmanoutside(double dt)
 
 				}
 				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*float(dt)));
-			
-				
 			}
 			
 			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
 			{ 
-				if(myNPCList[i]->getZpos() < 110.f)
+				if(myNPCList[i]->getZpos() < -222.f)
 				{
-		
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 					myNPCList[i]->setYRotation(0);
-	
 				}
 				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*float(dt)));
 			}
