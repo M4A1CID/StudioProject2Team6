@@ -84,6 +84,7 @@ private:
 	void RenderMiscEastereggs();
 	void RenderEasteregg();
 	void RenderATM();
+	void RenderFerrisWheel();
 	/*=======================================
 				All update functions
 	=======================================*/
