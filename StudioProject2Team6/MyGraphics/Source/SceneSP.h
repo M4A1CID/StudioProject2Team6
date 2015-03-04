@@ -221,6 +221,7 @@ private:
 
 	//Sound Buffers
 	sf::Music music;
+	sf::Music music2;
 	sf::Music sound;
 	sf::Music easter;
 public:

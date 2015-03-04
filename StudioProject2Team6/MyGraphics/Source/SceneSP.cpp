@@ -36,6 +36,16 @@ void SceneSP::Init()
 	music.setVolume(50.0f);
 	music.play();
 	
+	music2.setPosition(-5.f,21.0f,0.0f);
+	sf::Listener::setPosition(camera.position.x, camera.position.y, camera.position.z);
+	sf::Listener::setGlobalVolume(100.f);
+	if(!music2.openFromFile(ambientSound))
+	{
+		std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+	}
+	music2.setLoop(true);
+	music2.setVolume(100.0f);
+	music2.play();
 
 	/*=============================================
 	Init variables here
@@ -1285,7 +1295,7 @@ void SceneSP::UpdatePlaying(double dt)
 	//3d sound
 	music.setPosition(0.0f, 0.0f, 0.0f);
 	sf::Listener::setPosition(camera.position.x, camera.position.y, camera.position.z);
-	sf::Listener::setGlobalVolume(800.f);
+	sf::Listener::setGlobalVolume(100.f);
 	if(music.getStatus() == false)
 	{
 		if(!music.openFromFile(ambientSound))
@@ -1293,9 +1303,11 @@ void SceneSP::UpdatePlaying(double dt)
 			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
 		}
 		music.setLoop(true);
-		music.setVolume(50.0f);
+		music.setVolume(500.0f);
 		music.play();
 	}
+	
+
 	checkWinLose();
 	if(Application::IsKeyPressed(VK_F1)) //enable back face culling
 		glEnable(GL_CULL_FACE);
@@ -4570,6 +4582,7 @@ void SceneSP::Exit()
 	delete ptrItem;
 	delete ptrNPC;
 	music.stop();
+	music2.stop();
 	sound.stop();
 	easter.stop();
 	glDeleteVertexArrays(1, &m_vertexArrayID);
