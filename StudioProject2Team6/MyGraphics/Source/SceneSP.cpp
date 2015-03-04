@@ -7,8 +7,6 @@
 #include "Vertex.h"
 #include "LoadTGA.h"
 
-
-
 static float ROT_LIMIT = 45.f;
 static float SCALE_LIMIT = 5.f;
 SceneSP::SceneSP()
@@ -216,6 +214,7 @@ void SceneSP::initGeoType()
 	meshList[GEO_RIGHT]->textureID = LoadTGA("Image//right.tga");
 	meshList[GEO_CASHIER] = MeshBuilder::GenerateOBJ("cashier", "OBJ//cashiertable.obj");
 	meshList[GEO_CASHIER]->textureID = LoadTGA("Image//cashRegisterTexture.tga");
+	/////////////////////////////////////////////////////////////////////
 	meshList[GEO_CASHIER_ARM] = MeshBuilder::GenerateOBJ("cashier arm", "OBJ//Arm.obj");
 	meshList[GEO_CASHIER_ARM]->textureID = LoadTGA("Image//cashier.tga");
 	meshList[GEO_CASHIER_HEADBODY] = MeshBuilder::GenerateOBJ("cashier head and body", "OBJ//headandbody.obj");
@@ -268,11 +267,14 @@ void SceneSP::initCharacter()
 	//Drunkman NPC
 	ptrNPC = new CNpc(-6,15,29,GEO_DRUNKMAN_HEADBODY,GEO_DRUNKMAN_ARM,GEO_DRUNKMAN_LEGANDFEET,STATE_IDLE,IDLE,DRUNKMAN);
 	myNPCList.push_back(ptrNPC);
+
 	//Walk around supermarket
 	ptrNPC = new CNpc(-5,0,13,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
+
 	ptrNPC = new CNpc(-5,0,7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY);
 	myNPCList.push_back(ptrNPC);
+
 	//Look at stuff
 	ptrNPC = new CNpc(1.5,0,25,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,LOOKING_GUY);
 	myNPCList.push_back(ptrNPC);
@@ -316,6 +318,38 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
 	myNPCList.push_back(ptrNPC);
+	
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(150,0,110,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(155,0,105,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(160,0,100,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(165,0,95,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(-150,0,110,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(-155,0,105,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(-160,0,100,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
+
+	//Passer-bys outside supermarket
+	ptrNPC = new CNpc(-165,0,95,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE);
+	myNPCList.push_back(ptrNPC);
 
 	//Logistic staff at level 2  //O(37.0f, 17.0f, 16.0f),S(36.0f, 17.0f, -14.0f)
 	ptrNPC = new CNpc(28,17,25,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_ACTIVE,IDLE,PART_TIME_WORKER);
@@ -330,11 +364,19 @@ void SceneSP::initCharacter()
 	ptrNPC = new CNpc(38,0,-5,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,STATE_IDLE,IDLE,PART_TIME_WORKER);
 	myNPCList.push_back(ptrNPC);
 
-	/*ptrNPC = new CNpc(8,0,-4,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,IDLE,CUSTOMER);
+	//EasterEggGuy
+    ptrNPC = new CNpc(10,17,-25,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,EASTER_EGG_GUY);
 	myNPCList.push_back(ptrNPC);
 
-	ptrNPC = new CNpc(12,0,-4,GEO_LOGISTICSTAFF_HEADBODY,GEO_LOGISTICSTAFF_ARM,GEO_LOGISTICSTAFF_LEGANDFEET,IDLE,PART_TIME_WORKER);
-	myNPCList.push_back(ptrNPC);*/
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == EASTER_EGG_GUY)
+		{
+			myNPCList[i]->setActive(false);
+		}
+	}
+
+	
 }
 void SceneSP::initShelves()
 {
@@ -759,10 +801,12 @@ void SceneSP::UpdateItemInspection()
 		b_inspection = false;
 	}
 }
+
 void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
 	UpdateWalkingman(dt);
+	UpdateWalkingmanoutside(dt);
 	UpdateDrunkmanguy(dt);
 	UpdateGhostman(dt);
 	UpdateLookingman(dt);
@@ -794,6 +838,33 @@ void SceneSP::UpdateAI(double dt)
 //		}
 //	}
 //}
+void SceneSP::UpdateEasterEgg(double dt)
+{
+	//x , y, z
+	//10,17,-25
+	
+	//if press "E" active state = true
+	if (Application::IsKeyPressed('E'))
+	{
+		if ((camera.position.x > 0.0f && camera.position.x < 11.0f) &&(camera.position.z > -26.0f && camera.position.z < 0.0f ))
+		{
+			for(int i = 0; i < myNPCList.size(); ++i)
+			{
+				if(myNPCList[i]->getCharacterJob() == EASTER_EGG_GUY)
+				{
+					myNPCList[i]->setActive(true);
+					//translation code
+					myNPCList[i]->setYpos(myNPCList[i]->getYpos()+myNPCList[i]->getmoveSpd() * dt);
+					if(myNPCList[i]->getYpos()>23)
+						myNPCList[i]->setYpos(17.0f);
+				}
+			}
+			
+		}
+	}
+	//translationcode
+
+}	
 
 void SceneSP::UpdateTrolley(double dt)
 {
@@ -1057,6 +1128,7 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateElevator(dt);
 	UpdateDoor(dt);
 	UpdateSamples();
+	UpdateEasterEgg(dt);
 	checkSupermarketCollision();
 	checkFreezerCollision();
 	checkShelfCollision();
@@ -1095,6 +1167,7 @@ void SceneSP::UpdateAITimer(double dt)
 		myNPCList[i]->setNPCTimer(myNPCList[i]->getNPCTimer()+dt);
 	}
 }
+
 void SceneSP::Update(double dt)
 {
 	CustomerinteractionTimer+=dt;
@@ -1230,6 +1303,7 @@ void SceneSP::UpdateDoor(double dt)
 			moveDoorBack += 10.0f * dt;
 	}
 }
+
 void SceneSP::UpdatePlayerSelection()
 {
 	if(Application::IsKeyPressed('1'))
@@ -1383,6 +1457,7 @@ void SceneSP::UpdateTugofwarguy(double dt)
 		myNPCList[0]->setLeftArm(40);
 	}
 }
+
 void SceneSP::UpdateDrunkman(double dt)
 {
 	for(int i = 0; i < myNPCList.size(); ++i)
@@ -1411,6 +1486,7 @@ void SceneSP::UpdateDrunkman(double dt)
 		}
 	}
 }
+
 void SceneSP::UpdateDrunkmanguy(double dt)
 {
 	for(int i = 0; i < myNPCList.size(); ++i)
@@ -1440,6 +1516,45 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 		}
 	}
 }
+
+	
+void SceneSP::UpdateWalkingmanoutside(double dt)
+{
+	for(int i = 0; i < myNPCList.size(); ++i)
+	{
+		if(myNPCList[i]->getCharacterJob() == WALKING_GUY_OUTSIDE)
+		{
+			
+			if(myNPCList[i]->getCharacterState() == STATE_FORWARD)
+			{
+				if(myNPCList[i]->getZpos() > 190.f)
+				{
+					
+					myNPCList[i]->setCharacterState(STATE_BACKWARD);
+					myNPCList[i]->setYRotation(180);
+
+				}
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())+(myNPCList[i]->getmoveSpd()*(dt)));
+			
+				
+			}
+			
+			if(myNPCList[i]->getCharacterState() == STATE_BACKWARD)
+			{ 
+				if(myNPCList[i]->getZpos() < 110.f)
+				{
+		
+					myNPCList[i]->setCharacterState(STATE_FORWARD);
+					myNPCList[i]->setYRotation(0);
+	
+				}
+				myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*(dt)));
+			}
+
+		}
+	}
+}
+
 void SceneSP::UpdateWalkingman(double dt)
 {
 	for(int i = 0; i < myNPCList.size(); ++i)
@@ -1553,6 +1668,7 @@ void SceneSP::UpdateGhostman(double dt)
 		}
 	}
 }
+
 void SceneSP::UpdateLookingman(double dt)
 {
 	static int counter = 0;
@@ -1641,6 +1757,7 @@ void SceneSP::UpdateLookingman(double dt)
 
 	}
 }
+
 void SceneSP::UpdateLogisticman(double dt)
 {
 	for(int i = 0; i< myNPCList.size(); ++i)
@@ -1705,6 +1822,7 @@ void SceneSP::UpdateLogisticman(double dt)
 		}
 	}
 }
+
 void SceneSP::UpdateCustomer(double dt)
 {
 	for(int i = 0; i< myNPCList.size(); ++i)
@@ -1828,55 +1946,12 @@ void SceneSP::UpdateCustomer(double dt)
 						myNPCList[i]->setZpos((myNPCList[i]->getZpos())-(myNPCList[i]->getmoveSpd()*dt));
 					}
 				}
-				myNPCList[i]->setAnimationType(IDLE);
+			myNPCList[i]->setAnimationType(IDLE);
 			myNPCList[i]->setLeftLeg(0.0f);
 			myNPCList[i]->setRightLeg(0.0f);
 			}
 		}
 	}
-
-
-	/*
-	ptrNPC = new CNpc(-16,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
-	myNPCList.push_back(ptrNPC);
-	//cashier 3
-	ptrNPC = new CNpc(-6,0,-18,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER);
-	myNPCList.push_back(ptrNPC);
-	//Customer at cashier 2
-	ptrNPC = new CNpc(-16,0,-11,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-9,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-7,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-5,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-16,0,-3,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	modelStack.PushMatrix();
-	modelStack.Translate(-16.f, 0.f, -15.f);
-	modelStack.Rotate(180,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER], toggleLight);
-	modelStack.PopMatrix();
-
-
-	//Customer at cashier 3
-	ptrNPC = new CNpc(-6,0,-11,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-9,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-7,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-5,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-6,0,-3,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc2_LEGANDFEET,STATE_IDLE,IDLE,CUSTOMER);
-	myNPCList.push_back(ptrNPC);
-
-	modelStack.PushMatrix();
-	modelStack.Translate(-6.f, 0.f, -15.f);
-	modelStack.Rotate(180,0,1,0);
-	RenderMesh(meshList[GEO_CASHIER], toggleLight);
-	modelStack.PopMatrix();*/
 }
 void SceneSP::UpdateChattingman(double dt)
 {
@@ -2242,14 +2317,14 @@ void SceneSP::RenderHand()
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,camera.position.y,camera.position.z);
 	{
-		/*
+		
 		modelStack.PushMatrix();
 		modelStack.Rotate((180+trolleyrotation),0,1,0);
 		modelStack.Rotate(-45,1,0,0);
 		modelStack.Translate(0.5,-1.5,2.5);
 		RenderMesh(meshList[GEO_HANDS], toggleLight);
 		modelStack.PopMatrix();
-		*/
+	
 
 		/*=============================
 		Put item on hand
@@ -2286,7 +2361,7 @@ void SceneSP::RenderHand()
 		}
 		modelStack.PopMatrix();
 	}
-	/*//Hands on trolley
+	//Hands on trolley
 	modelStack.PushMatrix();
 	modelStack.Translate(camera.position.x,0,camera.position.z);
 	{
@@ -2302,7 +2377,7 @@ void SceneSP::RenderHand()
 	RenderMesh(meshList[GEO_HANDS], toggleLight);
 	modelStack.PopMatrix();
 	}
-	modelStack.PopMatrix();*/
+	modelStack.PopMatrix();
 }
 void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 {
@@ -2663,7 +2738,10 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.PopMatrix();
 	RenderSamples();
 	modelStack.PopMatrix();
+}
 
+void SceneSP::RenderIceBox()
+{
 	modelStack.PushMatrix();
 	modelStack.Translate(37.0f, 0.0f, 25.0f);
 	modelStack.PushMatrix();
@@ -2680,9 +2758,11 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
+}
 
 
-
+void SceneSP::RenderMeatShelf()
+{
 	//16,17,-28
 	modelStack.PushMatrix();
 	modelStack.Translate(13.0f, 17.0f, -26.0f);
@@ -2703,7 +2783,10 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.Translate(-23.0f, 17.0f, -26.0f);
 	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
 	modelStack.PopMatrix();
+}
 
+void SceneSP::RenderFoodShelf()
+{
 	modelStack.PushMatrix();
 	modelStack.Translate(-21.0f,0.0f,11.0f);
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
@@ -2714,6 +2797,7 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
 	modelStack.PopMatrix();
 }
+
 void SceneSP::RenderBuilding()
 {
 	

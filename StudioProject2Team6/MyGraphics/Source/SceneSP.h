@@ -70,6 +70,9 @@ private:
 	void RenderOffice();
 	void RenderStorage();
 	void RenderBuilding();
+	void RenderIceBox();
+	void RenderMeatShelf();
+	void RenderFoodShelf();
 	/*=======================================
 				All update functions
 	=======================================*/
@@ -88,6 +91,8 @@ private:
 	void UpdateTugofwarguy(double dt);	//Update Tug-Of-War NPC
 	void UpdateDrunkmanguy(double dt);	//Update Drunk-Man NPC
 	void UpdateWalkingman(double dt);	//Update Walking-man NPC
+	void UpdateWalkingmanoutside(double dt);//Update Walking-man NPC
+	void UpdateWalkingmanoutsideoppdir(double dt);//Update Walking-man NPC opp dir
 	void UpdateLogisticman(double dt);	//Update Logistic-man NPC
 	void UpdateGhostman(double dt);		//Update Ghost NPC
 	void UpdateCustomer(double dt);
@@ -97,6 +102,7 @@ private:
 	void UpdateItemInspection();		//Update player holding and rotating the item
 	void UpdateAITimer(double dt);
 	void UpdatePaying(double dt);       //Update paying activity
+	void UpdateEasterEgg(double dt);    //Update easter egg
 	
 	/*=======================================
 				All Init functions
@@ -190,7 +196,7 @@ public:
 	
 	//Camera3 camera;
 	Camera3 camera;
-	
+	 
 	//render skybox
 	void RenderSkyBox();
 
