@@ -1,7 +1,7 @@
 # This file uses centimeters as units for non-parametric coordinates.
 
 mtllib PartofSuperMarket.mtl
-g PartofSuperMarket:default1
+g default1
 v 40.084282 17.082367 -9.716981
 v 40.084282 17.082367 -30.141441
 v 40.084282 32.781631 -9.716981
@@ -46,10 +46,10 @@ v 38.382240 17.082367 -30.141441
 v 21.361858 17.082367 -30.141441
 v 38.382240 32.781631 -30.141441
 v 21.361858 32.781631 -30.141441
-v 38.382240 32.781631 -28.439404
-v 21.361858 32.781631 -28.439404
-v 38.382240 17.082367 -28.439404
-v 21.361858 17.082367 -28.439404
+v 38.382240 32.781631 -29.121109
+v 21.361858 32.781631 -29.121109
+v 38.382240 17.082367 -29.121109
+v 21.361858 17.082367 -29.121109
 v 19.643692 17.082367 9.983505
 v 19.643692 17.082367 30.407965
 v 19.643692 32.781631 9.983505
@@ -94,10 +94,10 @@ v 21.345730 17.082367 30.407965
 v 38.366116 17.082367 30.407965
 v 21.345730 32.781631 30.407965
 v 38.366116 32.781631 30.407965
-v 21.345730 32.781631 28.705927
-v 38.366116 32.781631 28.705927
-v 21.345730 17.082367 28.705927
-v 38.366116 17.082367 28.705927
+v 21.345730 32.781631 29.891548
+v 38.366116 32.781631 29.891548
+v 21.345730 17.082367 29.891548
+v 38.366116 17.082367 29.891548
 v 21.683094 17.082367 -9.716981
 v 21.683092 24.235786 -9.716981
 v 21.683094 32.679085 -9.716981
@@ -521,8 +521,8 @@ vn 0.000000 0.000000 1.000000
 vn 0.000000 0.000000 1.000000
 vn 0.000000 0.000000 1.000000
 s off
-g PartofSuperMarket:group1_pasted__group_pasted__pasted__pCube1 PartofSuperMarket:initialShadingGroup PartofSuperMarket:polySurface2 PartofSuperMarket:polySurface1
-usemtl initialShadingGroup
+g PartofSuperMarket_initialShadingGroup group1_pasted__group_pasted__pasted__pCube1 polySurface2 polySurface3 polySurface4 polySurface1
+usemtl PartofSuperMarket_initialShadingGroup1
 f 1/1/1 2/2/2 4/3/3 3/4/4
 f 3/4/5 4/3/6 6/9/7 5/10/8
 f 5/5/9 6/6/10 8/7/11 7/8/12
@@ -555,7 +555,7 @@ f 45/61/122 46/62/123 48/63/124 47/64/125
 f 47/72/126 48/73/127 42/67/128 41/66/129
 f 42/67/130 48/73/131 46/70/132 44/68/133
 f 47/72/134 41/66/135 43/69/136 45/71/137
-g PartofSuperMarket:group6 PartofSuperMarket:initialShadingGroup PartofSuperMarket:pasted__group1_pasted__group_pasted__pasted__pCube1 PartofSuperMarket:polySurface2 PartofSuperMarket:polySurface1
+g PartofSuperMarket_initialShadingGroup group6 pasted__group1_pasted__group_pasted__pasted__pCube1 polySurface2 polySurface3 polySurface4 polySurface1
 f 49/74/138 50/75/139 52/76/140 51/77/141
 f 51/77/142 52/76/143 54/78/144 53/79/145
 f 53/79/146 54/78/147 56/80/148 55/81/149
@@ -590,6 +590,6 @@ f 93/122/267 94/121/268 96/123/269 95/124/270
 f 95/124/271 96/123/272 90/118/273 89/117/274
 f 90/118/275 96/123/276 94/121/277 92/119/278
 f 95/124/279 89/117/280 91/120/281 93/122/282
-g PartofSuperMarket:group1_pasted__group_pasted__pasted__pCube1 PartofSuperMarket:initialShadingGroup PartofSuperMarket:polySurface2 PartofSuperMarket:polySurface1
+g PartofSuperMarket_initialShadingGroup group1_pasted__group_pasted__pasted__pCube1 polySurface2 polySurface3 polySurface4 polySurface1
 f 22/49/283 29/47/284 98/125/285 97/126/286
 f 99/26/287 98/125/288 29/47/289 24/27/290

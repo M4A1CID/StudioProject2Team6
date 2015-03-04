@@ -4,7 +4,7 @@
 CRootBeerFloatsCan::CRootBeerFloatsCan(void)
 {
 	setName("RootBeerFloat Can");
-	setPrice(5.0f);
+	setPrice(3.0f);
 	setGeoType(GEO_CAN_ROOTBEERFLOATS);
 }
 

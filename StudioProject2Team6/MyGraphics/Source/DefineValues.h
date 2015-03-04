@@ -73,11 +73,10 @@ static float GhostNpcAppearBoundX2 = -10.0f;
 static float GhostNpcAppearBoundZ1 = 45.0f;
 static float GhostNpcAppearBoundZ2 = 15.0f;
 static float GhostNpcAppearBoundZ3 = 30.0f;
-static float GhostNpcMoveBoundX1 = -10.0f;
-static float GhostNpcMoveBoundX2 = -30.0f;
-static float GhostNpcMoveBoundY1 = 6.0f;
+static float GhostNpcMoveBoundX1 = -7.0f;
+static float GhostNpcMoveBoundX2 = -35.0f;
+static float GhostNpcMoveBoundY1 = 8.0f;
 static float GhostNpcMoveBoundY2 = -2.0f;
-static float GhostNpcMoveSpd = 4.0f;
 /*=======================================
 		Walking man values
 =======================================*/
@@ -97,6 +96,7 @@ static bool winEaster = false;
 static bool closeEaster = false;
 static bool inRange = false;
 static float easterLimiter = 2.0f;
+static float easterLimiter2 = 5.0f;
 static float easterTimer = 2.0f;
 static int getCounter = 0;
 static bool getCaged = false;
@@ -210,7 +210,7 @@ static std::string backgroundSound = "Sound\\Carefree.ogg";
 static std::string clearText = "CLEAR!";
 
 //Sounds
-const std::string soundFXArray[5] = {"Sound/holy.ogg","Sound/time.ogg","Sound/jaws.ogg","Sound/troll.ogg","Sound/rick.ogg"};
+const std::string soundFXArray[6] = {"Sound/holy.ogg","Sound/time.ogg","Sound/jaws.ogg","Sound/troll.ogg","Sound/rick.ogg","Sound/sonic.ogg"};
 
 //reset value
 const float resetValue = 0.0f;

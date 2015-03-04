@@ -4,7 +4,7 @@
 CBrownCan::CBrownCan(void)
 {
 	setName("Brown Can");
-	setPrice(5.0f);
+	setPrice(8.0f);
 	setGeoType(GEO_CAN_BROWN);
 }
 
