@@ -1464,7 +1464,7 @@ void SceneSP::UpdateElevator(double dt)
 void SceneSP::UpdateATM()
 {
 	//check area//-15 //38
-	if ((camera.position.x > -20 && camera.position.x < 0) && (camera.position.z > 30 && camera.position.z < 40))
+	if ((camera.position.x > -20 && camera.position.x < 10) && (camera.position.z > 30 && camera.position.z < 40))
 	{
 		//if pressed E
 		if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
