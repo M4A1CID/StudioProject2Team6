@@ -94,7 +94,7 @@ void SceneSP::Init()
 	ATMMoney = 50.0f;
 
 	Mtx44 projection;
-	projection.SetToPerspective(45.f, 4.f / 3.f, 0.1f, 5000.f);
+	projection.SetToPerspective(45.f, 16.f / 9.f, 0.1f, 5000.f);
 	projectionStack.LoadMatrix(projection);
 
 	DeclareLightParameters(); //Declare Light parameters
