@@ -121,8 +121,7 @@ private:
 	void UpdateEasteregg(double dt);
 	void UpdateEasterEggGuy(double dt); 
 	void UpdateATM(); //Update ATM
-	void UpdatePeople(double dt);
-	void UpdateLyingMan(double dt);
+	void UpdateBuildingGuy(double dt);//Update building guy
 	/*=======================================
 				All Init functions
 	=======================================*/

@@ -408,9 +408,9 @@ void SceneSP::initCharacter()
 		}
 	}
 
-	////Building Guy
-	// ptrNPC = new CNpc(0,0,0,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,BUILDING_GUY);
-	//myNPCList.push_back(ptrNPC);
+	//Building Guy
+	 ptrNPC = new CNpc(-43,97,-50,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,BUILDING_GUY);
+	myNPCList.push_back(ptrNPC);
 
 }
 void SceneSP::initShelves()
@@ -874,6 +874,7 @@ void SceneSP::UpdateAI(double dt)
 	UpdateChattingman(dt);
 	UpdateShoppers(dt);
 	UpdateLegAnimation(dt);
+	UpdateBuildingGuy(dt);
 	
 }
 
@@ -896,6 +897,8 @@ void SceneSP::UpdateEasterEggGuy(double dt)
 					myNPCList[i]->setYpos(myNPCList[i]->getYpos()+myNPCList[i]->getmoveSpd() * dt);
 					if(myNPCList[i]->getYpos()>23)
 						myNPCList[i]->setYpos(17.0f);
+					//rotate 90 x / z
+
 				}
 			}
 			
@@ -905,6 +908,32 @@ void SceneSP::UpdateEasterEggGuy(double dt)
 
 }	
 
+void SceneSP::UpdateBuildingGuy(double dt)
+{
+	if ((camera.position.x > -60.0f && camera.position.x < -10.0f) && (camera.position.z > -50.0f && camera.position.z < -10.0f ))
+	{
+		for(int i = 0; i < myNPCList.size(); ++i)
+		{
+
+			if(myNPCList[i]->getCharacterJob() == BUILDING_GUY)
+			{
+				myNPCList[i]->setActive(true);
+				//walking toward building
+				myNPCList[i]->setZpos(myNPCList[i]->getZpos()-myNPCList[i]->getmoveSpd() * dt);
+				if(myNPCList[i]->getZpos() < -30.0f)
+					myNPCList[i]->setZpos(-35.0f);
+				//looking down
+				myNPCList[i]->setXRotation(90);
+				//translate down 4
+				myNPCList[i]->setYpos(myNPCList[i]->getYpos()-myNPCList[i]->getmoveSpd() * dt);
+				if(myNPCList[i]->getYpos() > 4.0f)
+					myNPCList[i]->setYpos(1.0f);
+
+			}
+		}
+
+	}
+}
 
 void SceneSP::UpdateTrolley(double dt)
 {
