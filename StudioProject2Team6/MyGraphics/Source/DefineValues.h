@@ -204,7 +204,7 @@ static CItem* ptrEmpty = new CEmptyItem;
 static bool PunchTimerLimiter = true;
 
 //Menu string text
-static std::string menuTextArray[7] = {"START","Instructions","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt","Back"};
+static std::string menuTextArray[8] = {"START","Instructions","Exit","Free Roam","Treasure Hunt","Easter Egg Hunt","Resume game","Back to main menu"};
 static std::string s_UI_Play_Mode[3] = {"Free Roam","Treasure Hunt", "Easter Egg Hunt"};
 static std::string backgroundSound = "Sound\\Carefree.ogg";
 static std::string clearText = "CLEAR!";

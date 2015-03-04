@@ -1098,10 +1098,63 @@ void SceneSP::UpdateMenu()
 	{
 		UpdateInstructionMenu();
 	}
+	if(i_menuHandle == PAUSE_MENU)
+	{
+		UpdatePauseMenu();
+	}
 	//If at Win/Lose Menu
 	if(i_menuHandle == WIN_LOSE_MENU)
 	{
 		UpdateWinLoseMenu();
+	}
+}
+void SceneSP::UpdatePauseMenu()
+{
+
+	if(interactionTimer > menuTImerLimiter)
+	{
+
+		if(Application::IsKeyPressed(VK_DOWN))
+		{
+			if(selectionPointing < MENU_BACK)
+			{
+				interactionTimer = 0;
+				selectionPointing++;
+
+			}
+			else
+			{
+				interactionTimer = 0;
+				selectionPointing = MENU_RESUME;
+			}
+		}
+		if(Application::IsKeyPressed(VK_UP))
+		{
+			if(selectionPointing > MENU_RESUME)
+			{
+				interactionTimer = 0;
+				selectionPointing--;
+
+			}
+			else
+			{
+				interactionTimer= 0;
+				selectionPointing = MENU_BACK;
+			}
+		}
+
+		if(Application::IsKeyPressed(VK_RETURN))
+		{
+			interactionTimer = 0;
+			if(selectionPointing == MENU_RESUME)
+			{
+				i_menuHandle = GAME_PLAYING;
+			}
+			if(selectionPointing == MENU_BACK)
+			{
+				resetGame();
+			}
+		}
 	}
 }
 void SceneSP::resetGame()
@@ -1181,6 +1234,7 @@ void SceneSP::UpdatePlaying(double dt)
 	{
 		toggleLight = false;
 	}
+	//If player is crouching
 	if(Application::IsKeyPressed(VK_CONTROL))
 	{
 		b_crouching = true;
@@ -1200,6 +1254,12 @@ void SceneSP::UpdatePlaying(double dt)
 	{
 		b_crouching = false;
 	}
+	if(Application::IsKeyPressed('P'))
+	{
+		selectionPointing = MENU_RESUME;
+		i_menuHandle = PAUSE_MENU;
+	}
+	//If player is crouching at elevator
 	if(b_crouching)
 	{
 		if(elevatorIdle)
@@ -1248,23 +1308,6 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateEasteregg(dt);
 	UpdateATM();
 	reverseTimer += dt;
-	if(Application::IsKeyPressed('F1')) //enable back face culling
-		glEnable(GL_CULL_FACE);
-	if(Application::IsKeyPressed('F2')) //disable back face culling
-		glDisable(GL_CULL_FACE);
-	if(Application::IsKeyPressed('F3'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_FILL); //default fill mode
-	if(Application::IsKeyPressed('F4'))
-		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
-	if(Application::IsKeyPressed('F5'))
-	{
-		toggleLight = true;
-	}
-	if(Application::IsKeyPressed('F6'))
-	{
-		toggleLight = false;
-	}
-
 	
 	UpdatePaying();//Update playing paying
 
@@ -1281,29 +1324,6 @@ void SceneSP::UpdatePlaying(double dt)
 	checkCollision();
 	checkReturnPoint();
 	
-	if(Application::IsKeyPressed('U'))
-		Cashier.translateY += (float) 50 * dt;
-	//Down
-	if(Application::IsKeyPressed('5'))
-		Cashier.translateY -= (float) 50 * dt;
-	//Back
-	if(Application::IsKeyPressed('6'))
-		Cashier.translateX += (float) 50 * dt;
-	//Front
-	if(Application::IsKeyPressed('7'))
-		Cashier.translateX -= (float) 50 * dt;
-	//Right
-	if(Application::IsKeyPressed('8'))
-		Cashier.translateZ += (float) 50 * dt;
-	//Left
-	if(Application::IsKeyPressed('9'))
-		Cashier.translateZ -= (float) 50 * dt;
-	//Rotate anti clockwise
-	if(Application::IsKeyPressed('T'))
-		Cashier.rotateA += (float) 50 * dt;
-	//Rotate clockwise
-	if(Application::IsKeyPressed('F'))
-		Cashier.rotateA -= (float) 50 * dt;
 }
 void SceneSP::UpdateAITimer(double dt)
 {
@@ -1320,13 +1340,13 @@ void SceneSP::Update(double dt)
 	UpdateAITimer(dt);
 
 	
-	if(i_menuHandle == MAIN_MENU || i_menuHandle == SUB_MENU || i_menuHandle == WIN_LOSE_MENU || i_menuHandle == INSTRUCTION_MENU)
-	{
-		UpdateMenu();
-	}
 	if(i_menuHandle == GAME_PLAYING )
 	{
 		UpdatePlaying(dt);
+	}
+	else
+	{
+		UpdateMenu();
 	}
 	
 
@@ -2715,20 +2735,30 @@ void SceneSP::Render()
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderMainMenu();
 		break;
+
+
 		//Do sub menu here
 	case SUB_MENU:
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderSubMenu();
-
 		break;
+
+		//Do instruction Menu here
 	case INSTRUCTION_MENU:
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
-		//Do instructio Menu here
 		RenderInstructionMenu();
 		break;
+
+		//Do win lose menu here
 	case WIN_LOSE_MENU:
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderWinLoseMenu();
+		break;
+
+		//Do pause menu here
+	case PAUSE_MENU:
+		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+		RenderPauseMenu();
 		break;
 	case GAME_PLAYING:
 		RenderHand();
@@ -3094,20 +3124,36 @@ void SceneSP::RenderWinLoseMenu()
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"You found all items from the store!", Color(0, 1, 0), 2, 3, 13);
 	}
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 12, 5);
 }
 void SceneSP::RenderInstructionMenu()
 {
 	RenderTextOnScreen(meshList[GEO_TEXT], "Arrow keys to look", Color(0, 1, 0), 2, 2, 20);
 	RenderTextOnScreen(meshList[GEO_TEXT], "WASD to Move", Color(0, 1, 0), 2, 2, 19);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'P' to pause", Color(0, 1, 0), 2, 2, 18);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to interact with the world", Color(0, 1, 0), 2, 2, 17);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press 'R' to inspect held item", Color(0, 1, 0), 2, 2, 16);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Use '1' to '8' for inventory select", Color(0, 1, 0), 2, 2, 15);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press SHIFT to run",Color(0, 1, 0), 2, 2, 14);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press Ctrl to crouch", Color(0, 1, 0), 2, 2, 13);
+	RenderTextOnScreen(meshList[GEO_TEXT], "Press Esc to end application", Color(0, 1, 0), 2, 2, 10);
 
 
-	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 17, 5);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 12, 5);
+}
+void SceneSP::RenderPauseMenu()
+{
+
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(0, 1, 0), 2, 12, 15);
+	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(0, 1, 0), 2, 12, 14);
+	if(selectionPointing == MENU_RESUME) //If pointing at Resume button
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(1, 1, 0), 2, 12, 15);
+	}
+	if(selectionPointing == MENU_BACK)
+	{
+		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 2, 12, 14);
+	}
 }
 void SceneSP::RenderCharacters()
 {

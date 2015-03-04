@@ -72,6 +72,7 @@ private:
 	void RenderSubMenu();			//Render Sub/Start Menu Screen
 	void RenderWinLoseMenu();		//Render Win/Lose Menu Screen
 	void RenderInstructionMenu();	//Render instruction Screen
+	void RenderPauseMenu();
 	void RenderOffice();
 	void RenderStorage();
 	void RenderBuilding();
@@ -96,6 +97,7 @@ private:
 	void UpdateStartMenu();				//Update Start Menu with play scenarios
 	void UpdateWinLoseMenu();			//Update winning and losing screen
 	void UpdateInstructionMenu();		//Update instruction menu
+	void UpdatePauseMenu();				//Update Pause menu
 	void UpdatePlaying(double dt);		//Update application while game is playing
 	void UpdateTugofwar(double dt);		//Update the Tug-Of-War mini game
 	void UpdateDrunkman(double dt);		//Update Drunk Man NPC
@@ -115,14 +117,14 @@ private:
 	void UpdateLegAnimation(double dt);	//Update NPC leg animation
 	void UpdateItemInspection();		//Update player holding and rotating the item
 	void UpdateAITimer(double dt);
-	void UpdatePaying();       //Update paying activity
+	void UpdatePaying();				//Update paying activity
 	void UpdateCage(double dt);
 	void UpdateGaben(double dt);
 	void UpdateTroll(double dt);
 	void UpdateMiscEasteregg(double dt);
 	void UpdateEasteregg(double dt);
 	void UpdateEasterEggGuy(double dt); 
-	void UpdateATM(); //Update ATM
+	void UpdateATM();					//Update ATM
 	void UpdatePeople(double dt);
 	void UpdateLyingMan(double dt);
 	/*=======================================
