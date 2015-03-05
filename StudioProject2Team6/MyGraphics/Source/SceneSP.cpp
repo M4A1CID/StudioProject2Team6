@@ -51,7 +51,9 @@ void SceneSP::Init()
 	{
 		meshList[i] = NULL;
 	}
-
+	initCharacter(); //Initilize the player
+	initGeoType(); //Initilize all Geo Types
+	initShelves();//Initilize all shelves
 	/*===============================
 			Music and Sound here
 	==============================*/
@@ -75,15 +77,17 @@ void SceneSP::Init()
 	music2.play();
 
 	/*=============================================
-	Init variables here
+				Init variables here
 	=============================================*/
 	i_total_items_to_find = 0;
 	i_menuHandle = MAIN_MENU;
 	i_drunkmanAct = DRUNKIDLE;
 	i_CashierAct = LOOKATCUSTOMER;
-	initCharacter(); //Initilize the player
-	initGeoType(); //Initilize all Geo Types
-	initShelves();//Initilize all shelves
+	i_getCounter = 0;
+	i_sampleItems = 4;
+	i_inventoryPointing=0;
+	i_selectionPointing = MENU_START;
+
 	//Initialize all Inventory to NULL
 	for(int i = 0; i< ptrplayer->getMaxItemCapacity();++i)
 	{
@@ -91,7 +95,6 @@ void SceneSP::Init()
 	}
 	
 	ptrInvSelect = ptrplayer->getItem(0);
-	
 
 	b_quit = false;
 	b_falling = false;
@@ -108,10 +111,6 @@ void SceneSP::Init()
 	b_winEaster = false;
 	b_closeEaster = false;
 	b_inRange = false;
-	f_easterLimiter = 2.0f;
-	f_easterLimiter2 = 5.0f;
-	f_easterTimer = 2.0f;
-	i_getCounter = 0;
 	b_getCaged = false;
 	b_getGabed = false;
 	b_getTrolled = false;
@@ -119,12 +118,17 @@ void SceneSP::Init()
 	b_getRicked = false;
 	b_IsIntugofwar = false;
 	b_caged = false;
-	f_cagedPos = -75.0f;
-	f_diffY = 0.0f;
 	b_win = false;
 	b_lose = false;
 	b_showTuginstruction = false;
 	b_isWithinInteractionItem = false;
+	b_elevatorIdle = true; // Set default elevator to IDLE
+
+	f_easterLimiter = 2.0f;
+	f_easterLimiter2 = 5.0f;
+	f_easterTimer = 2.0f;
+	f_cagedPos = -75.0f;
+	f_diffY = 0.0f;
 	f_interactionTimer = 0.0f;
 	f_LogisticinteractionTimer = 0.0f;
 	f_CustomerinteractionTimer = 0.0f;
@@ -140,11 +144,8 @@ void SceneSP::Init()
 	f_elevatorDoorY = 0.f;
 	f_itemYrotation = 0.f;
 	f_itemXrotation = 0.f;
-	b_elevatorIdle = true; // Set default elevator to IDLE
 	f_charactersrotation = 20.0f;
-	i_sampleItems = 4;
-	i_inventoryPointing=0;
-	i_selectionPointing = MENU_START;
+	
 	//Initialize camera settings
 	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
 	f_ATMMoney = 50.0f;
