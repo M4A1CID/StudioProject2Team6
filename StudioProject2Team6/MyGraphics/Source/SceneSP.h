@@ -142,6 +142,7 @@ private:
 	void UpdateEasterEggGuy(double dt); 
 	void UpdateATM(); //Update ATM
 	void UpdateBuildingGuy(double dt);//Update building guy
+	void UpdateRotatingMan(double dt);//Update rotating man
 	/*=======================================
 				All Init functions
 	=======================================*/

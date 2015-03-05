@@ -482,7 +482,7 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 
 	//Building Guy
-	 ptrNPC = new CNpc(-43,97,-50,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,BUILDING_GUY,true);
+	 ptrNPC = new CNpc(-43.5,97,-55,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_IDLE,IDLE,BUILDING_GUY,true);
 	myNPCList.push_back(ptrNPC);
 
 }
@@ -1008,7 +1008,6 @@ void SceneSP::UpdateAI(double dt)
 	UpdateShoppers(dt);
 	UpdateLegAnimation(dt);
 	UpdateBuildingGuy(dt);
-	
 }
 /******************************************************************************/
 /*!
@@ -1084,7 +1083,7 @@ void SceneSP::UpdateBuildingGuy(double dt)
 				if(myNPCList[i]->getCharacterState() == STATE_JUMP)
 				{
 					//if not yet landed on floor
-					if (myNPCList[i]->getYpos() > 1.0f)
+					if (myNPCList[i]->getYpos() > 2.0f)
 					{
 						myNPCList[i]->setmoveSpd(50.0f);
 						myNPCList[i]->setYpos(myNPCList[i]->getYpos()-(myNPCList[i]->getmoveSpd() * float(dt)));
@@ -1100,7 +1099,7 @@ void SceneSP::UpdateBuildingGuy(double dt)
 
 		}
 
-		
+
 	}
 }     
 /******************************************************************************/
