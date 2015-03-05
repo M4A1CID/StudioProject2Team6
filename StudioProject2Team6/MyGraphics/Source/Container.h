@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	Container.h
+\author Edmund Ang
+\brief
+File Header for Container class
+*/
+/******************************************************************************/
 #pragma once
 #ifndef CONTAINER_H
 #define CONTAINER_H

@@ -93,61 +93,61 @@ void SceneSP::Init()
 	ptrInvSelect = ptrplayer->getItem(0);
 	
 
-	
-	falling = false;
+	b_quit = false;
+	b_falling = false;
 	b_is_Stealing = false;
 	b_crouching = false;
-	toggleLight = true;
-	toggleDoorFront = false;
-	toggleDoorBack = false;
-	elevatorDoorOpening = false;
-	elevatorSecondFloor = false;
+	b_toggleLight = true;
+	b_toggleDoorFront = false;
+	b_toggleDoorBack = false;
+	b_elevatorDoorOpening = false;
+	b_elevatorSecondFloor = false;
 	b_inspection = false;
 	b_isWithinPayingCashier = false;
 	b_dinged = true;
-	winEaster = false;
-	closeEaster = false;
-	inRange = false;
-	easterLimiter = 2.0f;
-	easterLimiter2 = 5.0f;
-	easterTimer = 2.0f;
-	getCounter = 0;
-	getCaged = false;
-	getGabed = false;
-	getTrolled = false;
-	getTimed = false;
-	getRicked = false;
-	IsIntugofwar = false;
-	caged = false;
-	cagedPos = -75.0f;
-	diffY = 0.0f;
-	win = false;
-	lose = false;
-	showTuginstruction = false;
+	b_winEaster = false;
+	b_closeEaster = false;
+	b_inRange = false;
+	f_easterLimiter = 2.0f;
+	f_easterLimiter2 = 5.0f;
+	f_easterTimer = 2.0f;
+	i_getCounter = 0;
+	b_getCaged = false;
+	b_getGabed = false;
+	b_getTrolled = false;
+	b_getTimed = false;
+	b_getRicked = false;
+	b_IsIntugofwar = false;
+	b_caged = false;
+	f_cagedPos = -75.0f;
+	f_diffY = 0.0f;
+	b_win = false;
+	b_lose = false;
+	b_showTuginstruction = false;
 	b_isWithinInteractionItem = false;
-	interactionTimer = 0.0f;
-	LogisticinteractionTimer = 0.0f;
-	CustomerinteractionTimer = 0.0f;
+	f_interactionTimer = 0.0f;
+	f_LogisticinteractionTimer = 0.0f;
+	f_CustomerinteractionTimer = 0.0f;
 	f_soundTimer = 0.0f;
-	moveDoorFront = 0.0f;
-	moveDoorBack = 0.0f;
-	trolleyrotation = 0.0f;
-	handrotationleftandright = 0.0f;
-	handtranslation = 0.0f;
-	diffX = 0.0f;
-	diffZ = 0.0f;
-	elevatorY = 0.f;
-	elevatorDoorY = 0.f;
-	itemYrotation = 0.f;
-	itemXrotation = 0.f;
-	elevatorIdle = true; // Set default elevator to IDLE
-	charactersrotation = 20.0f;
+	f_moveDoorFront = 0.0f;
+	f_moveDoorBack = 0.0f;
+	f_trolleyrotation = 0.0f;
+	f_handrotationleftandright = 0.0f;
+	f_handtranslation = 0.0f;
+	f_diffX = 0.0f;
+	f_diffZ = 0.0f;
+	f_elevatorY = 0.f;
+	f_elevatorDoorY = 0.f;
+	f_itemYrotation = 0.f;
+	f_itemXrotation = 0.f;
+	b_elevatorIdle = true; // Set default elevator to IDLE
+	f_charactersrotation = 20.0f;
 	i_sampleItems = 4;
-	inventoryPointing=0;
-	selectionPointing = MENU_START;
+	i_inventoryPointing=0;
+	i_selectionPointing = MENU_START;
 	//Initialize camera settings
 	camera.Init(Vector3(0, 4.5, 100), Vector3(0, 0, 0), Vector3(0, 1, 0));
-	ATMMoney = 50.0f;
+	f_ATMMoney = 50.0f;
 
 	Mtx44 projection;
 	projection.SetToPerspective(45.f, 16.f / 9.f, 0.1f, 5000.f);
@@ -767,7 +767,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 	{
 		for(int i = 0; i<container->getFirstStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+RenderItemTopRowXOffSet-i,container->getYpos()+RenderItemTopRowYOffSet,container->getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+f_RenderItemTopRowXOffSet-i,container->getYpos()+f_RenderItemTopRowYOffSet,container->getZpos());
 			myStockList.push_back(ptrItem);
 		}
 	}
@@ -775,7 +775,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 	{
 		for(int i = 0; i<container->getSecondStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+RenderItemMiddleRowXOffSet-i,container->getYpos()+RenderItemMiddleRowYOffSet,container->getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+f_RenderItemMiddleRowXOffSet-i,container->getYpos()+f_RenderItemMiddleRowYOffSet,container->getZpos());
 			myStockList.push_back(ptrItem);
 		}
 	}
@@ -783,7 +783,7 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 	{
 		for(int i = 0; i<container->getThirdStock();++i)
 		{
-			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+RenderItemBottomRowXOffSet-i,container->getYpos()+RenderItemBottomRowYOffSet,container->getZpos());
+			ptrItem = new CItem(item.getName(),item.getPrice(),item.getGeoType(),container->getXpos()+f_RenderItemBottomRowXOffSet-i,container->getYpos()+f_RenderItemBottomRowYOffSet,container->getZpos());
 			myStockList.push_back(ptrItem);
 		}
 	}
@@ -801,9 +801,9 @@ Adds items picked up by the player to their inventory
 void SceneSP::addToInventory(CItem* pickedUp)
 {
 
-	ptrplayer->setInventory(pickedUp,inventoryPointing);
+	ptrplayer->setInventory(pickedUp,i_inventoryPointing);
 	std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
-	interactionTimer = 0.0f;
+	f_interactionTimer = 0.0f;
 }
 /******************************************************************************/
 /*!
@@ -963,7 +963,7 @@ void SceneSP::UpdateUI(double dt)
 	ss_money << ptrplayer->getMoney();
 	s_money = ss_money.str();
 
-	ss_item_price <<  ptrplayer->getItem(inventoryPointing)->getPrice();
+	ss_item_price <<  ptrplayer->getItem(i_inventoryPointing)->getPrice();
 	s_item_price = ss_item_price.str();
 
 }
@@ -1062,7 +1062,7 @@ void SceneSP::UpdateBuildingGuy(double dt)
 			if ((camera.position.x > -60.0f && camera.position.x < -10.0f) && (camera.position.z > -50.0f && camera.position.z < -10.0f ))
 			{
 
-				if(!falling)
+				if(!b_falling)
 				{
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 				}
@@ -1073,11 +1073,11 @@ void SceneSP::UpdateBuildingGuy(double dt)
 				//If off the ledge
 				if (myNPCList[i]->getZpos() < -35.0f)
 				{
-					falling = true;
+					b_falling = true;
 					myNPCList[i]->setCharacterState(STATE_JUMP);
 				}
 			}
-			if (falling == true)
+			if (b_falling == true)
 			{	
 				//If jumping off the building
 				if(myNPCList[i]->getCharacterState() == STATE_JUMP)
@@ -1114,31 +1114,31 @@ void SceneSP::UpdateHand(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
-		if(reversed)
-			handrotationleftandright -= (camera.CAMERA_SPEED)*float(dt);
+		if(b_reversed)
+			f_handrotationleftandright -= (camera.CAMERA_SPEED)*float(dt);
 		else
-			handrotationleftandright += (camera.CAMERA_SPEED)*float(dt);
+			f_handrotationleftandright += (camera.CAMERA_SPEED)*float(dt);
 	}
 	if(Application::IsKeyPressed(VK_RIGHT)&& !Application::IsKeyPressed('R'))
 	{
-		if(reversed)
-			handrotationleftandright += (camera.CAMERA_SPEED)*float(dt);
+		if(b_reversed)
+			f_handrotationleftandright += (camera.CAMERA_SPEED)*float(dt);
 		else
-		handrotationleftandright -= (camera.CAMERA_SPEED)*float(dt);
+		f_handrotationleftandright -= (camera.CAMERA_SPEED)*float(dt);
 	}
-	if(Application::IsKeyPressed('E') || PunchTimerLimiter == false)
+	if(Application::IsKeyPressed('E') || b_PunchTimerLimiter == false)
 	{
-		if(PunchTimerLimiter == true)
+		if(b_PunchTimerLimiter == true)
 		{
-			PunchTimerLimiter = false;
+			b_PunchTimerLimiter = false;
 		}
 		else
 		{
-			handtranslation += (2.0f)*float(dt);
-			if(handtranslation > 1.0f)
+			f_handtranslation += (2.0f)*float(dt);
+			if(f_handtranslation > 1.0f)
 			{
-				PunchTimerLimiter = true;
-				handtranslation = 0.0f;
+				b_PunchTimerLimiter = true;
+				f_handtranslation = 0.0f;
 			}
 		}
 	}
@@ -1151,50 +1151,55 @@ Updates the main menu upon starting up
 /******************************************************************************/
 void SceneSP::UpdateMainMenu()
 {
-	if(interactionTimer > menuTImerLimiter)
+	if(f_interactionTimer > f_menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
 			{
-				if(selectionPointing < MENU_EXIT)
+				if(i_selectionPointing < MENU_EXIT)
 				{
-					interactionTimer = 0;
-					selectionPointing++;
+					f_interactionTimer = 0;
+					i_selectionPointing++;
 				}
 				else
 				{
-					interactionTimer = 0;
-					selectionPointing = MENU_START; //RESET TO START
+					f_interactionTimer = 0;
+					i_selectionPointing = MENU_START; //RESET TO START
 				}
 			}
 			if(Application::IsKeyPressed(VK_UP))
 			{
-				if(selectionPointing > MENU_START)
+				if(i_selectionPointing > MENU_START)
 				{
-					interactionTimer = 0;
-					selectionPointing--;
+					f_interactionTimer = 0;
+					i_selectionPointing--;
 				}
 				else
 				{
-					interactionTimer = 0;
-					selectionPointing = MENU_EXIT; //RESET TO EXIT
+					f_interactionTimer = 0;
+					i_selectionPointing = MENU_EXIT; //RESET TO EXIT
 				}
 			}
 
 			if(Application::IsKeyPressed(VK_RETURN))
 			{
-				if(selectionPointing == MENU_START)
+				if(i_selectionPointing == MENU_START)
 				{
-					interactionTimer = 0;
-					selectionPointing = MENU_FREE_ROAM;
+					f_interactionTimer = 0;
+					i_selectionPointing = MENU_FREE_ROAM;
 					i_menuHandle = SUB_MENU;
 
 				}
-				if(selectionPointing == MENU_INSTRUCTIONS)
+				if(i_selectionPointing == MENU_INSTRUCTIONS)
 				{
-					interactionTimer = 0;
+					f_interactionTimer = 0;
 					//Instruction Page
 					i_menuHandle = INSTRUCTION_MENU;
-					selectionPointing = MENU_BACK;
+					i_selectionPointing = MENU_BACK;
+				}
+				if(i_selectionPointing == MENU_EXIT)
+				{
+					f_interactionTimer = 0;
+					b_quit = true;
 				}
 			}
 		}
@@ -1207,39 +1212,39 @@ Updates the Start menu
 /******************************************************************************/
 void SceneSP::UpdateStartMenu()
 {
-	if(interactionTimer > menuTImerLimiter)
+	if(f_interactionTimer > f_menuTImerLimiter)
 		{
 			if(Application::IsKeyPressed(VK_DOWN))
 			{
-				if(selectionPointing < MENU_EASTER_EGG_HUNT)
+				if(i_selectionPointing < MENU_EASTER_EGG_HUNT)
 				{
-					interactionTimer = 0;
-					selectionPointing++;
+					f_interactionTimer = 0;
+					i_selectionPointing++;
 
 				}
 				else
 				{
-					interactionTimer = 0;
-					selectionPointing = MENU_FREE_ROAM;
+					f_interactionTimer = 0;
+					i_selectionPointing = MENU_FREE_ROAM;
 				}
 			}
 			if(Application::IsKeyPressed(VK_UP))
 			{
-				if(selectionPointing > MENU_FREE_ROAM)
+				if(i_selectionPointing > MENU_FREE_ROAM)
 				{
-					interactionTimer = 0;
-					selectionPointing--;
+					f_interactionTimer = 0;
+					i_selectionPointing--;
 
 				}
 				else
 				{
-					interactionTimer= 0;
-					selectionPointing = MENU_EASTER_EGG_HUNT;
+					f_interactionTimer= 0;
+					i_selectionPointing = MENU_EASTER_EGG_HUNT;
 				}
 			}
 			if(Application::IsKeyPressed(VK_RETURN))
 			{
-				if(selectionPointing == MENU_FREE_ROAM)
+				if(i_selectionPointing == MENU_FREE_ROAM)
 				{
 					//FREE ROAM HERE
 					ptrplayer->setCharacterJob(PLAY_FREE_ROAM);
@@ -1247,7 +1252,7 @@ void SceneSP::UpdateStartMenu()
 					music.stop();
 
 				}
-				if(selectionPointing == MENU_TREASURE_HUNT)
+				if(i_selectionPointing == MENU_TREASURE_HUNT)
 				{
 					//DO TREASURE HUNT HERE
 					unsigned int random =0;
@@ -1263,7 +1268,7 @@ void SceneSP::UpdateStartMenu()
 					i_menuHandle = GAME_PLAYING;
 					music.stop();
 				}
-				if(selectionPointing == MENU_EASTER_EGG_HUNT)
+				if(i_selectionPointing == MENU_EASTER_EGG_HUNT)
 				{
 					//DO EASTER EGG HUNT HERE
 					ptrplayer->setCharacterJob(PLAY_EASTER_EGG);
@@ -1276,17 +1281,17 @@ void SceneSP::UpdateStartMenu()
 /******************************************************************************/
 /*!
 \brief
-Updates the win / lose menu
+Updates the b_win / b_lose menu
 */
 /******************************************************************************/
 void SceneSP::UpdateWinLoseMenu()
 {
-	selectionPointing = MENU_BACK;
+	i_selectionPointing = MENU_BACK;
 	//Reset the world
 	
 	if(Application::IsKeyPressed(VK_RETURN))
 	{
-		if(selectionPointing == MENU_BACK)
+		if(i_selectionPointing == MENU_BACK)
 		{
 			//TO DO 
 			resetGame();
@@ -1301,14 +1306,14 @@ Updates the instruction menu
 /******************************************************************************/
 void SceneSP::UpdateInstructionMenu()
 {
-	if(interactionTimer > menuTImerLimiter)
+	if(f_interactionTimer > f_menuTImerLimiter)
 	{
 		if(Application::IsKeyPressed(VK_RETURN))
 		{
-			if(selectionPointing == MENU_BACK)
+			if(i_selectionPointing == MENU_BACK)
 			{
-				interactionTimer = 0;
-				selectionPointing = MENU_START;
+				f_interactionTimer = 0;
+				i_selectionPointing = MENU_START;
 				i_menuHandle = MAIN_MENU;
 
 			}
@@ -1358,46 +1363,46 @@ Updates the pause menu
 void SceneSP::UpdatePauseMenu()
 {
 
-	if(interactionTimer > menuTImerLimiter)
+	if(f_interactionTimer > f_menuTImerLimiter)
 	{
 
 		if(Application::IsKeyPressed(VK_DOWN))
 		{
-			if(selectionPointing < MENU_BACK)
+			if(i_selectionPointing < MENU_BACK)
 			{
-				interactionTimer = 0;
-				selectionPointing++;
+				f_interactionTimer = 0;
+				i_selectionPointing++;
 
 			}
 			else
 			{
-				interactionTimer = 0;
-				selectionPointing = MENU_RESUME;
+				f_interactionTimer = 0;
+				i_selectionPointing = MENU_RESUME;
 			}
 		}
 		if(Application::IsKeyPressed(VK_UP))
 		{
-			if(selectionPointing > MENU_RESUME)
+			if(i_selectionPointing > MENU_RESUME)
 			{
-				interactionTimer = 0;
-				selectionPointing--;
+				f_interactionTimer = 0;
+				i_selectionPointing--;
 
 			}
 			else
 			{
-				interactionTimer= 0;
-				selectionPointing = MENU_BACK;
+				f_interactionTimer= 0;
+				i_selectionPointing = MENU_BACK;
 			}
 		}
 
 		if(Application::IsKeyPressed(VK_RETURN))
 		{
-			interactionTimer = 0;
-			if(selectionPointing == MENU_RESUME)
+			f_interactionTimer = 0;
+			if(i_selectionPointing == MENU_RESUME)
 			{
 				i_menuHandle = GAME_PLAYING;
 			}
-			if(selectionPointing == MENU_BACK)
+			if(i_selectionPointing == MENU_BACK)
 			{
 				resetGame();
 			}
@@ -1431,24 +1436,24 @@ void SceneSP::UpdateItemRotation(double dt)
 {
 	if(Application::IsKeyPressed(VK_RIGHT)&& Application::IsKeyPressed('R'))
 	{
-		itemYrotation+=float(dt)*itemRotationSpeedMultiplyer;
+		f_itemYrotation+=float(dt)*f_itemRotationSpeedMultiplyer;
 	}
 	if(Application::IsKeyPressed(VK_LEFT) && Application::IsKeyPressed('R'))
 	{
-		itemYrotation-=float(dt)*itemRotationSpeedMultiplyer;
+		f_itemYrotation-=float(dt)*f_itemRotationSpeedMultiplyer;
 	}
 	if(Application::IsKeyPressed(VK_DOWN)&& Application::IsKeyPressed('R'))
 	{
-		itemXrotation+=float(dt)*itemRotationSpeedMultiplyer;
+		f_itemXrotation+=float(dt)*f_itemRotationSpeedMultiplyer;
 	}
 	if(Application::IsKeyPressed(VK_UP) && Application::IsKeyPressed('R'))
 	{
-		itemXrotation-=float(dt)*itemRotationSpeedMultiplyer;
+		f_itemXrotation-=float(dt)*f_itemRotationSpeedMultiplyer;
 	}
 	if(!Application::IsKeyPressed('R'))
 	{
-		itemXrotation = 0.f;
-		itemYrotation = 0.f;
+		f_itemXrotation = 0.f;
+		f_itemYrotation = 0.f;
 	}
 }
 /******************************************************************************/
@@ -1463,24 +1468,24 @@ void SceneSP::UpdateEasteregg(double dt)
 {	
 	std::stringstream ss_easterCounter;
 	std::stringstream ss_easterCount;
-	ss_easterCounter << getCounter;
-	ss_easterCount << numEastereggs;
+	ss_easterCounter << i_getCounter;
+	ss_easterCount << i_numEastereggs;
 	s_easter_counter = ss_easterCounter.str();
 	s_easter_count = ss_easterCount.str();
-	easterTimer += float(dt);
+	f_easterTimer += float(dt);
 	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
 	{
 		UpdateMiscEasteregg(dt);
 		UpdateCage(dt);
 		UpdateGaben(dt);
 		UpdateTroll(dt);
-		if(getCounter == numEastereggs)
+		if(i_getCounter == i_numEastereggs)
 		{
-			winEaster = true;
+			b_winEaster = true;
 		}
-		if(winEaster == true && Application::IsKeyPressed(VK_RETURN))
+		if(b_winEaster == true && Application::IsKeyPressed(VK_RETURN))
 		{
-			closeEaster = true;
+			b_closeEaster = true;
 		}
 	}
 }
@@ -1521,19 +1526,19 @@ void SceneSP::UpdatePlaying(double dt)
 		glPolygonMode(GL_FRONT_AND_BACK, GL_LINE); //wireframe mode
 	if(Application::IsKeyPressed(VK_F5))
 	{
-		toggleLight = true;
+		b_toggleLight = true;
 	}
 	if(Application::IsKeyPressed(VK_F6))
 	{
-		toggleLight = false;
+		b_toggleLight = false;
 	}
 	//If player is crouching
 	if(Application::IsKeyPressed(VK_CONTROL))
 	{
 		b_crouching = true;
-		if(Application::IsKeyPressed(VK_SHIFT)&&easterTimer > easterLimiter2)
+		if(Application::IsKeyPressed(VK_SHIFT)&&f_easterTimer > f_easterLimiter2)
 		{
-			easterTimer = 0.0f;
+			f_easterTimer = 0.0f;
 			if(!music.openFromFile(soundFXArray[5]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
@@ -1549,13 +1554,13 @@ void SceneSP::UpdatePlaying(double dt)
 	}
 	if(Application::IsKeyPressed('P'))
 	{
-		selectionPointing = MENU_RESUME;
+		i_selectionPointing = MENU_RESUME;
 		i_menuHandle = PAUSE_MENU;
 	}
 	//If player is crouching at elevator
 	if(b_crouching)
 	{
-		if(elevatorIdle)
+		if(b_elevatorIdle)
 		{
 			//First floor crouching
 			if(camera.position.y>3.1f && camera.position.y < 4.7f)
@@ -1574,7 +1579,7 @@ void SceneSP::UpdatePlaying(double dt)
 	}
 	else //Not crouching anymore
 	{
-		if(elevatorIdle)
+		if(b_elevatorIdle)
 		{
 			//First floor crouching
 			if(camera.position.y <= 4.5f && camera.position.y >= 2.0f)
@@ -1600,15 +1605,15 @@ void SceneSP::UpdatePlaying(double dt)
 	UpdateItemInspection();
 	UpdateEasteregg(dt);
 	UpdateATM();
-	reverseTimer += float(dt);
+	f_reverseTimer += float(dt);
 	
 	UpdatePaying();//Update playing paying
 
 	UpdateUI(dt);
 	checkPickUpItem();
-	if(!IsIntugofwar && !caged)
-		camera.UpdateMovement(dt,reversed);
-	camera.UpdateView(dt,reversed);
+	if(!b_IsIntugofwar && !b_caged)
+		camera.UpdateMovement(dt,b_reversed);
+	camera.UpdateView(dt,b_reversed);
 	UpdateHand(dt);
 	UpdateElevator(dt);
 	UpdateDoor(dt);
@@ -1643,9 +1648,9 @@ Updates the entire scene
 /******************************************************************************/
 void SceneSP::Update(double dt)
 {
-	CustomerinteractionTimer+=float(dt);
-	LogisticinteractionTimer+=float(dt);
-	interactionTimer+=float(dt);
+	f_CustomerinteractionTimer+=float(dt);
+	f_LogisticinteractionTimer+=float(dt);
+	f_interactionTimer+=float(dt);
 	UpdateAITimer(dt);
 	f_soundTimer += float(dt);
 	
@@ -1671,50 +1676,50 @@ Updates the movement of the elevator based on dt
 void SceneSP::UpdateElevator(double dt)
 {
 	//If player is within elevator interaction boundary
-	if(camera.position.x > checkElevatorXposMin && camera.position.x < checkElevatorXposMax)
+	if(camera.position.x > f_checkElevatorXposMin && camera.position.x < f_checkElevatorXposMax)
 	{
-		if(camera.position.z > checkElevatorZposMin && camera.position.z < checkElevatorZposMax)
+		if(camera.position.z > f_checkElevatorZposMin && camera.position.z < f_checkElevatorZposMax)
 		{
 
-			if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter && elevatorIdle)
+			if(Application::IsKeyPressed('E') && f_interactionTimer > f_interactionTimerLimiter && b_elevatorIdle)
 			{
-				if(elevatorDoorOpening) //Check toggling
+				if(b_elevatorDoorOpening) //Check toggling
 				{
-					interactionTimer = 0;
-					elevatorDoorOpening = false;
+					f_interactionTimer = 0;
+					b_elevatorDoorOpening = false;
 					std::cout << "Door closing!" << std::endl;
 				}
 				else
 				{
-					interactionTimer = 0;
-					elevatorDoorOpening = true;
+					f_interactionTimer = 0;
+					b_elevatorDoorOpening = true;
 					std::cout << "Door opening!" << std::endl;
 
 				}
 			}
 			//If player is INSIDE elevator
-			if(camera.position.x > checkInnerElevatorXposMin && camera.position.x < checkInnerElevatorXposMax)
+			if(camera.position.x > f_checkInnerElevatorXposMin && camera.position.x < f_checkInnerElevatorXposMax)
 			{
-				if(camera.position.z > checkInnerElevatorZposMin && camera.position.z < checkInnerElevatorZposMax)
+				if(camera.position.z > f_checkInnerElevatorZposMin && camera.position.z < f_checkInnerElevatorZposMax)
 				{
 					//if elevator door is closed
-					if(!elevatorDoorOpening)
+					if(!b_elevatorDoorOpening)
 					{
-						if(!(elevatorSecondFloor))
+						if(!(b_elevatorSecondFloor))
 						{
 							//Move elevator up
-							camera.position.y += float(dt)*elevatorSpeed;
-							camera.target.y +=float(dt)*elevatorSpeed;
-							elevatorY+=float(dt)*elevatorSpeed;
-							elevatorIdle = false;
+							camera.position.y += float(dt)*f_elevatorSpeed;
+							camera.target.y +=float(dt)*f_elevatorSpeed;
+							f_elevatorY+=float(dt)*f_elevatorSpeed;
+							b_elevatorIdle = false;
 						}
-						else if(elevatorSecondFloor)
+						else if(b_elevatorSecondFloor)
 						{
 							//Move elevator down
-							camera.position.y-=float(dt)*elevatorSpeed;
-							camera.target.y-=float(dt)*elevatorSpeed;
-							elevatorY-=float(dt)*elevatorSpeed;
-							elevatorIdle = false;
+							camera.position.y-=float(dt)*f_elevatorSpeed;
+							camera.target.y-=float(dt)*f_elevatorSpeed;
+							f_elevatorY-=float(dt)*f_elevatorSpeed;
+							b_elevatorIdle = false;
 						}
 					}
 				}
@@ -1725,33 +1730,33 @@ void SceneSP::UpdateElevator(double dt)
 
 
 	//Handle second floor boolean here
-	if(elevatorY > secondFloorYpositionMax)
+	if(f_elevatorY > f_secondFloorYpositionMax)
 	{
-		elevatorIdle = true;
-		elevatorDoorOpening = true;
-		elevatorSecondFloor = true;
+		b_elevatorIdle = true;
+		b_elevatorDoorOpening = true;
+		b_elevatorSecondFloor = true;
 	}
-	if(elevatorY < secondFloorYpositionMin)
+	if(f_elevatorY < f_secondFloorYpositionMin)
 	{
-		elevatorIdle = true;
-		elevatorDoorOpening = true;
-		elevatorSecondFloor = false;
+		b_elevatorIdle = true;
+		b_elevatorDoorOpening = true;
+		b_elevatorSecondFloor = false;
 	}
 	//Handle opening and closing here
-	if(elevatorDoorOpening) //if door is going up
+	if(b_elevatorDoorOpening) //if door is going up
 	{
 
-		if(!(elevatorDoorY > checkElevatorYposMax))
+		if(!(f_elevatorDoorY > checkElevatorYposMax))
 		{
-			elevatorDoorY+=float(dt)*elevatorDoorSpeed;
+			f_elevatorDoorY+=float(dt)*f_elevatorDoorSpeed;
 			b_dinged = false;
 		}		
 	}
 	else //if door is closing
 	{
-		if(!(elevatorDoorY < checkElevatorYposMin))
+		if(!(f_elevatorDoorY < f_checkElevatorYposMin))
 		{
-			elevatorDoorY-= float(dt)*elevatorDoorSpeed;
+			f_elevatorDoorY-= float(dt)*f_elevatorDoorSpeed;
 		}
 		else
 		{
@@ -1778,19 +1783,19 @@ Updates the addition of the player's money and deduction of the ATM's money
 void SceneSP::UpdateATM()
 {
 	std::stringstream ss_atmBalance;
-	ss_atmBalance << ATMMoney;
+	ss_atmBalance << f_ATMMoney;
 	s_atm_balance = ss_atmBalance.str();
 	//check area//-15 //38
 	if ((camera.position.x > -6 && camera.position.x < 7) && (camera.position.z > 32 && camera.position.z < 40))
 	{
 		//if pressed E
-		if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+		if(Application::IsKeyPressed('E') && f_interactionTimer > f_interactionTimerLimiter)
 		{
-			if(ATMMoney > 0)//deduct money from atm
+			if(f_ATMMoney > 0)//deduct money from atm
 			{
-				interactionTimer = 0.0f;
+				f_interactionTimer = 0.0f;
 				ptrplayer->setMoney(ptrplayer->getMoney()+5.0f);
-				ATMMoney -= 5.0f;
+				f_ATMMoney -= 5.0f;
 			}
 		}
 	}
@@ -1814,12 +1819,12 @@ void SceneSP::UpdateDoor(double dt)
 			myNPCList[i]->getYpos()<5
 			)//Back door control
 		{
-			toggleDoorBack = true;
+			b_toggleDoorBack = true;
 			test = true;
 			break;
 		}
 		else
-			toggleDoorBack = false;
+			b_toggleDoorBack = false;
 	}
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
 	{
@@ -1827,64 +1832,64 @@ void SceneSP::UpdateDoor(double dt)
 			myNPCList[i]->getYpos()<5
 			)
 		{
-			toggleDoorFront = true;
+			b_toggleDoorFront = true;
 			test2 = true;
 			break;
 		}
 		else
-			toggleDoorFront = false;
+			b_toggleDoorFront = false;
 	}
 	if(!test)
 	{
 		if((camera.position.z < -15.0f && camera.position.z > -40.0f) && (camera.position.x > 10.0f && camera.position.x < 35.0f))
 		{
-			toggleDoorBack = true;
+			b_toggleDoorBack = true;
 			sounded = true;
 		}
 		else
-			toggleDoorBack = false;
+			b_toggleDoorBack = false;
 	}
 	if(!test2)
 	{
 		if((camera.position.z < 45.0f && camera.position.z > 15.0f) && (camera.position.x > -30.0f && camera.position.x < -10.0f))
 		{
-			toggleDoorFront = true;
+			b_toggleDoorFront = true;
 			sounded = true;
 		}
 		else
-			toggleDoorFront = false;
+			b_toggleDoorFront = false;
 	}
 	test = false;
 	test2 = false;
-	if(toggleDoorBack)
+	if(b_toggleDoorBack)
 	{
-		if(moveDoorBack > -7.0f)
+		if(f_moveDoorBack > -7.0f)
 		{
-			moveDoorBack -= 10.0f * float(dt);
+			f_moveDoorBack -= 10.0f * float(dt);
 		}
 	}
 	else
 	{
-		if(moveDoorBack < 0.0f)
+		if(f_moveDoorBack < 0.0f)
 		{
-			moveDoorBack += 10.0f * float(dt);
+			f_moveDoorBack += 10.0f * float(dt);
 		}
 	}
-	if(toggleDoorFront)
+	if(b_toggleDoorFront)
 	{
-		if(moveDoorFront > -8.0f)
+		if(f_moveDoorFront > -8.0f)
 		{
-			moveDoorFront -= 10.0f * float(dt);
+			f_moveDoorFront -= 10.0f * float(dt);
 		}
 	}
 	else
 	{
-		if(moveDoorFront < 0.0f)
+		if(f_moveDoorFront < 0.0f)
 		{
-			moveDoorFront += 10.0f * float(dt);
+			f_moveDoorFront += 10.0f * float(dt);
 		}
 	}
-	if((sounded == true && f_soundTimer > soundLimiter)&&camera.position.y<10.0f)
+	if((sounded == true && f_soundTimer > f_soundLimiter)&&camera.position.y<10.0f)
 	{
 		f_soundTimer = 0.0f;
 		if(!sound.openFromFile(soundFXArray[7]))
@@ -1910,7 +1915,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(0);
-			inventoryPointing = 0;
+			i_inventoryPointing = 0;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1919,7 +1924,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(1);
-			inventoryPointing =1;
+			i_inventoryPointing =1;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1928,7 +1933,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(2);
-			inventoryPointing =2;
+			i_inventoryPointing =2;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1937,7 +1942,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(3);
-			inventoryPointing =3;
+			i_inventoryPointing =3;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1946,7 +1951,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(4);
-			inventoryPointing =4;
+			i_inventoryPointing =4;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1955,7 +1960,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(5);
-			inventoryPointing =5;
+			i_inventoryPointing =5;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1964,7 +1969,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(6);
-			inventoryPointing =6;
+			i_inventoryPointing =6;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1973,7 +1978,7 @@ void SceneSP::UpdatePlayerSelection()
 		if(ptrplayer->getItemHeld()>0)
 		{
 			ptrInvSelect = ptrplayer->getItem(7);
-			inventoryPointing =7;
+			i_inventoryPointing =7;
 			std::cout << ptrInvSelect->getName();
 		}
 	}
@@ -1992,32 +1997,32 @@ void SceneSP::UpdatePaying()
 	{
 		b_isWithinPayingCashier = true;
 		//If player is paying
-		if (Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+		if (Application::IsKeyPressed('E') && f_interactionTimer > f_interactionTimerLimiter)
 		{
 			//If player money is greater than price of item
-			if(ptrplayer->getMoney() >= ptrplayer->getVector()[inventoryPointing]->getPrice())
+			if(ptrplayer->getMoney() >= ptrplayer->getVector()[i_inventoryPointing]->getPrice())
 			{
 				//Reset the intereaction timer
-				interactionTimer = 0;
-				std::cout << "Item paid: " << ptrplayer->getVector()[inventoryPointing]->getName() << std::endl;
+				f_interactionTimer = 0;
+				std::cout << "Item paid: " << ptrplayer->getVector()[i_inventoryPointing]->getName() << std::endl;
 				//Deduct from player money total price
-				ptrplayer->setMoney(ptrplayer->getMoney() - ptrplayer->getVector()[inventoryPointing]->getPrice());
+				ptrplayer->setMoney(ptrplayer->getMoney() - ptrplayer->getVector()[i_inventoryPointing]->getPrice());
 				
 				//Check if item paid is == random checklist items
 				for(unsigned int i = 0; i<myCheckList.size();++i)
 				{
 
-					if(ptrplayer->getVector()[inventoryPointing]->getName() == myCheckList[i]->getName()
-						&& ptrplayer->getVector()[inventoryPointing]->getPrice() == myCheckList[i]->getPrice()
-						&& ptrplayer->getVector()[inventoryPointing]->getGeoType() == myCheckList[i]->getGeoType())
+					if(ptrplayer->getVector()[i_inventoryPointing]->getName() == myCheckList[i]->getName()
+						&& ptrplayer->getVector()[i_inventoryPointing]->getPrice() == myCheckList[i]->getPrice()
+						&& ptrplayer->getVector()[i_inventoryPointing]->getGeoType() == myCheckList[i]->getGeoType())
 					{
 						myCheckList[i]->setName(clearText);
 					}
 				}
 
 				//Set inventory to empty afterwards
-				ptrplayer->setInventory(ptrEmpty,inventoryPointing);
-				ptrInvSelect = ptrplayer->getItem(inventoryPointing);
+				ptrplayer->setInventory(ptrEmpty,i_inventoryPointing);
+				ptrInvSelect = ptrplayer->getItem(i_inventoryPointing);
 			}
 		}
 	}
@@ -2038,11 +2043,11 @@ Updates the remaining samples on the sample stand
 /******************************************************************************/
 void SceneSP::UpdateSamples()
 {
-	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+	if(Application::IsKeyPressed('E') && f_interactionTimer > f_interactionTimerLimiter)
 	{
 		if((camera.position.x > 25.0f && camera.position.x < 35.0f) && (camera.position.z > -8.0f && camera.position.z < -2.0f))
 		{
-			interactionTimer = 0.0f;
+			f_interactionTimer = 0.0f;
 			i_sampleItems--;
 			if(i_sampleItems > 0)
 			{
@@ -2067,50 +2072,50 @@ Updates the player during the tug of war activity based on dt
 /******************************************************************************/
 void SceneSP::UpdateTugofwar(double dt)
 {
-	if(((Application::IsKeyPressed('E') && (IsIntugofwar == false))&&
+	if(((Application::IsKeyPressed('E') && (b_IsIntugofwar == false))&&
 		((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)))&&
 		camera.position.y < 10
 		)//Initiate tug of war conditions
 	{//Initiate tug of war sequence
-		IsIntugofwar = true;
-		diffX = camera.position.x - 20;
-		diffZ = camera.position.z - 0;
+		b_IsIntugofwar = true;
+		f_diffX = camera.position.x - 20;
+		f_diffZ = camera.position.z - 0;
 		camera.position.x = 20;
 		camera.position.z = 0;
-		camera.target.x -= diffX;
-		camera.target.z -=diffZ;
-		diffX = diffZ = 0;
-		showTuginstruction = true;
+		camera.target.x -= f_diffX;
+		camera.target.z -=f_diffZ;
+		f_diffX = f_diffZ = 0;
+		b_showTuginstruction = true;
 	}
-	if(Application::IsKeyPressed(VK_SPACE) && (showTuginstruction == true))
+	if(Application::IsKeyPressed(VK_SPACE) && (b_showTuginstruction == true))
 	{//Stop showing tug of war instructions
-		showTuginstruction = false;
+		b_showTuginstruction = false;
 	}
-	if(IsIntugofwar == true && showTuginstruction == false)
+	if(b_IsIntugofwar == true && b_showTuginstruction == false)
 	{//While in tug of war sequence
 		camera.position.x -= 0.001f*camera.CAMERA_SPEED;
 		camera.target.x -= 0.001f*camera.CAMERA_SPEED;
-		if(Application::IsKeyPressed(VK_SPACE) && interactionTimer > TugofwarTimerLimiter)
+		if(Application::IsKeyPressed(VK_SPACE) && f_interactionTimer > f_TugofwarTimerLimiter)
 		{//update camera based on tugs
-			interactionTimer = 0.0f;
+			f_interactionTimer = 0.0f;
 			camera.position.x += 0.025f*camera.CAMERA_SPEED;
 			camera.target.x += 0.025f*camera.CAMERA_SPEED;
 		}
-		if(camera.position.x > 32)//win condition
+		if(camera.position.x > 32)//b_win condition
 		{
-			IsIntugofwar = false;
-			win = true;
+			b_IsIntugofwar = false;
+			b_win = true;
 		}
-		if(camera.position.x < 3)//lose condition
+		if(camera.position.x < 3)//b_lose condition
 		{
-			IsIntugofwar = false;
-			lose = true;
+			b_IsIntugofwar = false;
+			b_lose = true;
 		}
 	}
 	if(Application::IsKeyPressed('A') || Application::IsKeyPressed('S') || Application::IsKeyPressed('D') || Application::IsKeyPressed('W'))
-	{//reset win/lose message
-		win = false;
-		lose = false;
+	{//reset b_win/b_lose message
+		b_win = false;
+		b_lose = false;
 	}
 }
 /******************************************************************************/
@@ -2123,7 +2128,7 @@ Updates the Npc involves in the tug of war activity based on dt
 /******************************************************************************/
 void SceneSP::UpdateTugofwarguy(double dt)
 {
-	if(!IsIntugofwar)
+	if(!b_IsIntugofwar)
 	{
 		myNPCList[0]->setYRotation(0);
 		myNPCList[0]->setXpos(7.0f);
@@ -2131,7 +2136,7 @@ void SceneSP::UpdateTugofwarguy(double dt)
 		myNPCList[0]->setLeftArm(30);
 		myNPCList[0]->setRightArm(-30);
 	}
-	else //if(IsIntugofwar)
+	else //if(b_IsIntugofwar)
 	{
 		myNPCList[0]->setYRotation(90);
 		myNPCList[0]->setXpos(camera.position.x - 4);
@@ -2298,8 +2303,8 @@ void SceneSP::UpdateWalkingman(double dt)
 		{
 			myNPCList[i]->setAnimationType(WALKING);
 			myNPCList[i]->setmoveSpd(5.0f);
-			myNPCList[i]->setLeftArm(WalkingNpcInitArm);
-			myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+			myNPCList[i]->setLeftArm(f_WalkingNpcInitArm);
+			myNPCList[i]->setRightArm(-f_WalkingNpcInitArm);
 			if(myNPCList[i]->getCharacterState()==STATE_FORWARD)
 			{
 				if(myNPCList[i]->getZpos() > 21.f)
@@ -2357,12 +2362,12 @@ void SceneSP::UpdateGhostman(double dt)
 			static bool GisFlying = false;
 			static bool GFlyDir = true;
 			static bool GMoveDir = true;
-			myNPCList[i]->setLeftLeg(GhostNpcInitLeg);
-			myNPCList[i]->setRightLeg(GhostNpcInitLeg);
-			myNPCList[i]->setYRotation(GhostNpcInitRot);
+			myNPCList[i]->setLeftLeg(f_GhostNpcInitLeg);
+			myNPCList[i]->setRightLeg(f_GhostNpcInitLeg);
+			myNPCList[i]->setYRotation(f_GhostNpcInitRot);
 			myNPCList[i]->setmoveSpd(7.0f);
-			if(((camera.position.z < GhostNpcAppearBoundZ1 && camera.position.z > GhostNpcAppearBoundZ2) && (camera.position.x > GhostNpcAppearBoundX1 && camera.position.x < GhostNpcAppearBoundX2)) ||
-				camera.position.z > GhostNpcAppearBoundZ3
+			if(((camera.position.z < f_GhostNpcAppearBoundZ1 && camera.position.z > f_GhostNpcAppearBoundZ2) && (camera.position.x > f_GhostNpcAppearBoundX1 && camera.position.x < f_GhostNpcAppearBoundX2)) ||
+				camera.position.z > f_GhostNpcAppearBoundZ3
 				)
 				myNPCList[i]->setCharacterState(STATE_IDLE);
 			else
@@ -2372,7 +2377,7 @@ void SceneSP::UpdateGhostman(double dt)
 				myNPCList[i]->setActive(true);
 				if(GisFlying == false)
 				{
-					myNPCList[i]->setYpos(GhostNpcResetYPos);
+					myNPCList[i]->setYpos(f_GhostNpcResetYPos);
 					GisFlying = true;
 				}
 				else
@@ -2380,25 +2385,25 @@ void SceneSP::UpdateGhostman(double dt)
 					if(GFlyDir == true)
 					{
 						myNPCList[i]->setYpos(myNPCList[i]->getYpos() + myNPCList[i]->getmoveSpd() * float(dt));
-						if(myNPCList[i]->getYpos() > GhostNpcMoveBoundY1)
+						if(myNPCList[i]->getYpos() > f_GhostNpcMoveBoundY1)
 							GFlyDir = false;
 					}
 					else
 					{
 						myNPCList[i]->setYpos(myNPCList[i]->getYpos() - myNPCList[i]->getmoveSpd() * float(dt));
-						if(myNPCList[i]->getYpos() < GhostNpcMoveBoundY2)
+						if(myNPCList[i]->getYpos() < f_GhostNpcMoveBoundY2)
 							GFlyDir = true;
 					}
 					if(GMoveDir == true)
 					{
 						myNPCList[i]->setXpos(myNPCList[i]->getXpos() + myNPCList[i]->getmoveSpd() * float(dt));
-						if(myNPCList[i]->getXpos() > GhostNpcMoveBoundX1)
+						if(myNPCList[i]->getXpos() > f_GhostNpcMoveBoundX1)
 							GMoveDir = false;
 					}
 					else
 					{
 						myNPCList[i]->setXpos(myNPCList[i]->getXpos() - myNPCList[i]->getmoveSpd() * float(dt));
-						if(myNPCList[i]->getXpos() < GhostNpcMoveBoundX2)
+						if(myNPCList[i]->getXpos() < f_GhostNpcMoveBoundX2)
 							GMoveDir = true;
 					}
 				}
@@ -2435,7 +2440,7 @@ void SceneSP::UpdateLookingman(double dt)
 				myNPCList[i]->setLeftLeg(0.0f);//reset leg rotations
 				myNPCList[i]->setRightLeg(0.0f);
 				myNPCList[i]->setAnimationType(IDLE);
-				if(myNPCList[i]->getNPCTimer() > NPCLookLimiter)
+				if(myNPCList[i]->getNPCTimer() > f_NPCLookLimiter)
 				{
 					myNPCList[i]->setNPCTimer(0.0f);
 					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()+90.0f);
@@ -2526,24 +2531,24 @@ void SceneSP::UpdateLogisticman(double dt)
 		{
 			if(myNPCList[i]->getCharacterState() == STATE_IDLE)
 			{
-				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
-				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+				myNPCList[i]->setLeftArm(f_WalkingNpcInitArm);
+				myNPCList[i]->setRightArm(-f_WalkingNpcInitArm);
 				myNPCList[i]->setYRotation(270.0f);
 			}
 
 			if(myNPCList[i]->getCharacterState() == STATE_ACTIVE)
 			{
-				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
-				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+				myNPCList[i]->setLeftArm(f_WalkingNpcInitArm);
+				myNPCList[i]->setRightArm(-f_WalkingNpcInitArm);
 				myNPCList[i]->setYRotation(270.0f);
-				if(LogisticinteractionTimer > NPCLookLimiter && (myNPCList[i]->getZpos() < -20.f))
+				if(f_LogisticinteractionTimer > f_NPCLookLimiter && (myNPCList[i]->getZpos() < -20.f))
 				{
 					myNPCList[i]->setYRotation(0.0f);
 					myNPCList[i]->setAnimationType(WALKING);
 					myNPCList[i]->setmoveSpd(5.0f);
 					myNPCList[i]->setCharacterState(STATE_FORWARD);
 				}
-				if(LogisticinteractionTimer > NPCLookLimiter && (myNPCList[i]->getZpos() > 24.f))
+				if(f_LogisticinteractionTimer > f_NPCLookLimiter && (myNPCList[i]->getZpos() > 24.f))
 				{
 					myNPCList[i]->setYRotation(180.0f);
 					myNPCList[i]->setAnimationType(WALKING);
@@ -2556,7 +2561,7 @@ void SceneSP::UpdateLogisticman(double dt)
 			{
 				if(myNPCList[i]->getZpos() > 24.f)
 				{
-					LogisticinteractionTimer = 0;
+					f_LogisticinteractionTimer = 0;
 					myNPCList[i]->setAnimationType(IDLE);
 					myNPCList[i]->setmoveSpd(0.0f);
 					myNPCList[i]->setLeftLeg(0.0f);
@@ -2569,7 +2574,7 @@ void SceneSP::UpdateLogisticman(double dt)
 			{
 				if(myNPCList[i]->getZpos() < -20.f)
 				{
-					LogisticinteractionTimer = 0;
+					f_LogisticinteractionTimer = 0;
 					myNPCList[i]->setAnimationType(IDLE);
 					myNPCList[i]->setmoveSpd(0.0f);
 					myNPCList[i]->setLeftLeg(0.0f);
@@ -2600,37 +2605,37 @@ void SceneSP::UpdateCustomer(double dt)
 				&&(myNPCList[j]->getCharacterJob() == CASHIER && myNPCList[j]->getCharacterState() == STATE_ACTIVE)
 				&&((myNPCList[i]->getXpos()) < (myNPCList[j]->getXpos()+1) && (myNPCList[i]->getXpos()) > (myNPCList[j]->getXpos()-1)))
 			{
-				myNPCList[i]->setLeftArm(WalkingNpcInitArm);
-				myNPCList[i]->setRightArm(-WalkingNpcInitArm);
+				myNPCList[i]->setLeftArm(f_WalkingNpcInitArm);
+				myNPCList[i]->setRightArm(-f_WalkingNpcInitArm);
 				if(i_CashierAct==LOOKATCUSTOMER)
 				{
-					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
-					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
-					if(CustomerinteractionTimer > 10.0f)
+					myNPCList[j]->setLeftArm(f_WalkingNpcInitArm);
+					myNPCList[j]->setRightArm(-f_WalkingNpcInitArm);
+					if(f_CustomerinteractionTimer > 10.0f)
 					{
-						CustomerinteractionTimer = 0;
+						f_CustomerinteractionTimer = 0;
 						i_CashierAct = LOOKATITEM;
 					}
 				}
 				if(i_CashierAct==LOOKATITEM)
 				{
-					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
-					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
+					myNPCList[j]->setLeftArm(f_WalkingNpcInitArm);
+					myNPCList[j]->setRightArm(-f_WalkingNpcInitArm);
 					myNPCList[j]->setYRotation(-20.0f);
-					if(CustomerinteractionTimer > 10.0f)
+					if(f_CustomerinteractionTimer > 10.0f)
 					{
-						CustomerinteractionTimer = 0;
+						f_CustomerinteractionTimer = 0;
 						i_CashierAct = LOOKATSCREEN;
 					}
 				}
 				if(i_CashierAct==LOOKATSCREEN)
 				{
-					myNPCList[j]->setLeftArm(WalkingNpcInitArm);
-					myNPCList[j]->setRightArm(-WalkingNpcInitArm);
+					myNPCList[j]->setLeftArm(f_WalkingNpcInitArm);
+					myNPCList[j]->setRightArm(-f_WalkingNpcInitArm);
 					myNPCList[j]->setYRotation(20.0f);
-					if(CustomerinteractionTimer > 10.0f)
+					if(f_CustomerinteractionTimer > 10.0f)
 					{
-						CustomerinteractionTimer = 0;
+						f_CustomerinteractionTimer = 0;
 						i_CashierAct = LOOKATCUSTOMER;
 						myNPCList[i]->setCharacterState(STATE_FORWARD);
 						myNPCList[j]->setCharacterState(STATE_IDLE);
@@ -2758,7 +2763,7 @@ void SceneSP::UpdateChattingman(double dt)
 				myNPCList[i]->setAnimationType(IDLE);
 				Zcon = myNPCList[i]->getZpos();
 				Xcon = myNPCList[i]->getXpos();
-				if(myNPCList[i]->getNPCTimer() > NPCLookLimiter)
+				if(myNPCList[i]->getNPCTimer() > f_NPCLookLimiter)
 				{
 					myNPCList[i]->setNPCTimer(0.0f);
 					myNPCList[i]->setYRotation(myNPCList[i]->getYRotation()+180.0f);
@@ -2943,18 +2948,18 @@ void SceneSP::UpdateLegAnimation(double dt)
 	{
 		if(myNPCList[i]->getAnimationType() == WALKING)
 		{
-			if(myNPCList[i]->getLeftLeg()>(maxlegRot))
+			if(myNPCList[i]->getLeftLeg()>(f_maxlegRot))
 				myNPCList[i]->setlegRotDir(true);
-			if(myNPCList[i]->getLeftLeg()<(-maxlegRot))
+			if(myNPCList[i]->getLeftLeg()<(-f_maxlegRot))
 				myNPCList[i]->setlegRotDir(false);
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() + (myNPCList[i]->getmoveSpd() * f_spdMod * float(dt)));
 			else
-				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
+				myNPCList[i]->setLeftLeg(myNPCList[i]->getLeftLeg() - (myNPCList[i]->getmoveSpd() * f_spdMod * float(dt)));
 			if(myNPCList[i]->getlegRotDir() == false)
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() - (myNPCList[i]->getmoveSpd() * f_spdMod * float(dt)));
 			else
-				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * spdMod * float(dt)));
+				myNPCList[i]->setRightLeg(myNPCList[i]->getRightLeg() + (myNPCList[i]->getmoveSpd() * f_spdMod * float(dt)));
 		}
 	}
 }
@@ -2970,20 +2975,20 @@ void SceneSP::UpdateCage(double dt)
 {
 	if(Application::IsKeyPressed('E') && ((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)))
 	{
-		diffX = camera.position.x-0.0f;
-		diffZ = camera.position.z-(65.0f);
-		diffY = camera.position.y-(-30.0f);
+		f_diffX = camera.position.x-0.0f;
+		f_diffZ = camera.position.z-(65.0f);
+		f_diffY = camera.position.y-(-30.0f);
 		camera.position.y = -30.0f;
-		camera.target.y -= diffY;
+		camera.target.y -= f_diffY;
 		camera.position.x = 0.0f;
-		camera.target.x -= diffX;
+		camera.target.x -= f_diffX;
 		camera.position.z = 65.0f;
-		camera.target.z -= diffZ;
-		diffX = diffZ = diffY = 0.0f;
-		caged = true;
-		if(easterTimer > easterLimiter)
+		camera.target.z -= f_diffZ;
+		f_diffX = f_diffZ = f_diffY = 0.0f;
+		b_caged = true;
+		if(f_easterTimer > f_easterLimiter)
 		{
-			easterTimer = resetValue;
+			f_easterTimer = f_resetValue;
 			if(!easter.openFromFile(soundFXArray[2]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
@@ -2992,29 +2997,29 @@ void SceneSP::UpdateCage(double dt)
 			easter.setVolume(50.0f);
 			easter.play();
 		}
-		if(!getCaged)
+		if(!b_getCaged)
 		{
-			getCaged = true;
-			getCounter++;
+			b_getCaged = true;
+			i_getCounter++;
 		}
 	}
-	if(caged)
+	if(b_caged)
 	{
-		cagedPos += 15 * float(dt);
-		if(cagedPos > 60)
+		f_cagedPos += 15 * float(dt);
+		if(f_cagedPos > 60)
 		{
-			caged = false;
-			cagedPos = -75.0f;
-			diffX = camera.position.x-(0.0f);
-			diffZ = camera.position.z-(100.0f);
-			diffY = camera.position.y-(4.5f);
+			b_caged = false;
+			f_cagedPos = -75.0f;
+			f_diffX = camera.position.x-(0.0f);
+			f_diffZ = camera.position.z-(100.0f);
+			f_diffY = camera.position.y-(4.5f);
 			camera.position.y = 4.5f;
-			camera.target.y -= diffY;
+			camera.target.y -= f_diffY;
 			camera.position.x = 0.0f;
-			camera.target.x -= diffX;
+			camera.target.x -= f_diffX;
 			camera.position.z = 100.0f;
-			camera.target.z -= diffZ;
-			diffX = diffZ = diffY = 0.0f;
+			camera.target.z -= f_diffZ;
+			f_diffX = f_diffZ = f_diffY = 0.0f;
 		}
 	}
 }
@@ -3028,17 +3033,17 @@ Updates the "gabe" easter egg based on dt
 /******************************************************************************/
 void SceneSP::UpdateGaben(double dt)
 {
-	if(Application::IsKeyPressed('G')&&summonG == 0)
-		summonG++;
-	if(Application::IsKeyPressed('A')&&summonG == 1)
-		summonG++;
-	if(Application::IsKeyPressed('B')&&summonG == 2)
-		summonG++;
-	if(Application::IsKeyPressed('E')&&summonG == 3)
-		summonG++;
-	if(Application::IsKeyPressed('N')&&summonG == 4)
+	if(Application::IsKeyPressed('G')&&i_summonG == 0)
+		i_summonG++;
+	if(Application::IsKeyPressed('A')&&i_summonG == 1)
+		i_summonG++;
+	if(Application::IsKeyPressed('B')&&i_summonG == 2)
+		i_summonG++;
+	if(Application::IsKeyPressed('E')&&i_summonG == 3)
+		i_summonG++;
+	if(Application::IsKeyPressed('N')&&i_summonG == 4)
 	{
-		gabed = true;
+		b_gabed = true;
 		if(!easter.openFromFile(soundFXArray[0]))
 		{
 			std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
@@ -3046,19 +3051,19 @@ void SceneSP::UpdateGaben(double dt)
 		easter.setLoop(false);
 		easter.setVolume(50.0f);
 		easter.play();
-		if(!getGabed)
+		if(!b_getGabed)
 		{
-			getGabed = true;
-			getCounter++;
+			b_getGabed = true;
+			i_getCounter++;
 		}
 	}
-	if(gabed)
-		moveG += 20 * float(dt);
-	if(moveG > 95)
+	if(b_gabed)
+		f_moveG += 20 * float(dt);
+	if(f_moveG > 95)
 	{
-		summonG = 0;
-		moveG = 0.0f;
-		gabed = false;
+		i_summonG = 0;
+		f_moveG = 0.0f;
+		b_gabed = false;
 	}
 }
 /******************************************************************************/
@@ -3073,11 +3078,11 @@ void SceneSP::UpdateTroll(double dt)
 {
 	if((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24))
 	{
-		if((camera.position.y > 10 && reversed == false) && Application::IsKeyPressed('E'))
+		if((camera.position.y > 10 && b_reversed == false) && Application::IsKeyPressed('E'))
 		{
-			if(easterTimer > easterLimiter)
+			if(f_easterTimer > f_easterLimiter)
 			{
-				easterTimer = resetValue;
+				f_easterTimer = f_resetValue;
 				if(!easter.openFromFile(soundFXArray[3]))
 				{
 					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
@@ -3086,18 +3091,18 @@ void SceneSP::UpdateTroll(double dt)
 				easter.setVolume(50.0f);
 				easter.play();
 			}
-			easterTimer = 0.0f;
-			reversed = true;
-			reverseTimer = 0.0f;
-			if(!getTrolled)
+			f_easterTimer = 0.0f;
+			b_reversed = true;
+			f_reverseTimer = 0.0f;
+			if(!b_getTrolled)
 			{
-				getTrolled = true;
-				getCounter++;
+				b_getTrolled = true;
+				i_getCounter++;
 			}
 		}
 	}
-	if(reverseTimer > reverseLimiter)
-		reversed = false;
+	if(f_reverseTimer > f_reverseLimiter)
+		b_reversed = false;
 }
 /******************************************************************************/
 /*!
@@ -3115,15 +3120,15 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 		((camera.position.x > -29.5f && camera.position.x < -28.0f) && (camera.position.z < -20.0f && camera.position.z > -22.5f))//rroll
 		)
 	{
-		inRange = true;//display interaction text
+		b_inRange = true;//display interaction text
 	}
 	else
-		inRange = false;
+		b_inRange = false;
 	if((camera.position.x > 36.0f && camera.position.x < 39.0f) && (camera.position.z < -6.0f && camera.position.z > -10.0f) && Application::IsKeyPressed('E'))
 	{//no time easter egg
-		if(easterTimer > easterLimiter)
+		if(f_easterTimer > f_easterLimiter)
 		{
-			easterTimer = 0.0f;
+			f_easterTimer = 0.0f;
 			if(!easter.openFromFile(soundFXArray[1]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
@@ -3131,18 +3136,18 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 			easter.setLoop(false);
 			easter.setVolume(50.0f);
 			easter.play();
-			if(!getTimed)
+			if(!b_getTimed)
 			{
-				getTimed = true;
-				getCounter++;
+				b_getTimed = true;
+				i_getCounter++;
 			}
 		}
 	}
 	if((camera.position.x > -29.5f && camera.position.x < -28.0f) && (camera.position.z < -20.0f && camera.position.z > -22.5f) && Application::IsKeyPressed('E'))
 	{
-		if(easterTimer > easterLimiter)
+		if(f_easterTimer > f_easterLimiter)
 		{
-			easterTimer = 0.0f;
+			f_easterTimer = 0.0f;
 			if(!easter.openFromFile(soundFXArray[4]))
 			{
 				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
@@ -3150,10 +3155,10 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 			easter.setLoop(false);
 			easter.setVolume(50.0f);
 			easter.play();
-			if(!getRicked)
+			if(!b_getRicked)
 			{
-				getRicked = true;
-				getCounter++;
+				b_getRicked = true;
+				i_getCounter++;
 			}
 		}
 	}
@@ -3172,9 +3177,9 @@ void SceneSP::RenderEasteregg()
 		RenderTroll();
 		RenderMiscEastereggs();
 		RenderTextOnScreen(meshList[GEO_TEXT], "Easter eggs found:"+s_easter_counter+"/"+s_easter_count, Color(1, 0, 0), 2.5,0, 31);
-		if(inRange)
+		if(b_inRange)
 			RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to interact",Color(0,1,0),2,1,16);
-		if(winEaster)
+		if(b_winEaster)
 		{
 			for(int i = 0;i<10;i++)
 			{
@@ -3194,15 +3199,15 @@ Renders miscellaneous easter eggs
 /******************************************************************************/
 void SceneSP::RenderMiscEastereggs()
 {
-	if(gabed)
-		RenderTGAUI(meshList[GEO_GABEN], 1, moveG, 30);
+	if(b_gabed)
+		RenderTGAUI(meshList[GEO_GABEN], 1, f_moveG, 30);
 	modelStack.PushMatrix();
 	modelStack.Translate(38.7f, 0.0f, -5.0f);
-	RenderMesh(meshList[GEO_EASTEREGG_4], toggleLight);
+	RenderMesh(meshList[GEO_EASTEREGG_4], b_toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PushMatrix();
 	modelStack.Translate(-29.5f, 17.0f, -26.0f);
-	RenderMesh(meshList[GEO_EASTEREGG_5], toggleLight);
+	RenderMesh(meshList[GEO_EASTEREGG_5], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -3222,17 +3227,17 @@ void SceneSP::RenderUI()
 	//If player is inspecting the item
 	if(b_inspection)
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,19);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Price of " + ptrplayer->getItem(i_inventoryPointing)->getName()+": $" +s_item_price,Color(0,1,0),2,1,19);
 	}
 	//If player is within return point zone and holding an item
-	if(checkReturnPoint() && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
+	if(checkReturnPoint() && (ptrplayer->getItem(i_inventoryPointing)->getName() != ptrEmpty->getName()))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(inventoryPointing)->getName(),Color(1.0f,1.0f,0.5f),2,20,20);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to return " + ptrplayer->getItem(i_inventoryPointing)->getName(),Color(1.0f,1.0f,0.5f),2,20,20);
 	}
 	//If player is within Cashier zone and holding an item
-	if(b_isWithinPayingCashier && (ptrplayer->getItem(inventoryPointing)->getName() != ptrEmpty->getName()))
+	if(b_isWithinPayingCashier && (ptrplayer->getItem(i_inventoryPointing)->getName() != ptrEmpty->getName()))
 	{
-		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pay for " + ptrplayer->getItem(inventoryPointing)->getName(),Color(0,1,0),2,20,20);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to pay for " + ptrplayer->getItem(i_inventoryPointing)->getName(),Color(0,1,0),2,20,20);
 	}
 	//If treasure hunting mode chosen
 	if(ptrplayer->getCharacterJob() == PLAY_TREASURE_HUNT)
@@ -3243,7 +3248,7 @@ void SceneSP::RenderUI()
 		}
 		RenderTextOnScreen(meshList[GEO_TEXT], "Checklist:", Color(1.0f,0.f,0.f), 3.f,0.f, 4.f+i_total_items_to_find);
 	}
-	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5.f,22.5f+(inventoryPointing*5.0f),2.5f);
+	RenderTGAInventory(meshList[GEO_ITEM_SELECT],5.f,22.5f+(i_inventoryPointing*5.0f),2.5f);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3.f,0.f, 28.f);
 	RenderTextOnScreen(meshList[GEO_TEXT], s_UI_Play_Mode[ptrplayer->getCharacterJob()] + " mode",Color(0,1,0),2.f,0.f,41.f);
 	RenderTextOnScreen(meshList[GEO_TEXT], "FPS: "+ s_fps, Color(1, 0, 0), 3.f,45.f, 28.f);
@@ -3258,14 +3263,14 @@ Renders the UI displayed while in the tug of war activity
 /******************************************************************************/
 void SceneSP::RenderTugofwarUI()
 {
-	if(win)
+	if(b_win)
 		RenderTextOnScreen(meshList[GEO_TEXT], "YOU WIN!!!!", Color(0, 1, 1), 4, 15, 5);
-	if(lose)
+	if(b_lose)
 		RenderTextOnScreen(meshList[GEO_TEXT], "YOU LOSE!!!!", Color(0, 1, 1), 4, 15, 5);
-	if(showTuginstruction)
+	if(b_showTuginstruction)
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'space' to tug!", Color(0, 1, 1), 3, 15, 9);
 	if((((camera.position.z > -2 && camera.position.z < 1.1) && (camera.position.x > 7 && camera.position.x < 13)) &&
-		IsIntugofwar == false) && camera.position.y <10
+		b_IsIntugofwar == false) && camera.position.y <10
 		)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 1), 3, 15, 10);
@@ -3359,7 +3364,7 @@ void SceneSP::Render()
 		RenderInstructionMenu();
 		break;
 
-		//Do win lose menu here
+		//Do b_win b_lose menu here
 	case WIN_LOSE_MENU:
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
 		RenderWinLoseMenu();
@@ -3395,38 +3400,38 @@ Renders the sky box of the scene
 void SceneSP::RenderSkyBox()
 {	
 	modelStack.PushMatrix();
-		modelStack.Translate(camera.position.x, camera.position.y-world_size/10, camera.position.z);
+		modelStack.Translate(camera.position.x, camera.position.y-f_world_size/10, camera.position.z);
 
 		modelStack.PushMatrix();
-			modelStack.Scale(world_size, world_size, world_size);
+			modelStack.Scale(f_world_size, f_world_size, f_world_size);
 			modelStack.Translate(0, 0.495f, -0.495f);
 			RenderMesh(meshList[GEO_FRONT], false);
 		modelStack.PopMatrix();
 
 
 		modelStack.PushMatrix();
-			modelStack.Scale(world_size, world_size, world_size);
+			modelStack.Scale(f_world_size, f_world_size, f_world_size);
 			modelStack.Translate(0, 0.495f, 0.495f);
 			modelStack.Rotate(180, 0 , 1, 0);
 			RenderMesh(meshList[GEO_BACK], false);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
-			modelStack.Scale(world_size, world_size, world_size);
+			modelStack.Scale(f_world_size, f_world_size, f_world_size);
 			modelStack.Translate(0, 0.965f, 0);
 			modelStack.Rotate(90, 1 ,0 ,0);
 			RenderMesh(meshList[GEO_TOP], false);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
-			modelStack.Scale(world_size, world_size, world_size);	
+			modelStack.Scale(f_world_size, f_world_size, f_world_size);	
 			modelStack.Translate(-0.495f, 0.495f, 0); 
 			modelStack.Rotate(90, 0 , 1, 0);
 			RenderMesh(meshList[GEO_LEFT], false);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
-			modelStack.Scale(world_size, world_size, world_size); 
+			modelStack.Scale(f_world_size, f_world_size, f_world_size); 
 			modelStack.Translate(0.495f,0.495f, 0);	
 			modelStack.Rotate(-90, 0 , 1, 0);
 			RenderMesh(meshList[GEO_RIGHT], false);
@@ -3436,7 +3441,7 @@ void SceneSP::RenderSkyBox()
 
 	modelStack.PushMatrix();
 		modelStack.Translate(0, -0.05f, 0);
-		modelStack.Scale( world_size, world_size, world_size);
+		modelStack.Scale( f_world_size, f_world_size, f_world_size);
 		modelStack.Rotate(-90, 1 ,0, 0);
 		RenderMesh(meshList[GEO_BOTTOM], false);
 	modelStack.PopMatrix();
@@ -3451,12 +3456,12 @@ Renders the elevator in the scene
 void SceneSP::RenderElevator()
 {
 	modelStack.PushMatrix();
-		modelStack.Translate(RenderElevatorPosX, elevatorY, RenderElevatorPosZ);
-		RenderMesh(meshList[GEO_ELEVATOR], toggleLight);
+		modelStack.Translate(f_RenderElevatorPosX, f_elevatorY, f_RenderElevatorPosZ);
+		RenderMesh(meshList[GEO_ELEVATOR], b_toggleLight);
 		modelStack.PushMatrix();
 
-		modelStack.Translate(ElevatorDoorPosX, elevatorDoorY,ElevatorDoorPosZ);
-		RenderMesh(meshList[GEO_ELEVATORDOOR], toggleLight);
+		modelStack.Translate(f_ElevatorDoorPosX, f_elevatorDoorY,f_ElevatorDoorPosZ);
+		RenderMesh(meshList[GEO_ELEVATORDOOR], b_toggleLight);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();     
 
@@ -3472,45 +3477,45 @@ void SceneSP::RenderFence()
 	modelStack.PushMatrix();
 
 		modelStack.Translate(-22.9f, 2.5f, -26.f);
-		RenderMesh(meshList[GEO_FENCE], toggleLight);
+		RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f, 0.0f, 4.9f);
-			RenderMesh(meshList[GEO_FENCE], toggleLight);
+			RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f, 0.0f, 10.f);
-			RenderMesh(meshList[GEO_FENCE], toggleLight);
+			RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 		modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-30.5f, 2.5f, -21.1f);
-		RenderMesh(meshList[GEO_FENCE], toggleLight);
+		RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-30.5f, 2.5f, -16.0f);
-		RenderMesh(meshList[GEO_FENCE], toggleLight);
+		RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-12.9f, 2.5f, -21.1f);
-		RenderMesh(meshList[GEO_FENCE], toggleLight);
+		RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f, 0.0f, 5.0f);
-			RenderMesh(meshList[GEO_FENCE], toggleLight);
+			RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-2.9f, 2.5f, -21.1f);
-		RenderMesh(meshList[GEO_FENCE], toggleLight);
+		RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f, 0.0f, 5.0f);
-			RenderMesh(meshList[GEO_FENCE], toggleLight);
+			RenderMesh(meshList[GEO_FENCE], b_toggleLight);
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
@@ -3525,19 +3530,19 @@ void SceneSP::RenderCashierTables()
 	modelStack.PushMatrix();
 		modelStack.Translate(-26.f, 0.f, -15.f);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_CASHIER], toggleLight);
+		RenderMesh(meshList[GEO_CASHIER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-16.f, 0.f, -15.f);
 	    modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_CASHIER], toggleLight);
+		RenderMesh(meshList[GEO_CASHIER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-6.f, 0.f, -15.f);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_CASHIER], toggleLight);
+		RenderMesh(meshList[GEO_CASHIER], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -3553,7 +3558,7 @@ void SceneSP::RenderTrolleys()
 		modelStack.PushMatrix();
 			modelStack.Translate(-37.f, 0.2f, 13.f+(i*2));
 			modelStack.Rotate(0,0,1,0);
-			RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+			RenderMesh(meshList[GEO_TROLLEY], b_toggleLight);
 		modelStack.PopMatrix();
 	}
 
@@ -3563,9 +3568,9 @@ void SceneSP::RenderTrolleys()
 			modelStack.Translate(camera.position.x,0,camera.position.z);
 		{
 			modelStack.PushMatrix();
-				modelStack.Rotate((180+trolleyrotation),0,1,0);
+				modelStack.Rotate((180+f_trolleyrotation),0,1,0);
 				modelStack.Translate(0,0,3.5);
-				RenderMesh(meshList[GEO_TROLLEY], toggleLight);
+				RenderMesh(meshList[GEO_TROLLEY], b_toggleLight);
 			modelStack.PopMatrix();
 		}
 		modelStack.PopMatrix();
@@ -3587,14 +3592,14 @@ void SceneSP::RenderHand()
 		Put item on hand
 		=============================*/
 		modelStack.PushMatrix();
-			modelStack.Rotate((180+handrotationleftandright),0,1,0);
-			modelStack.Translate(-0.2f,-4.5f,-1.f+handtranslation);
-			RenderMesh(meshList[GEO_HANDS], toggleLight);
+			modelStack.Rotate((180+f_handrotationleftandright),0,1,0);
+			modelStack.Translate(-0.2f,-4.5f,-1.f+f_handtranslation);
+			RenderMesh(meshList[GEO_HANDS], b_toggleLight);
 			if(ptrInvSelect->getName() != emptyItem.getName() && !(Application::IsKeyPressed('R')))
 			{
 			modelStack.PushMatrix();
 				modelStack.Translate(-0.6f,3.5f,3.f);
-				RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
+				RenderMesh(meshList[ptrInvSelect->getGeoType()],b_toggleLight);
 			modelStack.PopMatrix();
 
 			}
@@ -3607,13 +3612,13 @@ void SceneSP::RenderHand()
 	{
 		modelStack.PushMatrix();
 			modelStack.Translate(camera.target.x,camera.target.y-0.2f,camera.target.z);
-			modelStack.Rotate(handrotationleftandright+itemYrotation,0,1,0);
-			modelStack.Rotate(itemXrotation,1,0,0);
+			modelStack.Rotate(f_handrotationleftandright+f_itemYrotation,0,1,0);
+			modelStack.Rotate(f_itemXrotation,1,0,0);
 		modelStack.Scale(0.5f,0.5f,0.5f);
 		
 		if(ptrInvSelect->getName() != emptyItem.getName())
 		{
-			RenderMesh(meshList[ptrInvSelect->getGeoType()],toggleLight);
+			RenderMesh(meshList[ptrInvSelect->getGeoType()],b_toggleLight);
 		}
 		modelStack.PopMatrix();
 	}
@@ -3722,31 +3727,31 @@ void SceneSP::RenderCharacter(CNpc* npc)
 		modelStack.PushMatrix();
 
 			//head and body
-			RenderMesh(meshList[npc->getHeadType()], toggleLight);
+			RenderMesh(meshList[npc->getHeadType()], b_toggleLight);
 
 			//Left arm
 			modelStack.PushMatrix();
 				modelStack.Translate(0.3f , 0.f, 0.f);
 				modelStack.Rotate(npc->getLeftArm(),0.f,1.f,0.f);
-				RenderMesh(meshList[npc->getArmType()], toggleLight);
+				RenderMesh(meshList[npc->getArmType()], b_toggleLight);
 			modelStack.PopMatrix();
 				//Right arm
 			modelStack.PushMatrix();
 				modelStack.Translate(-0.3f , 0.f, 0.f);
 				modelStack.Rotate(npc->getRightArm(),0.f, 1.f,0.f);
-				RenderMesh(meshList[npc->getArmType()], toggleLight);
+				RenderMesh(meshList[npc->getArmType()], b_toggleLight);
 			modelStack.PopMatrix();
 			//leg and feet
 			modelStack.PushMatrix();
 				modelStack.Translate(0.2f, 2.3f, 0.f);
 				modelStack.Rotate(npc->getLeftLeg(),1.f,0.f,0.f);
-				RenderMesh(meshList[npc->getLegType()], toggleLight);
+				RenderMesh(meshList[npc->getLegType()], b_toggleLight);
 			modelStack.PopMatrix();
 			//leg and feet 
 			modelStack.PushMatrix();
 				modelStack.Translate(-0.2f, 2.3f, 0.f);
 				modelStack.Rotate(npc->getRightLeg(),1.f,0.f,0.f);
-				RenderMesh(meshList[npc->getLegType()], toggleLight);
+				RenderMesh(meshList[npc->getLegType()], b_toggleLight);
 			modelStack.PopMatrix();
 
 		modelStack.PopMatrix();
@@ -3765,15 +3770,15 @@ void SceneSP::RenderMainMenu()
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(0, 1, 0), 3, 23, 16);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(0, 1, 0), 3, 20, 15);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(0, 1, 0), 3, 23, 14);
-	if(selectionPointing == MENU_START)//If pointing at START button
+	if(i_selectionPointing == MENU_START)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_START], Color(1, 1, 0), 3, 23, 16);
 	}
-	if(selectionPointing == MENU_INSTRUCTIONS)//If pointing at START button
+	if(i_selectionPointing == MENU_INSTRUCTIONS)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_INSTRUCTIONS], Color(1, 1, 0), 3, 20, 15);
 	}
-	if(selectionPointing == MENU_EXIT)//If pointing at START button
+	if(i_selectionPointing == MENU_EXIT)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(1, 1, 0),  3, 23, 14);
 	}
@@ -3790,15 +3795,15 @@ void SceneSP::RenderSubMenu()
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(0, 1, 0), 3, 22, 16);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(0, 1, 0), 3, 20, 15);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(0, 1, 0), 3, 19, 14);
-	if(selectionPointing == MENU_FREE_ROAM)//If pointing at START button
+	if(i_selectionPointing == MENU_FREE_ROAM)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_FREE_ROAM], Color(1, 1, 0), 3, 22, 16);
 	}
-	if(selectionPointing == MENU_TREASURE_HUNT)//If pointing at START button
+	if(i_selectionPointing == MENU_TREASURE_HUNT)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_TREASURE_HUNT], Color(1, 1, 0),3, 20, 15);
 	}
-	if(selectionPointing == MENU_EASTER_EGG_HUNT)//If pointing at START button
+	if(i_selectionPointing == MENU_EASTER_EGG_HUNT)//If pointing at START button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0),  3, 19, 14);
 	}
@@ -3806,7 +3811,7 @@ void SceneSP::RenderSubMenu()
 /******************************************************************************/
 /*!
 \brief
-Renders the win / lose menu
+Renders the b_win / b_lose menu
 */
 /******************************************************************************/
 void SceneSP::RenderWinLoseMenu()
@@ -3854,11 +3859,11 @@ void SceneSP::RenderPauseMenu()
 
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(0, 1, 0), 3, 21, 15);
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(0, 1, 0), 3, 18, 14);
-	if(selectionPointing == MENU_RESUME) //If pointing at Resume button
+	if(i_selectionPointing == MENU_RESUME) //If pointing at Resume button
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_RESUME], Color(1, 1, 0), 3, 21, 15);
 	}
-	if(selectionPointing == MENU_BACK)
+	if(i_selectionPointing == MENU_BACK)
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 3, 18, 14);
 	}
@@ -4029,8 +4034,8 @@ Renders the entire supermarket
 void SceneSP::RenderSupermarket()
 {
 	modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_SUPERMARKET], toggleLight);
-	RenderMesh(meshList[GEO_STORAGEANDOFFICE], toggleLight);
+	RenderMesh(meshList[GEO_SUPERMARKET], b_toggleLight);
+	RenderMesh(meshList[GEO_STORAGEANDOFFICE], b_toggleLight);
 	RenderOffice();
 	RenderStorage();
 	RenderShelves();		//Render Shelves in Supermarket
@@ -4076,7 +4081,7 @@ void SceneSP::RenderShelves(CContainer* container)
 	modelStack.PushMatrix();
 		modelStack.Translate(container->getXpos(),container->getYpos(),container->getZpos());
 		modelStack.Rotate(container->getRotation(),0,1,0);
-		RenderMesh(meshList[GEO_SHELF],toggleLight);
+		RenderMesh(meshList[GEO_SHELF],b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4089,43 +4094,43 @@ void SceneSP::RenderDoors()
 {
 	//Front doors
 	modelStack.PushMatrix();
-		modelStack.Translate(moveDoorFront, 0.0f, 0.0f);
+		modelStack.Translate(f_moveDoorFront, 0.0f, 0.0f);
 
 		modelStack.PushMatrix();
 			modelStack.Translate(-25.0f, 0.0f, 30.5f);
-			RenderMesh(meshList[GEO_DOOR], toggleLight);
+			RenderMesh(meshList[GEO_DOOR], b_toggleLight);
 		modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-		modelStack.Translate(-moveDoorFront, 0.0f, 0.0f);
+		modelStack.Translate(-f_moveDoorFront, 0.0f, 0.0f);
 
 		modelStack.PushMatrix();
 			modelStack.Translate(-15.2f, 11.2f, 30.5f);
 			modelStack.Rotate(180,0,0,1);
-			RenderMesh(meshList[GEO_DOOR], toggleLight);
+			RenderMesh(meshList[GEO_DOOR], b_toggleLight);
 		modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 	//Back doors
 	modelStack.PushMatrix();
-		modelStack.Translate(moveDoorBack, 0.0f, 0.0f);
+		modelStack.Translate(f_moveDoorBack, 0.0f, 0.0f);
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(17.5f, 0.0f, -30.0f);
-			RenderMesh(meshList[GEO_DOOR], toggleLight);
+			RenderMesh(meshList[GEO_DOOR], b_toggleLight);
 		modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
-		modelStack.Translate(-moveDoorBack, 0.0f, 0.0f);
+		modelStack.Translate(-f_moveDoorBack, 0.0f, 0.0f);
 
 		modelStack.PushMatrix();
 			modelStack.Translate(27.3f, 11.2f, -30.0f);
 			modelStack.Rotate(180,0,0,1);
-			RenderMesh(meshList[GEO_DOOR], toggleLight);
+			RenderMesh(meshList[GEO_DOOR], b_toggleLight);
 		modelStack.PopMatrix();
 	
 	modelStack.PopMatrix();
@@ -4142,7 +4147,7 @@ void SceneSP::RenderSamples()
 	{
 		modelStack.PushMatrix();
 			modelStack.Translate(1.5f - (x * 1), 3.6f, 0.0f);
-			RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+			RenderMesh(meshList[GEO_CAN_SARDINE], b_toggleLight);
 		modelStack.PopMatrix();
 	}
 }
@@ -4155,8 +4160,8 @@ Renders the item return point
 void SceneSP::RenderReturnPoint()
 {
 	modelStack.PushMatrix();
-		modelStack.Translate(returnPointBoxPosX, returnPointBoxPosY, returnPointBoxPosZ);
-		RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+		modelStack.Translate(f_returnPointBoxPosX, f_returnPointBoxPosY, f_returnPointBoxPosZ);
+		RenderMesh(meshList[GEO_ICEBOX], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4170,7 +4175,7 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 	modelStack.PushMatrix();
 		modelStack.Translate(35.0f,0.0f,-5.0f);
 		modelStack.Rotate(90.0f,0,1,0);	
-		RenderMesh(meshList[GEO_SAMPLESTAND], toggleLight);
+		RenderMesh(meshList[GEO_SAMPLESTAND], b_toggleLight);
 		RenderSamples();
 	modelStack.PopMatrix();
 }
@@ -4185,7 +4190,7 @@ void SceneSP::RenderATM()
 	modelStack.PushMatrix();
 	modelStack.Translate(0.0f, 0.0f, 32.0f);
 	modelStack.Rotate(180.0f,0,1,0);
-	RenderMesh(meshList[GEO_ATM], toggleLight);
+	RenderMesh(meshList[GEO_ATM], b_toggleLight);
 	modelStack.PopMatrix();
 	if ((camera.position.x > -6 && camera.position.x < 7) && (camera.position.z > 32 && camera.position.z < 40))
 	{
@@ -4204,17 +4209,17 @@ void SceneSP::RenderIceBox()
 	modelStack.PushMatrix();
 	modelStack.Translate(37.0f, 0.0f, 25.0f);
 	modelStack.PushMatrix();
-	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	RenderMesh(meshList[GEO_ICEBOX], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0.0f,0.0f,-9.0f);
-	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	RenderMesh(meshList[GEO_ICEBOX], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(0.0f,0.0f,-18.0f);
-	RenderMesh(meshList[GEO_ICEBOX], toggleLight);
+	RenderMesh(meshList[GEO_ICEBOX], b_toggleLight);
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
@@ -4229,22 +4234,22 @@ void SceneSP::RenderMeatShelf()
 	//16,17,-28
 	modelStack.PushMatrix();
 	modelStack.Translate(13.0f, 17.0f, -26.0f);
-	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	RenderMesh(meshList[GEO_MEATSHELF], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(1.0f, 17.0f, -26.0f);
-	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	RenderMesh(meshList[GEO_MEATSHELF], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-11.0f, 17.0f, -26.0f);
-	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	RenderMesh(meshList[GEO_MEATSHELF], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 	modelStack.Translate(-23.0f, 17.0f, -26.0f);
-	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
+	RenderMesh(meshList[GEO_MEATSHELF], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4257,129 +4262,129 @@ void SceneSP::RenderBeerstand()
 {
 	modelStack.PushMatrix();//1st floor
 		modelStack.Translate(-21.0f,0.0f,11.0f);
-		RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+		RenderMesh(meshList[GEO_FOODSHELF], b_toggleLight);
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f,3.6f,0.0f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_1], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f,1.6f,2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_5], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f,1.6f,-2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_2], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(-2.5f,1.6f,0.0f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_2], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(-2.5f,1.6f,-2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_3], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(-2.5f,1.6f,2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_3], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(2.5f,1.6f,0.0f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_5], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(2.5f,1.6f,2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_4], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(2.5f,1.6f,-2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_4], b_toggleLight);
 		modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-19.0f,17.0f,0.0f);
-		RenderMesh(meshList[GEO_FOODSHELF], toggleLight);
+		RenderMesh(meshList[GEO_FOODSHELF], b_toggleLight);
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f,3.6f,0.0f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_1], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f,1.6f,2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_5], b_toggleLight);
 		modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 			modelStack.Translate(0.0f,1.6f,-2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_2], b_toggleLight);
 		modelStack.PopMatrix();
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(-2.5f,1.6f,0.0f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_2], b_toggleLight);
 		modelStack.PopMatrix();
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(-2.5f,1.6f,2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_3], b_toggleLight);
 		modelStack.PopMatrix();
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(-2.5f,1.6f,-2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_3], b_toggleLight);
 		modelStack.PopMatrix();
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(2.5f,1.6f,0.0f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_5], b_toggleLight);
 		modelStack.PopMatrix();
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(2.5f,1.6f,2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_4], b_toggleLight);
 		modelStack.PopMatrix();
 	
 		modelStack.PushMatrix();
 			modelStack.Translate(2.5f,1.6f,-2.5f);
-			RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+			RenderMesh(meshList[GEO_WINEBOTTLE_4], b_toggleLight);
 		modelStack.PopMatrix();
 
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-8.0f,17.0f,27.0f);
-		RenderMesh(meshList[GEO_WINEBOTTLE_5], toggleLight);
+		RenderMesh(meshList[GEO_WINEBOTTLE_5], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-8.0f,17.0f,25.0f);
-		RenderMesh(meshList[GEO_WINEBOTTLE_4], toggleLight);
+		RenderMesh(meshList[GEO_WINEBOTTLE_4], b_toggleLight);
 	modelStack.PopMatrix();
 
 		modelStack.PushMatrix();
 		modelStack.Translate(-8.0f,17.0f,29.0f);
-		RenderMesh(meshList[GEO_WINEBOTTLE_1], toggleLight);
+		RenderMesh(meshList[GEO_WINEBOTTLE_1], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-4.0f,17.0f,29.0f);
-		RenderMesh(meshList[GEO_WINEBOTTLE_2], toggleLight);
+		RenderMesh(meshList[GEO_WINEBOTTLE_2], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-4.0f,17.0f,25.0f);
-		RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
+		RenderMesh(meshList[GEO_WINEBOTTLE_3], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4393,7 +4398,7 @@ void SceneSP::RenderFerrisWheel()
 	modelStack.PushMatrix();
 		modelStack.Translate(0.0f,0.0f,260.0f);
 		modelStack.Scale(10,10,10);
-		RenderMesh(meshList[GEO_FERRIS], toggleLight);
+		RenderMesh(meshList[GEO_FERRIS], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4408,204 +4413,204 @@ void SceneSP::RenderBuilding()
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,32.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(75.0f,0.0f,65.0f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,97.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(75.0f,0.0f,130.0f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,162.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(75.0f,0.0f,195.0f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,227.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(33.0f,0.0f,326.5f);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-28.0f,0.0f,326.5f);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(100.0f,0.0f,310.0f);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-95.0f,0.0f,310.0f);
 		modelStack.Rotate(180,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	//---
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,32.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-75.0f,0.0f,65.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,97.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-75.0f,0.0f,130.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 		
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,162.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-75.0f,0.0f,195.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,227.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	//--
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,-32.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(75.0f,0.0f,-65.0f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,-97.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(75.0f,0.0f,-130.0f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,-162.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(75.0f,0.0f,-195.0f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 		modelStack.Translate(150.0f,0.0f,-227.5f);
 		modelStack.Rotate(-90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(28.0f,0.0f,-260.0f);
 		modelStack.Rotate(0,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	//
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,-32.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-75.0f,0.0f,-65.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 	
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,-97.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-75.0f,0.0f,-130.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,-162.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-75.0f,0.0f,-195.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-150.0f,0.0f,-227.5f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(-32.0f,0.0f,-260.0f);
-		RenderMesh(meshList[GEO_BUILDING], toggleLight);
+		RenderMesh(meshList[GEO_BUILDING], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4616,12 +4621,12 @@ Renders the tug of war activity
 /******************************************************************************/
 void SceneSP::RenderTug()
 {
-	if(IsIntugofwar)
+	if(b_IsIntugofwar)
 	{
 		modelStack.PushMatrix();
 			modelStack.Translate(myNPCList[0]->getXpos()+2.f,myNPCList[0]->getYpos()+3.6f,myNPCList[0]->getZpos()-1.f);
 			modelStack.Rotate(90,0,0,1);
-			RenderMesh(meshList[GEO_CAN_SARDINE], toggleLight);
+			RenderMesh(meshList[GEO_CAN_SARDINE], b_toggleLight);
 		modelStack.PopMatrix();
 	}
 }
@@ -4639,7 +4644,7 @@ void SceneSP::RenderItem()
 		{
 			modelStack.PushMatrix();
 				modelStack.Translate(myStockList[i]->getXpos(),myStockList[i]->getYpos(),myStockList[i]->getZpos());
-				RenderMesh(meshList[myStockList[i]->getGeoType()],toggleLight);
+				RenderMesh(meshList[myStockList[i]->getGeoType()],b_toggleLight);
 			modelStack.PopMatrix();
 		}
 	}
@@ -4668,49 +4673,49 @@ void SceneSP::RenderOffice()
 	modelStack.PushMatrix();
 		modelStack.Translate(37.0f, 17.0f, 14.0f);
 		modelStack.Rotate(270,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(37.0f, 17.0f, 18.0f);
 		modelStack.Rotate(270,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(37.0f, 17.0f, 22.0f);
 		modelStack.Rotate(270,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(37.0f, 17.0f, 26.0f);
 		modelStack.Rotate(270,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(22.0f, 17.0f, 14.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(22.0f, 17.0f, 18.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(23.0f, 17.0f, 22.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 
 	modelStack.PushMatrix();
 		modelStack.Translate(23.0f, 17.0f, 26.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
+		RenderMesh(meshList[GEO_OFFICECOMPUTER], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4726,7 +4731,7 @@ void SceneSP::RenderStorage()
 		modelStack.PushMatrix();
 			modelStack.Translate(36.0f, 17.0f, -14.0f-(i*4));
 			modelStack.Rotate(270,0,1,0);
-			RenderMesh(meshList[GEO_BOX], toggleLight);
+			RenderMesh(meshList[GEO_BOX], b_toggleLight);
 		modelStack.PopMatrix();
 	}
 	for(int i=0;i<4;i++)
@@ -4734,13 +4739,13 @@ void SceneSP::RenderStorage()
 		modelStack.PushMatrix();
 			modelStack.Translate(24.0f, 17.0f, -14.0f-(i*4));
 			modelStack.Rotate(270,0,1,0);
-			RenderMesh(meshList[GEO_BOX], toggleLight);
+			RenderMesh(meshList[GEO_BOX], b_toggleLight);
 		modelStack.PopMatrix();
 	}
 	modelStack.PushMatrix();
 		modelStack.Translate(30.0f, 17.0f, -26.0f);
 		modelStack.Rotate(90,0,1,0);
-		RenderMesh(meshList[GEO_BOX], toggleLight);
+		RenderMesh(meshList[GEO_BOX], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4753,14 +4758,14 @@ void SceneSP::RenderCage()
 {
 	modelStack.PushMatrix();
 		modelStack.Translate(42.7f, 0.0f, -27.0f);
-		RenderMesh(meshList[GEO_EASTEREGG_6], toggleLight);
+		RenderMesh(meshList[GEO_EASTEREGG_6], b_toggleLight);
 	modelStack.PopMatrix();
-	if(caged)
+	if(b_caged)
 	{
 		modelStack.PushMatrix();
 
 			modelStack.PushMatrix();
-				modelStack.Translate(0.0f, -30.0f, cagedPos);
+				modelStack.Translate(0.0f, -30.0f, f_cagedPos);
 				modelStack.Scale(50.0f,50.0f,50.0f);
 				RenderMesh(meshList[GEO_CAGE], true);
 			modelStack.PopMatrix();
@@ -4811,11 +4816,11 @@ Renders the "troll" easter egg
 /******************************************************************************/
 void SceneSP::RenderTroll()
 {
-	if(reversed)	//RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
+	if(b_reversed)	//RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
 		RenderTextOnScreen(meshList[GEO_TEXT], "Reversed!", Color(1, 1, 0), 3, 18, 19);
 	modelStack.PushMatrix();
 		modelStack.Translate(33.0f, 17.0f, -27.0f);
-		RenderMesh(meshList[GEO_EASTEREGG_3], toggleLight);
+		RenderMesh(meshList[GEO_EASTEREGG_3], b_toggleLight);
 	modelStack.PopMatrix();
 }
 /******************************************************************************/
@@ -4836,9 +4841,9 @@ void SceneSP::checkPickUpItem()
 		if(myStockList[i]->getActiveState()) //If Item is available for taking
 		{
 			//Distance between Camera Target and Item position = Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
-			magnitudeFromTarget = sqrt( (camera.target.x - myStockList[i]->getXpos()+itemXoffset) *(camera.target.x - myStockList[i]->getXpos()+itemXoffset) 
-				+ (camera.target.y - myStockList[i]->getYpos()+itemYoffset) * (camera.target.y - myStockList[i]->getYpos()+itemYoffset) 
-				+ (camera.target.z - myStockList[i]->getZpos()+itemZoffset) * (camera.target.z - myStockList[i]->getZpos()+itemZoffset));
+			magnitudeFromTarget = sqrt( (camera.target.x - myStockList[i]->getXpos()+f_itemXoffset) *(camera.target.x - myStockList[i]->getXpos()+f_itemXoffset) 
+				+ (camera.target.y - myStockList[i]->getYpos()+f_itemYoffset) * (camera.target.y - myStockList[i]->getYpos()+f_itemYoffset) 
+				+ (camera.target.z - myStockList[i]->getZpos()+f_itemZoffset) * (camera.target.z - myStockList[i]->getZpos()+f_itemZoffset));
 
 
 			//Get lowest magnitude of Item from target
@@ -4846,11 +4851,11 @@ void SceneSP::checkPickUpItem()
 			{
 				previous = magnitudeFromTarget;
 				//Distance between Camera Position and Item position= Sqrt( (x2-x1)^2 + (y2-y1)^2 + (z2-z1)^2 )
-				magnitudeFromPosition = sqrt( (camera.position.x - myStockList[i]->getXpos()+itemXoffset) *(camera.position.x - myStockList[i]->getXpos()+itemXoffset) 
-					+ (camera.position.y - myStockList[i]->getYpos()+itemYoffset) * (camera.position.y - myStockList[i]->getYpos()+itemYoffset) 
-					+ (camera.position.z - myStockList[i]->getZpos()+itemZoffset) * (camera.position.z - myStockList[i]->getZpos()+itemZoffset));
+				magnitudeFromPosition = sqrt( (camera.position.x - myStockList[i]->getXpos()+f_itemXoffset) *(camera.position.x - myStockList[i]->getXpos()+f_itemXoffset) 
+					+ (camera.position.y - myStockList[i]->getYpos()+f_itemYoffset) * (camera.position.y - myStockList[i]->getYpos()+f_itemYoffset) 
+					+ (camera.position.z - myStockList[i]->getZpos()+f_itemZoffset) * (camera.position.z - myStockList[i]->getZpos()+f_itemZoffset));
 
-				if(magnitudeFromPosition <= interactionDistance)
+				if(magnitudeFromPosition <= f_interactionDistance)
 				{
 					chosen = i;
 					b_isWithinInteractionItem = true;
@@ -4869,14 +4874,14 @@ void SceneSP::checkPickUpItem()
 		}
 
 	}
-	if(Application::IsKeyPressed('E') && (interactionTimer > interactionTimerLimiter) && myStockList[chosen]->getActiveState() && b_isWithinInteractionItem)
+	if(Application::IsKeyPressed('E') && (f_interactionTimer > f_interactionTimerLimiter) && myStockList[chosen]->getActiveState() && b_isWithinInteractionItem)
 	{
-		if(ptrplayer->getItem(inventoryPointing)->getName() == emptyItem.getName())
+		if(ptrplayer->getItem(i_inventoryPointing)->getName() == emptyItem.getName())
 		{
 			addToInventory(myStockList[chosen]);
 			myStockList[chosen]->setActiveState(false);
 			std::cout << "Item " <<myStockList[chosen]->getName() << " removed! \n";
-			ptrInvSelect = ptrplayer->getItem(inventoryPointing);
+			ptrInvSelect = ptrplayer->getItem(i_inventoryPointing);
 		}
 	}
 }
@@ -4915,7 +4920,7 @@ void SceneSP::checkCollision()
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)//NPC collision
 		checkObjectCollision(myNPCList[i]->getXpos(),myNPCList[i]->getYpos(), myNPCList[i]->getZpos(), 2.0f, 2.0f);
 	for(unsigned int i = 0; i< myContainerList.size(); ++i)//Shelf collision
-		checkObjectCollision(myContainerList[i]->getXpos(), myContainerList[i]->getYpos(), myContainerList[i]->getZpos(), ShelfWidthX, ShelfWidthZ);
+		checkObjectCollision(myContainerList[i]->getXpos(), myContainerList[i]->getYpos(), myContainerList[i]->getZpos(), f_ShelfWidthX, f_ShelfWidthZ);
 	checkObjectCollision(35.0f, 0.0f, -5.0f, 2.0f, 4.0f);//sample stand
 	checkObjectCollision(75.0f, 0.0f, 65.0f, 32.0f, 32.0f);//outside buildings
 	checkObjectCollision(75.0f, 0.0f, 130.0f, 32.0f, 32.0f);
@@ -4944,37 +4949,37 @@ void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float wid
 {
 	if((camera.position.y - posY < 10) && (camera.position.y - posY > 0))
 	{
-		if((camera.position.x > (posX + widthX - (Coffset)) && camera.position.x < (posX + widthX)) && 
-			(camera.position.z > (posZ - widthZ + (Coffset/2)) && camera.position.z < (posZ + widthZ - (Coffset/2))))
+		if((camera.position.x > (posX + widthX - (f_Coffset)) && camera.position.x < (posX + widthX)) && 
+			(camera.position.z > (posZ - widthZ + (f_Coffset/2)) && camera.position.z < (posZ + widthZ - (f_Coffset/2))))
 		{
-			diffX = camera.position.x - (posX + widthX);
+			f_diffX = camera.position.x - (posX + widthX);
 			camera.position.x = posX + widthX;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
-		if((camera.position.x > (posX - widthX) && camera.position.x < (posX - widthX + Coffset)) && 
-			(camera.position.z > (posZ - widthZ + (Coffset / 2)) && camera.position.z < (posZ + widthZ - (Coffset / 2))))
+		if((camera.position.x > (posX - widthX) && camera.position.x < (posX - widthX + f_Coffset)) && 
+			(camera.position.z > (posZ - widthZ + (f_Coffset / 2)) && camera.position.z < (posZ + widthZ - (f_Coffset / 2))))
 		{
-			diffX = camera.position.x - (posX - widthX);
+			f_diffX = camera.position.x - (posX - widthX);
 			camera.position.x = posX- widthX;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
-		if((camera.position.x > (posX - widthX+ (Coffset / 2)) && camera.position.x < (posX + widthX)- (Coffset / 2)) && 
-			(camera.position.z > (posZ - widthZ) && camera.position.z < (posZ - widthZ + Coffset)))
+		if((camera.position.x > (posX - widthX+ (f_Coffset / 2)) && camera.position.x < (posX + widthX)- (f_Coffset / 2)) && 
+			(camera.position.z > (posZ - widthZ) && camera.position.z < (posZ - widthZ + f_Coffset)))
 		{
-			diffZ = camera.position.z - (posZ - widthZ);
+			f_diffZ = camera.position.z - (posZ - widthZ);
 			camera.position.z = posZ - widthZ;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
-		if((camera.position.x > (posX - widthX+ (Coffset / 2)) && camera.position.x < (posX + widthX)- (Coffset / 2)) && 
-			(camera.position.z > (posZ + widthZ - Coffset) && camera.position.z < (posZ + widthZ)))
+		if((camera.position.x > (posX - widthX+ (f_Coffset / 2)) && camera.position.x < (posX + widthX)- (f_Coffset / 2)) && 
+			(camera.position.z > (posZ + widthZ - f_Coffset) && camera.position.z < (posZ + widthZ)))
 		{
-			diffZ = camera.position.z - (posZ + widthZ);
+			f_diffZ = camera.position.z - (posZ + widthZ);
 			camera.position.z = posZ + widthZ;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
 	}
 }
@@ -4986,128 +4991,128 @@ Checks for the collision of the supermarket
 /******************************************************************************/
 void SceneSP::checkSupermarketCollision()
 {
-	if((camera.position.x > boundX1 && camera.position.x < boundX2) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
+	if((camera.position.x > f_boundX1 && camera.position.x < f_boundX2) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ2))
 	{
-		diffX = camera.position.x - (boundX1);
-		camera.position.x = boundX1;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		f_diffX = camera.position.x - (f_boundX1);
+		camera.position.x = f_boundX1;
+		camera.target.x -= f_diffX;
+		f_diffX = 0.0f;
 	}
-	if((camera.position.x > boundX2 && camera.position.x < boundX3) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
+	if((camera.position.x > f_boundX2 && camera.position.x < f_boundX3) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ2))
 	{
-		diffX = camera.position.x - (boundX3);
-		camera.position.x = boundX3;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		f_diffX = camera.position.x - (f_boundX3);
+		camera.position.x = f_boundX3;
+		camera.target.x -= f_diffX;
+		f_diffX = 0.0f;
 	}
-	if((camera.position.x > boundX1 && camera.position.x < boundX5) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
+	if((camera.position.x > f_boundX1 && camera.position.x < f_boundX5) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ3))
 	{
-		diffZ = camera.position.z - (boundZ1);
-		camera.position.z = boundZ1;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ1);
+		camera.position.z = f_boundZ1;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX1 && camera.position.x < boundX5) && (camera.position.z > boundZ3 && camera.position.z < boundZ6))
+	if((camera.position.x > f_boundX1 && camera.position.x < f_boundX5) && (camera.position.z > f_boundZ3 && camera.position.z < f_boundZ6))
 	{
-		diffZ = camera.position.z - (boundZ6);
-		camera.position.z = boundZ6;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ6);
+		camera.position.z = f_boundZ6;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX1 && camera.position.x < boundX6) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
+	if((camera.position.x > f_boundX1 && camera.position.x < f_boundX6) && (camera.position.z > f_boundZ4 && camera.position.z < f_boundZ2))
 	{
-		diffZ = camera.position.z - (boundZ2);
-		camera.position.z = boundZ2;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ2);
+		camera.position.z = f_boundZ2;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX1 && camera.position.x < boundX6) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
+	if((camera.position.x > f_boundX1 && camera.position.x < f_boundX6) && (camera.position.z > f_boundZ5 && camera.position.z < f_boundZ4))
 	{
-		diffZ = camera.position.z - (boundZ5);
-		camera.position.z = boundZ5;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ5);
+		camera.position.z = f_boundZ5;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX10 && camera.position.x < boundX4) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
+	if((camera.position.x > f_boundX10 && camera.position.x < f_boundX4) && (camera.position.z > f_boundZ4 && camera.position.z < f_boundZ2))
 	{
-		diffZ = camera.position.z - (boundZ2);
-		camera.position.z = boundZ2;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ2);
+		camera.position.z = f_boundZ2;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX10 && camera.position.x < boundX4) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
+	if((camera.position.x > f_boundX10 && camera.position.x < f_boundX4) && (camera.position.z > f_boundZ5 && camera.position.z < f_boundZ4))
 	{
-		diffZ = camera.position.z - (boundZ5);
-		camera.position.z = boundZ5;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ5);
+		camera.position.z = f_boundZ5;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX7 && camera.position.x < boundX4) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
+	if((camera.position.x > f_boundX7 && camera.position.x < f_boundX4) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ2))
 	{
-		diffX = camera.position.x - (boundX4);
-		camera.position.x = boundX4;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		f_diffX = camera.position.x - (f_boundX4);
+		camera.position.x = f_boundX4;
+		camera.target.x -= f_diffX;
+		f_diffX = 0.0f;
 	}
-	if((camera.position.x > boundX8 && camera.position.x < boundX7) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
+	if((camera.position.x > f_boundX8 && camera.position.x < f_boundX7) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ2))
 	{
-		diffX = camera.position.x - (boundX8);
-		camera.position.x = boundX8;
-		camera.target.x -= diffX;
-		diffX = 0.0f;
+		f_diffX = camera.position.x - (f_boundX8);
+		camera.position.x = f_boundX8;
+		camera.target.x -= f_diffX;
+		f_diffX = 0.0f;
 	}
-	if((camera.position.x > boundX9 && camera.position.x < boundX4) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
+	if((camera.position.x > f_boundX9 && camera.position.x < f_boundX4) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ3))
 	{
-		diffZ = camera.position.z - (boundZ1);
-		camera.position.z = boundZ1;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ1);
+		camera.position.z = f_boundZ1;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
-	if((camera.position.x > boundX9 && camera.position.x < boundX4) && (camera.position.z > boundZ3 && camera.position.z < boundZ6))
+	if((camera.position.x > f_boundX9 && camera.position.x < f_boundX4) && (camera.position.z > f_boundZ3 && camera.position.z < f_boundZ6))
 	{
-		diffZ = camera.position.z - (boundZ6);
-		camera.position.z = boundZ6;
-		camera.target.z -= diffZ;
-		diffZ = 0.0f;
+		f_diffZ = camera.position.z - (f_boundZ6);
+		camera.position.z = f_boundZ6;
+		camera.target.z -= f_diffZ;
+		f_diffZ = 0.0f;
 	}
 	if(camera.position.y > 10)
 	{//top floor
-		if((camera.position.x > boundX6 && camera.position.x < boundX10) && (camera.position.z > boundZ4 && camera.position.z < boundZ2))
+		if((camera.position.x > f_boundX6 && camera.position.x < f_boundX10) && (camera.position.z > f_boundZ4 && camera.position.z < f_boundZ2))
 		{
-			diffZ = camera.position.z - (boundZ2);
-			camera.position.z = boundZ2;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			f_diffZ = camera.position.z - (f_boundZ2);
+			camera.position.z = f_boundZ2;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
-		if((camera.position.x > boundX6 && camera.position.x < boundX10) && (camera.position.z > boundZ5 && camera.position.z < boundZ4))
+		if((camera.position.x > f_boundX6 && camera.position.x < f_boundX10) && (camera.position.z > f_boundZ5 && camera.position.z < f_boundZ4))
 		{
-			diffZ = camera.position.z - (boundZ5);
-			camera.position.z = boundZ5;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			f_diffZ = camera.position.z - (f_boundZ5);
+			camera.position.z = f_boundZ5;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
-		if((camera.position.x > boundX5 && camera.position.x < boundX9) && (camera.position.z > boundZ1 && camera.position.z < boundZ3))
+		if((camera.position.x > f_boundX5 && camera.position.x < f_boundX9) && (camera.position.z > f_boundZ1 && camera.position.z < f_boundZ3))
 		{
-			diffZ = camera.position.z - (boundZ1);
-			camera.position.z = boundZ1;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			f_diffZ = camera.position.z - (f_boundZ1);
+			camera.position.z = f_boundZ1;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
-		if((camera.position.x > boundX5 && camera.position.x < boundX9) && (camera.position.z > boundZ3 && camera.position.z < boundZ6))
+		if((camera.position.x > f_boundX5 && camera.position.x < f_boundX9) && (camera.position.z > f_boundZ3 && camera.position.z < f_boundZ6))
 		{
-			diffZ = camera.position.z - (boundZ6);
-			camera.position.z = boundZ6;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			f_diffZ = camera.position.z - (f_boundZ6);
+			camera.position.z = f_boundZ6;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
 		if(((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > -23 && camera.position.z < -8)) ||
 			((camera.position.x > 18 && camera.position.x < 18+2) && (camera.position.z > 10 && camera.position.z < 26.5f))
 			)
 		{//logistic staff room
-			diffX = camera.position.x - (18);
+			f_diffX = camera.position.x - (18);
 			camera.position.x = 18;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
 		
 		}
@@ -5115,45 +5120,45 @@ void SceneSP::checkSupermarketCollision()
 	{
 		if((camera.position.x > -36 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 39))
 		{
-			diffX = camera.position.x - (-34);
+			f_diffX = camera.position.x - (-34);
 			camera.position.x = -34;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
 		if((camera.position.x > -38 && camera.position.x < -34) && (camera.position.z > 10 && camera.position.z < 12))
 		{
-			diffZ = camera.position.z - (10);
+			f_diffZ = camera.position.z - (10);
 			camera.position.z = 10;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
 		if(camera.position.z > 222 && camera.position.z < 225)
 		{
-			diffZ = camera.position.z - (222);
+			f_diffZ = camera.position.z - (222);
 			camera.position.z = 222;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
 		if(camera.position.z > -225 && camera.position.z < -222)
 		{
-			diffZ = camera.position.z - (-222);
+			f_diffZ = camera.position.z - (-222);
 			camera.position.z = -222;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
 		if(camera.position.x > 104 && camera.position.x < 107)
 		{
-			diffX = camera.position.x - (104);
+			f_diffX = camera.position.x - (104);
 			camera.position.x = 104;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
 		if(camera.position.x > -107 && camera.position.x < -104)
 		{
-			diffX = camera.position.x - (-104);
+			f_diffX = camera.position.x - (-104);
 			camera.position.x = -104;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
 	}
 }
@@ -5167,46 +5172,46 @@ void SceneSP::checkElevatorCollision()
 {
 	if(camera.position.y < 10)
 	{
-		if((camera.position.x > EboundX1 && camera.position.x < EboundX2) && (camera.position.z > EboundZ1 && camera.position.z < EboundZ2))
+		if((camera.position.x > f_EboundX1 && camera.position.x < f_EboundX2) && (camera.position.z > f_EboundZ1 && camera.position.z < f_EboundZ2))
 		{//Inner
-			diffX = camera.position.x - (EboundX1);
-			camera.position.x = EboundX1;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			f_diffX = camera.position.x - (f_EboundX1);
+			camera.position.x = f_EboundX1;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
 	}
 	if(camera.position.y > 10)
 	{
-		if((camera.position.x > EboundX1 && camera.position.x < EboundX2) && (camera.position.z > EboundZ1 && camera.position.z < EboundZ3))
+		if((camera.position.x > f_EboundX1 && camera.position.x < f_EboundX2) && (camera.position.z > f_EboundZ1 && camera.position.z < f_EboundZ3))
 		{//Inner top
-			diffX = camera.position.x - (EboundX1);
-			camera.position.x = EboundX1;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			f_diffX = camera.position.x - (f_EboundX1);
+			camera.position.x = f_EboundX1;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
-		if((camera.position.x > EboundX2 && camera.position.x < EboundX3) && (camera.position.z > EboundZ1 && camera.position.z < EboundZ3))
+		if((camera.position.x > f_EboundX2 && camera.position.x < f_EboundX3) && (camera.position.z > f_EboundZ1 && camera.position.z < f_EboundZ3))
 		{//Outer top
-			diffX = camera.position.x - (EboundX3);
-			camera.position.x = EboundX3;
-			camera.target.x -= diffX;
-			diffX = 0.0f;
+			f_diffX = camera.position.x - (f_EboundX3);
+			camera.position.x = f_EboundX3;
+			camera.target.x -= f_diffX;
+			f_diffX = 0.0f;
 		}
 	}
-	if(!elevatorDoorOpening)
+	if(!b_elevatorDoorOpening)
 	{
-		if((camera.position.x > RenderElevatorPosX-4 && camera.position.x < RenderElevatorPosX+4) && (camera.position.z > RenderElevatorPosZ+4 && camera.position.z < RenderElevatorPosZ+6))
+		if((camera.position.x > f_RenderElevatorPosX-4 && camera.position.x < f_RenderElevatorPosX+4) && (camera.position.z > f_RenderElevatorPosZ+4 && camera.position.z < f_RenderElevatorPosZ+6))
 		{//Outer elevator door
-			diffZ = camera.position.z - (RenderElevatorPosZ+6);
-			camera.position.z = RenderElevatorPosZ+6;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			f_diffZ = camera.position.z - (f_RenderElevatorPosZ+6);
+			camera.position.z = f_RenderElevatorPosZ+6;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
-		if((camera.position.x > RenderElevatorPosX-4 && camera.position.x < RenderElevatorPosX+4) && (camera.position.z > RenderElevatorPosZ+2 && camera.position.z < RenderElevatorPosZ+4))
+		if((camera.position.x > f_RenderElevatorPosX-4 && camera.position.x < f_RenderElevatorPosX+4) && (camera.position.z > f_RenderElevatorPosZ+2 && camera.position.z < f_RenderElevatorPosZ+4))
 		{//Inner elevator door
-			diffZ = camera.position.z - (RenderElevatorPosZ+2);
-			camera.position.z = RenderElevatorPosZ+2;
-			camera.target.z -= diffZ;
-			diffZ = 0.0f;
+			f_diffZ = camera.position.z - (f_RenderElevatorPosZ+2);
+			camera.position.z = f_RenderElevatorPosZ+2;
+			camera.target.z -= f_diffZ;
+			f_diffZ = 0.0f;
 		}
 	}
 }
@@ -5220,20 +5225,20 @@ bool SceneSP::checkReturnPoint()
 {
 	
 	//If within RETURN POINT boundary
-	if((camera.position.x > returnPointBoxPosX-returnPointBoxWidthOffset)&& camera.position.x < (returnPointBoxPosX+returnPointBoxInteractionWidth+returnPointBoxWidthOffset))
+	if((camera.position.x > f_returnPointBoxPosX-f_returnPointBoxWidthOffset)&& camera.position.x < (f_returnPointBoxPosX+f_returnPointBoxInteractionWidth+f_returnPointBoxWidthOffset))
 	{
-		if(camera.position.z > (returnPointBoxPosZ - returnPointBoxInteractionLength) && camera.position.z < (returnPointBoxPosZ + returnPointBoxInteractionLength))
+		if(camera.position.z > (f_returnPointBoxPosZ - f_returnPointBoxInteractionLength) && camera.position.z < (f_returnPointBoxPosZ + f_returnPointBoxInteractionLength))
 		{
-			if(camera.position.y > returnPointBoxPosY && camera.position.y < (returnPointBoxPosY + returnPointBoxInteractionHeight))
+			if(camera.position.y > f_returnPointBoxPosY && camera.position.y < (f_returnPointBoxPosY + f_returnPointBoxInteractionHeight))
 			{
 				//If triggering interaction
-				if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
+				if(Application::IsKeyPressed('E') && f_interactionTimer > f_interactionTimerLimiter)
 				{
 					//Is within boundary
-					interactionTimer = 0;
-					std::cout << "Item returned: " <<ptrplayer->getItem(inventoryPointing)->getName() << std::endl;
-					ptrplayer->setInventory(&emptyItem,inventoryPointing);
-					ptrInvSelect = ptrplayer->getItem(inventoryPointing);
+					f_interactionTimer = 0;
+					std::cout << "Item returned: " <<ptrplayer->getItem(i_inventoryPointing)->getName() << std::endl;
+					ptrplayer->setInventory(&emptyItem,i_inventoryPointing);
+					ptrInvSelect = ptrplayer->getItem(i_inventoryPointing);
 
 				}
 				return true;
@@ -5298,15 +5303,15 @@ void SceneSP::checkWinLose()
 	}
 
 
-	if(closeEaster)
+	if(b_closeEaster)
 	{
-		getCaged = false;
-		getGabed = false;
-		getTrolled = false;
-		getTimed = false;
-		getCounter = 0;
-		winEaster = false;
-		closeEaster = false;
+		b_getCaged = false;
+		b_getGabed = false;
+		b_getTrolled = false;
+		b_getTimed = false;
+		i_getCounter = 0;
+		b_winEaster = false;
+		b_closeEaster = false;
 		i_menuHandle = WIN_LOSE_MENU;
 	}
 }
@@ -5336,4 +5341,15 @@ void SceneSP::Exit()
 	glDeleteVertexArrays(1, &m_vertexArrayID);
 	glDeleteProgram(m_programID);
 }
-
+/******************************************************************************/
+/*!
+\brief
+Get boolean if player is quiting
+\return
+boolean of quit
+*/
+/******************************************************************************/
+bool SceneSP::getQuit()
+{
+	return b_quit;
+}

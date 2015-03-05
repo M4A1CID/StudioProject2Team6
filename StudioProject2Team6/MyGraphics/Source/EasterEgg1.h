@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	EasterEgg1.h
+\author Edmund Ang
+\brief
+Header File for EasterEgg1 item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

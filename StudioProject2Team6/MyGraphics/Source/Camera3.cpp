@@ -70,12 +70,12 @@ void Camera3::UpdateMovement(double dt, bool reverse)
 		right.Normalize();
 		if(reverse)
 		{
-			position += right * CAMERA_SPEED *runMultiplyer* dt;
-			target += right * CAMERA_SPEED *runMultiplyer* dt;
+			position += right * CAMERA_SPEED *runMultiplyer* float(dt);
+			target += right * CAMERA_SPEED *runMultiplyer* float(dt);
 		}else
 		{
-		position -= right * CAMERA_SPEED*runMultiplyer * dt;
-		target -= right * CAMERA_SPEED*runMultiplyer * dt;
+		position -= right * CAMERA_SPEED*runMultiplyer * float(dt);
+		target -= right * CAMERA_SPEED*runMultiplyer * float(dt);
 		}
 	}
 	if(Application::IsKeyPressed('D'))
@@ -86,12 +86,12 @@ void Camera3::UpdateMovement(double dt, bool reverse)
 		right.Normalize();
 		if(reverse)
 		{
-			position -= right * CAMERA_SPEED*runMultiplyer * dt;
-			target -= right * CAMERA_SPEED*runMultiplyer * dt;
+			position -= right * CAMERA_SPEED*runMultiplyer * float(dt);
+			target -= right * CAMERA_SPEED*runMultiplyer * float(dt);
 		}else
 		{
-		position += right * CAMERA_SPEED *runMultiplyer* dt;
-		target += right * CAMERA_SPEED *runMultiplyer* dt;
+		position += right * CAMERA_SPEED *runMultiplyer* float(dt);
+		target += right * CAMERA_SPEED *runMultiplyer* float(dt);
 		}
 	}
 	if(Application::IsKeyPressed('W'))
@@ -100,12 +100,12 @@ void Camera3::UpdateMovement(double dt, bool reverse)
 		view.y = 0;
 		if(reverse)
 		{
-			position -= view * CAMERA_SPEED *runMultiplyer* dt;
-			target -= view * CAMERA_SPEED*runMultiplyer * dt;
+			position -= view * CAMERA_SPEED *runMultiplyer* float(dt);
+			target -= view * CAMERA_SPEED*runMultiplyer * float(dt);
 		}else
 		{
-			position += view * CAMERA_SPEED *runMultiplyer* dt;
-			target += view * CAMERA_SPEED*runMultiplyer * dt;
+			position += view * CAMERA_SPEED *runMultiplyer* float(dt);
+			target += view * CAMERA_SPEED*runMultiplyer * float(dt);
 		}
 	}
 	if(Application::IsKeyPressed('S'))
@@ -114,12 +114,12 @@ void Camera3::UpdateMovement(double dt, bool reverse)
 		view.y = 0;
 		if(reverse)
 		{
-			position += view * CAMERA_SPEED *runMultiplyer* dt;
-			target += view * CAMERA_SPEED*runMultiplyer * dt;
+			position += view * CAMERA_SPEED *runMultiplyer* float(dt);
+			target += view * CAMERA_SPEED*runMultiplyer * float(dt);
 		}else
 		{
-			position -= view * CAMERA_SPEED *runMultiplyer* dt;
-			target -= view * CAMERA_SPEED*runMultiplyer * dt;
+			position -= view * CAMERA_SPEED *runMultiplyer* float(dt);
+			target -= view * CAMERA_SPEED*runMultiplyer * float(dt);
 		}
 	}
 }
@@ -140,9 +140,9 @@ void Camera3::UpdateView(double dt, bool reverse)
 		float yaw;
 		Vector3 view = (target - position).Normalized();
 		if(reverse)
-			yaw = (float)(-CAMERA_SPEED * dt);
+			yaw = (float)(-CAMERA_SPEED * float(dt));
 		else
-			yaw = (float)(CAMERA_SPEED * dt);
+			yaw = (float)(CAMERA_SPEED * float(dt));
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
 		view = rotation * view;
@@ -154,9 +154,9 @@ void Camera3::UpdateView(double dt, bool reverse)
 		float yaw;
 		Vector3 view = (target - position).Normalized();
 		if(reverse)
-			yaw = (float)(CAMERA_SPEED * dt);
+			yaw = (float)(CAMERA_SPEED * float(dt));
 		else
-			yaw = (float)(-CAMERA_SPEED * dt);
+			yaw = (float)(-CAMERA_SPEED * float(dt));
 		Mtx44 rotation;
 		rotation.SetToRotation(yaw, 0, 1, 0);
 		view = rotation * view;
@@ -167,7 +167,7 @@ void Camera3::UpdateView(double dt, bool reverse)
 	{
 		if(limiter < 80)
 		{
-			float pitch = (float)(CAMERA_SPEED * dt);
+			float pitch = (float)(CAMERA_SPEED * float(dt));
 			Vector3 view = (target - position).Normalized();
 			Vector3 right = view.Cross(up);
 			right.y = 0;
@@ -185,7 +185,7 @@ void Camera3::UpdateView(double dt, bool reverse)
 	{
 		if(limiter>10)
 		{
-			float pitch = (float)(-CAMERA_SPEED * dt);
+			float pitch = (float)(-CAMERA_SPEED * float(dt));
 			Vector3 view = (target - position).Normalized();
 			Vector3 right = view.Cross(up);
 			right.y = 0;

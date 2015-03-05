@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	DefineEnum.h
+\author Edmund Ang , Jeffrey Teo, John Leong, Xue Tian
+\brief
+Contains all enumeration 
+*/
+/******************************************************************************/
+
 #ifndef _DEFINE_ENUM_H
 #define _DEFINE_ENUM_H
 

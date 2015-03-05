@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	BrownCan.h
+\author Edmund Ang
+\brief
+File for Brown Can item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

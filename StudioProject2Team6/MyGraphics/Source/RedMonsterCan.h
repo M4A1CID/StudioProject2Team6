@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	RedMonsterCan.h
+\author Edmund Ang, Jeffrey Teo
+\brief
+Header File for RedMonsterCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

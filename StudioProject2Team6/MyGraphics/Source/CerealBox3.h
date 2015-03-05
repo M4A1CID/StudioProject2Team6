@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	CerealBox3.h
+\author Edmund Ang
+\brief
+File for CerealBox3 item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

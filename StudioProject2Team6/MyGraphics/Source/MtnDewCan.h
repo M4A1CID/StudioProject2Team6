@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	MtnDewCan.h
+\author Edmund Ang, Jeffrey Teo
+\brief
+Header File for MtnDewCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

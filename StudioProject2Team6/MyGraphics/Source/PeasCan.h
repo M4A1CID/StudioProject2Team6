@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	PeasCan.h
+\author Edmund Ang
+\brief
+Header File for PeasCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

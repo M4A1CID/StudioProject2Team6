@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	SodaCan.h
+\author Edmund Ang, Jeffrey Teo
+\brief
+Header File for SodaCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

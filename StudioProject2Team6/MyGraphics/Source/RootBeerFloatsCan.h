@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	RootBeerFloatsCan.h
+\author Edmund Ang, Jeffrey Teo
+\brief
+Header File for RootBeerFloatsCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

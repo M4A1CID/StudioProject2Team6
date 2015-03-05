@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	VargaCan.h
+\author Edmund Ang
+\brief
+Header File for VargaCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

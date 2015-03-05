@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	TomatoCan.h
+\author Edmund Ang
+\brief
+Header File for TomatoCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

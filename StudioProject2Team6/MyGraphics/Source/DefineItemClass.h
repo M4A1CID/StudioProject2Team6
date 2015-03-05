@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	DefineItemClass.h
+\author Edmund Ang , Jeffrey Teo, John Leong, Xue Tian
+\brief
+Contains all item header files 
+*/
+/******************************************************************************/
 #ifndef _DEFINE_ITEM_H
 #define _DEFINE_ITEM_H
 

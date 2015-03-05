@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	SardineCan.h
+\author Edmund Ang
+\brief
+Header File for SardineCan item
+*/
+/******************************************************************************/
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"

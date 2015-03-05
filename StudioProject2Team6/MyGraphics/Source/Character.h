@@ -1,3 +1,11 @@
+/******************************************************************************/
+/*!
+\file	Character.h
+\author Edmund Ang
+\brief
+File Header for Character class
+*/
+/******************************************************************************/
 #pragma once
 #ifndef CHARACTER_H
 #define CHARACTER_H
@@ -14,8 +22,8 @@
 class CCharacter
 {
 public:
-	CCharacter(void);
-	CCharacter(float posX, float posY, float posZ, int state, int job);
+	CCharacter(void);	//Default constructor
+	CCharacter(float posX, float posY, float posZ, int state, int job);	//Overloaded constructor
 	~CCharacter(void);
 	int getCharacterState();
 	int getAnimationType();

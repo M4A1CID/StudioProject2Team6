@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	SceneSP.h
+\author Edmund Ang , Jeffrey Teo, John Leong, Xue Tian
+\brief
+Header file for SceneSP 
+*/
+/******************************************************************************/
+
 #ifndef _SCENESP_H
 #define _SCENESP_H
 
@@ -143,6 +152,9 @@ private:
 	void initCharacter();
 	void initNPC();
 	void initShelves();
+
+	
+
 	/*========================================
 			Declare variables here
 	=========================================*/
@@ -153,62 +165,72 @@ private:
 	unsigned m_parameters[U_TOTAL];
 	
 	CContainer shelfSardineCan;
-	bool toggleLight;
-	bool toggleDoorFront;
-	bool toggleDoorBack;
-	bool elevatorDoorOpening;
-	bool elevatorSecondFloor;
+	bool b_quit;
+	bool b_toggleLight;
+	bool b_toggleDoorFront;
+	bool b_toggleDoorBack;
+	bool b_elevatorDoorOpening;
+	bool b_elevatorSecondFloor;
 	bool b_isWithinInteractionItem;
 	bool b_isWithinPayingCashier;
 	bool b_is_Stealing;
 	bool b_dinged;
-	bool falling;
-	float interactionTimer;
-	float LogisticinteractionTimer;
-	float CustomerinteractionTimer;
-	float moveDoorFront;
-	float moveDoorBack;
-	float trolleyrotation;
-	float handrotationleftandright;
-	float handtranslation;
-	float diffX;
-	float diffZ;
-	float charactersrotation;
-	float elevatorDoorY;
-	float elevatorY;
-	float itemYrotation;
-	float itemXrotation;
-	float ATMMoney;
-	float f_soundTimer;
-	
-	CEmptyItem emptyItem;
-	float easterLimiter;
-	float easterLimiter2;
-	float easterTimer;
-	float cagedPos;
-	float diffY;
-	int getCounter;
-	bool winEaster;
-	bool closeEaster;
-	bool inRange;
-	bool getCaged;
-	bool getGabed;
-	bool getTrolled;
-	bool getTimed;
-	bool getRicked;
-	bool caged;
-	bool win;
-	bool lose;
-	bool showTuginstruction;
+	bool b_falling;
+	bool b_winEaster;
+	bool b_closeEaster;
+	bool b_inRange;
+	bool b_getCaged;
+	bool b_getGabed;
+	bool b_getTrolled;
+	bool b_getTimed;
+	bool b_getRicked;
+	bool b_caged;
+	bool b_win;
+	bool b_lose;
+	bool b_showTuginstruction;
 	bool b_crouching;
 	bool b_inspection;
+	bool b_elevatorIdle;
+	bool b_IsIntugofwar;
+
+	float f_interactionTimer;
+	float f_LogisticinteractionTimer;
+	float f_CustomerinteractionTimer;
+	float f_moveDoorFront;
+	float f_moveDoorBack;
+	float f_trolleyrotation;
+	float f_handrotationleftandright;
+	float f_handtranslation;
+	float f_diffX;
+	float f_diffZ;
+	float f_charactersrotation;
+	float f_elevatorDoorY;
+	float f_elevatorY;
+	float f_itemYrotation;
+	float f_itemXrotation;
+	float f_ATMMoney;
+	float f_soundTimer;
+	float f_easterLimiter;
+	float f_easterLimiter2;
+	float f_easterTimer;
+	float f_cagedPos;
+	float f_diffY;
+
+	CEmptyItem emptyItem;
+	CPlayer * ptrplayer;
+	CItem * ptrItem;
+	CItem * ptrClass;
+	CItem * ptrInvSelect;
+	CNpc * ptrNPC;
+	
+	int i_getCounter;
 	int i_total_items_to_find;
 	int i_sampleItems;
 	int i_menuHandle;
 	int i_drunkmanAct;
 	int i_CashierAct;
-	bool elevatorIdle;
-	bool IsIntugofwar;
+	int i_selectionPointing;
+	int i_inventoryPointing;
 	string s_money;
 	string s_position;
 	string s_fps;
@@ -218,26 +240,15 @@ private:
 	string s_easter_counter;
 	string s_easter_count;
 	string s_atm_balance;
-	CPlayer * ptrplayer;
-	CItem * ptrItem;
-	CItem * ptrClass;
-	CItem * ptrInvSelect;
-	CNpc * ptrNPC;
-	int selectionPointing;
-	int inventoryPointing;
+	
+	
 	CContainer* ptrContainer;
 	vector<CContainer*> myContainerList; //Shelf vector
 	vector<CItem*> myStockList;	//Supermarket stock vector
 	vector<CItem*> myTreasureList; //Treasure item vector
 	vector<CItem*> myCheckList; //Check list for items
 	vector<CNpc*> myNPCList;
-	struct Transformations
-	{
-		float translateX;
-		float translateY;
-		float translateZ;
-		float rotateA;
-	};
+	
 
 	//Sound Buffers
 	sf::Music music;
@@ -252,7 +263,10 @@ public:
 	virtual void Update(double dt);
 	virtual void Render();
 	virtual void Exit();
-	
+	/*==============================
+				Get Quit
+	==============================*/
+	bool getQuit();
 	//Camera3 camera;
 	Camera3 camera;
 	 
@@ -262,7 +276,6 @@ public:
 	MS modelStack, viewStack, projectionStack;
 	
 	Light lights[2];
-	Transformations Cashier;
 	void RenderMesh(Mesh *mesh, bool enableLight);
 };
 
