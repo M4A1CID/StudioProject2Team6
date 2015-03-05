@@ -3281,8 +3281,8 @@ Renders the UI displayed when interacting with the drunk man Npc
 void SceneSP::RenderDrunkmanUI()
 {
 	if((i_drunkmanAct == DRUNKIDLE)	
-		&&(camera.position.z > 26.0f && camera.position.z < 28.0f)
-		&&(camera.position.x > -5.0f && camera.position.x < -2.5f)
+		&&(camera.position.z > 15.0f && camera.position.z < 38.0f)
+		&&(camera.position.x > -11.0f && camera.position.x < 4.5f)
 		&&(camera.position.y > 16.0f && camera.position.y < 25.0f))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT], "Press 'E' to", Color(0, 1, 0), 3, 8, 10);
@@ -4190,7 +4190,7 @@ void SceneSP::RenderATM()
 	if ((camera.position.x > -6 && camera.position.x < 7) && (camera.position.z > 32 && camera.position.z < 40))
 	{
 		RenderTextOnScreen(meshList[GEO_TEXT],"Press 'E' to withdraw",Color(0,1,0),2,1,16);
-		RenderTextOnScreen(meshList[GEO_TEXT], "Balance:"+s_atm_balance, Color(1, 1, 0), 3, 16.5, 19);
+		RenderTextOnScreen(meshList[GEO_TEXT], "Balance:"+s_atm_balance, Color(1, 1, 0), 3, 1, 13);
 	}
 }
 /******************************************************************************/
