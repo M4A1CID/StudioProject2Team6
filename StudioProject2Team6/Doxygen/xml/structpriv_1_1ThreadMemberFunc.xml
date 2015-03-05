@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structpriv_1_1ThreadMemberFunc" kind="struct" prot="public">
+    <compoundname>priv::ThreadMemberFunc</compoundname>
+    <basecompoundref refid="structpriv_1_1ThreadFunc" prot="public" virt="non-virtual">priv::ThreadFunc</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename C</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpriv_1_1ThreadMemberFunc_1a237f80d81258c6553fd18e86880ab6c4" prot="public" static="no" mutable="no">
+        <type>void(C::*</type>
+        <definition>void(C::* priv::ThreadMemberFunc&lt; C &gt;::m_function)()</definition>
+        <argsstring>)()</argsstring>
+        <name>m_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="59" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="59" bodyend="-1"/>
+        <referencedby refid="structpriv_1_1ThreadMemberFunc_1abbd440e93edf2747cf9cdde579bc5de0" compoundref="Thread_8inl" startline="58" endline="58">priv::ThreadMemberFunc&lt; C &gt;::run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpriv_1_1ThreadMemberFunc_1a849dd2e31c95e699fb316065d9d75116" prot="public" static="no" mutable="no">
+        <type>C *</type>
+        <definition>C* priv::ThreadMemberFunc&lt; C &gt;::m_object</definition>
+        <argsstring></argsstring>
+        <name>m_object</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="60" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="60" bodyend="-1"/>
+        <referencedby refid="structpriv_1_1ThreadMemberFunc_1abbd440e93edf2747cf9cdde579bc5de0" compoundref="Thread_8inl" startline="58" endline="58">priv::ThreadMemberFunc&lt; C &gt;::run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpriv_1_1ThreadMemberFunc_1ae44619c4cf6d886da6f32a1de37d652e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>priv::ThreadMemberFunc&lt; C &gt;::ThreadMemberFunc</definition>
+        <argsstring>(void(C::*function)(), C *object)</argsstring>
+        <name>ThreadMemberFunc</name>
+        <param>
+          <type>void(C::*)()</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>C *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="57" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="structpriv_1_1ThreadMemberFunc_1abbd440e93edf2747cf9cdde579bc5de0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void priv::ThreadMemberFunc&lt; C &gt;::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <reimplements refid="structpriv_1_1ThreadFunc_1ab5465e714ca4aa92a09bf5e24410a5c3">run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="58" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="58" bodyend="58"/>
+        <references refid="structpriv_1_1ThreadMemberFunc_1a237f80d81258c6553fd18e86880ab6c4" compoundref="Thread_8inl" startline="59">priv::ThreadMemberFunc&lt; C &gt;::m_function</references>
+        <references refid="structpriv_1_1ThreadMemberFunc_1a849dd2e31c95e699fb316065d9d75116" compoundref="Thread_8inl" startline="60">priv::ThreadMemberFunc&lt; C &gt;::m_object</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1189">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1188">
+        <label>priv::ThreadMemberFunc&lt; C &gt;</label>
+        <link refid="structpriv_1_1ThreadMemberFunc"/>
+        <childnode refid="1189" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1192">
+        <label>*</label>
+      </node>
+      <node id="1191">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1193">
+        <label>C *</label>
+      </node>
+      <node id="1190">
+        <label>priv::ThreadMemberFunc&lt; C &gt;</label>
+        <link refid="structpriv_1_1ThreadMemberFunc"/>
+        <childnode refid="1191" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1192" relation="usage">
+          <edgelabel>m_function</edgelabel>
+        </childnode>
+        <childnode refid="1193" relation="usage">
+          <edgelabel>m_object</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="56" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="55" bodyend="61"/>
+    <listofallmembers>
+      <member refid="structpriv_1_1ThreadMemberFunc_1a237f80d81258c6553fd18e86880ab6c4" prot="public" virt="non-virtual"><scope>priv::ThreadMemberFunc</scope><name>m_function</name></member>
+      <member refid="structpriv_1_1ThreadMemberFunc_1a849dd2e31c95e699fb316065d9d75116" prot="public" virt="non-virtual"><scope>priv::ThreadMemberFunc</scope><name>m_object</name></member>
+      <member refid="structpriv_1_1ThreadMemberFunc_1abbd440e93edf2747cf9cdde579bc5de0" prot="public" virt="virtual"><scope>priv::ThreadMemberFunc</scope><name>run</name></member>
+      <member refid="structpriv_1_1ThreadMemberFunc_1ae44619c4cf6d886da6f32a1de37d652e" prot="public" virt="non-virtual"><scope>priv::ThreadMemberFunc</scope><name>ThreadMemberFunc</name></member>
+      <member refid="structpriv_1_1ThreadFunc_1a085d7741b00ad5c8610cc26739d423cb" prot="public" virt="virtual"><scope>priv::ThreadMemberFunc</scope><name>~ThreadFunc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

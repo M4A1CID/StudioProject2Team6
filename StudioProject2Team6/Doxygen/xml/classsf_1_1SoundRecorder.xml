@@ -1,0 +1,552 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1SoundRecorder" kind="class" prot="public" abstract="yes">
+    <compoundname>sf::SoundRecorder</compoundname>
+    <derivedcompoundref refid="classsf_1_1SoundBufferRecorder" prot="public" virt="non-virtual">sf::SoundBufferRecorder</derivedcompoundref>
+    <includes refid="SoundRecorder_8hpp" local="no">SoundRecorder.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1SoundRecorder_1aa61a5840d98b18e1f74a4dbd9e329cc3" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref></type>
+        <definition>Thread sf::SoundRecorder::m_thread</definition>
+        <argsstring></argsstring>
+        <name>m_thread</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref> running the background recording task. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="259" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundRecorder_1a2380449ff05efe7602a8dceb4e24bf4c" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref> &gt;</type>
+        <definition>std::vector&lt;Int16&gt; sf::SoundRecorder::m_samples</definition>
+        <argsstring></argsstring>
+        <name>m_samples</name>
+        <briefdescription>
+<para>Buffer to store captured samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="260" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="260" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundRecorder_1a5b318ed67b9cdfdc35bbcbaf3e9ea6da" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundRecorder::m_sampleRate</definition>
+        <argsstring></argsstring>
+        <name>m_sampleRate</name>
+        <briefdescription>
+<para>Sample rate. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="261" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="261" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundRecorder_1a08bcd2031bee91da4a596308503bfba1" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref></type>
+        <definition>sf::Time sf::SoundRecorder::m_processingInterval</definition>
+        <argsstring></argsstring>
+        <name>m_processingInterval</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> period between calls to onProcessSamples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="262" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="262" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundRecorder_1a245820535f8b81716a374bdd8dc726bb" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sf::SoundRecorder::m_isCapturing</definition>
+        <argsstring></argsstring>
+        <name>m_isCapturing</name>
+        <briefdescription>
+<para>Capturing state. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="263" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundRecorder_1a109997f096cf270f6e8516d576b092a1" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string sf::SoundRecorder::m_deviceName</definition>
+        <argsstring></argsstring>
+        <name>m_deviceName</name>
+        <briefdescription>
+<para>Name of the audio capture device. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="264" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1acc599e61aaa47edaae88cf43f0a43549" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual sf::SoundRecorder::~SoundRecorder</definition>
+        <argsstring>()</argsstring>
+        <name>~SoundRecorder</name>
+        <briefdescription>
+<para>destructor </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="52" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a715f0fd2f228c83d79aaedca562ae51f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::SoundRecorder::start</definition>
+        <argsstring>(unsigned int sampleRate=44100)</argsstring>
+        <name>start</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>sampleRate</declname>
+          <defval>44100</defval>
+        </param>
+        <briefdescription>
+<para>Start the capture. </para>        </briefdescription>
+        <detaileddescription>
+<para>The <emphasis>sampleRate</emphasis> parameter defines the number of audio samples captured per second. The higher, the better the quality (for example, 44100 samples/sec is CD quality). This function uses its own thread so that it doesn&apos;t block the rest of the program while the capture runs. Please note that only one capture can happen at the same time. You can select which capture device will be used, by passing the name to the <ref refid="classsf_1_1SoundRecorder_1a8eb3e473292c16e874322815836d3cd3" kindref="member">setDevice()</ref> method. If none was selected before, the default capture device will be used. You can get a list of the names of all available capture devices by calling <ref refid="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" kindref="member">getAvailableDevices()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sampleRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired capture rate, in number of samples per second</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True, if start of capture was successful</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundRecorder_1a8d9c8346aa9aa409cfed4a1101159c4c" kindref="member">stop</ref>, <ref refid="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" kindref="member">getAvailableDevices</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="76" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a8d9c8346aa9aa409cfed4a1101159c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundRecorder::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Stop the capture. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classsf_1_1SoundRecorder_1a715f0fd2f228c83d79aaedca562ae51f" kindref="member">start</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a1f3726cbe0a2b2b291b36beea57960d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundRecorder::getSampleRate</definition>
+        <argsstring>() const </argsstring>
+        <name>getSampleRate</name>
+        <briefdescription>
+<para>Get the sample rate. </para>        </briefdescription>
+        <detaileddescription>
+<para>The sample rate defines the number of audio samples captured per second. The higher, the better the quality (for example, 44100 samples/sec is CD quality).</para><para><simplesect kind="return"><para>Sample rate, in samples per second </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="96" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a8eb3e473292c16e874322815836d3cd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::SoundRecorder::setDevice</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>setDevice</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Set the audio capture device. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function sets the audio capture device to the device with the given <emphasis>name</emphasis>. It can be called on the fly (i.e: while recording). If you do so while recording and opening the device fails, it stops the recording.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the audio capture device</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True, if it was able to set the requested device</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" kindref="member">getAvailableDevices</ref>, <ref refid="classsf_1_1SoundRecorder_1ad1d450a80642dab4b632999d72a1bf23" kindref="member">getDefaultDevice</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a911218297b0fb5c050b3e34e6ba1d38e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string&amp; sf::SoundRecorder::getDevice</definition>
+        <argsstring>() const </argsstring>
+        <name>getDevice</name>
+        <briefdescription>
+<para>Get the name of the current audio capture device. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The name of the current audio capture device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="144" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>static std::vector&lt;std::string&gt; sf::SoundRecorder::getAvailableDevices</definition>
+        <argsstring>()</argsstring>
+        <name>getAvailableDevices</name>
+        <briefdescription>
+<para>Get a list of the names of all available audio capture devices. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns a vector of strings, containing the names of all available audio capture devices.</para><para><simplesect kind="return"><para>A vector of strings containing the names </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1ad1d450a80642dab4b632999d72a1bf23" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string sf::SoundRecorder::getDefaultDevice</definition>
+        <argsstring>()</argsstring>
+        <name>getDefaultDevice</name>
+        <briefdescription>
+<para>Get the name of the default audio capture device. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the name of the default audio capture device. If none is available, an empty string is returned.</para><para><simplesect kind="return"><para>The name of the default audio capture device </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="119" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1aab2bd0fee9e48d6cfd449b1cb078ce5a" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool sf::SoundRecorder::isAvailable</definition>
+        <argsstring>()</argsstring>
+        <name>isAvailable</name>
+        <briefdescription>
+<para>Check if the system supports audio capture. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function should always be called before using the audio capture features. If it returns false, then any attempt to use <ref refid="classsf_1_1SoundRecorder" kindref="compound">sf::SoundRecorder</ref> or one of its derived classes will fail.</para><para><simplesect kind="return"><para>True if audio capture is supported, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="157" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a50ebad413c4f157408a0fa49f23212a9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::SoundRecorder::SoundRecorder</definition>
+        <argsstring>()</argsstring>
+        <name>SoundRecorder</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor is only meant to be called by derived classes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="167" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a64895b20ed32f0e3cfaf0fa331942de6" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundRecorder::setProcessingInterval</definition>
+        <argsstring>(sf::Time interval)</argsstring>
+        <name>setProcessingInterval</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref></type>
+          <declname>interval</declname>
+        </param>
+        <briefdescription>
+<para>Set the processing interval. </para>        </briefdescription>
+        <detaileddescription>
+<para>The processing interval controls the period between calls to the onProcessSamples function. You may want to use a small interval if you want to process the recorded data in real time, for example.</para><para>Note: this is only a hint, the actual period may vary. So don&apos;t rely on this parameter to implement precise timing.</para><para>The default processing interval is 100 ms.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>interval</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Processing interval </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a7af418fb036201d3f85745bef78ce77f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool sf::SoundRecorder::onStart</definition>
+        <argsstring>()</argsstring>
+        <name>onStart</name>
+        <reimplementedby refid="classsf_1_1SoundBufferRecorder_1a531a7445fc8a48eaf9fc039c83f17c6f">onStart</reimplementedby>
+        <briefdescription>
+<para>Start capturing audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para>This virtual function may be overridden by a derived class if something has to be done every time a new capture starts. If not, this function can be ignored; the default implementation does nothing.</para><para><simplesect kind="return"><para>True to start the capture, or false to abort it </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="198" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a2670124cbe7a87c7e46b4840807f4fd7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool sf::SoundRecorder::onProcessSamples</definition>
+        <argsstring>(const Int16 *samples, std::size_t sampleCount)=0</argsstring>
+        <name>onProcessSamples</name>
+        <reimplementedby refid="classsf_1_1SoundBufferRecorder_1a9ceb94de14632ae8c1b78faf603b4767">onProcessSamples</reimplementedby>
+        <param>
+          <type>const <ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref> *</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>sampleCount</declname>
+        </param>
+        <briefdescription>
+<para>Process a new chunk of recorded samples. </para>        </briefdescription>
+        <detaileddescription>
+<para>This virtual function is called every time a new chunk of recorded data is available. The derived class can then do whatever it wants with it (storing it, playing it, sending it over the network, etc.).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the new chunk of recorded samples </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of samples pointed by <emphasis>samples</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True to continue the capture, or false to stop it </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="214" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1aefc36138ca1e96c658301280e4a31b64" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void sf::SoundRecorder::onStop</definition>
+        <argsstring>()</argsstring>
+        <name>onStop</name>
+        <reimplementedby refid="classsf_1_1SoundBufferRecorder_1ab8e53849312413431873a5869d509f1e">onStop</reimplementedby>
+        <briefdescription>
+<para>Stop capturing audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para>This virtual function may be overridden by a derived class if something has to be done every time the capture ends. If not, this function can be ignored; the default implementation does nothing. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="225" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1ac7da8331c382707623dc3671094fc176" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundRecorder::record</definition>
+        <argsstring>()</argsstring>
+        <name>record</name>
+        <briefdescription>
+<para>Function called as the entry point of the thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function starts the recording loop, and returns only when the capture is stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="236" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1ab1b7b105c79081d044bc79cc74753ddf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundRecorder::processCapturedSamples</definition>
+        <argsstring>()</argsstring>
+        <name>processCapturedSamples</name>
+        <briefdescription>
+<para>Get the new available audio samples and process them. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called continuously during the capture loop. It retrieves the captured samples and forwards them to the derived class. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundRecorder_1a4532acd98a33a6419e1d9f17d6a280e3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundRecorder::cleanup</definition>
+        <argsstring>()</argsstring>
+        <name>cleanup</name>
+        <briefdescription>
+<para>Clean up the recorder&apos;s internal resources. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called when the capture stops. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="254" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract base class for capturing sound data. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1SoundBuffer" kindref="compound">sf::SoundBuffer</ref> provides a simple interface to access the audio recording capabilities of the computer (the microphone).</para><para>As an abstract base class, it only cares about capturing sound samples, the task of making something useful with them is left to the derived class. Note that SFML provides a built-in specialization for saving the captured data to a sound buffer (see <ref refid="classsf_1_1SoundBufferRecorder" kindref="compound">sf::SoundBufferRecorder</ref>).</para><para>A derived class has only one virtual function to override: <itemizedlist>
+<listitem><para>onProcessSamples provides the new chunks of audio samples while the capture happens</para></listitem>
+</itemizedlist>
+Moreover, two additional virtual functions can be overridden as well if necessary: <itemizedlist>
+<listitem><para>onStart is called before the capture happens, to perform custom initializations </para></listitem>
+<listitem><para>onStop is called after the capture ends, to perform custom cleanup</para></listitem>
+</itemizedlist>
+A derived class can also control the frequency of the onProcessSamples calls, with the setProcessingInterval protected function. The default interval is chosen so that recording thread doesn&apos;t consume too much CPU, but it can be changed to a smaller value if you need to process the recorded data in real time, for example.</para><para>The audio capture feature may not be supported or activated on every platform, thus it is recommended to check its availability with the <ref refid="classsf_1_1SoundRecorder_1aab2bd0fee9e48d6cfd449b1cb078ce5a" kindref="member">isAvailable()</ref> function. If it returns false, then any attempt to use an audio recorder will fail.</para><para>If you have multiple sound input devices connected to your computer (for example: microphone, external soundcard, webcam mic, ...) you can get a list of all available devices through the <ref refid="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" kindref="member">getAvailableDevices()</ref> function. You can then select a device by calling <ref refid="classsf_1_1SoundRecorder_1a8eb3e473292c16e874322815836d3cd3" kindref="member">setDevice()</ref> with the appropriate device. Otherwise the default capturing device will be used.</para><para>It is important to note that the audio capture happens in a separate thread, so that it doesn&apos;t block the rest of the program. In particular, the onProcessSamples virtual function (but not onStart and not onStop) will be called from this separate thread. It is important to keep this in mind, because you may have to take care of synchronization issues if you share data between threads.</para><para>Usage example: <programlisting><codeline><highlight class="normal">class<sp/>CustomRecorder<sp/>:<sp/>public<sp/>sf::SoundRecorder</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>bool<sp/>onStart()<sp/>//<sp/>optional</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Initialize<sp/>whatever<sp/>has<sp/>to<sp/>be<sp/>done<sp/>before<sp/>the<sp/>capture<sp/>starts</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Return<sp/>true<sp/>to<sp/>start<sp/>playing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>bool<sp/>onProcessSamples(const<sp/>Int16*<sp/>samples,<sp/>std::size_t<sp/>sampleCount)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Do<sp/>something<sp/>with<sp/>the<sp/>new<sp/>chunk<sp/>of<sp/>samples<sp/>(store<sp/>them,<sp/>send<sp/>them,<sp/>...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Return<sp/>true<sp/>to<sp/>continue<sp/>playing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>void<sp/>onStop()<sp/>//<sp/>optional</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Clean<sp/>up<sp/>whatever<sp/>has<sp/>to<sp/>be<sp/>done<sp/>after<sp/>the<sp/>capture<sp/>ends</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(CustomRecorder::isAvailable())</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>CustomRecorder<sp/>recorder;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(!recorder.start())</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>-1;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>recorder.stop();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classsf_1_1SoundBufferRecorder" kindref="compound">sf::SoundBufferRecorder</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1107">
+        <label>sf::SoundRecorder</label>
+        <link refid="classsf_1_1SoundRecorder"/>
+      </node>
+      <node id="1108">
+        <label>sf::SoundBufferRecorder</label>
+        <link refid="classsf_1_1SoundBufferRecorder"/>
+        <childnode refid="1107" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1112">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="1113" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1114" relation="usage">
+          <edgelabel>m_entryPoint</edgelabel>
+        </childnode>
+        <childnode refid="1115" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+      <node id="1114">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1117">
+        <label>string</label>
+      </node>
+      <node id="1110">
+        <label>sf::Time</label>
+        <link refid="classsf_1_1Time"/>
+        <childnode refid="1110" relation="usage">
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+        <childnode refid="1111" relation="usage">
+          <edgelabel>m_microseconds</edgelabel>
+        </childnode>
+      </node>
+      <node id="1109">
+        <label>sf::SoundRecorder</label>
+        <link refid="classsf_1_1SoundRecorder"/>
+        <childnode refid="1110" relation="usage">
+          <edgelabel>m_processingInterval</edgelabel>
+        </childnode>
+        <childnode refid="1112" relation="usage">
+          <edgelabel>m_thread</edgelabel>
+        </childnode>
+        <childnode refid="1116" relation="usage">
+          <edgelabel>m_samples</edgelabel>
+        </childnode>
+        <childnode refid="1117" relation="usage">
+          <edgelabel>m_deviceName</edgelabel>
+        </childnode>
+        <childnode refid="1118" relation="usage">
+          <edgelabel>m_isCapturing</edgelabel>
+        </childnode>
+        <childnode refid="1119" relation="usage">
+          <edgelabel>m_sampleRate</edgelabel>
+        </childnode>
+      </node>
+      <node id="1115">
+        <label>ThreadImpl *</label>
+      </node>
+      <node id="1111">
+        <label>signed long long</label>
+      </node>
+      <node id="1116">
+        <label>vector&lt; Int16 &gt;</label>
+      </node>
+      <node id="1119">
+        <label>unsigned</label>
+      </node>
+      <node id="1113">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1118">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" line="45" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp" bodystart="44" bodyend="265"/>
+    <listofallmembers>
+      <member refid="classsf_1_1SoundRecorder_1a4532acd98a33a6419e1d9f17d6a280e3" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>cleanup</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>getAvailableDevices</name></member>
+      <member refid="classsf_1_1SoundRecorder_1ad1d450a80642dab4b632999d72a1bf23" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>getDefaultDevice</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a911218297b0fb5c050b3e34e6ba1d38e" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>getDevice</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a1f3726cbe0a2b2b291b36beea57960d7" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>getSampleRate</name></member>
+      <member refid="classsf_1_1SoundRecorder_1aab2bd0fee9e48d6cfd449b1cb078ce5a" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>isAvailable</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a109997f096cf270f6e8516d576b092a1" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>m_deviceName</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a245820535f8b81716a374bdd8dc726bb" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>m_isCapturing</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a08bcd2031bee91da4a596308503bfba1" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>m_processingInterval</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a5b318ed67b9cdfdc35bbcbaf3e9ea6da" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>m_sampleRate</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a2380449ff05efe7602a8dceb4e24bf4c" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>m_samples</name></member>
+      <member refid="classsf_1_1SoundRecorder_1aa61a5840d98b18e1f74a4dbd9e329cc3" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>m_thread</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a2670124cbe7a87c7e46b4840807f4fd7" prot="protected" virt="pure-virtual"><scope>sf::SoundRecorder</scope><name>onProcessSamples</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a7af418fb036201d3f85745bef78ce77f" prot="protected" virt="virtual"><scope>sf::SoundRecorder</scope><name>onStart</name></member>
+      <member refid="classsf_1_1SoundRecorder_1aefc36138ca1e96c658301280e4a31b64" prot="protected" virt="virtual"><scope>sf::SoundRecorder</scope><name>onStop</name></member>
+      <member refid="classsf_1_1SoundRecorder_1ab1b7b105c79081d044bc79cc74753ddf" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>processCapturedSamples</name></member>
+      <member refid="classsf_1_1SoundRecorder_1ac7da8331c382707623dc3671094fc176" prot="private" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>record</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a8eb3e473292c16e874322815836d3cd3" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>setDevice</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a64895b20ed32f0e3cfaf0fa331942de6" prot="protected" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>setProcessingInterval</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a50ebad413c4f157408a0fa49f23212a9" prot="protected" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>SoundRecorder</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a715f0fd2f228c83d79aaedca562ae51f" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>start</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a8d9c8346aa9aa409cfed4a1101159c4c" prot="public" virt="non-virtual"><scope>sf::SoundRecorder</scope><name>stop</name></member>
+      <member refid="classsf_1_1SoundRecorder_1acc599e61aaa47edaae88cf43f0a43549" prot="public" virt="virtual"><scope>sf::SoundRecorder</scope><name>~SoundRecorder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

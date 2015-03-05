@@ -1,0 +1,116 @@
+<map id="SceneSP::Update" name="SceneSP::Update">
+<area shape="rect" id="node2" href="$classSceneSP.html#acd94f08d5777be854ef85313526f69bc" title="Updates the Npcs interaction timers based on dt. " alt="" coords="180,2251,351,2277"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="186,2301,345,2328"/>
+<area shape="rect" id="node65" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="675,2428,845,2455"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#acf6236276aadffd24b631491412574c0" title="Updates the main menu upon starting up. " alt="" coords="667,2327,853,2353"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a17ea984d0e98061610e8a7e34b2a4397" title="Updates the Start menu. " alt="" coords="415,1981,601,2008"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a036771dd835c6b363379517c75722fa6" title="Updates the instruction menu. " alt="" coords="399,2377,617,2404"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="411,2276,605,2303"/>
+<area shape="rect" id="node64" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="403,2225,613,2252"/>
+<area shape="rect" id="node5" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="1463,2352,1638,2379"/>
+<area shape="rect" id="node7" href="$classCCharacter.html#a4e9ecc23aabb47e67fc3d7d629b4dceb" title="Mutator function to set character job. " alt="" coords="665,1956,855,1983"/>
+<area shape="rect" id="node8" href="$classsf_1_1SoundStream.html#a16cc6a0404b32e42c4dce184bb94d0f4" title="Stop playing the audio stream. " alt="" coords="684,1905,836,1932"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="685,2225,835,2252"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="957,993,1059,1020"/>
+<area shape="rect" id="node13" href="$classSceneSP.html#ad3599551cd93fb32876be3090e1cbf69" title="Declares GLEnable. " alt="" coords="1191,171,1378,197"/>
+<area shape="rect" id="node15" href="$classSceneSP.html#ac00c66843e83747f823f5c96a134285e" title="Declares all light parameters. " alt="" coords="1693,56,1917,83"/>
+<area shape="rect" id="node20" href="$classCPlayer.html#aa5acefb8c6837741ac85426e93ff0b69" title="Accessor function for the items held by the player. " alt="" coords="1491,3897,1610,3924"/>
+<area shape="rect" id="node21" href="$classCPlayer.html#a41b39fd627819feb2bafd614c3246b66" title="Accessor function for the max amount of items the player can have. " alt="" coords="1187,943,1382,969"/>
+<area shape="rect" id="node22" href="$classCamera3.html#a19ed99e698e764c1da3a985cf75eb93f" title="Initialises the camera. " alt="" coords="1235,689,1334,716"/>
+<area shape="rect" id="node28" href="$classSceneSP.html#a9a0de3ea6342a231b45c3d487ba1ec1a" title="Initialises the player and all NPCs. " alt="" coords="1205,841,1364,868"/>
+<area shape="rect" id="node29" href="$classSceneSP.html#a1e184e8b2707bd048b4bbd50748d8e48" title="Initialises all geometry types. " alt="" coords="1207,284,1362,311"/>
+<area shape="rect" id="node39" href="$classSceneSP.html#a8f096719e7e0e404f4d1afc12d317943" title="Initialises all shelves in the scene. " alt="" coords="1211,563,1358,589"/>
+<area shape="rect" id="node53" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="1227,892,1342,919"/>
+<area shape="rect" id="node54" href="$classsf_1_1Music.html#a3edc66e5f5b3f11e84b90eaec9c7d7c0" title="Open a music from an audio file. " alt="" coords="1469,1449,1632,1476"/>
+<area shape="rect" id="node55" href="$classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. " alt="" coords="1475,1551,1626,1577"/>
+<area shape="rect" id="node56" href="$classsf_1_1Listener.html#a803a24a1fc04620cacc9f88c6fbc0e3a" title="Change the global volume of all the sounds and musics. " alt="" coords="1188,1247,1381,1273"/>
+<area shape="rect" id="node57" href="$classCPlayer.html#a31b9cac478a011ca5fbbf899499216f5" title="Mutator function to add an item picked up by the player. " alt="" coords="1478,3695,1623,3721"/>
+<area shape="rect" id="node58" href="$classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the end. " alt="" coords="1464,1500,1637,1527"/>
+<area shape="rect" id="node59" href="$classsf_1_1Listener.html#a5bc2d8d18ea2d8f339d23cbf17678564" title="Set the position of the listener in the scene. " alt="" coords="1205,1145,1364,1172"/>
+<area shape="rect" id="node60" href="$classsf_1_1SoundSource.html#a0480257ea25d986eba6cc3c1a6f8d7c2" title="Set the 3D position of the sound in the audio scene. " alt="" coords="1189,1196,1380,1223"/>
+<area shape="rect" id="node61" href="$classMtx44.html#ac6e6521111d78ff36d539bf111a902c6" title="Set matrix to be a perspective matrix. " alt="" coords="1201,639,1368,665"/>
+<area shape="rect" id="node63" href="$classsf_1_1SoundSource.html#a2f192f2b49fb8e2b82f3498d3663fcc2" title="Set the volume of the sound. " alt="" coords="1457,1652,1645,1679"/>
+<area shape="rect" id="node14" href="$shader_8cpp.html#a833f10cca6a76fe34ae9efa23ac5e73c" title="LoadShaders" alt="" coords="1501,107,1600,133"/>
+<area shape="rect" id="node16" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="1977,5,2131,32"/>
+<area shape="rect" id="node17" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="2005,157,2103,184"/>
+<area shape="rect" id="node18" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="2014,56,2094,83"/>
+<area shape="rect" id="node19" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="2007,107,2101,133"/>
+<area shape="rect" id="node23" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="1496,765,1605,792"/>
+<area shape="rect" id="node25" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="1484,816,1617,843"/>
+<area shape="rect" id="node27" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="1481,715,1621,741"/>
+<area shape="rect" id="node24" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="1745,765,1865,792"/>
+<area shape="rect" id="node26" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="1748,816,1863,843"/>
+<area shape="rect" id="node30" href="$classMeshBuilder.html#a78d37e2b0cc068eec801f17c367100e7" title="Generate the vertices of a reference Axes; Use red for x&#45;axis, green for y&#45;axis, blue for z&#45;axis Then..." alt="" coords="1713,107,1898,133"/>
+<area shape="rect" id="node31" href="$classMeshBuilder.html#aba87550d7726a610c911fbb977fd3575" title="MeshBuilder::GenerateOBJ" alt="" coords="1461,309,1641,336"/>
+<area shape="rect" id="node36" href="$classMeshBuilder.html#aec661388bddf32e7bf834b38fb5ed34d" title="Generate the vertices of a quad; Use random color for each vertex Then generate the VBO/IBO and store..." alt="" coords="1712,157,1899,184"/>
+<area shape="rect" id="node37" href="$classMeshBuilder.html#aac7c87881dbc08f8d41f2068e0f40c76" title="MeshBuilder::GenerateText" alt="" coords="1715,208,1895,235"/>
+<area shape="rect" id="node38" href="$LoadTGA_8cpp.html#a459a80ca6de67a1e3493bfb66ae317e4" title="LoadTGA" alt="" coords="1513,360,1589,387"/>
+<area shape="rect" id="node32" href="$LoadOBJ_8cpp.html#aa99ef9426a57205ed8acb8f7d41f3bae" title="IndexVBO" alt="" coords="1765,309,1846,336"/>
+<area shape="rect" id="node35" href="$LoadOBJ_8cpp.html#aa634e9cac0a72d751731db6b4479cbda" title="LoadOBJ" alt="" coords="1768,259,1843,285"/>
+<area shape="rect" id="node33" href="$LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347" title="getSimilarVertexIndex_fast" alt="" coords="1965,309,2143,336"/>
+<area shape="rect" id="node34" href="$structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32" title="TexCoord::Set" alt="" coords="2001,208,2107,235"/>
+<area shape="rect" id="node40" href="$classSceneSP.html#a0cb20bb43706bbd74745f2466fb3f534" title="Defines all items and containers. " alt="" coords="1477,461,1624,488"/>
+<area shape="rect" id="node50" href="$classCContainer.html#a8cbd00470704513d12083d2be711ad4b" title="Accessor function for container botttom row item. " alt="" coords="1461,512,1640,539"/>
+<area shape="rect" id="node51" href="$classCContainer.html#aeceff305e238951c1cf927ac97ae84ce" title="Accessor function for container middle row item. " alt="" coords="1463,563,1638,589"/>
+<area shape="rect" id="node52" href="$classCContainer.html#a064d9d932a0e361083d5a4a9285eef22" title="Accessor function for container top row item. " alt="" coords="1471,613,1630,640"/>
+<area shape="rect" id="node41" href="$classCContainer.html#ab9bf0cf7936e505a400255e265104e94" title="Accessor function for first item stock in container. " alt="" coords="1719,664,1891,691"/>
+<area shape="rect" id="node42" href="$classCItem.html#a916597368755e28b6edb8af37acc1ad6" title="Accessor function for item geometry type. " alt="" coords="1738,360,1873,387"/>
+<area shape="rect" id="node43" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="1747,3771,1863,3797"/>
+<area shape="rect" id="node44" href="$classCItem.html#a6375bf21ba971d20a25fd8888d083f5a" title="Accessor function for item price. " alt="" coords="1749,715,1861,741"/>
+<area shape="rect" id="node45" href="$classCContainer.html#a1260c4eb8f72a4529af2087586f1600b" title="Accessor function for second item stock in container. " alt="" coords="1710,411,1901,437"/>
+<area shape="rect" id="node46" href="$classCContainer.html#a39099429332baa7d3003b4fa9e1b3c9f" title="Accessor function for third item stock in container. " alt="" coords="1718,461,1893,488"/>
+<area shape="rect" id="node47" href="$classCContainer.html#a35e4344eb1c1d25c9364ab16f16dc709" title="Accessor function for container x position. " alt="" coords="1735,512,1875,539"/>
+<area shape="rect" id="node48" href="$classCContainer.html#ae00b4f70a3679017c1d795536b2a7d5f" title="Accessor function for container y position. " alt="" coords="1734,563,1877,589"/>
+<area shape="rect" id="node49" href="$classCContainer.html#a912430f27287e0fd419a94333790c947" title="Accessor function for container z position. " alt="" coords="1735,613,1875,640"/>
+<area shape="rect" id="node62" href="$classMtx44.html#a1b985913080679da29ff94217935b3c7" title="Default Constructor. Default values are zero. " alt="" coords="1499,664,1602,691"/>
+<area shape="rect" id="node66" href="$classsf_1_1SoundStream.html#a75f722e7edcfa9952ff0c643966c6858" title="Get the current status of the stream (stopped, paused, playing) " alt="" coords="917,3441,1099,3468"/>
+<area shape="rect" id="node67" href="$classSceneSP.html#a182bfd6a2fca51fe09cbd82771f779a1" title="Checks for the winning and losing conditions of the current gamemode. " alt="" coords="1199,3492,1370,3519"/>
+<area shape="rect" id="node70" href="$classSceneSP.html#aa0e203afe09c6f065bd7cb393de07fb1" title="Updates the selection of inventory slot by the player. " alt="" coords="1176,3999,1393,4025"/>
+<area shape="rect" id="node72" href="$classSceneSP.html#a4d582749b064ce46da7702b11272bbcd" title="Updates the players UI. " alt="" coords="1215,3695,1354,3721"/>
+<area shape="rect" id="node74" href="$classSceneSP.html#a6393a02c9709e2849cb86faace0ae42e" title="Updates the player during the tug of war activity based on dt. " alt="" coords="919,2580,1097,2607"/>
+<area shape="rect" id="node75" href="$classSceneSP.html#a01fcec80d931e2556c0e50bbd93b9ade" title="Updates the picking up of the Drunkman Npc based on dt. " alt="" coords="915,2631,1101,2657"/>
+<area shape="rect" id="node76" href="$classSceneSP.html#a4772701f96585823bf6462942bfbb793" title="Updates the movement of all Npcs in the scene based on dt. " alt="" coords="939,2960,1077,2987"/>
+<area shape="rect" id="node90" href="$classSceneSP.html#a0dc7bd8ea42e851751f7115d6499d5a7" title="Updates the item rotation based on dt. " alt="" coords="909,3391,1107,3417"/>
+<area shape="rect" id="node91" href="$classSceneSP.html#ac2cc1a6156a4c3bb9ad8316352ff655b" title="Updates the inspection of items. " alt="" coords="903,2428,1113,2455"/>
+<area shape="rect" id="node92" href="$classSceneSP.html#a5ad62cfa3ac5fe2156a8713ffab6a4dd" title="Updates all easter eggs in the easter egg gamemode. " alt="" coords="915,1753,1101,1780"/>
+<area shape="rect" id="node97" href="$classSceneSP.html#a83a54c919d8dd397ba181f7c787c3adf" title="Updates the addition of the player&#39;s money and deduction of the ATM&#39;s money. " alt="" coords="1208,3543,1361,3569"/>
+<area shape="rect" id="node99" href="$classSceneSP.html#abf3a278e89de13c3e68e1674bd454be3" title="Updates the paying of money. " alt="" coords="1201,3593,1368,3620"/>
+<area shape="rect" id="node100" href="$classSceneSP.html#a4e6f57c4d70b6c0609ce56d00d374ac0" title="Checks for the picking up of items. " alt="" coords="915,3745,1101,3772"/>
+<area shape="rect" id="node102" href="$classCamera3.html#af471bcc6fd86bc2f99b5430ccfcb7e7c" title="Updates the camera movement. " alt="" coords="1193,791,1376,817"/>
+<area shape="rect" id="node103" href="$classCamera3.html#a5e9f9f8eb7e97df9304df1861001eba0" title="Updates the camera view. " alt="" coords="1209,740,1360,767"/>
+<area shape="rect" id="node106" href="$classSceneSP.html#aa74368fc2d0520d4eadb9853db9cfcf8" title="Updates the player&#39;s hand movement based on dt. " alt="" coords="930,2479,1086,2505"/>
+<area shape="rect" id="node107" href="$classSceneSP.html#a122e2cac2a30e66b0414e618cf546411" title="Updates the movement of the elevator based on dt. " alt="" coords="1199,1449,1371,1476"/>
+<area shape="rect" id="node108" href="$classSceneSP.html#a62815fc7bf3ff5937dc6f7a5f6cd14ff" title="Updates the opening and closing of the front and back doors based on dt. " alt="" coords="1208,1399,1361,1425"/>
+<area shape="rect" id="node109" href="$classSceneSP.html#a41d8943d3f6a1c79a52b8875e6ccda67" title="Updates the remaining samples on the sample stand. " alt="" coords="1196,1500,1373,1527"/>
+<area shape="rect" id="node110" href="$classSceneSP.html#a1d18eb92664b2eb377dd4d959bf9335c" title="Updates the movement of EasterEggGuy Npc based on dt. " alt="" coords="903,2529,1113,2556"/>
+<area shape="rect" id="node111" href="$classSceneSP.html#afbc68aa0f7d7978688938cf34f10256a" title="Checks for the collision of all objects in the scene. " alt="" coords="923,2132,1093,2159"/>
+<area shape="rect" id="node115" href="$classSceneSP.html#af1758342d1f0afe09af5adbcc1a30af6" title="Checks for players position to return items to the return point. " alt="" coords="1191,3847,1379,3873"/>
+<area shape="rect" id="node68" href="$classCCharacter.html#a549d8f9bc2e177e348e2a3d791ea511c" title="Accessor function for character job. " alt="" coords="1456,2884,1645,2911"/>
+<area shape="rect" id="node69" href="$classCPlayer.html#ac02fc75d1ba514addba85bfe2bd6154d" title="CPlayer::getVector" alt="" coords="1485,3492,1617,3519"/>
+<area shape="rect" id="node71" href="$classCPlayer.html#a0a51abd578e68eaa554eabee62a9079d" title="Accessor function for the number of items the player is holding. " alt="" coords="1478,3999,1623,4025"/>
+<area shape="rect" id="node73" href="$classCPlayer.html#a1cc34d624d5208e89aed5fd1ad9dcdd1" title="Accessor function for the amount of money the player has. " alt="" coords="1484,3593,1617,3620"/>
+<area shape="rect" id="node77" href="$classSceneSP.html#a0ca0c247e4bc68fd75e98d68e4b8266b" title="Updates the Npc involves in the tug of war activity based on dt. " alt="" coords="1185,3036,1384,3063"/>
+<area shape="rect" id="node78" href="$classSceneSP.html#a50c790340ab8444f752f48b6a02ef877" title="Updates the movement of the Npcs walking inside the supermarket based on dt. " alt="" coords="1185,3087,1384,3113"/>
+<area shape="rect" id="node79" href="$classSceneSP.html#ab1a0249ccf2d18ca17b795fd981519f0" title="Updates the movement of the Passer&#45;by Npcs outside the supermarket moving in the X direction based on..." alt="" coords="1161,3137,1408,3164"/>
+<area shape="rect" id="node80" href="$classSceneSP.html#aa9544ac81fdace13b036854baf4ff2d6" title="Updates the movement of the Passer&#45;by Npcs outside the supermarket moving in the Z direction based on..." alt="" coords="1161,3188,1408,3215"/>
+<area shape="rect" id="node81" href="$classSceneSP.html#adb19fb3deaf7203ed8014858451c2125" title="Updates the movement of the Drunkman Npc based on dt. " alt="" coords="1181,3239,1388,3265"/>
+<area shape="rect" id="node82" href="$classSceneSP.html#ae68b9d228ca0e7308bcf5e631ac72905" title="Updates the movement of the Ghost Npc based on dt. " alt="" coords="1191,3289,1378,3316"/>
+<area shape="rect" id="node83" href="$classSceneSP.html#af7496bbb719aaa865e6ae2a7850803b2" title="Updates the movement of the Npc looking at items based on dt. " alt="" coords="1187,2681,1383,2708"/>
+<area shape="rect" id="node84" href="$classSceneSP.html#aee74cf07daa837fb07de86fbd70e5851" title="Updates the movement of the logistics Npc based on dt. " alt="" coords="1187,2732,1383,2759"/>
+<area shape="rect" id="node85" href="$classSceneSP.html#a1d26118bc0e477c1ca91d95e87c13e83" title="Updates the movement of the customers based on dt. " alt="" coords="1193,2783,1376,2809"/>
+<area shape="rect" id="node86" href="$classSceneSP.html#a16d020ce28661c217810cb062a4510fd" title="Updates the movement of the chatting Npc based on dt. " alt="" coords="1185,2833,1384,2860"/>
+<area shape="rect" id="node87" href="$classSceneSP.html#af79f7c58a58f00b7cd5c0d0adf26b2e1" title="Updates the movement of the shoppers based on dt. " alt="" coords="1194,2884,1375,2911"/>
+<area shape="rect" id="node88" href="$classSceneSP.html#a1f4561ddac6bd5653909b369df5de2e5" title="Updates the leg animation of all Npcs while they are moving based on dt. " alt="" coords="1182,2935,1387,2961"/>
+<area shape="rect" id="node89" href="$classSceneSP.html#a810e5313d48de43702158891315ffa0e" title="Updates the movement of BuildingGuy Npc based on dt. " alt="" coords="1187,2985,1383,3012"/>
+<area shape="rect" id="node93" href="$classSceneSP.html#a2a3538fcae1edb1cc53f9ea8c1e7897e" title="Updates the miscellaneous easter eggs based on dt. " alt="" coords="1178,1652,1391,1679"/>
+<area shape="rect" id="node94" href="$classSceneSP.html#a9d736fb66a1ce2d4e102f483f7034ace" title="Updates the &quot;cage&quot; easter egg based on dt. " alt="" coords="1207,1753,1363,1780"/>
+<area shape="rect" id="node95" href="$classSceneSP.html#a2963d58071297789ad0c567c41dd5dbd" title="Updates the &quot;gabe&quot; easter egg based on dt. " alt="" coords="1203,1703,1367,1729"/>
+<area shape="rect" id="node96" href="$classSceneSP.html#a8773475b7b228451b8a96aeb1912fb30" title="Updates the &quot;troll&quot; easter egg based on dt. " alt="" coords="1209,1601,1360,1628"/>
+<area shape="rect" id="node98" href="$classCPlayer.html#ac5c0e462bb3e9804f5fff4a33be5a33d" title="Mutator function to set the players current money. " alt="" coords="1484,3543,1617,3569"/>
+<area shape="rect" id="node101" href="$classSceneSP.html#a516f7251a5124ef02a4404296f01ffbd" title="Adds items picked up by the player to their inventory. " alt="" coords="1199,3745,1370,3772"/>
+<area shape="rect" id="node104" href="$classMtx44.html#ac0587ffb5ff9fd58ad5768d28fc06574" title="Set Matrix to a rotation matrix about arbitrary axis. " alt="" coords="1477,867,1625,893"/>
+<area shape="rect" id="node105" href="$namespaceMath.html#ac91173ab2efdf7313fe7aaeb6cb44cf6" title="Math::FAbs" alt="" coords="1760,867,1851,893"/>
+<area shape="rect" id="node112" href="$classSceneSP.html#a5284cba426a3ff140f0cfa583f270c54" title="Checks for the collision of the elevator. " alt="" coords="1177,2175,1392,2201"/>
+<area shape="rect" id="node113" href="$classSceneSP.html#aed88cbeaa9c2779dc5ab3396e0cbd3ba" title="Checks for the collision of an object. " alt="" coords="1181,2057,1388,2084"/>
+<area shape="rect" id="node114" href="$classSceneSP.html#ad6a24084727f08fc91c3e02e292b649f" title="Checks for the collision of the supermarket. " alt="" coords="1187,2109,1382,2150"/>
+</map>

@@ -1,0 +1,227 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="SoundRecorder_8hpp" kind="file">
+    <compoundname>SoundRecorder.hpp</compoundname>
+    <includes refid="Audio_2Export_8hpp" local="no">SFML/Audio/Export.hpp</includes>
+    <includes refid="Thread_8hpp" local="no">SFML/System/Thread.hpp</includes>
+    <includes refid="Time_8hpp" local="no">SFML/System/Time.hpp</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includedby refid="SoundBufferRecorder_8hpp" local="no">SFML/include/SFML/Audio/SoundBufferRecorder.hpp</includedby>
+    <includedby refid="Audio_8hpp" local="no">SFML/include/SFML/Audio.hpp</includedby>
+    <incdepgraph>
+      <node id="3756">
+        <label>SFML/System/Time.hpp</label>
+        <link refid="Time_8hpp"/>
+        <childnode refid="3752" relation="include">
+        </childnode>
+      </node>
+      <node id="3750">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="3758">
+        <label>string</label>
+      </node>
+      <node id="3751">
+        <label>SFML/System/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="3752" relation="include">
+        </childnode>
+        <childnode refid="3753" relation="include">
+        </childnode>
+        <childnode refid="3754" relation="include">
+        </childnode>
+        <childnode refid="3755" relation="include">
+        </childnode>
+      </node>
+      <node id="3748">
+        <label>SFML/include/SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder.hpp"/>
+        <childnode refid="3749" relation="include">
+        </childnode>
+        <childnode refid="3751" relation="include">
+        </childnode>
+        <childnode refid="3756" relation="include">
+        </childnode>
+        <childnode refid="3757" relation="include">
+        </childnode>
+        <childnode refid="3758" relation="include">
+        </childnode>
+      </node>
+      <node id="3749">
+        <label>SFML/Audio/Export.hpp</label>
+        <link refid="Audio_2Export_8hpp"/>
+        <childnode refid="3750" relation="include">
+        </childnode>
+      </node>
+      <node id="3755">
+        <label>SFML/System/Thread.inl</label>
+        <link refid="Thread_8inl"/>
+      </node>
+      <node id="3757">
+        <label>vector</label>
+      </node>
+      <node id="3752">
+        <label>SFML/System/Export.hpp</label>
+        <link refid="System_2Export_8hpp"/>
+        <childnode refid="3750" relation="include">
+        </childnode>
+      </node>
+      <node id="3754">
+        <label>cstdlib</label>
+      </node>
+      <node id="3753">
+        <label>SFML/System/NonCopyable.hpp</label>
+        <link refid="NonCopyable_8hpp"/>
+        <childnode refid="3752" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3765">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3761">
+        <label>SFML/include/SFML/Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="3762" relation="include">
+        </childnode>
+      </node>
+      <node id="3763">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3759">
+        <label>SFML/include/SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder.hpp"/>
+        <childnode refid="3760" relation="include">
+        </childnode>
+        <childnode refid="3761" relation="include">
+        </childnode>
+      </node>
+      <node id="3762">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3763" relation="include">
+        </childnode>
+        <childnode refid="3764" relation="include">
+        </childnode>
+        <childnode refid="3765" relation="include">
+        </childnode>
+      </node>
+      <node id="3760">
+        <label>SFML/include/SFML/Audio/SoundBufferRecorder.hpp</label>
+        <link refid="SoundBufferRecorder_8hpp"/>
+        <childnode refid="3761" relation="include">
+        </childnode>
+      </node>
+      <node id="3764">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsf_1_1SoundRecorder" prot="public">sf::SoundRecorder</innerclass>
+    <innernamespace refid="namespacesf">sf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SFML<sp/>-<sp/>Simple<sp/>and<sp/>Fast<sp/>Multimedia<sp/>Library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007-2014<sp/>Laurent<sp/>Gomila<sp/>(laurent.gom@gmail.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied<sp/>warranty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages<sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it<sp/>freely,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>you<sp/>must<sp/>not<sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>If<sp/>you<sp/>use<sp/>this<sp/>software<sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be<sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>and<sp/>must<sp/>not<sp/>be<sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SFML_SOUNDRECORDER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SFML_SOUNDRECORDER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">//<sp/>Headers</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Audio_2Export_8hpp" kindref="compound">SFML/Audio/Export.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Thread_8hpp" kindref="compound">SFML/System/Thread.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Time_8hpp" kindref="compound">SFML/System/Time.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesf" kindref="compound">sf</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="44" refid="classsf_1_1SoundRecorder" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="Audio_2Export_8hpp_1a4d34c0f253824ac49bdd93545913eb89" kindref="member">SFML_AUDIO_API</ref><sp/><ref refid="classsf_1_1SoundRecorder" kindref="compound">SoundRecorder</ref></highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classsf_1_1SoundRecorder" kindref="compound">SoundRecorder</ref>();</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>start(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sampleRate<sp/>=<sp/>44100);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>stop();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getSampleRate()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/>getAvailableDevices();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>std::string<sp/>getDefaultDevice();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>setDevice(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>getDevice()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>isAvailable();</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundRecorder" kindref="compound">SoundRecorder</ref>();</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setProcessingInterval(<ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref><sp/>interval);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>onStart();</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>onProcessSamples(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref>*<sp/>samples,<sp/>std::size_t<sp/>sampleCount)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onStop();</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>record();</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>processCapturedSamples();</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>cleanup();</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Member<sp/>data</highlight></codeline>
+<codeline lineno="259" refid="classsf_1_1SoundRecorder_1aa61a5840d98b18e1f74a4dbd9e329cc3" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundRecorder_1aa61a5840d98b18e1f74a4dbd9e329cc3" kindref="member">m_thread</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="260" refid="classsf_1_1SoundRecorder_1a2380449ff05efe7602a8dceb4e24bf4c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Int16&gt;<sp/><ref refid="classsf_1_1SoundRecorder_1a2380449ff05efe7602a8dceb4e24bf4c" kindref="member">m_samples</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="261" refid="classsf_1_1SoundRecorder_1a5b318ed67b9cdfdc35bbcbaf3e9ea6da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundRecorder_1a5b318ed67b9cdfdc35bbcbaf3e9ea6da" kindref="member">m_sampleRate</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="262" refid="classsf_1_1SoundRecorder_1a08bcd2031bee91da4a596308503bfba1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundRecorder_1a08bcd2031bee91da4a596308503bfba1" kindref="member">m_processingInterval</ref>;<sp/></highlight></codeline>
+<codeline lineno="263" refid="classsf_1_1SoundRecorder_1a245820535f8b81716a374bdd8dc726bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundRecorder_1a245820535f8b81716a374bdd8dc726bb" kindref="member">m_isCapturing</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264" refid="classsf_1_1SoundRecorder_1a109997f096cf270f6e8516d576b092a1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundRecorder_1a109997f096cf270f6e8516d576b092a1" kindref="member">m_deviceName</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="265"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SFML_SOUNDRECORDER_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundRecorder.hpp"/>
+  </compounddef>
+</doxygen>

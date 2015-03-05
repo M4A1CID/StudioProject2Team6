@@ -1,0 +1,138 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Lock" kind="class" prot="public">
+    <compoundname>sf::Lock</compoundname>
+    <basecompoundref refid="classsf_1_1NonCopyable" prot="private" virt="non-virtual">sf::NonCopyable</basecompoundref>
+    <includes refid="Lock_8hpp" local="no">Lock.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1Lock_1a09ac17cbb8c83d6094d3935164742967" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref> &amp;</type>
+        <definition>Mutex&amp; sf::Lock::m_mutex</definition>
+        <argsstring></argsstring>
+        <name>m_mutex</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref> to lock / unlock. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Lock.hpp" line="70" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Lock.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Lock_1a1a4c5d7a15da61103d85c9aa7f118920" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Lock::Lock</definition>
+        <argsstring>(Mutex &amp;mutex)</argsstring>
+        <name>Lock</name>
+        <param>
+          <type><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref> &amp;</type>
+          <declname>mutex</declname>
+        </param>
+        <briefdescription>
+<para>Construct the lock with a target mutex. </para>        </briefdescription>
+        <detaileddescription>
+<para>The mutex passed to <ref refid="classsf_1_1Lock" kindref="compound">sf::Lock</ref> is automatically locked.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>mutex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref> to lock </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Lock.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Lock_1a8168b36323a18ccf5b6bc531d964aec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Lock::~Lock</definition>
+        <argsstring>()</argsstring>
+        <name>~Lock</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The destructor of <ref refid="classsf_1_1Lock" kindref="compound">sf::Lock</ref> automatically unlocks its mutex. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Lock.hpp" line="63" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Automatic wrapper for locking and unlocking mutexes. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Lock" kindref="compound">sf::Lock</ref> is a RAII wrapper for <ref refid="classsf_1_1Mutex" kindref="compound">sf::Mutex</ref>.</para><para>By unlocking it in its destructor, it ensures that the mutex will always be released when the current scope (most likely a function) ends. This is even more important when an exception or an early return statement can interrupt the execution flow of the function.</para><para>For maximum robustness, <ref refid="classsf_1_1Lock" kindref="compound">sf::Lock</ref> should always be used to lock/unlock a mutex.</para><para>Usage example: <programlisting><codeline><highlight class="normal">sf::Mutex<sp/>mutex;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>function()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Lock<sp/>lock(mutex);<sp/>//<sp/>mutex<sp/>is<sp/>now<sp/>locked</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>functionThatMayThrowAnException();<sp/>//<sp/>mutex<sp/>is<sp/>unlocked<sp/>if<sp/>this<sp/>function<sp/>throws</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>(someCondition)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return;<sp/>//<sp/>mutex<sp/>is<sp/>unlocked</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}<sp/>//<sp/>mutex<sp/>is<sp/>unlocked</highlight></codeline>
+</programlisting></para><para>Because the mutex is not explicitly unlocked in the code, it may remain locked longer than needed. If the region of the code that needs to be protected by the mutex is not the entire function, a good practice is to create a smaller, inner scope so that the lock is limited to this part of the code.</para><para><programlisting><codeline><highlight class="normal">sf::Mutex<sp/>mutex;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>function()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>sf::Lock<sp/>lock(mutex);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>codeThatRequiresProtection();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>//<sp/>mutex<sp/>is<sp/>unlocked<sp/>here</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>codeThatDoesntCareAboutTheMutex();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Having a mutex locked longer than required is a bad practice which can lead to bad performances. Don&apos;t forget that when a mutex is locked, other threads may be waiting doing nothing until it is released.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1Mutex" kindref="compound">sf::Mutex</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="955">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="954">
+        <label>sf::Lock</label>
+        <link refid="classsf_1_1Lock"/>
+        <childnode refid="955" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="958">
+        <label>sf::Mutex</label>
+        <link refid="classsf_1_1Mutex"/>
+        <childnode refid="957" relation="private-inheritance">
+        </childnode>
+        <childnode refid="959" relation="usage">
+          <edgelabel>m_mutexImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="959">
+        <label>MutexImpl *</label>
+      </node>
+      <node id="957">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="956">
+        <label>sf::Lock</label>
+        <link refid="classsf_1_1Lock"/>
+        <childnode refid="957" relation="private-inheritance">
+        </childnode>
+        <childnode refid="958" relation="usage">
+          <edgelabel>m_mutex</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Lock.hpp" line="44" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Lock.hpp" bodystart="43" bodyend="71"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Lock_1a1a4c5d7a15da61103d85c9aa7f118920" prot="public" virt="non-virtual"><scope>sf::Lock</scope><name>Lock</name></member>
+      <member refid="classsf_1_1Lock_1a09ac17cbb8c83d6094d3935164742967" prot="private" virt="non-virtual"><scope>sf::Lock</scope><name>m_mutex</name></member>
+      <member refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" prot="private" virt="non-virtual"><scope>sf::Lock</scope><name>NonCopyable</name></member>
+      <member refid="classsf_1_1Lock_1a8168b36323a18ccf5b6bc531d964aec5" prot="public" virt="non-virtual"><scope>sf::Lock</scope><name>~Lock</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+<map id="SceneSP::UpdateCage" name="SceneSP::UpdateCage">
+<area shape="rect" id="node2" href="$classSceneSP.html#a5ad62cfa3ac5fe2156a8713ffab6a4dd" title="Updates all easter eggs in the easter egg gamemode. " alt="" coords="209,5,395,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="443,5,612,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="660,5,787,32"/>
+</map>

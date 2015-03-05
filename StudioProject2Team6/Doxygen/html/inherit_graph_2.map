@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classCCharacter.html" title="Defines the character class. " alt="" coords="5,31,92,57"/>
+<area shape="rect" id="node2" href="$classCNpc.html" title="Defines the NPC class. " alt="" coords="147,5,201,32"/>
+<area shape="rect" id="node3" href="$classCPlayer.html" title="Player class which stores the player&#39;s money and inventory. " alt="" coords="140,56,208,83"/>
+</map>

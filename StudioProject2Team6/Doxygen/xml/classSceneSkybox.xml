@@ -1,0 +1,1152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classSceneSkybox" kind="class" prot="public">
+    <compoundname>SceneSkybox</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="SceneSkybox_8h" local="no">SceneSkybox.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752c" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca70e9a92fdf0f28ced4f211c99b81c0b2" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac3b37a8df2079e1ece790e19c5a0e709" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e5417436ce0624062f798c64ee257f7" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0293325d902f53dfda306e4cbe2645c7" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca718e12ab0fe170ea6589a1e9a5e04a97" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca775cff2eec8ae1ab46b7fc15259cc401" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caade83b46c2ae185569b9c4f04747b220" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca68b3a04d7ec03d7935df4bb3cde13190" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca3f7ca9d9a426bda6aff6c7725600d1f0" prot="private">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2e45ab50490e680239adffa424760477" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0bd6b5efc1b98030bb85f8ec2ac8194d" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5e43a5d1420905ea8c5524f780bcc75e" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9ce501e3be013059226ab2b9e815a694" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cad3307190c2c5bab445459a0f22c8eff4" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac1f9a39f5e8f81ee7e01146869b36aaa" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca7f2007fbf336d8a7b00dd306dd8972ad" prot="private">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca6148e45932900ec3039595d547e19572" prot="private">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5b47f89d26e1b1a1fbb3989e87bde2ff" prot="private">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca28a4794d5083de858911a82ad93e47a8" prot="private">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca047b32ec85361525785d472fcaccc835" prot="private">
+          <name>U_LIGHT1_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2798deeaa9f11078121d06c87a1c105c" prot="private">
+          <name>U_LIGHT1_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca95267100bc45df43aee0df73a4b71354" prot="private">
+          <name>U_LIGHT1_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca06fc4cd630536c3e871ce620c86442c8" prot="private">
+          <name>U_LIGHT1_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0b195f7edd134175a3ef667aeeb7edad" prot="private">
+          <name>U_LIGHT1_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9cee2c9cf115b9e0fdb7555fbb7e2130" prot="private">
+          <name>U_LIGHT1_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cabad17c37d82508fe712273b8418fb295" prot="private">
+          <name>U_LIGHT1_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caefdc95f54a102997bb54445e84097f3b" prot="private">
+          <name>U_LIGHT1_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca8df3cd76d121a2571a5eed16eedbb19f" prot="private">
+          <name>U_LIGHT1_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caef2406c5ab6806db1ee7edc9c6263a84" prot="private">
+          <name>U_LIGHT1_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca45c03009940c8a55d68f5a65e8ddd3f9" prot="private">
+          <name>U_LIGHT1_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab6743dd8266b53b786e2dadd83c385fe" prot="private">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca17ab05f68cc31931a58c62d1fcc22dd8" prot="private">
+          <name>U_COLOR_TEXTURE_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e7841be4cc6e862bbe38949718b276b" prot="private">
+          <name>U_COLOR_TEXTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab9bcf1a5fb13965b55a793af51e1e36b" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="17" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a0df0c6dd64f522ab199c100badf20d3e" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3924f25fee0d3cfcf4ee147f9793e5b4" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058abe2a7a3a326dac5d76843c49675980f9" prot="private">
+          <name>GEO_SPHERE0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a723e72ad957d121baf360f68862f8349" prot="private">
+          <name>GEO_SPHERE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058acf43abfc916142db9239636683467ef7" prot="private">
+          <name>GEO_SPHERE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab2887be890a6d1fd1a97b51bba45f03a" prot="private">
+          <name>GEO_SPHERE3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ac593c0c71f219595111112b1f01bf087" prot="private">
+          <name>GEO_SPHERE4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a8db536342b09f311230804f5534c5b26" prot="private">
+          <name>GEO_SPHERE5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afe0875b2e86a4442526f8c9a2cb6b4d7" prot="private">
+          <name>GEO_SPHERE6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afe350e7776645af2e89e17be23ab8aa0" prot="private">
+          <name>GEO_SPHERE7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a596537d8240cf90c3a251605efed3375" prot="private">
+          <name>GEO_SPHERE8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab536641d97acd515cfde9151fa4b781a" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab453cf193a92865c408570db4e06913b" prot="private">
+          <name>GEO_LIGHTBALL2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ac89bd4607aaa929bcdef3d9f72f5ab23" prot="private">
+          <name>GEO_CYLINDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3ad94fb32300bff652dc31b3d3cc2888" prot="private">
+          <name>GEO_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ad7e97dbcff8ec0921391b15586636382" prot="private">
+          <name>GEO_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a955580a4c27f5f7a3cedcb3f162f4f88" prot="private">
+          <name>GEO_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058accb43b6cc0476800062349f1c6dd552f" prot="private">
+          <name>GEO_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a4e4d368ed158e0637b1c37b30a18bf74" prot="private">
+          <name>GEO_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a884ab600e66a36a1fb0bc116502da4d6" prot="private">
+          <name>GEO_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="59" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="58" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSceneSkybox_1a8274e5c83f72f773e2c6d8662679f219" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneSkybox::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="94" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="94" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa" compoundref="SceneSkybox_8cpp" startline="369" endline="379">Exit</referencedby>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* SceneSkybox::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="95" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="95" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa" compoundref="SceneSkybox_8cpp" startline="369" endline="379">Exit</referencedby>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" compoundref="SceneSkybox_8cpp" startline="273" endline="321">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1ab9f7813e66e75001b9f43fafbdeba9c7" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneSkybox::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="96" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="96" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa" compoundref="SceneSkybox_8cpp" startline="369" endline="379">Exit</referencedby>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneSkybox::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="97" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="97" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="323" endline="366">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1a3d6451a7f62dc374d1a1bf8ad0f2577a" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneSkybox::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="99" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="99" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a" compoundref="SceneSkybox_8cpp" startline="181" endline="208">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1a03906acc3c7dd28c2f3d82676ee5c7e2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneSkybox::worldSize</definition>
+        <argsstring></argsstring>
+        <name>worldSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="100" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="100" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" compoundref="SceneSkybox_8cpp" startline="273" endline="321">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera3" kindref="compound">Camera3</ref></type>
+        <definition>Camera3 SceneSkybox::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="103" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="103" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+        <referencedby refid="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a" compoundref="SceneSkybox_8cpp" startline="181" endline="208">Update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1af18f8371d71ca250a8461af7135a3ebb" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneSkybox::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="105" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="323" endline="366">RenderMesh</referencedby>
+        <referencedby refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" compoundref="SceneSkybox_8cpp" startline="273" endline="321">RenderSkybox</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1a3d78ef61789f9a11ca9299d46c1e8edf" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneSkybox::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="105" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="323" endline="366">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1ae0b00f894c72f883f53256dccf63b94e" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneSkybox::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="105" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="105" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="323" endline="366">RenderMesh</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneSkybox_1a32ebc3428cfd3df9aed23bd1f6865781" prot="private" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light SceneSkybox::lights[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>lights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="107" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" compoundref="SceneSkybox_8cpp" startline="22" endline="175">Init</referencedby>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSceneSkybox_1ad401c768e2c83ef35d3e7ef163a0701b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneSkybox::SceneSkybox</definition>
+        <argsstring>()</argsstring>
+        <name>SceneSkybox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="86" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="14" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneSkybox_1ad3d654797aa904a7fad3ebbc58f1a1c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneSkybox::~SceneSkybox</definition>
+        <argsstring>()</argsstring>
+        <name>~SceneSkybox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="87" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="18" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneSkybox::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="89" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="22" bodyend="175"/>
+        <references refid="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" compoundref="SceneSkybox_8h" startline="103">camera</references>
+        <references refid="structLight_1ad7a168d26aed1bf7cca1a8d8e6f8ada4" compoundref="Light_8h" startline="14">Light::color</references>
+        <references refid="structLight_1af4ce5bbfbf33af96db9b8a222d073298" compoundref="Light_8h" startline="28">Light::cosCutoff</references>
+        <references refid="structLight_1a8c843f5d1af5c6f4f4928e9906f5d0db" compoundref="Light_8h" startline="29">Light::cosInner</references>
+        <references refid="namespaceMath_1ac04b987cc6c574a059e68cb58f58c09a" compoundref="MyMath_8h" startline="49" endline="52">Math::DegreeToRadian</references>
+        <references refid="structLight_1a4eb4fd0f025fb66d1934675ffff0e661" compoundref="Light_8h" startline="30">Light::exponent</references>
+        <references refid="classMeshBuilder_1a78d37e2b0cc068eec801f17c367100e7" compoundref="MeshBuilder_8cpp" startline="21" endline="64">MeshBuilder::GenerateAxes</references>
+        <references refid="classMeshBuilder_1aec661388bddf32e7bf834b38fb5ed34d" compoundref="MeshBuilder_8cpp" startline="79" endline="125">MeshBuilder::GenerateQuad</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a0df0c6dd64f522ab199c100badf20d3e" compoundref="SceneSkybox_8h" startline="60">GEO_AXES</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a884ab600e66a36a1fb0bc116502da4d6" compoundref="SceneSkybox_8h" startline="80">GEO_BACK</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058accb43b6cc0476800062349f1c6dd552f" compoundref="SceneSkybox_8h" startline="78">GEO_BOTTOM</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a4e4d368ed158e0637b1c37b30a18bf74" compoundref="SceneSkybox_8h" startline="79">GEO_FRONT</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3ad94fb32300bff652dc31b3d3cc2888" compoundref="SceneSkybox_8h" startline="75">GEO_LEFT</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3924f25fee0d3cfcf4ee147f9793e5b4" compoundref="SceneSkybox_8h" startline="61">GEO_QUAD</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ad7e97dbcff8ec0921391b15586636382" compoundref="SceneSkybox_8h" startline="76">GEO_RIGHT</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a955580a4c27f5f7a3cedcb3f162f4f88" compoundref="SceneSkybox_8h" startline="77">GEO_TOP</references>
+        <references refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</references>
+        <references refid="structLight_1a888f11000d2baf1228d9e5c8d8c90fcb" compoundref="Light_8h" startline="16">Light::kC</references>
+        <references refid="structLight_1ab3918c449fb40fa5c6cc5283f2c9687d" compoundref="Light_8h" startline="16">Light::kL</references>
+        <references refid="structLight_1a79c8e47de58f131ff5403fc2d823cc21" compoundref="Light_8h" startline="16">Light::kQ</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cbab02ff4ee1e2a9673edac03cf11b66338" compoundref="Light_8h" startline="22">Light::LIGHT_POINT</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="24">Light::LIGHT_SPOT</references>
+        <references refid="classSceneSkybox_1a32ebc3428cfd3df9aed23bd1f6865781" compoundref="SceneSkybox_8h" startline="107">lights</references>
+        <references refid="classMS_1a86606fe9f575ccb747d77195c8aefdaf" compoundref="MatrixStack_8cpp" startline="98" endline="100">MS::LoadMatrix</references>
+        <references refid="shader_8cpp_1a833f10cca6a76fe34ae9efa23ac5e73c" compoundref="shader_8cpp" startline="16" endline="107">LoadShaders</references>
+        <references refid="LoadTGA_8cpp_1a459a80ca6de67a1e3493bfb66ae317e4" compoundref="LoadTGA_8cpp" startline="8" endline="66">LoadTGA</references>
+        <references refid="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" compoundref="SceneSkybox_8h" startline="97">m_parameters</references>
+        <references refid="classSceneSkybox_1ab9f7813e66e75001b9f43fafbdeba9c7" compoundref="SceneSkybox_8h" startline="96">m_programID</references>
+        <references refid="classSceneSkybox_1a8274e5c83f72f773e2c6d8662679f219" compoundref="SceneSkybox_8h" startline="94">m_vertexArrayID</references>
+        <references refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" compoundref="SceneSkybox_8h" startline="95">meshList</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" compoundref="SceneSkybox_8h" startline="82">NUM_GEOMETRY</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="13">Light::position</references>
+        <references refid="structLight_1a6c4c401141c4cdb3b9b9b3bab7dd6fbb" compoundref="Light_8h" startline="15">Light::power</references>
+        <references refid="classSceneSkybox_1ae0b00f894c72f883f53256dccf63b94e" compoundref="SceneSkybox_8h" startline="105">projectionStack</references>
+        <references refid="classSceneSkybox_1a3d6451a7f62dc374d1a1bf8ad0f2577a" compoundref="SceneSkybox_8h" startline="99">rotateAngle</references>
+        <references refid="structPosition_1a2919b2441baf7a2f799791d65a1cfc15" compoundref="Vertex_8h" startline="13" endline="16">Position::Set</references>
+        <references refid="structColor_1acc77e4e3583d3eca7e476952e51bfb80" compoundref="Vertex_8h" startline="26" endline="29">Color::Set</references>
+        <references refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Vector3::Set</references>
+        <references refid="classMtx44_1ac6e6521111d78ff36d539bf111a902c6" compoundref="Mtx44_8cpp" startline="466" endline="472">Mtx44::SetToPerspective</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="27">Light::spotDirection</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="33">Mesh::textureID</references>
+        <references refid="structLight_1a5dcdb101afc28979b5aaff0a2ec79ba5" compoundref="Light_8h" startline="26">Light::type</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e7841be4cc6e862bbe38949718b276b" compoundref="SceneSkybox_8h" startline="53">U_COLOR_TEXTURE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca17ab05f68cc31931a58c62d1fcc22dd8" compoundref="SceneSkybox_8h" startline="52">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2e45ab50490e680239adffa424760477" compoundref="SceneSkybox_8h" startline="28">U_LIGHT0_COLOR</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca6148e45932900ec3039595d547e19572" compoundref="SceneSkybox_8h" startline="35">U_LIGHT0_COSCUTOFF</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5b47f89d26e1b1a1fbb3989e87bde2ff" compoundref="SceneSkybox_8h" startline="36">U_LIGHT0_COSINNER</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca28a4794d5083de858911a82ad93e47a8" compoundref="SceneSkybox_8h" startline="37">U_LIGHT0_EXPONENT</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5e43a5d1420905ea8c5524f780bcc75e" compoundref="SceneSkybox_8h" startline="30">U_LIGHT0_KC</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9ce501e3be013059226ab2b9e815a694" compoundref="SceneSkybox_8h" startline="31">U_LIGHT0_KL</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cad3307190c2c5bab445459a0f22c8eff4" compoundref="SceneSkybox_8h" startline="32">U_LIGHT0_KQ</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca68b3a04d7ec03d7935df4bb3cde13190" compoundref="SceneSkybox_8h" startline="26">U_LIGHT0_POSITION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0bd6b5efc1b98030bb85f8ec2ac8194d" compoundref="SceneSkybox_8h" startline="29">U_LIGHT0_POWER</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca7f2007fbf336d8a7b00dd306dd8972ad" compoundref="SceneSkybox_8h" startline="34">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca3f7ca9d9a426bda6aff6c7725600d1f0" compoundref="SceneSkybox_8h" startline="27">U_LIGHT0_TYPE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca95267100bc45df43aee0df73a4b71354" compoundref="SceneSkybox_8h" startline="41">U_LIGHT1_COLOR</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca8df3cd76d121a2571a5eed16eedbb19f" compoundref="SceneSkybox_8h" startline="47">U_LIGHT1_COSCUTOFF</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caef2406c5ab6806db1ee7edc9c6263a84" compoundref="SceneSkybox_8h" startline="48">U_LIGHT1_COSINNER</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca45c03009940c8a55d68f5a65e8ddd3f9" compoundref="SceneSkybox_8h" startline="49">U_LIGHT1_EXPONENT</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0b195f7edd134175a3ef667aeeb7edad" compoundref="SceneSkybox_8h" startline="43">U_LIGHT1_KC</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9cee2c9cf115b9e0fdb7555fbb7e2130" compoundref="SceneSkybox_8h" startline="44">U_LIGHT1_KL</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cabad17c37d82508fe712273b8418fb295" compoundref="SceneSkybox_8h" startline="45">U_LIGHT1_KQ</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca047b32ec85361525785d472fcaccc835" compoundref="SceneSkybox_8h" startline="39">U_LIGHT1_POSITION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca06fc4cd630536c3e871ce620c86442c8" compoundref="SceneSkybox_8h" startline="42">U_LIGHT1_POWER</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caefdc95f54a102997bb54445e84097f3b" compoundref="SceneSkybox_8h" startline="46">U_LIGHT1_SPOTDIRECTION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2798deeaa9f11078121d06c87a1c105c" compoundref="SceneSkybox_8h" startline="40">U_LIGHT1_TYPE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac1f9a39f5e8f81ee7e01146869b36aaa" compoundref="SceneSkybox_8h" startline="33">U_LIGHTENABLED</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0293325d902f53dfda306e4cbe2645c7" compoundref="SceneSkybox_8h" startline="22">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca718e12ab0fe170ea6589a1e9a5e04a97" compoundref="SceneSkybox_8h" startline="23">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caade83b46c2ae185569b9c4f04747b220" compoundref="SceneSkybox_8h" startline="25">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca775cff2eec8ae1ab46b7fc15259cc401" compoundref="SceneSkybox_8h" startline="24">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac3b37a8df2079e1ece790e19c5a0e709" compoundref="SceneSkybox_8h" startline="20">U_MODELVIEW</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e5417436ce0624062f798c64ee257f7" compoundref="SceneSkybox_8h" startline="21">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca70e9a92fdf0f28ced4f211c99b81c0b2" compoundref="SceneSkybox_8h" startline="19">U_MVP</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab6743dd8266b53b786e2dadd83c385fe" compoundref="SceneSkybox_8h" startline="50">U_NUMLIGHTS</references>
+        <references refid="classSceneSkybox_1a03906acc3c7dd28c2f3d82676ee5c7e2" compoundref="SceneSkybox_8h" startline="100">worldSize</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneSkybox::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="90" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="181" bodyend="208"/>
+        <references refid="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" compoundref="SceneSkybox_8h" startline="103">camera</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="39" endline="42">Application::IsKeyPressed</references>
+        <references refid="classSceneSkybox_1a3d6451a7f62dc374d1a1bf8ad0f2577a" compoundref="SceneSkybox_8h" startline="99">rotateAngle</references>
+        <references refid="SceneSkybox_8cpp_1a3e3d34bf14e006de6543d3d23fb40b8b" compoundref="SceneSkybox_8cpp" startline="179">toggleLight</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneSkybox::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="91" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="210" bodyend="271"/>
+        <references refid="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" compoundref="SceneSkybox_8h" startline="103">camera</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3924f25fee0d3cfcf4ee147f9793e5b4" compoundref="SceneSkybox_8h" startline="61">GEO_QUAD</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba9bf1f515ab954cb3379615aab42f30b6" compoundref="Light_8h" startline="23">Light::LIGHT_DIRECTIONAL</references>
+        <references refid="structLight_1aa7ed22cab99d811d72896efaee6d07cba69dd6d65ad12b410709ae74c8d9b1e16" compoundref="Light_8h" startline="24">Light::LIGHT_SPOT</references>
+        <references refid="classSceneSkybox_1a32ebc3428cfd3df9aed23bd1f6865781" compoundref="SceneSkybox_8h" startline="107">lights</references>
+        <references refid="classMS_1a77c5f7e4a21ea48dcf902a7ff6824a11" compoundref="MatrixStack_8cpp" startline="83" endline="87">MS::LoadIdentity</references>
+        <references refid="classMS_1a2638cd3249260877cc31329978fb6b38" compoundref="MatrixStack_8cpp" startline="224" endline="231">MS::LookAt</references>
+        <references refid="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" compoundref="SceneSkybox_8h" startline="97">m_parameters</references>
+        <references refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" compoundref="SceneSkybox_8h" startline="95">meshList</references>
+        <references refid="classSceneSkybox_1af18f8371d71ca250a8461af7135a3ebb" compoundref="SceneSkybox_8h" startline="105">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="structLight_1afeb738db41e987719e359166ef93314f" compoundref="Light_8h" startline="13">Light::position</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="14">Camera::position</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="323" endline="366">RenderMesh</references>
+        <references refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" compoundref="SceneSkybox_8cpp" startline="273" endline="321">RenderSkybox</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="structLight_1a6bd73eb0b27ef881f8442e20912d9258" compoundref="Light_8h" startline="27">Light::spotDirection</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="15">Camera::target</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca68b3a04d7ec03d7935df4bb3cde13190" compoundref="SceneSkybox_8h" startline="26">U_LIGHT0_POSITION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca7f2007fbf336d8a7b00dd306dd8972ad" compoundref="SceneSkybox_8h" startline="34">U_LIGHT0_SPOTDIRECTION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca047b32ec85361525785d472fcaccc835" compoundref="SceneSkybox_8h" startline="39">U_LIGHT1_POSITION</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caefdc95f54a102997bb54445e84097f3b" compoundref="SceneSkybox_8h" startline="46">U_LIGHT1_SPOTDIRECTION</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="16">Camera::up</references>
+        <references refid="classSceneSkybox_1a3d78ef61789f9a11ca9299d46c1e8edf" compoundref="SceneSkybox_8h" startline="105">viewStack</references>
+        <references refid="structPosition_1af684446cbf0f6d53386686283da6dcc6" compoundref="Vertex_8h" startline="8">Position::x</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structPosition_1a54a6182b5f7539295b32255808897d3f" compoundref="Vertex_8h" startline="8">Position::y</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+        <references refid="structPosition_1a5dc8c08d3d7209ba538ad21ba604aa44" compoundref="Vertex_8h" startline="8">Position::z</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">Vector3::z</references>
+      </memberdef>
+      <memberdef kind="function" id="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void SceneSkybox::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="92" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="369" bodyend="379"/>
+        <references refid="classSceneSkybox_1ab9f7813e66e75001b9f43fafbdeba9c7" compoundref="SceneSkybox_8h" startline="96">m_programID</references>
+        <references refid="classSceneSkybox_1a8274e5c83f72f773e2c6d8662679f219" compoundref="SceneSkybox_8h" startline="94">m_vertexArrayID</references>
+        <references refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" compoundref="SceneSkybox_8h" startline="95">meshList</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" compoundref="SceneSkybox_8h" startline="82">NUM_GEOMETRY</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneSkybox::RenderSkybox</definition>
+        <argsstring>()</argsstring>
+        <name>RenderSkybox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="109" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="273" bodyend="321"/>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a884ab600e66a36a1fb0bc116502da4d6" compoundref="SceneSkybox_8h" startline="80">GEO_BACK</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058accb43b6cc0476800062349f1c6dd552f" compoundref="SceneSkybox_8h" startline="78">GEO_BOTTOM</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a4e4d368ed158e0637b1c37b30a18bf74" compoundref="SceneSkybox_8h" startline="79">GEO_FRONT</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3ad94fb32300bff652dc31b3d3cc2888" compoundref="SceneSkybox_8h" startline="75">GEO_LEFT</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ad7e97dbcff8ec0921391b15586636382" compoundref="SceneSkybox_8h" startline="76">GEO_RIGHT</references>
+        <references refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a955580a4c27f5f7a3cedcb3f162f4f88" compoundref="SceneSkybox_8h" startline="77">GEO_TOP</references>
+        <references refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" compoundref="SceneSkybox_8h" startline="95">meshList</references>
+        <references refid="classSceneSkybox_1af18f8371d71ca250a8461af7135a3ebb" compoundref="SceneSkybox_8h" startline="105">modelStack</references>
+        <references refid="classMS_1aac22e39d0ac437fcb85403a9f0a7a25f" compoundref="MatrixStack_8cpp" startline="52" endline="54">MS::PopMatrix</references>
+        <references refid="classMS_1a9fb4fff5036f3f197b893f9a579c97b2" compoundref="MatrixStack_8cpp" startline="62" endline="64">MS::PushMatrix</references>
+        <references refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" compoundref="SceneSkybox_8cpp" startline="323" endline="366">RenderMesh</references>
+        <references refid="classMS_1a6ce592114042b920b648bca5519690cd" compoundref="MatrixStack_8cpp" startline="130" endline="134">MS::Rotate</references>
+        <references refid="classMS_1a52109795de960e24663b315e9128533f" compoundref="MatrixStack_8cpp" startline="149" endline="153">MS::Scale</references>
+        <references refid="classMS_1a7e94a35ce566fe3ec49c92b6c4bb663a" compoundref="MatrixStack_8cpp" startline="169" endline="173">MS::Translate</references>
+        <references refid="classSceneSkybox_1a03906acc3c7dd28c2f3d82676ee5c7e2" compoundref="SceneSkybox_8h" startline="100">worldSize</references>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneSkybox::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="111" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.cpp" bodystart="323" bodyend="366"/>
+        <references refid="classMtx44_1a97018c3b3ef41a962e27340c144430ea" compoundref="Mtx44_8h" startline="50">Mtx44::a</references>
+        <references refid="classMtx44_1aac1ba21ddfc5f3c24baa4f58d9c5c256" compoundref="Mtx44_8cpp" startline="139" endline="195">Mtx44::GetInverse</references>
+        <references refid="classMtx44_1aebb16a0329c5237e314af0d75d8081fd" compoundref="Mtx44_8cpp" startline="123" endline="127">Mtx44::GetTranspose</references>
+        <references refid="structMaterial_1ab3819b3151cbf3ac1892195ab091e3b8" compoundref="Material_8h" startline="31">Material::kAmbient</references>
+        <references refid="structMaterial_1aa88dd619cacf46e2f26ddd23fe032898" compoundref="Material_8h" startline="32">Material::kDiffuse</references>
+        <references refid="structMaterial_1a07cec8956c43f81adeb6ba7aea104915" compoundref="Material_8h" startline="34">Material::kShininess</references>
+        <references refid="structMaterial_1a97cc0bf34b02c758b198d12dd24e96e2" compoundref="Material_8h" startline="33">Material::kSpecular</references>
+        <references refid="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" compoundref="SceneSkybox_8h" startline="97">m_parameters</references>
+        <references refid="classMesh_1a3368c3bc60dd176e522df1542b764847" compoundref="Mesh_8h" startline="34">Mesh::material</references>
+        <references refid="classSceneSkybox_1af18f8371d71ca250a8461af7135a3ebb" compoundref="SceneSkybox_8h" startline="105">modelStack</references>
+        <references refid="classSceneSkybox_1ae0b00f894c72f883f53256dccf63b94e" compoundref="SceneSkybox_8h" startline="105">projectionStack</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="11">Component::r</references>
+        <references refid="classMesh_1a75e66bcd90c09492676a4cfe5b23c3af" compoundref="Mesh_8cpp" startline="46" endline="92">Mesh::Render</references>
+        <references refid="classMesh_1a7abd957a6487641e00c8fb855397bccd" compoundref="Mesh_8h" startline="33">Mesh::textureID</references>
+        <references refid="classMS_1a21291d7fb488f63c589bdc9bd620ba58" compoundref="MatrixStack_8cpp" startline="42" endline="44">MS::Top</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e7841be4cc6e862bbe38949718b276b" compoundref="SceneSkybox_8h" startline="53">U_COLOR_TEXTURE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca17ab05f68cc31931a58c62d1fcc22dd8" compoundref="SceneSkybox_8h" startline="52">U_COLOR_TEXTURE_ENABLED</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac1f9a39f5e8f81ee7e01146869b36aaa" compoundref="SceneSkybox_8h" startline="33">U_LIGHTENABLED</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0293325d902f53dfda306e4cbe2645c7" compoundref="SceneSkybox_8h" startline="22">U_MATERIAL_AMBIENT</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca718e12ab0fe170ea6589a1e9a5e04a97" compoundref="SceneSkybox_8h" startline="23">U_MATERIAL_DIFFUSE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caade83b46c2ae185569b9c4f04747b220" compoundref="SceneSkybox_8h" startline="25">U_MATERIAL_SHININESS</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca775cff2eec8ae1ab46b7fc15259cc401" compoundref="SceneSkybox_8h" startline="24">U_MATERIAL_SPECULAR</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac3b37a8df2079e1ece790e19c5a0e709" compoundref="SceneSkybox_8h" startline="20">U_MODELVIEW</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e5417436ce0624062f798c64ee257f7" compoundref="SceneSkybox_8h" startline="21">U_MODELVIEW_INVERSE_TRANSPOSE</references>
+        <references refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca70e9a92fdf0f28ced4f211c99b81c0b2" compoundref="SceneSkybox_8h" startline="19">U_MVP</references>
+        <references refid="classSceneSkybox_1a3d78ef61789f9a11ca9299d46c1e8edf" compoundref="SceneSkybox_8h" startline="105">viewStack</references>
+        <referencedby refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" compoundref="SceneSkybox_8cpp" startline="210" endline="271">Render</referencedby>
+        <referencedby refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" compoundref="SceneSkybox_8cpp" startline="273" endline="321">RenderSkybox</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1093">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="1092">
+        <label>SceneSkybox</label>
+        <link refid="classSceneSkybox"/>
+        <childnode refid="1093" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1100">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="1106">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="1109">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="1097">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="1107">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="1108" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="1110" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="1111" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="1112" relation="usage">
+          <edgelabel>colorBuffer</edgelabel>
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="1110">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="1103">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="1099" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="1111">
+        <label>string</label>
+      </node>
+      <node id="1108">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="1109" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="1098">
+        <label>float</label>
+      </node>
+      <node id="1105">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="1106" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="1095">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="1096">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="1097" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="1099" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="1100" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="1101" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="1102">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="1103" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>CAMERA_SPEED</edgelabel>
+        </childnode>
+        <childnode refid="1104" relation="usage">
+          <edgelabel>limiter</edgelabel>
+        </childnode>
+        <childnode refid="1099" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="1104">
+        <label>int</label>
+      </node>
+      <node id="1101">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="1094">
+        <label>SceneSkybox</label>
+        <link refid="classSceneSkybox"/>
+        <childnode refid="1095" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1096" relation="usage">
+          <edgelabel>lights</edgelabel>
+        </childnode>
+        <childnode refid="1102" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+          <edgelabel>worldSize</edgelabel>
+        </childnode>
+        <childnode refid="1105" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="1107" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="1112" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="1112">
+        <label>unsigned</label>
+      </node>
+      <node id="1099">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="1098" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSkybox.h" bodystart="14" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classSceneSkybox_1a604c0a52acba714626d65521c87d635f" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>camera</name></member>
+      <member refid="classSceneSkybox_1a915cb3936fab67004ba0a6b18d2f9afa" prot="public" virt="virtual"><scope>SceneSkybox</scope><name>Exit</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a0df0c6dd64f522ab199c100badf20d3e" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_AXES</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a884ab600e66a36a1fb0bc116502da4d6" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_BACK</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058accb43b6cc0476800062349f1c6dd552f" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_BOTTOM</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ac89bd4607aaa929bcdef3d9f72f5ab23" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_CYLINDER</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a4e4d368ed158e0637b1c37b30a18bf74" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_FRONT</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3ad94fb32300bff652dc31b3d3cc2888" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_LEFT</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab536641d97acd515cfde9151fa4b781a" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab453cf193a92865c408570db4e06913b" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_LIGHTBALL2</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a3924f25fee0d3cfcf4ee147f9793e5b4" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_QUAD</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ad7e97dbcff8ec0921391b15586636382" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_RIGHT</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058abe2a7a3a326dac5d76843c49675980f9" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE0</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a723e72ad957d121baf360f68862f8349" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE1</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058acf43abfc916142db9239636683467ef7" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE2</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ab2887be890a6d1fd1a97b51bba45f03a" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE3</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058ac593c0c71f219595111112b1f01bf087" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE4</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a8db536342b09f311230804f5534c5b26" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE5</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afe0875b2e86a4442526f8c9a2cb6b4d7" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE6</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afe350e7776645af2e89e17be23ab8aa0" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE7</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a596537d8240cf90c3a251605efed3375" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_SPHERE8</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058a955580a4c27f5f7a3cedcb3f162f4f88" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEO_TOP</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classSceneSkybox_1a8ab6711b734d8616075eadc5ff3cab81" prot="public" virt="virtual"><scope>SceneSkybox</scope><name>Init</name></member>
+      <member refid="classSceneSkybox_1a32ebc3428cfd3df9aed23bd1f6865781" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>lights</name></member>
+      <member refid="classSceneSkybox_1ab39d4bfab9b5e9c1f18d985c4ce629fb" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>m_parameters</name></member>
+      <member refid="classSceneSkybox_1ab9f7813e66e75001b9f43fafbdeba9c7" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>m_programID</name></member>
+      <member refid="classSceneSkybox_1a8274e5c83f72f773e2c6d8662679f219" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>m_vertexArrayID</name></member>
+      <member refid="classSceneSkybox_1a2e7859a72ca243e4a2038659cfbf68a5" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>meshList</name></member>
+      <member refid="classSceneSkybox_1af18f8371d71ca250a8461af7135a3ebb" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>modelStack</name></member>
+      <member refid="classSceneSkybox_1ab236bd0b4ac0f8a6cbb6bea7a28ea058afaf2ac199e0ce6bc15c3c647c6c52d93" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classSceneSkybox_1ae0b00f894c72f883f53256dccf63b94e" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>projectionStack</name></member>
+      <member refid="classSceneSkybox_1a33d6a4f51cef7b2e2086541259e32d4a" prot="public" virt="virtual"><scope>SceneSkybox</scope><name>Render</name></member>
+      <member refid="classSceneSkybox_1a0ef65839ece01e183fc5f5f1c24af803" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>RenderMesh</name></member>
+      <member refid="classSceneSkybox_1a6538f3d8e280fc1bc425a1e8753c22f7" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>RenderSkybox</name></member>
+      <member refid="classSceneSkybox_1a3d6451a7f62dc374d1a1bf8ad0f2577a" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>SceneSkybox</scope><name>Scene</name></member>
+      <member refid="classSceneSkybox_1ad401c768e2c83ef35d3e7ef163a0701b" prot="public" virt="non-virtual"><scope>SceneSkybox</scope><name>SceneSkybox</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e7841be4cc6e862bbe38949718b276b" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_COLOR_TEXTURE</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca17ab05f68cc31931a58c62d1fcc22dd8" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_COLOR_TEXTURE_ENABLED</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2e45ab50490e680239adffa424760477" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca6148e45932900ec3039595d547e19572" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_COSCUTOFF</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5b47f89d26e1b1a1fbb3989e87bde2ff" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_COSINNER</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca28a4794d5083de858911a82ad93e47a8" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_EXPONENT</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca5e43a5d1420905ea8c5524f780bcc75e" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9ce501e3be013059226ab2b9e815a694" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cad3307190c2c5bab445459a0f22c8eff4" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca68b3a04d7ec03d7935df4bb3cde13190" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0bd6b5efc1b98030bb85f8ec2ac8194d" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca7f2007fbf336d8a7b00dd306dd8972ad" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_SPOTDIRECTION</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca3f7ca9d9a426bda6aff6c7725600d1f0" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT0_TYPE</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca95267100bc45df43aee0df73a4b71354" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_COLOR</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca8df3cd76d121a2571a5eed16eedbb19f" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_COSCUTOFF</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caef2406c5ab6806db1ee7edc9c6263a84" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_COSINNER</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca45c03009940c8a55d68f5a65e8ddd3f9" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_EXPONENT</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0b195f7edd134175a3ef667aeeb7edad" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_KC</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9cee2c9cf115b9e0fdb7555fbb7e2130" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_KL</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cabad17c37d82508fe712273b8418fb295" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_KQ</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca047b32ec85361525785d472fcaccc835" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_POSITION</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca06fc4cd630536c3e871ce620c86442c8" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_POWER</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caefdc95f54a102997bb54445e84097f3b" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_SPOTDIRECTION</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca2798deeaa9f11078121d06c87a1c105c" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHT1_TYPE</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac1f9a39f5e8f81ee7e01146869b36aaa" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca0293325d902f53dfda306e4cbe2645c7" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca718e12ab0fe170ea6589a1e9a5e04a97" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752caade83b46c2ae185569b9c4f04747b220" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca775cff2eec8ae1ab46b7fc15259cc401" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cac3b37a8df2079e1ece790e19c5a0e709" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MODELVIEW</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca9e5417436ce0624062f798c64ee257f7" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752ca70e9a92fdf0f28ced4f211c99b81c0b2" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_MVP</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab6743dd8266b53b786e2dadd83c385fe" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_NUMLIGHTS</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752cab9bcf1a5fb13965b55a793af51e1e36b" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>U_TOTAL</name></member>
+      <member refid="classSceneSkybox_1aaa9660ca697b95047d80dbe33ff4752c" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classSceneSkybox_1ada5f05bb035612053bbcbcd2b292552a" prot="public" virt="virtual"><scope>SceneSkybox</scope><name>Update</name></member>
+      <member refid="classSceneSkybox_1a3d78ef61789f9a11ca9299d46c1e8edf" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>viewStack</name></member>
+      <member refid="classSceneSkybox_1a03906acc3c7dd28c2f3d82676ee5c7e2" prot="private" virt="non-virtual"><scope>SceneSkybox</scope><name>worldSize</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>SceneSkybox</scope><name>~Scene</name></member>
+      <member refid="classSceneSkybox_1ad3d654797aa904a7fad3ebbc58f1a1c4" prot="public" virt="non-virtual"><scope>SceneSkybox</scope><name>~SceneSkybox</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

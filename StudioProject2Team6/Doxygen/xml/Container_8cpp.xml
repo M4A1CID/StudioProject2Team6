@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Container_8cpp" kind="file">
+    <compoundname>Container.cpp</compoundname>
+    <includes refid="Container_8h" local="yes">Container.h</includes>
+    <incdepgraph>
+      <node id="2613">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2614" relation="include">
+        </childnode>
+      </node>
+      <node id="2614">
+        <label>string</label>
+      </node>
+      <node id="2611">
+        <label>MyGraphics/Source/Container.cpp</label>
+        <link refid="Container.cpp"/>
+        <childnode refid="2612" relation="include">
+        </childnode>
+      </node>
+      <node id="2612">
+        <label>Container.h</label>
+        <link refid="Container_8h"/>
+        <childnode refid="2613" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Container_8h" kindref="compound">Container.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" refkind="member"><highlight class="normal"><ref refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" kindref="member">CContainer::CContainer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a23142209396037427ed975ae28a1298f" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;undefined&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" kindref="member">x</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" kindref="member">y</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" kindref="member">z</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" kindref="member">rotation</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" kindref="member">firstItemStock</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" kindref="member">secondItemStock</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" kindref="member">thirdItemStock</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classCContainer_1ab7d950083997d2c476fb555ba3d44e9b" refkind="member"><highlight class="normal"><ref refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" kindref="member">CContainer::CContainer</ref>(<ref refid="classCItem" kindref="compound">CItem</ref><sp/>first,<sp/><ref refid="classCItem" kindref="compound">CItem</ref><sp/>second,<sp/><ref refid="classCItem" kindref="compound">CItem</ref><sp/>third,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>firstStock,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>secondStock,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thirdStock,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotate)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" kindref="member">x</ref><sp/>=<sp/>posX;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" kindref="member">y</ref><sp/>=<sp/>posY;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" kindref="member">z</ref><sp/>=<sp/>posZ;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" kindref="member">item_first</ref><sp/>=<sp/>first;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" kindref="member">item_second</ref><sp/>=<sp/>second;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" kindref="member">item_third</ref><sp/>=<sp/>third;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a23142209396037427ed975ae28a1298f" kindref="member">name</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" kindref="member">rotation</ref><sp/>=<sp/>rotate;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" kindref="member">firstItemStock</ref><sp/>=<sp/>firstStock;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" kindref="member">secondItemStock</ref><sp/>=<sp/>secondStock;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" kindref="member">thirdItemStock</ref><sp/>=<sp/>thirdStock;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="69"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70" refid="classCContainer_1a510472f4adfc6d1d2ac4b7b64a568d70" refkind="member"><highlight class="normal"><ref refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" kindref="member">CContainer::CContainer</ref>(<ref refid="classCItem" kindref="compound">CItem</ref>*<sp/>first,<sp/><ref refid="classCItem" kindref="compound">CItem</ref>*<sp/>second,<sp/><ref refid="classCItem" kindref="compound">CItem</ref>*<sp/>third,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>firstStock,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>secondStock,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>thirdStock,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>rotate)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" kindref="member">x</ref><sp/>=<sp/>posX;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" kindref="member">y</ref><sp/>=<sp/>posY;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" kindref="member">z</ref><sp/>=<sp/>posZ;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" kindref="member">item_first</ref><sp/>=<sp/>*first;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" kindref="member">item_second</ref><sp/>=<sp/>*second;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" kindref="member">item_third</ref><sp/>=<sp/>*third;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a23142209396037427ed975ae28a1298f" kindref="member">name</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" kindref="member">rotation</ref><sp/>=<sp/>rotate;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" kindref="member">firstItemStock</ref><sp/>=<sp/>firstStock;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" kindref="member">secondItemStock</ref><sp/>=<sp/>secondStock;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" kindref="member">thirdItemStock</ref><sp/>=<sp/>thirdStock;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="90"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classCContainer_1a397ac8d33925a17d9dbd81c9bb6036b3" refkind="member"><highlight class="normal"><ref refid="classCContainer_1a397ac8d33925a17d9dbd81c9bb6036b3" kindref="member">CContainer::~CContainer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classCContainer_1ab9bf0cf7936e505a400255e265104e94" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1ab9bf0cf7936e505a400255e265104e94" kindref="member">CContainer::getFirstStock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" kindref="member">firstItemStock</ref>;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classCContainer_1a1260c4eb8f72a4529af2087586f1600b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a1260c4eb8f72a4529af2087586f1600b" kindref="member">CContainer::getSecondStock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" kindref="member">secondItemStock</ref>;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="125"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classCContainer_1a39099429332baa7d3003b4fa9e1b3c9f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a39099429332baa7d3003b4fa9e1b3c9f" kindref="member">CContainer::getThirdStock</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" kindref="member">thirdItemStock</ref>;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classCContainer_1a35e4344eb1c1d25c9364ab16f16dc709" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a35e4344eb1c1d25c9364ab16f16dc709" kindref="member">CContainer::getXpos</ref>()<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" kindref="member">x</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>X<sp/>position<sp/>of<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="149"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classCContainer_1ae00b4f70a3679017c1d795536b2a7d5f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1ae00b4f70a3679017c1d795536b2a7d5f" kindref="member">CContainer::getYpos</ref>()<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" kindref="member">y</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>Y<sp/>position<sp/>of<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classCContainer_1a912430f27287e0fd419a94333790c947" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a912430f27287e0fd419a94333790c947" kindref="member">CContainer::getZpos</ref>()<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" kindref="member">z</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>Z<sp/>position<sp/>of<sp/>container</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}<sp/></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="173"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classCContainer_1a005405b7321929c4066028be8a65eec5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a005405b7321929c4066028be8a65eec5" kindref="member">CContainer::getRotation</ref>()</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" kindref="member">rotation</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="185"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="classCContainer_1a064d9d932a0e361083d5a4a9285eef22" refkind="member"><highlight class="normal"><ref refid="classCItem" kindref="compound">CItem</ref><sp/><ref refid="classCContainer_1a064d9d932a0e361083d5a4a9285eef22" kindref="member">CContainer::getTopItem</ref>()</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" kindref="member">item_first</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="197"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="classCContainer_1aeceff305e238951c1cf927ac97ae84ce" refkind="member"><highlight class="normal"><ref refid="classCItem" kindref="compound">CItem</ref><sp/><ref refid="classCContainer_1aeceff305e238951c1cf927ac97ae84ce" kindref="member">CContainer::getMiddleItem</ref>()</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" kindref="member">item_second</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="209"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="classCContainer_1a8cbd00470704513d12083d2be711ad4b" refkind="member"><highlight class="normal"><ref refid="classCItem" kindref="compound">CItem</ref><sp/><ref refid="classCContainer_1a8cbd00470704513d12083d2be711ad4b" kindref="member">CContainer::getBottomItem</ref>()</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" kindref="member">item_third</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="221"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222" refid="classCContainer_1ac66e7fa20ba89bdeea85c352546a03e9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1ac66e7fa20ba89bdeea85c352546a03e9" kindref="member">CContainer::setRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="223"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" kindref="member">rotation</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="235"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236" refid="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" kindref="member">CContainer::setItems</ref>(<ref refid="classCItem" kindref="compound">CItem</ref><sp/>a,<ref refid="classCItem" kindref="compound">CItem</ref><sp/>b,<ref refid="classCItem" kindref="compound">CItem</ref><sp/>c)</highlight></codeline>
+<codeline lineno="237"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" kindref="member">item_first</ref><sp/>=<sp/>a;<sp/></highlight><highlight class="comment">//Set<sp/>first<sp/>item</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" kindref="member">item_second</ref><sp/>=<sp/>b;</highlight><highlight class="comment">//Set<sp/>second<sp/>item</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" kindref="member">item_third</ref><sp/>=<sp/>c;<sp/></highlight><highlight class="comment">//Set<sp/>third<sp/>item</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="251"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252" refid="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" kindref="member">CContainer::setPosition</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ)</highlight></codeline>
+<codeline lineno="253"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" kindref="member">x</ref><sp/>=<sp/>posX;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>X</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" kindref="member">y</ref><sp/>=<sp/>posY;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>Y</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" kindref="member">z</ref><sp/>=<sp/>posZ;<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>Z</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="267"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="classCContainer_1a94cf888915275990b63a3997078728ad" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCContainer_1a94cf888915275990b63a3997078728ad" kindref="member">CContainer::setItemStock</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>a,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>c)</highlight></codeline>
+<codeline lineno="269"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" kindref="member">firstItemStock</ref><sp/>=<sp/>a;</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" kindref="member">secondItemStock</ref><sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" kindref="member">thirdItemStock</ref><sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="273"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp"/>
+  </compounddef>
+</doxygen>

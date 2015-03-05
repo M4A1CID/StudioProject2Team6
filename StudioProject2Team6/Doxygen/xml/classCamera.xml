@@ -1,0 +1,338 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCamera" kind="class" prot="public">
+    <compoundname>Camera</compoundname>
+    <derivedcompoundref refid="classCamera3" prot="public" virt="non-virtual">Camera3</derivedcompoundref>
+    <includes refid="Camera_8h" local="no">Camera.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classCamera_1a3b229874a00253021a1b6c61657fa5ab" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera::position</definition>
+        <argsstring></argsstring>
+        <name>position</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="14" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a5284cba426a3ff140f0cfa583f270c54" compoundref="SceneSP_8cpp" startline="5157" endline="5203">SceneSP::checkElevatorCollision</referencedby>
+        <referencedby refid="classSceneSP_1aed88cbeaa9c2779dc5ab3396e0cbd3ba" compoundref="SceneSP_8cpp" startline="4934" endline="4971">SceneSP::checkObjectCollision</referencedby>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1ad6a24084727f08fc91c3e02e292b649f" compoundref="SceneSP_8cpp" startline="4978" endline="5150">SceneSP::checkSupermarketCollision</referencedby>
+        <referencedby refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" compoundref="SceneSP_8cpp" startline="5253" endline="5303">SceneSP::checkWinLose</referencedby>
+        <referencedby refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" compoundref="Camera_8cpp" startline="33" endline="38">Init</referencedby>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</referencedby>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" compoundref="SceneSP_8cpp" startline="3300" endline="3379">SceneSP::Render</referencedby>
+        <referencedby refid="classSceneSP_1a4620fecec9b7d89136b8e947d26ffc81" compoundref="SceneSP_8cpp" startline="4174" endline="4186">SceneSP::RenderATM</referencedby>
+        <referencedby refid="classSceneSP_1a49baa6430b59d2fb1bfeecf80f90204b" compoundref="SceneSP_8cpp" startline="3272" endline="3293">SceneSP::RenderDrunkmanUI</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classSceneSP_1a71623d5328db0316c931d504f7707c07" compoundref="SceneSP_8cpp" startline="3386" endline="3435">SceneSP::RenderSkyBox</referencedby>
+        <referencedby refid="classSceneSP_1a280f438c779cb55a30e779664917e97e" compoundref="SceneSP_8cpp" startline="3540" endline="3565">SceneSP::RenderTrolleys</referencedby>
+        <referencedby refid="classSceneSP_1a24cfa47c9258bc7ba995760ea9d07e51" compoundref="SceneSP_8cpp" startline="3250" endline="3265">SceneSP::RenderTugofwarUI</referencedby>
+        <referencedby refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="45" endline="50">Reset</referencedby>
+        <referencedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="208" endline="213">Camera3::Reset</referencedby>
+        <referencedby refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" compoundref="SceneSP_8cpp" startline="1769" endline="1788">SceneSP::UpdateATM</referencedby>
+        <referencedby refid="classSceneSP_1a810e5313d48de43702158891315ffa0e" compoundref="SceneSP_8cpp" startline="1047" endline="1095">SceneSP::UpdateBuildingGuy</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a01fcec80d931e2556c0e50bbd93b9ade" compoundref="SceneSP_8cpp" startline="2141" endline="2165">SceneSP::UpdateDrunkman</referencedby>
+        <referencedby refid="classSceneSP_1adb19fb3deaf7203ed8014858451c2125" compoundref="SceneSP_8cpp" startline="2174" endline="2199">SceneSP::UpdateDrunkmanguy</referencedby>
+        <referencedby refid="classSceneSP_1a1d18eb92664b2eb377dd4d959bf9335c" compoundref="SceneSP_8cpp" startline="1011" endline="1038">SceneSP::UpdateEasterEggGuy</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1ae68b9d228ca0e7308bcf5e631ac72905" compoundref="SceneSP_8cpp" startline="2342" endline="2406">SceneSP::UpdateGhostman</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classCamera_1ac2a07c30e5c1c5f415ed86d6e15c5a9f" compoundref="Camera_8cpp" startline="60" endline="79">UpdateMovement</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+        <referencedby refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" compoundref="SceneSP_8cpp" startline="2059" endline="2106">SceneSP::UpdateTugofwar</referencedby>
+        <referencedby refid="classSceneSP_1a0ca0c247e4bc68fd75e98d68e4b8266b" compoundref="SceneSP_8cpp" startline="2115" endline="2132">SceneSP::UpdateTugofwarguy</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera::target</definition>
+        <argsstring></argsstring>
+        <name>target</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a5284cba426a3ff140f0cfa583f270c54" compoundref="SceneSP_8cpp" startline="5157" endline="5203">SceneSP::checkElevatorCollision</referencedby>
+        <referencedby refid="classSceneSP_1aed88cbeaa9c2779dc5ab3396e0cbd3ba" compoundref="SceneSP_8cpp" startline="4934" endline="4971">SceneSP::checkObjectCollision</referencedby>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1ad6a24084727f08fc91c3e02e292b649f" compoundref="SceneSP_8cpp" startline="4978" endline="5150">SceneSP::checkSupermarketCollision</referencedby>
+        <referencedby refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" compoundref="Camera_8cpp" startline="33" endline="38">Init</referencedby>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</referencedby>
+        <referencedby refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" compoundref="SceneSP_8cpp" startline="3300" endline="3379">SceneSP::Render</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="45" endline="50">Reset</referencedby>
+        <referencedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="208" endline="213">Camera3::Reset</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" compoundref="SceneSP_8cpp" startline="2059" endline="2106">SceneSP::UpdateTugofwar</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCamera_1ab76ce866ca2acd6ab54447f474077245" prot="public" static="no" mutable="no">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Camera::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" compoundref="Camera_8cpp" startline="33" endline="38">Init</referencedby>
+        <referencedby refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" compoundref="SceneSP_8cpp" startline="3300" endline="3379">SceneSP::Render</referencedby>
+        <referencedby refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="45" endline="50">Reset</referencedby>
+        <referencedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb" compoundref="Camera3_8cpp" startline="208" endline="213">Camera3::Reset</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCamera_1a01f94c3543f56ede7af49dc778f19331" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera::Camera</definition>
+        <argsstring>()</argsstring>
+        <name>Camera</name>
+        <briefdescription>
+<para>Default camera constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.cpp" bodystart="10" bodyend="13"/>
+        <references refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="45" endline="50">Reset</references>
+      </memberdef>
+      <memberdef kind="function" id="classCamera_1ad1897942d0ccf91052386388a497349f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Camera::~Camera</definition>
+        <argsstring>()</argsstring>
+        <name>~Camera</name>
+        <briefdescription>
+<para>Default camera destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="19" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.cpp" bodystart="20" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classCamera_1a609775f7ec4cd936ad7add808cd7354c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera::Init</definition>
+        <argsstring>(const Vector3 &amp;pos, const Vector3 &amp;target, const Vector3 &amp;up)</argsstring>
+        <name>Init</name>
+        <reimplementedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f">Init</reimplementedby>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>up</declname>
+        </param>
+        <briefdescription>
+<para>Initialises the camera. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- position of the camera </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>target</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- camera target </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>up</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.cpp" bodystart="33" bodyend="38"/>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="14">position</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="15">target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="16">up</references>
+      </memberdef>
+      <memberdef kind="function" id="classCamera_1aa46f58b32270a571ab56dde4caca46db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera::Reset</definition>
+        <argsstring>()</argsstring>
+        <name>Reset</name>
+        <reimplementedby refid="classCamera3_1a4b10106bcd89f21e3cf3e39f04d8c1cb">Reset</reimplementedby>
+        <briefdescription>
+<para>Resets the camera back to its default position. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.cpp" bodystart="45" bodyend="50"/>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="14">position</references>
+        <references refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Vector3::Set</references>
+        <references refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" compoundref="Camera_8h" startline="15">target</references>
+        <references refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" compoundref="Camera_8h" startline="16">up</references>
+        <referencedby refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" compoundref="Camera_8cpp" startline="10" endline="13">Camera</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCamera_1ac2a07c30e5c1c5f415ed86d6e15c5a9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera::UpdateMovement</definition>
+        <argsstring>(double dt, bool reverse)</argsstring>
+        <name>UpdateMovement</name>
+        <reimplementedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c">UpdateMovement</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reverse</declname>
+        </param>
+        <briefdescription>
+<para>Updates the camera movement. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- delta time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- reverses camera controls if true </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="22" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.cpp" bodystart="60" bodyend="79"/>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="39" endline="42">Application::IsKeyPressed</references>
+        <references refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" compoundref="Camera_8h" startline="14">position</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">Vector3::x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">Vector3::y</references>
+      </memberdef>
+      <memberdef kind="function" id="classCamera_1a66234059370295aa84b2f5ba07df10ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void Camera::UpdateView</definition>
+        <argsstring>(double dt, bool reverse)</argsstring>
+        <name>UpdateView</name>
+        <reimplementedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0">UpdateView</reimplementedby>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>reverse</declname>
+        </param>
+        <briefdescription>
+<para>Updates the camera view. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- delta time </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>reverse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- reverses camera controls if true </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="23" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.cpp" bodystart="89" bodyend="92"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the <ref refid="classCamera" kindref="compound">Camera</ref> class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classCamera" kindref="compound">Camera</ref>: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="617">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+      </node>
+      <node id="618">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="617" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="619">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="620" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="621">
+        <label>float</label>
+      </node>
+      <node id="620">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="621" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" line="12" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Camera.h" bodystart="11" bodyend="24"/>
+    <listofallmembers>
+      <member refid="classCamera_1a01f94c3543f56ede7af49dc778f19331" prot="public" virt="non-virtual"><scope>Camera</scope><name>Camera</name></member>
+      <member refid="classCamera_1a609775f7ec4cd936ad7add808cd7354c" prot="public" virt="virtual"><scope>Camera</scope><name>Init</name></member>
+      <member refid="classCamera_1a3b229874a00253021a1b6c61657fa5ab" prot="public" virt="non-virtual"><scope>Camera</scope><name>position</name></member>
+      <member refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" prot="public" virt="virtual"><scope>Camera</scope><name>Reset</name></member>
+      <member refid="classCamera_1a7b1215b2f9c2a71cd41e4225c7df31e8" prot="public" virt="non-virtual"><scope>Camera</scope><name>target</name></member>
+      <member refid="classCamera_1ab76ce866ca2acd6ab54447f474077245" prot="public" virt="non-virtual"><scope>Camera</scope><name>up</name></member>
+      <member refid="classCamera_1ac2a07c30e5c1c5f415ed86d6e15c5a9f" prot="public" virt="virtual"><scope>Camera</scope><name>UpdateMovement</name></member>
+      <member refid="classCamera_1a66234059370295aa84b2f5ba07df10ed" prot="public" virt="virtual"><scope>Camera</scope><name>UpdateView</name></member>
+      <member refid="classCamera_1ad1897942d0ccf91052386388a497349f" prot="public" virt="non-virtual"><scope>Camera</scope><name>~Camera</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

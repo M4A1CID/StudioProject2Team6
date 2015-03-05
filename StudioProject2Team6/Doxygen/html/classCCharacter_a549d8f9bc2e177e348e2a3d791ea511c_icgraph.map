@@ -1,0 +1,9 @@
+<map id="CCharacter::getCharacterJob" name="CCharacter::getCharacterJob">
+<area shape="rect" id="node2" href="$classSceneSP.html#a182bfd6a2fca51fe09cbd82771f779a1" title="Checks for the winning and losing conditions of the current gamemode. " alt="" coords="250,5,421,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="243,107,428,133"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="266,157,405,184"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a5ad62cfa3ac5fe2156a8713ffab6a4dd" title="Updates all easter eggs in the easter egg gamemode. " alt="" coords="243,56,428,83"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="476,44,645,71"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="693,44,820,71"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="497,120,624,147"/>
+</map>

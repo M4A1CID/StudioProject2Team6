@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="EasterEgg2_8h" kind="file">
+    <compoundname>EasterEgg2.h</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includedby refid="DefineItemClass_8h" local="yes">MyGraphics/Source/DefineItemClass.h</includedby>
+    <includedby refid="EasterEgg2_8cpp" local="yes">MyGraphics/Source/EasterEgg2.cpp</includedby>
+    <incdepgraph>
+      <node id="2759">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2760" relation="include">
+        </childnode>
+      </node>
+      <node id="2760">
+        <label>string</label>
+      </node>
+      <node id="2761">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="2758">
+        <label>MyGraphics/Source/EasterEgg2.h</label>
+        <link refid="EasterEgg2.h"/>
+        <childnode refid="2759" relation="include">
+        </childnode>
+        <childnode refid="2761" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2767">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="2765">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2768">
+        <label>MyGraphics/Source/EasterEgg2.cpp</label>
+        <link refid="EasterEgg2_8cpp"/>
+      </node>
+      <node id="2764">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="2765" relation="include">
+        </childnode>
+        <childnode refid="2766" relation="include">
+        </childnode>
+        <childnode refid="2767" relation="include">
+        </childnode>
+      </node>
+      <node id="2763">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="2764" relation="include">
+        </childnode>
+      </node>
+      <node id="2766">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2762">
+        <label>MyGraphics/Source/EasterEgg2.h</label>
+        <link refid="EasterEgg2.h"/>
+        <childnode refid="2763" relation="include">
+        </childnode>
+        <childnode refid="2768" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCEasterEgg2" prot="public">CEasterEgg2</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classCEasterEgg2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCEasterEgg2" kindref="compound">CEasterEgg2</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCItem" kindref="compound">CItem</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCEasterEgg2_1a51f0540313b60b10a5cdc107b8fab02c" kindref="member">CEasterEgg2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCEasterEgg2_1af1f68cb06ee9283a9267842d8f8f718a" kindref="member">~CEasterEgg2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/EasterEgg2.h"/>
+  </compounddef>
+</doxygen>

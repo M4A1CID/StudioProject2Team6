@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Mutex" kind="class" prot="public">
+    <compoundname>sf::Mutex</compoundname>
+    <basecompoundref refid="classsf_1_1NonCopyable" prot="private" virt="non-virtual">sf::NonCopyable</basecompoundref>
+    <includes refid="Mutex_8hpp" local="no">Mutex.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1Mutex_1a057421e9a5f12ea7b9996bd6742d022e" prot="private" static="no" mutable="no">
+        <type>priv::MutexImpl *</type>
+        <definition>priv::MutexImpl* sf::Mutex::m_mutexImpl</definition>
+        <argsstring></argsstring>
+        <name>m_mutexImpl</name>
+        <briefdescription>
+<para>OS-specific implementation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" line="88" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Mutex_1a9bd52a48320fd7b6db8a78037aad276e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Mutex::Mutex</definition>
+        <argsstring>()</argsstring>
+        <name>Mutex</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" line="55" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Mutex_1a9f76a67b7b6d3918131a692179b4e3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Mutex::~Mutex</definition>
+        <argsstring>()</argsstring>
+        <name>~Mutex</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" line="61" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Mutex_1a1a16956a6bbea764480c1b80f2e45763" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Mutex::lock</definition>
+        <argsstring>()</argsstring>
+        <name>lock</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Lock" kindref="compound">Lock</ref> the mutex. </para>        </briefdescription>
+        <detaileddescription>
+<para>If the mutex is already locked in another thread, this call will block the execution until the mutex is released.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1Mutex_1ade71268ffc5e80756652058b01c23c33" kindref="member">unlock</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" line="73" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Mutex_1ade71268ffc5e80756652058b01c23c33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Mutex::unlock</definition>
+        <argsstring>()</argsstring>
+        <name>unlock</name>
+        <briefdescription>
+<para>Unlock the mutex. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classsf_1_1Mutex_1a1a16956a6bbea764480c1b80f2e45763" kindref="member">lock</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" line="81" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Blocks concurrent access to shared resources from multiple threads. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref> stands for &quot;MUTual EXclusion&quot;.</para><para>A mutex is a synchronization object, used when multiple threads are involved.</para><para>When you want to protect a part of the code from being accessed simultaneously by multiple threads, you typically use a mutex. When a thread is locked by a mutex, any other thread trying to lock it will be blocked until the mutex is released by the thread that locked it. This way, you can allow only one thread at a time to access a critical region of your code.</para><para>Usage example: <programlisting><codeline><highlight class="normal">Database<sp/>database;<sp/>//<sp/>this<sp/>is<sp/>a<sp/>critical<sp/>resource<sp/>that<sp/>needs<sp/>some<sp/>protection</highlight></codeline>
+<codeline><highlight class="normal">sf::Mutex<sp/>mutex;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>thread1()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mutex.lock();<sp/>//<sp/>this<sp/>call<sp/>will<sp/>block<sp/>the<sp/>thread<sp/>if<sp/>the<sp/>mutex<sp/>is<sp/>already<sp/>locked<sp/>by<sp/>thread2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>database.write(...);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mutex.unlock();<sp/>//<sp/>if<sp/>thread2<sp/>was<sp/>waiting,<sp/>it<sp/>will<sp/>now<sp/>be<sp/>unblocked</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>thread2()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mutex.lock();<sp/>//<sp/>this<sp/>call<sp/>will<sp/>block<sp/>the<sp/>thread<sp/>if<sp/>the<sp/>mutex<sp/>is<sp/>already<sp/>locked<sp/>by<sp/>thread1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>database.write(...);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>mutex.unlock();<sp/>//<sp/>if<sp/>thread1<sp/>was<sp/>waiting,<sp/>it<sp/>will<sp/>now<sp/>be<sp/>unblocked</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para>Be very careful with mutexes. A bad usage can lead to bad problems, like deadlocks (two threads are waiting for each other and the application is globally stuck).</para><para>To make the usage of mutexes more robust, particularly in environments where exceptions can be thrown, you should use the helper class <ref refid="classsf_1_1Lock" kindref="compound">sf::Lock</ref> to lock/unlock mutexes.</para><para>SFML mutexes are recursive, which means that you can lock a mutex multiple times in the same thread without creating a deadlock. In this case, the first call to <ref refid="classsf_1_1Mutex_1a1a16956a6bbea764480c1b80f2e45763" kindref="member">lock()</ref> behaves as usual, and the following ones have no effect. However, you must call <ref refid="classsf_1_1Mutex_1ade71268ffc5e80756652058b01c23c33" kindref="member">unlock()</ref> exactly as many times as you called <ref refid="classsf_1_1Mutex_1a1a16956a6bbea764480c1b80f2e45763" kindref="member">lock()</ref>. If you don&apos;t, the mutex won&apos;t be released.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1Lock" kindref="compound">sf::Lock</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1001">
+        <label>sf::Mutex</label>
+        <link refid="classsf_1_1Mutex"/>
+        <childnode refid="1002" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1002">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1003">
+        <label>sf::Mutex</label>
+        <link refid="classsf_1_1Mutex"/>
+        <childnode refid="1004" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1005" relation="usage">
+          <edgelabel>m_mutexImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="1005">
+        <label>MutexImpl *</label>
+      </node>
+      <node id="1004">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" line="48" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Mutex.hpp" bodystart="47" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Mutex_1a1a16956a6bbea764480c1b80f2e45763" prot="public" virt="non-virtual"><scope>sf::Mutex</scope><name>lock</name></member>
+      <member refid="classsf_1_1Mutex_1a057421e9a5f12ea7b9996bd6742d022e" prot="private" virt="non-virtual"><scope>sf::Mutex</scope><name>m_mutexImpl</name></member>
+      <member refid="classsf_1_1Mutex_1a9bd52a48320fd7b6db8a78037aad276e" prot="public" virt="non-virtual"><scope>sf::Mutex</scope><name>Mutex</name></member>
+      <member refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" prot="private" virt="non-virtual"><scope>sf::Mutex</scope><name>NonCopyable</name></member>
+      <member refid="classsf_1_1Mutex_1ade71268ffc5e80756652058b01c23c33" prot="public" virt="non-virtual"><scope>sf::Mutex</scope><name>unlock</name></member>
+      <member refid="classsf_1_1Mutex_1a9f76a67b7b6d3918131a692179b4e3f2" prot="public" virt="non-virtual"><scope>sf::Mutex</scope><name>~Mutex</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

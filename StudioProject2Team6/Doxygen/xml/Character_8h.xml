@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Character_8h" kind="file">
+    <compoundname>Character.h</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="Player_8h" local="yes">MyGraphics/Source/Player.h</includedby>
+    <includedby refid="Npc_8h" local="yes">MyGraphics/Source/Npc.h</includedby>
+    <includedby refid="Character_8cpp" local="yes">MyGraphics/Source/Character.cpp</includedby>
+    <incdepgraph>
+      <node id="2597">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2598" relation="include">
+        </childnode>
+      </node>
+      <node id="2598">
+        <label>string</label>
+      </node>
+      <node id="2600">
+        <label>vector</label>
+      </node>
+      <node id="2596">
+        <label>MyGraphics/Source/Character.h</label>
+        <link refid="Character.h"/>
+        <childnode refid="2597" relation="include">
+        </childnode>
+        <childnode refid="2599" relation="include">
+        </childnode>
+        <childnode refid="2600" relation="include">
+        </childnode>
+      </node>
+      <node id="2599">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2606">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="2608">
+        <label>MyGraphics/Source/Npc.h</label>
+        <link refid="Npc_8h"/>
+        <childnode refid="2603" relation="include">
+        </childnode>
+        <childnode refid="2609" relation="include">
+        </childnode>
+      </node>
+      <node id="2609">
+        <label>MyGraphics/Source/Npc.cpp</label>
+        <link refid="Npc_8cpp"/>
+      </node>
+      <node id="2604">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2602">
+        <label>MyGraphics/Source/Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="2603" relation="include">
+        </childnode>
+        <childnode refid="2607" relation="include">
+        </childnode>
+      </node>
+      <node id="2607">
+        <label>MyGraphics/Source/Player.cpp</label>
+        <link refid="Player_8cpp"/>
+      </node>
+      <node id="2603">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="2604" relation="include">
+        </childnode>
+        <childnode refid="2605" relation="include">
+        </childnode>
+        <childnode refid="2606" relation="include">
+        </childnode>
+      </node>
+      <node id="2605">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2601">
+        <label>MyGraphics/Source/Character.h</label>
+        <link refid="Character.h"/>
+        <childnode refid="2602" relation="include">
+        </childnode>
+        <childnode refid="2608" relation="include">
+        </childnode>
+        <childnode refid="2610" relation="include">
+        </childnode>
+      </node>
+      <node id="2610">
+        <label>MyGraphics/Source/Character.cpp</label>
+        <link refid="Character_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCCharacter" prot="public">CCharacter</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Character_8h_1aa3b1d698d1b4d09796cf56a523dbc9c4" prot="public" static="no">
+        <name>CHARACTER_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="3" column="9" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CHARACTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="Character_8h_1aa3b1d698d1b4d09796cf56a523dbc9c4" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CHARACTER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="13"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classCCharacter" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCCharacter" kindref="compound">CCharacter</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" kindref="member">CCharacter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" kindref="member">CCharacter</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>job);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" kindref="member">~CCharacter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" kindref="member">getCharacterState</ref>();</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" kindref="member">getAnimationType</ref>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" kindref="member">getXpos</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1adf34bbd751c72295580148348f086a32" kindref="member">getYpos</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" kindref="member">getZpos</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" kindref="member">getCharacterJob</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" kindref="member">setCharacterJob</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jobNum);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" kindref="member">setCharacterState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" kindref="member">setAnimationType</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" kindref="member">setXpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" kindref="member">setYpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" kindref="member">setZpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36" refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" kindref="member">characterState</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" kindref="member">characterJob</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" kindref="member">animationType</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h"/>
+  </compounddef>
+</doxygen>

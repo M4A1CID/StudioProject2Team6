@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1ThreadLocalPtr" kind="class" prot="public">
+    <compoundname>sf::ThreadLocalPtr</compoundname>
+    <basecompoundref refid="classsf_1_1ThreadLocal" prot="private" virt="non-virtual">sf::ThreadLocal</basecompoundref>
+    <includes refid="ThreadLocalPtr_8hpp" local="no">ThreadLocalPtr.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1ThreadLocalPtr_1a8c678211d7828d2a8c41cb534422d649" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::ThreadLocalPtr&lt; T &gt;::ThreadLocalPtr</definition>
+        <argsstring>(T *value=NULL)</argsstring>
+        <name>ThreadLocalPtr</name>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional value to initialize the variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="51" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.inl" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocalPtr_1aa3bac9a08e8739613961659d10e0fadd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; sf::ThreadLocalPtr&lt; T &gt;::operator*</definition>
+        <argsstring>() const </argsstring>
+        <name>operator*</name>
+        <briefdescription>
+<para>Overload of unary operator *. </para>        </briefdescription>
+        <detaileddescription>
+<para>Like raw pointers, applying the * operator returns a reference to the pointed-to object.</para><para><simplesect kind="return"><para>Reference to the thread-local variable </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="62" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.inl" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocalPtr_1aa0b559f78929b22cb2585cb2966edfb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>T *</type>
+        <definition>T * sf::ThreadLocalPtr&lt; T &gt;::operator-&gt;</definition>
+        <argsstring>() const </argsstring>
+        <name>operator-&gt;</name>
+        <briefdescription>
+<para>Overload of operator -&gt; </para>        </briefdescription>
+        <detaileddescription>
+<para>Similarly to raw pointers, applying the -&gt; operator returns the pointed-to object.</para><para><simplesect kind="return"><para>Pointer to the thread-local variable </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="73" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.inl" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocalPtr_1ab4a6a341c26b58f0ed3ef86502bd9572" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::ThreadLocalPtr&lt; T &gt;::operator T *</definition>
+        <argsstring>() const </argsstring>
+        <name>operator T *</name>
+        <briefdescription>
+<para>Conversion operator to implicitly convert the pointer to its raw pointer type (T*) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pointer to the actual object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="82" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.inl" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocalPtr_1a14dcf1cdf5f6b3bcdd633014b2b671f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">ThreadLocalPtr</ref>&lt; T &gt; &amp;</type>
+        <definition>ThreadLocalPtr&lt; T &gt; &amp; sf::ThreadLocalPtr&lt; T &gt;::operator=</definition>
+        <argsstring>(T *value)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>T *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator for a raw pointer parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to assign</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to self </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="92" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.inl" bodystart="62" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocalPtr_1a6792a6a808af06f0d13e3ceecf2fc947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">ThreadLocalPtr</ref>&lt; T &gt; &amp;</type>
+        <definition>ThreadLocalPtr&lt; T &gt; &amp; sf::ThreadLocalPtr&lt; T &gt;::operator=</definition>
+        <argsstring>(const ThreadLocalPtr&lt; T &gt; &amp;right)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">ThreadLocalPtr</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator for a <ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">ThreadLocalPtr</ref> parameter. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">ThreadLocalPtr</ref> to assign</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to self </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="102" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.inl" bodystart="71" bodyend="75"/>
+        <references refid="classsf_1_1ThreadLocal_1aef35a39686eac4b6634a6e5605aacfd7">sf::ThreadLocal::getValue</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Pointer to a thread-local variable. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">sf::ThreadLocalPtr</ref> is a type-safe wrapper for storing pointers to thread-local variables.</para><para>A thread-local variable holds a different value for each different thread, unlike normal variables that are shared.</para><para>Its usage is completely transparent, so that it is similar to manipulating the raw pointer directly (like any smart pointer).</para><para>Usage example: <programlisting><codeline><highlight class="normal">MyClass<sp/>object1;</highlight></codeline>
+<codeline><highlight class="normal">MyClass<sp/>object2;</highlight></codeline>
+<codeline><highlight class="normal">sf::ThreadLocalPtr&lt;MyClass&gt;<sp/>objectPtr;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>thread1()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>objectPtr<sp/>=<sp/>&amp;object1;<sp/>//<sp/>doesn&apos;t<sp/>impact<sp/>thread2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>thread2()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>objectPtr<sp/>=<sp/>&amp;object2;<sp/>//<sp/>doesn&apos;t<sp/>impact<sp/>thread1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">int<sp/>main()</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Create<sp/>and<sp/>launch<sp/>the<sp/>two<sp/>threads</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Thread<sp/>t1(&amp;thread1);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Thread<sp/>t2(&amp;thread2);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>t1.launch();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>t2.launch();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">ThreadLocalPtr</ref> is designed for internal use; however you can use it if you feel like it fits well your implementation. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1181">
+        <label>sf::ThreadLocalPtr&lt; T &gt;</label>
+        <link refid="classsf_1_1ThreadLocalPtr"/>
+        <childnode refid="1182" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1183">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1182">
+        <label>sf::ThreadLocal</label>
+        <link refid="classsf_1_1ThreadLocal"/>
+        <childnode refid="1183" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1184">
+        <label>sf::ThreadLocalPtr&lt; T &gt;</label>
+        <link refid="classsf_1_1ThreadLocalPtr"/>
+        <childnode refid="1185" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1187">
+        <label>ThreadLocalImpl *</label>
+      </node>
+      <node id="1186">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1185">
+        <label>sf::ThreadLocal</label>
+        <link refid="classsf_1_1ThreadLocal"/>
+        <childnode refid="1186" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1187" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocalPtr.hpp" bodystart="41" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classsf_1_1ThreadLocal_1aef35a39686eac4b6634a6e5605aacfd7" prot="private" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>getValue</name></member>
+      <member refid="classsf_1_1ThreadLocalPtr_1ab4a6a341c26b58f0ed3ef86502bd9572" prot="public" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>operator T *</name></member>
+      <member refid="classsf_1_1ThreadLocalPtr_1aa3bac9a08e8739613961659d10e0fadd" prot="public" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>operator*</name></member>
+      <member refid="classsf_1_1ThreadLocalPtr_1aa0b559f78929b22cb2585cb2966edfb2" prot="public" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>operator-&gt;</name></member>
+      <member refid="classsf_1_1ThreadLocalPtr_1a14dcf1cdf5f6b3bcdd633014b2b671f5" prot="public" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>operator=</name></member>
+      <member refid="classsf_1_1ThreadLocalPtr_1a6792a6a808af06f0d13e3ceecf2fc947" prot="public" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>operator=</name></member>
+      <member refid="classsf_1_1ThreadLocal_1ab7e334c83d77644a8e67ee31c3230007" prot="private" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>setValue</name></member>
+      <member refid="classsf_1_1ThreadLocal_1a44ea3c4be4eef118080275cbf4cf04cd" prot="private" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>ThreadLocal</name></member>
+      <member refid="classsf_1_1ThreadLocalPtr_1a8c678211d7828d2a8c41cb534422d649" prot="public" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>ThreadLocalPtr</name></member>
+      <member refid="classsf_1_1ThreadLocal_1acc612bddfd0f0507b1c5da8b3b8c75c2" prot="private" virt="non-virtual"><scope>sf::ThreadLocalPtr</scope><name>~ThreadLocal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

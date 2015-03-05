@@ -1,0 +1,5 @@
+<map id="SceneSP::addToInventory" name="SceneSP::addToInventory">
+<area shape="rect" id="node2" href="$classSceneSP.html#a4e6f57c4d70b6c0609ce56d00d374ac0" title="Checks for the picking up of items. " alt="" coords="224,5,411,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="459,5,628,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="676,5,803,32"/>
+</map>

@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="EasterEgg2_8cpp" kind="file">
+    <compoundname>EasterEgg2.cpp</compoundname>
+    <includes refid="EasterEgg2_8h" local="yes">EasterEgg2.h</includes>
+    <incdepgraph>
+      <node id="2754">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2755" relation="include">
+        </childnode>
+      </node>
+      <node id="2755">
+        <label>string</label>
+      </node>
+      <node id="2752">
+        <label>MyGraphics/Source/EasterEgg2.cpp</label>
+        <link refid="EasterEgg2.cpp"/>
+        <childnode refid="2753" relation="include">
+        </childnode>
+      </node>
+      <node id="2756">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="2753">
+        <label>EasterEgg2.h</label>
+        <link refid="EasterEgg2_8h"/>
+        <childnode refid="2754" relation="include">
+        </childnode>
+        <childnode refid="2756" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="EasterEgg2_8h" kindref="compound">EasterEgg2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCEasterEgg2_1a51f0540313b60b10a5cdc107b8fab02c" refkind="member"><highlight class="normal"><ref refid="classCEasterEgg2_1a51f0540313b60b10a5cdc107b8fab02c" kindref="member">CEasterEgg2::CEasterEgg2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">setName</ref>(</highlight><highlight class="stringliteral">&quot;Salt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">setPrice</ref>(5.0f);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">setGeoType</ref>(<ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba627db85a20a8c8467f9f270c959de563" kindref="member">GEO_EASTEREGG_2</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCEasterEgg2_1af1f68cb06ee9283a9267842d8f8f718a" refkind="member"><highlight class="normal"><ref refid="classCEasterEgg2_1af1f68cb06ee9283a9267842d8f8f718a" kindref="member">CEasterEgg2::~CEasterEgg2</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/EasterEgg2.cpp"/>
+  </compounddef>
+</doxygen>

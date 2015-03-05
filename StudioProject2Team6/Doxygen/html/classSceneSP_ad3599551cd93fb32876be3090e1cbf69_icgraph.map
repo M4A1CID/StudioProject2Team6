@@ -1,0 +1,8 @@
+<map id="SceneSP::DeclareGLEnable" name="SceneSP::DeclareGLEnable">
+<area shape="rect" id="node2" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="240,31,343,57"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="391,31,540,57"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="588,5,797,32"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="595,56,790,83"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="845,31,1004,57"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1052,31,1179,57"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="CWinebottle3::CWinebottle3" name="CWinebottle3::CWinebottle3">
+<area shape="rect" id="node2" href="$classCItem.html#aa0741ad558e4eef8c1b00cd6c70ab848" title="Mutator function to set the item geometry type. " alt="" coords="240,5,375,32"/>
+<area shape="rect" id="node3" href="$classCItem.html#a66aaf6da5435db163e72d3572c9f577f" title="Mutator function to set the item name. " alt="" coords="249,56,365,83"/>
+<area shape="rect" id="node4" href="$classCItem.html#a9ed3645eac72541e48cef6f98cbcf503" title="Mutator function to set the item price. " alt="" coords="251,107,363,133"/>
+</map>

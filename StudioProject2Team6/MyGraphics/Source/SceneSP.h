@@ -23,7 +23,12 @@
 
 using std::vector;
 using std::string;
-
+/******************************************************************************/
+/*!
+		Class SceneSP:
+\brief	Defines the class for our entire scene
+*/
+/******************************************************************************/
 class SceneSP: public Scene
 {
 private:
@@ -89,7 +94,7 @@ private:
 				All update functions
 	=======================================*/
 	void UpdateAI(double dt);			//Update AI 
-	void UpdateTrolley(double dt);		//Update trolley
+	void UpdateHand(double dt);			//Update players hand
 	void UpdateDoor(double dt);			//Update supermarket door
 	void UpdateUI(double dt);			//Update Game User Interface
 	void UpdateSamples();				//Update sample food stand
@@ -177,6 +182,21 @@ private:
 	float f_soundTimer;
 	
 	CEmptyItem emptyItem;
+	float easterLimiter;
+	float easterLimiter2;
+	float easterTimer;
+	float cagedPos;
+	float diffY;
+	int getCounter;
+	bool winEaster;
+	bool closeEaster;
+	bool inRange;
+	bool getCaged;
+	bool getGabed;
+	bool getTrolled;
+	bool getTimed;
+	bool getRicked;
+	bool caged;
 	bool win;
 	bool lose;
 	bool showTuginstruction;

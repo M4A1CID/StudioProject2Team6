@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structSceneSP_1_1Transformations" kind="struct" prot="private">
+    <compoundname>SceneSP::Transformations</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structSceneSP_1_1Transformations_1a84fd96144d675efd073a6d2000d8c621" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneSP::Transformations::translateX</definition>
+        <argsstring></argsstring>
+        <name>translateX</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" line="236" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" bodystart="236" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structSceneSP_1_1Transformations_1a4b7d0cb3d935a483b342afe21f0a2477" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneSP::Transformations::translateY</definition>
+        <argsstring></argsstring>
+        <name>translateY</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" line="237" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" bodystart="237" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structSceneSP_1_1Transformations_1a1fab143a75486fab7eff6ab0b2fde545" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneSP::Transformations::translateZ</definition>
+        <argsstring></argsstring>
+        <name>translateZ</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" line="238" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" bodystart="238" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structSceneSP_1_1Transformations_1ab0a6c5029fd70adc3ef5b8f99cadddf1" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneSP::Transformations::rotateA</definition>
+        <argsstring></argsstring>
+        <name>rotateA</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" line="239" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" bodystart="239" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1199">
+        <label>float</label>
+      </node>
+      <node id="1198">
+        <label>SceneSP::Transformations</label>
+        <link refid="structSceneSP_1_1Transformations"/>
+        <childnode refid="1199" relation="usage">
+          <edgelabel>rotateA</edgelabel>
+          <edgelabel>translateX</edgelabel>
+          <edgelabel>translateY</edgelabel>
+          <edgelabel>translateZ</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" line="235" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h" bodystart="234" bodyend="240"/>
+    <listofallmembers>
+      <member refid="structSceneSP_1_1Transformations_1ab0a6c5029fd70adc3ef5b8f99cadddf1" prot="public" virt="non-virtual"><scope>SceneSP::Transformations</scope><name>rotateA</name></member>
+      <member refid="structSceneSP_1_1Transformations_1a84fd96144d675efd073a6d2000d8c621" prot="public" virt="non-virtual"><scope>SceneSP::Transformations</scope><name>translateX</name></member>
+      <member refid="structSceneSP_1_1Transformations_1a4b7d0cb3d935a483b342afe21f0a2477" prot="public" virt="non-virtual"><scope>SceneSP::Transformations</scope><name>translateY</name></member>
+      <member refid="structSceneSP_1_1Transformations_1a1fab143a75486fab7eff6ab0b2fde545" prot="public" virt="non-virtual"><scope>SceneSP::Transformations</scope><name>translateZ</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

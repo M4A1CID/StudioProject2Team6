@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="SodaFestCan_8h" kind="file">
+    <compoundname>SodaFestCan.h</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includedby refid="DefineItemClass_8h" local="yes">MyGraphics/Source/DefineItemClass.h</includedby>
+    <includedby refid="SodaFestCan_8cpp" local="yes">MyGraphics/Source/SodaFestCan.cpp</includedby>
+    <incdepgraph>
+      <node id="3424">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3425" relation="include">
+        </childnode>
+      </node>
+      <node id="3425">
+        <label>string</label>
+      </node>
+      <node id="3426">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="3423">
+        <label>MyGraphics/Source/SodaFestCan.h</label>
+        <link refid="SodaFestCan.h"/>
+        <childnode refid="3424" relation="include">
+        </childnode>
+        <childnode refid="3426" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3432">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3433">
+        <label>MyGraphics/Source/SodaFestCan.cpp</label>
+        <link refid="SodaFestCan_8cpp"/>
+      </node>
+      <node id="3430">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3429">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3430" relation="include">
+        </childnode>
+        <childnode refid="3431" relation="include">
+        </childnode>
+        <childnode refid="3432" relation="include">
+        </childnode>
+      </node>
+      <node id="3428">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="3429" relation="include">
+        </childnode>
+      </node>
+      <node id="3431">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="3427">
+        <label>MyGraphics/Source/SodaFestCan.h</label>
+        <link refid="SodaFestCan.h"/>
+        <childnode refid="3428" relation="include">
+        </childnode>
+        <childnode refid="3433" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCSodaFestCan" prot="public">CSodaFestCan</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classCSodaFestCan" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCSodaFestCan" kindref="compound">CSodaFestCan</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCItem" kindref="compound">CItem</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSodaFestCan_1ae5c7be0ce0c34da89adb6e76dd06e220" kindref="member">CSodaFestCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCSodaFestCan_1a4221f585c7ec8bed3469769c53777770" kindref="member">~CSodaFestCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SodaFestCan.h"/>
+  </compounddef>
+</doxygen>

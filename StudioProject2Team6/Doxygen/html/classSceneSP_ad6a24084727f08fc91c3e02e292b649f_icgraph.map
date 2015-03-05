@@ -1,0 +1,5 @@
+<map id="SceneSP::checkSupermarketCollision" name="SceneSP::checkSupermarketCollision">
+<area shape="rect" id="node2" href="$classSceneSP.html#afbc68aa0f7d7978688938cf34f10256a" title="Checks for the collision of all objects in the scene. " alt="" coords="248,13,417,39"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="465,13,635,39"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="683,13,809,39"/>
+</map>

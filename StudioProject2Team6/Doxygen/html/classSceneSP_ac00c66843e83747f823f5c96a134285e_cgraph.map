@@ -1,0 +1,6 @@
+<map id="SceneSP::DeclareLightParameters" name="SceneSP::DeclareLightParameters">
+<area shape="rect" id="node2" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="277,5,432,32"/>
+<area shape="rect" id="node3" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="306,56,403,83"/>
+<area shape="rect" id="node4" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="315,107,395,133"/>
+<area shape="rect" id="node5" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="307,157,402,184"/>
+</map>

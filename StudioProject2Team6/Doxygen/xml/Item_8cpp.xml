@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Item_8cpp" kind="file">
+    <compoundname>Item.cpp</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <incdepgraph>
+      <node id="2838">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2839" relation="include">
+        </childnode>
+      </node>
+      <node id="2837">
+        <label>MyGraphics/Source/Item.cpp</label>
+        <link refid="Item.cpp"/>
+        <childnode refid="2838" relation="include">
+        </childnode>
+      </node>
+      <node id="2839">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" refkind="member"><highlight class="normal"><ref refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" kindref="member">CItem::CItem</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" kindref="member">name</ref><sp/>=<sp/></highlight><highlight class="stringliteral">&quot;undefined&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" kindref="member">price</ref><sp/>=<sp/>-1.00;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" kindref="member">objectType</ref><sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="26"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classCItem_1a1df3074023a1ee0668eec574a637c121" refkind="member"><highlight class="normal"><ref refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" kindref="member">CItem::CItem</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" kindref="member">name</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" kindref="member">price</ref><sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" kindref="member">objectType</ref><sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" kindref="member">x</ref><sp/>=<sp/>posX;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" kindref="member">y</ref><sp/>=<sp/>posY;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" kindref="member">z</ref><sp/>=<sp/>posZ;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="42"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="classCItem_1a00aeafeeaf647c7059b9d325ac5a1108" refkind="member"><highlight class="normal"><ref refid="classCItem_1a00aeafeeaf647c7059b9d325ac5a1108" kindref="member">CItem::~CItem</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="53"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">CItem::setName</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>n)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" kindref="member">name</ref><sp/>=<sp/>n;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="65"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">CItem::setPrice</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p)</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" kindref="member">price</ref><sp/>=<sp/>p;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="77"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78" refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">CItem::setGeoType</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" kindref="member">objectType</ref><sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="89"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90" refid="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" kindref="member">CItem::setActiveState</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>setActive)</highlight></codeline>
+<codeline lineno="91"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1adac2b51499cdc78208396440324cbdc4" kindref="member">active</ref><sp/>=<sp/>setActive;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="101"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102" refid="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" kindref="member">CItem::setXpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" kindref="member">x</ref><sp/>=<sp/>posX;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="113"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" kindref="member">CItem::setYpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY)</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" kindref="member">y</ref><sp/>=<sp/>posY;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="125"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classCItem_1a87034717276be8d5c3d39edbdcf7417e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a87034717276be8d5c3d39edbdcf7417e" kindref="member">CItem::setZpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ)</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" kindref="member">z</ref><sp/>=<sp/>posZ;</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="137"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138" refid="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" kindref="member">CItem::getActiveState</ref>()</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1adac2b51499cdc78208396440324cbdc4" kindref="member">active</ref>;</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="149"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150" refid="classCItem_1a916597368755e28b6edb8af37acc1ad6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a916597368755e28b6edb8af37acc1ad6" kindref="member">CItem::getGeoType</ref>()</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" kindref="member">objectType</ref>;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="161"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162" refid="classCItem_1aa34235d3cd780cef7fc7461387f6b081" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1aa34235d3cd780cef7fc7461387f6b081" kindref="member">CItem::getXpos</ref>()</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="173"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="174" refid="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" kindref="member">CItem::getYpos</ref>()</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="185"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="186" refid="classCItem_1ab9a6defffbef320655a11faab524e915" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1ab9a6defffbef320655a11faab524e915" kindref="member">CItem::getZpos</ref>()</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="197"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="198" refid="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" kindref="member">CItem::getName</ref>()</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="209"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" kindref="member">CItem::getPrice</ref>()</highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" kindref="member">price</ref>;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp"/>
+  </compounddef>
+</doxygen>

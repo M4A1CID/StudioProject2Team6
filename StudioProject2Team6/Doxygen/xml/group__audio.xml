@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="group__audio" kind="group">
+    <compoundname>audio</compoundname>
+    <title>Audio module</title>
+    <innerclass refid="classsf_1_1Listener" prot="public">sf::Listener</innerclass>
+    <innerclass refid="classsf_1_1Music" prot="public">sf::Music</innerclass>
+    <innerclass refid="classsf_1_1Sound" prot="public">sf::Sound</innerclass>
+    <innerclass refid="classsf_1_1SoundBuffer" prot="public">sf::SoundBuffer</innerclass>
+    <innerclass refid="classsf_1_1SoundBufferRecorder" prot="public">sf::SoundBufferRecorder</innerclass>
+    <innerclass refid="classsf_1_1SoundRecorder" prot="public">sf::SoundRecorder</innerclass>
+    <innerclass refid="classsf_1_1SoundSource" prot="public">sf::SoundSource</innerclass>
+    <innerclass refid="classsf_1_1SoundStream" prot="public">sf::SoundStream</innerclass>
+    <briefdescription>
+<para>Sounds, streaming (musics or custom sources), recording, spatialization. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="MtnDewCan_8h" kind="file">
+    <compoundname>MtnDewCan.h</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includedby refid="DefineItemClass_8h" local="yes">MyGraphics/Source/DefineItemClass.h</includedby>
+    <includedby refid="MtnDewCan_8cpp" local="yes">MyGraphics/Source/MtnDewCan.cpp</includedby>
+    <incdepgraph>
+      <node id="3063">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3064" relation="include">
+        </childnode>
+      </node>
+      <node id="3064">
+        <label>string</label>
+      </node>
+      <node id="3062">
+        <label>MyGraphics/Source/MtnDewCan.h</label>
+        <link refid="MtnDewCan.h"/>
+        <childnode refid="3063" relation="include">
+        </childnode>
+        <childnode refid="3065" relation="include">
+        </childnode>
+      </node>
+      <node id="3065">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3071">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3072">
+        <label>MyGraphics/Source/MtnDewCan.cpp</label>
+        <link refid="MtnDewCan_8cpp"/>
+      </node>
+      <node id="3069">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3068">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3069" relation="include">
+        </childnode>
+        <childnode refid="3070" relation="include">
+        </childnode>
+        <childnode refid="3071" relation="include">
+        </childnode>
+      </node>
+      <node id="3067">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="3068" relation="include">
+        </childnode>
+      </node>
+      <node id="3066">
+        <label>MyGraphics/Source/MtnDewCan.h</label>
+        <link refid="MtnDewCan.h"/>
+        <childnode refid="3067" relation="include">
+        </childnode>
+        <childnode refid="3072" relation="include">
+        </childnode>
+      </node>
+      <node id="3070">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCMtnDewCan" prot="public">CMtnDewCan</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classCMtnDewCan" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCMtnDewCan" kindref="compound">CMtnDewCan</ref><sp/>:<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCItem" kindref="compound">CItem</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCMtnDewCan_1a5ee3eabfb4e15018c9e770d2d27a909c" kindref="member">CMtnDewCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCMtnDewCan_1ac0f98e013f7969587dda3e6afa893175" kindref="member">~CMtnDewCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.h"/>
+  </compounddef>
+</doxygen>

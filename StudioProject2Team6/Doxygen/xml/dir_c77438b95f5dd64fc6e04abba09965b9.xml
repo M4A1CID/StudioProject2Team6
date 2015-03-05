@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_c77438b95f5dd64fc6e04abba09965b9" kind="dir">
+    <compoundname>SFML/include/SFML/System</compoundname>
+    <innerfile refid="Clock_8hpp">Clock.hpp</innerfile>
+    <innerfile refid="Err_8hpp">Err.hpp</innerfile>
+    <innerfile refid="System_2Export_8hpp">Export.hpp</innerfile>
+    <innerfile refid="InputStream_8hpp">InputStream.hpp</innerfile>
+    <innerfile refid="Lock_8hpp">Lock.hpp</innerfile>
+    <innerfile refid="Mutex_8hpp">Mutex.hpp</innerfile>
+    <innerfile refid="NonCopyable_8hpp">NonCopyable.hpp</innerfile>
+    <innerfile refid="Sleep_8hpp">Sleep.hpp</innerfile>
+    <innerfile refid="String_8hpp">String.hpp</innerfile>
+    <innerfile refid="String_8inl">String.inl</innerfile>
+    <innerfile refid="Thread_8hpp">Thread.hpp</innerfile>
+    <innerfile refid="Thread_8inl">Thread.inl</innerfile>
+    <innerfile refid="ThreadLocal_8hpp">ThreadLocal.hpp</innerfile>
+    <innerfile refid="ThreadLocalPtr_8hpp">ThreadLocalPtr.hpp</innerfile>
+    <innerfile refid="ThreadLocalPtr_8inl">ThreadLocalPtr.inl</innerfile>
+    <innerfile refid="Time_8hpp">Time.hpp</innerfile>
+    <innerfile refid="Utf_8hpp">Utf.hpp</innerfile>
+    <innerfile refid="Utf_8inl">Utf.inl</innerfile>
+    <innerfile refid="Vector2_8hpp">Vector2.hpp</innerfile>
+    <innerfile refid="Vector2_8inl">Vector2.inl</innerfile>
+    <innerfile refid="Vector3_8hpp">Vector3.hpp</innerfile>
+    <innerfile refid="Vector3_8inl">Vector3.inl</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structsf_1_1SoundStream_1_1Chunk" kind="struct" prot="public">
+    <compoundname>sf::SoundStream::Chunk</compoundname>
+    <includes refid="SoundStream_8hpp" local="no">SoundStream.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structsf_1_1SoundStream_1_1Chunk_1aa3b84d69adbe663a17a7671626076df4" prot="public" static="no" mutable="no">
+        <type>const <ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref> *</type>
+        <definition>const Int16* sf::SoundStream::Chunk::samples</definition>
+        <argsstring></argsstring>
+        <name>samples</name>
+        <briefdescription>
+<para>Pointer to the audio samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="55" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structsf_1_1SoundStream_1_1Chunk_1af47f5d94012acf8b11f056ba77aff97a" prot="public" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t sf::SoundStream::Chunk::sampleCount</definition>
+        <argsstring></argsstring>
+        <name>sampleCount</name>
+        <briefdescription>
+<para>Number of samples pointed by Samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="56" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure defining a chunk of audio data to stream. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="756">
+        <label>size_t</label>
+      </node>
+      <node id="757">
+        <label>const Int16 *</label>
+      </node>
+      <node id="755">
+        <label>sf::SoundStream::Chunk</label>
+        <link refid="structsf_1_1SoundStream_1_1Chunk"/>
+        <childnode refid="756" relation="usage">
+          <edgelabel>sampleCount</edgelabel>
+        </childnode>
+        <childnode refid="757" relation="usage">
+          <edgelabel>samples</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="54" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="53" bodyend="57"/>
+    <listofallmembers>
+      <member refid="structsf_1_1SoundStream_1_1Chunk_1af47f5d94012acf8b11f056ba77aff97a" prot="public" virt="non-virtual"><scope>sf::SoundStream::Chunk</scope><name>sampleCount</name></member>
+      <member refid="structsf_1_1SoundStream_1_1Chunk_1aa3b84d69adbe663a17a7671626076df4" prot="public" virt="non-virtual"><scope>sf::SoundStream::Chunk</scope><name>samples</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,9 @@
+<map id="sf::Music" name="sf::Music">
+<area shape="rect" id="node2" href="$classsf_1_1SoundStream.html" title="Abstract base class for streamed audio sources. " alt="" coords="565,163,684,189"/>
+<area shape="rect" id="node3" href="$classsf_1_1SoundSource.html" title="Base class defining a sound&#39;s properties. " alt="" coords="259,375,378,401"/>
+<area shape="rect" id="node6" href="$classsf_1_1Thread.html" title="Utility class to manipulate threads. " alt="" coords="279,117,358,144"/>
+<area shape="rect" id="node7" href="$classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable. " alt="" coords="5,61,123,88"/>
+<area shape="rect" id="node12" href="$classsf_1_1Mutex.html" title="Blocks concurrent access to shared resources from multiple threads. " alt="" coords="281,11,357,37"/>
+<area shape="rect" id="node8" href="$structpriv_1_1ThreadFunc.html" title="priv::ThreadFunc" alt="" coords="5,168,123,195"/>
+<area shape="rect" id="node15" href="$classsf_1_1Time.html" title="Represents a time value. " alt="" coords="591,252,659,279"/>
+</map>

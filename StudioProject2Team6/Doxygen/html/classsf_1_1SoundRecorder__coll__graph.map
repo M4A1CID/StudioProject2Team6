@@ -1,0 +1,6 @@
+<map id="sf::SoundRecorder" name="sf::SoundRecorder">
+<area shape="rect" id="node2" href="$classsf_1_1Time.html" title="Represents a time value. " alt="" coords="63,95,131,121"/>
+<area shape="rect" id="node4" href="$classsf_1_1Thread.html" title="Utility class to manipulate threads. " alt="" coords="273,95,352,121"/>
+<area shape="rect" id="node5" href="$classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable. " alt="" coords="146,5,263,32"/>
+<area shape="rect" id="node6" href="$structpriv_1_1ThreadFunc.html" title="priv::ThreadFunc" alt="" coords="287,5,405,32"/>
+</map>

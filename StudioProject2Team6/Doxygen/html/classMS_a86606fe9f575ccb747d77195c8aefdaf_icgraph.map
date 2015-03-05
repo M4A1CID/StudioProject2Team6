@@ -1,0 +1,26 @@
+<map id="MS::LoadMatrix" name="MS::LoadMatrix">
+<area shape="rect" id="node2" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="221,157,324,184"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a00e4614934f01c736d265c9e0ee2f1ff" title="Renders text on screen. " alt="" coords="168,360,377,387"/>
+<area shape="rect" id="node22" href="$classSceneSP.html#aa67fc7c1c81aac501e815148a3ebd65c" title="Function to render the targa inventory of the player. " alt="" coords="434,689,637,716"/>
+<area shape="rect" id="node24" href="$classSceneSP.html#a5115fe71d4e36db4df6f029c928772e1" title="Function to render the targa UI of the player. " alt="" coords="191,689,355,716"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="461,31,610,57"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="693,5,903,32"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="701,56,895,83"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="951,31,1109,57"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1157,31,1284,57"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="705,360,891,387"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="729,512,867,539"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a24cfa47c9258bc7ba995760ea9d07e51" title="Renders the UI displayed while in the tug of war activity. " alt="" coords="441,487,630,513"/>
+<area shape="rect" id="node13" href="$classSceneSP.html#a49baa6430b59d2fb1bfeecf80f90204b" title="Renders the UI displayed when interacting with the drunk man Npc. " alt="" coords="437,537,634,564"/>
+<area shape="rect" id="node14" href="$classSceneSP.html#a047fd639bce91ca4d840ec577a0d1db2" title="Renders the main menu. " alt="" coords="705,588,891,615"/>
+<area shape="rect" id="node15" href="$classSceneSP.html#ad0be6fd30e0b9569b2dc0d972ae59cc8" title="Renders the sub menu displaying the different gamemodes. " alt="" coords="707,107,889,133"/>
+<area shape="rect" id="node16" href="$classSceneSP.html#a0565229f33c2c6115867856ad9752ac9" title="Renders the win / lose menu. " alt="" coords="693,157,903,184"/>
+<area shape="rect" id="node17" href="$classSceneSP.html#a427b857a7534b39b0364a1287fbe225f" title="Renders the instruction menu. " alt="" coords="426,183,645,209"/>
+<area shape="rect" id="node18" href="$classSceneSP.html#a72cf933ff795f6f7e4e47fbf5e257a07" title="Renders the pause menu. " alt="" coords="438,233,633,260"/>
+<area shape="rect" id="node19" href="$classSceneSP.html#a4620fecec9b7d89136b8e947d26ffc81" title="Renders the ATM. " alt="" coords="459,284,612,311"/>
+<area shape="rect" id="node21" href="$classSceneSP.html#a0980c2a65773ba37aaecfe7260b327a1" title="Renders the &quot;troll&quot; easter egg. " alt="" coords="460,385,611,412"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="967,335,1093,361"/>
+<area shape="rect" id="node20" href="$classSceneSP.html#a28a66fa74f2c41afc4e0048bd773d584" title="Renders the entire supermarket. " alt="" coords="698,309,898,336"/>
+<area shape="rect" id="node23" href="$classSceneSP.html#abec49d944e5152770324bee4bba4a140" title="Renders the player&#39;s inventory. " alt="" coords="709,664,887,691"/>
+<area shape="rect" id="node25" href="$classSceneSP.html#aba3ac585689f6337d6e0e97792c3596f" title="Renders miscellaneous easter eggs. " alt="" coords="425,639,645,665"/>
+</map>

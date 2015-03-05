@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_d0a2dc92110278e798b033b38010b370" kind="dir">
+    <compoundname>SFML/include</compoundname>
+    <innerdir refid="dir_ba9f347fd0c7f57e566e43255d56062f">SFML/include/SFML</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/"/>
+  </compounddef>
+</doxygen>

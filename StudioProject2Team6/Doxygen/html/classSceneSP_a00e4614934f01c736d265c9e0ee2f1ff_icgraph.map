@@ -1,0 +1,15 @@
+<map id="SceneSP::RenderTextOnScreen" name="SceneSP::RenderTextOnScreen">
+<area shape="rect" id="node2" href="$classSceneSP.html#a4620fecec9b7d89136b8e947d26ffc81" title="Renders the ATM. " alt="" coords="291,5,444,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a49baa6430b59d2fb1bfeecf80f90204b" title="Renders the UI displayed when interacting with the drunk man Npc. " alt="" coords="269,56,466,83"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="560,132,699,159"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="537,259,722,285"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a427b857a7534b39b0364a1287fbe225f" title="Renders the instruction menu. " alt="" coords="520,309,739,336"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a047fd639bce91ca4d840ec577a0d1db2" title="Renders the main menu. " alt="" coords="536,360,723,387"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a72cf933ff795f6f7e4e47fbf5e257a07" title="Renders the pause menu. " alt="" coords="532,411,727,437"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#ad0be6fd30e0b9569b2dc0d972ae59cc8" title="Renders the sub menu displaying the different gamemodes. " alt="" coords="277,461,458,488"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a0980c2a65773ba37aaecfe7260b327a1" title="Renders the &quot;troll&quot; easter egg. " alt="" coords="292,259,443,285"/>
+<area shape="rect" id="node13" href="$classSceneSP.html#a24cfa47c9258bc7ba995760ea9d07e51" title="Renders the UI displayed while in the tug of war activity. " alt="" coords="273,157,462,184"/>
+<area shape="rect" id="node14" href="$classSceneSP.html#a0565229f33c2c6115867856ad9752ac9" title="Renders the win / lose menu. " alt="" coords="263,512,472,539"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a28a66fa74f2c41afc4e0048bd773d584" title="Renders the entire supermarket. " alt="" coords="529,31,729,57"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="787,335,913,361"/>
+</map>

@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1InputStream" kind="class" prot="public" abstract="yes">
+    <compoundname>sf::InputStream</compoundname>
+    <includes refid="InputStream_8hpp" local="no">InputStream.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1InputStream_1a4b2eb0f92323e630bd0542bc6191682e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual sf::InputStream::~InputStream</definition>
+        <argsstring>()</argsstring>
+        <name>~InputStream</name>
+        <briefdescription>
+<para>Virtual destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" line="48" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1InputStream_1a8dd89c74c1acb693203f50e750c6ae53" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        <definition>virtual Int64 sf::InputStream::read</definition>
+        <argsstring>(void *data, Int64 size)=0</argsstring>
+        <name>read</name>
+        <param>
+          <type>void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>size</declname>
+        </param>
+        <briefdescription>
+<para>Read data from the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>After reading, the stream&apos;s reading position must be advanced by the amount of bytes read.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer where to copy the read data </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Desired number of bytes to read</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The number of bytes actually read, or -1 on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1InputStream_1a76aba8e5d5cf9b1c5902d5e04f7864fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        <definition>virtual Int64 sf::InputStream::seek</definition>
+        <argsstring>(Int64 position)=0</argsstring>
+        <name>seek</name>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Change the current reading position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The position to seek to, from the beginning</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The position actually sought to, or -1 on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" line="72" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1InputStream_1a599515b9ccdbddb6fef5a98424fd559c" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        <definition>virtual Int64 sf::InputStream::tell</definition>
+        <argsstring>()=0</argsstring>
+        <name>tell</name>
+        <briefdescription>
+<para>Get the current reading position in the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The current position, or -1 on error. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1InputStream_1a311eaaaa65d636728e5153b574b72d5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        <definition>virtual Int64 sf::InputStream::getSize</definition>
+        <argsstring>()=0</argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Return the size of the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The total number of bytes available in the stream, or -1 on error </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" line="88" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract class for custom file input streams. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class allows users to define their own file input sources from which SFML can load resources.</para><para>SFML resource classes like sf::Texture and <ref refid="classsf_1_1SoundBuffer" kindref="compound">sf::SoundBuffer</ref> provide loadFromFile and loadFromMemory functions, which read data from conventional sources. However, if you have data coming from a different source (over a network, embedded, encrypted, compressed, etc) you can derive your own class from <ref refid="classsf_1_1InputStream" kindref="compound">sf::InputStream</ref> and load SFML resources with their loadFromStream function.</para><para>Usage example: <programlisting><codeline><highlight class="normal">//<sp/>custom<sp/>stream<sp/>class<sp/>that<sp/>reads<sp/>from<sp/>inside<sp/>a<sp/>zip<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">class<sp/>ZipStream<sp/>:<sp/>public<sp/>sf::InputStream</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">public:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ZipStream(std::string<sp/>archive);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>open(std::string<sp/>filename);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Int64<sp/>read(void*<sp/>data,<sp/>Int64<sp/>size);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Int64<sp/>seek(Int64<sp/>position);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Int64<sp/>tell();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>Int64<sp/>getSize();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">private:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>now<sp/>you<sp/>can<sp/>load<sp/>textures...</highlight></codeline>
+<codeline><highlight class="normal">sf::Texture<sp/>texture;</highlight></codeline>
+<codeline><highlight class="normal">ZipStream<sp/>stream(&quot;resources.zip&quot;);</highlight></codeline>
+<codeline><highlight class="normal">stream.open(&quot;images/img.png&quot;);</highlight></codeline>
+<codeline><highlight class="normal">texture.loadFromStream(stream);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>musics...</highlight></codeline>
+<codeline><highlight class="normal">sf::Music<sp/>music;</highlight></codeline>
+<codeline><highlight class="normal">ZipStream<sp/>stream(&quot;resources.zip&quot;);</highlight></codeline>
+<codeline><highlight class="normal">stream.open(&quot;musics/msc.ogg&quot;);</highlight></codeline>
+<codeline><highlight class="normal">music.openFromStream(stream);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>etc.</highlight></codeline>
+</programlisting> </para>    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/InputStream.hpp" bodystart="40" bodyend="89"/>
+    <listofallmembers>
+      <member refid="classsf_1_1InputStream_1a311eaaaa65d636728e5153b574b72d5d" prot="public" virt="pure-virtual"><scope>sf::InputStream</scope><name>getSize</name></member>
+      <member refid="classsf_1_1InputStream_1a8dd89c74c1acb693203f50e750c6ae53" prot="public" virt="pure-virtual"><scope>sf::InputStream</scope><name>read</name></member>
+      <member refid="classsf_1_1InputStream_1a76aba8e5d5cf9b1c5902d5e04f7864fc" prot="public" virt="pure-virtual"><scope>sf::InputStream</scope><name>seek</name></member>
+      <member refid="classsf_1_1InputStream_1a599515b9ccdbddb6fef5a98424fd559c" prot="public" virt="pure-virtual"><scope>sf::InputStream</scope><name>tell</name></member>
+      <member refid="classsf_1_1InputStream_1a4b2eb0f92323e630bd0542bc6191682e" prot="public" virt="virtual"><scope>sf::InputStream</scope><name>~InputStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

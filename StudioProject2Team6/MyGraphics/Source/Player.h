@@ -1,5 +1,11 @@
 #pragma once
 #include "Character.h"
+/******************************************************************************/
+/*!
+		Class Item:
+\brief	Player class which stores the player's money and inventory
+*/
+/******************************************************************************/
 class CPlayer : public CCharacter
 {
 private:

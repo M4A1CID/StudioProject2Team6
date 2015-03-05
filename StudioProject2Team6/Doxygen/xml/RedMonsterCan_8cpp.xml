@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="RedMonsterCan_8cpp" kind="file">
+    <compoundname>RedMonsterCan.cpp</compoundname>
+    <includes refid="RedMonsterCan_8h" local="yes">RedMonsterCan.h</includes>
+    <incdepgraph>
+      <node id="3132">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3133" relation="include">
+        </childnode>
+      </node>
+      <node id="3130">
+        <label>MyGraphics/Source/RedMonsterCan.cpp</label>
+        <link refid="RedMonsterCan.cpp"/>
+        <childnode refid="3131" relation="include">
+        </childnode>
+      </node>
+      <node id="3133">
+        <label>string</label>
+      </node>
+      <node id="3131">
+        <label>RedMonsterCan.h</label>
+        <link refid="RedMonsterCan_8h"/>
+        <childnode refid="3132" relation="include">
+        </childnode>
+        <childnode refid="3134" relation="include">
+        </childnode>
+      </node>
+      <node id="3134">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="RedMonsterCan_8h" kindref="compound">RedMonsterCan.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCRedMonsterCan_1ad1a923198eb09612b12d2f8090a7506c" refkind="member"><highlight class="normal"><ref refid="classCRedMonsterCan_1ad1a923198eb09612b12d2f8090a7506c" kindref="member">CRedMonsterCan::CRedMonsterCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">setName</ref>(</highlight><highlight class="stringliteral">&quot;RedMonster<sp/>Can&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">setPrice</ref>(2.0f);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">setGeoType</ref>(<ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baab99a291969768cc1c68c5319ee9b93c" kindref="member">GEO_CAN_REDMONSTER</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCRedMonsterCan_1a8c8572e7599096ef987eb0b14c2c206e" refkind="member"><highlight class="normal"><ref refid="classCRedMonsterCan_1a8c8572e7599096ef987eb0b14c2c206e" kindref="member">CRedMonsterCan::~CRedMonsterCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/RedMonsterCan.cpp"/>
+  </compounddef>
+</doxygen>

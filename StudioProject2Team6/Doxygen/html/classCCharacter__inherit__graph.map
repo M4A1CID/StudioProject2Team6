@@ -1,0 +1,4 @@
+<map id="CCharacter" name="CCharacter">
+<area shape="rect" id="node2" href="$classCNpc.html" title="Defines the NPC class. " alt="" coords="5,80,60,107"/>
+<area shape="rect" id="node3" href="$classCPlayer.html" title="Player class which stores the player&#39;s money and inventory. " alt="" coords="84,80,152,107"/>
+</map>

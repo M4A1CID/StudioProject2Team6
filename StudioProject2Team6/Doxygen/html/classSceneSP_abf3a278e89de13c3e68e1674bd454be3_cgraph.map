@@ -1,0 +1,8 @@
+<map id="SceneSP::UpdatePaying" name="SceneSP::UpdatePaying">
+<area shape="rect" id="node2" href="$classCPlayer.html#aa5acefb8c6837741ac85426e93ff0b69" title="Accessor function for the items held by the player. " alt="" coords="248,5,367,32"/>
+<area shape="rect" id="node3" href="$classCPlayer.html#a1cc34d624d5208e89aed5fd1ad9dcdd1" title="Accessor function for the amount of money the player has. " alt="" coords="241,56,374,83"/>
+<area shape="rect" id="node4" href="$classCPlayer.html#ac02fc75d1ba514addba85bfe2bd6154d" title="CPlayer::getVector" alt="" coords="241,107,373,133"/>
+<area shape="rect" id="node5" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="220,157,395,184"/>
+<area shape="rect" id="node6" href="$classCPlayer.html#a31b9cac478a011ca5fbbf899499216f5" title="Mutator function to add an item picked up by the player. " alt="" coords="235,208,380,235"/>
+<area shape="rect" id="node7" href="$classCPlayer.html#ac5c0e462bb3e9804f5fff4a33be5a33d" title="Mutator function to set the players current money. " alt="" coords="241,259,374,285"/>
+</map>

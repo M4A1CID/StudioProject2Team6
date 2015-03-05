@@ -1,0 +1,5 @@
+<map id="SceneSP::UpdateUI" name="SceneSP::UpdateUI">
+<area shape="rect" id="node2" href="$classCPlayer.html#aa5acefb8c6837741ac85426e93ff0b69" title="Accessor function for the items held by the player. " alt="" coords="199,5,318,32"/>
+<area shape="rect" id="node3" href="$classCPlayer.html#a1cc34d624d5208e89aed5fd1ad9dcdd1" title="Accessor function for the amount of money the player has. " alt="" coords="192,56,325,83"/>
+<area shape="rect" id="node4" href="$classCItem.html#a6375bf21ba971d20a25fd8888d083f5a" title="Accessor function for item price. " alt="" coords="203,107,315,133"/>
+</map>

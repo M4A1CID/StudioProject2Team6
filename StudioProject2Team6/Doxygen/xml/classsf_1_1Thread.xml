@@ -1,0 +1,436 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Thread" kind="class" prot="public">
+    <compoundname>sf::Thread</compoundname>
+    <basecompoundref refid="classsf_1_1NonCopyable" prot="private" virt="non-virtual">sf::NonCopyable</basecompoundref>
+    <includes refid="Thread_8hpp" local="no">Thread.hpp</includes>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsf_1_1Thread_1a5ed4f3acfcb44de47de196437c39f9ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend class</type>
+        <definition>friend class priv::ThreadImpl</definition>
+        <argsstring></argsstring>
+        <name>priv::ThreadImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="176" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1Thread_1ac6d215423182b4e8c18db34ea6ae51fc" prot="private" static="no" mutable="no">
+        <type>priv::ThreadImpl *</type>
+        <definition>priv::ThreadImpl* sf::Thread::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <briefdescription>
+<para>OS-specific implementation of the thread. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="189" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" bodystart="189" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Thread_1a8326ed80dfffb6a0d92560a86a665b4d" prot="private" static="no" mutable="no">
+        <type><ref refid="structpriv_1_1ThreadFunc" kindref="compound">priv::ThreadFunc</ref> *</type>
+        <definition>priv::ThreadFunc* sf::Thread::m_entryPoint</definition>
+        <argsstring></argsstring>
+        <name>m_entryPoint</name>
+        <briefdescription>
+<para>Abstraction of the function to run. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="190" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" bodystart="190" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Thread_1a4cc65399bbb111cf8132537783b8e96c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Thread::Thread</definition>
+        <argsstring>(F function)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>F</type>
+          <declname>function</declname>
+        </param>
+        <briefdescription>
+<para>Construct the thread from a functor with no argument. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor works for function objects, as well as free functions.</para><para>Use this constructor for this kind of function: <programlisting><codeline><highlight class="normal">void<sp/>function();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>---<sp/>or<sp/>----</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">struct<sp/>Functor</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>operator()();</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> Note: this does <emphasis>not</emphasis> run the thread, use <ref refid="classsf_1_1Thread_1a74f75a9e86e1eb47479496314048b5f6" kindref="member">launch()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Functor or free function to use as the entry point of the thread </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="75" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1a719b2cc067d92d52c35064a49d850a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename A</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Thread::Thread</definition>
+        <argsstring>(F function, A argument)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>F</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>A</type>
+          <declname>argument</declname>
+        </param>
+        <briefdescription>
+<para>Construct the thread from a functor with an argument. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor works for function objects, as well as free functions. It is a template, which means that the argument can have any type (int, std::string, void*, Toto, ...).</para><para>Use this constructor for this kind of function: <programlisting><codeline><highlight class="normal">void<sp/>function(int<sp/>arg);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>---<sp/>or<sp/>----</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">struct<sp/>Functor</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>operator()(std::string<sp/>arg);</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> Note: this does <emphasis>not</emphasis> run the thread, use <ref refid="classsf_1_1Thread_1a74f75a9e86e1eb47479496314048b5f6" kindref="member">launch()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Functor or free function to use as the entry point of the thread </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>argument</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>argument to forward to the function </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="103" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1aa9f473c8cbb078900c62b1fd14a83a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Thread::Thread</definition>
+        <argsstring>(void(C::*function)(), C *object)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>void(C::*)()</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>C *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+<para>Construct the thread from a member function and an object. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor is a template, which means that you can use it with any class. Use this constructor for this kind of function: <programlisting><codeline><highlight class="normal">class<sp/>MyClass</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">public:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>function();</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting> Note: this does <emphasis>not</emphasis> run the thread, use <ref refid="classsf_1_1Thread_1a74f75a9e86e1eb47479496314048b5f6" kindref="member">launch()</ref>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Entry point of the thread </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>object</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the object to use </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="126" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1af77942fc1730af7c31bc4c3a913a9c1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Thread::~Thread</definition>
+        <argsstring>()</argsstring>
+        <name>~Thread</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This destructor calls <ref refid="classsf_1_1Thread_1a724b1f94c2d54f84280f2f78bde95fa0" kindref="member">wait()</ref>, so that the internal thread cannot survive after its <ref refid="classsf_1_1Thread" kindref="compound">sf::Thread</ref> instance is destroyed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="135" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1a74f75a9e86e1eb47479496314048b5f6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Thread::launch</definition>
+        <argsstring>()</argsstring>
+        <name>launch</name>
+        <briefdescription>
+<para>Run the thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function starts the entry point passed to the thread&apos;s constructor, and returns immediately. After this function returns, the thread&apos;s function is running in parallel to the calling code. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="146" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1a724b1f94c2d54f84280f2f78bde95fa0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Thread::wait</definition>
+        <argsstring>()</argsstring>
+        <name>wait</name>
+        <briefdescription>
+<para>Wait until the thread finishes. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function will block the execution until the thread&apos;s function ends. Warning: if the thread function never ends, the calling thread will block forever. If this function is called from its owner thread, it returns without doing anything. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="159" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1ad6b205d4f1ce38b8d44bba0f5501477c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Thread::terminate</definition>
+        <argsstring>()</argsstring>
+        <name>terminate</name>
+        <briefdescription>
+<para>Terminate the thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function immediately stops the thread, without waiting for its function to finish. Terminating a thread with this function is not safe, and can lead to local variables not being destroyed on some operating systems. You should rather try to make the thread function terminate by itself. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="172" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1a00b88f036de66eb63765f4c12ceb6870" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Thread::Thread</definition>
+        <argsstring>(F functor)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>F</type>
+          <declname>functor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="68" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="68" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1a719b2cc067d92d52c35064a49d850a53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename F</type>
+          </param>
+          <param>
+            <type>typename A</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Thread::Thread</definition>
+        <argsstring>(F function, A argument)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>F</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>A</type>
+          <declname>argument</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="77" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="77" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Thread_1aa9f473c8cbb078900c62b1fd14a83a34" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename C</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Thread::Thread</definition>
+        <argsstring>(void(C::*function)(), C *object)</argsstring>
+        <name>Thread</name>
+        <param>
+          <type>void(C::*)()</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>C *</type>
+          <declname>object</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="86" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="86" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsf_1_1Thread_1a593508379bd38e0b42ebf9f5a7e2829c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Thread::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <briefdescription>
+<para>Internal entry point of the thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called by the thread implementation. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="184" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility class to manipulate threads. </para>    </briefdescription>
+    <detaileddescription>
+<para>Threads provide a way to run multiple parts of the code in parallel.</para><para>When you launch a new thread, the execution is split and both the new thread and the caller run in parallel.</para><para>To use a <ref refid="classsf_1_1Thread" kindref="compound">sf::Thread</ref>, you construct it directly with the function to execute as the entry point of the thread. <ref refid="classsf_1_1Thread" kindref="compound">sf::Thread</ref> has multiple template constructors, which means that you can use several types of entry points: <itemizedlist>
+<listitem><para>non-member functions with no argument </para></listitem>
+<listitem><para>non-member functions with one argument of any type </para></listitem>
+<listitem><para>functors with no argument (this one is particularly useful for compatibility with boost/std::bind) </para></listitem>
+<listitem><para>functors with one argument of any type </para></listitem>
+<listitem><para>member functions from any class with no argument</para></listitem>
+</itemizedlist>
+The function argument, if any, is copied in the <ref refid="classsf_1_1Thread" kindref="compound">sf::Thread</ref> instance, as well as the functor (if the corresponding constructor is used). Class instances, however, are passed by pointer so you must make sure that the object won&apos;t be destroyed while the thread is still using it.</para><para>The thread ends when its function is terminated. If the owner <ref refid="classsf_1_1Thread" kindref="compound">sf::Thread</ref> instance is destroyed before the thread is finished, the destructor will wait (see <ref refid="classsf_1_1Thread_1a724b1f94c2d54f84280f2f78bde95fa0" kindref="member">wait()</ref>)</para><para>Usage examples: <programlisting><codeline><highlight class="normal">//<sp/>example<sp/>1:<sp/>non<sp/>member<sp/>function<sp/>with<sp/>one<sp/>argument</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">void<sp/>threadFunc(int<sp/>argument)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sf::Thread<sp/>thread(&amp;threadFunc,<sp/>5);</highlight></codeline>
+<codeline><highlight class="normal">thread.launch();<sp/>//<sp/>start<sp/>the<sp/>thread<sp/>(internally<sp/>calls<sp/>threadFunc(5))</highlight></codeline>
+</programlisting></para><para><programlisting><codeline><highlight class="normal">//<sp/>example<sp/>2:<sp/>member<sp/>function</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">class<sp/>Task</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">public:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>run()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Task<sp/>task;</highlight></codeline>
+<codeline><highlight class="normal">sf::Thread<sp/>thread(&amp;Task::run,<sp/>&amp;task);</highlight></codeline>
+<codeline><highlight class="normal">thread.launch();<sp/>//<sp/>start<sp/>the<sp/>thread<sp/>(internally<sp/>calls<sp/>task.run())</highlight></codeline>
+</programlisting></para><para><programlisting><codeline><highlight class="normal">//<sp/>example<sp/>3:<sp/>functor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">struct<sp/>Task</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>operator()()</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sf::Thread<sp/>thread(Task());</highlight></codeline>
+<codeline><highlight class="normal">thread.launch();<sp/>//<sp/>start<sp/>the<sp/>thread<sp/>(internally<sp/>calls<sp/>operator()<sp/>on<sp/>the<sp/>Task<sp/>instance)</highlight></codeline>
+</programlisting></para><para>Creating parallel threads of execution can be dangerous: all threads inside the same process share the same memory space, which means that you may end up accessing the same variable from multiple threads at the same time. To prevent this kind of situations, you can use mutexes (see <ref refid="classsf_1_1Mutex" kindref="compound">sf::Mutex</ref>).</para><para><simplesect kind="see"><para><ref refid="classsf_1_1Mutex" kindref="compound">sf::Mutex</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1153">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="1154" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1154">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1155">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="1156" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1157" relation="usage">
+          <edgelabel>m_entryPoint</edgelabel>
+        </childnode>
+        <childnode refid="1158" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+      <node id="1157">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1158">
+        <label>ThreadImpl *</label>
+      </node>
+      <node id="1156">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" line="49" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.hpp" bodystart="48" bodyend="191"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Thread_1a74f75a9e86e1eb47479496314048b5f6" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>launch</name></member>
+      <member refid="classsf_1_1Thread_1a8326ed80dfffb6a0d92560a86a665b4d" prot="private" virt="non-virtual"><scope>sf::Thread</scope><name>m_entryPoint</name></member>
+      <member refid="classsf_1_1Thread_1ac6d215423182b4e8c18db34ea6ae51fc" prot="private" virt="non-virtual"><scope>sf::Thread</scope><name>m_impl</name></member>
+      <member refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" prot="private" virt="non-virtual"><scope>sf::Thread</scope><name>NonCopyable</name></member>
+      <member refid="classsf_1_1Thread_1a5ed4f3acfcb44de47de196437c39f9ef" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>priv::ThreadImpl</name></member>
+      <member refid="classsf_1_1Thread_1a593508379bd38e0b42ebf9f5a7e2829c" prot="private" virt="non-virtual"><scope>sf::Thread</scope><name>run</name></member>
+      <member refid="classsf_1_1Thread_1ad6b205d4f1ce38b8d44bba0f5501477c" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>terminate</name></member>
+      <member refid="classsf_1_1Thread_1a4cc65399bbb111cf8132537783b8e96c" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>Thread</name></member>
+      <member refid="classsf_1_1Thread_1a719b2cc067d92d52c35064a49d850a53" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>Thread</name></member>
+      <member refid="classsf_1_1Thread_1aa9f473c8cbb078900c62b1fd14a83a34" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>Thread</name></member>
+      <member refid="classsf_1_1Thread_1a00b88f036de66eb63765f4c12ceb6870" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>Thread</name></member>
+      <member refid="classsf_1_1Thread_1a719b2cc067d92d52c35064a49d850a53" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>Thread</name></member>
+      <member refid="classsf_1_1Thread_1aa9f473c8cbb078900c62b1fd14a83a34" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>Thread</name></member>
+      <member refid="classsf_1_1Thread_1a724b1f94c2d54f84280f2f78bde95fa0" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>wait</name></member>
+      <member refid="classsf_1_1Thread_1af77942fc1730af7c31bc4c3a913a9c1d" prot="public" virt="non-virtual"><scope>sf::Thread</scope><name>~Thread</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

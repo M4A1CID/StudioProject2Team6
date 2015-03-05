@@ -1,0 +1,988 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classSceneModel" kind="class" prot="public">
+    <compoundname>SceneModel</compoundname>
+    <basecompoundref refid="classScene" prot="public" virt="non-virtual">Scene</basecompoundref>
+    <includes refid="SceneModel_8h" local="no">SceneModel.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228" prot="private" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aedcecd34778e66cb5591b7997f209a7b" prot="private">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4a1a8e45557f52da9ff4243d89bf1fb3" prot="private">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6dd4a8bd003767314efe4943036443f5" prot="private">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a71ec9e3fd73f2e5daeef5509ba5a13e1" prot="private">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aa6fe127a3e35057de68925c289b01d16" prot="private">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a990ea6fef4ba9bee1862cbe86df895de" prot="private">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae7f1c317e5c3f87db65ea635d7d77756" prot="private">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3c854f024f0d291cc38e4f8b90eee05f" prot="private">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab626971b3af2bb801f5c1f5ce41f8778" prot="private">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5248c746d315ea7e5b50e7b3a8c8dbfd" prot="private">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a7e45f700de4a79037c95da0d40b89e1d" prot="private">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5626afb2d8f2fc6755fbfb3db07e2ee2" prot="private">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae3a94ebd09ed5d19440233ff494ace2c" prot="private">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228adf1887ce2e500ecf580b37bf3855afe9" prot="private">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a60fc6cd2b3db60f5b0c2b7495af3b3db" prot="private">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4db250112e9be5a6850a1d7335074914" prot="private">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228abd26c3b0e34109c2009e45092813e4f2" prot="private">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a1865787e7591a2d097cb603fb2ac89fd" prot="private">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a733b4922abd08ad26a65de841a9feb71" prot="private">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a89127bb76531c8c51b4de4aeb570ff38" prot="private">
+          <name>U_LIGHT1_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac9a7084dbc29b1113975497648cdc5e0" prot="private">
+          <name>U_LIGHT1_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac6c3339bce801049c50476ee49322456" prot="private">
+          <name>U_LIGHT1_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a168eddcf3b5120999ec57a9dd31106d4" prot="private">
+          <name>U_LIGHT1_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6c49ce81d13cb8fa64d780357e8ec6e1" prot="private">
+          <name>U_LIGHT1_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a79bb8fa0c6f6f92a4e20294cb760fcd4" prot="private">
+          <name>U_LIGHT1_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3e250e37dcb23614f1e8c3a23b1123f9" prot="private">
+          <name>U_LIGHT1_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab4438cc5c4b9b7d55ebcb9820c740f41" prot="private">
+          <name>U_LIGHT1_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab15f2a21750ba46f864b047928d4b543" prot="private">
+          <name>U_LIGHT1_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228af700bed544cedf57452a571bd4b43c5e" prot="private">
+          <name>U_LIGHT1_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aaba79b11b0bd3c789c3fab7a3b295cd2" prot="private">
+          <name>U_LIGHT1_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae04849cc6db84bd8bb9ddccd2ac267cc" prot="private">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a8f6640692fe6ddd59ebfc16c786a9b09" prot="private">
+          <name>U_COLOR_TEXTURE_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ace2435066447c48496daec40f9568fd9" prot="private">
+          <name>U_COLOR_TEXTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228afa7968ceedd57a22b461eb1efee85b57" prot="private">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="17" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="enum" id="classSceneModel_1ada16dbd96f682fba84736d7942fee483" prot="private" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483afee240de35d556d2f28a53e693f13859" prot="private">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a966447e564b872f900148b3a4f42c0c9" prot="private">
+          <name>GEO_QUAD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa4b2502d7c94ea25cceb8a6926918638" prot="private">
+          <name>GEO_SPHERE0</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a0d4357ea39c5696c771653febe38ed" prot="private">
+          <name>GEO_SPHERE1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a7cdf58949e2f65d8cbe8b9041162f8eb" prot="private">
+          <name>GEO_SPHERE2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a757ffe44e776d1ef47a124b6223d11" prot="private">
+          <name>GEO_SPHERE3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483aab0c557c0389dcfe340fae48b0f21d1e" prot="private">
+          <name>GEO_SPHERE4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483aba13c45caabbbb8aff493dec1a231c7b" prot="private">
+          <name>GEO_SPHERE5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa2a1b8ef2c5ca76b6ea5373239d9deee" prot="private">
+          <name>GEO_SPHERE6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b188789bee48b6c2cd0c60f194147e2" prot="private">
+          <name>GEO_SPHERE7</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a035385a4d70e51e7d9a1091cfe629dee" prot="private">
+          <name>GEO_SPHERE8</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b88fb1beafea09f0c20fb568814e1c6" prot="private">
+          <name>GEO_LIGHTBALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a50a1ba14d086a30dcd4dba873237bdae" prot="private">
+          <name>GEO_LIGHTBALL2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5ab2beaf33cd8f825670b9d2cbaf982b" prot="private">
+          <name>GEO_CYLINDER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6f1aac43803753f8c5f8b5707a956208" prot="private">
+          <name>GEO_MODEL1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a94a0da412875219722de4c443d837d36" prot="private">
+          <name>GEO_MODEL2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483abb04b5603c81197334490d58a2815ab9" prot="private">
+          <name>GEO_MODEL3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a846b0fa1d599a0c6b8e847dfe636fda0" prot="private">
+          <name>GEO_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a38665ef8f8e3a7c7f086bfc46fa3bce4" prot="private">
+          <name>GEO_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a195e33148181ea2cfa7552608569537a" prot="private">
+          <name>GEO_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483afdc81dc03c978ac23a611c47086412b9" prot="private">
+          <name>GEO_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6d15c091a4e472acb5ba32afdbb6dee3" prot="private">
+          <name>GEO_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483addfdeaff7e0e29e412baad6c5f2853c7" prot="private">
+          <name>GEO_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classSceneModel_1ada16dbd96f682fba84736d7942fee483a666720583b4cd9c2d17b88d963fbfe6d" prot="private">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="59" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="58" bodyend="85"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classSceneModel_1ac81aa81f5c58743a386bc2e5a634639c" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneModel::m_vertexArrayID</definition>
+        <argsstring></argsstring>
+        <name>m_vertexArrayID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="96" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1a2b857184f8fd5e3d376cd88c42c8d249" prot="private" static="no" mutable="no">
+        <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+        <definition>Mesh* SceneModel::meshList[NUM_GEOMETRY]</definition>
+        <argsstring>[NUM_GEOMETRY]</argsstring>
+        <name>meshList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="97" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1acefd6d535ad7d4c5e52738323455706e" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneModel::m_programID</definition>
+        <argsstring></argsstring>
+        <name>m_programID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="98" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1af27d9b8a13375886fc8fb5086d1f7dfb" prot="private" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned SceneModel::m_parameters[U_TOTAL]</definition>
+        <argsstring>[U_TOTAL]</argsstring>
+        <name>m_parameters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="99" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1ac5dbf0ef222571c0b3a960632dc5459c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneModel::rotateAngle</definition>
+        <argsstring></argsstring>
+        <name>rotateAngle</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="101" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1a7204f015f5b769e09190baba4c9ff405" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float SceneModel::worldSize</definition>
+        <argsstring></argsstring>
+        <name>worldSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="102" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1aeeabfefc22ea13a02b1ab18368799228" prot="private" static="no" mutable="no">
+        <type><ref refid="classCamera3" kindref="compound">Camera3</ref></type>
+        <definition>Camera3 SceneModel::camera</definition>
+        <argsstring></argsstring>
+        <name>camera</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="105" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1acf903f662e9a94a9f899fb9f8ecc162d" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneModel::modelStack</definition>
+        <argsstring></argsstring>
+        <name>modelStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="107" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1a67665c9b4bf73a8225b9a42463f94f2a" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneModel::viewStack</definition>
+        <argsstring></argsstring>
+        <name>viewStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="107" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1a6aba8ac3d74ec4d76a49e0cd6875ace6" prot="private" static="no" mutable="no">
+        <type><ref refid="classMS" kindref="compound">MS</ref></type>
+        <definition>MS SceneModel::projectionStack</definition>
+        <argsstring></argsstring>
+        <name>projectionStack</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="107" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classSceneModel_1ad0241601512b68c875140cf048a44d5c" prot="private" static="no" mutable="no">
+        <type><ref refid="structLight" kindref="compound">Light</ref></type>
+        <definition>Light SceneModel::lights[2]</definition>
+        <argsstring>[2]</argsstring>
+        <name>lights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="109" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classSceneModel_1a0fe76fa3bea08f54bafbe78257b17638" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneModel::SceneModel</definition>
+        <argsstring>()</argsstring>
+        <name>SceneModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneModel_1ad4e125cfdc3d4a11d492e4869f3aae0a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>SceneModel::~SceneModel</definition>
+        <argsstring>()</argsstring>
+        <name>~SceneModel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneModel_1a3c07e062d6c09125fe9f8ea794f16255" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SceneModel::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <reimplements refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="91" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneModel_1a937831169909e6699265154d817cb1ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SceneModel::Update</definition>
+        <argsstring>(double dt)</argsstring>
+        <name>Update</name>
+        <reimplements refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Update</reimplements>
+        <param>
+          <type>double</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="92" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneModel_1aa0450726b11758c761d432464a238784" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SceneModel::Render</definition>
+        <argsstring>()</argsstring>
+        <name>Render</name>
+        <reimplements refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Render</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneModel_1a5774a86f55bbdffa51347878099cc510" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void SceneModel::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <reimplements refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Exit</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="94" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classSceneModel_1a7b80f3f06dfb53682b3a147c6dff8016" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneModel::RenderSkybox</definition>
+        <argsstring>()</argsstring>
+        <name>RenderSkybox</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="111" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void SceneModel::RenderMesh</definition>
+        <argsstring>(Mesh *mesh, bool enableLight)</argsstring>
+        <name>RenderMesh</name>
+        <param>
+          <type><ref refid="classMesh" kindref="compound">Mesh</ref> *</type>
+          <declname>mesh</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>enableLight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="113" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1072">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="1071">
+        <label>SceneModel</label>
+        <link refid="classSceneModel"/>
+        <childnode refid="1072" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1079">
+        <label>Position</label>
+        <link refid="structPosition"/>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+      <node id="1085">
+        <label>stack&lt; Mtx44 &gt;</label>
+      </node>
+      <node id="1088">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="1076">
+        <label>LIGHT_TYPE</label>
+      </node>
+      <node id="1086">
+        <label>Mesh</label>
+        <link refid="classMesh"/>
+        <childnode refid="1087" relation="usage">
+          <edgelabel>material</edgelabel>
+        </childnode>
+        <childnode refid="1089" relation="usage">
+          <edgelabel>mode</edgelabel>
+        </childnode>
+        <childnode refid="1090" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="1091" relation="usage">
+          <edgelabel>colorBuffer</edgelabel>
+          <edgelabel>textureID</edgelabel>
+          <edgelabel>indexBuffer</edgelabel>
+          <edgelabel>indexSize</edgelabel>
+          <edgelabel>vertexBuffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="1089">
+        <label>DRAW_MODE</label>
+      </node>
+      <node id="1082">
+        <label>Camera</label>
+        <link refid="classCamera"/>
+        <childnode refid="1078" relation="usage">
+          <edgelabel>target</edgelabel>
+          <edgelabel>position</edgelabel>
+          <edgelabel>up</edgelabel>
+        </childnode>
+      </node>
+      <node id="1090">
+        <label>string</label>
+      </node>
+      <node id="1087">
+        <label>Material</label>
+        <link refid="structMaterial"/>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>kShininess</edgelabel>
+        </childnode>
+        <childnode refid="1088" relation="usage">
+          <edgelabel>kDiffuse</edgelabel>
+          <edgelabel>kAmbient</edgelabel>
+          <edgelabel>kSpecular</edgelabel>
+        </childnode>
+      </node>
+      <node id="1077">
+        <label>float</label>
+      </node>
+      <node id="1084">
+        <label>MS</label>
+        <link refid="classMS"/>
+        <childnode refid="1085" relation="usage">
+          <edgelabel>ms</edgelabel>
+        </childnode>
+      </node>
+      <node id="1074">
+        <label>Scene</label>
+        <link refid="classScene"/>
+      </node>
+      <node id="1075">
+        <label>Light</label>
+        <link refid="structLight"/>
+        <childnode refid="1076" relation="usage">
+          <edgelabel>type</edgelabel>
+        </childnode>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>exponent</edgelabel>
+          <edgelabel>kL</edgelabel>
+          <edgelabel>cosCutoff</edgelabel>
+          <edgelabel>cosInner</edgelabel>
+          <edgelabel>kQ</edgelabel>
+          <edgelabel>kC</edgelabel>
+          <edgelabel>power</edgelabel>
+        </childnode>
+        <childnode refid="1078" relation="usage">
+          <edgelabel>spotDirection</edgelabel>
+        </childnode>
+        <childnode refid="1079" relation="usage">
+          <edgelabel>position</edgelabel>
+        </childnode>
+        <childnode refid="1080" relation="usage">
+          <edgelabel>color</edgelabel>
+        </childnode>
+      </node>
+      <node id="1081">
+        <label>Camera3</label>
+        <link refid="classCamera3"/>
+        <childnode refid="1082" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>CAMERA_SPEED</edgelabel>
+        </childnode>
+        <childnode refid="1083" relation="usage">
+          <edgelabel>limiter</edgelabel>
+        </childnode>
+        <childnode refid="1078" relation="usage">
+          <edgelabel>defaultTarget</edgelabel>
+          <edgelabel>defaultPosition</edgelabel>
+          <edgelabel>defaultUp</edgelabel>
+        </childnode>
+      </node>
+      <node id="1083">
+        <label>int</label>
+      </node>
+      <node id="1080">
+        <label>Color</label>
+        <link refid="structColor"/>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="1073">
+        <label>SceneModel</label>
+        <link refid="classSceneModel"/>
+        <childnode refid="1074" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1075" relation="usage">
+          <edgelabel>lights</edgelabel>
+        </childnode>
+        <childnode refid="1081" relation="usage">
+          <edgelabel>camera</edgelabel>
+        </childnode>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>rotateAngle</edgelabel>
+          <edgelabel>worldSize</edgelabel>
+        </childnode>
+        <childnode refid="1084" relation="usage">
+          <edgelabel>projectionStack</edgelabel>
+          <edgelabel>modelStack</edgelabel>
+          <edgelabel>viewStack</edgelabel>
+        </childnode>
+        <childnode refid="1086" relation="usage">
+          <edgelabel>meshList</edgelabel>
+        </childnode>
+        <childnode refid="1091" relation="usage">
+          <edgelabel>m_parameters</edgelabel>
+          <edgelabel>m_programID</edgelabel>
+          <edgelabel>m_vertexArrayID</edgelabel>
+        </childnode>
+      </node>
+      <node id="1091">
+        <label>unsigned</label>
+      </node>
+      <node id="1078">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="1077" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h" bodystart="14" bodyend="114"/>
+    <listofallmembers>
+      <member refid="classSceneModel_1aeeabfefc22ea13a02b1ab18368799228" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>camera</name></member>
+      <member refid="classSceneModel_1a5774a86f55bbdffa51347878099cc510" prot="public" virt="virtual"><scope>SceneModel</scope><name>Exit</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483afee240de35d556d2f28a53e693f13859" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_AXES</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483addfdeaff7e0e29e412baad6c5f2853c7" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_BACK</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483afdc81dc03c978ac23a611c47086412b9" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_BOTTOM</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5ab2beaf33cd8f825670b9d2cbaf982b" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_CYLINDER</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6d15c091a4e472acb5ba32afdbb6dee3" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_FRONT</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a846b0fa1d599a0c6b8e847dfe636fda0" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_LEFT</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b88fb1beafea09f0c20fb568814e1c6" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_LIGHTBALL</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a50a1ba14d086a30dcd4dba873237bdae" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_LIGHTBALL2</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6f1aac43803753f8c5f8b5707a956208" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_MODEL1</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a94a0da412875219722de4c443d837d36" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_MODEL2</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483abb04b5603c81197334490d58a2815ab9" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_MODEL3</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a966447e564b872f900148b3a4f42c0c9" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_QUAD</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a38665ef8f8e3a7c7f086bfc46fa3bce4" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_RIGHT</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa4b2502d7c94ea25cceb8a6926918638" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE0</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a0d4357ea39c5696c771653febe38ed" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE1</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a7cdf58949e2f65d8cbe8b9041162f8eb" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE2</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a757ffe44e776d1ef47a124b6223d11" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE3</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aab0c557c0389dcfe340fae48b0f21d1e" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE4</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aba13c45caabbbb8aff493dec1a231c7b" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE5</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa2a1b8ef2c5ca76b6ea5373239d9deee" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE6</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b188789bee48b6c2cd0c60f194147e2" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE7</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a035385a4d70e51e7d9a1091cfe629dee" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_SPHERE8</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a195e33148181ea2cfa7552608569537a" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEO_TOP</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>GEOMETRY_TYPE</name></member>
+      <member refid="classSceneModel_1a3c07e062d6c09125fe9f8ea794f16255" prot="public" virt="virtual"><scope>SceneModel</scope><name>Init</name></member>
+      <member refid="classSceneModel_1ad0241601512b68c875140cf048a44d5c" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>lights</name></member>
+      <member refid="classSceneModel_1af27d9b8a13375886fc8fb5086d1f7dfb" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>m_parameters</name></member>
+      <member refid="classSceneModel_1acefd6d535ad7d4c5e52738323455706e" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>m_programID</name></member>
+      <member refid="classSceneModel_1ac81aa81f5c58743a386bc2e5a634639c" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>m_vertexArrayID</name></member>
+      <member refid="classSceneModel_1a2b857184f8fd5e3d376cd88c42c8d249" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>meshList</name></member>
+      <member refid="classSceneModel_1acf903f662e9a94a9f899fb9f8ecc162d" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>modelStack</name></member>
+      <member refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a666720583b4cd9c2d17b88d963fbfe6d" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>NUM_GEOMETRY</name></member>
+      <member refid="classSceneModel_1a6aba8ac3d74ec4d76a49e0cd6875ace6" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>projectionStack</name></member>
+      <member refid="classSceneModel_1aa0450726b11758c761d432464a238784" prot="public" virt="virtual"><scope>SceneModel</scope><name>Render</name></member>
+      <member refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>RenderMesh</name></member>
+      <member refid="classSceneModel_1a7b80f3f06dfb53682b3a147c6dff8016" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>RenderSkybox</name></member>
+      <member refid="classSceneModel_1ac5dbf0ef222571c0b3a960632dc5459c" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>rotateAngle</name></member>
+      <member refid="classScene_1ad10176d75a9cc0da56626f682d083507" prot="public" virt="non-virtual"><scope>SceneModel</scope><name>Scene</name></member>
+      <member refid="classSceneModel_1a0fe76fa3bea08f54bafbe78257b17638" prot="public" virt="non-virtual"><scope>SceneModel</scope><name>SceneModel</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ace2435066447c48496daec40f9568fd9" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_COLOR_TEXTURE</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a8f6640692fe6ddd59ebfc16c786a9b09" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_COLOR_TEXTURE_ENABLED</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5248c746d315ea7e5b50e7b3a8c8dbfd" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_COLOR</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228abd26c3b0e34109c2009e45092813e4f2" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_COSCUTOFF</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a1865787e7591a2d097cb603fb2ac89fd" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_COSINNER</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a733b4922abd08ad26a65de841a9feb71" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_EXPONENT</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5626afb2d8f2fc6755fbfb3db07e2ee2" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_KC</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae3a94ebd09ed5d19440233ff494ace2c" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_KL</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228adf1887ce2e500ecf580b37bf3855afe9" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_KQ</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3c854f024f0d291cc38e4f8b90eee05f" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_POSITION</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a7e45f700de4a79037c95da0d40b89e1d" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_POWER</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4db250112e9be5a6850a1d7335074914" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_SPOTDIRECTION</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab626971b3af2bb801f5c1f5ce41f8778" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT0_TYPE</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac6c3339bce801049c50476ee49322456" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_COLOR</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab15f2a21750ba46f864b047928d4b543" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_COSCUTOFF</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228af700bed544cedf57452a571bd4b43c5e" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_COSINNER</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aaba79b11b0bd3c789c3fab7a3b295cd2" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_EXPONENT</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6c49ce81d13cb8fa64d780357e8ec6e1" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_KC</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a79bb8fa0c6f6f92a4e20294cb760fcd4" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_KL</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3e250e37dcb23614f1e8c3a23b1123f9" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_KQ</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a89127bb76531c8c51b4de4aeb570ff38" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_POSITION</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a168eddcf3b5120999ec57a9dd31106d4" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_POWER</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab4438cc5c4b9b7d55ebcb9820c740f41" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_SPOTDIRECTION</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac9a7084dbc29b1113975497648cdc5e0" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHT1_TYPE</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a60fc6cd2b3db60f5b0c2b7495af3b3db" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_LIGHTENABLED</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a71ec9e3fd73f2e5daeef5509ba5a13e1" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MATERIAL_AMBIENT</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aa6fe127a3e35057de68925c289b01d16" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MATERIAL_DIFFUSE</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae7f1c317e5c3f87db65ea635d7d77756" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MATERIAL_SHININESS</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a990ea6fef4ba9bee1862cbe86df895de" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MATERIAL_SPECULAR</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4a1a8e45557f52da9ff4243d89bf1fb3" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MODELVIEW</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6dd4a8bd003767314efe4943036443f5" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MODELVIEW_INVERSE_TRANSPOSE</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aedcecd34778e66cb5591b7997f209a7b" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_MVP</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae04849cc6db84bd8bb9ddccd2ac267cc" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_NUMLIGHTS</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228afa7968ceedd57a22b461eb1efee85b57" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>U_TOTAL</name></member>
+      <member refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>UNIFORM_TYPE</name></member>
+      <member refid="classSceneModel_1a937831169909e6699265154d817cb1ef" prot="public" virt="virtual"><scope>SceneModel</scope><name>Update</name></member>
+      <member refid="classSceneModel_1a67665c9b4bf73a8225b9a42463f94f2a" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>viewStack</name></member>
+      <member refid="classSceneModel_1a7204f015f5b769e09190baba4c9ff405" prot="private" virt="non-virtual"><scope>SceneModel</scope><name>worldSize</name></member>
+      <member refid="classScene_1a3b8cec2e32546713915f8c6303c951f1" prot="public" virt="non-virtual"><scope>SceneModel</scope><name>~Scene</name></member>
+      <member refid="classSceneModel_1ad4e125cfdc3d4a11d492e4869f3aae0a" prot="public" virt="non-virtual"><scope>SceneModel</scope><name>~SceneModel</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+<map id="SceneSP::UpdateLookingman" name="SceneSP::UpdateLookingman">
+<area shape="rect" id="node2" href="$classSceneSP.html#a4772701f96585823bf6462942bfbb793" title="Updates the movement of all Npcs in the scene based on dt. " alt="" coords="249,5,388,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="436,5,605,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="653,5,780,32"/>
+</map>

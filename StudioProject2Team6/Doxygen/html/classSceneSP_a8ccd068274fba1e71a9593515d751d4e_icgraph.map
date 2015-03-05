@@ -1,0 +1,4 @@
+<map id="SceneSP::RenderCharacter" name="SceneSP::RenderCharacter">
+<area shape="rect" id="node2" href="$classSceneSP.html#a26ff2c324fa7d370d6682b631cc01ea5" title="Renders all Npcs. " alt="" coords="236,5,425,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="473,5,600,32"/>
+</map>

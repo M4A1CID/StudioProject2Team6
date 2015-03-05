@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="SodaCan_8cpp" kind="file">
+    <compoundname>SodaCan.cpp</compoundname>
+    <includes refid="SodaCan_8h" local="yes">SodaCan.h</includes>
+    <incdepgraph>
+      <node id="3402">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3403" relation="include">
+        </childnode>
+      </node>
+      <node id="3403">
+        <label>string</label>
+      </node>
+      <node id="3400">
+        <label>MyGraphics/Source/SodaCan.cpp</label>
+        <link refid="SodaCan.cpp"/>
+        <childnode refid="3401" relation="include">
+        </childnode>
+      </node>
+      <node id="3401">
+        <label>SodaCan.h</label>
+        <link refid="SodaCan_8h"/>
+        <childnode refid="3402" relation="include">
+        </childnode>
+        <childnode refid="3404" relation="include">
+        </childnode>
+      </node>
+      <node id="3404">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SodaCan_8h" kindref="compound">SodaCan.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCSodaCan_1a31d38248fa2c7766978b79410b00f4ae" refkind="member"><highlight class="normal"><ref refid="classCSodaCan_1a31d38248fa2c7766978b79410b00f4ae" kindref="member">CSodaCan::CSodaCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">setName</ref>(</highlight><highlight class="stringliteral">&quot;Soda<sp/>Can&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">setPrice</ref>(2.0f);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">setGeoType</ref>(<ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0fe333a6335f8d246fe61986e588d15a" kindref="member">GEO_CAN_SODA</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCSodaCan_1a582f82619ddac0dd550f93f876fd7c0b" refkind="member"><highlight class="normal"><ref refid="classCSodaCan_1a582f82619ddac0dd550f93f876fd7c0b" kindref="member">CSodaCan::~CSodaCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SodaCan.cpp"/>
+  </compounddef>
+</doxygen>

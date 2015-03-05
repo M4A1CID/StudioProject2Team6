@@ -1,0 +1,5 @@
+<map id="SceneSP::UpdateStartMenu" name="SceneSP::UpdateStartMenu">
+<area shape="rect" id="node2" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="247,5,422,32"/>
+<area shape="rect" id="node3" href="$classCCharacter.html#a4e9ecc23aabb47e67fc3d7d629b4dceb" title="Mutator function to set character job. " alt="" coords="240,56,429,83"/>
+<area shape="rect" id="node4" href="$classsf_1_1SoundStream.html#a16cc6a0404b32e42c4dce184bb94d0f4" title="Stop playing the audio stream. " alt="" coords="259,107,411,133"/>
+</map>

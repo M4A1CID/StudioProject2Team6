@@ -1,0 +1,6 @@
+<map id="SceneSP::RenderTGAUI" name="SceneSP::RenderTGAUI">
+<area shape="rect" id="node2" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="719,33,845,60"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#aba3ac585689f6337d6e0e97792c3596f" title="Renders miscellaneous easter eggs. " alt="" coords="217,33,437,60"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="509,84,647,111"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="485,33,671,60"/>
+</map>

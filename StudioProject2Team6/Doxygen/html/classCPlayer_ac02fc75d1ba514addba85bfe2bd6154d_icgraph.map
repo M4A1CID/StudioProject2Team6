@@ -1,0 +1,8 @@
+<map id="CPlayer::getVector" name="CPlayer::getVector">
+<area shape="rect" id="node2" href="$classSceneSP.html#a182bfd6a2fca51fe09cbd82771f779a1" title="Checks for the winning and losing conditions of the current gamemode. " alt="" coords="189,5,359,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#abec49d944e5152770324bee4bba4a140" title="Renders the player&#39;s inventory. " alt="" coords="185,107,363,133"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#abf3a278e89de13c3e68e1674bd454be3" title="Updates the paying of money. " alt="" coords="191,56,357,83"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="411,31,580,57"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="628,31,755,57"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="432,107,559,133"/>
+</map>

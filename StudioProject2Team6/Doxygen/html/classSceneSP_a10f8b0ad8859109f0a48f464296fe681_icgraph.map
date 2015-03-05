@@ -1,0 +1,5 @@
+<map id="SceneSP::RenderSamples" name="SceneSP::RenderSamples">
+<area shape="rect" id="node2" href="$classSceneSP.html#a0513b0d4f70be372ac9bc4e4cc49edbe" title="Renders the sample stand. " alt="" coords="231,5,433,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a28a66fa74f2c41afc4e0048bd773d584" title="Renders the entire supermarket. " alt="" coords="481,5,681,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="729,5,856,32"/>
+</map>

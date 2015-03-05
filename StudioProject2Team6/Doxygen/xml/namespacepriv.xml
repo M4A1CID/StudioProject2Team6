@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="namespacepriv" kind="namespace">
+    <compoundname>priv</compoundname>
+    <innerclass refid="structpriv_1_1ThreadFunc" prot="public">priv::ThreadFunc</innerclass>
+    <innerclass refid="structpriv_1_1ThreadFunctor" prot="public">priv::ThreadFunctor</innerclass>
+    <innerclass refid="structpriv_1_1ThreadFunctorWithArg" prot="public">priv::ThreadFunctorWithArg</innerclass>
+    <innerclass refid="structpriv_1_1ThreadMemberFunc" prot="public">priv::ThreadMemberFunc</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="26" column="1"/>
+  </compounddef>
+</doxygen>

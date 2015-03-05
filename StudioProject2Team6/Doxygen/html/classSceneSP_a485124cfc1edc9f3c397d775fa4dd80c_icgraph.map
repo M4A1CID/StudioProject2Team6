@@ -1,0 +1,4 @@
+<map id="SceneSP::RenderCage" name="SceneSP::RenderCage">
+<area shape="rect" id="node2" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="209,5,395,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="443,5,569,32"/>
+</map>

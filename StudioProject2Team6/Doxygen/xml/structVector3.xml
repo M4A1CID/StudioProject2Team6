@@ -1,0 +1,1562 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structVector3" kind="struct" prot="public">
+    <compoundname>Vector3</compoundname>
+    <includes refid="Vector3_8h" local="no">Vector3.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Vector3::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a5284cba426a3ff140f0cfa583f270c54" compoundref="SceneSP_8cpp" startline="5157" endline="5203">SceneSP::checkElevatorCollision</referencedby>
+        <referencedby refid="classSceneSP_1aed88cbeaa9c2779dc5ab3396e0cbd3ba" compoundref="SceneSP_8cpp" startline="4934" endline="4971">SceneSP::checkObjectCollision</referencedby>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1ad6a24084727f08fc91c3e02e292b649f" compoundref="SceneSP_8cpp" startline="4978" endline="5150">SceneSP::checkSupermarketCollision</referencedby>
+        <referencedby refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" compoundref="SceneSP_8cpp" startline="5253" endline="5303">SceneSP::checkWinLose</referencedby>
+        <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
+        <referencedby refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" compoundref="Vector3_8cpp" startline="303" endline="306">Dot</referencedby>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
+        <referencedby refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</referencedby>
+        <referencedby refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" compoundref="Vector3_8cpp" startline="287" endline="290">LengthSquared</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
+        <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
+        <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
+        <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
+        <referencedby refid="Vector3_8inl_1a608500d1ad3b78082cb5bb4356742bd4" compoundref="Vector3_8inl" startline="165" endline="168">operator!=</referencedby>
+        <referencedby refid="classMtx44_1a20fe7d5d35374ea122848a8778de25e6" compoundref="Mtx44_8cpp" startline="294" endline="300">Mtx44::operator*</referencedby>
+        <referencedby refid="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" compoundref="Vector3_8cpp" startline="189" endline="192">operator*</referencedby>
+        <referencedby refid="Vector3_8inl_1aeba70cd3aa71c62d1e9f16a057c9f7b5" compoundref="Vector3_8inl" startline="109" endline="112">operator*</referencedby>
+        <referencedby refid="structVector3_1ab337fe4b0c5fd44657f42427e265c982" compoundref="Vector3_8cpp" startline="205" endline="211">operator*=</referencedby>
+        <referencedby refid="Vector3_8inl_1a07f8a600108d37efbbb202acbe736e08" compoundref="Vector3_8inl" startline="125" endline="132">operator*=</referencedby>
+        <referencedby refid="structVector3_1a90c345c2a67d220a474a6f209102634d" compoundref="Vector3_8cpp" startline="107" endline="110">operator+</referencedby>
+        <referencedby refid="Vector3_8inl_1aa57b1433e51c98ce9389ce02916f19c2" compoundref="Vector3_8inl" startline="93" endline="96">operator+</referencedby>
+        <referencedby refid="structVector3_1a339c80afd026abb2e35a4ae88301928b" compoundref="Vector3_8cpp" startline="123" endline="129">operator+=</referencedby>
+        <referencedby refid="Vector3_8inl_1a0d2cd514825e2d2c50271684a9356c16" compoundref="Vector3_8inl" startline="69" endline="76">operator+=</referencedby>
+        <referencedby refid="structVector3_1a224d913ac29766a57a5d7c96eb226b92" compoundref="Vector3_8cpp" startline="141" endline="144">operator-</referencedby>
+        <referencedby refid="Vector3_8inl_1a14eae4e552fcf9fdc317d612be92dbfe" compoundref="Vector3_8inl" startline="61" endline="64">operator-</referencedby>
+        <referencedby refid="structVector3_1af0c657bdd493fcece630dc985a8e7378" compoundref="Vector3_8cpp" startline="157" endline="163">operator-=</referencedby>
+        <referencedby refid="Vector3_8inl_1a9d5c48185baa729118053f6512d94a9c" compoundref="Vector3_8inl" startline="81" endline="88">operator-=</referencedby>
+        <referencedby refid="Vector3_8inl_1a14c517aeedef370c1ba27bd1ac60e7d8" compoundref="Vector3_8inl" startline="137" endline="140">operator/</referencedby>
+        <referencedby refid="Vector3_8inl_1a3c594d037661835b73f36aa05ad91936" compoundref="Vector3_8inl" startline="145" endline="152">operator/=</referencedby>
+        <referencedby refid="Vector3_8cpp_1a2bb22d81325ba847b6c54c8ad769b5d1" compoundref="Vector3_8cpp" startline="369" endline="373">operator&lt;&lt;</referencedby>
+        <referencedby refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" compoundref="Vector3_8cpp" startline="256" endline="262">operator=</referencedby>
+        <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
+        <referencedby refid="Vector3_8inl_1a388d72db973306a35ba467016b3dee30" compoundref="Vector3_8inl" startline="157" endline="160">operator==</referencedby>
+        <referencedby refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" compoundref="SceneSP_8cpp" startline="3300" endline="3379">SceneSP::Render</referencedby>
+        <referencedby refid="classSceneSP_1a4620fecec9b7d89136b8e947d26ffc81" compoundref="SceneSP_8cpp" startline="4174" endline="4186">SceneSP::RenderATM</referencedby>
+        <referencedby refid="classSceneSP_1a49baa6430b59d2fb1bfeecf80f90204b" compoundref="SceneSP_8cpp" startline="3272" endline="3293">SceneSP::RenderDrunkmanUI</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classSceneSP_1a71623d5328db0316c931d504f7707c07" compoundref="SceneSP_8cpp" startline="3386" endline="3435">SceneSP::RenderSkyBox</referencedby>
+        <referencedby refid="classSceneSP_1a280f438c779cb55a30e779664917e97e" compoundref="SceneSP_8cpp" startline="3540" endline="3565">SceneSP::RenderTrolleys</referencedby>
+        <referencedby refid="classSceneSP_1a24cfa47c9258bc7ba995760ea9d07e51" compoundref="SceneSP_8cpp" startline="3250" endline="3265">SceneSP::RenderTugofwarUI</referencedby>
+        <referencedby refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Set</referencedby>
+        <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
+        <referencedby refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" compoundref="Vector3_8cpp" startline="79" endline="82">SetZero</referencedby>
+        <referencedby refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" compoundref="SceneSP_8cpp" startline="1769" endline="1788">SceneSP::UpdateATM</referencedby>
+        <referencedby refid="classSceneSP_1a810e5313d48de43702158891315ffa0e" compoundref="SceneSP_8cpp" startline="1047" endline="1095">SceneSP::UpdateBuildingGuy</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a01fcec80d931e2556c0e50bbd93b9ade" compoundref="SceneSP_8cpp" startline="2141" endline="2165">SceneSP::UpdateDrunkman</referencedby>
+        <referencedby refid="classSceneSP_1adb19fb3deaf7203ed8014858451c2125" compoundref="SceneSP_8cpp" startline="2174" endline="2199">SceneSP::UpdateDrunkmanguy</referencedby>
+        <referencedby refid="classSceneSP_1a1d18eb92664b2eb377dd4d959bf9335c" compoundref="SceneSP_8cpp" startline="1011" endline="1038">SceneSP::UpdateEasterEggGuy</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1ae68b9d228ca0e7308bcf5e631ac72905" compoundref="SceneSP_8cpp" startline="2342" endline="2406">SceneSP::UpdateGhostman</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classCamera_1ac2a07c30e5c1c5f415ed86d6e15c5a9f" compoundref="Camera_8cpp" startline="60" endline="79">Camera::UpdateMovement</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+        <referencedby refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" compoundref="SceneSP_8cpp" startline="2059" endline="2106">SceneSP::UpdateTugofwar</referencedby>
+        <referencedby refid="classSceneSP_1a0ca0c247e4bc68fd75e98d68e4b8266b" compoundref="SceneSP_8cpp" startline="2115" endline="2132">SceneSP::UpdateTugofwarguy</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Vector3::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a5284cba426a3ff140f0cfa583f270c54" compoundref="SceneSP_8cpp" startline="5157" endline="5203">SceneSP::checkElevatorCollision</referencedby>
+        <referencedby refid="classSceneSP_1aed88cbeaa9c2779dc5ab3396e0cbd3ba" compoundref="SceneSP_8cpp" startline="4934" endline="4971">SceneSP::checkObjectCollision</referencedby>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1ad6a24084727f08fc91c3e02e292b649f" compoundref="SceneSP_8cpp" startline="4978" endline="5150">SceneSP::checkSupermarketCollision</referencedby>
+        <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
+        <referencedby refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" compoundref="Vector3_8cpp" startline="303" endline="306">Dot</referencedby>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</referencedby>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
+        <referencedby refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</referencedby>
+        <referencedby refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" compoundref="Vector3_8cpp" startline="287" endline="290">LengthSquared</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
+        <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
+        <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
+        <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
+        <referencedby refid="Vector3_8inl_1a608500d1ad3b78082cb5bb4356742bd4" compoundref="Vector3_8inl" startline="165" endline="168">operator!=</referencedby>
+        <referencedby refid="classMtx44_1a20fe7d5d35374ea122848a8778de25e6" compoundref="Mtx44_8cpp" startline="294" endline="300">Mtx44::operator*</referencedby>
+        <referencedby refid="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" compoundref="Vector3_8cpp" startline="189" endline="192">operator*</referencedby>
+        <referencedby refid="Vector3_8inl_1aeba70cd3aa71c62d1e9f16a057c9f7b5" compoundref="Vector3_8inl" startline="109" endline="112">operator*</referencedby>
+        <referencedby refid="structVector3_1ab337fe4b0c5fd44657f42427e265c982" compoundref="Vector3_8cpp" startline="205" endline="211">operator*=</referencedby>
+        <referencedby refid="Vector3_8inl_1a07f8a600108d37efbbb202acbe736e08" compoundref="Vector3_8inl" startline="125" endline="132">operator*=</referencedby>
+        <referencedby refid="structVector3_1a90c345c2a67d220a474a6f209102634d" compoundref="Vector3_8cpp" startline="107" endline="110">operator+</referencedby>
+        <referencedby refid="Vector3_8inl_1aa57b1433e51c98ce9389ce02916f19c2" compoundref="Vector3_8inl" startline="93" endline="96">operator+</referencedby>
+        <referencedby refid="structVector3_1a339c80afd026abb2e35a4ae88301928b" compoundref="Vector3_8cpp" startline="123" endline="129">operator+=</referencedby>
+        <referencedby refid="Vector3_8inl_1a0d2cd514825e2d2c50271684a9356c16" compoundref="Vector3_8inl" startline="69" endline="76">operator+=</referencedby>
+        <referencedby refid="structVector3_1a224d913ac29766a57a5d7c96eb226b92" compoundref="Vector3_8cpp" startline="141" endline="144">operator-</referencedby>
+        <referencedby refid="Vector3_8inl_1a14eae4e552fcf9fdc317d612be92dbfe" compoundref="Vector3_8inl" startline="61" endline="64">operator-</referencedby>
+        <referencedby refid="structVector3_1af0c657bdd493fcece630dc985a8e7378" compoundref="Vector3_8cpp" startline="157" endline="163">operator-=</referencedby>
+        <referencedby refid="Vector3_8inl_1a9d5c48185baa729118053f6512d94a9c" compoundref="Vector3_8inl" startline="81" endline="88">operator-=</referencedby>
+        <referencedby refid="Vector3_8inl_1a14c517aeedef370c1ba27bd1ac60e7d8" compoundref="Vector3_8inl" startline="137" endline="140">operator/</referencedby>
+        <referencedby refid="Vector3_8inl_1a3c594d037661835b73f36aa05ad91936" compoundref="Vector3_8inl" startline="145" endline="152">operator/=</referencedby>
+        <referencedby refid="Vector3_8cpp_1a2bb22d81325ba847b6c54c8ad769b5d1" compoundref="Vector3_8cpp" startline="369" endline="373">operator&lt;&lt;</referencedby>
+        <referencedby refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" compoundref="Vector3_8cpp" startline="256" endline="262">operator=</referencedby>
+        <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
+        <referencedby refid="Vector3_8inl_1a388d72db973306a35ba467016b3dee30" compoundref="Vector3_8inl" startline="157" endline="160">operator==</referencedby>
+        <referencedby refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" compoundref="SceneSP_8cpp" startline="3300" endline="3379">SceneSP::Render</referencedby>
+        <referencedby refid="classSceneSP_1a49baa6430b59d2fb1bfeecf80f90204b" compoundref="SceneSP_8cpp" startline="3272" endline="3293">SceneSP::RenderDrunkmanUI</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classSceneSP_1a71623d5328db0316c931d504f7707c07" compoundref="SceneSP_8cpp" startline="3386" endline="3435">SceneSP::RenderSkyBox</referencedby>
+        <referencedby refid="classSceneSP_1a24cfa47c9258bc7ba995760ea9d07e51" compoundref="SceneSP_8cpp" startline="3250" endline="3265">SceneSP::RenderTugofwarUI</referencedby>
+        <referencedby refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Set</referencedby>
+        <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
+        <referencedby refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" compoundref="Vector3_8cpp" startline="79" endline="82">SetZero</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a01fcec80d931e2556c0e50bbd93b9ade" compoundref="SceneSP_8cpp" startline="2141" endline="2165">SceneSP::UpdateDrunkman</referencedby>
+        <referencedby refid="classSceneSP_1adb19fb3deaf7203ed8014858451c2125" compoundref="SceneSP_8cpp" startline="2174" endline="2199">SceneSP::UpdateDrunkmanguy</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classCamera_1ac2a07c30e5c1c5f415ed86d6e15c5a9f" compoundref="Camera_8cpp" startline="60" endline="79">Camera::UpdateMovement</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+        <referencedby refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" compoundref="SceneSP_8cpp" startline="2059" endline="2106">SceneSP::UpdateTugofwar</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Vector3::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1a5284cba426a3ff140f0cfa583f270c54" compoundref="SceneSP_8cpp" startline="5157" endline="5203">SceneSP::checkElevatorCollision</referencedby>
+        <referencedby refid="classSceneSP_1aed88cbeaa9c2779dc5ab3396e0cbd3ba" compoundref="SceneSP_8cpp" startline="4934" endline="4971">SceneSP::checkObjectCollision</referencedby>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1ad6a24084727f08fc91c3e02e292b649f" compoundref="SceneSP_8cpp" startline="4978" endline="5150">SceneSP::checkSupermarketCollision</referencedby>
+        <referencedby refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" compoundref="SceneSP_8cpp" startline="5253" endline="5303">SceneSP::checkWinLose</referencedby>
+        <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
+        <referencedby refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" compoundref="Vector3_8cpp" startline="303" endline="306">Dot</referencedby>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
+        <referencedby refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</referencedby>
+        <referencedby refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" compoundref="Vector3_8cpp" startline="287" endline="290">LengthSquared</referencedby>
+        <referencedby refid="LoadOBJ_8h_1aa634e9cac0a72d751731db6b4479cbda" compoundref="LoadOBJ_8cpp" startline="7" endline="121">LoadOBJ</referencedby>
+        <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
+        <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
+        <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
+        <referencedby refid="Vector3_8inl_1a608500d1ad3b78082cb5bb4356742bd4" compoundref="Vector3_8inl" startline="165" endline="168">operator!=</referencedby>
+        <referencedby refid="classMtx44_1a20fe7d5d35374ea122848a8778de25e6" compoundref="Mtx44_8cpp" startline="294" endline="300">Mtx44::operator*</referencedby>
+        <referencedby refid="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" compoundref="Vector3_8cpp" startline="189" endline="192">operator*</referencedby>
+        <referencedby refid="Vector3_8inl_1aeba70cd3aa71c62d1e9f16a057c9f7b5" compoundref="Vector3_8inl" startline="109" endline="112">operator*</referencedby>
+        <referencedby refid="structVector3_1ab337fe4b0c5fd44657f42427e265c982" compoundref="Vector3_8cpp" startline="205" endline="211">operator*=</referencedby>
+        <referencedby refid="Vector3_8inl_1a07f8a600108d37efbbb202acbe736e08" compoundref="Vector3_8inl" startline="125" endline="132">operator*=</referencedby>
+        <referencedby refid="structVector3_1a90c345c2a67d220a474a6f209102634d" compoundref="Vector3_8cpp" startline="107" endline="110">operator+</referencedby>
+        <referencedby refid="Vector3_8inl_1aa57b1433e51c98ce9389ce02916f19c2" compoundref="Vector3_8inl" startline="93" endline="96">operator+</referencedby>
+        <referencedby refid="structVector3_1a339c80afd026abb2e35a4ae88301928b" compoundref="Vector3_8cpp" startline="123" endline="129">operator+=</referencedby>
+        <referencedby refid="Vector3_8inl_1a0d2cd514825e2d2c50271684a9356c16" compoundref="Vector3_8inl" startline="69" endline="76">operator+=</referencedby>
+        <referencedby refid="structVector3_1a224d913ac29766a57a5d7c96eb226b92" compoundref="Vector3_8cpp" startline="141" endline="144">operator-</referencedby>
+        <referencedby refid="Vector3_8inl_1a14eae4e552fcf9fdc317d612be92dbfe" compoundref="Vector3_8inl" startline="61" endline="64">operator-</referencedby>
+        <referencedby refid="structVector3_1af0c657bdd493fcece630dc985a8e7378" compoundref="Vector3_8cpp" startline="157" endline="163">operator-=</referencedby>
+        <referencedby refid="Vector3_8inl_1a9d5c48185baa729118053f6512d94a9c" compoundref="Vector3_8inl" startline="81" endline="88">operator-=</referencedby>
+        <referencedby refid="Vector3_8inl_1a14c517aeedef370c1ba27bd1ac60e7d8" compoundref="Vector3_8inl" startline="137" endline="140">operator/</referencedby>
+        <referencedby refid="Vector3_8inl_1a3c594d037661835b73f36aa05ad91936" compoundref="Vector3_8inl" startline="145" endline="152">operator/=</referencedby>
+        <referencedby refid="Vector3_8cpp_1a2bb22d81325ba847b6c54c8ad769b5d1" compoundref="Vector3_8cpp" startline="369" endline="373">operator&lt;&lt;</referencedby>
+        <referencedby refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" compoundref="Vector3_8cpp" startline="256" endline="262">operator=</referencedby>
+        <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
+        <referencedby refid="Vector3_8inl_1a388d72db973306a35ba467016b3dee30" compoundref="Vector3_8inl" startline="157" endline="160">operator==</referencedby>
+        <referencedby refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" compoundref="SceneSP_8cpp" startline="3300" endline="3379">SceneSP::Render</referencedby>
+        <referencedby refid="classSceneSP_1a4620fecec9b7d89136b8e947d26ffc81" compoundref="SceneSP_8cpp" startline="4174" endline="4186">SceneSP::RenderATM</referencedby>
+        <referencedby refid="classSceneSP_1a49baa6430b59d2fb1bfeecf80f90204b" compoundref="SceneSP_8cpp" startline="3272" endline="3293">SceneSP::RenderDrunkmanUI</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classSceneSP_1a71623d5328db0316c931d504f7707c07" compoundref="SceneSP_8cpp" startline="3386" endline="3435">SceneSP::RenderSkyBox</referencedby>
+        <referencedby refid="classSceneSP_1a280f438c779cb55a30e779664917e97e" compoundref="SceneSP_8cpp" startline="3540" endline="3565">SceneSP::RenderTrolleys</referencedby>
+        <referencedby refid="classSceneSP_1a24cfa47c9258bc7ba995760ea9d07e51" compoundref="SceneSP_8cpp" startline="3250" endline="3265">SceneSP::RenderTugofwarUI</referencedby>
+        <referencedby refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" compoundref="Vector3_8cpp" startline="67" endline="72">Set</referencedby>
+        <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
+        <referencedby refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" compoundref="Vector3_8cpp" startline="79" endline="82">SetZero</referencedby>
+        <referencedby refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" compoundref="SceneSP_8cpp" startline="1769" endline="1788">SceneSP::UpdateATM</referencedby>
+        <referencedby refid="classSceneSP_1a810e5313d48de43702158891315ffa0e" compoundref="SceneSP_8cpp" startline="1047" endline="1095">SceneSP::UpdateBuildingGuy</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a01fcec80d931e2556c0e50bbd93b9ade" compoundref="SceneSP_8cpp" startline="2141" endline="2165">SceneSP::UpdateDrunkman</referencedby>
+        <referencedby refid="classSceneSP_1adb19fb3deaf7203ed8014858451c2125" compoundref="SceneSP_8cpp" startline="2174" endline="2199">SceneSP::UpdateDrunkmanguy</referencedby>
+        <referencedby refid="classSceneSP_1a1d18eb92664b2eb377dd4d959bf9335c" compoundref="SceneSP_8cpp" startline="1011" endline="1038">SceneSP::UpdateEasterEggGuy</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1ae68b9d228ca0e7308bcf5e631ac72905" compoundref="SceneSP_8cpp" startline="2342" endline="2406">SceneSP::UpdateGhostman</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+        <referencedby refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" compoundref="SceneSP_8cpp" startline="2059" endline="2106">SceneSP::UpdateTugofwar</referencedby>
+        <referencedby refid="classSceneSP_1a0ca0c247e4bc68fd75e98d68e4b8266b" compoundref="SceneSP_8cpp" startline="2115" endline="2132">SceneSP::UpdateTugofwarguy</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Vector3::IsEqual</definition>
+        <argsstring>(float a, float b) const </argsstring>
+        <name>IsEqual</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="13" bodyend="16"/>
+        <references refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" compoundref="MyMath_8h" startline="27">Math::EPSILON</references>
+        <referencedby refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" compoundref="Vector3_8cpp" startline="91" endline="94">IsZero</referencedby>
+        <referencedby refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" compoundref="Vector3_8cpp" startline="241" endline="244">operator!=</referencedby>
+        <referencedby refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" compoundref="Vector3_8cpp" startline="225" endline="228">operator==</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Vector3::Vector3</definition>
+        <argsstring>(float a=0.0, float b=0.0, float c=0.0)</argsstring>
+        <name>Vector3</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+          <defval>0.0</defval>
+        </param>
+        <briefdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="30" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="30" bodyend="32"/>
+        <referencedby refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" compoundref="Vector3_8cpp" startline="319" endline="322">Cross</referencedby>
+        <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
+        <referencedby refid="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" compoundref="Vector3_8cpp" startline="189" endline="192">operator*</referencedby>
+        <referencedby refid="structVector3_1a90c345c2a67d220a474a6f209102634d" compoundref="Vector3_8cpp" startline="107" endline="110">operator+</referencedby>
+        <referencedby refid="structVector3_1a224d913ac29766a57a5d7c96eb226b92" compoundref="Vector3_8cpp" startline="141" endline="144">operator-</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ae1d084ff898241c341e322fba12ceed7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Vector3::Vector3</definition>
+        <argsstring>(const Vector3 &amp;rhs)</argsstring>
+        <name>Vector3</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to copy from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="31" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="42" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a5545e13e2e2861ece8f14b12a6a8101f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Vector3::~Vector3</definition>
+        <argsstring>()</argsstring>
+        <name>~Vector3</name>
+        <briefdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="32" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vector3::Set</definition>
+        <argsstring>(float a=0, float b=0, float c=0)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>a</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>c</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Set the elements of this vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>z value </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="34" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="67" bodyend="72"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+        <referencedby refid="classSceneSP_1ac00c66843e83747f823f5c96a134285e" compoundref="SceneSP_8cpp" startline="837" endline="932">SceneSP::DeclareLightParameters</referencedby>
+        <referencedby refid="classMeshBuilder_1a20530751b058f7126cc95f5484f38d30" compoundref="MeshBuilder_8cpp" startline="320" endline="360">MeshBuilder::GenerateCircle</referencedby>
+        <referencedby refid="classMeshBuilder_1a7f23b3edaa19e1315aa63433161c41ae" compoundref="MeshBuilder_8cpp" startline="498" endline="544">MeshBuilder::GenerateCylinder</referencedby>
+        <referencedby refid="classMeshBuilder_1aec661388bddf32e7bf834b38fb5ed34d" compoundref="MeshBuilder_8cpp" startline="79" endline="125">MeshBuilder::GenerateQuad</referencedby>
+        <referencedby refid="classMeshBuilder_1a10f627b0355a031b42d0337e95d2af56" compoundref="MeshBuilder_8cpp" startline="418" endline="451">MeshBuilder::GenerateSphere</referencedby>
+        <referencedby refid="classCamera_1aa46f58b32270a571ab56dde4caca46db" compoundref="Camera_8cpp" startline="45" endline="50">Camera::Reset</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Vector3::SetZero</definition>
+        <argsstring>(void)</argsstring>
+        <name>SetZero</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Set all elements to zero. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="35" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="79" bodyend="82"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Vector3::IsZero</definition>
+        <argsstring>(void) const </argsstring>
+        <name>IsZero</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Check if vector is zero, using Math::Epsilon. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>TRUE if vector is zero </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="36" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="91" bodyend="94"/>
+        <references refid="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" compoundref="Vector3_8cpp" startline="13" endline="16">IsEqual</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a90c345c2a67d220a474a6f209102634d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vector3::operator+</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator+ overload for vector addition </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> to add with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="107" bodyend="110"/>
+        <references refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" compoundref="Vector3_8cpp" startline="30" endline="32">Vector3</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a339c80afd026abb2e35a4ae88301928b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+        <definition>Vector3 &amp; Vector3::operator+=</definition>
+        <argsstring>(const Vector3 &amp;rhs)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator+= overload for vector addition and assignment </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> to add with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="39" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="123" bodyend="129"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a224d913ac29766a57a5d7c96eb226b92" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vector3::operator-</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator- overload for vector subtraction </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> to subtract with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="141" bodyend="144"/>
+        <references refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" compoundref="Vector3_8cpp" startline="30" endline="32">Vector3</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1af0c657bdd493fcece630dc985a8e7378" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+        <definition>Vector3 &amp; Vector3::operator-=</definition>
+        <argsstring>(const Vector3 &amp;rhs)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator-= overload for vector subtraction and assignment </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structVector3" kindref="compound">Vector3</ref> to subtract with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="157" bodyend="163"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a7b7b7aa32bab9c687c193ffe2b169252" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vector3::operator-</definition>
+        <argsstring>(void) const </argsstring>
+        <name>operator-</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>operator- overload for unary negation </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="44" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="174" bodyend="177"/>
+        <references refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" compoundref="Vector3_8cpp" startline="30" endline="32">Vector3</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vector3::operator*</definition>
+        <argsstring>(float scalar) const </argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>operator* overload for scalar multiplication </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- float to multiply with</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="46" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="189" bodyend="192"/>
+        <references refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" compoundref="Vector3_8cpp" startline="30" endline="32">Vector3</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ab337fe4b0c5fd44657f42427e265c982" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+        <definition>Vector3 &amp; Vector3::operator*=</definition>
+        <argsstring>(float scalar)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type>float</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+<para>operator*= overload for scalar multiplication and assignment </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>float to multiply with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="47" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="205" bodyend="211"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Vector3::operator==</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator== overload for equality check, using <ref refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" kindref="member">Math::EPSILON</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector to compare with</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>None</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="49" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="225" bodyend="228"/>
+        <references refid="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" compoundref="Vector3_8cpp" startline="13" endline="16">IsEqual</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Vector3::operator!=</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>operator!= overload for inequality check, using <ref refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" kindref="member">Math::EPSILON</ref> </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector to compare with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="50" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="241" bodyend="244"/>
+        <references refid="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" compoundref="Vector3_8cpp" startline="13" endline="16">IsEqual</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+        <definition>Vector3 &amp; Vector3::operator=</definition>
+        <argsstring>(const Vector3 &amp;rhs)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operation (assign a vector to this vector) </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to assign </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A reference to this vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="52" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="256" bodyend="262"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a200024a8442329de9a625ed58ffe7075" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Vector3::Length</definition>
+        <argsstring>(void) const </argsstring>
+        <name>Length</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return length of vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Length </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="54" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="273" bodyend="276"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+        <referencedby refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" compoundref="Vector3_8cpp" startline="358" endline="367">Normalize</referencedby>
+        <referencedby refid="structVector3_1a2da0f00c5529bced69763320dac9c414" compoundref="Vector3_8cpp" startline="337" endline="343">Normalized</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Vector3::LengthSquared</definition>
+        <argsstring>(void) const </argsstring>
+        <name>LengthSquared</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Return square of length of vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Length square </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="55" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="287" bodyend="290"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float Vector3::Dot</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>Dot</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Dot product of 2 vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to calculate dot product with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>float value of dot product </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="57" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="303" bodyend="306"/>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vector3::Cross</definition>
+        <argsstring>(const Vector3 &amp;rhs) const </argsstring>
+        <name>Cross</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Cross product of 2 vectors. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to calculate cross product with </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Vector of cross product </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="58" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="319" bodyend="322"/>
+        <references refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" compoundref="Vector3_8cpp" startline="30" endline="32">Vector3</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</referencedby>
+        <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a2da0f00c5529bced69763320dac9c414" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 Vector3::Normalized</definition>
+        <argsstring>(void) const </argsstring>
+        <name>Normalized</name>
+        <param>
+          <type>void</type>
+        </param>
+        <exceptions> throw ( <ref refid="classDivideByZero" kindref="compound">DivideByZero</ref> )</exceptions>
+        <briefdescription>
+<para>Return a copy of this vector, normalized. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to calculate distance from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Divide</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>by zero thrown if normalizing a zero vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting normalized vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="62" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="337" bodyend="343"/>
+        <references refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" compoundref="MyMath_8h" startline="27">Math::EPSILON</references>
+        <references refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</references>
+        <references refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" compoundref="Vector3_8cpp" startline="30" endline="32">Vector3</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+        <definition>Vector3 &amp; Vector3::Normalize</definition>
+        <argsstring>(void)</argsstring>
+        <name>Normalize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <exceptions> throw ( <ref refid="classDivideByZero" kindref="compound">DivideByZero</ref> )</exceptions>
+        <briefdescription>
+<para>Normalize this vector and return a reference to it. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rhs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point to calculate distance from </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername>Divide</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>by zero thrown if normalizing a zero vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="66" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="358" bodyend="367"/>
+        <references refid="namespaceMath_1a5ee876d5cb049f0b3b71f3c54ed8efa0" compoundref="MyMath_8h" startline="27">Math::EPSILON</references>
+        <references refid="structVector3_1a200024a8442329de9a625ed58ffe7075" compoundref="Vector3_8cpp" startline="273" endline="276">Length</references>
+        <references refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" compoundref="Vector3_8h" startline="27">x</references>
+        <references refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" compoundref="Vector3_8h" startline="27">y</references>
+        <references refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" compoundref="Vector3_8h" startline="27">z</references>
+        <referencedby refid="classCamera3_1a19ed99e698e764c1da3a985cf75eb93f" compoundref="Camera3_8cpp" startline="33" endline="44">Camera3::Init</referencedby>
+        <referencedby refid="classMtx44_1a7c3d2d30d9ed5bfca2ba97d0e570930f" compoundref="Mtx44_8cpp" startline="433" endline="450">Mtx44::SetToLookAt</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="structVector3_1a2bb22d81325ba847b6c54c8ad769b5d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend std::ostream &amp;</type>
+        <definition>std::ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, Vector3 &amp;rhs)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="68" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="369" bodyend="373"/>
+      </memberdef>
+      <memberdef kind="friend" id="structVector3_1ad0633cb4e51ffd5188e6b69e72209ab0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="structVector3" kindref="compound">Vector3</ref></type>
+        <definition>Vector3 operator*</definition>
+        <argsstring>(float scalar, const Vector3 &amp;rhs)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>scalar</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref> &amp;</type>
+          <declname>rhs</declname>
+        </param>
+        <briefdescription>
+<para>Scalar product of scalar with vector. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scalar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>scalar value </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>vector </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Resulting vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="70" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.cpp" bodystart="388" bodyend="391"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="related">
+      <memberdef kind="function" id="structVector3_1a9b75d2fb9b0f2fd9fe33f8f06f9dda75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; operator-</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <briefdescription>
+<para>Overload of unary operator -. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to negate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise opposite of the vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="91" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="61" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1abc28859af163c63318ea2723b81c5ad9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector3&lt; T &gt; &amp; operator+=</definition>
+        <argsstring>(Vector3&lt; T &gt; &amp;left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator +=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise addition of both vectors, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="107" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="69" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1aa465672d2a4ee5fd354e585cf08d2ab9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector3&lt; T &gt; &amp; operator-=</definition>
+        <argsstring>(Vector3&lt; T &gt; &amp;left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator -=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise subtraction of both vectors, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="123" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="81" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a6500a0cb00e07801e9e9d7e96852ddd3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; operator+</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator +. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise addition of both vectors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="136" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="93" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1abe0b9411c00cf807bf8a5f835874bd2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; operator-</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator -. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise subtraction of both vectors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="149" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a44ec312b31c1a85dcff4863795f98329" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; operator*</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator *. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise multiplication by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="162" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="109" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1aa6f2b0d9f79c1b9774759b7087affbb1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; operator*</definition>
+        <argsstring>(T left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>T</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator *. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a scalar value) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise multiplication by <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="175" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="117" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ad5fb972775ce8ab58cd9670789e806a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector3&lt; T &gt; &amp; operator*=</definition>
+        <argsstring>(Vector3&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator *=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise multiplication by <emphasis>right</emphasis>, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="191" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="125" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1ad4ba4a83de236ddeb92a7b759187e90d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt;</type>
+        <definition>Vector3&lt; T &gt; operator/</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator /. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise division by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="204" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="137" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a8995a700f9dffccc6dddb3696ae17b64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector3&lt; T &gt; &amp; operator/=</definition>
+        <argsstring>(Vector3&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type><ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator /=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise division by <emphasis>right</emphasis>, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="220" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="145" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a388d72db973306a35ba467016b3dee30" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator ==. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator compares strict equality between two vectors.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is equal to <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="235" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="157" bodyend="160"/>
+      </memberdef>
+      <memberdef kind="function" id="structVector3_1a608500d1ad3b78082cb5bb4356742bd4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const Vector3&lt; T &gt; &amp;left, const Vector3&lt; T &gt; &amp;right)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structVector3" kindref="compound">Vector3</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator !=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator compares strict difference between two vectors.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is not equal to <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="250" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="165" bodyend="168"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a 3D vector and its methods. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="structVector3" kindref="compound">Vector3</ref>: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1216">
+        <label>float</label>
+      </node>
+      <node id="1215">
+        <label>Vector3</label>
+        <link refid="structVector3"/>
+        <childnode refid="1216" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/Common/Source/Vector3.h" bodystart="25" bodyend="71"/>
+    <listofallmembers>
+      <member refid="structVector3_1aa1cdc5357009b47fe585ddd61e263aad" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Cross</name></member>
+      <member refid="structVector3_1a71b1271deb064c65f9dc7dba638c5b57" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Dot</name></member>
+      <member refid="structVector3_1abdc9a7f223e3628ed1cbccd107d49c44" prot="public" virt="non-virtual"><scope>Vector3</scope><name>IsEqual</name></member>
+      <member refid="structVector3_1affeb6d657b146584b5cb0b42a0d6eaeb" prot="public" virt="non-virtual"><scope>Vector3</scope><name>IsZero</name></member>
+      <member refid="structVector3_1a200024a8442329de9a625ed58ffe7075" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Length</name></member>
+      <member refid="structVector3_1a87c90f81b4044393fe18f7a1e90f26df" prot="public" virt="non-virtual"><scope>Vector3</scope><name>LengthSquared</name></member>
+      <member refid="structVector3_1aaef4f25a38878a640ab4a48002a7eff8" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Normalize</name></member>
+      <member refid="structVector3_1a2da0f00c5529bced69763320dac9c414" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Normalized</name></member>
+      <member refid="structVector3_1a27ba9abc0d1b5cd47a0365a4ebcfeb7c" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator!=</name></member>
+      <member refid="structVector3_1a608500d1ad3b78082cb5bb4356742bd4" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator!=</name></member>
+      <member refid="structVector3_1ab8bb1a236776d951a2e43b3ca9448bb2" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator*</name></member>
+      <member refid="structVector3_1ad0633cb4e51ffd5188e6b69e72209ab0" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator*</name></member>
+      <member refid="structVector3_1a44ec312b31c1a85dcff4863795f98329" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator*</name></member>
+      <member refid="structVector3_1aa6f2b0d9f79c1b9774759b7087affbb1" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator*</name></member>
+      <member refid="structVector3_1ab337fe4b0c5fd44657f42427e265c982" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator*=</name></member>
+      <member refid="structVector3_1ad5fb972775ce8ab58cd9670789e806a7" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator*=</name></member>
+      <member refid="structVector3_1a90c345c2a67d220a474a6f209102634d" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator+</name></member>
+      <member refid="structVector3_1a6500a0cb00e07801e9e9d7e96852ddd3" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator+</name></member>
+      <member refid="structVector3_1a339c80afd026abb2e35a4ae88301928b" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator+=</name></member>
+      <member refid="structVector3_1abc28859af163c63318ea2723b81c5ad9" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator+=</name></member>
+      <member refid="structVector3_1a224d913ac29766a57a5d7c96eb226b92" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator-</name></member>
+      <member refid="structVector3_1a7b7b7aa32bab9c687c193ffe2b169252" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator-</name></member>
+      <member refid="structVector3_1a9b75d2fb9b0f2fd9fe33f8f06f9dda75" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator-</name></member>
+      <member refid="structVector3_1abe0b9411c00cf807bf8a5f835874bd2a" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator-</name></member>
+      <member refid="structVector3_1af0c657bdd493fcece630dc985a8e7378" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator-=</name></member>
+      <member refid="structVector3_1aa465672d2a4ee5fd354e585cf08d2ab9" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator-=</name></member>
+      <member refid="structVector3_1ad4ba4a83de236ddeb92a7b759187e90d" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator/</name></member>
+      <member refid="structVector3_1a8995a700f9dffccc6dddb3696ae17b64" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator/=</name></member>
+      <member refid="structVector3_1a2bb22d81325ba847b6c54c8ad769b5d1" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator&lt;&lt;</name></member>
+      <member refid="structVector3_1afbfdb69cef54e84d72d05c3c141e315f" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator=</name></member>
+      <member refid="structVector3_1ae084cfb19c537457f52bfb3cb3a7054d" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator==</name></member>
+      <member refid="structVector3_1a388d72db973306a35ba467016b3dee30" prot="public" virt="non-virtual"><scope>Vector3</scope><name>operator==</name></member>
+      <member refid="structVector3_1a9c25d604bd52b162cfcb56302ef032bb" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Set</name></member>
+      <member refid="structVector3_1ac6c9b941ccefd7744eace77ceab16b56" prot="public" virt="non-virtual"><scope>Vector3</scope><name>SetZero</name></member>
+      <member refid="structVector3_1afa5e0c801fc2c8a820a54ea99302fe08" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Vector3</name></member>
+      <member refid="structVector3_1ae1d084ff898241c341e322fba12ceed7" prot="public" virt="non-virtual"><scope>Vector3</scope><name>Vector3</name></member>
+      <member refid="structVector3_1a7e2d3237b29a2f29d7b3d8b2934e35f2" prot="public" virt="non-virtual"><scope>Vector3</scope><name>x</name></member>
+      <member refid="structVector3_1a86eb35a9fa2d5a49e7fad66a35fa9c13" prot="public" virt="non-virtual"><scope>Vector3</scope><name>y</name></member>
+      <member refid="structVector3_1aa8c9461eb24bd2c364258078811a3e9d" prot="public" virt="non-virtual"><scope>Vector3</scope><name>z</name></member>
+      <member refid="structVector3_1a5545e13e2e2861ece8f14b12a6a8101f" prot="public" virt="non-virtual"><scope>Vector3</scope><name>~Vector3</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

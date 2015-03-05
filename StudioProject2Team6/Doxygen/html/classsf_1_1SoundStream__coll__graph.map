@@ -1,0 +1,7 @@
+<map id="sf::SoundStream" name="sf::SoundStream">
+<area shape="rect" id="node2" href="$classsf_1_1SoundSource.html" title="Base class defining a sound&#39;s properties. " alt="" coords="5,95,124,121"/>
+<area shape="rect" id="node5" href="$classsf_1_1Thread.html" title="Utility class to manipulate threads. " alt="" coords="465,95,544,121"/>
+<area shape="rect" id="node6" href="$classsf_1_1NonCopyable.html" title="Utility class that makes any derived class non&#45;copyable. " alt="" coords="311,5,429,32"/>
+<area shape="rect" id="node11" href="$classsf_1_1Mutex.html" title="Blocks concurrent access to shared resources from multiple threads. " alt="" coords="332,95,408,121"/>
+<area shape="rect" id="node7" href="$structpriv_1_1ThreadFunc.html" title="priv::ThreadFunc" alt="" coords="453,5,570,32"/>
+</map>

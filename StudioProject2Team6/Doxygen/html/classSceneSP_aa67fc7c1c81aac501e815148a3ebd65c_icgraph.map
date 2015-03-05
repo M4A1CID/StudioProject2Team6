@@ -1,0 +1,5 @@
+<map id="SceneSP::RenderTGAInventory" name="SceneSP::RenderTGAInventory">
+<area shape="rect" id="node2" href="$classSceneSP.html#abec49d944e5152770324bee4bba4a140" title="Renders the player&#39;s inventory. " alt="" coords="256,5,433,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="275,56,414,83"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="481,31,608,57"/>
+</map>

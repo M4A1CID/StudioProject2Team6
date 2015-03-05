@@ -1,0 +1,45 @@
+<map id="Mesh::Render" name="Mesh::Render">
+<area shape="rect" id="node2" href="$classSceneSP.html#aefb2189bff2b182a3180014dcc5b0786" title="Renders a mesh. " alt="" coords="156,746,315,773"/>
+<area shape="rect" id="node36" href="$classSceneSP.html#a32c8fc6286744d0c6d20f71e2a4a1847" title="Renders text in world space on a mesh. " alt="" coords="160,993,311,1019"/>
+<area shape="rect" id="node37" href="$classSceneSP.html#a00e4614934f01c736d265c9e0ee2f1ff" title="Renders text on screen. " alt="" coords="363,1633,572,1659"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#aba3ac585689f6337d6e0e97792c3596f" title="Renders miscellaneous easter eggs. " alt="" coords="620,1303,840,1330"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a71623d5328db0316c931d504f7707c07" title="Renders the sky box of the scene. " alt="" coords="911,59,1083,86"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#aca131d95f4fb8a0c5097e67f4509741a" title="Renders the elevator in the scene. " alt="" coords="644,239,816,266"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a28a66fa74f2c41afc4e0048bd773d584" title="Renders the entire supermarket. " alt="" coords="897,521,1097,547"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#ad7e643432e18410f0bb3782c310bdbe6" title="Renders the fences in the scene. " alt="" coords="649,341,811,367"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a7e32a67b49aa638c3c0236b221d3e306" title="Renders the cashier tables in the scene. " alt="" coords="626,391,834,418"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a280f438c779cb55a30e779664917e97e" title="Renders the trolleys in the scene. " alt="" coords="645,442,815,469"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a414b8e3dac73778cce85767d5cae8822" title="Renders the player&#39;s hand. " alt="" coords="919,154,1075,181"/>
+<area shape="rect" id="node13" href="$classSceneSP.html#a5115fe71d4e36db4df6f029c928772e1" title="Function to render the targa UI of the player. " alt="" coords="385,1303,549,1330"/>
+<area shape="rect" id="node15" href="$classSceneSP.html#aa67fc7c1c81aac501e815148a3ebd65c" title="Function to render the targa inventory of the player. " alt="" coords="629,1202,831,1229"/>
+<area shape="rect" id="node17" href="$classSceneSP.html#a8ccd068274fba1e71a9593515d751d4e" title="Function to render the targa inventory of the player. " alt="" coords="376,138,559,165"/>
+<area shape="rect" id="node19" href="$classSceneSP.html#a6848439bd391157f64f853739902d6d0" title="Overloaded function which takes in a container to render shelves. " alt="" coords="382,746,553,773"/>
+<area shape="rect" id="node20" href="$classSceneSP.html#ab171a42480425860b30b7a088d65db03" title="Renders the front and back doors of the supermarket. " alt="" coords="650,594,810,621"/>
+<area shape="rect" id="node21" href="$classSceneSP.html#a10f8b0ad8859109f0a48f464296fe681" title="Renders the samples remaining on the sample stand. " alt="" coords="379,695,556,722"/>
+<area shape="rect" id="node22" href="$classSceneSP.html#a0513b0d4f70be372ac9bc4e4cc49edbe" title="Renders the sample stand. " alt="" coords="629,645,831,671"/>
+<area shape="rect" id="node23" href="$classSceneSP.html#afdd308374fa5720a874c5a1d875fc4ca" title="Renders the item return point. " alt="" coords="370,797,565,823"/>
+<area shape="rect" id="node24" href="$classSceneSP.html#a4620fecec9b7d89136b8e947d26ffc81" title="Renders the ATM. " alt="" coords="653,898,807,925"/>
+<area shape="rect" id="node25" href="$classSceneSP.html#a9f6905e8a0687fd4f0e8250e1e2efbae" title="Renders the ice boxes. " alt="" coords="647,822,813,849"/>
+<area shape="rect" id="node26" href="$classSceneSP.html#a10d953a32d300448870b72b03b1c2f31" title="Renders the meat shelves. " alt="" coords="638,189,822,215"/>
+<area shape="rect" id="node27" href="$classSceneSP.html#a29972883c52ec3ff169e8900cdbd8b3c" title="Renders the beer stands. " alt="" coords="905,949,1090,975"/>
+<area shape="rect" id="node28" href="$classSceneSP.html#a8496ae2ec6070e04eba9d8dbab40b776" title="Renders the ferris wheel. " alt="" coords="369,999,565,1026"/>
+<area shape="rect" id="node29" href="$classSceneSP.html#af653c6ebae7c1d144a96043c6fd2d20f" title="Renders the buildings outside the supermarket. " alt="" coords="381,1050,553,1077"/>
+<area shape="rect" id="node30" href="$classSceneSP.html#a4bd1537d2658ba5442174991483793f9" title="Renders the tug of war activity. " alt="" coords="394,1101,541,1127"/>
+<area shape="rect" id="node31" href="$classSceneSP.html#a734f7fbd2fe4b865f241bf99d23a5c4e" title="Renders the purchasable items in the supermarket. " alt="" coords="392,1151,543,1178"/>
+<area shape="rect" id="node32" href="$classSceneSP.html#a026e12890b393c4c4ed8a2ae10b94762" title="Renders the logistics staff office. " alt="" coords="388,493,547,519"/>
+<area shape="rect" id="node33" href="$classSceneSP.html#accc1c7f13ed51bf09b194df67a09ed35" title="Renders the storage room. " alt="" coords="382,543,553,570"/>
+<area shape="rect" id="node34" href="$classSceneSP.html#a485124cfc1edc9f3c397d775fa4dd80c" title="Renders the &quot;cage&quot; easter egg. " alt="" coords="389,1379,545,1406"/>
+<area shape="rect" id="node35" href="$classSceneSP.html#a0980c2a65773ba37aaecfe7260b327a1" title="Renders the &quot;troll&quot; easter egg. " alt="" coords="655,1455,805,1482"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="905,1405,1090,1431"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="1155,1177,1281,1203"/>
+<area shape="rect" id="node14" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="928,1506,1067,1533"/>
+<area shape="rect" id="node16" href="$classSceneSP.html#abec49d944e5152770324bee4bba4a140" title="Renders the player&#39;s inventory. " alt="" coords="909,1202,1086,1229"/>
+<area shape="rect" id="node18" href="$classSceneSP.html#a26ff2c324fa7d370d6682b631cc01ea5" title="Renders all Npcs. " alt="" coords="903,293,1092,319"/>
+<area shape="rect" id="node38" href="$classSceneSP.html#a24cfa47c9258bc7ba995760ea9d07e51" title="Renders the UI displayed while in the tug of war activity. " alt="" coords="635,1658,825,1685"/>
+<area shape="rect" id="node39" href="$classSceneSP.html#a49baa6430b59d2fb1bfeecf80f90204b" title="Renders the UI displayed when interacting with the drunk man Npc. " alt="" coords="631,1557,829,1583"/>
+<area shape="rect" id="node40" href="$classSceneSP.html#a047fd639bce91ca4d840ec577a0d1db2" title="Renders the main menu. " alt="" coords="904,1633,1091,1659"/>
+<area shape="rect" id="node41" href="$classSceneSP.html#ad0be6fd30e0b9569b2dc0d972ae59cc8" title="Renders the sub menu displaying the different gamemodes. " alt="" coords="907,1721,1088,1747"/>
+<area shape="rect" id="node42" href="$classSceneSP.html#a0565229f33c2c6115867856ad9752ac9" title="Renders the win / lose menu. " alt="" coords="893,1790,1102,1817"/>
+<area shape="rect" id="node43" href="$classSceneSP.html#a427b857a7534b39b0364a1287fbe225f" title="Renders the instruction menu. " alt="" coords="888,1850,1107,1877"/>
+<area shape="rect" id="node44" href="$classSceneSP.html#a72cf933ff795f6f7e4e47fbf5e257a07" title="Renders the pause menu. " alt="" coords="900,1906,1095,1933"/>
+</map>

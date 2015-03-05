@@ -1,0 +1,12 @@
+<map id="CItem::getGeoType" name="CItem::getGeoType">
+<area shape="rect" id="node2" href="$classSceneSP.html#a0cb20bb43706bbd74745f2466fb3f534" title="Defines all items and containers. " alt="" coords="193,31,339,57"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a414b8e3dac73778cce85767d5cae8822" title="Renders the player&#39;s hand. " alt="" coords="188,81,344,108"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a8f096719e7e0e404f4d1afc12d317943" title="Initialises all shelves in the scene. " alt="" coords="392,31,539,57"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="587,31,689,57"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="737,31,887,57"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="935,5,1144,32"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="942,56,1137,83"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="1192,31,1351,57"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1399,31,1525,57"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="402,81,529,108"/>
+</map>

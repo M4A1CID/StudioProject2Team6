@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="BranCan_8h" kind="file">
+    <compoundname>BranCan.h</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includedby refid="DefineItemClass_8h" local="yes">MyGraphics/Source/DefineItemClass.h</includedby>
+    <includedby refid="BranCan_8cpp" local="yes">MyGraphics/Source/BranCan.cpp</includedby>
+    <incdepgraph>
+      <node id="2337">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2338" relation="include">
+        </childnode>
+      </node>
+      <node id="2338">
+        <label>string</label>
+      </node>
+      <node id="2336">
+        <label>MyGraphics/Source/BranCan.h</label>
+        <link refid="BranCan.h"/>
+        <childnode refid="2337" relation="include">
+        </childnode>
+        <childnode refid="2339" relation="include">
+        </childnode>
+      </node>
+      <node id="2339">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2345">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="2343">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2342">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="2343" relation="include">
+        </childnode>
+        <childnode refid="2344" relation="include">
+        </childnode>
+        <childnode refid="2345" relation="include">
+        </childnode>
+      </node>
+      <node id="2341">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="2342" relation="include">
+        </childnode>
+      </node>
+      <node id="2346">
+        <label>MyGraphics/Source/BranCan.cpp</label>
+        <link refid="BranCan_8cpp"/>
+      </node>
+      <node id="2340">
+        <label>MyGraphics/Source/BranCan.h</label>
+        <link refid="BranCan.h"/>
+        <childnode refid="2341" relation="include">
+        </childnode>
+        <childnode refid="2346" relation="include">
+        </childnode>
+      </node>
+      <node id="2344">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCBranCan" prot="public">CBranCan</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classCBranCan" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCBranCan" kindref="compound">CBranCan</ref><sp/>:</highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCItem" kindref="compound">CItem</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCBranCan_1a571e75503719063a518aa026809b6588" kindref="member">CBranCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCBranCan_1a9be6efdedaacff34737eec75e555a431" kindref="member">~CBranCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/BranCan.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,4 @@
+<map id="SceneSP::RenderTugofwarUI" name="SceneSP::RenderTugofwarUI">
+<area shape="rect" id="node2" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="243,5,381,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="429,5,556,32"/>
+</map>

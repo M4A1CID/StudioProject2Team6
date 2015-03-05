@@ -1,0 +1,31 @@
+<map id="SFML/include/SFML/Config.hpp" name="SFML/include/SFML/Config.hpp">
+<area shape="rect" id="node2" href="$Audio_2Export_8hpp.html" title="SFML/include/SFML/Audio\l/Export.hpp" alt="" coords="397,169,576,211"/>
+<area shape="rect" id="node16" href="$System_2Export_8hpp.html" title="SFML/include/SFML/System\l/Export.hpp" alt="" coords="1443,80,1634,121"/>
+<area shape="rect" id="node18" href="$System_8hpp.html" title="SFML/include/SFML/System.hpp" alt="" coords="1646,445,1861,471"/>
+<area shape="rect" id="node29" href="$InputStream_8hpp.html" title="SFML/include/SFML/System\l/InputStream.hpp" alt="" coords="2210,80,2401,121"/>
+<area shape="rect" id="node30" href="$Utf_8hpp.html" title="SFML/include/SFML/System\l/Utf.hpp" alt="" coords="1918,80,2109,121"/>
+<area shape="rect" id="node3" href="$Listener_8hpp.html" title="SFML/include/SFML/Audio\l/Listener.hpp" alt="" coords="5,437,184,479"/>
+<area shape="rect" id="node9" href="$Music_8hpp.html" title="SFML/include/SFML/Audio\l/Music.hpp" alt="" coords="879,437,1057,479"/>
+<area shape="rect" id="node10" href="$Sound_8hpp.html" title="SFML/include/SFML/Audio\l/Sound.hpp" alt="" coords="93,348,272,389"/>
+<area shape="rect" id="node11" href="$SoundBuffer_8hpp.html" title="SFML/include/SFML/Audio\l/SoundBuffer.hpp" alt="" coords="296,348,475,389"/>
+<area shape="rect" id="node12" href="$SoundBufferRecorder_8hpp.html" title="SFML/include/SFML/Audio\l/SoundBufferRecorder.hpp" alt="" coords="423,437,601,479"/>
+<area shape="rect" id="node13" href="$SoundRecorder_8hpp.html" title="SFML/include/SFML/Audio\l/SoundRecorder.hpp" alt="" coords="549,348,728,389"/>
+<area shape="rect" id="node14" href="$SoundSource_8hpp.html" title="SFML/include/SFML/Audio\l/SoundSource.hpp" alt="" coords="524,259,703,300"/>
+<area shape="rect" id="node15" href="$SoundStream_8hpp.html" title="SFML/include/SFML/Audio\l/SoundStream.hpp" alt="" coords="752,348,931,389"/>
+<area shape="rect" id="node4" href="$Audio_8hpp.html" title="SFML/include/SFML/Audio.hpp" alt="" coords="473,527,676,553"/>
+<area shape="rect" id="node5" href="$SceneSP_8h.html" title="MyGraphics/Source/SceneSP.h" alt="" coords="471,601,678,628"/>
+<area shape="rect" id="node6" href="$Application_8cpp.html" title="MyGraphics/Source/Application.cpp" alt="" coords="210,676,441,703"/>
+<area shape="rect" id="node7" href="$Camera3_8cpp.html" title="MyGraphics/Source/Camera3.cpp" alt="" coords="465,676,684,703"/>
+<area shape="rect" id="node8" href="$SceneSP_8cpp.html" title="MyGraphics/Source/SceneSP.cpp" alt="" coords="708,676,929,703"/>
+<area shape="rect" id="node17" href="$Clock_8hpp.html" title="SFML/include/SFML/System\l/Clock.hpp" alt="" coords="1455,348,1646,389"/>
+<area shape="rect" id="node19" href="$Err_8hpp.html" title="SFML/include/SFML/System\l/Err.hpp" alt="" coords="1678,169,1869,211"/>
+<area shape="rect" id="node20" href="$Lock_8hpp.html" title="SFML/include/SFML/System\l/Lock.hpp" alt="" coords="1577,259,1767,300"/>
+<area shape="rect" id="node21" href="$Mutex_8hpp.html" title="SFML/include/SFML/System\l/Mutex.hpp" alt="" coords="1259,259,1450,300"/>
+<area shape="rect" id="node22" href="$NonCopyable_8hpp.html" title="SFML/include/SFML/System\l/NonCopyable.hpp" alt="" coords="1259,169,1450,211"/>
+<area shape="rect" id="node23" href="$Thread_8hpp.html" title="SFML/include/SFML/System\l/Thread.hpp" alt="" coords="1045,259,1235,300"/>
+<area shape="rect" id="node24" href="$ThreadLocal_8hpp.html" title="SFML/include/SFML/System\l/ThreadLocal.hpp" alt="" coords="1791,259,1982,300"/>
+<area shape="rect" id="node26" href="$Sleep_8hpp.html" title="SFML/include/SFML/System\l/Sleep.hpp" alt="" coords="1138,348,1329,389"/>
+<area shape="rect" id="node27" href="$String_8hpp.html" title="SFML/include/SFML/System\l/String.hpp" alt="" coords="1893,169,2083,211"/>
+<area shape="rect" id="node28" href="$Time_8hpp.html" title="SFML/include/SFML/System\l/Time.hpp" alt="" coords="778,259,969,300"/>
+<area shape="rect" id="node25" href="$ThreadLocalPtr_8hpp.html" title="SFML/include/SFML/System\l/ThreadLocalPtr.hpp" alt="" coords="1791,348,1982,389"/>
+</map>

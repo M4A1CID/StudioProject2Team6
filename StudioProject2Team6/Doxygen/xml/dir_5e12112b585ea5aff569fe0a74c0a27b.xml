@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_5e12112b585ea5aff569fe0a74c0a27b" kind="dir">
+    <compoundname>SFML/include/SFML/Audio</compoundname>
+    <innerfile refid="Audio_2Export_8hpp">Export.hpp</innerfile>
+    <innerfile refid="Listener_8hpp">Listener.hpp</innerfile>
+    <innerfile refid="Music_8hpp">Music.hpp</innerfile>
+    <innerfile refid="Sound_8hpp">Sound.hpp</innerfile>
+    <innerfile refid="SoundBuffer_8hpp">SoundBuffer.hpp</innerfile>
+    <innerfile refid="SoundBufferRecorder_8hpp">SoundBufferRecorder.hpp</innerfile>
+    <innerfile refid="SoundRecorder_8hpp">SoundRecorder.hpp</innerfile>
+    <innerfile refid="SoundSource_8hpp">SoundSource.hpp</innerfile>
+    <innerfile refid="SoundStream_8hpp">SoundStream.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/"/>
+  </compounddef>
+</doxygen>

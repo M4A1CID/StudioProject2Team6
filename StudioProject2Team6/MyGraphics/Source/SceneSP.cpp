@@ -9,12 +9,30 @@
 
 static float ROT_LIMIT = 45.f;
 static float SCALE_LIMIT = 5.f;
+/******************************************************************************/
+/*!
+\brief
+Default scene constructor
+*/
+/******************************************************************************/
 SceneSP::SceneSP()
 {
 }
+/******************************************************************************/
+/*!
+\brief
+Default scene destructor
+*/
+/******************************************************************************/
 SceneSP::~SceneSP()
 {
 }
+/******************************************************************************/
+/*!
+\brief
+Initialises the entire scene
+*/
+/******************************************************************************/
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
@@ -75,7 +93,22 @@ void SceneSP::Init()
 	b_inspection = false;
 	b_isWithinPayingCashier = false;
 	b_dinged = true;
+	winEaster = false;
+	closeEaster = false;
+	inRange = false;
+	easterLimiter = 2.0f;
+	easterLimiter2 = 5.0f;
+	easterTimer = 2.0f;
+	getCounter = 0;
+	getCaged = false;
+	getGabed = false;
+	getTrolled = false;
+	getTimed = false;
+	getRicked = false;
 	IsIntugofwar = false;
+	caged = false;
+	cagedPos = -75.0f;
+	diffY = 0.0f;
 	win = false;
 	lose = false;
 	showTuginstruction = false;
@@ -116,6 +149,12 @@ void SceneSP::Init()
 	Cashier.translateZ = 0;
 	Cashier.rotateA = 0;
 }
+/******************************************************************************/
+/*!
+\brief
+Initialises all geometry types
+*/
+/******************************************************************************/
 void SceneSP::initGeoType()
 {
 	meshList[GEO_AXES] = MeshBuilder::GenerateAxes("reference", 1000, 1000, 1000);
@@ -303,6 +342,12 @@ void SceneSP::initGeoType()
 	meshList[GEO_GHOSTNPC_ARM] = MeshBuilder::GenerateOBJ("GhostNpc arm", "OBJ//Arm.obj");
 	meshList[GEO_GHOSTNPC_ARM]->textureID = LoadTGA("Image//GhostNPC.tga");
 }
+/******************************************************************************/
+/*!
+\brief
+Initialises the player and all NPCs
+*/
+/******************************************************************************/
 void SceneSP::initCharacter()
 {
 	ptrplayer = new CPlayer(100,0,8);
@@ -369,21 +414,21 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 	
 	//Passer-bys outside supermarket
-	ptrNPC = new CNpc(106.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(108.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(109.5f,0.f,-200.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(111.5f,0.f,-200.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(113.f,0.f,200.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(115.f,0.f,200.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(116.5f,0.f,10.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(118.5f,0.f,10.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-106.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(-108.f,0.f,110.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-109.5f,0.f,-200.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(-111.5f,0.f,-200.f,GEO_NormalNpc1_HEADBODY,GEO_NormalNpc2_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-113.f,0.f,200.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(-115.f,0.f,200.f,GEO_NormalNpc2_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
-	ptrNPC = new CNpc(-116.5f,0.f,10.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
+	ptrNPC = new CNpc(-118.5f,0.f,10.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_Z,true);
 	myNPCList.push_back(ptrNPC);
 
 	ptrNPC = new CNpc(50.0f,0.f,60.f,GEO_DRUNKMAN_HEADBODY,GEO_NormalNpc1_ARM,GEO_NormalNpc1_LEGANDFEET,STATE_FORWARD,WALKING,WALKING_GUY_OUTSIDE_X,true);
@@ -433,6 +478,12 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 
 }
+/******************************************************************************/
+/*!
+\brief
+Initialises all shelves in the scene
+*/
+/******************************************************************************/
 void SceneSP::initShelves()
 {
 	//=============================================================================
@@ -691,6 +742,16 @@ void SceneSP::initShelves()
 	myTreasureList.push_back(ptrClass);
 	//==================================================================================
 }
+/******************************************************************************/
+/*!
+\brief
+Defines all items and containers
+
+\param container - the container to define
+\param item - the item to define
+\param row - the row of the container
+*/
+/******************************************************************************/
 void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 {
 	if(row == ROW_TOP)
@@ -720,6 +781,14 @@ void SceneSP::DefineItem(CContainer* container, CItem item, int row)
 
 
 }
+/******************************************************************************/
+/*!
+\brief
+Adds items picked up by the player to their inventory
+
+\param pickedUp - item picked up by player
+*/
+/******************************************************************************/
 void SceneSP::addToInventory(CItem* pickedUp)
 {
 
@@ -727,6 +796,12 @@ void SceneSP::addToInventory(CItem* pickedUp)
 	std::cout<< "Inventory added: " << pickedUp->getName() << std::endl;
 	interactionTimer = 0.0f;
 }
+/******************************************************************************/
+/*!
+\brief
+Declares GLEnable
+*/
+/******************************************************************************/
 void SceneSP::DeclareGLEnable()
 {
 	// Set background color to black
@@ -753,6 +828,12 @@ void SceneSP::DeclareGLEnable()
 	// Make sure you pass uniform parameters after glUseProgram()
 	glUniform1i(m_parameters[U_NUMLIGHTS], 1);
 }
+/******************************************************************************/
+/*!
+\brief
+Declares all light parameters
+*/
+/******************************************************************************/
 void SceneSP::DeclareLightParameters()
 {
 	// Get a handle for our "textColor" uniform
@@ -849,6 +930,14 @@ void SceneSP::DeclareLightParameters()
 
 
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the players UI
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateUI(double dt)
 {
 	std::stringstream ss_fps,ss_position,ss_money, ss_camera,ss_item_price;
@@ -869,6 +958,12 @@ void SceneSP::UpdateUI(double dt)
 	s_item_price = ss_item_price.str();
 
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the inspection of items
+*/
+/******************************************************************************/
 void SceneSP::UpdateItemInspection()
 {
 	if(Application::IsKeyPressed('R'))
@@ -880,6 +975,14 @@ void SceneSP::UpdateItemInspection()
 		b_inspection = false;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of all Npcs in the scene based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateAI(double dt)
 {
 	UpdateTugofwarguy(dt);
@@ -897,6 +1000,14 @@ void SceneSP::UpdateAI(double dt)
 	UpdateBuildingGuy(dt);
 	
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of EasterEggGuy Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateEasterEggGuy(double dt)
 {
 	//if press "E" active state = true
@@ -925,6 +1036,14 @@ void SceneSP::UpdateEasterEggGuy(double dt)
 		}
 	}
 }	
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of BuildingGuy Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateBuildingGuy(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -973,8 +1092,16 @@ void SceneSP::UpdateBuildingGuy(double dt)
 
 		
 	}
-}                   
-void SceneSP::UpdateTrolley(double dt)
+}     
+/******************************************************************************/
+/*!
+\brief
+Updates the player's hand movement based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
+void SceneSP::UpdateHand(double dt)
 {
 	if(Application::IsKeyPressed(VK_LEFT)&& !Application::IsKeyPressed('R'))
 	{
@@ -1007,6 +1134,12 @@ void SceneSP::UpdateTrolley(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the main menu upon starting up
+*/
+/******************************************************************************/
 void SceneSP::UpdateMainMenu()
 {
 	if(interactionTimer > menuTImerLimiter)
@@ -1057,6 +1190,12 @@ void SceneSP::UpdateMainMenu()
 			}
 		}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the Start menu
+*/
+/******************************************************************************/
 void SceneSP::UpdateStartMenu()
 {
 	if(interactionTimer > menuTImerLimiter)
@@ -1125,6 +1264,12 @@ void SceneSP::UpdateStartMenu()
 			}
 		}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the win / lose menu
+*/
+/******************************************************************************/
 void SceneSP::UpdateWinLoseMenu()
 {
 	selectionPointing = MENU_BACK;
@@ -1139,6 +1284,12 @@ void SceneSP::UpdateWinLoseMenu()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the instruction menu
+*/
+/******************************************************************************/
 void SceneSP::UpdateInstructionMenu()
 {
 	if(interactionTimer > menuTImerLimiter)
@@ -1156,6 +1307,12 @@ void SceneSP::UpdateInstructionMenu()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the switching between menus
+*/
+/******************************************************************************/
 void SceneSP::UpdateMenu()
 {
 	//If at main menu
@@ -1183,6 +1340,12 @@ void SceneSP::UpdateMenu()
 		UpdateWinLoseMenu();
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the pause menu
+*/
+/******************************************************************************/
 void SceneSP::UpdatePauseMenu()
 {
 
@@ -1232,6 +1395,12 @@ void SceneSP::UpdatePauseMenu()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Resets the entire game
+*/
+/******************************************************************************/
 void SceneSP::resetGame()
 {
 	myNPCList.clear();
@@ -1241,6 +1410,14 @@ void SceneSP::resetGame()
 	myTreasureList.clear();
 	Init();
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the item rotation based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateItemRotation(double dt)
 {
 	if(Application::IsKeyPressed(VK_RIGHT)&& Application::IsKeyPressed('R'))
@@ -1265,6 +1442,14 @@ void SceneSP::UpdateItemRotation(double dt)
 		itemYrotation = 0.f;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates all easter eggs in the easter egg gamemode
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateEasteregg(double dt)
 {	
 	std::stringstream ss_easterCounter;
@@ -1290,6 +1475,14 @@ void SceneSP::UpdateEasteregg(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the scene when the player is ingame
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdatePlaying(double dt)
 {
 	//3d sound
@@ -1407,7 +1600,7 @@ void SceneSP::UpdatePlaying(double dt)
 	if(!IsIntugofwar && !caged)
 		camera.UpdateMovement(dt,reversed);
 	camera.UpdateView(dt,reversed);
-	UpdateTrolley(dt);
+	UpdateHand(dt);
 	UpdateElevator(dt);
 	UpdateDoor(dt);
 	UpdateSamples();
@@ -1416,6 +1609,14 @@ void SceneSP::UpdatePlaying(double dt)
 	checkReturnPoint();
 	
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the Npcs interaction timers based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateAITimer(double dt)
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
@@ -1423,6 +1624,14 @@ void SceneSP::UpdateAITimer(double dt)
 		myNPCList[i]->setNPCTimer(myNPCList[i]->getNPCTimer()+static_cast<float>(dt));
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the entire scene
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::Update(double dt)
 {
 	CustomerinteractionTimer+=float(dt);
@@ -1442,6 +1651,14 @@ void SceneSP::Update(double dt)
 	
 
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the elevator based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateElevator(double dt)
 {
 	//If player is within elevator interaction boundary
@@ -1543,6 +1760,12 @@ void SceneSP::UpdateElevator(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the addition of the player's money and deduction of the ATM's money
+*/
+/******************************************************************************/
 void SceneSP::UpdateATM()
 {
 	std::stringstream ss_atmBalance;
@@ -1563,6 +1786,14 @@ void SceneSP::UpdateATM()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the opening and closing of the front and back doors based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateDoor(double dt)
 {
 	static bool test = false;
@@ -1657,6 +1888,12 @@ void SceneSP::UpdateDoor(double dt)
 	}
 	sounded = false;
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the selection of inventory slot by the player
+*/
+/******************************************************************************/
 void SceneSP::UpdatePlayerSelection()
 {
 	if(Application::IsKeyPressed('1'))
@@ -1733,6 +1970,12 @@ void SceneSP::UpdatePlayerSelection()
 	}
 
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the paying of money
+*/
+/******************************************************************************/
 void SceneSP::UpdatePaying()
 {
 	//If player is within paying zone of cashier
@@ -1778,6 +2021,12 @@ void SceneSP::UpdatePaying()
 
 	
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the remaining samples on the sample stand
+*/
+/******************************************************************************/
 void SceneSP::UpdateSamples()
 {
 	if(Application::IsKeyPressed('E') && interactionTimer > interactionTimerLimiter)
@@ -1786,16 +2035,27 @@ void SceneSP::UpdateSamples()
 		{
 			interactionTimer = 0.0f;
 			i_sampleItems--;
-			if(!sound.openFromFile(soundFXArray[8]))
+			if(i_sampleItems > 0)
 			{
-				std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+				if(!sound.openFromFile(soundFXArray[8]))
+				{
+					std::cout << "ERROR OPENING MUSIC FILE" << std::endl;
+				}
+				sound.setLoop(false);
+				sound.setVolume(50.0f);
+				sound.play();
 			}
-			sound.setLoop(false);
-			sound.setVolume(50.0f);
-			sound.play();
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the player during the tug of war activity based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateTugofwar(double dt)
 {
 	if(((Application::IsKeyPressed('E') && (IsIntugofwar == false))&&
@@ -1844,6 +2104,14 @@ void SceneSP::UpdateTugofwar(double dt)
 		lose = false;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the Npc involves in the tug of war activity based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateTugofwarguy(double dt)
 {
 	if(!IsIntugofwar)
@@ -1862,6 +2130,14 @@ void SceneSP::UpdateTugofwarguy(double dt)
 		myNPCList[0]->setLeftArm(40);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the picking up of the Drunkman Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateDrunkman(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -1887,6 +2163,14 @@ void SceneSP::UpdateDrunkman(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the Drunkman Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateDrunkmanguy(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -1913,6 +2197,14 @@ void SceneSP::UpdateDrunkmanguy(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the Passer-by Npcs outside the supermarket moving in the X direction based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateWalkingmanoutsideX(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -1942,6 +2234,14 @@ void SceneSP::UpdateWalkingmanoutsideX(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the Passer-by Npcs outside the supermarket moving in the Z direction based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateWalkingmanoutsideZ(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -1973,6 +2273,14 @@ void SceneSP::UpdateWalkingmanoutsideZ(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the Npcs walking inside the supermarket based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateWalkingman(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -2023,6 +2331,14 @@ void SceneSP::UpdateWalkingman(double dt)
 	}
 
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the Ghost Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateGhostman(double dt)
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
@@ -2084,9 +2400,18 @@ void SceneSP::UpdateGhostman(double dt)
 				GisFlying = false;
 				myNPCList[i]->setActive(false);
 			}
+			break;
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the Npc looking at items based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateLookingman(double dt)
 {
 	static int counter = 0;
@@ -2171,10 +2496,19 @@ void SceneSP::UpdateLookingman(double dt)
 				}
 				myNPCList[i]->setZpos(myNPCList[i]->getZpos()+(myNPCList[i]->getmoveSpd() * float(dt)));
 			}
+			break;
 		}
 
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the logistics Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateLogisticman(double dt)
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
@@ -2239,6 +2573,14 @@ void SceneSP::UpdateLogisticman(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the customers based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateCustomer(double dt)
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
@@ -2381,6 +2723,14 @@ void SceneSP::UpdateCustomer(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the chatting Npc based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateChattingman(double dt)
 {
 	static int counter = 0;
@@ -2457,6 +2807,14 @@ void SceneSP::UpdateChattingman(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the movement of the shoppers based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateShoppers(double dt)
 {
 	for(unsigned int i = 0; i < myNPCList.size(); ++i)
@@ -2562,6 +2920,14 @@ void SceneSP::UpdateShoppers(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the leg animation of all Npcs while they are moving based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateLegAnimation(double dt)
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
@@ -2583,6 +2949,14 @@ void SceneSP::UpdateLegAnimation(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the "cage" easter egg based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateCage(double dt)
 {
 	if(Application::IsKeyPressed('E') && ((camera.position.x > 42.0f && camera.position.x < 50.0f) && (camera.position.z < -10.0f && camera.position.z > -30.0f)))
@@ -2635,6 +3009,14 @@ void SceneSP::UpdateCage(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the "gabe" easter egg based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateGaben(double dt)
 {
 	if(Application::IsKeyPressed('G')&&summonG == 0)
@@ -2670,6 +3052,14 @@ void SceneSP::UpdateGaben(double dt)
 		gabed = false;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the "troll" easter egg based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateTroll(double dt)
 {
 	if((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24))
@@ -2700,6 +3090,14 @@ void SceneSP::UpdateTroll(double dt)
 	if(reverseTimer > reverseLimiter)
 		reversed = false;
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the miscellaneous easter eggs based on dt
+
+\param dt - delta time
+*/
+/******************************************************************************/
 void SceneSP::UpdateMiscEasteregg(double dt)
 {
 	if(((camera.position.x > 31 && camera.position.x < 35) && (camera.position.z > -28 && camera.position.z < -24)) ||
@@ -2751,6 +3149,12 @@ void SceneSP::UpdateMiscEasteregg(double dt)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders all easter eggs if in easter egg gamemode
+*/
+/******************************************************************************/
 void SceneSP::RenderEasteregg()
 {
 	if(ptrplayer->getCharacterJob() == PLAY_EASTER_EGG)
@@ -2773,6 +3177,12 @@ void SceneSP::RenderEasteregg()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders miscellaneous easter eggs
+*/
+/******************************************************************************/
 void SceneSP::RenderMiscEastereggs()
 {
 	if(gabed)
@@ -2786,6 +3196,12 @@ void SceneSP::RenderMiscEastereggs()
 	RenderMesh(meshList[GEO_EASTEREGG_5], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the player's UI
+*/
+/******************************************************************************/
 void SceneSP::RenderUI()
 {
 	//RenderText(meshList[GEO_UI_SCREEN],"",Color(),1,0,0);
@@ -2825,6 +3241,12 @@ void SceneSP::RenderUI()
 	RenderTugofwarUI();
 	RenderDrunkmanUI();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the UI displayed while in the tug of war activity
+*/
+/******************************************************************************/
 void SceneSP::RenderTugofwarUI()
 {
 	if(win)
@@ -2841,6 +3263,12 @@ void SceneSP::RenderTugofwarUI()
 		RenderTextOnScreen(meshList[GEO_TEXT], "partake in a Tug-of-war!", Color(0, 1, 1), 3, 10, 9);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the UI displayed when interacting with the drunk man Npc
+*/
+/******************************************************************************/
 void SceneSP::RenderDrunkmanUI()
 {
 	if((i_drunkmanAct == DRUNKIDLE)	
@@ -2863,6 +3291,12 @@ void SceneSP::RenderDrunkmanUI()
 		RenderTextOnScreen(meshList[GEO_TEXT], "out of the store", Color(0, 1, 0), 3, 6, 8);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the entire scene
+*/
+/******************************************************************************/
 void SceneSP::Render()
 {
 	//clear depth and color buffer
@@ -2943,6 +3377,12 @@ void SceneSP::Render()
 		break;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the sky box of the scene
+*/
+/******************************************************************************/
 void SceneSP::RenderSkyBox()
 {	
 	modelStack.PushMatrix();
@@ -2993,6 +3433,12 @@ void SceneSP::RenderSkyBox()
 	modelStack.PopMatrix();
 
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the elevator in the scene
+*/
+/******************************************************************************/
 void SceneSP::RenderElevator()
 {
 	modelStack.PushMatrix();
@@ -3006,6 +3452,12 @@ void SceneSP::RenderElevator()
 	modelStack.PopMatrix();     
 
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the fences in the scene
+*/
+/******************************************************************************/
 void SceneSP::RenderFence()
 {
 	modelStack.PushMatrix();
@@ -3053,6 +3505,12 @@ void SceneSP::RenderFence()
 		modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the cashier tables in the scene
+*/
+/******************************************************************************/
 void SceneSP::RenderCashierTables()
 {
 	modelStack.PushMatrix();
@@ -3073,6 +3531,12 @@ void SceneSP::RenderCashierTables()
 		RenderMesh(meshList[GEO_CASHIER], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the trolleys in the scene
+*/
+/******************************************************************************/
 void SceneSP::RenderTrolleys()
 {
 	for(float i=0; i<8;++i)
@@ -3099,6 +3563,12 @@ void SceneSP::RenderTrolleys()
 	}
 
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the player's hand
+*/
+/******************************************************************************/
 void SceneSP::RenderHand()
 {
 	modelStack.PushMatrix();
@@ -3139,6 +3609,17 @@ void SceneSP::RenderHand()
 		modelStack.PopMatrix();
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Function to render the targa UI of the player
+
+\param mesh - the mesh to render
+\param size - the size of the mesh
+\param x - the x position of the mesh
+\param y - the y position of the mesh
+*/
+/******************************************************************************/
 void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -3169,6 +3650,17 @@ void SceneSP::RenderTGAUI(Mesh* mesh, float size, float x , float y)
 
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Function to render the targa inventory of the player
+
+\param mesh - the mesh to render
+\param size - the size of the mesh
+\param x - the x position of the mesh
+\param y - the y position of the mesh
+*/
+/******************************************************************************/
 void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -3199,6 +3691,17 @@ void SceneSP::RenderTGAInventory(Mesh* mesh,float size, float x , float y)
 
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Function to render the targa inventory of the player
+
+\param mesh - the mesh to render
+\param size - the size of the mesh
+\param x - the x position of the mesh
+\param y - the y position of the mesh
+*/
+/******************************************************************************/
 void SceneSP::RenderCharacter(CNpc* npc)
 {
 	modelStack.PushMatrix();
@@ -3241,6 +3744,12 @@ void SceneSP::RenderCharacter(CNpc* npc)
 		
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the main menu
+*/
+/******************************************************************************/
 void SceneSP::RenderMainMenu()
 {
 	
@@ -3260,6 +3769,12 @@ void SceneSP::RenderMainMenu()
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EXIT], Color(1, 1, 0),  3, 23, 14);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the sub menu displaying the different gamemodes
+*/
+/******************************************************************************/
 void SceneSP::RenderSubMenu()
 {
 	
@@ -3279,6 +3794,12 @@ void SceneSP::RenderSubMenu()
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_EASTER_EGG_HUNT], Color(1, 1, 0),  3, 19, 14);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the win / lose menu
+*/
+/******************************************************************************/
 void SceneSP::RenderWinLoseMenu()
 {
 	
@@ -3293,6 +3814,12 @@ void SceneSP::RenderWinLoseMenu()
 	}
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 3, 19, 5);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the instruction menu
+*/
+/******************************************************************************/
 void SceneSP::RenderInstructionMenu()
 {
 	RenderTextOnScreen(meshList[GEO_TEXT], "Arrow keys to look", Color(0, 1, 0), 3, 2, 20);
@@ -3305,9 +3832,14 @@ void SceneSP::RenderInstructionMenu()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press Ctrl to crouch", Color(0, 1, 0), 3, 2, 13);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press Esc to end application", Color(0, 1, 0), 3, 2, 10);
 
-
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0),  3, 19, 5);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the pause menu
+*/
+/******************************************************************************/
 void SceneSP::RenderPauseMenu()
 {
 
@@ -3322,6 +3854,12 @@ void SceneSP::RenderPauseMenu()
 		RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0), 3, 18, 14);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders all Npcs
+*/
+/******************************************************************************/
 void SceneSP::RenderCharacters()
 {
 	for(unsigned int i = 0; i< myNPCList.size(); ++i)
@@ -3330,6 +3868,16 @@ void SceneSP::RenderCharacters()
 			RenderCharacter(myNPCList[i]);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders text in world space on a mesh
+
+\param mesh - the mesh to be rendered
+\param text - the text to be rendered
+\param color - the color of the text to be rendered
+*/
+/******************************************************************************/
 void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -3356,6 +3904,19 @@ void SceneSP::RenderText(Mesh* mesh, std::string text, Color color)
 	glUniform1i(m_parameters[U_TEXT_ENABLED], 0);
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders text on screen
+
+\param mesh - the mesh to be rendered
+\param text - the text to be rendered
+\param color - the color of the text to be rendered
+\param size - the size of the text
+\param x - x position of the text
+\param y - y position of the text
+*/
+/******************************************************************************/
 void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, float size, float x, float y)
 {
 	if(!mesh || mesh->textureID <= 0) //Proper error check
@@ -3397,6 +3958,15 @@ void SceneSP::RenderTextOnScreen(Mesh* mesh, std::string text, Color color, floa
 
 	glEnable(GL_DEPTH_TEST);
 }
+/******************************************************************************/
+/*!
+\brief
+Renders a mesh
+
+\param mesh - the mesh to be rendered
+\param enableLight - enabling of light
+*/
+/******************************************************************************/
 void SceneSP::RenderMesh(Mesh *mesh, bool enableLight)
 {
 	Mtx44 MVP, modelView, modelView_inverse_transpose;
@@ -3441,6 +4011,12 @@ void SceneSP::RenderMesh(Mesh *mesh, bool enableLight)
 		glBindTexture(GL_TEXTURE_2D, 0);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the entire supermarket
+*/
+/******************************************************************************/
 void SceneSP::RenderSupermarket()
 {
 	modelStack.PushMatrix();
@@ -3464,6 +4040,12 @@ void SceneSP::RenderSupermarket()
 
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Function to render the shelves in the supermarket
+*/
+/******************************************************************************/
 void SceneSP::RenderShelves()
 {
 	for(unsigned int i = 0; i< myContainerList.size(); ++i)
@@ -3472,6 +4054,14 @@ void SceneSP::RenderShelves()
 	}
 
 }
+/******************************************************************************/
+/*!
+\brief
+Overloaded function which takes in a container to render shelves
+
+\param container - the container to take in
+*/
+/******************************************************************************/
 void SceneSP::RenderShelves(CContainer* container)
 {
 	modelStack.PushMatrix();
@@ -3480,6 +4070,12 @@ void SceneSP::RenderShelves(CContainer* container)
 		RenderMesh(meshList[GEO_SHELF],toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the front and back doors of the supermarket
+*/
+/******************************************************************************/
 void SceneSP::RenderDoors()
 {
 	//Front doors
@@ -3525,6 +4121,12 @@ void SceneSP::RenderDoors()
 	
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the samples remaining on the sample stand
+*/
+/******************************************************************************/
 void SceneSP::RenderSamples()
 {
 	for(int x = 0; x< i_sampleItems;x++)
@@ -3535,6 +4137,12 @@ void SceneSP::RenderSamples()
 		modelStack.PopMatrix();
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the item return point
+*/
+/******************************************************************************/
 void SceneSP::RenderReturnPoint()
 {
 	modelStack.PushMatrix();
@@ -3542,6 +4150,12 @@ void SceneSP::RenderReturnPoint()
 		RenderMesh(meshList[GEO_ICEBOX], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the sample stand
+*/
+/******************************************************************************/
 void SceneSP::RenderSamplestand() //added the container and trolley here for now 
 {
 	modelStack.PushMatrix();
@@ -3551,6 +4165,12 @@ void SceneSP::RenderSamplestand() //added the container and trolley here for now
 		RenderSamples();
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the ATM
+*/
+/******************************************************************************/
 void SceneSP::RenderATM()
 {
 	modelStack.PushMatrix();
@@ -3564,6 +4184,12 @@ void SceneSP::RenderATM()
 		RenderTextOnScreen(meshList[GEO_TEXT], "Balance:"+s_atm_balance, Color(1, 1, 0), 3, 16.5, 19);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the ice boxes
+*/
+/******************************************************************************/
 void SceneSP::RenderIceBox()
 {
 	modelStack.PushMatrix();
@@ -3583,6 +4209,12 @@ void SceneSP::RenderIceBox()
 	modelStack.PopMatrix();
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the meat shelves
+*/
+/******************************************************************************/
 void SceneSP::RenderMeatShelf()
 {
 	//16,17,-28
@@ -3606,6 +4238,12 @@ void SceneSP::RenderMeatShelf()
 	RenderMesh(meshList[GEO_MEATSHELF], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the beer stands
+*/
+/******************************************************************************/
 void SceneSP::RenderBeerstand()
 {
 	modelStack.PushMatrix();//1st floor
@@ -3735,6 +4373,12 @@ void SceneSP::RenderBeerstand()
 		RenderMesh(meshList[GEO_WINEBOTTLE_3], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the ferris wheel
+*/
+/******************************************************************************/
 void SceneSP::RenderFerrisWheel()
 {
 	modelStack.PushMatrix();
@@ -3743,6 +4387,12 @@ void SceneSP::RenderFerrisWheel()
 		RenderMesh(meshList[GEO_FERRIS], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the buildings outside the supermarket
+*/
+/******************************************************************************/
 void SceneSP::RenderBuilding()
 {
 	
@@ -3949,6 +4599,12 @@ void SceneSP::RenderBuilding()
 		RenderMesh(meshList[GEO_BUILDING], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the tug of war activity
+*/
+/******************************************************************************/
 void SceneSP::RenderTug()
 {
 	if(IsIntugofwar)
@@ -3960,6 +4616,12 @@ void SceneSP::RenderTug()
 		modelStack.PopMatrix();
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the purchasable items in the supermarket
+*/
+/******************************************************************************/
 void SceneSP::RenderItem()
 {
 	for(unsigned int i = 0; i< myStockList.size(); ++i)
@@ -3973,6 +4635,12 @@ void SceneSP::RenderItem()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the player's inventory
+*/
+/******************************************************************************/
 void SceneSP::RenderInventory()
 {
 	for( int i = 0; i< ptrplayer->getItemHeld();++i)
@@ -3980,6 +4648,12 @@ void SceneSP::RenderInventory()
 		RenderTGAInventory(meshList[ptrplayer->getVector()[i]->getGeoType()],3.f,22.3f+(i*5.f),0.5f);
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the logistics staff office
+*/
+/******************************************************************************/
 void SceneSP::RenderOffice()
 {
 	modelStack.PushMatrix();
@@ -4030,6 +4704,12 @@ void SceneSP::RenderOffice()
 		RenderMesh(meshList[GEO_OFFICECOMPUTER], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the storage room
+*/
+/******************************************************************************/
 void SceneSP::RenderStorage()
 {
 	for(int i=0;i<4;i++)
@@ -4054,6 +4734,12 @@ void SceneSP::RenderStorage()
 		RenderMesh(meshList[GEO_BOX], toggleLight);
 	modelStack.PopMatrix();
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the "cage" easter egg
+*/
+/******************************************************************************/
 void SceneSP::RenderCage()
 {
 	modelStack.PushMatrix();
@@ -4108,6 +4794,12 @@ void SceneSP::RenderCage()
 		modelStack.PopMatrix();
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Renders the "troll" easter egg
+*/
+/******************************************************************************/
 void SceneSP::RenderTroll()
 {
 	if(reversed)	//RenderTextOnScreen(meshList[GEO_TEXT], "Money: $"+ s_money, Color(0, 1, 0), 3,0, 19);
@@ -4117,7 +4809,12 @@ void SceneSP::RenderTroll()
 		RenderMesh(meshList[GEO_EASTEREGG_3], toggleLight);
 	modelStack.PopMatrix();
 }
-
+/******************************************************************************/
+/*!
+\brief
+Checks for the picking up of items
+*/
+/******************************************************************************/
 void SceneSP::checkPickUpItem()
 {
 
@@ -4174,6 +4871,12 @@ void SceneSP::checkPickUpItem()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Checks for the collision of all objects in the scene
+*/
+/******************************************************************************/
 void SceneSP::checkCollision()
 {
 	checkSupermarketCollision();
@@ -4222,6 +4925,12 @@ void SceneSP::checkCollision()
 	checkObjectCollision(23.0f, 17.0f, -11.0f, 5.5f, 3.0f);
 	checkObjectCollision(36.0f, 17.0f, -11.0f, 4.0f, 3.0f);
 }
+/******************************************************************************/
+/*!
+\brief
+Checks for the collision of an object
+*/
+/******************************************************************************/
 void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float widthX, float widthZ)
 {
 	if((camera.position.y - posY < 10) && (camera.position.y - posY > 0))
@@ -4260,6 +4969,12 @@ void SceneSP::checkObjectCollision(float posX, float posY, float posZ, float wid
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Checks for the collision of the supermarket
+*/
+/******************************************************************************/
 void SceneSP::checkSupermarketCollision()
 {
 	if((camera.position.x > boundX1 && camera.position.x < boundX2) && (camera.position.z > boundZ1 && camera.position.z < boundZ2))
@@ -4433,6 +5148,12 @@ void SceneSP::checkSupermarketCollision()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Checks for the collision of the elevator
+*/
+/******************************************************************************/
 void SceneSP::checkElevatorCollision()
 {
 	if(camera.position.y < 10)
@@ -4480,6 +5201,12 @@ void SceneSP::checkElevatorCollision()
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Checks for players position to return items to the return point
+*/
+/******************************************************************************/
 bool SceneSP::checkReturnPoint()
 {
 	
@@ -4517,6 +5244,12 @@ bool SceneSP::checkReturnPoint()
 		return false;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Checks for the winning and losing conditions of the current gamemode
+*/
+/******************************************************************************/
 void SceneSP::checkWinLose()
 {
 	//If player is exiting by Exit Gate and in Treasure hunter mode
@@ -4568,6 +5301,12 @@ void SceneSP::checkWinLose()
 		i_menuHandle = WIN_LOSE_MENU;
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Exits the scene
+*/
+/******************************************************************************/
 void SceneSP::Exit()
 {
 	// Cleanup here

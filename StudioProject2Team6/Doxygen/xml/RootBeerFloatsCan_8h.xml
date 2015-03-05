@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="RootBeerFloatsCan_8h" kind="file">
+    <compoundname>RootBeerFloatsCan.h</compoundname>
+    <includes refid="Item_8h" local="yes">Item.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includedby refid="DefineItemClass_8h" local="yes">MyGraphics/Source/DefineItemClass.h</includedby>
+    <includedby refid="RootBeerFloatsCan_8cpp" local="yes">MyGraphics/Source/RootBeerFloatsCan.cpp</includedby>
+    <incdepgraph>
+      <node id="3154">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3155" relation="include">
+        </childnode>
+      </node>
+      <node id="3155">
+        <label>string</label>
+      </node>
+      <node id="3156">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="3153">
+        <label>MyGraphics/Source/RootBeerFloatsCan.h</label>
+        <link refid="RootBeerFloatsCan.h"/>
+        <childnode refid="3154" relation="include">
+        </childnode>
+        <childnode refid="3156" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3162">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3163">
+        <label>MyGraphics/Source/RootBeerFloatsCan.cpp</label>
+        <link refid="RootBeerFloatsCan_8cpp"/>
+      </node>
+      <node id="3160">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3159">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3160" relation="include">
+        </childnode>
+        <childnode refid="3161" relation="include">
+        </childnode>
+        <childnode refid="3162" relation="include">
+        </childnode>
+      </node>
+      <node id="3158">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="3159" relation="include">
+        </childnode>
+      </node>
+      <node id="3161">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="3157">
+        <label>MyGraphics/Source/RootBeerFloatsCan.h</label>
+        <link refid="RootBeerFloatsCan.h"/>
+        <childnode refid="3158" relation="include">
+        </childnode>
+        <childnode refid="3163" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCRootBeerFloatsCan" prot="public">CRootBeerFloatsCan</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Item_8h" kindref="compound">Item.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="9"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classCRootBeerFloatsCan" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCRootBeerFloatsCan" kindref="compound">CRootBeerFloatsCan</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCItem" kindref="compound">CItem</ref></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCRootBeerFloatsCan_1ae920ef576cd4efc6379b7f3d0b7a04f9" kindref="member">CRootBeerFloatsCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCRootBeerFloatsCan_1aadaa12c597e7ea61c38595750768f7ac" kindref="member">~CRootBeerFloatsCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/RootBeerFloatsCan.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,17 @@
+<map id="Vector3::Length" name="Vector3::Length">
+<area shape="rect" id="node2" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="171,81,305,108"/>
+<area shape="rect" id="node16" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="168,132,308,159"/>
+<area shape="rect" id="node3" href="$classMtx44.html#a7c3d2d30d9ed5bfca2ba97d0e570930f" title="Set matrix to be a lookat matrix. " alt="" coords="377,5,518,32"/>
+<area shape="rect" id="node6" href="$classCamera3.html#a19ed99e698e764c1da3a985cf75eb93f" title="Initialises the camera. " alt="" coords="398,157,497,184"/>
+<area shape="rect" id="node13" href="$classCamera3.html#af471bcc6fd86bc2f99b5430ccfcb7e7c" title="Updates the camera movement. " alt="" coords="356,56,539,83"/>
+<area shape="rect" id="node15" href="$classCamera3.html#a5e9f9f8eb7e97df9304df1861001eba0" title="Updates the camera view. " alt="" coords="372,107,523,133"/>
+<area shape="rect" id="node4" href="$classMS.html#a2638cd3249260877cc31329978fb6b38" title="Setup lookat matrix and push to matrix stack. " alt="" coords="626,5,717,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="815,5,942,32"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="620,157,723,184"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="804,157,953,184"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="1009,183,1203,209"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="1001,132,1211,159"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="1259,132,1417,159"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1465,107,1592,133"/>
+<area shape="rect" id="node14" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="587,81,756,108"/>
+</map>

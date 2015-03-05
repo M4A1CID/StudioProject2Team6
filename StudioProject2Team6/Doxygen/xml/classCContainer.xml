@@ -1,0 +1,948 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCContainer" kind="class" prot="public">
+    <compoundname>CContainer</compoundname>
+    <includes refid="Container_8h" local="no">Container.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCContainer_1a025cd4774d56304470224abbd3409d3e" prot="private" static="no" mutable="no">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+        <definition>CItem CContainer::item_first</definition>
+        <argsstring></argsstring>
+        <name>item_first</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="34" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classCContainer_1ab7d950083997d2c476fb555ba3d44e9b" compoundref="Container_8cpp" startline="38" endline="51">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a064d9d932a0e361083d5a4a9285eef22" compoundref="Container_8cpp" startline="186" endline="189">getTopItem</referencedby>
+        <referencedby refid="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" compoundref="Container_8cpp" startline="236" endline="241">setItems</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1ad1484c179f622995ca024f3f05930e25" prot="private" static="no" mutable="no">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+        <definition>CItem CContainer::item_second</definition>
+        <argsstring></argsstring>
+        <name>item_second</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="35" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classCContainer_1ab7d950083997d2c476fb555ba3d44e9b" compoundref="Container_8cpp" startline="38" endline="51">CContainer</referencedby>
+        <referencedby refid="classCContainer_1aeceff305e238951c1cf927ac97ae84ce" compoundref="Container_8cpp" startline="198" endline="201">getMiddleItem</referencedby>
+        <referencedby refid="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" compoundref="Container_8cpp" startline="236" endline="241">setItems</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" prot="private" static="no" mutable="no">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+        <definition>CItem CContainer::item_third</definition>
+        <argsstring></argsstring>
+        <name>item_third</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="36" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classCContainer_1ab7d950083997d2c476fb555ba3d44e9b" compoundref="Container_8cpp" startline="38" endline="51">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a8cbd00470704513d12083d2be711ad4b" compoundref="Container_8cpp" startline="210" endline="213">getBottomItem</referencedby>
+        <referencedby refid="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" compoundref="Container_8cpp" startline="236" endline="241">setItems</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CContainer::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a35e4344eb1c1d25c9364ab16f16dc709" compoundref="Container_8cpp" startline="138" endline="141">getXpos</referencedby>
+        <referencedby refid="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" compoundref="Container_8cpp" startline="252" endline="257">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CContainer::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="39" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1ae00b4f70a3679017c1d795536b2a7d5f" compoundref="Container_8cpp" startline="150" endline="153">getYpos</referencedby>
+        <referencedby refid="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" compoundref="Container_8cpp" startline="252" endline="257">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CContainer::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="40" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a912430f27287e0fd419a94333790c947" compoundref="Container_8cpp" startline="162" endline="165">getZpos</referencedby>
+        <referencedby refid="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" compoundref="Container_8cpp" startline="252" endline="257">setPosition</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CContainer::rotation</definition>
+        <argsstring></argsstring>
+        <name>rotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a005405b7321929c4066028be8a65eec5" compoundref="Container_8cpp" startline="174" endline="177">getRotation</referencedby>
+        <referencedby refid="classCContainer_1ac66e7fa20ba89bdeea85c352546a03e9" compoundref="Container_8cpp" startline="222" endline="225">setRotation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1a23142209396037427ed975ae28a1298f" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string CContainer::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="42" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CContainer::firstItemStock</definition>
+        <argsstring></argsstring>
+        <name>firstItemStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="44" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="44" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1ab9bf0cf7936e505a400255e265104e94" compoundref="Container_8cpp" startline="102" endline="105">getFirstStock</referencedby>
+        <referencedby refid="classCContainer_1a94cf888915275990b63a3997078728ad" compoundref="Container_8cpp" startline="268" endline="273">setItemStock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CContainer::secondItemStock</definition>
+        <argsstring></argsstring>
+        <name>secondItemStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="45" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a1260c4eb8f72a4529af2087586f1600b" compoundref="Container_8cpp" startline="114" endline="117">getSecondStock</referencedby>
+        <referencedby refid="classCContainer_1a94cf888915275990b63a3997078728ad" compoundref="Container_8cpp" startline="268" endline="273">setItemStock</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CContainer::thirdItemStock</definition>
+        <argsstring></argsstring>
+        <name>thirdItemStock</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="46" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" compoundref="Container_8cpp" startline="9" endline="19">CContainer</referencedby>
+        <referencedby refid="classCContainer_1a39099429332baa7d3003b4fa9e1b3c9f" compoundref="Container_8cpp" startline="126" endline="129">getThirdStock</referencedby>
+        <referencedby refid="classCContainer_1a94cf888915275990b63a3997078728ad" compoundref="Container_8cpp" startline="268" endline="273">setItemStock</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CContainer::CContainer</definition>
+        <argsstring>(void)</argsstring>
+        <name>CContainer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default container constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="14" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="9" bodyend="19"/>
+        <references refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" compoundref="Container_8h" startline="44">firstItemStock</references>
+        <references refid="classCContainer_1a23142209396037427ed975ae28a1298f" compoundref="Container_8h" startline="42">name</references>
+        <references refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" compoundref="Container_8h" startline="41">rotation</references>
+        <references refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" compoundref="Container_8h" startline="45">secondItemStock</references>
+        <references refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" compoundref="Container_8h" startline="46">thirdItemStock</references>
+        <references refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" compoundref="Container_8h" startline="38">x</references>
+        <references refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" compoundref="Container_8h" startline="39">y</references>
+        <references refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" compoundref="Container_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1ab7d950083997d2c476fb555ba3d44e9b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CContainer::CContainer</definition>
+        <argsstring>(CItem first, CItem second, CItem third, string n, int firstStock, int secondStock, int thirdStock, float posX, float posY, float posZ, float rotate)</argsstring>
+        <name>CContainer</name>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>third</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>firstStock</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>secondStock</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>thirdStock</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rotate</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded container constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- first item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>third</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- third item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstStock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- first item stock in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondStock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second item stock in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thirdStock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- third item stock in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- x position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- y position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- z position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rotate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rotation of container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="38" bodyend="51"/>
+        <references refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" compoundref="Container_8h" startline="44">firstItemStock</references>
+        <references refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" compoundref="Container_8h" startline="34">item_first</references>
+        <references refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" compoundref="Container_8h" startline="35">item_second</references>
+        <references refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" compoundref="Container_8h" startline="36">item_third</references>
+        <references refid="classCContainer_1a23142209396037427ed975ae28a1298f" compoundref="Container_8h" startline="42">name</references>
+        <references refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" compoundref="Container_8h" startline="41">rotation</references>
+        <references refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" compoundref="Container_8h" startline="45">secondItemStock</references>
+        <references refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" compoundref="Container_8h" startline="46">thirdItemStock</references>
+        <references refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" compoundref="Container_8h" startline="38">x</references>
+        <references refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" compoundref="Container_8h" startline="39">y</references>
+        <references refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" compoundref="Container_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a510472f4adfc6d1d2ac4b7b64a568d70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CContainer::CContainer</definition>
+        <argsstring>(CItem *first, CItem *second, CItem *third, string n, int firstStock, int secondStock, int thirdStock, float posX, float posY, float posZ, float rotate)</argsstring>
+        <name>CContainer</name>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref> *</type>
+          <declname>first</declname>
+        </param>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref> *</type>
+          <declname>second</declname>
+        </param>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref> *</type>
+          <declname>third</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>firstStock</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>secondStock</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>thirdStock</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>rotate</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded container constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>first</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- first item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>second</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>third</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- third item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>firstStock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- first item stock in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>secondStock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- second item stock in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thirdStock</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- third item stock in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- x position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- y position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- z position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rotate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rotation of container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="70" bodyend="83"/>
+        <references refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" compoundref="Container_8h" startline="44">firstItemStock</references>
+        <references refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" compoundref="Container_8h" startline="34">item_first</references>
+        <references refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" compoundref="Container_8h" startline="35">item_second</references>
+        <references refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" compoundref="Container_8h" startline="36">item_third</references>
+        <references refid="classCContainer_1a23142209396037427ed975ae28a1298f" compoundref="Container_8h" startline="42">name</references>
+        <references refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" compoundref="Container_8h" startline="41">rotation</references>
+        <references refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" compoundref="Container_8h" startline="45">secondItemStock</references>
+        <references refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" compoundref="Container_8h" startline="46">thirdItemStock</references>
+        <references refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" compoundref="Container_8h" startline="38">x</references>
+        <references refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" compoundref="Container_8h" startline="39">y</references>
+        <references refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" compoundref="Container_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a397ac8d33925a17d9dbd81c9bb6036b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CContainer::~CContainer</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CContainer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="17" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1ab9bf0cf7936e505a400255e265104e94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CContainer::getFirstStock</definition>
+        <argsstring>()</argsstring>
+        <name>getFirstStock</name>
+        <briefdescription>
+<para>Accessor function for first item stock in container. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>first item stock </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="102" bodyend="105"/>
+        <references refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" compoundref="Container_8h" startline="44">firstItemStock</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a1260c4eb8f72a4529af2087586f1600b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CContainer::getSecondStock</definition>
+        <argsstring>()</argsstring>
+        <name>getSecondStock</name>
+        <briefdescription>
+<para>Accessor function for second item stock in container. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>second item stock </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="19" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="114" bodyend="117"/>
+        <references refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" compoundref="Container_8h" startline="45">secondItemStock</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a39099429332baa7d3003b4fa9e1b3c9f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CContainer::getThirdStock</definition>
+        <argsstring>()</argsstring>
+        <name>getThirdStock</name>
+        <briefdescription>
+<para>Accessor function for third item stock in container. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>first third stock </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="126" bodyend="129"/>
+        <references refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" compoundref="Container_8h" startline="46">thirdItemStock</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CContainer::setItems</definition>
+        <argsstring>(CItem a, CItem b, CItem c)</argsstring>
+        <name>setItems</name>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set all items in container. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set first item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set second item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set third item in container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="236" bodyend="241"/>
+        <references refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" compoundref="Container_8h" startline="34">item_first</references>
+        <references refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" compoundref="Container_8h" startline="35">item_second</references>
+        <references refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" compoundref="Container_8h" startline="36">item_third</references>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a35e4344eb1c1d25c9364ab16f16dc709" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CContainer::getXpos</definition>
+        <argsstring>()</argsstring>
+        <name>getXpos</name>
+        <briefdescription>
+<para>Accessor function for container x position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container x position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="22" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="138" bodyend="141"/>
+        <references refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" compoundref="Container_8h" startline="38">x</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+        <referencedby refid="classSceneSP_1a6848439bd391157f64f853739902d6d0" compoundref="SceneSP_8cpp" startline="4065" endline="4072">SceneSP::RenderShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1ae00b4f70a3679017c1d795536b2a7d5f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CContainer::getYpos</definition>
+        <argsstring>()</argsstring>
+        <name>getYpos</name>
+        <briefdescription>
+<para>Accessor function for container y position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container y position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="23" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="150" bodyend="153"/>
+        <references refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" compoundref="Container_8h" startline="39">y</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+        <referencedby refid="classSceneSP_1a6848439bd391157f64f853739902d6d0" compoundref="SceneSP_8cpp" startline="4065" endline="4072">SceneSP::RenderShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a912430f27287e0fd419a94333790c947" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CContainer::getZpos</definition>
+        <argsstring>()</argsstring>
+        <name>getZpos</name>
+        <briefdescription>
+<para>Accessor function for container z position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container z position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="24" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="162" bodyend="165"/>
+        <references refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" compoundref="Container_8h" startline="40">z</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+        <referencedby refid="classSceneSP_1a6848439bd391157f64f853739902d6d0" compoundref="SceneSP_8cpp" startline="4065" endline="4072">SceneSP::RenderShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a005405b7321929c4066028be8a65eec5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CContainer::getRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getRotation</name>
+        <briefdescription>
+<para>Accessor function for container rotation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container rotation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="25" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="174" bodyend="177"/>
+        <references refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" compoundref="Container_8h" startline="41">rotation</references>
+        <referencedby refid="classSceneSP_1a6848439bd391157f64f853739902d6d0" compoundref="SceneSP_8cpp" startline="4065" endline="4072">SceneSP::RenderShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a064d9d932a0e361083d5a4a9285eef22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+        <definition>CItem CContainer::getTopItem</definition>
+        <argsstring>()</argsstring>
+        <name>getTopItem</name>
+        <briefdescription>
+<para>Accessor function for container top row item. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container top row item </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="186" bodyend="189"/>
+        <references refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" compoundref="Container_8h" startline="34">item_first</references>
+        <referencedby refid="classSceneSP_1a8f096719e7e0e404f4d1afc12d317943" compoundref="SceneSP_8cpp" startline="487" endline="744">SceneSP::initShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1aeceff305e238951c1cf927ac97ae84ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+        <definition>CItem CContainer::getMiddleItem</definition>
+        <argsstring>()</argsstring>
+        <name>getMiddleItem</name>
+        <briefdescription>
+<para>Accessor function for container middle row item. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container middle row item </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="198" bodyend="201"/>
+        <references refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" compoundref="Container_8h" startline="35">item_second</references>
+        <referencedby refid="classSceneSP_1a8f096719e7e0e404f4d1afc12d317943" compoundref="SceneSP_8cpp" startline="487" endline="744">SceneSP::initShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a8cbd00470704513d12083d2be711ad4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+        <definition>CItem CContainer::getBottomItem</definition>
+        <argsstring>()</argsstring>
+        <name>getBottomItem</name>
+        <briefdescription>
+<para>Accessor function for container botttom row item. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>container bottom row item </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="210" bodyend="213"/>
+        <references refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" compoundref="Container_8h" startline="36">item_third</references>
+        <referencedby refid="classSceneSP_1a8f096719e7e0e404f4d1afc12d317943" compoundref="SceneSP_8cpp" startline="487" endline="744">SceneSP::initShelves</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CContainer::setPosition</definition>
+        <argsstring>(float posX, float posY, float posZ)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set container position. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set x position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set y position of container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set z position of container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="29" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="252" bodyend="257"/>
+        <references refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" compoundref="Container_8h" startline="38">x</references>
+        <references refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" compoundref="Container_8h" startline="39">y</references>
+        <references refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" compoundref="Container_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1a94cf888915275990b63a3997078728ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CContainer::setItemStock</definition>
+        <argsstring>(int a, int b, int c)</argsstring>
+        <name>setItemStock</name>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>b</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the stock of all items in container. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set stock of first item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>b</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set stock of second item in container </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>c</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set stock of third item in container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="30" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="268" bodyend="273"/>
+        <references refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" compoundref="Container_8h" startline="44">firstItemStock</references>
+        <references refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" compoundref="Container_8h" startline="45">secondItemStock</references>
+        <references refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" compoundref="Container_8h" startline="46">thirdItemStock</references>
+      </memberdef>
+      <memberdef kind="function" id="classCContainer_1ac66e7fa20ba89bdeea85c352546a03e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CContainer::setRotation</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setRotation</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set rotation of container. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- roation of container </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="31" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.cpp" bodystart="222" bodyend="225"/>
+        <references refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" compoundref="Container_8h" startline="41">rotation</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines Container class to store items. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class Container: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="700">
+        <label>CContainer</label>
+        <link refid="classCContainer"/>
+        <childnode refid="701" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+          <edgelabel>rotation</edgelabel>
+        </childnode>
+        <childnode refid="702" relation="usage">
+          <edgelabel>secondItemStock</edgelabel>
+          <edgelabel>thirdItemStock</edgelabel>
+          <edgelabel>firstItemStock</edgelabel>
+        </childnode>
+        <childnode refid="703" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+        <childnode refid="704" relation="usage">
+          <edgelabel>item_third</edgelabel>
+          <edgelabel>item_second</edgelabel>
+          <edgelabel>item_first</edgelabel>
+        </childnode>
+      </node>
+      <node id="704">
+        <label>CItem</label>
+        <link refid="classCItem"/>
+        <childnode refid="701" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+          <edgelabel>price</edgelabel>
+        </childnode>
+        <childnode refid="702" relation="usage">
+          <edgelabel>objectType</edgelabel>
+        </childnode>
+        <childnode refid="705" relation="usage">
+          <edgelabel>active</edgelabel>
+        </childnode>
+        <childnode refid="703" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="703">
+        <label>string</label>
+      </node>
+      <node id="701">
+        <label>float</label>
+      </node>
+      <node id="702">
+        <label>int</label>
+      </node>
+      <node id="705">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" line="12" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Container.h" bodystart="11" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classCContainer_1a49a9b4f82514b3a9b5a46427ee3d9320" prot="public" virt="non-virtual"><scope>CContainer</scope><name>CContainer</name></member>
+      <member refid="classCContainer_1ab7d950083997d2c476fb555ba3d44e9b" prot="public" virt="non-virtual"><scope>CContainer</scope><name>CContainer</name></member>
+      <member refid="classCContainer_1a510472f4adfc6d1d2ac4b7b64a568d70" prot="public" virt="non-virtual"><scope>CContainer</scope><name>CContainer</name></member>
+      <member refid="classCContainer_1a474cf5be02b57ed6892d9894f0721fc8" prot="private" virt="non-virtual"><scope>CContainer</scope><name>firstItemStock</name></member>
+      <member refid="classCContainer_1a8cbd00470704513d12083d2be711ad4b" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getBottomItem</name></member>
+      <member refid="classCContainer_1ab9bf0cf7936e505a400255e265104e94" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getFirstStock</name></member>
+      <member refid="classCContainer_1aeceff305e238951c1cf927ac97ae84ce" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getMiddleItem</name></member>
+      <member refid="classCContainer_1a005405b7321929c4066028be8a65eec5" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getRotation</name></member>
+      <member refid="classCContainer_1a1260c4eb8f72a4529af2087586f1600b" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getSecondStock</name></member>
+      <member refid="classCContainer_1a39099429332baa7d3003b4fa9e1b3c9f" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getThirdStock</name></member>
+      <member refid="classCContainer_1a064d9d932a0e361083d5a4a9285eef22" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getTopItem</name></member>
+      <member refid="classCContainer_1a35e4344eb1c1d25c9364ab16f16dc709" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getXpos</name></member>
+      <member refid="classCContainer_1ae00b4f70a3679017c1d795536b2a7d5f" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getYpos</name></member>
+      <member refid="classCContainer_1a912430f27287e0fd419a94333790c947" prot="public" virt="non-virtual"><scope>CContainer</scope><name>getZpos</name></member>
+      <member refid="classCContainer_1a025cd4774d56304470224abbd3409d3e" prot="private" virt="non-virtual"><scope>CContainer</scope><name>item_first</name></member>
+      <member refid="classCContainer_1ad1484c179f622995ca024f3f05930e25" prot="private" virt="non-virtual"><scope>CContainer</scope><name>item_second</name></member>
+      <member refid="classCContainer_1a3e6d944cee7af533311d1e23405e3a34" prot="private" virt="non-virtual"><scope>CContainer</scope><name>item_third</name></member>
+      <member refid="classCContainer_1a23142209396037427ed975ae28a1298f" prot="private" virt="non-virtual"><scope>CContainer</scope><name>name</name></member>
+      <member refid="classCContainer_1aba5536d7a26fbb8a612785bdc1413dc7" prot="private" virt="non-virtual"><scope>CContainer</scope><name>rotation</name></member>
+      <member refid="classCContainer_1adc912f761ea58d88ea3dd5999479ea7f" prot="private" virt="non-virtual"><scope>CContainer</scope><name>secondItemStock</name></member>
+      <member refid="classCContainer_1ab841d2500f0fad3ff2532e28c28479a7" prot="public" virt="non-virtual"><scope>CContainer</scope><name>setItems</name></member>
+      <member refid="classCContainer_1a94cf888915275990b63a3997078728ad" prot="public" virt="non-virtual"><scope>CContainer</scope><name>setItemStock</name></member>
+      <member refid="classCContainer_1a8478b0895bd818f8f43ac1d83aaebfad" prot="public" virt="non-virtual"><scope>CContainer</scope><name>setPosition</name></member>
+      <member refid="classCContainer_1ac66e7fa20ba89bdeea85c352546a03e9" prot="public" virt="non-virtual"><scope>CContainer</scope><name>setRotation</name></member>
+      <member refid="classCContainer_1aea2f5885f3c89faabdd1ace4c5f29049" prot="private" virt="non-virtual"><scope>CContainer</scope><name>thirdItemStock</name></member>
+      <member refid="classCContainer_1ab3932f8ee07fa3a8a222911da47cb5e5" prot="private" virt="non-virtual"><scope>CContainer</scope><name>x</name></member>
+      <member refid="classCContainer_1a54ea791f9d37a519e2ac8446c109a7a2" prot="private" virt="non-virtual"><scope>CContainer</scope><name>y</name></member>
+      <member refid="classCContainer_1a50a0052e9e92a374943a05fb50e82aed" prot="private" virt="non-virtual"><scope>CContainer</scope><name>z</name></member>
+      <member refid="classCContainer_1a397ac8d33925a17d9dbd81c9bb6036b3" prot="public" virt="non-virtual"><scope>CContainer</scope><name>~CContainer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

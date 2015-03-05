@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Clock" kind="class" prot="public">
+    <compoundname>sf::Clock</compoundname>
+    <includes refid="Clock_8hpp" local="no">Clock.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1Clock_1a8843eb0a9762787cecfecde181e0f337" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>Time sf::Clock::m_startTime</definition>
+        <argsstring></argsstring>
+        <name>m_startTime</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> of last reset, in microseconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" line="81" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" bodystart="81" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Clock_1abbc959c7830ca7c3a4da133cb506d3fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Clock::Clock</definition>
+        <argsstring>()</argsstring>
+        <name>Clock</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>The clock starts automatically after being constructed. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" line="51" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Clock_1a799feb6acb099b57b58d8d20984fce11" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>Time sf::Clock::getElapsedTime</definition>
+        <argsstring>() const </argsstring>
+        <name>getElapsedTime</name>
+        <briefdescription>
+<para>Get the elapsed time. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the time elapsed since the last call to <ref refid="classsf_1_1Clock_1a123e2627f2943e5ecaa1db0c7df3231b" kindref="member">restart()</ref> (or the construction of the instance if <ref refid="classsf_1_1Clock_1a123e2627f2943e5ecaa1db0c7df3231b" kindref="member">restart()</ref> has not been called).</para><para><simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> elapsed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Clock_1a123e2627f2943e5ecaa1db0c7df3231b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>Time sf::Clock::restart</definition>
+        <argsstring>()</argsstring>
+        <name>restart</name>
+        <briefdescription>
+<para>Restart the clock. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function puts the time counter back to zero. It also returns the time elapsed since the clock was started.</para><para><simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> elapsed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" line="74" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility class that measures the elapsed time. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Clock" kindref="compound">sf::Clock</ref> is a lightweight class for measuring time.</para><para>Its provides the most precise time that the underlying OS can achieve (generally microseconds or nanoseconds). It also ensures monotonicity, which means that the returned time can never go backward, even if the system time is changed.</para><para>Usage example: <programlisting><codeline><highlight class="normal">sf::Clock<sp/>clock;</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">Time<sp/>time1<sp/>=<sp/>clock.getElapsedTime();</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">Time<sp/>time2<sp/>=<sp/>clock.restart();</highlight></codeline>
+</programlisting></para><para>The <ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref> value returned by the clock can then be converted to a number of seconds, milliseconds or even microseconds.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="795">
+        <label>sf::Time</label>
+        <link refid="classsf_1_1Time"/>
+        <childnode refid="795" relation="usage">
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+        <childnode refid="796" relation="usage">
+          <edgelabel>m_microseconds</edgelabel>
+        </childnode>
+      </node>
+      <node id="794">
+        <label>sf::Clock</label>
+        <link refid="classsf_1_1Clock"/>
+        <childnode refid="795" relation="usage">
+          <edgelabel>m_startTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="796">
+        <label>signed long long</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Clock.hpp" bodystart="41" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Clock_1abbc959c7830ca7c3a4da133cb506d3fd" prot="public" virt="non-virtual"><scope>sf::Clock</scope><name>Clock</name></member>
+      <member refid="classsf_1_1Clock_1a799feb6acb099b57b58d8d20984fce11" prot="public" virt="non-virtual"><scope>sf::Clock</scope><name>getElapsedTime</name></member>
+      <member refid="classsf_1_1Clock_1a8843eb0a9762787cecfecde181e0f337" prot="private" virt="non-virtual"><scope>sf::Clock</scope><name>m_startTime</name></member>
+      <member refid="classsf_1_1Clock_1a123e2627f2943e5ecaa1db0c7df3231b" prot="public" virt="non-virtual"><scope>sf::Clock</scope><name>restart</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

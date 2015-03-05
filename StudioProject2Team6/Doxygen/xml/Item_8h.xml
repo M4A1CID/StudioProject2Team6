@@ -1,0 +1,601 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Item_8h" kind="file">
+    <compoundname>Item.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="BeansCan_8h" local="yes">MyGraphics/Source/BeansCan.h</includedby>
+    <includedby refid="BrownCan_8h" local="yes">MyGraphics/Source/BrownCan.h</includedby>
+    <includedby refid="CerealBox1_8h" local="yes">MyGraphics/Source/CerealBox1.h</includedby>
+    <includedby refid="CerealBox2_8h" local="yes">MyGraphics/Source/CerealBox2.h</includedby>
+    <includedby refid="CerealBox3_8h" local="yes">MyGraphics/Source/CerealBox3.h</includedby>
+    <includedby refid="CerealBox4_8h" local="yes">MyGraphics/Source/CerealBox4.h</includedby>
+    <includedby refid="CerealBox5_8h" local="yes">MyGraphics/Source/CerealBox5.h</includedby>
+    <includedby refid="EasterEgg1_8h" local="yes">MyGraphics/Source/EasterEgg1.h</includedby>
+    <includedby refid="EasterEgg2_8h" local="yes">MyGraphics/Source/EasterEgg2.h</includedby>
+    <includedby refid="EasterEgg3_8h" local="yes">MyGraphics/Source/EasterEgg3.h</includedby>
+    <includedby refid="MelonCan_8h" local="yes">MyGraphics/Source/MelonCan.h</includedby>
+    <includedby refid="PeasCan_8h" local="yes">MyGraphics/Source/PeasCan.h</includedby>
+    <includedby refid="SardineCan_8h" local="yes">MyGraphics/Source/SardineCan.h</includedby>
+    <includedby refid="TomatoCan_8h" local="yes">MyGraphics/Source/TomatoCan.h</includedby>
+    <includedby refid="VargaCan_8h" local="yes">MyGraphics/Source/VargaCan.h</includedby>
+    <includedby refid="BranCan_8h" local="yes">MyGraphics/Source/BranCan.h</includedby>
+    <includedby refid="GluWaterCan_8h" local="yes">MyGraphics/Source/GluWaterCan.h</includedby>
+    <includedby refid="HumanCan_8h" local="yes">MyGraphics/Source/HumanCan.h</includedby>
+    <includedby refid="MtnDewCan_8h" local="yes">MyGraphics/Source/MtnDewCan.h</includedby>
+    <includedby refid="RedMonsterCan_8h" local="yes">MyGraphics/Source/RedMonsterCan.h</includedby>
+    <includedby refid="RootBeerFloatsCan_8h" local="yes">MyGraphics/Source/RootBeerFloatsCan.h</includedby>
+    <includedby refid="SodaCan_8h" local="yes">MyGraphics/Source/SodaCan.h</includedby>
+    <includedby refid="SodaFestCan_8h" local="yes">MyGraphics/Source/SodaFestCan.h</includedby>
+    <includedby refid="EmptyItem_8h" local="yes">MyGraphics/Source/EmptyItem.h</includedby>
+    <includedby refid="Character_8h" local="yes">MyGraphics/Source/Character.h</includedby>
+    <includedby refid="Container_8h" local="yes">MyGraphics/Source/Container.h</includedby>
+    <includedby refid="Item_8cpp" local="yes">MyGraphics/Source/Item.cpp</includedby>
+    <includedby refid="Winebottle1_8h" local="yes">MyGraphics/Source/Winebottle1.h</includedby>
+    <includedby refid="Winebottle2_8h" local="yes">MyGraphics/Source/Winebottle2.h</includedby>
+    <includedby refid="Winebottle3_8h" local="yes">MyGraphics/Source/Winebottle3.h</includedby>
+    <includedby refid="Winebottle4_8h" local="yes">MyGraphics/Source/Winebottle4.h</includedby>
+    <includedby refid="Winebottle5_8h" local="yes">MyGraphics/Source/Winebottle5.h</includedby>
+    <incdepgraph>
+      <node id="2841">
+        <label>MyGraphics/Source/Item.h</label>
+        <link refid="Item.h"/>
+        <childnode refid="2842" relation="include">
+        </childnode>
+      </node>
+      <node id="2842">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2843">
+        <label>MyGraphics/Source/Item.h</label>
+        <link refid="Item.h"/>
+        <childnode refid="2844" relation="include">
+        </childnode>
+        <childnode refid="2851" relation="include">
+        </childnode>
+        <childnode refid="2853" relation="include">
+        </childnode>
+        <childnode refid="2855" relation="include">
+        </childnode>
+        <childnode refid="2857" relation="include">
+        </childnode>
+        <childnode refid="2859" relation="include">
+        </childnode>
+        <childnode refid="2861" relation="include">
+        </childnode>
+        <childnode refid="2863" relation="include">
+        </childnode>
+        <childnode refid="2865" relation="include">
+        </childnode>
+        <childnode refid="2867" relation="include">
+        </childnode>
+        <childnode refid="2869" relation="include">
+        </childnode>
+        <childnode refid="2871" relation="include">
+        </childnode>
+        <childnode refid="2873" relation="include">
+        </childnode>
+        <childnode refid="2875" relation="include">
+        </childnode>
+        <childnode refid="2877" relation="include">
+        </childnode>
+        <childnode refid="2879" relation="include">
+        </childnode>
+        <childnode refid="2881" relation="include">
+        </childnode>
+        <childnode refid="2883" relation="include">
+        </childnode>
+        <childnode refid="2885" relation="include">
+        </childnode>
+        <childnode refid="2887" relation="include">
+        </childnode>
+        <childnode refid="2889" relation="include">
+        </childnode>
+        <childnode refid="2891" relation="include">
+        </childnode>
+        <childnode refid="2893" relation="include">
+        </childnode>
+        <childnode refid="2895" relation="include">
+        </childnode>
+        <childnode refid="2897" relation="include">
+        </childnode>
+        <childnode refid="2903" relation="include">
+        </childnode>
+        <childnode refid="2905" relation="include">
+        </childnode>
+        <childnode refid="2906" relation="include">
+        </childnode>
+        <childnode refid="2908" relation="include">
+        </childnode>
+        <childnode refid="2910" relation="include">
+        </childnode>
+        <childnode refid="2912" relation="include">
+        </childnode>
+        <childnode refid="2914" relation="include">
+        </childnode>
+      </node>
+      <node id="2888">
+        <label>MyGraphics/Source/RedMonsterCan.cpp</label>
+        <link refid="RedMonsterCan_8cpp"/>
+      </node>
+      <node id="2849">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="2890">
+        <label>MyGraphics/Source/RootBeerFloatsCan.cpp</label>
+        <link refid="RootBeerFloatsCan_8cpp"/>
+      </node>
+      <node id="2877">
+        <label>MyGraphics/Source/VargaCan.h</label>
+        <link refid="VargaCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2878" relation="include">
+        </childnode>
+      </node>
+      <node id="2855">
+        <label>MyGraphics/Source/CerealBox2.h</label>
+        <link refid="CerealBox2_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2856" relation="include">
+        </childnode>
+      </node>
+      <node id="2896">
+        <label>MyGraphics/Source/EmptyItem.cpp</label>
+        <link refid="EmptyItem_8cpp"/>
+      </node>
+      <node id="2900">
+        <label>MyGraphics/Source/Npc.h</label>
+        <link refid="Npc_8h"/>
+        <childnode refid="2846" relation="include">
+        </childnode>
+        <childnode refid="2901" relation="include">
+        </childnode>
+      </node>
+      <node id="2876">
+        <label>MyGraphics/Source/TomatoCan.cpp</label>
+        <link refid="TomatoCan_8cpp"/>
+      </node>
+      <node id="2886">
+        <label>MyGraphics/Source/MtnDewCan.cpp</label>
+        <link refid="MtnDewCan_8cpp"/>
+      </node>
+      <node id="2875">
+        <label>MyGraphics/Source/TomatoCan.h</label>
+        <link refid="TomatoCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2876" relation="include">
+        </childnode>
+      </node>
+      <node id="2901">
+        <label>MyGraphics/Source/Npc.cpp</label>
+        <link refid="Npc_8cpp"/>
+      </node>
+      <node id="2867">
+        <label>MyGraphics/Source/EasterEgg3.h</label>
+        <link refid="EasterEgg3_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2868" relation="include">
+        </childnode>
+      </node>
+      <node id="2908">
+        <label>MyGraphics/Source/Winebottle2.h</label>
+        <link refid="Winebottle2_8h"/>
+        <childnode refid="2909" relation="include">
+        </childnode>
+      </node>
+      <node id="2894">
+        <label>MyGraphics/Source/SodaFestCan.cpp</label>
+        <link refid="SodaFestCan_8cpp"/>
+      </node>
+      <node id="2882">
+        <label>MyGraphics/Source/GluWaterCan.cpp</label>
+        <link refid="GluWaterCan_8cpp"/>
+      </node>
+      <node id="2905">
+        <label>MyGraphics/Source/Item.cpp</label>
+        <link refid="Item_8cpp"/>
+      </node>
+      <node id="2883">
+        <label>MyGraphics/Source/HumanCan.h</label>
+        <link refid="HumanCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2884" relation="include">
+        </childnode>
+      </node>
+      <node id="2847">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2853">
+        <label>MyGraphics/Source/CerealBox1.h</label>
+        <link refid="CerealBox1_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2854" relation="include">
+        </childnode>
+      </node>
+      <node id="2898">
+        <label>MyGraphics/Source/Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="2846" relation="include">
+        </childnode>
+        <childnode refid="2899" relation="include">
+        </childnode>
+      </node>
+      <node id="2861">
+        <label>MyGraphics/Source/CerealBox5.h</label>
+        <link refid="CerealBox5_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2862" relation="include">
+        </childnode>
+      </node>
+      <node id="2904">
+        <label>MyGraphics/Source/Container.cpp</label>
+        <link refid="Container_8cpp"/>
+      </node>
+      <node id="2892">
+        <label>MyGraphics/Source/SodaCan.cpp</label>
+        <link refid="SodaCan_8cpp"/>
+      </node>
+      <node id="2878">
+        <label>MyGraphics/Source/VargaCan.cpp</label>
+        <link refid="VargaCan_8cpp"/>
+      </node>
+      <node id="2852">
+        <label>MyGraphics/Source/BrownCan.cpp</label>
+        <link refid="BrownCan_8cpp"/>
+      </node>
+      <node id="2851">
+        <label>MyGraphics/Source/BrownCan.h</label>
+        <link refid="BrownCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2852" relation="include">
+        </childnode>
+      </node>
+      <node id="2868">
+        <label>MyGraphics/Source/EasterEgg3.cpp</label>
+        <link refid="EasterEgg3_8cpp"/>
+      </node>
+      <node id="2910">
+        <label>MyGraphics/Source/Winebottle3.h</label>
+        <link refid="Winebottle3_8h"/>
+        <childnode refid="2911" relation="include">
+        </childnode>
+      </node>
+      <node id="2850">
+        <label>MyGraphics/Source/BeansCan.cpp</label>
+        <link refid="BeansCan_8cpp"/>
+      </node>
+      <node id="2866">
+        <label>MyGraphics/Source/EasterEgg2.cpp</label>
+        <link refid="EasterEgg2_8cpp"/>
+      </node>
+      <node id="2899">
+        <label>MyGraphics/Source/Player.cpp</label>
+        <link refid="Player_8cpp"/>
+      </node>
+      <node id="2864">
+        <label>MyGraphics/Source/EasterEgg1.cpp</label>
+        <link refid="EasterEgg1_8cpp"/>
+      </node>
+      <node id="2860">
+        <label>MyGraphics/Source/CerealBox4.cpp</label>
+        <link refid="CerealBox4_8cpp"/>
+      </node>
+      <node id="2872">
+        <label>MyGraphics/Source/PeasCan.cpp</label>
+        <link refid="PeasCan_8cpp"/>
+      </node>
+      <node id="2871">
+        <label>MyGraphics/Source/PeasCan.h</label>
+        <link refid="PeasCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2872" relation="include">
+        </childnode>
+      </node>
+      <node id="2846">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="2847" relation="include">
+        </childnode>
+        <childnode refid="2848" relation="include">
+        </childnode>
+        <childnode refid="2849" relation="include">
+        </childnode>
+      </node>
+      <node id="2891">
+        <label>MyGraphics/Source/SodaCan.h</label>
+        <link refid="SodaCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2892" relation="include">
+        </childnode>
+      </node>
+      <node id="2845">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="2846" relation="include">
+        </childnode>
+      </node>
+      <node id="2859">
+        <label>MyGraphics/Source/CerealBox4.h</label>
+        <link refid="CerealBox4_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2860" relation="include">
+        </childnode>
+      </node>
+      <node id="2862">
+        <label>MyGraphics/Source/CerealBox5.cpp</label>
+        <link refid="CerealBox5_8cpp"/>
+      </node>
+      <node id="2884">
+        <label>MyGraphics/Source/HumanCan.cpp</label>
+        <link refid="HumanCan_8cpp"/>
+      </node>
+      <node id="2844">
+        <label>MyGraphics/Source/BeansCan.h</label>
+        <link refid="BeansCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2850" relation="include">
+        </childnode>
+      </node>
+      <node id="2874">
+        <label>MyGraphics/Source/SardineCan.cpp</label>
+        <link refid="SardineCan_8cpp"/>
+      </node>
+      <node id="2907">
+        <label>MyGraphics/Source/Winebottle1.cpp</label>
+        <link refid="Winebottle1_8cpp"/>
+      </node>
+      <node id="2885">
+        <label>MyGraphics/Source/MtnDewCan.h</label>
+        <link refid="MtnDewCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2886" relation="include">
+        </childnode>
+      </node>
+      <node id="2856">
+        <label>MyGraphics/Source/CerealBox2.cpp</label>
+        <link refid="CerealBox2_8cpp"/>
+      </node>
+      <node id="2880">
+        <label>MyGraphics/Source/BranCan.cpp</label>
+        <link refid="BranCan_8cpp"/>
+      </node>
+      <node id="2858">
+        <label>MyGraphics/Source/CerealBox3.cpp</label>
+        <link refid="CerealBox3_8cpp"/>
+      </node>
+      <node id="2879">
+        <label>MyGraphics/Source/BranCan.h</label>
+        <link refid="BranCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2880" relation="include">
+        </childnode>
+      </node>
+      <node id="2863">
+        <label>MyGraphics/Source/EasterEgg1.h</label>
+        <link refid="EasterEgg1_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2864" relation="include">
+        </childnode>
+      </node>
+      <node id="2912">
+        <label>MyGraphics/Source/Winebottle4.h</label>
+        <link refid="Winebottle4_8h"/>
+        <childnode refid="2913" relation="include">
+        </childnode>
+      </node>
+      <node id="2895">
+        <label>MyGraphics/Source/EmptyItem.h</label>
+        <link refid="EmptyItem_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2896" relation="include">
+        </childnode>
+      </node>
+      <node id="2911">
+        <label>MyGraphics/Source/Winebottle3.cpp</label>
+        <link refid="Winebottle3_8cpp"/>
+      </node>
+      <node id="2848">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2909">
+        <label>MyGraphics/Source/Winebottle2.cpp</label>
+        <link refid="Winebottle2_8cpp"/>
+      </node>
+      <node id="2854">
+        <label>MyGraphics/Source/CerealBox1.cpp</label>
+        <link refid="CerealBox1_8cpp"/>
+      </node>
+      <node id="2870">
+        <label>MyGraphics/Source/MelonCan.cpp</label>
+        <link refid="MelonCan_8cpp"/>
+      </node>
+      <node id="2887">
+        <label>MyGraphics/Source/RedMonsterCan.h</label>
+        <link refid="RedMonsterCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2888" relation="include">
+        </childnode>
+      </node>
+      <node id="2869">
+        <label>MyGraphics/Source/MelonCan.h</label>
+        <link refid="MelonCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2870" relation="include">
+        </childnode>
+      </node>
+      <node id="2915">
+        <label>MyGraphics/Source/Winebottle5.cpp</label>
+        <link refid="Winebottle5_8cpp"/>
+      </node>
+      <node id="2857">
+        <label>MyGraphics/Source/CerealBox3.h</label>
+        <link refid="CerealBox3_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2858" relation="include">
+        </childnode>
+      </node>
+      <node id="2881">
+        <label>MyGraphics/Source/GluWaterCan.h</label>
+        <link refid="GluWaterCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2882" relation="include">
+        </childnode>
+      </node>
+      <node id="2913">
+        <label>MyGraphics/Source/Winebottle4.cpp</label>
+        <link refid="Winebottle4_8cpp"/>
+      </node>
+      <node id="2897">
+        <label>MyGraphics/Source/Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="2898" relation="include">
+        </childnode>
+        <childnode refid="2900" relation="include">
+        </childnode>
+        <childnode refid="2902" relation="include">
+        </childnode>
+      </node>
+      <node id="2889">
+        <label>MyGraphics/Source/RootBeerFloatsCan.h</label>
+        <link refid="RootBeerFloatsCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2890" relation="include">
+        </childnode>
+      </node>
+      <node id="2902">
+        <label>MyGraphics/Source/Character.cpp</label>
+        <link refid="Character_8cpp"/>
+      </node>
+      <node id="2865">
+        <label>MyGraphics/Source/EasterEgg2.h</label>
+        <link refid="EasterEgg2_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2866" relation="include">
+        </childnode>
+      </node>
+      <node id="2914">
+        <label>MyGraphics/Source/Winebottle5.h</label>
+        <link refid="Winebottle5_8h"/>
+        <childnode refid="2915" relation="include">
+        </childnode>
+      </node>
+      <node id="2873">
+        <label>MyGraphics/Source/SardineCan.h</label>
+        <link refid="SardineCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2874" relation="include">
+        </childnode>
+      </node>
+      <node id="2906">
+        <label>MyGraphics/Source/Winebottle1.h</label>
+        <link refid="Winebottle1_8h"/>
+        <childnode refid="2907" relation="include">
+        </childnode>
+      </node>
+      <node id="2893">
+        <label>MyGraphics/Source/SodaFestCan.h</label>
+        <link refid="SodaFestCan_8h"/>
+        <childnode refid="2845" relation="include">
+        </childnode>
+        <childnode refid="2894" relation="include">
+        </childnode>
+      </node>
+      <node id="2903">
+        <label>MyGraphics/Source/Container.h</label>
+        <link refid="Container_8h"/>
+        <childnode refid="2846" relation="include">
+        </childnode>
+        <childnode refid="2904" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCItem" prot="public">CItem</innerclass>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Item_8h_1a29dbdd30ce73515fd8ed9750ad3f0d2e" prot="public" static="no">
+        <name>ITEM_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="3" column="9" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ITEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="Item_8h_1a29dbdd30ce73515fd8ed9750ad3f0d2e" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ITEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="11"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classCItem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCItem" kindref="compound">CItem</ref></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" kindref="member">CItem</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" kindref="member">CItem</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>n,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">setName</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>n);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">setPrice</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>p);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">setGeoType</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" kindref="member">setXpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" kindref="member">setYpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a87034717276be8d5c3d39edbdcf7417e" kindref="member">setZpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" kindref="member">setActiveState</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>setActive);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" kindref="member">getActiveState</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1aa34235d3cd780cef7fc7461387f6b081" kindref="member">getXpos</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" kindref="member">getYpos</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1ab9a6defffbef320655a11faab524e915" kindref="member">getZpos</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" kindref="member">getName</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a916597368755e28b6edb8af37acc1ad6" kindref="member">getGeoType</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" kindref="member">getPrice</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a00aeafeeaf647c7059b9d325ac5a1108" kindref="member">~CItem</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35" refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="36" refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" kindref="member">price</ref>;</highlight></codeline>
+<codeline lineno="37" refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" kindref="member">objectType</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classCItem_1adac2b51499cdc78208396440324cbdc4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCItem_1adac2b51499cdc78208396440324cbdc4" kindref="member">active</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h"/>
+  </compounddef>
+</doxygen>

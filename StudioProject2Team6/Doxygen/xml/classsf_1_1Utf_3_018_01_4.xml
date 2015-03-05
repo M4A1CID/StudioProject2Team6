@@ -1,0 +1,798 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Utf_3_018_01_4" kind="class" prot="public">
+    <compoundname>sf::Utf&lt; 8 &gt;</compoundname>
+    <includes refid="Utf_8hpp" local="no">Utf.hpp</includes>
+    <templateparamlist>
+    </templateparamlist>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a59d4e8d5832961e62b263d308b72bf4b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+        </templateparamlist>
+        <type>In</type>
+        <definition>static In sf::Utf&lt; 8 &gt;::decode</definition>
+        <argsstring>(In begin, In end, Uint32 &amp;output, Uint32 replacement=0)</argsstring>
+        <name>decode</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &amp;</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref></type>
+          <declname>replacement</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Decode a single UTF-8 character. </para>        </briefdescription>
+        <detaileddescription>
+<para>Decoding a character means finding its unique 32-bits code (called the codepoint) in the Unicode standard.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Codepoint of the decoded UTF-8 character </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replacement character to use in case the UTF-8 sequence is invalid</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator pointing to one past the last read element of the input sequence </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a5fbc6b5a996f52e9e4a14633d0d71847" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::encode</definition>
+        <argsstring>(Uint32 input, Out output, Uint8 replacement=0)</argsstring>
+        <name>encode</name>
+        <param>
+          <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref></type>
+          <declname>input</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1a4ef3d630785c4f296f9b4f274c33d78e" kindref="member">Uint8</ref></type>
+          <declname>replacement</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Encode a single UTF-8 character. </para>        </briefdescription>
+        <detaileddescription>
+<para>Encoding a character means converting a unique 32-bits code (called the codepoint) in the target encoding, UTF-8.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Codepoint to encode as UTF-8 </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replacement for characters not convertible to UTF-8 (use 0 to skip them)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="83" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a0365a0b38700baa161843563d083edf6" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+        </templateparamlist>
+        <type>In</type>
+        <definition>static In sf::Utf&lt; 8 &gt;::next</definition>
+        <argsstring>(In begin, In end)</argsstring>
+        <name>next</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Advance to the next UTF-8 character. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is necessary for multi-elements encodings, as a single character may use more than 1 storage element.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator pointing to one past the last read element of the input sequence </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="98" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1af1f15d9a772ee887be39e97431e15d32" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+        </templateparamlist>
+        <type>std::size_t</type>
+        <definition>static std::size_t sf::Utf&lt; 8 &gt;::count</definition>
+        <argsstring>(In begin, In end)</argsstring>
+        <name>count</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Count the number of characters of a UTF-8 sequence. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is necessary for multi-elements encodings, as a single character may use more than 1 storage element, thus the total size can be different from (begin - end).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator pointing to one past the last read element of the input sequence </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="114" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a1b62ba85ad3c8ce68746e16192b3eef0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::fromAnsi</definition>
+        <argsstring>(In begin, In end, Out output, const std::locale &amp;locale=std::locale())</argsstring>
+        <name>fromAnsi</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>const std::locale &amp;</type>
+          <declname>locale</declname>
+          <defval>std::locale()</defval>
+        </param>
+        <briefdescription>
+<para>Convert an ANSI characters range to UTF-8. </para>        </briefdescription>
+        <detaileddescription>
+<para>The current global locale will be used by default, unless you pass a custom one in the <emphasis>locale</emphasis> parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Locale to use for conversion</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="131" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1aa99e636a7addc157b425dfc11b008f42" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::fromWide</definition>
+        <argsstring>(In begin, In end, Out output)</argsstring>
+        <name>fromWide</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert a wide characters range to UTF-8. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a85dd3643b7109a1a2f802747e55e28e8" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::fromLatin1</definition>
+        <argsstring>(In begin, In end, Out output)</argsstring>
+        <name>fromLatin1</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert a latin-1 (ISO-5589-1) characters range to UTF-8. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a3d8b02f29021bd48831e7706d826f0c5" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::toAnsi</definition>
+        <argsstring>(In begin, In end, Out output, char replacement=0, const std::locale &amp;locale=std::locale())</argsstring>
+        <name>toAnsi</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>replacement</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const std::locale &amp;</type>
+          <declname>locale</declname>
+          <defval>std::locale()</defval>
+        </param>
+        <briefdescription>
+<para>Convert an UTF-8 characters range to ANSI characters. </para>        </briefdescription>
+        <detaileddescription>
+<para>The current global locale will be used by default, unless you pass a custom one in the <emphasis>locale</emphasis> parameter.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replacement for characters not convertible to ANSI (use 0 to skip them) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Locale to use for conversion</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="175" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1ac6633c64ff1fad6bd1bfe72c37b3a468" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::toWide</definition>
+        <argsstring>(In begin, In end, Out output, wchar_t replacement=0)</argsstring>
+        <name>toWide</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>wchar_t</type>
+          <declname>replacement</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Convert an UTF-8 characters range to wide characters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replacement for characters not convertible to wide (use 0 to skip them)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1adf6f6e0a8ee0527c8ab390ce5c0b6b13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::toLatin1</definition>
+        <argsstring>(In begin, In end, Out output, char replacement=0)</argsstring>
+        <name>toLatin1</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <param>
+          <type>char</type>
+          <declname>replacement</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Convert an UTF-8 characters range to latin-1 (ISO-5589-1) characters. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replacement</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Replacement for characters not convertible to wide (use 0 to skip them)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="203" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1aef68054cab6a592c0b04de94e93bb520" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::toUtf8</definition>
+        <argsstring>(In begin, In end, Out output)</argsstring>
+        <name>toUtf8</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert a UTF-8 characters range to UTF-8. </para>        </briefdescription>
+        <detaileddescription>
+<para>This functions does nothing more than a direct copy; it is defined only to provide the same interface as other specializations of the sf::Utf&lt;&gt; template, and allow generic code to be written on top of it.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a925ac9e141dcb6f9b07c7b95f7cfbda2" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::toUtf16</definition>
+        <argsstring>(In begin, In end, Out output)</argsstring>
+        <name>toUtf16</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert a UTF-8 characters range to UTF-16. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="234" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Utf_3_018_01_4_1a79395429baba13dd04a8c1fba745ce65" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename In</type>
+          </param>
+          <param>
+            <type>typename Out</type>
+          </param>
+        </templateparamlist>
+        <type>Out</type>
+        <definition>static Out sf::Utf&lt; 8 &gt;::toUtf32</definition>
+        <argsstring>(In begin, In end, Out output)</argsstring>
+        <name>toUtf32</name>
+        <param>
+          <type>In</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>In</type>
+          <declname>end</declname>
+        </param>
+        <param>
+          <type>Out</type>
+          <declname>output</declname>
+        </param>
+        <briefdescription>
+<para>Convert a UTF-8 characters range to UTF-32. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the end of the input sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Iterator pointing to the beginning of the output sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Iterator to the end of the output sequence which has been written </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="247" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specialization of the <ref refid="singletonsf_1_1Utf" kindref="compound">Utf</ref> template for UTF-8. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="49" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" bodystart="48" bodyend="248"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Utf_3_018_01_4_1af1f15d9a772ee887be39e97431e15d32" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>count</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a59d4e8d5832961e62b263d308b72bf4b" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>decode</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a5fbc6b5a996f52e9e4a14633d0d71847" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>encode</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a1b62ba85ad3c8ce68746e16192b3eef0" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>fromAnsi</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a85dd3643b7109a1a2f802747e55e28e8" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>fromLatin1</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1aa99e636a7addc157b425dfc11b008f42" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>fromWide</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a0365a0b38700baa161843563d083edf6" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>next</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a3d8b02f29021bd48831e7706d826f0c5" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>toAnsi</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1adf6f6e0a8ee0527c8ab390ce5c0b6b13" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>toLatin1</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a925ac9e141dcb6f9b07c7b95f7cfbda2" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>toUtf16</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1a79395429baba13dd04a8c1fba745ce65" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>toUtf32</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1aef68054cab6a592c0b04de94e93bb520" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>toUtf8</name></member>
+      <member refid="classsf_1_1Utf_3_018_01_4_1ac6633c64ff1fad6bd1bfe72c37b3a468" prot="public" virt="non-virtual"><scope>sf::Utf&lt; 8 &gt;</scope><name>toWide</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

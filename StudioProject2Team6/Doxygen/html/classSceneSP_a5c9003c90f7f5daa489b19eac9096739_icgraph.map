@@ -1,0 +1,4 @@
+<map id="SceneSP::UpdateWinLoseMenu" name="SceneSP::UpdateWinLoseMenu">
+<area shape="rect" id="node2" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="263,5,421,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="469,5,596,32"/>
+</map>

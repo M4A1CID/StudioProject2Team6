@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Winebottle3_8cpp" kind="file">
+    <compoundname>Winebottle3.cpp</compoundname>
+    <includes refid="Winebottle3_8h" local="yes">Winebottle3.h</includes>
+    <incdepgraph>
+      <node id="3543">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3544" relation="include">
+        </childnode>
+      </node>
+      <node id="3544">
+        <label>string</label>
+      </node>
+      <node id="3542">
+        <label>Winebottle3.h</label>
+        <link refid="Winebottle3_8h"/>
+        <childnode refid="3543" relation="include">
+        </childnode>
+        <childnode refid="3545" relation="include">
+        </childnode>
+      </node>
+      <node id="3541">
+        <label>MyGraphics/Source/Winebottle3.cpp</label>
+        <link refid="Winebottle3.cpp"/>
+        <childnode refid="3542" relation="include">
+        </childnode>
+      </node>
+      <node id="3545">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Winebottle3_8h" kindref="compound">Winebottle3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCWinebottle3_1accaea4ef8a24966a455d2dec8f5caf3d" refkind="member"><highlight class="normal"><ref refid="classCWinebottle3_1accaea4ef8a24966a455d2dec8f5caf3d" kindref="member">CWinebottle3::CWinebottle3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">setName</ref>(</highlight><highlight class="stringliteral">&quot;Winebottle3&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">setPrice</ref>(5.0f);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">setGeoType</ref>(<ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8fbc29434b0b445ba409116c480d1fa6" kindref="member">GEO_WINEBOTTLE_3</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCWinebottle3_1a9fb7b5c86d2758f756da13d24239c173" refkind="member"><highlight class="normal"><ref refid="classCWinebottle3_1a9fb7b5c86d2758f756da13d24239c173" kindref="member">CWinebottle3::~CWinebottle3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Winebottle3.cpp"/>
+  </compounddef>
+</doxygen>

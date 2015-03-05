@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structComponent" kind="struct" prot="public">
+    <compoundname>Component</compoundname>
+    <includes refid="Material_8h" local="no">Material.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::r</definition>
+        <argsstring></argsstring>
+        <name>r</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" line="11" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="classSceneSP_1aefb2189bff2b182a3180014dcc5b0786" compoundref="SceneSP_8cpp" startline="3970" endline="4013">SceneSP::RenderMesh</referencedby>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="16" endline="21">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::g</definition>
+        <argsstring></argsstring>
+        <name>g</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" line="11" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="16" endline="21">Set</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float Component::b</definition>
+        <argsstring></argsstring>
+        <name>b</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" line="11" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" bodystart="11" bodyend="-1"/>
+        <referencedby refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="16" endline="21">Set</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Component::Component</definition>
+        <argsstring>(float r=0.1f, float g=0.1f, float b=0.1f)</argsstring>
+        <name>Component</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+          <defval>0.1f</defval>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+          <defval>0.1f</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" line="12" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" bodystart="12" bodyend="15"/>
+        <references refid="structComponent_1a85f599b839327709953f0115dc5dfd49" compoundref="Material_8h" startline="16" endline="21">Set</references>
+      </memberdef>
+      <memberdef kind="function" id="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Component::Set</definition>
+        <argsstring>(float r, float g, float b)</argsstring>
+        <name>Set</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>g</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>b</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" bodystart="16" bodyend="21"/>
+        <references refid="structComponent_1abd55184abe2aaf269b38f5913721821c" compoundref="Material_8h" startline="11">b</references>
+        <references refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" compoundref="Material_8h" startline="11">g</references>
+        <references refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" compoundref="Material_8h" startline="11">r</references>
+        <referencedby refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" compoundref="Material_8h" startline="12" endline="15">Component</referencedby>
+        <referencedby refid="structMaterial_1a137e987401b63eb7c6c27c3e38bc74b5" compoundref="Material_8h" startline="35" endline="41">Material::Material</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines a material component. </para>    </briefdescription>
+    <detaileddescription>
+<para>Struct <ref refid="structComponent" kindref="compound">Component</ref>: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="825">
+        <label>Component</label>
+        <link refid="structComponent"/>
+        <childnode refid="826" relation="usage">
+          <edgelabel>g</edgelabel>
+          <edgelabel>r</edgelabel>
+          <edgelabel>b</edgelabel>
+        </childnode>
+      </node>
+      <node id="826">
+        <label>float</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" line="10" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Material.h" bodystart="9" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structComponent_1abd55184abe2aaf269b38f5913721821c" prot="public" virt="non-virtual"><scope>Component</scope><name>b</name></member>
+      <member refid="structComponent_1ae110a300786be861f7ea647ef77d9d18" prot="public" virt="non-virtual"><scope>Component</scope><name>Component</name></member>
+      <member refid="structComponent_1a6cf7bfac62ac8aa4a8aa8c3f847428d8" prot="public" virt="non-virtual"><scope>Component</scope><name>g</name></member>
+      <member refid="structComponent_1a490db57cde183ef5a233b6ff3386ef6f" prot="public" virt="non-virtual"><scope>Component</scope><name>r</name></member>
+      <member refid="structComponent_1a85f599b839327709953f0115dc5dfd49" prot="public" virt="non-virtual"><scope>Component</scope><name>Set</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

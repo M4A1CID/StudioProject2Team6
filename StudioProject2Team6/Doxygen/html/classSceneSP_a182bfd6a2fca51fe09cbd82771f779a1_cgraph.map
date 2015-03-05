@@ -1,0 +1,5 @@
+<map id="SceneSP::checkWinLose" name="SceneSP::checkWinLose">
+<area shape="rect" id="node2" href="$classCCharacter.html#a549d8f9bc2e177e348e2a3d791ea511c" title="Accessor function for character job. " alt="" coords="224,5,413,32"/>
+<area shape="rect" id="node3" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="261,56,377,83"/>
+<area shape="rect" id="node4" href="$classCPlayer.html#ac02fc75d1ba514addba85bfe2bd6154d" title="CPlayer::getVector" alt="" coords="253,107,385,133"/>
+</map>

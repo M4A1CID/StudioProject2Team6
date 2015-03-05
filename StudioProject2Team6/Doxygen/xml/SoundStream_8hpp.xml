@@ -1,0 +1,272 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="SoundStream_8hpp" kind="file">
+    <compoundname>SoundStream.hpp</compoundname>
+    <includes refid="Audio_2Export_8hpp" local="no">SFML/Audio/Export.hpp</includes>
+    <includes refid="SoundSource_8hpp" local="no">SFML/Audio/SoundSource.hpp</includes>
+    <includes refid="Thread_8hpp" local="no">SFML/System/Thread.hpp</includes>
+    <includes refid="Time_8hpp" local="no">SFML/System/Time.hpp</includes>
+    <includes refid="Mutex_8hpp" local="no">SFML/System/Mutex.hpp</includes>
+    <includes local="no">cstdlib</includes>
+    <includedby refid="Music_8hpp" local="no">SFML/include/SFML/Audio/Music.hpp</includedby>
+    <includedby refid="Audio_8hpp" local="no">SFML/include/SFML/Audio.hpp</includedby>
+    <incdepgraph>
+      <node id="3791">
+        <label>SFML/System/Time.hpp</label>
+        <link refid="Time_8hpp"/>
+        <childnode refid="3787" relation="include">
+        </childnode>
+      </node>
+      <node id="3792">
+        <label>SFML/System/Mutex.hpp</label>
+        <link refid="Mutex_8hpp"/>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3788" relation="include">
+        </childnode>
+      </node>
+      <node id="3782">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="3786">
+        <label>SFML/System/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="3787" relation="include">
+        </childnode>
+        <childnode refid="3788" relation="include">
+        </childnode>
+        <childnode refid="3789" relation="include">
+        </childnode>
+        <childnode refid="3790" relation="include">
+        </childnode>
+      </node>
+      <node id="3784">
+        <label>SFML/System/Vector3.hpp</label>
+        <link refid="Vector3_8hpp"/>
+        <childnode refid="3785" relation="include">
+        </childnode>
+      </node>
+      <node id="3780">
+        <label>SFML/include/SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream.hpp"/>
+        <childnode refid="3781" relation="include">
+        </childnode>
+        <childnode refid="3783" relation="include">
+        </childnode>
+        <childnode refid="3786" relation="include">
+        </childnode>
+        <childnode refid="3791" relation="include">
+        </childnode>
+        <childnode refid="3792" relation="include">
+        </childnode>
+        <childnode refid="3789" relation="include">
+        </childnode>
+      </node>
+      <node id="3781">
+        <label>SFML/Audio/Export.hpp</label>
+        <link refid="Audio_2Export_8hpp"/>
+        <childnode refid="3782" relation="include">
+        </childnode>
+      </node>
+      <node id="3790">
+        <label>SFML/System/Thread.inl</label>
+        <link refid="Thread_8inl"/>
+      </node>
+      <node id="3783">
+        <label>SFML/Audio/SoundSource.hpp</label>
+        <link refid="SoundSource_8hpp"/>
+        <childnode refid="3781" relation="include">
+        </childnode>
+        <childnode refid="3784" relation="include">
+        </childnode>
+      </node>
+      <node id="3785">
+        <label>SFML/System/Vector3.inl</label>
+        <link refid="Vector3_8inl"/>
+      </node>
+      <node id="3787">
+        <label>SFML/System/Export.hpp</label>
+        <link refid="System_2Export_8hpp"/>
+        <childnode refid="3782" relation="include">
+        </childnode>
+      </node>
+      <node id="3789">
+        <label>cstdlib</label>
+      </node>
+      <node id="3788">
+        <label>SFML/System/NonCopyable.hpp</label>
+        <link refid="NonCopyable_8hpp"/>
+        <childnode refid="3787" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3799">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3795">
+        <label>SFML/include/SFML/Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="3796" relation="include">
+        </childnode>
+      </node>
+      <node id="3797">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3793">
+        <label>SFML/include/SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream.hpp"/>
+        <childnode refid="3794" relation="include">
+        </childnode>
+        <childnode refid="3795" relation="include">
+        </childnode>
+      </node>
+      <node id="3796">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3797" relation="include">
+        </childnode>
+        <childnode refid="3798" relation="include">
+        </childnode>
+        <childnode refid="3799" relation="include">
+        </childnode>
+      </node>
+      <node id="3798">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="3794">
+        <label>SFML/include/SFML/Audio/Music.hpp</label>
+        <link refid="Music_8hpp"/>
+        <childnode refid="3795" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsf_1_1SoundStream" prot="public">sf::SoundStream</innerclass>
+    <innerclass refid="structsf_1_1SoundStream_1_1Chunk" prot="public">sf::SoundStream::Chunk</innerclass>
+    <innernamespace refid="namespacesf">sf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SFML<sp/>-<sp/>Simple<sp/>and<sp/>Fast<sp/>Multimedia<sp/>Library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007-2014<sp/>Laurent<sp/>Gomila<sp/>(laurent.gom@gmail.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied<sp/>warranty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages<sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it<sp/>freely,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>you<sp/>must<sp/>not<sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>If<sp/>you<sp/>use<sp/>this<sp/>software<sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be<sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>and<sp/>must<sp/>not<sp/>be<sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SFML_SOUNDSTREAM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SFML_SOUNDSTREAM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">//<sp/>Headers</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Audio_2Export_8hpp" kindref="compound">SFML/Audio/Export.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="SoundSource_8hpp" kindref="compound">SFML/Audio/SoundSource.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Thread_8hpp" kindref="compound">SFML/System/Thread.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Time_8hpp" kindref="compound">SFML/System/Time.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Mutex_8hpp" kindref="compound">SFML/System/Mutex.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdlib&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesf" kindref="compound">sf</ref></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="45" refid="classsf_1_1SoundStream" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="Audio_2Export_8hpp_1a4d34c0f253824ac49bdd93545913eb89" kindref="member">SFML_AUDIO_API</ref><sp/><ref refid="classsf_1_1SoundStream" kindref="compound">SoundStream</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classsf_1_1SoundSource" kindref="compound">SoundSource</ref></highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="structsf_1_1SoundStream_1_1Chunk" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structsf_1_1SoundStream_1_1Chunk" kindref="compound">Chunk</ref></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="55" refid="structsf_1_1SoundStream_1_1Chunk_1aa3b84d69adbe663a17a7671626076df4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref>*<sp/><ref refid="structsf_1_1SoundStream_1_1Chunk_1aa3b84d69adbe663a17a7671626076df4" kindref="member">samples</ref>;<sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="56" refid="structsf_1_1SoundStream_1_1Chunk_1af47f5d94012acf8b11f056ba77aff97a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::size_t<sp/><sp/><ref refid="structsf_1_1SoundStream_1_1Chunk_1af47f5d94012acf8b11f056ba77aff97a" kindref="member">sampleCount</ref>;<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/>~<ref refid="classsf_1_1SoundStream" kindref="compound">SoundStream</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>play();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pause();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>stop();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getChannelCount()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>getSampleRate()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" kindref="member">Status</ref><sp/>getStatus()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPlayingOffset(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>timeOffset);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>getPlayingOffset()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLoop(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>loop);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>getLoop()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream" kindref="compound">SoundStream</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initialize(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>channelCount,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>sampleRate);</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>onGetData(<ref refid="structsf_1_1SoundStream_1_1Chunk" kindref="compound">Chunk</ref>&amp;<sp/>data)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>onSeek(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>timeOffset)<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>streamData();</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fillAndPushBuffer(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bufferNum);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>fillQueue();</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>clearQueue();</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="284" refid="classsf_1_1SoundStream_1a7707214e7cd4ffcf1c123e7bcab4092aa3adf3b6cd18edb6121fda81e569dbbf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>BufferCount<sp/>=<sp/>3<sp/></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Member<sp/>data</highlight></codeline>
+<codeline lineno="290" refid="classsf_1_1SoundStream_1a004d1b16c81698be55779efe0f2b5ed3" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream_1a004d1b16c81698be55779efe0f2b5ed3" kindref="member">m_thread</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="291" refid="classsf_1_1SoundStream_1a134d03a5d3075f6a98a85a2edff9ac7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">mutable</highlight><highlight class="normal"><sp/><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref><sp/><ref refid="classsf_1_1SoundStream_1a134d03a5d3075f6a98a85a2edff9ac7d" kindref="member">m_threadMutex</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="292" refid="classsf_1_1SoundStream_1a2e06f2688d7fcf777a9779168067f302" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" kindref="member">Status</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream_1a2e06f2688d7fcf777a9779168067f302" kindref="member">m_threadStartState</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="293" refid="classsf_1_1SoundStream_1afa20ca6cbb29ee2355d986a3faa7a38f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream_1afa20ca6cbb29ee2355d986a3faa7a38f" kindref="member">m_isStreaming</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="294" refid="classsf_1_1SoundStream_1a3a7fbefda7d08527177acd1f6e63487b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/>m_buffers[BufferCount];<sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="295" refid="classsf_1_1SoundStream_1ad7c1a66f24be5e58ed275fd06e24294e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classsf_1_1SoundStream_1ad7c1a66f24be5e58ed275fd06e24294e" kindref="member">m_channelCount</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="296" refid="classsf_1_1SoundStream_1ac6cf65793e01b6b5f6bf6b555b1c1dfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><sp/><ref refid="classsf_1_1SoundStream_1ac6cf65793e01b6b5f6bf6b555b1c1dfd" kindref="member">m_sampleRate</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="297" refid="classsf_1_1SoundStream_1a5c91434e0f1c2e4445e01b3de578af49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream_1a5c91434e0f1c2e4445e01b3de578af49" kindref="member">m_format</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="298" refid="classsf_1_1SoundStream_1a32ee01b984f74c9e0857d676bc33ad9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream_1a32ee01b984f74c9e0857d676bc33ad9f" kindref="member">m_loop</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="299" refid="classsf_1_1SoundStream_1a7365a2ec97b89cec15577b31461ff4be" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesf_1add9ac83466d96b9f50a009b9f4064266" kindref="member">Uint64</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1SoundStream_1a7365a2ec97b89cec15577b31461ff4be" kindref="member">m_samplesProcessed</ref>;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="300" refid="classsf_1_1SoundStream_1aaa3cf6e489beb8d9f7f6d060adf77dc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_endBuffers[BufferCount];<sp/></highlight></codeline>
+<codeline lineno="301"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SFML_SOUNDSTREAM_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp"/>
+  </compounddef>
+</doxygen>

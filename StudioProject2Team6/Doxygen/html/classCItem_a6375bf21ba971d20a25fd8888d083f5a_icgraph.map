@@ -1,0 +1,12 @@
+<map id="CItem::getPrice" name="CItem::getPrice">
+<area shape="rect" id="node2" href="$classSceneSP.html#a0cb20bb43706bbd74745f2466fb3f534" title="Defines all items and containers. " alt="" coords="165,56,312,83"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a4d582749b064ce46da7702b11272bbcd" title="Updates the players UI. " alt="" coords="364,107,503,133"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a8f096719e7e0e404f4d1afc12d317943" title="Initialises all shelves in the scene. " alt="" coords="360,56,507,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="588,56,691,83"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="772,56,921,83"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="969,5,1179,32"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="977,56,1171,83"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="1227,56,1385,83"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1433,81,1560,108"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="555,107,724,133"/>
+</map>

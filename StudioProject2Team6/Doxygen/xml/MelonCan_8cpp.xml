@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="MelonCan_8cpp" kind="file">
+    <compoundname>MelonCan.cpp</compoundname>
+    <includes refid="MelonCan_8h" local="yes">MelonCan.h</includes>
+    <incdepgraph>
+      <node id="2984">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2985" relation="include">
+        </childnode>
+      </node>
+      <node id="2985">
+        <label>string</label>
+      </node>
+      <node id="2982">
+        <label>MyGraphics/Source/MelonCan.cpp</label>
+        <link refid="MelonCan.cpp"/>
+        <childnode refid="2983" relation="include">
+        </childnode>
+      </node>
+      <node id="2983">
+        <label>MelonCan.h</label>
+        <link refid="MelonCan_8h"/>
+        <childnode refid="2984" relation="include">
+        </childnode>
+        <childnode refid="2986" relation="include">
+        </childnode>
+      </node>
+      <node id="2986">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MelonCan_8h" kindref="compound">MelonCan.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCMelonCan_1a68b89540d874f90fcd35c2876539baa7" refkind="member"><highlight class="normal"><ref refid="classCMelonCan_1a68b89540d874f90fcd35c2876539baa7" kindref="member">CMelonCan::CMelonCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" kindref="member">setName</ref>(</highlight><highlight class="stringliteral">&quot;Melon<sp/>Can&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" kindref="member">setPrice</ref>(5.0f);</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" kindref="member">setGeoType</ref>(<ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8f6ad21192e1923b8e334578ace7b98a" kindref="member">GEO_CAN_MELON</ref>);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="classCMelonCan_1aaed1f4e4aba4f60714e6f290a4eb0d1a" refkind="member"><highlight class="normal"><ref refid="classCMelonCan_1aaed1f4e4aba4f60714e6f290a4eb0d1a" kindref="member">CMelonCan::~CMelonCan</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MelonCan.cpp"/>
+  </compounddef>
+</doxygen>

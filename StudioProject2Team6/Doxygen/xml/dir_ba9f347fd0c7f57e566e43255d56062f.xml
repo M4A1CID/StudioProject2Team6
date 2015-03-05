@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="dir_ba9f347fd0c7f57e566e43255d56062f" kind="dir">
+    <compoundname>SFML/include/SFML</compoundname>
+    <innerdir refid="dir_5e12112b585ea5aff569fe0a74c0a27b">SFML/include/SFML/Audio</innerdir>
+    <innerdir refid="dir_c77438b95f5dd64fc6e04abba09965b9">SFML/include/SFML/System</innerdir>
+    <innerfile refid="Audio_8hpp">Audio.hpp</innerfile>
+    <innerfile refid="Config_8hpp">Config.hpp</innerfile>
+    <innerfile refid="System_8hpp">System.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,8 @@
+<map id="CNpc::CNpc" name="CNpc::CNpc">
+<area shape="rect" id="node2" href="$classCCharacter.html#a67d9105c568f0dba5eb1417236e279ac" title="Mutator function to set character animation type. " alt="" coords="148,5,347,32"/>
+<area shape="rect" id="node3" href="$classCCharacter.html#a4e9ecc23aabb47e67fc3d7d629b4dceb" title="Mutator function to set character job. " alt="" coords="153,56,342,83"/>
+<area shape="rect" id="node4" href="$classCCharacter.html#aa1dc700b3501b6e53c8887d97a37484e" title="Mutator function to set character state. " alt="" coords="163,107,332,149"/>
+<area shape="rect" id="node5" href="$classCCharacter.html#adc6655e35c3a3f796808bccc7cedf5ea" title="Mutator function to set x pos of character. " alt="" coords="177,173,318,200"/>
+<area shape="rect" id="node6" href="$classCCharacter.html#aba7dbce0ad3f9f458dd192f00ee0cbe8" title="Mutator function to set y pos of character. " alt="" coords="176,224,319,251"/>
+<area shape="rect" id="node7" href="$classCCharacter.html#a7d7eddac9ddecff9463d251b1e830d6c" title="Mutator function to set z pos of character. " alt="" coords="177,275,318,301"/>
+</map>

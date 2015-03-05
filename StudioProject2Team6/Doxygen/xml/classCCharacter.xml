@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCCharacter" kind="class" prot="public">
+    <compoundname>CCharacter</compoundname>
+    <derivedcompoundref refid="classCNpc" prot="public" virt="non-virtual">CNpc</derivedcompoundref>
+    <derivedcompoundref refid="classCPlayer" prot="public" virt="non-virtual">CPlayer</derivedcompoundref>
+    <includes refid="Character_8h" local="no">Character.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CCharacter::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="36" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" compoundref="Character_8cpp" startline="24" endline="31">CCharacter</referencedby>
+        <referencedby refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" compoundref="Character_8cpp" startline="85" endline="88">getXpos</referencedby>
+        <referencedby refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" compoundref="Character_8cpp" startline="121" endline="124">setXpos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CCharacter::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="37" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" compoundref="Character_8cpp" startline="24" endline="31">CCharacter</referencedby>
+        <referencedby refid="classCCharacter_1adf34bbd751c72295580148348f086a32" compoundref="Character_8cpp" startline="97" endline="100">getYpos</referencedby>
+        <referencedby refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" compoundref="Character_8cpp" startline="133" endline="136">setYpos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CCharacter::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" compoundref="Character_8cpp" startline="24" endline="31">CCharacter</referencedby>
+        <referencedby refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" compoundref="Character_8cpp" startline="109" endline="112">getZpos</referencedby>
+        <referencedby refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" compoundref="Character_8cpp" startline="145" endline="148">setZpos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCCharacter_1a22687fc1955d08425613580e70f54d06" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CCharacter::characterState</definition>
+        <argsstring></argsstring>
+        <name>characterState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="39" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" compoundref="Character_8cpp" startline="24" endline="31">CCharacter</referencedby>
+        <referencedby refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" compoundref="Character_8cpp" startline="61" endline="64">getCharacterState</referencedby>
+        <referencedby refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" compoundref="Character_8cpp" startline="157" endline="160">setCharacterState</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CCharacter::characterJob</definition>
+        <argsstring></argsstring>
+        <name>characterJob</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="40" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" compoundref="Character_8cpp" startline="24" endline="31">CCharacter</referencedby>
+        <referencedby refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" compoundref="Character_8cpp" startline="49" endline="52">getCharacterJob</referencedby>
+        <referencedby refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" compoundref="Character_8cpp" startline="169" endline="172">setCharacterJob</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int CCharacter::animationType</definition>
+        <argsstring></argsstring>
+        <name>animationType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" compoundref="Character_8cpp" startline="73" endline="76">getAnimationType</referencedby>
+        <referencedby refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" compoundref="Character_8cpp" startline="181" endline="184">setAnimationType</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CCharacter::CCharacter</definition>
+        <argsstring>(void)</argsstring>
+        <name>CCharacter</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default character constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="17" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CCharacter::CCharacter</definition>
+        <argsstring>(float posX, float posY, float posZ, int state, int job)</argsstring>
+        <name>CCharacter</name>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>job</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded character constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- X position of character </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Y position of character </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Z position of character </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- character state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- character job </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="24" bodyend="31"/>
+        <references refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" compoundref="Character_8h" startline="40">characterJob</references>
+        <references refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" compoundref="Character_8h" startline="39">characterState</references>
+        <references refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" compoundref="Character_8h" startline="36">x</references>
+        <references refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" compoundref="Character_8h" startline="37">y</references>
+        <references refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" compoundref="Character_8h" startline="38">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CCharacter::~CCharacter</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CCharacter</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="19" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="38" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CCharacter::getCharacterState</definition>
+        <argsstring>()</argsstring>
+        <name>getCharacterState</name>
+        <briefdescription>
+<para>Accessor function for character state. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>character state </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="61" bodyend="64"/>
+        <references refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" compoundref="Character_8h" startline="39">characterState</references>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CCharacter::getAnimationType</definition>
+        <argsstring>()</argsstring>
+        <name>getAnimationType</name>
+        <briefdescription>
+<para>Accessor function for character animation type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>character animation type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="73" bodyend="76"/>
+        <references refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" compoundref="Character_8h" startline="41">animationType</references>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CCharacter::getXpos</definition>
+        <argsstring>()</argsstring>
+        <name>getXpos</name>
+        <briefdescription>
+<para>Accessor function for character x position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>x position of the character </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="22" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="85" bodyend="88"/>
+        <references refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" compoundref="Character_8h" startline="36">x</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1adf34bbd751c72295580148348f086a32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CCharacter::getYpos</definition>
+        <argsstring>()</argsstring>
+        <name>getYpos</name>
+        <briefdescription>
+<para>Accessor function for character Y position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Y position of the character </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="23" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="97" bodyend="100"/>
+        <references refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" compoundref="Character_8h" startline="37">y</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a09aa50c943d454829b9d98786b374095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CCharacter::getZpos</definition>
+        <argsstring>()</argsstring>
+        <name>getZpos</name>
+        <briefdescription>
+<para>Accessor function for character Z position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Z position of the character </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="24" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="109" bodyend="112"/>
+        <references refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" compoundref="Character_8h" startline="38">z</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CCharacter::getCharacterJob</definition>
+        <argsstring>()</argsstring>
+        <name>getCharacterJob</name>
+        <briefdescription>
+<para>Accessor function for character job. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>character job </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="25" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="49" bodyend="52"/>
+        <references refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" compoundref="Character_8h" startline="40">characterJob</references>
+        <referencedby refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" compoundref="SceneSP_8cpp" startline="5253" endline="5303">SceneSP::checkWinLose</referencedby>
+        <referencedby refid="classSceneSP_1ae8c77e08076f5ca756433782aafe26ad" compoundref="SceneSP_8cpp" startline="3158" endline="3179">SceneSP::RenderEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1ae5b83c001320f3ab83ceee51124d86aa" compoundref="SceneSP_8cpp" startline="3205" endline="3243">SceneSP::RenderUI</referencedby>
+        <referencedby refid="classSceneSP_1a5ad62cfa3ac5fe2156a8713ffab6a4dd" compoundref="SceneSP_8cpp" startline="1453" endline="1477">SceneSP::UpdateEasteregg</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCharacter::setCharacterJob</definition>
+        <argsstring>(int jobNum)</argsstring>
+        <name>setCharacterJob</name>
+        <param>
+          <type>int</type>
+          <declname>jobNum</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set character job. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>jobNum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- character job </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="169" bodyend="172"/>
+        <references refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" compoundref="Character_8h" startline="40">characterJob</references>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc::CNpc</referencedby>
+        <referencedby refid="classSceneSP_1a17ea984d0e98061610e8a7e34b2a4397" compoundref="SceneSP_8cpp" startline="1199" endline="1266">SceneSP::UpdateStartMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCharacter::setCharacterState</definition>
+        <argsstring>(int state)</argsstring>
+        <name>setCharacterState</name>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set character state. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- character state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="157" bodyend="160"/>
+        <references refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" compoundref="Character_8h" startline="39">characterState</references>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc::CNpc</referencedby>
+        <referencedby refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" compoundref="Player_8cpp" startline="9" endline="15">CPlayer::CPlayer</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCharacter::setAnimationType</definition>
+        <argsstring>(int type)</argsstring>
+        <name>setAnimationType</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set character animation type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- character animation type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="181" bodyend="184"/>
+        <references refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" compoundref="Character_8h" startline="41">animationType</references>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc::CNpc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCharacter::setXpos</definition>
+        <argsstring>(float posX)</argsstring>
+        <name>setXpos</name>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set x pos of character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- X position of character </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="29" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="121" bodyend="124"/>
+        <references refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" compoundref="Character_8h" startline="36">x</references>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc::CNpc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCharacter::setYpos</definition>
+        <argsstring>(float posY)</argsstring>
+        <name>setYpos</name>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set y pos of character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Y position of character </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="30" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="133" bodyend="136"/>
+        <references refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" compoundref="Character_8h" startline="37">y</references>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc::CNpc</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CCharacter::setZpos</definition>
+        <argsstring>(float posZ)</argsstring>
+        <name>setZpos</name>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set z pos of character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Z position of character </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="31" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp" bodystart="145" bodyend="148"/>
+        <references refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" compoundref="Character_8h" startline="38">z</references>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc::CNpc</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the character class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class Character: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="695">
+        <label>CPlayer</label>
+        <link refid="classCPlayer"/>
+        <childnode refid="693" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="694">
+        <label>CNpc</label>
+        <link refid="classCNpc"/>
+        <childnode refid="693" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="693">
+        <label>CCharacter</label>
+        <link refid="classCCharacter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="697">
+        <label>float</label>
+      </node>
+      <node id="696">
+        <label>CCharacter</label>
+        <link refid="classCCharacter"/>
+        <childnode refid="697" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+        <childnode refid="698" relation="usage">
+          <edgelabel>animationType</edgelabel>
+          <edgelabel>characterJob</edgelabel>
+          <edgelabel>characterState</edgelabel>
+        </childnode>
+      </node>
+      <node id="698">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.h" bodystart="14" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" prot="private" virt="non-virtual"><scope>CCharacter</scope><name>animationType</name></member>
+      <member refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>CCharacter</name></member>
+      <member refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>CCharacter</name></member>
+      <member refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" prot="private" virt="non-virtual"><scope>CCharacter</scope><name>characterJob</name></member>
+      <member refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" prot="private" virt="non-virtual"><scope>CCharacter</scope><name>characterState</name></member>
+      <member refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>getAnimationType</name></member>
+      <member refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>getCharacterJob</name></member>
+      <member refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>getCharacterState</name></member>
+      <member refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>getXpos</name></member>
+      <member refid="classCCharacter_1adf34bbd751c72295580148348f086a32" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>getYpos</name></member>
+      <member refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>getZpos</name></member>
+      <member refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>setAnimationType</name></member>
+      <member refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>setCharacterJob</name></member>
+      <member refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>setCharacterState</name></member>
+      <member refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>setXpos</name></member>
+      <member refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>setYpos</name></member>
+      <member refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>setZpos</name></member>
+      <member refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" prot="private" virt="non-virtual"><scope>CCharacter</scope><name>x</name></member>
+      <member refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" prot="private" virt="non-virtual"><scope>CCharacter</scope><name>y</name></member>
+      <member refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" prot="private" virt="non-virtual"><scope>CCharacter</scope><name>z</name></member>
+      <member refid="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" prot="public" virt="non-virtual"><scope>CCharacter</scope><name>~CCharacter</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

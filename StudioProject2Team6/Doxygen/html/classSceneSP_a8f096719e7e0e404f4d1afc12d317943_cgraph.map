@@ -1,0 +1,15 @@
+<map id="SceneSP::initShelves" name="SceneSP::initShelves">
+<area shape="rect" id="node2" href="$classSceneSP.html#a0cb20bb43706bbd74745f2466fb3f534" title="Defines all items and containers. " alt="" coords="216,208,363,235"/>
+<area shape="rect" id="node12" href="$classCContainer.html#a8cbd00470704513d12083d2be711ad4b" title="Accessor function for container botttom row item. " alt="" coords="200,259,379,285"/>
+<area shape="rect" id="node13" href="$classCContainer.html#aeceff305e238951c1cf927ac97ae84ce" title="Accessor function for container middle row item. " alt="" coords="202,309,377,336"/>
+<area shape="rect" id="node14" href="$classCContainer.html#a064d9d932a0e361083d5a4a9285eef22" title="Accessor function for container top row item. " alt="" coords="210,360,369,387"/>
+<area shape="rect" id="node3" href="$classCContainer.html#ab9bf0cf7936e505a400255e265104e94" title="Accessor function for first item stock in container. " alt="" coords="436,5,608,32"/>
+<area shape="rect" id="node4" href="$classCItem.html#a916597368755e28b6edb8af37acc1ad6" title="Accessor function for item geometry type. " alt="" coords="455,56,589,83"/>
+<area shape="rect" id="node5" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="464,107,580,133"/>
+<area shape="rect" id="node6" href="$classCItem.html#a6375bf21ba971d20a25fd8888d083f5a" title="Accessor function for item price. " alt="" coords="466,157,578,184"/>
+<area shape="rect" id="node7" href="$classCContainer.html#a1260c4eb8f72a4529af2087586f1600b" title="Accessor function for second item stock in container. " alt="" coords="427,208,617,235"/>
+<area shape="rect" id="node8" href="$classCContainer.html#a39099429332baa7d3003b4fa9e1b3c9f" title="Accessor function for third item stock in container. " alt="" coords="435,259,609,285"/>
+<area shape="rect" id="node9" href="$classCContainer.html#a35e4344eb1c1d25c9364ab16f16dc709" title="Accessor function for container x position. " alt="" coords="452,309,592,336"/>
+<area shape="rect" id="node10" href="$classCContainer.html#ae00b4f70a3679017c1d795536b2a7d5f" title="Accessor function for container y position. " alt="" coords="451,360,593,387"/>
+<area shape="rect" id="node11" href="$classCContainer.html#a912430f27287e0fd419a94333790c947" title="Accessor function for container z position. " alt="" coords="452,411,592,437"/>
+</map>

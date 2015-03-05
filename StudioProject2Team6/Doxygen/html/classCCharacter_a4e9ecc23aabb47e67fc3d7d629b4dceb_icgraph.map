@@ -1,0 +1,6 @@
+<map id="CCharacter::setCharacterJob" name="CCharacter::setCharacterJob">
+<area shape="rect" id="node2" href="$classCNpc.html#ae80606078f1a289ac5d097bfadcffbac" title="Overloaded NPC constructor. " alt="" coords="289,5,383,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a17ea984d0e98061610e8a7e34b2a4397" title="Updates the Start menu. " alt="" coords="243,56,429,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="477,56,636,83"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="684,56,811,83"/>
+</map>

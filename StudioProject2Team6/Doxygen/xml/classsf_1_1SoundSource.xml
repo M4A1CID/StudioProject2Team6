@@ -1,0 +1,498 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1SoundSource" kind="class" prot="public">
+    <compoundname>sf::SoundSource</compoundname>
+    <derivedcompoundref refid="classsf_1_1Sound" prot="public" virt="non-virtual">sf::Sound</derivedcompoundref>
+    <derivedcompoundref refid="classsf_1_1SoundStream" prot="public" virt="non-virtual">sf::SoundStream</derivedcompoundref>
+    <includes refid="SoundSource_8hpp" local="no">SoundSource.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" prot="public" static="no">
+        <name>Status</name>
+        <enumvalue id="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a" prot="public">
+          <name>Stopped</name>
+          <briefdescription>
+<para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> is not playing. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41" prot="public">
+          <name>Paused</name>
+          <briefdescription>
+<para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> is paused. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03af07bdea9f70ef7606dfc9f955beeee18" prot="public">
+          <name>Playing</name>
+          <briefdescription>
+<para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> is playing. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enumeration of the sound source states. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="50" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" bodystart="49" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classsf_1_1SoundSource_1a0223cef4b1c587e6e1e17b4c92c4479c" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundSource::m_source</definition>
+        <argsstring></argsstring>
+        <name>m_source</name>
+        <briefdescription>
+<para>OpenAL source identifier. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="263" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" bodystart="263" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1SoundSource_1ae0c7728c1449fdebe65749ab6fcb3170" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::SoundSource::SoundSource</definition>
+        <argsstring>(const SoundSource &amp;copy)</argsstring>
+        <name>SoundSource</name>
+        <param>
+          <type>const <ref refid="classsf_1_1SoundSource" kindref="compound">SoundSource</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>copy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance to copy </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="62" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a77c7c1524f8cb81df2de9375b0f87c5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual sf::SoundSource::~SoundSource</definition>
+        <argsstring>()</argsstring>
+        <name>~SoundSource</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="68" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a72a13695ed48b7f7b55e7cd4431f4bb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setPitch</definition>
+        <argsstring>(float pitch)</argsstring>
+        <name>setPitch</name>
+        <param>
+          <type>float</type>
+          <declname>pitch</declname>
+        </param>
+        <briefdescription>
+<para>Set the pitch of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>The pitch represents the perceived fundamental frequency of a sound; thus you can make a sound more acute or grave by changing its pitch. A side effect of changing the pitch is to modify the playing speed of the sound as well. The default value for the pitch is 1.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pitch</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New pitch to apply to the sound</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1aedad6aff442aeb6dcd267befd4fdbb59" kindref="member">getPitch</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="84" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a2f192f2b49fb8e2b82f3498d3663fcc2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setVolume</definition>
+        <argsstring>(float volume)</argsstring>
+        <name>setVolume</name>
+        <param>
+          <type>float</type>
+          <declname>volume</declname>
+        </param>
+        <briefdescription>
+<para>Set the volume of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>The volume is a value between 0 (mute) and 100 (full volume). The default value for the volume is 100.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>volume</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Volume of the sound</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1aafb0558fce9cbebfc6828d932cbcce2f" kindref="member">getVolume</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="97" column="1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1a2963d58071297789ad0c567c41dd5dbd" compoundref="SceneSP_8cpp" startline="3020" endline="3054">SceneSP::UpdateGaben</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a0480257ea25d986eba6cc3c1a6f8d7c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setPosition</definition>
+        <argsstring>(float x, float y, float z)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Set the 3D position of the sound in the audio scene. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only sounds with one channel (mono sounds) can be spatialized. The default position of a sound is (0, 0, 0).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate of the position of the sound in the scene </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate of the position of the sound in the scene </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Z coordinate of the position of the sound in the scene</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a4c3bc60286f488aaf2941ab76476eebc" kindref="member">getPosition</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="113" column="1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a17ba9ed01925395652181a7b2a7d3aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setPosition</definition>
+        <argsstring>(const Vector3f &amp;position)</argsstring>
+        <name>setPosition</name>
+        <param>
+          <type>const <ref refid="namespacesf_1af97357d7d32e7d6a700d03be2f3b4811" kindref="member">Vector3f</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Set the 3D position of the sound in the audio scene. </para>        </briefdescription>
+        <detaileddescription>
+<para>Only sounds with one channel (mono sounds) can be spatialized. The default position of a sound is (0, 0, 0).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPosition" kindref="compound">Position</ref> of the sound in the scene</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a4c3bc60286f488aaf2941ab76476eebc" kindref="member">getPosition</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="127" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1ac478a8b813faf7dd575635b102081d0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setRelativeToListener</definition>
+        <argsstring>(bool relative)</argsstring>
+        <name>setRelativeToListener</name>
+        <param>
+          <type>bool</type>
+          <declname>relative</declname>
+        </param>
+        <briefdescription>
+<para>Make the sound&apos;s position relative to the listener or absolute. </para>        </briefdescription>
+        <detaileddescription>
+<para>Making a sound relative to the listener will ensure that it will always be played the same way regardless of the position of the listener. This can be useful for non-spatialized sounds, sounds that are produced by the listener, or sounds attached to it. The default value is false (position is absolute).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>relative</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to set the position relative, false to set it absolute</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a5cb9107e1c47f65ab82c4885436061ef" kindref="member">isRelativeToListener</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="143" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a75bbc2c34addc8b25a14edb908508afe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setMinDistance</definition>
+        <argsstring>(float distance)</argsstring>
+        <name>setMinDistance</name>
+        <param>
+          <type>float</type>
+          <declname>distance</declname>
+        </param>
+        <briefdescription>
+<para>Set the minimum distance of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>The &quot;minimum distance&quot; of a sound is the maximum distance at which it is heard at its maximum volume. Further than the minimum distance, it will start to fade out according to its attenuation factor. A value of 0 (&quot;inside the head
+of the listener&quot;) is an invalid value and is forbidden. The default value of the minimum distance is 1.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>distance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New minimum distance of the sound</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a3379b9f7a0f0e31ab9a4e5fa1762986e" kindref="member">getMinDistance</ref>, <ref refid="classsf_1_1SoundSource_1aa2adff44cd2f8b4e3c7315d7c2a45626" kindref="member">setAttenuation</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1aa2adff44cd2f8b4e3c7315d7c2a45626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundSource::setAttenuation</definition>
+        <argsstring>(float attenuation)</argsstring>
+        <name>setAttenuation</name>
+        <param>
+          <type>float</type>
+          <declname>attenuation</declname>
+        </param>
+        <briefdescription>
+<para>Set the attenuation factor of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para>The attenuation is a multiplicative factor which makes the sound more or less loud according to its distance from the listener. An attenuation of 0 will produce a non-attenuated sound, i.e. its volume will always be the same whether it is heard from near or from far. On the other hand, an attenuation value such as 100 will make the sound fade out very quickly as it gets further from the listener. The default value of the attenuation is 1.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>attenuation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New attenuation factor of the sound</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1ac5f5ffef8930bb573f43d47cbc779bf6" kindref="member">getAttenuation</ref>, <ref refid="classsf_1_1SoundSource_1a75bbc2c34addc8b25a14edb908508afe" kindref="member">setMinDistance</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="179" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1aedad6aff442aeb6dcd267befd4fdbb59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float sf::SoundSource::getPitch</definition>
+        <argsstring>() const </argsstring>
+        <name>getPitch</name>
+        <briefdescription>
+<para>Get the pitch of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Pitch of the sound</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a72a13695ed48b7f7b55e7cd4431f4bb6" kindref="member">setPitch</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1aafb0558fce9cbebfc6828d932cbcce2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float sf::SoundSource::getVolume</definition>
+        <argsstring>() const </argsstring>
+        <name>getVolume</name>
+        <briefdescription>
+<para>Get the volume of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Volume of the sound, in the range [0, 100]</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a2f192f2b49fb8e2b82f3498d3663fcc2" kindref="member">setVolume</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="199" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a4c3bc60286f488aaf2941ab76476eebc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesf_1af97357d7d32e7d6a700d03be2f3b4811" kindref="member">Vector3f</ref></type>
+        <definition>Vector3f sf::SoundSource::getPosition</definition>
+        <argsstring>() const </argsstring>
+        <name>getPosition</name>
+        <briefdescription>
+<para>Get the 3D position of the sound in the audio scene. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structPosition" kindref="compound">Position</ref> of the sound</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a0480257ea25d986eba6cc3c1a6f8d7c2" kindref="member">setPosition</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a5cb9107e1c47f65ab82c4885436061ef" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::SoundSource::isRelativeToListener</definition>
+        <argsstring>() const </argsstring>
+        <name>isRelativeToListener</name>
+        <briefdescription>
+<para>Tell whether the sound&apos;s position is relative to the listener or is absolute. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the position is relative, false if it&apos;s absolute</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1ac478a8b813faf7dd575635b102081d0d" kindref="member">setRelativeToListener</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1a3379b9f7a0f0e31ab9a4e5fa1762986e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float sf::SoundSource::getMinDistance</definition>
+        <argsstring>() const </argsstring>
+        <name>getMinDistance</name>
+        <briefdescription>
+<para>Get the minimum distance of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Minimum distance of the sound</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1a75bbc2c34addc8b25a14edb908508afe" kindref="member">setMinDistance</ref>, <ref refid="classsf_1_1SoundSource_1ac5f5ffef8930bb573f43d47cbc779bf6" kindref="member">getAttenuation</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="230" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1ac5f5ffef8930bb573f43d47cbc779bf6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float sf::SoundSource::getAttenuation</definition>
+        <argsstring>() const </argsstring>
+        <name>getAttenuation</name>
+        <briefdescription>
+<para>Get the attenuation factor of the sound. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Attenuation factor of the sound</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundSource_1aa2adff44cd2f8b4e3c7315d7c2a45626" kindref="member">setAttenuation</ref>, <ref refid="classsf_1_1SoundSource_1a3379b9f7a0f0e31ab9a4e5fa1762986e" kindref="member">getMinDistance</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="240" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsf_1_1SoundSource_1aefa4bd4460f387d81a0637d293979436" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::SoundSource::SoundSource</definition>
+        <argsstring>()</argsstring>
+        <name>SoundSource</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor is meant to be called by derived classes only. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="250" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundSource_1ad1995d2888773f47f99b671747609dbb" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" kindref="member">Status</ref></type>
+        <definition>Status sf::SoundSource::getStatus</definition>
+        <argsstring>() const </argsstring>
+        <name>getStatus</name>
+        <briefdescription>
+<para>Get the current status of the sound (stopped, paused, playing) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current status of the sound </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="258" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base class defining a sound&apos;s properties. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1SoundSource" kindref="compound">sf::SoundSource</ref> is not meant to be used directly, it only serves as a common base for all audio objects that can live in the audio environment.</para><para>It defines several properties for the sound: pitch, volume, position, attenuation, etc. All of them can be changed at any time with no impact on performances.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1Sound" kindref="compound">sf::Sound</ref>, <ref refid="classsf_1_1SoundStream" kindref="compound">sf::SoundStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1122">
+        <label>sf::SoundStream</label>
+        <link refid="classsf_1_1SoundStream"/>
+        <childnode refid="1120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1121">
+        <label>sf::Sound</label>
+        <link refid="classsf_1_1Sound"/>
+        <childnode refid="1120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1123">
+        <label>sf::Music</label>
+        <link refid="classsf_1_1Music"/>
+        <childnode refid="1122" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1120">
+        <label>sf::SoundSource</label>
+        <link refid="classsf_1_1SoundSource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1125">
+        <label>unsigned</label>
+      </node>
+      <node id="1124">
+        <label>sf::SoundSource</label>
+        <link refid="classsf_1_1SoundSource"/>
+        <childnode refid="1125" relation="usage">
+          <edgelabel>m_source</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundSource.hpp" bodystart="41" bodyend="264"/>
+    <listofallmembers>
+      <member refid="classsf_1_1SoundSource_1ac5f5ffef8930bb573f43d47cbc779bf6" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>getAttenuation</name></member>
+      <member refid="classsf_1_1SoundSource_1a3379b9f7a0f0e31ab9a4e5fa1762986e" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>getMinDistance</name></member>
+      <member refid="classsf_1_1SoundSource_1aedad6aff442aeb6dcd267befd4fdbb59" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>getPitch</name></member>
+      <member refid="classsf_1_1SoundSource_1a4c3bc60286f488aaf2941ab76476eebc" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>getPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1ad1995d2888773f47f99b671747609dbb" prot="protected" virt="non-virtual"><scope>sf::SoundSource</scope><name>getStatus</name></member>
+      <member refid="classsf_1_1SoundSource_1aafb0558fce9cbebfc6828d932cbcce2f" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>getVolume</name></member>
+      <member refid="classsf_1_1SoundSource_1a5cb9107e1c47f65ab82c4885436061ef" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>isRelativeToListener</name></member>
+      <member refid="classsf_1_1SoundSource_1a0223cef4b1c587e6e1e17b4c92c4479c" prot="protected" virt="non-virtual"><scope>sf::SoundSource</scope><name>m_source</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>Paused</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03af07bdea9f70ef7606dfc9f955beeee18" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>Playing</name></member>
+      <member refid="classsf_1_1SoundSource_1aa2adff44cd2f8b4e3c7315d7c2a45626" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setAttenuation</name></member>
+      <member refid="classsf_1_1SoundSource_1a75bbc2c34addc8b25a14edb908508afe" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setMinDistance</name></member>
+      <member refid="classsf_1_1SoundSource_1a72a13695ed48b7f7b55e7cd4431f4bb6" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setPitch</name></member>
+      <member refid="classsf_1_1SoundSource_1a0480257ea25d986eba6cc3c1a6f8d7c2" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1a17ba9ed01925395652181a7b2a7d3aef" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1ac478a8b813faf7dd575635b102081d0d" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setRelativeToListener</name></member>
+      <member refid="classsf_1_1SoundSource_1a2f192f2b49fb8e2b82f3498d3663fcc2" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>setVolume</name></member>
+      <member refid="classsf_1_1SoundSource_1ae0c7728c1449fdebe65749ab6fcb3170" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>SoundSource</name></member>
+      <member refid="classsf_1_1SoundSource_1aefa4bd4460f387d81a0637d293979436" prot="protected" virt="non-virtual"><scope>sf::SoundSource</scope><name>SoundSource</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>Status</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a" prot="public" virt="non-virtual"><scope>sf::SoundSource</scope><name>Stopped</name></member>
+      <member refid="classsf_1_1SoundSource_1a77c7c1524f8cb81df2de9375b0f87c5c" prot="public" virt="virtual"><scope>sf::SoundSource</scope><name>~SoundSource</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

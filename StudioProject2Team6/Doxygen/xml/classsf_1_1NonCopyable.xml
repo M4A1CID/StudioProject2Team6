@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1NonCopyable" kind="class" prot="public">
+    <compoundname>sf::NonCopyable</compoundname>
+    <derivedcompoundref refid="classsf_1_1Lock" prot="private" virt="non-virtual">sf::Lock</derivedcompoundref>
+    <derivedcompoundref refid="classsf_1_1Mutex" prot="private" virt="non-virtual">sf::Mutex</derivedcompoundref>
+    <derivedcompoundref refid="classsf_1_1Thread" prot="private" virt="non-virtual">sf::Thread</derivedcompoundref>
+    <derivedcompoundref refid="classsf_1_1ThreadLocal" prot="private" virt="non-virtual">sf::ThreadLocal</derivedcompoundref>
+    <includes refid="NonCopyable_8hpp" local="no">NonCopyable.hpp</includes>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>sf::NonCopyable::NonCopyable</definition>
+        <argsstring>()</argsstring>
+        <name>NonCopyable</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Because this class has a copy constructor, the compiler will not automatically generate the default constructor. That&apos;s why we must define it explicitly. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp" line="53" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsf_1_1NonCopyable_1a57729c3045ce03f392ae1ba732224ddb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::NonCopyable::NonCopyable</definition>
+        <argsstring>(const NonCopyable &amp;)</argsstring>
+        <name>NonCopyable</name>
+        <param>
+          <type>const <ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Disabled copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>By making the copy constructor private, the compiler will trigger an error if anyone outside tries to use it. To prevent <ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref> or friend classes from using it, we also give no definition, so that the linker will produce an error if the first protection was inefficient. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp" line="67" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1NonCopyable_1ab5f6914b91378d9afc74e07094fc91e4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref> &amp;</type>
+        <definition>NonCopyable&amp; sf::NonCopyable::operator=</definition>
+        <argsstring>(const NonCopyable &amp;)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Disabled assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para>By making the assignment operator private, the compiler will trigger an error if anyone outside tries to use it. To prevent <ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref> or friend classes from using it, we also give no definition, so that the linker will produce an error if the first protection was inefficient. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp" line="79" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility class that makes any derived class non-copyable. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class makes its instances non-copyable, by explicitly disabling its copy constructor and its assignment operator.</para><para>To create a non-copyable class, simply inherit from <ref refid="classsf_1_1NonCopyable" kindref="compound">sf::NonCopyable</ref>.</para><para>The type of inheritance (public or private) doesn&apos;t matter, the copy constructor and assignment operator are declared private in <ref refid="classsf_1_1NonCopyable" kindref="compound">sf::NonCopyable</ref> so they will end up being inaccessible in both cases. Thus you can use a shorter syntax for inheriting from it (see below).</para><para>Usage example: <programlisting><codeline><highlight class="normal">class<sp/>MyNonCopyableClass<sp/>:<sp/>sf::NonCopyable</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal">};</highlight></codeline>
+</programlisting></para><para>Deciding whether the instances of a class can be copied or not is a very important design choice. You are strongly encouraged to think about it before writing a class, and to use <ref refid="classsf_1_1NonCopyable" kindref="compound">sf::NonCopyable</ref> when necessary to prevent many potential future errors when using it. This is also a very important indication to users of your class. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1008">
+        <label>sf::Mutex</label>
+        <link refid="classsf_1_1Mutex"/>
+        <childnode refid="1006" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1009">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="1006" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1011">
+        <label>sf::ThreadLocalPtr&lt; T &gt;</label>
+        <link refid="classsf_1_1ThreadLocalPtr"/>
+        <childnode refid="1010" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1006">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1010">
+        <label>sf::ThreadLocal</label>
+        <link refid="classsf_1_1ThreadLocal"/>
+        <childnode refid="1006" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1007">
+        <label>sf::Lock</label>
+        <link refid="classsf_1_1Lock"/>
+        <childnode refid="1006" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp" bodystart="41" bodyend="80"/>
+    <listofallmembers>
+      <member refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" prot="protected" virt="non-virtual"><scope>sf::NonCopyable</scope><name>NonCopyable</name></member>
+      <member refid="classsf_1_1NonCopyable_1a57729c3045ce03f392ae1ba732224ddb" prot="private" virt="non-virtual"><scope>sf::NonCopyable</scope><name>NonCopyable</name></member>
+      <member refid="classsf_1_1NonCopyable_1ab5f6914b91378d9afc74e07094fc91e4" prot="private" virt="non-virtual"><scope>sf::NonCopyable</scope><name>operator=</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

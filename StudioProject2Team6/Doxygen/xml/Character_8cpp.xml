@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Character_8cpp" kind="file">
+    <compoundname>Character.cpp</compoundname>
+    <includes refid="Character_8h" local="yes">Character.h</includes>
+    <incdepgraph>
+      <node id="2591">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2592" relation="include">
+        </childnode>
+      </node>
+      <node id="2592">
+        <label>string</label>
+      </node>
+      <node id="2594">
+        <label>vector</label>
+      </node>
+      <node id="2590">
+        <label>Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="2591" relation="include">
+        </childnode>
+        <childnode refid="2593" relation="include">
+        </childnode>
+        <childnode refid="2594" relation="include">
+        </childnode>
+      </node>
+      <node id="2593">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="2589">
+        <label>MyGraphics/Source/Character.cpp</label>
+        <link refid="Character.cpp"/>
+        <childnode refid="2590" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Character_8h" kindref="compound">Character.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="7"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" refkind="member"><highlight class="normal"><ref refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" kindref="member">CCharacter::CCharacter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="23"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" refkind="member"><highlight class="normal"><ref refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" kindref="member">CCharacter::CCharacter</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>job)</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" kindref="member">x</ref><sp/>=<sp/>posX;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" kindref="member">y</ref><sp/>=<sp/>posY;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" kindref="member">z</ref><sp/>=<sp/>posZ;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" kindref="member">characterState</ref><sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" kindref="member">characterJob</ref><sp/>=<sp/>job;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="37"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" refkind="member"><highlight class="normal"><ref refid="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" kindref="member">CCharacter::~CCharacter</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" kindref="member">CCharacter::getCharacterJob</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" kindref="member">characterJob</ref>;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" kindref="member">CCharacter::getCharacterState</ref>()</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" kindref="member">characterState</ref>;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="72"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" kindref="member">CCharacter::getAnimationType</ref>()</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" kindref="member">animationType</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="84"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85" refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" kindref="member">CCharacter::getXpos</ref>()</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" kindref="member">x</ref>;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="96"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="classCCharacter_1adf34bbd751c72295580148348f086a32" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1adf34bbd751c72295580148348f086a32" kindref="member">CCharacter::getYpos</ref>()</highlight></codeline>
+<codeline lineno="98"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" kindref="member">y</ref>;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="108"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" kindref="member">CCharacter::getZpos</ref>()</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" kindref="member">z</ref>;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="120"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" kindref="member">CCharacter::setXpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a2debf46cd473dce2d1ae20b89008c193" kindref="member">x</ref><sp/>=<sp/>posX;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="132"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133" refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" kindref="member">CCharacter::setYpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a22c3219c951fcdb0c715b2620da22366" kindref="member">y</ref><sp/>=<sp/>posY;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="144"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" kindref="member">CCharacter::setZpos</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ)</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1aa0f1139823db9e694d476429bcf767a9" kindref="member">z</ref><sp/>=<sp/>posZ;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="156"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157" refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" kindref="member">CCharacter::setCharacterState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state)</highlight></codeline>
+<codeline lineno="158"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a22687fc1955d08425613580e70f54d06" kindref="member">characterState</ref><sp/>=<sp/>state;</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="168"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169" refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" kindref="member">CCharacter::setCharacterJob</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>jobNum)</highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a5b43f32d0daa26700a4a2db95a32f254" kindref="member">characterJob</ref><sp/>=<sp/>jobNum;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="180"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181" refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" kindref="member">CCharacter::setAnimationType</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type)</highlight></codeline>
+<codeline lineno="182"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a11ed3fa55a3c8a75fc6ee3061483ffce" kindref="member">animationType</ref><sp/>=<sp/>type;</highlight></codeline>
+<codeline lineno="184"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Character.cpp"/>
+  </compounddef>
+</doxygen>

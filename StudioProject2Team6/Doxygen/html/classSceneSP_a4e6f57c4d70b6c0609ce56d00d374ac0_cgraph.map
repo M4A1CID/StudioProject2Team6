@@ -1,0 +1,7 @@
+<map id="SceneSP::checkPickUpItem" name="SceneSP::checkPickUpItem">
+<area shape="rect" id="node2" href="$classSceneSP.html#a516f7251a5124ef02a4404296f01ffbd" title="Adds items picked up by the player to their inventory. " alt="" coords="242,56,413,83"/>
+<area shape="rect" id="node3" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="477,5,593,32"/>
+<area shape="rect" id="node5" href="$classCPlayer.html#aa5acefb8c6837741ac85426e93ff0b69" title="Accessor function for the items held by the player. " alt="" coords="268,107,387,133"/>
+<area shape="rect" id="node6" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="240,157,415,184"/>
+<area shape="rect" id="node4" href="$classCPlayer.html#a31b9cac478a011ca5fbbf899499216f5" title="Mutator function to add an item picked up by the player. " alt="" coords="463,56,608,83"/>
+</map>

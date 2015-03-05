@@ -1,0 +1,2132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="DefineEnum_8h" kind="file">
+    <compoundname>DefineEnum.h</compoundname>
+    <includedby refid="SceneSP_8h" local="yes">MyGraphics/Source/SceneSP.h</includedby>
+    <includedby refid="BeansCan_8h" local="yes">MyGraphics/Source/BeansCan.h</includedby>
+    <includedby refid="BrownCan_8h" local="yes">MyGraphics/Source/BrownCan.h</includedby>
+    <includedby refid="CerealBox1_8h" local="yes">MyGraphics/Source/CerealBox1.h</includedby>
+    <includedby refid="CerealBox2_8h" local="yes">MyGraphics/Source/CerealBox2.h</includedby>
+    <includedby refid="CerealBox3_8h" local="yes">MyGraphics/Source/CerealBox3.h</includedby>
+    <includedby refid="CerealBox4_8h" local="yes">MyGraphics/Source/CerealBox4.h</includedby>
+    <includedby refid="CerealBox5_8h" local="yes">MyGraphics/Source/CerealBox5.h</includedby>
+    <includedby refid="EasterEgg1_8h" local="yes">MyGraphics/Source/EasterEgg1.h</includedby>
+    <includedby refid="EasterEgg2_8h" local="yes">MyGraphics/Source/EasterEgg2.h</includedby>
+    <includedby refid="EasterEgg3_8h" local="yes">MyGraphics/Source/EasterEgg3.h</includedby>
+    <includedby refid="MelonCan_8h" local="yes">MyGraphics/Source/MelonCan.h</includedby>
+    <includedby refid="PeasCan_8h" local="yes">MyGraphics/Source/PeasCan.h</includedby>
+    <includedby refid="SardineCan_8h" local="yes">MyGraphics/Source/SardineCan.h</includedby>
+    <includedby refid="TomatoCan_8h" local="yes">MyGraphics/Source/TomatoCan.h</includedby>
+    <includedby refid="VargaCan_8h" local="yes">MyGraphics/Source/VargaCan.h</includedby>
+    <includedby refid="BranCan_8h" local="yes">MyGraphics/Source/BranCan.h</includedby>
+    <includedby refid="GluWaterCan_8h" local="yes">MyGraphics/Source/GluWaterCan.h</includedby>
+    <includedby refid="HumanCan_8h" local="yes">MyGraphics/Source/HumanCan.h</includedby>
+    <includedby refid="MtnDewCan_8h" local="yes">MyGraphics/Source/MtnDewCan.h</includedby>
+    <includedby refid="RedMonsterCan_8h" local="yes">MyGraphics/Source/RedMonsterCan.h</includedby>
+    <includedby refid="RootBeerFloatsCan_8h" local="yes">MyGraphics/Source/RootBeerFloatsCan.h</includedby>
+    <includedby refid="SodaCan_8h" local="yes">MyGraphics/Source/SodaCan.h</includedby>
+    <includedby refid="SodaFestCan_8h" local="yes">MyGraphics/Source/SodaFestCan.h</includedby>
+    <includedby refid="EmptyItem_8h" local="yes">MyGraphics/Source/EmptyItem.h</includedby>
+    <includedby refid="Character_8h" local="yes">MyGraphics/Source/Character.h</includedby>
+    <includedby refid="Winebottle1_8h" local="yes">MyGraphics/Source/Winebottle1.h</includedby>
+    <includedby refid="Winebottle2_8h" local="yes">MyGraphics/Source/Winebottle2.h</includedby>
+    <includedby refid="Winebottle3_8h" local="yes">MyGraphics/Source/Winebottle3.h</includedby>
+    <includedby refid="Winebottle4_8h" local="yes">MyGraphics/Source/Winebottle4.h</includedby>
+    <includedby refid="Winebottle5_8h" local="yes">MyGraphics/Source/Winebottle5.h</includedby>
+    <invincdepgraph>
+      <node id="2671">
+        <label>MyGraphics/Source/RedMonsterCan.cpp</label>
+        <link refid="RedMonsterCan_8cpp"/>
+      </node>
+      <node id="2630">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="2673">
+        <label>MyGraphics/Source/RootBeerFloatsCan.cpp</label>
+        <link refid="RootBeerFloatsCan_8cpp"/>
+      </node>
+      <node id="2660">
+        <label>MyGraphics/Source/VargaCan.h</label>
+        <link refid="VargaCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2661" relation="include">
+        </childnode>
+      </node>
+      <node id="2638">
+        <label>MyGraphics/Source/CerealBox2.h</label>
+        <link refid="CerealBox2_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2639" relation="include">
+        </childnode>
+      </node>
+      <node id="2679">
+        <label>MyGraphics/Source/EmptyItem.cpp</label>
+        <link refid="EmptyItem_8cpp"/>
+      </node>
+      <node id="2683">
+        <label>MyGraphics/Source/Npc.h</label>
+        <link refid="Npc_8h"/>
+        <childnode refid="2627" relation="include">
+        </childnode>
+        <childnode refid="2684" relation="include">
+        </childnode>
+      </node>
+      <node id="2659">
+        <label>MyGraphics/Source/TomatoCan.cpp</label>
+        <link refid="TomatoCan_8cpp"/>
+      </node>
+      <node id="2669">
+        <label>MyGraphics/Source/MtnDewCan.cpp</label>
+        <link refid="MtnDewCan_8cpp"/>
+      </node>
+      <node id="2658">
+        <label>MyGraphics/Source/TomatoCan.h</label>
+        <link refid="TomatoCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2659" relation="include">
+        </childnode>
+      </node>
+      <node id="2684">
+        <label>MyGraphics/Source/Npc.cpp</label>
+        <link refid="Npc_8cpp"/>
+      </node>
+      <node id="2650">
+        <label>MyGraphics/Source/EasterEgg3.h</label>
+        <link refid="EasterEgg3_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2651" relation="include">
+        </childnode>
+      </node>
+      <node id="2688">
+        <label>MyGraphics/Source/Winebottle2.h</label>
+        <link refid="Winebottle2_8h"/>
+        <childnode refid="2689" relation="include">
+        </childnode>
+      </node>
+      <node id="2677">
+        <label>MyGraphics/Source/SodaFestCan.cpp</label>
+        <link refid="SodaFestCan_8cpp"/>
+      </node>
+      <node id="2665">
+        <label>MyGraphics/Source/GluWaterCan.cpp</label>
+        <link refid="GluWaterCan_8cpp"/>
+      </node>
+      <node id="2666">
+        <label>MyGraphics/Source/HumanCan.h</label>
+        <link refid="HumanCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2667" relation="include">
+        </childnode>
+      </node>
+      <node id="2628">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="2636">
+        <label>MyGraphics/Source/CerealBox1.h</label>
+        <link refid="CerealBox1_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2637" relation="include">
+        </childnode>
+      </node>
+      <node id="2681">
+        <label>MyGraphics/Source/Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="2627" relation="include">
+        </childnode>
+        <childnode refid="2682" relation="include">
+        </childnode>
+      </node>
+      <node id="2644">
+        <label>MyGraphics/Source/CerealBox5.h</label>
+        <link refid="CerealBox5_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2645" relation="include">
+        </childnode>
+      </node>
+      <node id="2675">
+        <label>MyGraphics/Source/SodaCan.cpp</label>
+        <link refid="SodaCan_8cpp"/>
+      </node>
+      <node id="2661">
+        <label>MyGraphics/Source/VargaCan.cpp</label>
+        <link refid="VargaCan_8cpp"/>
+      </node>
+      <node id="2635">
+        <label>MyGraphics/Source/BrownCan.cpp</label>
+        <link refid="BrownCan_8cpp"/>
+      </node>
+      <node id="2634">
+        <label>MyGraphics/Source/BrownCan.h</label>
+        <link refid="BrownCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2635" relation="include">
+        </childnode>
+      </node>
+      <node id="2651">
+        <label>MyGraphics/Source/EasterEgg3.cpp</label>
+        <link refid="EasterEgg3_8cpp"/>
+      </node>
+      <node id="2690">
+        <label>MyGraphics/Source/Winebottle3.h</label>
+        <link refid="Winebottle3_8h"/>
+        <childnode refid="2691" relation="include">
+        </childnode>
+      </node>
+      <node id="2633">
+        <label>MyGraphics/Source/BeansCan.cpp</label>
+        <link refid="BeansCan_8cpp"/>
+      </node>
+      <node id="2649">
+        <label>MyGraphics/Source/EasterEgg2.cpp</label>
+        <link refid="EasterEgg2_8cpp"/>
+      </node>
+      <node id="2682">
+        <label>MyGraphics/Source/Player.cpp</label>
+        <link refid="Player_8cpp"/>
+      </node>
+      <node id="2647">
+        <label>MyGraphics/Source/EasterEgg1.cpp</label>
+        <link refid="EasterEgg1_8cpp"/>
+      </node>
+      <node id="2643">
+        <label>MyGraphics/Source/CerealBox4.cpp</label>
+        <link refid="CerealBox4_8cpp"/>
+      </node>
+      <node id="2655">
+        <label>MyGraphics/Source/PeasCan.cpp</label>
+        <link refid="PeasCan_8cpp"/>
+      </node>
+      <node id="2654">
+        <label>MyGraphics/Source/PeasCan.h</label>
+        <link refid="PeasCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2655" relation="include">
+        </childnode>
+      </node>
+      <node id="2627">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="2628" relation="include">
+        </childnode>
+        <childnode refid="2629" relation="include">
+        </childnode>
+        <childnode refid="2630" relation="include">
+        </childnode>
+      </node>
+      <node id="2674">
+        <label>MyGraphics/Source/SodaCan.h</label>
+        <link refid="SodaCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2675" relation="include">
+        </childnode>
+      </node>
+      <node id="2632">
+        <label>MyGraphics/Source/DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="2627" relation="include">
+        </childnode>
+      </node>
+      <node id="2642">
+        <label>MyGraphics/Source/CerealBox4.h</label>
+        <link refid="CerealBox4_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2643" relation="include">
+        </childnode>
+      </node>
+      <node id="2645">
+        <label>MyGraphics/Source/CerealBox5.cpp</label>
+        <link refid="CerealBox5_8cpp"/>
+      </node>
+      <node id="2667">
+        <label>MyGraphics/Source/HumanCan.cpp</label>
+        <link refid="HumanCan_8cpp"/>
+      </node>
+      <node id="2631">
+        <label>MyGraphics/Source/BeansCan.h</label>
+        <link refid="BeansCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2633" relation="include">
+        </childnode>
+      </node>
+      <node id="2657">
+        <label>MyGraphics/Source/SardineCan.cpp</label>
+        <link refid="SardineCan_8cpp"/>
+      </node>
+      <node id="2687">
+        <label>MyGraphics/Source/Winebottle1.cpp</label>
+        <link refid="Winebottle1_8cpp"/>
+      </node>
+      <node id="2668">
+        <label>MyGraphics/Source/MtnDewCan.h</label>
+        <link refid="MtnDewCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2669" relation="include">
+        </childnode>
+      </node>
+      <node id="2639">
+        <label>MyGraphics/Source/CerealBox2.cpp</label>
+        <link refid="CerealBox2_8cpp"/>
+      </node>
+      <node id="2663">
+        <label>MyGraphics/Source/BranCan.cpp</label>
+        <link refid="BranCan_8cpp"/>
+      </node>
+      <node id="2641">
+        <label>MyGraphics/Source/CerealBox3.cpp</label>
+        <link refid="CerealBox3_8cpp"/>
+      </node>
+      <node id="2662">
+        <label>MyGraphics/Source/BranCan.h</label>
+        <link refid="BranCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2663" relation="include">
+        </childnode>
+      </node>
+      <node id="2646">
+        <label>MyGraphics/Source/EasterEgg1.h</label>
+        <link refid="EasterEgg1_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2647" relation="include">
+        </childnode>
+      </node>
+      <node id="2692">
+        <label>MyGraphics/Source/Winebottle4.h</label>
+        <link refid="Winebottle4_8h"/>
+        <childnode refid="2693" relation="include">
+        </childnode>
+      </node>
+      <node id="2678">
+        <label>MyGraphics/Source/EmptyItem.h</label>
+        <link refid="EmptyItem_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2679" relation="include">
+        </childnode>
+      </node>
+      <node id="2691">
+        <label>MyGraphics/Source/Winebottle3.cpp</label>
+        <link refid="Winebottle3_8cpp"/>
+      </node>
+      <node id="2629">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="2689">
+        <label>MyGraphics/Source/Winebottle2.cpp</label>
+        <link refid="Winebottle2_8cpp"/>
+      </node>
+      <node id="2637">
+        <label>MyGraphics/Source/CerealBox1.cpp</label>
+        <link refid="CerealBox1_8cpp"/>
+      </node>
+      <node id="2653">
+        <label>MyGraphics/Source/MelonCan.cpp</label>
+        <link refid="MelonCan_8cpp"/>
+      </node>
+      <node id="2670">
+        <label>MyGraphics/Source/RedMonsterCan.h</label>
+        <link refid="RedMonsterCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2671" relation="include">
+        </childnode>
+      </node>
+      <node id="2652">
+        <label>MyGraphics/Source/MelonCan.h</label>
+        <link refid="MelonCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2653" relation="include">
+        </childnode>
+      </node>
+      <node id="2695">
+        <label>MyGraphics/Source/Winebottle5.cpp</label>
+        <link refid="Winebottle5_8cpp"/>
+      </node>
+      <node id="2640">
+        <label>MyGraphics/Source/CerealBox3.h</label>
+        <link refid="CerealBox3_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2641" relation="include">
+        </childnode>
+      </node>
+      <node id="2664">
+        <label>MyGraphics/Source/GluWaterCan.h</label>
+        <link refid="GluWaterCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2665" relation="include">
+        </childnode>
+      </node>
+      <node id="2693">
+        <label>MyGraphics/Source/Winebottle4.cpp</label>
+        <link refid="Winebottle4_8cpp"/>
+      </node>
+      <node id="2680">
+        <label>MyGraphics/Source/Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="2681" relation="include">
+        </childnode>
+        <childnode refid="2683" relation="include">
+        </childnode>
+        <childnode refid="2685" relation="include">
+        </childnode>
+      </node>
+      <node id="2626">
+        <label>MyGraphics/Source/DefineEnum.h</label>
+        <link refid="DefineEnum.h"/>
+        <childnode refid="2627" relation="include">
+        </childnode>
+        <childnode refid="2631" relation="include">
+        </childnode>
+        <childnode refid="2634" relation="include">
+        </childnode>
+        <childnode refid="2636" relation="include">
+        </childnode>
+        <childnode refid="2638" relation="include">
+        </childnode>
+        <childnode refid="2640" relation="include">
+        </childnode>
+        <childnode refid="2642" relation="include">
+        </childnode>
+        <childnode refid="2644" relation="include">
+        </childnode>
+        <childnode refid="2646" relation="include">
+        </childnode>
+        <childnode refid="2648" relation="include">
+        </childnode>
+        <childnode refid="2650" relation="include">
+        </childnode>
+        <childnode refid="2652" relation="include">
+        </childnode>
+        <childnode refid="2654" relation="include">
+        </childnode>
+        <childnode refid="2656" relation="include">
+        </childnode>
+        <childnode refid="2658" relation="include">
+        </childnode>
+        <childnode refid="2660" relation="include">
+        </childnode>
+        <childnode refid="2662" relation="include">
+        </childnode>
+        <childnode refid="2664" relation="include">
+        </childnode>
+        <childnode refid="2666" relation="include">
+        </childnode>
+        <childnode refid="2668" relation="include">
+        </childnode>
+        <childnode refid="2670" relation="include">
+        </childnode>
+        <childnode refid="2672" relation="include">
+        </childnode>
+        <childnode refid="2674" relation="include">
+        </childnode>
+        <childnode refid="2676" relation="include">
+        </childnode>
+        <childnode refid="2678" relation="include">
+        </childnode>
+        <childnode refid="2680" relation="include">
+        </childnode>
+        <childnode refid="2686" relation="include">
+        </childnode>
+        <childnode refid="2688" relation="include">
+        </childnode>
+        <childnode refid="2690" relation="include">
+        </childnode>
+        <childnode refid="2692" relation="include">
+        </childnode>
+        <childnode refid="2694" relation="include">
+        </childnode>
+      </node>
+      <node id="2672">
+        <label>MyGraphics/Source/RootBeerFloatsCan.h</label>
+        <link refid="RootBeerFloatsCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2673" relation="include">
+        </childnode>
+      </node>
+      <node id="2685">
+        <label>MyGraphics/Source/Character.cpp</label>
+        <link refid="Character_8cpp"/>
+      </node>
+      <node id="2648">
+        <label>MyGraphics/Source/EasterEgg2.h</label>
+        <link refid="EasterEgg2_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2649" relation="include">
+        </childnode>
+      </node>
+      <node id="2694">
+        <label>MyGraphics/Source/Winebottle5.h</label>
+        <link refid="Winebottle5_8h"/>
+        <childnode refid="2695" relation="include">
+        </childnode>
+      </node>
+      <node id="2656">
+        <label>MyGraphics/Source/SardineCan.h</label>
+        <link refid="SardineCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2657" relation="include">
+        </childnode>
+      </node>
+      <node id="2686">
+        <label>MyGraphics/Source/Winebottle1.h</label>
+        <link refid="Winebottle1_8h"/>
+        <childnode refid="2687" relation="include">
+        </childnode>
+      </node>
+      <node id="2676">
+        <label>MyGraphics/Source/SodaFestCan.h</label>
+        <link refid="SodaFestCan_8h"/>
+        <childnode refid="2632" relation="include">
+        </childnode>
+        <childnode refid="2677" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9b" prot="public" static="no">
+        <name>GEOMETRY_TYPE</name>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba2878c3f79c5be848da1e4e0976c331e4" prot="public">
+          <name>GEO_AXES</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babe164d4412a3e6690f8ce0d550ee8f29" prot="public">
+          <name>GEO_TEXT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5308c9830d6cfd6bec24573b0b26bff1" prot="public">
+          <name>GEO_FRONT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba01efdbb5b878aa8da4973e73ff864c0e" prot="public">
+          <name>GEO_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9c0993145e3b59c4848d3d618c7bfe46" prot="public">
+          <name>GEO_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baba9b35d759909d6bdde25f87abc6756b" prot="public">
+          <name>GEO_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bac3a17d335a44fbb93f72f054a5c4ae7c" prot="public">
+          <name>GEO_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba83e74af580d762ea5a9ad3a7a33b928a" prot="public">
+          <name>GEO_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba520137ecd9798a16e5e306ba273cd317" prot="public">
+          <name>GEO_SUPERMARKET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba48989928cf8cb8cf79b455d3f9c6e43a" prot="public">
+          <name>GEO_STORAGEANDOFFICE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6c05baa52a056b26604a9ce2bdc3cfc5" prot="public">
+          <name>GEO_OFFICECOMPUTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba146832da1b3bd298baf7bda4ae98be8d" prot="public">
+          <name>GEO_FERRIS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba534f96a221d609f973429ebbcd7dfe9e" prot="public">
+          <name>GEO_ATM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba75443a216d94c24d47f85e22eec62b60" prot="public">
+          <name>GEO_PANDACHEESE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6cfb4fc6327a0a15f1199cfb5156c337" prot="public">
+          <name>GEO_BOX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba42b494c27da3a95cce5b1970260044fe" prot="public">
+          <name>GEO_TROLLEY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9a8c1d51131f6cb29c769d15ded00f27" prot="public">
+          <name>GEO_SHELF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8399fd64a5e25900af946b95d5b00f72" prot="public">
+          <name>GEO_CASHIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bacf4d37dca50d169e5a40fdb2410c28f6" prot="public">
+          <name>GEO_DOOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6352c1e8b6eef02372ae45e9b1fe8562" prot="public">
+          <name>GEO_ICEBOX</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa76d79bdbc974e52b4ed4dcfd7227a1d" prot="public">
+          <name>GEO_MEATSHELF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba4dce67d88829c505e3e3c66d57ae41a6" prot="public">
+          <name>GEO_FOODSHELF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9d8b7433286759d1c1a26bad202005eb" prot="public">
+          <name>GEO_SAMPLESTAND</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba96b6d5e97edcbd68d427b6d5b3083b5e" prot="public">
+          <name>GEO_CAN_SARDINE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baedd56a87c6a608ec6bf70f1589f7990f" prot="public">
+          <name>GEO_CAN_PEAS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5e1b254caa2fce048412968f32269cf3" prot="public">
+          <name>GEO_CAN_BROWN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba02c6d00d41deaa7ecdf8b877a82216e4" prot="public">
+          <name>GEO_CAN_TOMATO</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0637459f2471983930fcb0558cc40f37" prot="public">
+          <name>GEO_CAN_BEANS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8f6ad21192e1923b8e334578ace7b98a" prot="public">
+          <name>GEO_CAN_MELON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa6407ec630df461b618d712a4ff632d0" prot="public">
+          <name>GEO_CAN_VARGA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baaeb8fa428b394d2e3a94d78b98f1ffbb" prot="public">
+          <name>GEO_CAN_BRAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0fe333a6335f8d246fe61986e588d15a" prot="public">
+          <name>GEO_CAN_SODA</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba31bb7f2732ea6c5b7fa1e5b0bc44fc56" prot="public">
+          <name>GEO_CAN_GLUWATER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba534da5f5e580db2aa1a96c4fe05c2d08" prot="public">
+          <name>GEO_CAN_ROOTBEERFLOATS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba90dc1c3f94de12a2686b469c50518b66" prot="public">
+          <name>GEO_CAN_MTNDEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6eaafd3f149315a9c523fcfa03173e63" prot="public">
+          <name>GEO_CAN_SODAFEST</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baab99a291969768cc1c68c5319ee9b93c" prot="public">
+          <name>GEO_CAN_REDMONSTER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bae8d4b2110ca6beddd90e6ddc1a5eb2b3" prot="public">
+          <name>GEO_CAN_HUMANS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6f177389dd43c32213bd101fca51cbfc" prot="public">
+          <name>GEO_CEREAL_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba480d25c0449ec8ed5e25c91fed0e26af" prot="public">
+          <name>GEO_CEREAL_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bac7c9e0b5fe6aeb2e0d911fb614381bfc" prot="public">
+          <name>GEO_CEREAL_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bade35668e5b505d89453afe5f80fb2c07" prot="public">
+          <name>GEO_CEREAL_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba98a9208d9bc149eb2170c12a33b907f0" prot="public">
+          <name>GEO_CEREAL_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5d73273260fb5f9210dc014321b38ae3" prot="public">
+          <name>GEO_EASTEREGG_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba627db85a20a8c8467f9f270c959de563" prot="public">
+          <name>GEO_EASTEREGG_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafafb563abac40e1986d3d1a1a395988e" prot="public">
+          <name>GEO_EASTEREGG_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafe63e5b6671efa0f479cf80479c7757f" prot="public">
+          <name>GEO_EASTEREGG_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba714addc72cc8932ed71f7aaf1562f5b4" prot="public">
+          <name>GEO_EASTEREGG_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa07de60d3f7124b12216f2b08765b870" prot="public">
+          <name>GEO_EASTEREGG_6</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf7c59f551d0adfc1a9a1c4806a19cc03" prot="public">
+          <name>GEO_WINEBOTTLE_1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baec10f0401ff5e0c47d0de60ab4102874" prot="public">
+          <name>GEO_WINEBOTTLE_2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8fbc29434b0b445ba409116c480d1fa6" prot="public">
+          <name>GEO_WINEBOTTLE_3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafa0bc1baa8345bad55ee67a2fa4621b8" prot="public">
+          <name>GEO_WINEBOTTLE_4</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba16f85ee2969487811db43ed3e73cb2ff" prot="public">
+          <name>GEO_WINEBOTTLE_5</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf6e5e7067cbc8d9775f46bbe2c96c725" prot="public">
+          <name>GEO_CAGE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba7d4eb67003e306e96f2120532e7b8dc2" prot="public">
+          <name>GEO_CAGEWALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba44443f577bfbccbde0b587767adc3594" prot="public">
+          <name>GEO_BUILDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba07101e61381cbdcd072ea39bb1903144" prot="public">
+          <name>GEO_FENCE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba180085cdb17944b0d88bb6bfc7ea171f" prot="public">
+          <name>GEO_ELEVATOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba05d524c1f06075b903f5e40fdec24c7d" prot="public">
+          <name>GEO_ELEVATORDOOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba39f6c1b312fbea717e7a003277bb9eaf" prot="public">
+          <name>GEO_HANDS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baad4cae3110185bf612d3c98505015375" prot="public">
+          <name>GEO_UI_SCREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba48d3bc31a9d0ecb7471f08c4a8e67691" prot="public">
+          <name>GEO_CASHIER_LEGANDFEET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba817c9443c79e8ca2c81586a856020769" prot="public">
+          <name>GEO_CASHIER_HEADBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba70d8ea6dc60744470b4f0f49f39bcee1" prot="public">
+          <name>GEO_CASHIER_ARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba29599679b26f4b81434f3b8fffbbcad6" prot="public">
+          <name>GEO_DRUNKMAN_LEGANDFEET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba3365fd7ce62ab0683a4b5d55b76e0938" prot="public">
+          <name>GEO_DRUNKMAN_HEADBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba70f3998c648c81add442b2f924aa6f40" prot="public">
+          <name>GEO_DRUNKMAN_ARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa356ba95b361490ba24611be85588df8" prot="public">
+          <name>GEO_LOGISTICSTAFF_LEGANDFEET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba78211b0392881e121e1da8d47ccebe9a" prot="public">
+          <name>GEO_LOGISTICSTAFF_HEADBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9baccbe1faf05aed17bd4dd66d30385a" prot="public">
+          <name>GEO_LOGISTICSTAFF_ARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba005f4e634e4e185da216d1993c0d6491" prot="public">
+          <name>GEO_NormalNpc1_LEGANDFEET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bab66148267f9593f4a1bd452cfef4cece" prot="public">
+          <name>GEO_NormalNpc1_HEADBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba99e89f8f9ea95d2908f1f7cd0211217b" prot="public">
+          <name>GEO_NormalNpc1_ARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bab64a5456288ee6399df1513b242a07a4" prot="public">
+          <name>GEO_NormalNpc2_LEGANDFEET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba22e069b1b352177efd2a37dbb6be8865" prot="public">
+          <name>GEO_NormalNpc2_HEADBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba28f9181bd6c767c56bce540a571d5458" prot="public">
+          <name>GEO_NormalNpc2_ARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba7e98e5316622201850ff09d7b1e5fe05" prot="public">
+          <name>GEO_GHOSTNPC_LEGANDFEET</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0d361f59efda5590936f916794480113" prot="public">
+          <name>GEO_GHOSTNPC_HEADANDBODY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba249c78cd4bcfeaf030889c6d13d38a67" prot="public">
+          <name>GEO_GHOSTNPC_ARM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba85ec6d3af4d464b66bc58f3296e20024" prot="public">
+          <name>GEO_ITEM_SELECT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba2adc54e3c19aeef77550f29f2cc43dbc" prot="public">
+          <name>GEO_MAIN_MENU_TITLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf79dad95903b8ba570fda1e9112458ce" prot="public">
+          <name>GEO_GABEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba49476ad550ed27dca333e77c10e81db2" prot="public">
+          <name>GEO_BALL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babc44a199ce2574bf7d76285206458da8" prot="public">
+          <name>NUM_GEOMETRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="5" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="4" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0" prot="public" static="no">
+        <name>ROW_TYPE</name>
+        <enumvalue id="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a87d168ff84831413c5ff16bd44a4fbdd" prot="public">
+          <name>ROW_TOP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a38b7e819dd239647e2f11d374a7b46c0" prot="public">
+          <name>ROW_MIDDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0ab231ddc0c909c10ba7bb24f6addbeabb" prot="public">
+          <name>ROW_BOTTOM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a41318db207ddb441a743db8cea4bb7a7" prot="public">
+          <name>NUM_ROW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="99" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="98" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffa" prot="public" static="no">
+        <name>UNIFORM_TYPE</name>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa52f9884acb9d0fa6d2abb5b92ddeb88f" prot="public">
+          <name>U_MVP</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa17cddf40f320ae2cce269d40f074aef5" prot="public">
+          <name>U_MODELVIEW</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa6673c018c9fbe50686865f33efe9036a" prot="public">
+          <name>U_MODELVIEW_INVERSE_TRANSPOSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaca6678b18c8f9404917e4139e41008ce" prot="public">
+          <name>U_MATERIAL_AMBIENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac28e3a8066d66313ff1fd6758ddbce04" prot="public">
+          <name>U_MATERIAL_DIFFUSE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaad39177242e92b671e1d032f86176adcb" prot="public">
+          <name>U_MATERIAL_SPECULAR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa23d68fefc65425dc420eb0d3f0b93a2e" prot="public">
+          <name>U_MATERIAL_SHININESS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa2e694d468bf3c5ecc486f44a230c2990" prot="public">
+          <name>U_LIGHT0_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaccda2795ed027d40d2d6e0f21cf47ee6" prot="public">
+          <name>U_LIGHT0_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab941188f7de11fbb1cdfe106d32d4278" prot="public">
+          <name>U_LIGHT0_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaae23d353e44b7f12ee0524e757fdea973" prot="public">
+          <name>U_LIGHT0_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac7b72e5febc72252f2de0edac479cb59" prot="public">
+          <name>U_LIGHT0_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa62d42901221b89ceaaebccc8649fc6df" prot="public">
+          <name>U_LIGHT0_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab86ac2b4a8fc364f4a43b45dd5317cf5" prot="public">
+          <name>U_LIGHT0_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa1819ecf58a58309d16f55ed97762e0d6" prot="public">
+          <name>U_LIGHTENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac4f41e4d3ee78d1ecb25316eaf970a23" prot="public">
+          <name>U_LIGHT0_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab43e6eb0e10622ef2c5984c051a409ec" prot="public">
+          <name>U_LIGHT0_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa56c1cd66020b2e1cd7ebe3e5edeaa8db" prot="public">
+          <name>U_LIGHT0_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa6945093aecc679cf991ace7f7e684094" prot="public">
+          <name>U_LIGHT0_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaa89d545ba0759e4f940cfbebdfe4cba4" prot="public">
+          <name>U_LIGHT1_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac9baf5a4895856ffbe1bac48a31bd849" prot="public">
+          <name>U_LIGHT1_TYPE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa794bc14bae964582d27ff76262f5fb69" prot="public">
+          <name>U_LIGHT1_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa5f48bd7e47e20f2ff589a5c82d2f15e3" prot="public">
+          <name>U_LIGHT1_POWER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaadf88ef48a94cddcaaed02f2d5cc304a8" prot="public">
+          <name>U_LIGHT1_KC</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa35955a8761946acea42caa06fa2ef867" prot="public">
+          <name>U_LIGHT1_KL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaad5cacb3b069eb8f773d9076033582c61" prot="public">
+          <name>U_LIGHT1_KQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab19c53d89a4454de1fde4fde8922d88c" prot="public">
+          <name>U_LIGHT1_SPOTDIRECTION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa7bdaf89763cf1abedcf8525c3f1fb459" prot="public">
+          <name>U_LIGHT1_COSCUTOFF</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaacf301d8848407fdde3e0c504ce688240" prot="public">
+          <name>U_LIGHT1_COSINNER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf5f8bd9ff14b2134dc7fea9dec1c1159" prot="public">
+          <name>U_LIGHT1_EXPONENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf5273039807388092a474504dc0ee020" prot="public">
+          <name>U_NUMLIGHTS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaae2211ea661b4246b9a30d6cff1af4c0a" prot="public">
+          <name>U_COLOR_TEXTURE_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaccdb80dc5f13886287f26348dbde1471" prot="public">
+          <name>U_COLOR_TEXTURE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf48bbdc7547636300242fa45fbbefb33" prot="public">
+          <name>U_TEXT_ENABLED</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa027480679618ebb72102a47b4fd03b9a" prot="public">
+          <name>U_TEXT_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac65d323f9c9bb38164694d2e82db4d01" prot="public">
+          <name>U_TOTAL</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="106" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="105" bodyend="147"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492" prot="public" static="no">
+        <name>CHARACTER_JOB</name>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a89e5369287ce98ae8a5eac71a97ece94" prot="public">
+          <name>DRUNKMAN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aac87e50c9deed5af3966a133a65ea6ef" prot="public">
+          <name>CASHIER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a50aa59cff9478ba0494e81fee66da287" prot="public">
+          <name>CUSTOMER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a535113d9a5b495bf3dec238dd4e7b0fe" prot="public">
+          <name>PART_TIME_WORKER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a3552eb62a6b86993b99054cbff2c5742" prot="public">
+          <name>TUG_OF_WAR_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492ac234a5c5c541e74e217b530dc787401c" prot="public">
+          <name>WALKING_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492abd81a4bc604a49115c999267ad312416" prot="public">
+          <name>WALKING_GUY_OUTSIDE_Z</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a199636539198b679439fba399e89cb7b" prot="public">
+          <name>WALKING_GUY_OUTSIDE_X</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a1b7ff4e00995a5c8a8723e8f1bd9172a" prot="public">
+          <name>LOOKING_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492afc6f0f0c5f85b8b0f2e7bce92508375c" prot="public">
+          <name>GHOST_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a0c09ccca0d7d28dab4161a93876b2a84" prot="public">
+          <name>CHATTING_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492af2f81a988fb0bd7e0a740ec7951d5c54" prot="public">
+          <name>EASTER_EGG_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a80f1c8ee476a08d0636621a4a2654547" prot="public">
+          <name>IDLE_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a817518833e933335c04648f8ff507313" prot="public">
+          <name>SHOPPERS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aa5c3803dc4efe2e76dc9e894f60a9266" prot="public">
+          <name>BUILDING_GUY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aca95bbb8dca082d2a07bc192130b1868" prot="public">
+          <name>NUM_JOB</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="149" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="148" bodyend="168"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20d" prot="public" static="no">
+        <name>CHARACTER_STATE</name>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daaade5e53e88cf231292cd1142cce2afe" prot="public">
+          <name>STATE_IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da43fe075058a378f6cf86d1a868f99d32" prot="public">
+          <name>STATE_FORWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daa6955d1d58ca6b3db6f5c93c0e40072d" prot="public">
+          <name>STATE_LEFT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da8e02a8d30cb7a91d213a07f0d8539303" prot="public">
+          <name>STATE_BACKWARD</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daee6a2c4a8dec493be7584fa69bf55fd6" prot="public">
+          <name>STATE_JUMP</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daa47c9106173566634a6ff6d6d93f27a6" prot="public">
+          <name>STATE_RIGHT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da6b62d5d57b9299b089eca690be591a46" prot="public">
+          <name>STATE_INTOBUILDING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da5f1f347a14f3373f19eb61973636f1a6" prot="public">
+          <name>STATE_ACTIVE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da55b2d370d0e44fc0c226133db91222fc" prot="public">
+          <name>STATE_REACTIVATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da69f2e4c341a631b2553a755d312b6836" prot="public">
+          <name>NUM_STATE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="170" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="169" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3" prot="public" static="no">
+        <name>ANIMATION_TYPE</name>
+        <enumvalue id="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3afd6a0e4343048b10646dd2976cc5ad18" prot="public">
+          <name>IDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3a7f92908f6f669259d971b608823d2ebb" prot="public">
+          <name>WALKING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3a1061be6c3fb88d32829cba6f6b2be304" prot="public">
+          <name>RUNNING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="183" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="182" bodyend="187"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a8d9001899658846e2259de46519b85fe" prot="public" static="no">
+        <name>PLAY_SCENARIO</name>
+        <enumvalue id="DefineEnum_8h_1a8d9001899658846e2259de46519b85fea5cd8d218d3d376b6f3d14a6c21d0aa6a" prot="public">
+          <name>PLAY_FREE_ROAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8d9001899658846e2259de46519b85fea3041a10b23a686dcfd89a57991d5c74d" prot="public">
+          <name>PLAY_TREASURE_HUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8d9001899658846e2259de46519b85feaa1b33c2152fec4e0d58492b3d8775e9f" prot="public">
+          <name>PLAY_EASTER_EGG</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8d9001899658846e2259de46519b85feaf4609ae051d87e9e5e6eef3ee0e1381d" prot="public">
+          <name>NUM_PLAY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="189" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="188" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4b" prot="public" static="no">
+        <name>DRUNKAI_STATE</name>
+        <enumvalue id="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4badfd4ddb1148545afd16d9dc6ef273008" prot="public">
+          <name>DRUNKIDLE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4ba0b3d81739ffce47531eee522883ae075" prot="public">
+          <name>DRUNKCARRY</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4baef2ef17e7c7ccb69f6bebc684fadbb49" prot="public">
+          <name>DRUNKOUTSIDE</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4babc1781c131d82f2c1a7f6300f63d24b0" prot="public">
+          <name>NUM_AI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="196" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="195" bodyend="201"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995" prot="public" static="no">
+        <name>CASHIERAI_STATE</name>
+        <enumvalue id="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995afc0feec48fcdd55cb547d1dfa84a151e" prot="public">
+          <name>LOOKATCUSTOMER</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a3d8106cc7abe580b5dbb494bfc5ac43c" prot="public">
+          <name>LOOKATSCREEN</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a0fefb2b3405886fe9972a93dc1f0773a" prot="public">
+          <name>LOOKATITEM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a0412a145e731fa6cb286ce81e706741e" prot="public">
+          <name>NUM_CAI</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="203" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="202" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3ea" prot="public" static="no">
+        <name>GAME_STATE</name>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaac22743f1fc74de09544ecc9bab74a17b" prot="public">
+          <name>MAIN_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaaeffea8f1acf80a6b50f473a9cf630e37" prot="public">
+          <name>SUB_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaad25a5fc91409aa86f97a0c1d48f4b2a3" prot="public">
+          <name>INSTRUCTION_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa24915ae526675a41cfb378d20b1513f6" prot="public">
+          <name>PAUSE_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa1d1b2fc4c3f41a0470c05e6f30f144a6" prot="public">
+          <name>GAME_PLAYING</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa012626b265d66360c10923b521c7ee9c" prot="public">
+          <name>WIN_LOSE_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa63c3afd551faca3ed9b70a4ba0cc5d98" prot="public">
+          <name>NUM_MENU</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="211" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="210" bodyend="219"/>
+      </memberdef>
+      <memberdef kind="enum" id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2" prot="public" static="no">
+        <name>MENU_BUTTONS</name>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2ae9cc1cda766decf12c9f739f15775c40" prot="public">
+          <name>MENU_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a136e8d4403eeb882dea97256279da88e" prot="public">
+          <name>MENU_INSTRUCTIONS</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2ab2dd60772d55c02b2e7915b858ac6e44" prot="public">
+          <name>MENU_EXIT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a1e3e43f89ac05a6b23c00f8908339073" prot="public">
+          <name>MENU_FREE_ROAM</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a4a468ce51d5861ea6ea52817cf0cb1b4" prot="public">
+          <name>MENU_TREASURE_HUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2aaae78b1c7cb9a930e2337ae3cdf5f82d" prot="public">
+          <name>MENU_EASTER_EGG_HUNT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2aaa605e9c1f0d672bba30abb0b02a066d" prot="public">
+          <name>MENU_RESUME</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a342928a9e737978a667fd700446db98c" prot="public">
+          <name>MENU_BACK</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a8bd8f04b6b94253ba35b02bc07cb868e" prot="public">
+          <name>NUM_BUTTON</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" line="221" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h" bodystart="220" bodyend="231"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_DEFINE_ENUM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_DEFINE_ENUM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9b" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="6" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba2878c3f79c5be848da1e4e0976c331e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba2878c3f79c5be848da1e4e0976c331e4" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="7" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babe164d4412a3e6690f8ce0d550ee8f29" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babe164d4412a3e6690f8ce0d550ee8f29" kindref="member">GEO_TEXT</ref>,<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5308c9830d6cfd6bec24573b0b26bff1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5308c9830d6cfd6bec24573b0b26bff1" kindref="member">GEO_FRONT</ref>,</highlight></codeline>
+<codeline lineno="9" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba01efdbb5b878aa8da4973e73ff864c0e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba01efdbb5b878aa8da4973e73ff864c0e" kindref="member">GEO_BOTTOM</ref>,</highlight></codeline>
+<codeline lineno="10" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9c0993145e3b59c4848d3d618c7bfe46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9c0993145e3b59c4848d3d618c7bfe46" kindref="member">GEO_BACK</ref>,</highlight></codeline>
+<codeline lineno="11" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baba9b35d759909d6bdde25f87abc6756b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baba9b35d759909d6bdde25f87abc6756b" kindref="member">GEO_TOP</ref>,</highlight></codeline>
+<codeline lineno="12" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bac3a17d335a44fbb93f72f054a5c4ae7c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bac3a17d335a44fbb93f72f054a5c4ae7c" kindref="member">GEO_LEFT</ref>,</highlight></codeline>
+<codeline lineno="13" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba83e74af580d762ea5a9ad3a7a33b928a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba83e74af580d762ea5a9ad3a7a33b928a" kindref="member">GEO_RIGHT</ref>,</highlight></codeline>
+<codeline lineno="14" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba520137ecd9798a16e5e306ba273cd317" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba520137ecd9798a16e5e306ba273cd317" kindref="member">GEO_SUPERMARKET</ref>,</highlight></codeline>
+<codeline lineno="15" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba48989928cf8cb8cf79b455d3f9c6e43a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba48989928cf8cb8cf79b455d3f9c6e43a" kindref="member">GEO_STORAGEANDOFFICE</ref>,</highlight></codeline>
+<codeline lineno="16" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6c05baa52a056b26604a9ce2bdc3cfc5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6c05baa52a056b26604a9ce2bdc3cfc5" kindref="member">GEO_OFFICECOMPUTER</ref>,</highlight></codeline>
+<codeline lineno="17" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba146832da1b3bd298baf7bda4ae98be8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba146832da1b3bd298baf7bda4ae98be8d" kindref="member">GEO_FERRIS</ref>,</highlight></codeline>
+<codeline lineno="18" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba534f96a221d609f973429ebbcd7dfe9e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba534f96a221d609f973429ebbcd7dfe9e" kindref="member">GEO_ATM</ref>,</highlight></codeline>
+<codeline lineno="19" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba75443a216d94c24d47f85e22eec62b60" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba75443a216d94c24d47f85e22eec62b60" kindref="member">GEO_PANDACHEESE</ref>,</highlight></codeline>
+<codeline lineno="20" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6cfb4fc6327a0a15f1199cfb5156c337" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6cfb4fc6327a0a15f1199cfb5156c337" kindref="member">GEO_BOX</ref>,</highlight></codeline>
+<codeline lineno="21" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba42b494c27da3a95cce5b1970260044fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba42b494c27da3a95cce5b1970260044fe" kindref="member">GEO_TROLLEY</ref>,</highlight></codeline>
+<codeline lineno="22" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9a8c1d51131f6cb29c769d15ded00f27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9a8c1d51131f6cb29c769d15ded00f27" kindref="member">GEO_SHELF</ref>,</highlight></codeline>
+<codeline lineno="23" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8399fd64a5e25900af946b95d5b00f72" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8399fd64a5e25900af946b95d5b00f72" kindref="member">GEO_CASHIER</ref>,</highlight></codeline>
+<codeline lineno="24" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bacf4d37dca50d169e5a40fdb2410c28f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bacf4d37dca50d169e5a40fdb2410c28f6" kindref="member">GEO_DOOR</ref>,</highlight></codeline>
+<codeline lineno="25" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6352c1e8b6eef02372ae45e9b1fe8562" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6352c1e8b6eef02372ae45e9b1fe8562" kindref="member">GEO_ICEBOX</ref>,</highlight></codeline>
+<codeline lineno="26" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa76d79bdbc974e52b4ed4dcfd7227a1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa76d79bdbc974e52b4ed4dcfd7227a1d" kindref="member">GEO_MEATSHELF</ref>,</highlight></codeline>
+<codeline lineno="27" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba4dce67d88829c505e3e3c66d57ae41a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba4dce67d88829c505e3e3c66d57ae41a6" kindref="member">GEO_FOODSHELF</ref>,</highlight></codeline>
+<codeline lineno="28" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9d8b7433286759d1c1a26bad202005eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9d8b7433286759d1c1a26bad202005eb" kindref="member">GEO_SAMPLESTAND</ref>,</highlight></codeline>
+<codeline lineno="29" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba96b6d5e97edcbd68d427b6d5b3083b5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba96b6d5e97edcbd68d427b6d5b3083b5e" kindref="member">GEO_CAN_SARDINE</ref>,</highlight></codeline>
+<codeline lineno="30" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baedd56a87c6a608ec6bf70f1589f7990f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baedd56a87c6a608ec6bf70f1589f7990f" kindref="member">GEO_CAN_PEAS</ref>,</highlight></codeline>
+<codeline lineno="31" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5e1b254caa2fce048412968f32269cf3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5e1b254caa2fce048412968f32269cf3" kindref="member">GEO_CAN_BROWN</ref>,</highlight></codeline>
+<codeline lineno="32" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba02c6d00d41deaa7ecdf8b877a82216e4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba02c6d00d41deaa7ecdf8b877a82216e4" kindref="member">GEO_CAN_TOMATO</ref>,</highlight></codeline>
+<codeline lineno="33" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0637459f2471983930fcb0558cc40f37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0637459f2471983930fcb0558cc40f37" kindref="member">GEO_CAN_BEANS</ref>,</highlight></codeline>
+<codeline lineno="34" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8f6ad21192e1923b8e334578ace7b98a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8f6ad21192e1923b8e334578ace7b98a" kindref="member">GEO_CAN_MELON</ref>,</highlight></codeline>
+<codeline lineno="35" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa6407ec630df461b618d712a4ff632d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa6407ec630df461b618d712a4ff632d0" kindref="member">GEO_CAN_VARGA</ref>,</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//========New<sp/>Can===========</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baaeb8fa428b394d2e3a94d78b98f1ffbb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baaeb8fa428b394d2e3a94d78b98f1ffbb" kindref="member">GEO_CAN_BRAN</ref>,</highlight></codeline>
+<codeline lineno="38" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0fe333a6335f8d246fe61986e588d15a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0fe333a6335f8d246fe61986e588d15a" kindref="member">GEO_CAN_SODA</ref>,</highlight></codeline>
+<codeline lineno="39" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba31bb7f2732ea6c5b7fa1e5b0bc44fc56" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba31bb7f2732ea6c5b7fa1e5b0bc44fc56" kindref="member">GEO_CAN_GLUWATER</ref>,</highlight></codeline>
+<codeline lineno="40" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba534da5f5e580db2aa1a96c4fe05c2d08" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba534da5f5e580db2aa1a96c4fe05c2d08" kindref="member">GEO_CAN_ROOTBEERFLOATS</ref>,</highlight></codeline>
+<codeline lineno="41" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba90dc1c3f94de12a2686b469c50518b66" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba90dc1c3f94de12a2686b469c50518b66" kindref="member">GEO_CAN_MTNDEW</ref>,</highlight></codeline>
+<codeline lineno="42" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6eaafd3f149315a9c523fcfa03173e63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6eaafd3f149315a9c523fcfa03173e63" kindref="member">GEO_CAN_SODAFEST</ref>,</highlight></codeline>
+<codeline lineno="43" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baab99a291969768cc1c68c5319ee9b93c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baab99a291969768cc1c68c5319ee9b93c" kindref="member">GEO_CAN_REDMONSTER</ref>,</highlight></codeline>
+<codeline lineno="44" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bae8d4b2110ca6beddd90e6ddc1a5eb2b3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bae8d4b2110ca6beddd90e6ddc1a5eb2b3" kindref="member">GEO_CAN_HUMANS</ref>,</highlight></codeline>
+<codeline lineno="45" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6f177389dd43c32213bd101fca51cbfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba6f177389dd43c32213bd101fca51cbfc" kindref="member">GEO_CEREAL_1</ref>,</highlight></codeline>
+<codeline lineno="46" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba480d25c0449ec8ed5e25c91fed0e26af" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba480d25c0449ec8ed5e25c91fed0e26af" kindref="member">GEO_CEREAL_2</ref>,</highlight></codeline>
+<codeline lineno="47" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bac7c9e0b5fe6aeb2e0d911fb614381bfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bac7c9e0b5fe6aeb2e0d911fb614381bfc" kindref="member">GEO_CEREAL_3</ref>,</highlight></codeline>
+<codeline lineno="48" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bade35668e5b505d89453afe5f80fb2c07" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bade35668e5b505d89453afe5f80fb2c07" kindref="member">GEO_CEREAL_4</ref>,</highlight></codeline>
+<codeline lineno="49" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba98a9208d9bc149eb2170c12a33b907f0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba98a9208d9bc149eb2170c12a33b907f0" kindref="member">GEO_CEREAL_5</ref>,</highlight></codeline>
+<codeline lineno="50" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5d73273260fb5f9210dc014321b38ae3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba5d73273260fb5f9210dc014321b38ae3" kindref="member">GEO_EASTEREGG_1</ref>,</highlight></codeline>
+<codeline lineno="51" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba627db85a20a8c8467f9f270c959de563" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba627db85a20a8c8467f9f270c959de563" kindref="member">GEO_EASTEREGG_2</ref>,</highlight></codeline>
+<codeline lineno="52" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafafb563abac40e1986d3d1a1a395988e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafafb563abac40e1986d3d1a1a395988e" kindref="member">GEO_EASTEREGG_3</ref>,</highlight></codeline>
+<codeline lineno="53" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafe63e5b6671efa0f479cf80479c7757f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafe63e5b6671efa0f479cf80479c7757f" kindref="member">GEO_EASTEREGG_4</ref>,</highlight></codeline>
+<codeline lineno="54" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba714addc72cc8932ed71f7aaf1562f5b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba714addc72cc8932ed71f7aaf1562f5b4" kindref="member">GEO_EASTEREGG_5</ref>,</highlight></codeline>
+<codeline lineno="55" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa07de60d3f7124b12216f2b08765b870" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa07de60d3f7124b12216f2b08765b870" kindref="member">GEO_EASTEREGG_6</ref>,</highlight></codeline>
+<codeline lineno="56" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf7c59f551d0adfc1a9a1c4806a19cc03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf7c59f551d0adfc1a9a1c4806a19cc03" kindref="member">GEO_WINEBOTTLE_1</ref>,</highlight></codeline>
+<codeline lineno="57" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baec10f0401ff5e0c47d0de60ab4102874" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baec10f0401ff5e0c47d0de60ab4102874" kindref="member">GEO_WINEBOTTLE_2</ref>,</highlight></codeline>
+<codeline lineno="58" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8fbc29434b0b445ba409116c480d1fa6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba8fbc29434b0b445ba409116c480d1fa6" kindref="member">GEO_WINEBOTTLE_3</ref>,</highlight></codeline>
+<codeline lineno="59" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafa0bc1baa8345bad55ee67a2fa4621b8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bafa0bc1baa8345bad55ee67a2fa4621b8" kindref="member">GEO_WINEBOTTLE_4</ref>,</highlight></codeline>
+<codeline lineno="60" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba16f85ee2969487811db43ed3e73cb2ff" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba16f85ee2969487811db43ed3e73cb2ff" kindref="member">GEO_WINEBOTTLE_5</ref>,</highlight></codeline>
+<codeline lineno="61" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf6e5e7067cbc8d9775f46bbe2c96c725" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf6e5e7067cbc8d9775f46bbe2c96c725" kindref="member">GEO_CAGE</ref>,</highlight></codeline>
+<codeline lineno="62" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba7d4eb67003e306e96f2120532e7b8dc2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba7d4eb67003e306e96f2120532e7b8dc2" kindref="member">GEO_CAGEWALL</ref>,</highlight></codeline>
+<codeline lineno="63" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba44443f577bfbccbde0b587767adc3594" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba44443f577bfbccbde0b587767adc3594" kindref="member">GEO_BUILDING</ref>,</highlight></codeline>
+<codeline lineno="64" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba07101e61381cbdcd072ea39bb1903144" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba07101e61381cbdcd072ea39bb1903144" kindref="member">GEO_FENCE</ref>,</highlight></codeline>
+<codeline lineno="65" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba180085cdb17944b0d88bb6bfc7ea171f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba180085cdb17944b0d88bb6bfc7ea171f" kindref="member">GEO_ELEVATOR</ref>,</highlight></codeline>
+<codeline lineno="66" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba05d524c1f06075b903f5e40fdec24c7d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba05d524c1f06075b903f5e40fdec24c7d" kindref="member">GEO_ELEVATORDOOR</ref>,</highlight></codeline>
+<codeline lineno="67" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba39f6c1b312fbea717e7a003277bb9eaf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba39f6c1b312fbea717e7a003277bb9eaf" kindref="member">GEO_HANDS</ref>,</highlight></codeline>
+<codeline lineno="68" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baad4cae3110185bf612d3c98505015375" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baad4cae3110185bf612d3c98505015375" kindref="member">GEO_UI_SCREEN</ref>,</highlight></codeline>
+<codeline lineno="69" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba48d3bc31a9d0ecb7471f08c4a8e67691" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba48d3bc31a9d0ecb7471f08c4a8e67691" kindref="member">GEO_CASHIER_LEGANDFEET</ref>,</highlight></codeline>
+<codeline lineno="70" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba817c9443c79e8ca2c81586a856020769" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba817c9443c79e8ca2c81586a856020769" kindref="member">GEO_CASHIER_HEADBODY</ref>,</highlight></codeline>
+<codeline lineno="71" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba70d8ea6dc60744470b4f0f49f39bcee1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba70d8ea6dc60744470b4f0f49f39bcee1" kindref="member">GEO_CASHIER_ARM</ref>,</highlight></codeline>
+<codeline lineno="73" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba29599679b26f4b81434f3b8fffbbcad6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba29599679b26f4b81434f3b8fffbbcad6" kindref="member">GEO_DRUNKMAN_LEGANDFEET</ref>,</highlight></codeline>
+<codeline lineno="74" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba3365fd7ce62ab0683a4b5d55b76e0938" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba3365fd7ce62ab0683a4b5d55b76e0938" kindref="member">GEO_DRUNKMAN_HEADBODY</ref>,</highlight></codeline>
+<codeline lineno="75" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba70f3998c648c81add442b2f924aa6f40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba70f3998c648c81add442b2f924aa6f40" kindref="member">GEO_DRUNKMAN_ARM</ref>,</highlight></codeline>
+<codeline lineno="77" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa356ba95b361490ba24611be85588df8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baa356ba95b361490ba24611be85588df8" kindref="member">GEO_LOGISTICSTAFF_LEGANDFEET</ref>,</highlight></codeline>
+<codeline lineno="78" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba78211b0392881e121e1da8d47ccebe9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba78211b0392881e121e1da8d47ccebe9a" kindref="member">GEO_LOGISTICSTAFF_HEADBODY</ref>,</highlight></codeline>
+<codeline lineno="79" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9baccbe1faf05aed17bd4dd66d30385a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba9baccbe1faf05aed17bd4dd66d30385a" kindref="member">GEO_LOGISTICSTAFF_ARM</ref>,</highlight></codeline>
+<codeline lineno="81" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba005f4e634e4e185da216d1993c0d6491" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba005f4e634e4e185da216d1993c0d6491" kindref="member">GEO_NormalNpc1_LEGANDFEET</ref>,</highlight></codeline>
+<codeline lineno="82" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bab66148267f9593f4a1bd452cfef4cece" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bab66148267f9593f4a1bd452cfef4cece" kindref="member">GEO_NormalNpc1_HEADBODY</ref>,</highlight></codeline>
+<codeline lineno="83" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba99e89f8f9ea95d2908f1f7cd0211217b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba99e89f8f9ea95d2908f1f7cd0211217b" kindref="member">GEO_NormalNpc1_ARM</ref>,</highlight></codeline>
+<codeline lineno="85" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bab64a5456288ee6399df1513b242a07a4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9bab64a5456288ee6399df1513b242a07a4" kindref="member">GEO_NormalNpc2_LEGANDFEET</ref>,</highlight></codeline>
+<codeline lineno="86" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba22e069b1b352177efd2a37dbb6be8865" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba22e069b1b352177efd2a37dbb6be8865" kindref="member">GEO_NormalNpc2_HEADBODY</ref>,</highlight></codeline>
+<codeline lineno="87" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba28f9181bd6c767c56bce540a571d5458" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba28f9181bd6c767c56bce540a571d5458" kindref="member">GEO_NormalNpc2_ARM</ref>,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*============================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba7e98e5316622201850ff09d7b1e5fe05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba7e98e5316622201850ff09d7b1e5fe05" kindref="member">GEO_GHOSTNPC_LEGANDFEET</ref>,</highlight></codeline>
+<codeline lineno="90" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0d361f59efda5590936f916794480113" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba0d361f59efda5590936f916794480113" kindref="member">GEO_GHOSTNPC_HEADANDBODY</ref>,</highlight></codeline>
+<codeline lineno="91" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba249c78cd4bcfeaf030889c6d13d38a67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba249c78cd4bcfeaf030889c6d13d38a67" kindref="member">GEO_GHOSTNPC_ARM</ref>,</highlight></codeline>
+<codeline lineno="92" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba85ec6d3af4d464b66bc58f3296e20024" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba85ec6d3af4d464b66bc58f3296e20024" kindref="member">GEO_ITEM_SELECT</ref>,</highlight></codeline>
+<codeline lineno="93" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba2adc54e3c19aeef77550f29f2cc43dbc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba2adc54e3c19aeef77550f29f2cc43dbc" kindref="member">GEO_MAIN_MENU_TITLE</ref>,</highlight></codeline>
+<codeline lineno="94" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf79dad95903b8ba570fda1e9112458ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9baf79dad95903b8ba570fda1e9112458ce" kindref="member">GEO_GABEN</ref>,</highlight></codeline>
+<codeline lineno="95" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba49476ad550ed27dca333e77c10e81db2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba49476ad550ed27dca333e77c10e81db2" kindref="member">GEO_BALL</ref>,</highlight></codeline>
+<codeline lineno="96" refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babc44a199ce2574bf7d76285206458da8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babc44a199ce2574bf7d76285206458da8" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="98" refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0" kindref="member">ROW_TYPE</ref></highlight></codeline>
+<codeline lineno="99"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="100" refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a87d168ff84831413c5ff16bd44a4fbdd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a87d168ff84831413c5ff16bd44a4fbdd" kindref="member">ROW_TOP</ref>,</highlight></codeline>
+<codeline lineno="101" refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a38b7e819dd239647e2f11d374a7b46c0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a38b7e819dd239647e2f11d374a7b46c0" kindref="member">ROW_MIDDLE</ref>,</highlight></codeline>
+<codeline lineno="102" refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0ab231ddc0c909c10ba7bb24f6addbeabb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0ab231ddc0c909c10ba7bb24f6addbeabb" kindref="member">ROW_BOTTOM</ref>,</highlight></codeline>
+<codeline lineno="103" refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a41318db207ddb441a743db8cea4bb7a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a2def55fd5f02f42f170b88fc7c0ba4d0a41318db207ddb441a743db8cea4bb7a7" kindref="member">NUM_ROW</ref>,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="105" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffa" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa52f9884acb9d0fa6d2abb5b92ddeb88f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa52f9884acb9d0fa6d2abb5b92ddeb88f" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="108" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa17cddf40f320ae2cce269d40f074aef5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa17cddf40f320ae2cce269d40f074aef5" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="109" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa6673c018c9fbe50686865f33efe9036a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa6673c018c9fbe50686865f33efe9036a" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="110" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaca6678b18c8f9404917e4139e41008ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaca6678b18c8f9404917e4139e41008ce" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="111" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac28e3a8066d66313ff1fd6758ddbce04" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac28e3a8066d66313ff1fd6758ddbce04" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="112" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaad39177242e92b671e1d032f86176adcb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaad39177242e92b671e1d032f86176adcb" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="113" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa23d68fefc65425dc420eb0d3f0b93a2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa23d68fefc65425dc420eb0d3f0b93a2e" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="114" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa2e694d468bf3c5ecc486f44a230c2990" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa2e694d468bf3c5ecc486f44a230c2990" kindref="member">U_LIGHT0_POSITION</ref>,</highlight></codeline>
+<codeline lineno="115" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaccda2795ed027d40d2d6e0f21cf47ee6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaccda2795ed027d40d2d6e0f21cf47ee6" kindref="member">U_LIGHT0_TYPE</ref>,</highlight></codeline>
+<codeline lineno="116" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab941188f7de11fbb1cdfe106d32d4278" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab941188f7de11fbb1cdfe106d32d4278" kindref="member">U_LIGHT0_COLOR</ref>,</highlight></codeline>
+<codeline lineno="117" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaae23d353e44b7f12ee0524e757fdea973" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaae23d353e44b7f12ee0524e757fdea973" kindref="member">U_LIGHT0_POWER</ref>,</highlight></codeline>
+<codeline lineno="118" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac7b72e5febc72252f2de0edac479cb59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac7b72e5febc72252f2de0edac479cb59" kindref="member">U_LIGHT0_KC</ref>,</highlight></codeline>
+<codeline lineno="119" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa62d42901221b89ceaaebccc8649fc6df" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa62d42901221b89ceaaebccc8649fc6df" kindref="member">U_LIGHT0_KL</ref>,</highlight></codeline>
+<codeline lineno="120" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab86ac2b4a8fc364f4a43b45dd5317cf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab86ac2b4a8fc364f4a43b45dd5317cf5" kindref="member">U_LIGHT0_KQ</ref>,</highlight></codeline>
+<codeline lineno="121" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa1819ecf58a58309d16f55ed97762e0d6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa1819ecf58a58309d16f55ed97762e0d6" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="122" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac4f41e4d3ee78d1ecb25316eaf970a23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac4f41e4d3ee78d1ecb25316eaf970a23" kindref="member">U_LIGHT0_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="123" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab43e6eb0e10622ef2c5984c051a409ec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab43e6eb0e10622ef2c5984c051a409ec" kindref="member">U_LIGHT0_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="124" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa56c1cd66020b2e1cd7ebe3e5edeaa8db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa56c1cd66020b2e1cd7ebe3e5edeaa8db" kindref="member">U_LIGHT0_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="125" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa6945093aecc679cf991ace7f7e684094" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa6945093aecc679cf991ace7f7e684094" kindref="member">U_LIGHT0_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaa89d545ba0759e4f940cfbebdfe4cba4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaa89d545ba0759e4f940cfbebdfe4cba4" kindref="member">U_LIGHT1_POSITION</ref>,</highlight></codeline>
+<codeline lineno="128" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac9baf5a4895856ffbe1bac48a31bd849" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac9baf5a4895856ffbe1bac48a31bd849" kindref="member">U_LIGHT1_TYPE</ref>,</highlight></codeline>
+<codeline lineno="129" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa794bc14bae964582d27ff76262f5fb69" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa794bc14bae964582d27ff76262f5fb69" kindref="member">U_LIGHT1_COLOR</ref>,</highlight></codeline>
+<codeline lineno="130" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa5f48bd7e47e20f2ff589a5c82d2f15e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa5f48bd7e47e20f2ff589a5c82d2f15e3" kindref="member">U_LIGHT1_POWER</ref>,</highlight></codeline>
+<codeline lineno="131" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaadf88ef48a94cddcaaed02f2d5cc304a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaadf88ef48a94cddcaaed02f2d5cc304a8" kindref="member">U_LIGHT1_KC</ref>,</highlight></codeline>
+<codeline lineno="132" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa35955a8761946acea42caa06fa2ef867" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa35955a8761946acea42caa06fa2ef867" kindref="member">U_LIGHT1_KL</ref>,</highlight></codeline>
+<codeline lineno="133" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaad5cacb3b069eb8f773d9076033582c61" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaad5cacb3b069eb8f773d9076033582c61" kindref="member">U_LIGHT1_KQ</ref>,</highlight></codeline>
+<codeline lineno="134" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab19c53d89a4454de1fde4fde8922d88c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaab19c53d89a4454de1fde4fde8922d88c" kindref="member">U_LIGHT1_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="135" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa7bdaf89763cf1abedcf8525c3f1fb459" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa7bdaf89763cf1abedcf8525c3f1fb459" kindref="member">U_LIGHT1_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="136" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaacf301d8848407fdde3e0c504ce688240" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaacf301d8848407fdde3e0c504ce688240" kindref="member">U_LIGHT1_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="137" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf5f8bd9ff14b2134dc7fea9dec1c1159" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf5f8bd9ff14b2134dc7fea9dec1c1159" kindref="member">U_LIGHT1_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf5273039807388092a474504dc0ee020" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf5273039807388092a474504dc0ee020" kindref="member">U_NUMLIGHTS</ref>,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>these<sp/>enum<sp/>in<sp/>UNIFORM_TYPE<sp/>before<sp/>U_TOTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaae2211ea661b4246b9a30d6cff1af4c0a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaae2211ea661b4246b9a30d6cff1af4c0a" kindref="member">U_COLOR_TEXTURE_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="142" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaccdb80dc5f13886287f26348dbde1471" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaccdb80dc5f13886287f26348dbde1471" kindref="member">U_COLOR_TEXTURE</ref>,</highlight></codeline>
+<codeline lineno="143" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf48bbdc7547636300242fa45fbbefb33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaaf48bbdc7547636300242fa45fbbefb33" kindref="member">U_TEXT_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="144" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa027480679618ebb72102a47b4fd03b9a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaa027480679618ebb72102a47b4fd03b9a" kindref="member">U_TEXT_COLOR</ref>,</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac65d323f9c9bb38164694d2e82db4d01" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac65d323f9c9bb38164694d2e82db4d01" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="148" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492" kindref="member">CHARACTER_JOB</ref></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a89e5369287ce98ae8a5eac71a97ece94" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a89e5369287ce98ae8a5eac71a97ece94" kindref="member">DRUNKMAN</ref>,</highlight></codeline>
+<codeline lineno="151" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aac87e50c9deed5af3966a133a65ea6ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aac87e50c9deed5af3966a133a65ea6ef" kindref="member">CASHIER</ref>,</highlight></codeline>
+<codeline lineno="152" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a50aa59cff9478ba0494e81fee66da287" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a50aa59cff9478ba0494e81fee66da287" kindref="member">CUSTOMER</ref>,</highlight></codeline>
+<codeline lineno="153" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a535113d9a5b495bf3dec238dd4e7b0fe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a535113d9a5b495bf3dec238dd4e7b0fe" kindref="member">PART_TIME_WORKER</ref>,</highlight></codeline>
+<codeline lineno="154" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a3552eb62a6b86993b99054cbff2c5742" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a3552eb62a6b86993b99054cbff2c5742" kindref="member">TUG_OF_WAR_GUY</ref>,</highlight></codeline>
+<codeline lineno="155" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492ac234a5c5c541e74e217b530dc787401c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492ac234a5c5c541e74e217b530dc787401c" kindref="member">WALKING_GUY</ref>,</highlight></codeline>
+<codeline lineno="156" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492abd81a4bc604a49115c999267ad312416" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492abd81a4bc604a49115c999267ad312416" kindref="member">WALKING_GUY_OUTSIDE_Z</ref>,</highlight></codeline>
+<codeline lineno="157" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a199636539198b679439fba399e89cb7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a199636539198b679439fba399e89cb7b" kindref="member">WALKING_GUY_OUTSIDE_X</ref>,</highlight></codeline>
+<codeline lineno="158" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a1b7ff4e00995a5c8a8723e8f1bd9172a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a1b7ff4e00995a5c8a8723e8f1bd9172a" kindref="member">LOOKING_GUY</ref>,</highlight></codeline>
+<codeline lineno="159" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492afc6f0f0c5f85b8b0f2e7bce92508375c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492afc6f0f0c5f85b8b0f2e7bce92508375c" kindref="member">GHOST_GUY</ref>,</highlight></codeline>
+<codeline lineno="160" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a0c09ccca0d7d28dab4161a93876b2a84" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a0c09ccca0d7d28dab4161a93876b2a84" kindref="member">CHATTING_GUY</ref>,</highlight></codeline>
+<codeline lineno="161" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492af2f81a988fb0bd7e0a740ec7951d5c54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492af2f81a988fb0bd7e0a740ec7951d5c54" kindref="member">EASTER_EGG_GUY</ref>,</highlight></codeline>
+<codeline lineno="162" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a80f1c8ee476a08d0636621a4a2654547" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a80f1c8ee476a08d0636621a4a2654547" kindref="member">IDLE_GUY</ref>,</highlight></codeline>
+<codeline lineno="163" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a817518833e933335c04648f8ff507313" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492a817518833e933335c04648f8ff507313" kindref="member">SHOPPERS</ref>,</highlight></codeline>
+<codeline lineno="164" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aa5c3803dc4efe2e76dc9e894f60a9266" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aa5c3803dc4efe2e76dc9e894f60a9266" kindref="member">BUILDING_GUY</ref>,</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*PEOPLE,</highlight></codeline>
+<codeline lineno="166"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LYINGMAN,*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="167" refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aca95bbb8dca082d2a07bc192130b1868" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1ad2900e1730765d66aeba8fdd277eb492aca95bbb8dca082d2a07bc192130b1868" kindref="member">NUM_JOB</ref>,</highlight></codeline>
+<codeline lineno="168"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="169" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20d" kindref="member">CHARACTER_STATE</ref></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="171" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daaade5e53e88cf231292cd1142cce2afe" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daaade5e53e88cf231292cd1142cce2afe" kindref="member">STATE_IDLE</ref>,</highlight></codeline>
+<codeline lineno="172" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da43fe075058a378f6cf86d1a868f99d32" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da43fe075058a378f6cf86d1a868f99d32" kindref="member">STATE_FORWARD</ref>,</highlight></codeline>
+<codeline lineno="173" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daa6955d1d58ca6b3db6f5c93c0e40072d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daa6955d1d58ca6b3db6f5c93c0e40072d" kindref="member">STATE_LEFT</ref>,</highlight></codeline>
+<codeline lineno="174" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da8e02a8d30cb7a91d213a07f0d8539303" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da8e02a8d30cb7a91d213a07f0d8539303" kindref="member">STATE_BACKWARD</ref>,</highlight></codeline>
+<codeline lineno="175" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daee6a2c4a8dec493be7584fa69bf55fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daee6a2c4a8dec493be7584fa69bf55fd6" kindref="member">STATE_JUMP</ref>,</highlight></codeline>
+<codeline lineno="176" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daa47c9106173566634a6ff6d6d93f27a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20daa47c9106173566634a6ff6d6d93f27a6" kindref="member">STATE_RIGHT</ref>,</highlight></codeline>
+<codeline lineno="177" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da6b62d5d57b9299b089eca690be591a46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da6b62d5d57b9299b089eca690be591a46" kindref="member">STATE_INTOBUILDING</ref>,</highlight></codeline>
+<codeline lineno="178" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da5f1f347a14f3373f19eb61973636f1a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da5f1f347a14f3373f19eb61973636f1a6" kindref="member">STATE_ACTIVE</ref>,</highlight></codeline>
+<codeline lineno="179" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da55b2d370d0e44fc0c226133db91222fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da55b2d370d0e44fc0c226133db91222fc" kindref="member">STATE_REACTIVATE</ref>,</highlight></codeline>
+<codeline lineno="180" refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da69f2e4c341a631b2553a755d312b6836" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a55cc38859369e16d213359bf25c0b20da69f2e4c341a631b2553a755d312b6836" kindref="member">NUM_STATE</ref>,</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="182" refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3" kindref="member">ANIMATION_TYPE</ref></highlight></codeline>
+<codeline lineno="183"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184" refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3afd6a0e4343048b10646dd2976cc5ad18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3afd6a0e4343048b10646dd2976cc5ad18" kindref="member">IDLE</ref>,</highlight></codeline>
+<codeline lineno="185" refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3a7f92908f6f669259d971b608823d2ebb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3a7f92908f6f669259d971b608823d2ebb" kindref="member">WALKING</ref>,</highlight></codeline>
+<codeline lineno="186" refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3a1061be6c3fb88d32829cba6f6b2be304" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3a1061be6c3fb88d32829cba6f6b2be304" kindref="member">RUNNING</ref>,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="188" refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85fe" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85fe" kindref="member">PLAY_SCENARIO</ref></highlight></codeline>
+<codeline lineno="189"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="190" refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85fea5cd8d218d3d376b6f3d14a6c21d0aa6a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85fea5cd8d218d3d376b6f3d14a6c21d0aa6a" kindref="member">PLAY_FREE_ROAM</ref>,</highlight></codeline>
+<codeline lineno="191" refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85fea3041a10b23a686dcfd89a57991d5c74d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85fea3041a10b23a686dcfd89a57991d5c74d" kindref="member">PLAY_TREASURE_HUNT</ref>,</highlight></codeline>
+<codeline lineno="192" refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85feaa1b33c2152fec4e0d58492b3d8775e9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85feaa1b33c2152fec4e0d58492b3d8775e9f" kindref="member">PLAY_EASTER_EGG</ref>,</highlight></codeline>
+<codeline lineno="193" refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85feaf4609ae051d87e9e5e6eef3ee0e1381d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8d9001899658846e2259de46519b85feaf4609ae051d87e9e5e6eef3ee0e1381d" kindref="member">NUM_PLAY</ref>,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="195" refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4b" kindref="member">DRUNKAI_STATE</ref></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="197" refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4badfd4ddb1148545afd16d9dc6ef273008" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4badfd4ddb1148545afd16d9dc6ef273008" kindref="member">DRUNKIDLE</ref>,</highlight></codeline>
+<codeline lineno="198" refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4ba0b3d81739ffce47531eee522883ae075" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4ba0b3d81739ffce47531eee522883ae075" kindref="member">DRUNKCARRY</ref>,</highlight></codeline>
+<codeline lineno="199" refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4baef2ef17e7c7ccb69f6bebc684fadbb49" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4baef2ef17e7c7ccb69f6bebc684fadbb49" kindref="member">DRUNKOUTSIDE</ref>,</highlight></codeline>
+<codeline lineno="200" refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4babc1781c131d82f2c1a7f6300f63d24b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a95b1a3088ad5a6d7f69fe753505f0d4babc1781c131d82f2c1a7f6300f63d24b0" kindref="member">NUM_AI</ref>,</highlight></codeline>
+<codeline lineno="201"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="202" refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995" kindref="member">CASHIERAI_STATE</ref></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="204" refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995afc0feec48fcdd55cb547d1dfa84a151e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995afc0feec48fcdd55cb547d1dfa84a151e" kindref="member">LOOKATCUSTOMER</ref>,</highlight></codeline>
+<codeline lineno="205" refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a3d8106cc7abe580b5dbb494bfc5ac43c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a3d8106cc7abe580b5dbb494bfc5ac43c" kindref="member">LOOKATSCREEN</ref>,</highlight></codeline>
+<codeline lineno="206" refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a0fefb2b3405886fe9972a93dc1f0773a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a0fefb2b3405886fe9972a93dc1f0773a" kindref="member">LOOKATITEM</ref>,</highlight></codeline>
+<codeline lineno="207" refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a0412a145e731fa6cb286ce81e706741e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a5a502b4400d48c7727026d1e5995c995a0412a145e731fa6cb286ce81e706741e" kindref="member">NUM_CAI</ref>,</highlight></codeline>
+<codeline lineno="208"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3ea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3ea" kindref="member">GAME_STATE</ref></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="212" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaac22743f1fc74de09544ecc9bab74a17b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaac22743f1fc74de09544ecc9bab74a17b" kindref="member">MAIN_MENU</ref>,</highlight></codeline>
+<codeline lineno="213" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaaeffea8f1acf80a6b50f473a9cf630e37" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaaeffea8f1acf80a6b50f473a9cf630e37" kindref="member">SUB_MENU</ref>,</highlight></codeline>
+<codeline lineno="214" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaad25a5fc91409aa86f97a0c1d48f4b2a3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaad25a5fc91409aa86f97a0c1d48f4b2a3" kindref="member">INSTRUCTION_MENU</ref>,</highlight></codeline>
+<codeline lineno="215" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa24915ae526675a41cfb378d20b1513f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa24915ae526675a41cfb378d20b1513f6" kindref="member">PAUSE_MENU</ref>,</highlight></codeline>
+<codeline lineno="216" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa1d1b2fc4c3f41a0470c05e6f30f144a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa1d1b2fc4c3f41a0470c05e6f30f144a6" kindref="member">GAME_PLAYING</ref>,</highlight></codeline>
+<codeline lineno="217" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa012626b265d66360c10923b521c7ee9c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa012626b265d66360c10923b521c7ee9c" kindref="member">WIN_LOSE_MENU</ref>,</highlight></codeline>
+<codeline lineno="218" refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa63c3afd551faca3ed9b70a4ba0cc5d98" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a4cc39f049df62b331976f9a4482bd3eaa63c3afd551faca3ed9b70a4ba0cc5d98" kindref="member">NUM_MENU</ref>,</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="220" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2" kindref="member">MENU_BUTTONS</ref></highlight></codeline>
+<codeline lineno="221"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="222" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2ae9cc1cda766decf12c9f739f15775c40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2ae9cc1cda766decf12c9f739f15775c40" kindref="member">MENU_START</ref>,</highlight></codeline>
+<codeline lineno="223" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a136e8d4403eeb882dea97256279da88e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a136e8d4403eeb882dea97256279da88e" kindref="member">MENU_INSTRUCTIONS</ref>,</highlight></codeline>
+<codeline lineno="224" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2ab2dd60772d55c02b2e7915b858ac6e44" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2ab2dd60772d55c02b2e7915b858ac6e44" kindref="member">MENU_EXIT</ref>,</highlight></codeline>
+<codeline lineno="225" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a1e3e43f89ac05a6b23c00f8908339073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a1e3e43f89ac05a6b23c00f8908339073" kindref="member">MENU_FREE_ROAM</ref>,</highlight></codeline>
+<codeline lineno="226" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a4a468ce51d5861ea6ea52817cf0cb1b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a4a468ce51d5861ea6ea52817cf0cb1b4" kindref="member">MENU_TREASURE_HUNT</ref>,</highlight></codeline>
+<codeline lineno="227" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2aaae78b1c7cb9a930e2337ae3cdf5f82d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2aaae78b1c7cb9a930e2337ae3cdf5f82d" kindref="member">MENU_EASTER_EGG_HUNT</ref>,</highlight></codeline>
+<codeline lineno="228" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2aaa605e9c1f0d672bba30abb0b02a066d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2aaa605e9c1f0d672bba30abb0b02a066d" kindref="member">MENU_RESUME</ref>,</highlight></codeline>
+<codeline lineno="229" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a342928a9e737978a667fd700446db98c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a342928a9e737978a667fd700446db98c" kindref="member">MENU_BACK</ref>,</highlight></codeline>
+<codeline lineno="230" refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a8bd8f04b6b94253ba35b02bc07cb868e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="DefineEnum_8h_1a8ea376e912af88a39108d7d2301cafb2a8bd8f04b6b94253ba35b02bc07cb868e" kindref="member">NUM_BUTTON</ref>,</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/DefineEnum.h"/>
+  </compounddef>
+</doxygen>

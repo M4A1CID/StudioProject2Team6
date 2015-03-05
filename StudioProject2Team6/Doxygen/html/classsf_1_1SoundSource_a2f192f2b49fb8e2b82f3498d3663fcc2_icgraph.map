@@ -1,0 +1,17 @@
+<map id="sf::SoundSource::setVolume" name="sf::SoundSource::setVolume">
+<area shape="rect" id="node2" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="297,5,399,32"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a9d736fb66a1ce2d4e102f483f7034ace" title="Updates the &quot;cage&quot; easter egg based on dt. " alt="" coords="270,56,426,83"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="756,284,925,311"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a62815fc7bf3ff5937dc6f7a5f6cd14ff" title="Updates the opening and closing of the front and back doors based on dt. " alt="" coords="519,309,672,336"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a122e2cac2a30e66b0414e618cf546411" title="Updates the movement of the elevator based on dt. " alt="" coords="509,360,681,387"/>
+<area shape="rect" id="node13" href="$classSceneSP.html#a2963d58071297789ad0c567c41dd5dbd" title="Updates the &quot;gabe&quot; easter egg based on dt. " alt="" coords="266,107,430,133"/>
+<area shape="rect" id="node14" href="$classSceneSP.html#a2a3538fcae1edb1cc53f9ea8c1e7897e" title="Updates the miscellaneous easter eggs based on dt. " alt="" coords="241,157,455,184"/>
+<area shape="rect" id="node15" href="$classSceneSP.html#a41d8943d3f6a1c79a52b8875e6ccda67" title="Updates the remaining samples on the sample stand. " alt="" coords="507,411,684,437"/>
+<area shape="rect" id="node16" href="$classSceneSP.html#a8773475b7b228451b8a96aeb1912fb30" title="Updates the &quot;troll&quot; easter egg based on dt. " alt="" coords="273,208,423,235"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="521,56,670,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="743,56,938,83"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="736,107,945,133"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="993,107,1152,133"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1200,157,1327,184"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a5ad62cfa3ac5fe2156a8713ffab6a4dd" title="Updates all easter eggs in the easter egg gamemode. " alt="" coords="503,157,688,184"/>
+</map>

@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1SoundBufferRecorder" kind="class" prot="public">
+    <compoundname>sf::SoundBufferRecorder</compoundname>
+    <basecompoundref refid="classsf_1_1SoundRecorder" prot="public" virt="non-virtual">sf::SoundRecorder</basecompoundref>
+    <includes refid="SoundBufferRecorder_8hpp" local="no">SoundBufferRecorder.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1SoundBufferRecorder_1a87080790cf294e1dc921bb90b7b352bf" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref> &gt;</type>
+        <definition>std::vector&lt;Int16&gt; sf::SoundBufferRecorder::m_samples</definition>
+        <argsstring></argsstring>
+        <name>m_samples</name>
+        <briefdescription>
+<para>Temporary sample buffer to hold the recorded data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="93" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundBufferRecorder_1aacf0812e6e930cbd815073911da4626b" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1SoundBuffer" kindref="compound">SoundBuffer</ref></type>
+        <definition>SoundBuffer sf::SoundBufferRecorder::m_buffer</definition>
+        <argsstring></argsstring>
+        <name>m_buffer</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> buffer that will contain the recorded data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="94" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1SoundBufferRecorder_1a84fd636ad22f434bafe2a7c15a8e5107" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classsf_1_1SoundBuffer" kindref="compound">SoundBuffer</ref> &amp;</type>
+        <definition>const SoundBuffer&amp; sf::SoundBufferRecorder::getBuffer</definition>
+        <argsstring>() const </argsstring>
+        <name>getBuffer</name>
+        <briefdescription>
+<para>Get the sound buffer containing the captured audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para>The sound buffer is valid only after the capture has ended. This function provides a read-only access to the internal sound buffer, but it can be copied if you need to make any modification to it.</para><para><simplesect kind="return"><para>Read-only access to the sound buffer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="59" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsf_1_1SoundBufferRecorder_1a531a7445fc8a48eaf9fc039c83f17c6f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool sf::SoundBufferRecorder::onStart</definition>
+        <argsstring>()</argsstring>
+        <name>onStart</name>
+        <reimplements refid="classsf_1_1SoundRecorder_1a7af418fb036201d3f85745bef78ce77f">onStart</reimplements>
+        <briefdescription>
+<para>Start capturing audio data. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True to start the capture, or false to abort it </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="69" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundBufferRecorder_1a9ceb94de14632ae8c1b78faf603b4767" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool sf::SoundBufferRecorder::onProcessSamples</definition>
+        <argsstring>(const Int16 *samples, std::size_t sampleCount)</argsstring>
+        <name>onProcessSamples</name>
+        <reimplements refid="classsf_1_1SoundRecorder_1a2670124cbe7a87c7e46b4840807f4fd7">onProcessSamples</reimplements>
+        <param>
+          <type>const <ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref> *</type>
+          <declname>samples</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>sampleCount</declname>
+        </param>
+        <briefdescription>
+<para>Process a new chunk of recorded samples. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the new chunk of recorded samples </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of samples pointed by <emphasis>samples</emphasis> </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True to continue the capture, or false to stop it </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="80" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundBufferRecorder_1ab8e53849312413431873a5869d509f1e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void sf::SoundBufferRecorder::onStop</definition>
+        <argsstring>()</argsstring>
+        <name>onStop</name>
+        <reimplements refid="classsf_1_1SoundRecorder_1aefc36138ca1e96c658301280e4a31b64">onStop</reimplements>
+        <briefdescription>
+<para>Stop capturing audio data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="86" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Specialized <ref refid="classsf_1_1SoundRecorder" kindref="compound">SoundRecorder</ref> which stores the captured audio data into a sound buffer. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1SoundBufferRecorder" kindref="compound">sf::SoundBufferRecorder</ref> allows to access a recorded sound through a <ref refid="classsf_1_1SoundBuffer" kindref="compound">sf::SoundBuffer</ref>, so that it can be played, saved to a file, etc.</para><para>It has the same simple interface as its base class (<ref refid="classsf_1_1SoundRecorder_1a715f0fd2f228c83d79aaedca562ae51f" kindref="member">start()</ref>, <ref refid="classsf_1_1SoundRecorder_1a8d9c8346aa9aa409cfed4a1101159c4c" kindref="member">stop()</ref>) and adds a function to retrieve the recorded sound buffer (<ref refid="classsf_1_1SoundBufferRecorder_1a84fd636ad22f434bafe2a7c15a8e5107" kindref="member">getBuffer()</ref>).</para><para>As usual, don&apos;t forget to call the <ref refid="classsf_1_1SoundRecorder_1aab2bd0fee9e48d6cfd449b1cb078ce5a" kindref="member">isAvailable()</ref> function before using this class (see <ref refid="classsf_1_1SoundRecorder" kindref="compound">sf::SoundRecorder</ref> for more details about this).</para><para>Usage example: <programlisting><codeline><highlight class="normal">if<sp/>(sf::SoundBufferRecorder::isAvailable())</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Record<sp/>some<sp/>audio<sp/>data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>sf::SoundBufferRecorder<sp/>recorder;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>recorder.start();</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>recorder.stop();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Get<sp/>the<sp/>buffer<sp/>containing<sp/>the<sp/>captured<sp/>audio<sp/>data</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>const<sp/>sf::SoundBuffer&amp;<sp/>buffer<sp/>=<sp/>recorder.getBuffer();</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Save<sp/>it<sp/>to<sp/>a<sp/>file<sp/>(for<sp/>example...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>buffer.saveToFile(&quot;my_record.ogg&quot;);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classsf_1_1SoundRecorder" kindref="compound">sf::SoundRecorder</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1092">
+        <label>sf::SoundRecorder</label>
+        <link refid="classsf_1_1SoundRecorder"/>
+      </node>
+      <node id="1091">
+        <label>sf::SoundBufferRecorder</label>
+        <link refid="classsf_1_1SoundBufferRecorder"/>
+        <childnode refid="1092" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1097">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="1098" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1099" relation="usage">
+          <edgelabel>m_entryPoint</edgelabel>
+        </childnode>
+        <childnode refid="1100" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+      <node id="1099">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1106">
+        <label>set&lt; Sound * &gt;</label>
+      </node>
+      <node id="1102">
+        <label>string</label>
+      </node>
+      <node id="1095">
+        <label>sf::Time</label>
+        <link refid="classsf_1_1Time"/>
+        <childnode refid="1095" relation="usage">
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+        <childnode refid="1096" relation="usage">
+          <edgelabel>m_microseconds</edgelabel>
+        </childnode>
+      </node>
+      <node id="1094">
+        <label>sf::SoundRecorder</label>
+        <link refid="classsf_1_1SoundRecorder"/>
+        <childnode refid="1095" relation="usage">
+          <edgelabel>m_processingInterval</edgelabel>
+        </childnode>
+        <childnode refid="1097" relation="usage">
+          <edgelabel>m_thread</edgelabel>
+        </childnode>
+        <childnode refid="1101" relation="usage">
+          <edgelabel>m_samples</edgelabel>
+        </childnode>
+        <childnode refid="1102" relation="usage">
+          <edgelabel>m_deviceName</edgelabel>
+        </childnode>
+        <childnode refid="1103" relation="usage">
+          <edgelabel>m_isCapturing</edgelabel>
+        </childnode>
+        <childnode refid="1104" relation="usage">
+          <edgelabel>m_sampleRate</edgelabel>
+        </childnode>
+      </node>
+      <node id="1100">
+        <label>ThreadImpl *</label>
+      </node>
+      <node id="1096">
+        <label>signed long long</label>
+      </node>
+      <node id="1101">
+        <label>vector&lt; Int16 &gt;</label>
+      </node>
+      <node id="1105">
+        <label>sf::SoundBuffer</label>
+        <link refid="classsf_1_1SoundBuffer"/>
+        <childnode refid="1106" relation="usage">
+          <edgelabel>m_sounds</edgelabel>
+        </childnode>
+        <childnode refid="1095" relation="usage">
+          <edgelabel>m_duration</edgelabel>
+        </childnode>
+        <childnode refid="1101" relation="usage">
+          <edgelabel>m_samples</edgelabel>
+        </childnode>
+        <childnode refid="1104" relation="usage">
+          <edgelabel>m_buffer</edgelabel>
+        </childnode>
+      </node>
+      <node id="1104">
+        <label>unsigned</label>
+      </node>
+      <node id="1098">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1103">
+        <label>bool</label>
+      </node>
+      <node id="1093">
+        <label>sf::SoundBufferRecorder</label>
+        <link refid="classsf_1_1SoundBufferRecorder"/>
+        <childnode refid="1094" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1105" relation="usage">
+          <edgelabel>m_buffer</edgelabel>
+        </childnode>
+        <childnode refid="1101" relation="usage">
+          <edgelabel>m_samples</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" line="45" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundBufferRecorder.hpp" bodystart="44" bodyend="95"/>
+    <listofallmembers>
+      <member refid="classsf_1_1SoundRecorder_1a26198c5c11efcd61f426f326fe314afe" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>getAvailableDevices</name></member>
+      <member refid="classsf_1_1SoundBufferRecorder_1a84fd636ad22f434bafe2a7c15a8e5107" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>getBuffer</name></member>
+      <member refid="classsf_1_1SoundRecorder_1ad1d450a80642dab4b632999d72a1bf23" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>getDefaultDevice</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a911218297b0fb5c050b3e34e6ba1d38e" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>getDevice</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a1f3726cbe0a2b2b291b36beea57960d7" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>getSampleRate</name></member>
+      <member refid="classsf_1_1SoundRecorder_1aab2bd0fee9e48d6cfd449b1cb078ce5a" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>isAvailable</name></member>
+      <member refid="classsf_1_1SoundBufferRecorder_1aacf0812e6e930cbd815073911da4626b" prot="private" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>m_buffer</name></member>
+      <member refid="classsf_1_1SoundBufferRecorder_1a87080790cf294e1dc921bb90b7b352bf" prot="private" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>m_samples</name></member>
+      <member refid="classsf_1_1SoundBufferRecorder_1a9ceb94de14632ae8c1b78faf603b4767" prot="protected" virt="virtual"><scope>sf::SoundBufferRecorder</scope><name>onProcessSamples</name></member>
+      <member refid="classsf_1_1SoundBufferRecorder_1a531a7445fc8a48eaf9fc039c83f17c6f" prot="protected" virt="virtual"><scope>sf::SoundBufferRecorder</scope><name>onStart</name></member>
+      <member refid="classsf_1_1SoundBufferRecorder_1ab8e53849312413431873a5869d509f1e" prot="protected" virt="virtual"><scope>sf::SoundBufferRecorder</scope><name>onStop</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a8eb3e473292c16e874322815836d3cd3" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>setDevice</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a64895b20ed32f0e3cfaf0fa331942de6" prot="protected" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>setProcessingInterval</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a50ebad413c4f157408a0fa49f23212a9" prot="protected" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>SoundRecorder</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a715f0fd2f228c83d79aaedca562ae51f" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>start</name></member>
+      <member refid="classsf_1_1SoundRecorder_1a8d9c8346aa9aa409cfed4a1101159c4c" prot="public" virt="non-virtual"><scope>sf::SoundBufferRecorder</scope><name>stop</name></member>
+      <member refid="classsf_1_1SoundRecorder_1acc599e61aaa47edaae88cf43f0a43549" prot="public" virt="virtual"><scope>sf::SoundBufferRecorder</scope><name>~SoundRecorder</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

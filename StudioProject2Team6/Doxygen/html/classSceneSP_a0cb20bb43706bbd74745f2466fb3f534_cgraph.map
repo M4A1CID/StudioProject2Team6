@@ -1,0 +1,11 @@
+<map id="SceneSP::DefineItem" name="SceneSP::DefineItem">
+<area shape="rect" id="node2" href="$classCContainer.html#ab9bf0cf7936e505a400255e265104e94" title="Accessor function for first item stock in container. " alt="" coords="209,5,381,32"/>
+<area shape="rect" id="node3" href="$classCItem.html#a916597368755e28b6edb8af37acc1ad6" title="Accessor function for item geometry type. " alt="" coords="228,56,363,83"/>
+<area shape="rect" id="node4" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="237,107,353,133"/>
+<area shape="rect" id="node5" href="$classCItem.html#a6375bf21ba971d20a25fd8888d083f5a" title="Accessor function for item price. " alt="" coords="239,157,351,184"/>
+<area shape="rect" id="node6" href="$classCContainer.html#a1260c4eb8f72a4529af2087586f1600b" title="Accessor function for second item stock in container. " alt="" coords="200,208,391,235"/>
+<area shape="rect" id="node7" href="$classCContainer.html#a39099429332baa7d3003b4fa9e1b3c9f" title="Accessor function for third item stock in container. " alt="" coords="208,259,383,285"/>
+<area shape="rect" id="node8" href="$classCContainer.html#a35e4344eb1c1d25c9364ab16f16dc709" title="Accessor function for container x position. " alt="" coords="225,309,365,336"/>
+<area shape="rect" id="node9" href="$classCContainer.html#ae00b4f70a3679017c1d795536b2a7d5f" title="Accessor function for container y position. " alt="" coords="224,360,367,387"/>
+<area shape="rect" id="node10" href="$classCContainer.html#a912430f27287e0fd419a94333790c947" title="Accessor function for container z position. " alt="" coords="225,411,365,437"/>
+</map>

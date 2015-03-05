@@ -2,15 +2,34 @@
 #include "Application.h"
 #include "Mtx44.h"
 #include "SceneSP.h"
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 Camera3::Camera3()
 {
 }
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 Camera3::~Camera3()
 {
 }
+/******************************************************************************/
+/*!
+\brief
+Initialises the camera
 
+\param pos - position of the camera
+\param target - camera target
+\param up - 
+*/
+/******************************************************************************/
 void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 {
 	this->position = defaultPosition = pos;
@@ -23,7 +42,15 @@ void Camera3::Init(const Vector3& pos, const Vector3& target, const Vector3& up)
 	limiter = 45;
 	CAMERA_SPEED = 150.f;
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the camera movement
 
+\param dt - delta time
+\param reverse - reverses camera controls if true
+*/
+/******************************************************************************/
 void Camera3::UpdateMovement(double dt, bool reverse)
 {
 	float runMultiplyer;
@@ -96,7 +123,15 @@ void Camera3::UpdateMovement(double dt, bool reverse)
 		}
 	}
 }
+/******************************************************************************/
+/*!
+\brief
+Updates the camera view
 
+\param dt - delta time
+\param reverse - reverses camera controls if true
+*/
+/******************************************************************************/
 void Camera3::UpdateView(double dt, bool reverse)
 {
 	
@@ -164,7 +199,12 @@ void Camera3::UpdateView(double dt, bool reverse)
 		}
 	}
 }
-
+/******************************************************************************/
+/*!
+\brief
+Resets the camera back to its default position
+*/
+/******************************************************************************/
 void Camera3::Reset()
 {
 	position = defaultPosition;

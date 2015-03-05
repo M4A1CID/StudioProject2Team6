@@ -1,0 +1,7 @@
+<map id="sf::NonCopyable" name="sf::NonCopyable">
+<area shape="rect" id="node2" href="$classsf_1_1Lock.html" title="Automatic wrapper for locking and unlocking mutexes. " alt="" coords="5,80,73,107"/>
+<area shape="rect" id="node3" href="$classsf_1_1Mutex.html" title="Blocks concurrent access to shared resources from multiple threads. " alt="" coords="97,80,173,107"/>
+<area shape="rect" id="node4" href="$classsf_1_1Thread.html" title="Utility class to manipulate threads. " alt="" coords="197,80,276,107"/>
+<area shape="rect" id="node5" href="$classsf_1_1ThreadLocal.html" title="Defines variables with thread&#45;local storage. " alt="" coords="300,80,411,107"/>
+<area shape="rect" id="node6" href="$classsf_1_1ThreadLocalPtr.html" title="Pointer to a thread&#45;local variable. " alt="" coords="276,155,435,181"/>
+</map>

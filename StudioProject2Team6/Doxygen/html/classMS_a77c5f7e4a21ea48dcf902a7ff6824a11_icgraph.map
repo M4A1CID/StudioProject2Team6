@@ -1,0 +1,20 @@
+<map id="MS::LoadIdentity" name="MS::LoadIdentity">
+<area shape="rect" id="node2" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="965,288,1092,315"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a00e4614934f01c736d265c9e0ee2f1ff" title="Renders text on screen. " alt="" coords="173,364,383,391"/>
+<area shape="rect" id="node16" href="$classSceneSP.html#aa67fc7c1c81aac501e815148a3ebd65c" title="Function to render the targa inventory of the player. " alt="" coords="439,795,642,821"/>
+<area shape="rect" id="node18" href="$classSceneSP.html#a5115fe71d4e36db4df6f029c928772e1" title="Function to render the targa UI of the player. " alt="" coords="196,592,360,619"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae8c77e08076f5ca756433782aafe26ad" title="Renders all easter eggs if in easter egg gamemode. " alt="" coords="715,364,901,391"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="739,541,877,568"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a24cfa47c9258bc7ba995760ea9d07e51" title="Renders the UI displayed while in the tug of war activity. " alt="" coords="446,440,635,467"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#a49baa6430b59d2fb1bfeecf80f90204b" title="Renders the UI displayed when interacting with the drunk man Npc. " alt="" coords="442,491,639,517"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a047fd639bce91ca4d840ec577a0d1db2" title="Renders the main menu. " alt="" coords="715,668,901,695"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#ad0be6fd30e0b9569b2dc0d972ae59cc8" title="Renders the sub menu displaying the different gamemodes. " alt="" coords="717,85,899,112"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a0565229f33c2c6115867856ad9752ac9" title="Renders the win / lose menu. " alt="" coords="703,136,913,163"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a427b857a7534b39b0364a1287fbe225f" title="Renders the instruction menu. " alt="" coords="699,187,917,213"/>
+<area shape="rect" id="node12" href="$classSceneSP.html#a72cf933ff795f6f7e4e47fbf5e257a07" title="Renders the pause menu. " alt="" coords="443,237,638,264"/>
+<area shape="rect" id="node13" href="$classSceneSP.html#a4620fecec9b7d89136b8e947d26ffc81" title="Renders the ATM. " alt="" coords="464,288,617,315"/>
+<area shape="rect" id="node15" href="$classSceneSP.html#a0980c2a65773ba37aaecfe7260b327a1" title="Renders the &quot;troll&quot; easter egg. " alt="" coords="465,389,616,416"/>
+<area shape="rect" id="node14" href="$classSceneSP.html#a28a66fa74f2c41afc4e0048bd773d584" title="Renders the entire supermarket. " alt="" coords="708,288,908,315"/>
+<area shape="rect" id="node17" href="$classSceneSP.html#abec49d944e5152770324bee4bba4a140" title="Renders the player&#39;s inventory. " alt="" coords="719,795,897,821"/>
+<area shape="rect" id="node19" href="$classSceneSP.html#aba3ac585689f6337d6e0e97792c3596f" title="Renders miscellaneous easter eggs. " alt="" coords="431,541,651,568"/>
+</map>

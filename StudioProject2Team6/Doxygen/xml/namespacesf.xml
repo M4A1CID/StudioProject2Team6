@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="namespacesf" kind="namespace">
+    <compoundname>sf</compoundname>
+    <innerclass refid="classsf_1_1Clock" prot="public">sf::Clock</innerclass>
+    <innerclass refid="classsf_1_1InputStream" prot="public">sf::InputStream</innerclass>
+    <innerclass refid="classsf_1_1Listener" prot="public">sf::Listener</innerclass>
+    <innerclass refid="classsf_1_1Lock" prot="public">sf::Lock</innerclass>
+    <innerclass refid="classsf_1_1Music" prot="public">sf::Music</innerclass>
+    <innerclass refid="classsf_1_1Mutex" prot="public">sf::Mutex</innerclass>
+    <innerclass refid="classsf_1_1NonCopyable" prot="public">sf::NonCopyable</innerclass>
+    <innerclass refid="classsf_1_1Sound" prot="public">sf::Sound</innerclass>
+    <innerclass refid="classsf_1_1SoundBuffer" prot="public">sf::SoundBuffer</innerclass>
+    <innerclass refid="classsf_1_1SoundBufferRecorder" prot="public">sf::SoundBufferRecorder</innerclass>
+    <innerclass refid="classsf_1_1SoundRecorder" prot="public">sf::SoundRecorder</innerclass>
+    <innerclass refid="classsf_1_1SoundSource" prot="public">sf::SoundSource</innerclass>
+    <innerclass refid="classsf_1_1SoundStream" prot="public">sf::SoundStream</innerclass>
+    <innerclass refid="classsf_1_1String" prot="public">sf::String</innerclass>
+    <innerclass refid="classsf_1_1Thread" prot="public">sf::Thread</innerclass>
+    <innerclass refid="classsf_1_1ThreadLocal" prot="public">sf::ThreadLocal</innerclass>
+    <innerclass refid="classsf_1_1ThreadLocalPtr" prot="public">sf::ThreadLocalPtr</innerclass>
+    <innerclass refid="classsf_1_1Time" prot="public">sf::Time</innerclass>
+    <innerclass refid="singletonsf_1_1Utf" prot="public">sf::Utf</innerclass>
+    <innerclass refid="classsf_1_1Utf_3_0116_01_4" prot="public">sf::Utf&lt; 16 &gt;</innerclass>
+    <innerclass refid="classsf_1_1Utf_3_0132_01_4" prot="public">sf::Utf&lt; 32 &gt;</innerclass>
+    <innerclass refid="classsf_1_1Utf_3_018_01_4" prot="public">sf::Utf&lt; 8 &gt;</innerclass>
+    <innerclass refid="classsf_1_1Vector2" prot="public">sf::Vector2</innerclass>
+    <innerclass refid="classsf_1_1Vector3" prot="public">sf::Vector3</innerclass>
+    <innernamespace refid="namespacesf_1_1priv">sf::priv</innernamespace>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacesf_1a69b109973eac74e22b97e5339bdb68dd" prot="public" static="no">
+        <type>signed char</type>
+        <definition>typedef signed char sf::Int8</definition>
+        <argsstring></argsstring>
+        <name>Int8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="170" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1a4ef3d630785c4f296f9b4f274c33d78e" prot="public" static="no">
+        <type>unsigned char</type>
+        <definition>typedef unsigned char sf::Uint8</definition>
+        <argsstring></argsstring>
+        <name>Uint8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="171" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" prot="public" static="no">
+        <type>signed short</type>
+        <definition>typedef signed short sf::Int16</definition>
+        <argsstring></argsstring>
+        <name>Int16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="174" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1a2fcaf787248b0b83dfb6b145ca348246" prot="public" static="no">
+        <type>unsigned short</type>
+        <definition>typedef unsigned short sf::Uint16</definition>
+        <argsstring></argsstring>
+        <name>Uint16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="175" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" prot="public" static="no">
+        <type>signed int</type>
+        <definition>typedef signed int sf::Int32</definition>
+        <argsstring></argsstring>
+        <name>Int32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="178" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" prot="public" static="no">
+        <type>unsigned int</type>
+        <definition>typedef unsigned int sf::Uint32</definition>
+        <argsstring></argsstring>
+        <name>Uint32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="179" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1a2840579fed3494d9f330baf7a5a19903" prot="public" static="no">
+        <type>signed long long</type>
+        <definition>typedef signed long long sf::Int64</definition>
+        <argsstring></argsstring>
+        <name>Int64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="186" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1add9ac83466d96b9f50a009b9f4064266" prot="public" static="no">
+        <type>unsigned long long</type>
+        <definition>typedef unsigned long long sf::Uint64</definition>
+        <argsstring></argsstring>
+        <name>Uint64</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" line="187" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Config.hpp" bodystart="187" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1ab78b7f576a82034d14eab92becc15301" prot="public" static="no">
+        <type><ref refid="singletonsf_1_1Utf" kindref="compound">Utf</ref>&lt; 8 &gt;</type>
+        <definition>typedef Utf&lt;8&gt; sf::Utf8</definition>
+        <argsstring></argsstring>
+        <name>Utf8</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="734" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" bodystart="734" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1ae30b6ea05a1723d608853ebc3043e53d" prot="public" static="no">
+        <type><ref refid="singletonsf_1_1Utf" kindref="compound">Utf</ref>&lt; 16 &gt;</type>
+        <definition>typedef Utf&lt;16&gt; sf::Utf16</definition>
+        <argsstring></argsstring>
+        <name>Utf16</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="735" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" bodystart="735" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1a51a40f697607908d2e9f58e67f4c89a3" prot="public" static="no">
+        <type><ref refid="singletonsf_1_1Utf" kindref="compound">Utf</ref>&lt; 32 &gt;</type>
+        <definition>typedef Utf&lt;32&gt; sf::Utf32</definition>
+        <argsstring></argsstring>
+        <name>Utf32</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="736" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" bodystart="736" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1ace09dd1447d74c6e9ba56ae874c094e1" prot="public" static="no">
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; int &gt;</type>
+        <definition>typedef Vector2&lt;int&gt; sf::Vector2i</definition>
+        <argsstring></argsstring>
+        <name>Vector2i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="253" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1aaa02ba42bf79b001a376fe9d79254cb3" prot="public" static="no">
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; unsigned int &gt;</type>
+        <definition>typedef Vector2&lt;unsigned int&gt; sf::Vector2u</definition>
+        <argsstring></argsstring>
+        <name>Vector2u</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="254" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" bodystart="254" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1acf03098c2577b869e2fa6836cc48f1a0" prot="public" static="no">
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; float &gt;</type>
+        <definition>typedef Vector2&lt;float&gt; sf::Vector2f</definition>
+        <argsstring></argsstring>
+        <name>Vector2f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="255" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1ad066a8774efaf7b623df8909ba219dc7" prot="public" static="no">
+        <type><ref refid="classsf_1_1Vector3" kindref="compound">Vector3</ref>&lt; int &gt;</type>
+        <definition>typedef Vector3&lt;int&gt; sf::Vector3i</definition>
+        <argsstring></argsstring>
+        <name>Vector3i</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="255" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" bodystart="255" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacesf_1af97357d7d32e7d6a700d03be2f3b4811" prot="public" static="no">
+        <type><ref refid="classsf_1_1Vector3" kindref="compound">Vector3</ref>&lt; float &gt;</type>
+        <definition>typedef Vector3&lt;float&gt; sf::Vector3f</definition>
+        <argsstring></argsstring>
+        <name>Vector3f</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="256" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" bodystart="256" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="group__system_1ga7fe7f475639e26334606b5142c29551f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> std::ostream &amp;</type>
+        <definition>sf::err</definition>
+        <argsstring>()</argsstring>
+        <name>err</name>
+        <briefdescription>
+<para>Standard stream used by SFML to output warnings and errors. </para>        </briefdescription>
+        <detaileddescription>
+<para>By default, <ref refid="group__system_1ga7fe7f475639e26334606b5142c29551f" kindref="member">sf::err()</ref> outputs to the same location as std::cerr, (-&gt; the stderr descriptor) which is the console if there&apos;s one available.</para><para>It is a standard std::ostream instance, so it supports all the insertion operations defined by the STL (operator &lt;&lt;, manipulators, etc.).</para><para><ref refid="group__system_1ga7fe7f475639e26334606b5142c29551f" kindref="member">sf::err()</ref> can be redirected to write to another output, independently of std::cerr, by using the rdbuf() function provided by the std::ostream class.</para><para>Example: <programlisting><codeline><highlight class="normal">//<sp/>Redirect<sp/>to<sp/>a<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">std::ofstream<sp/>file(&quot;sfml-log.txt&quot;);</highlight></codeline>
+<codeline><highlight class="normal">std::streambuf*<sp/>previous<sp/>=<sp/>sf::err().rdbuf(file.rdbuf());</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Redirect<sp/>to<sp/>nothing</highlight></codeline>
+<codeline><highlight class="normal">sf::err().rdbuf(NULL);</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Restore<sp/>the<sp/>original<sp/>output</highlight></codeline>
+<codeline><highlight class="normal">sf::err().rdbuf(previous);</highlight></codeline>
+</programlisting></para><para><simplesect kind="return"><para>Reference to std::ostream representing the SFML error stream </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Err.hpp" line="41" column="1"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="67" endline="115">Application::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="group__system_1ga2f2620831533dee0ed432ed982342e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void <ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref></type>
+        <definition>void SFML_SYSTEM_API sf::sleep</definition>
+        <argsstring>(Time duration)</argsstring>
+        <name>sleep</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>duration</declname>
+        </param>
+        <briefdescription>
+<para>Make the current thread sleep for a given duration. </para>        </briefdescription>
+        <detaileddescription>
+<para><ref refid="group__system_1ga2f2620831533dee0ed432ed982342e09" kindref="member">sf::sleep</ref> is the best way to block a program or one of its threads, as it doesn&apos;t consume any CPU power.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>duration</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> to sleep </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Sleep.hpp" line="47" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Listener.hpp" line="36" column="1"/>
+  </compounddef>
+</doxygen>

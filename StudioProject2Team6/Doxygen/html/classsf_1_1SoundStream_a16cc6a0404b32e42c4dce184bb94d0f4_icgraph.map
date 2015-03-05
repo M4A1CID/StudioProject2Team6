@@ -1,0 +1,6 @@
+<map id="sf::SoundStream::stop" name="sf::SoundStream::stop">
+<area shape="rect" id="node2" href="$classSceneSP.html#af9fd03cc9990ba9e1ce2df171d358474" title="Exits the scene. " alt="" coords="245,5,353,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a17ea984d0e98061610e8a7e34b2a4397" title="Updates the Start menu. " alt="" coords="205,56,392,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="440,56,599,83"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="647,56,773,83"/>
+</map>

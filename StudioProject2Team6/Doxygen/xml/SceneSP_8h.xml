@@ -1,0 +1,1103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="SceneSP_8h" kind="file">
+    <compoundname>SceneSP.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="DefineEnum_8h" local="yes">DefineEnum.h</includes>
+    <includes refid="DefineItemClass_8h" local="yes">DefineItemClass.h</includes>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includes refid="Camera3_8h" local="yes">Camera3.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includes refid="Utility_8h" local="yes">Utility.h</includes>
+    <includes refid="Player_8h" local="yes">Player.h</includes>
+    <includes refid="Npc_8h" local="yes">Npc.h</includes>
+    <includes refid="Container_8h" local="yes">Container.h</includes>
+    <includes refid="DefineValues_8h" local="yes">DefineValues.h</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">ctime</includes>
+    <includes refid="Audio_8hpp" local="yes">SFML\Audio.hpp</includes>
+    <includedby refid="Application_8cpp" local="yes">MyGraphics/Source/Application.cpp</includedby>
+    <includedby refid="Camera3_8cpp" local="yes">MyGraphics/Source/Camera3.cpp</includedby>
+    <includedby refid="SceneSP_8cpp" local="yes">MyGraphics/Source/SceneSP.cpp</includedby>
+    <incdepgraph>
+      <node id="3293">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+      </node>
+      <node id="3358">
+        <label>locale</label>
+      </node>
+      <node id="3347">
+        <label>SFML/System/Time.hpp</label>
+        <link refid="Time_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+      </node>
+      <node id="3353">
+        <label>SFML/System/Mutex.hpp</label>
+        <link refid="Mutex_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+      </node>
+      <node id="3308">
+        <label>VargaCan.h</label>
+        <link refid="VargaCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3297">
+        <label>CerealBox2.h</label>
+        <link refid="CerealBox2_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3338">
+        <label>Npc.h</label>
+        <link refid="Npc_8h"/>
+        <childnode refid="3336" relation="include">
+        </childnode>
+      </node>
+      <node id="3356">
+        <label>SFML/System/Utf.hpp</label>
+        <link refid="Utf_8hpp"/>
+        <childnode refid="3344" relation="include">
+        </childnode>
+        <childnode refid="3357" relation="include">
+        </childnode>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3359" relation="include">
+        </childnode>
+      </node>
+      <node id="3342">
+        <label>SFML\Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="3343" relation="include">
+        </childnode>
+        <childnode refid="3370" relation="include">
+        </childnode>
+        <childnode refid="3372" relation="include">
+        </childnode>
+        <childnode refid="3375" relation="include">
+        </childnode>
+        <childnode refid="3376" relation="include">
+        </childnode>
+        <childnode refid="3378" relation="include">
+        </childnode>
+        <childnode refid="3379" relation="include">
+        </childnode>
+        <childnode refid="3373" relation="include">
+        </childnode>
+      </node>
+      <node id="3351">
+        <label>SFML/System/Lock.hpp</label>
+        <link refid="Lock_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+      </node>
+      <node id="3318">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3324" relation="include">
+        </childnode>
+      </node>
+      <node id="3307">
+        <label>TomatoCan.h</label>
+        <link refid="TomatoCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3303">
+        <label>EasterEgg3.h</label>
+        <link refid="EasterEgg3_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3320">
+        <label>cmath</label>
+      </node>
+      <node id="3370">
+        <label>SFML/Audio/Listener.hpp</label>
+        <link refid="Listener_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3368" relation="include">
+        </childnode>
+      </node>
+      <node id="3328">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3329" relation="include">
+        </childnode>
+      </node>
+      <node id="3344">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="3311">
+        <label>HumanCan.h</label>
+        <link refid="HumanCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3363">
+        <label>SFML/System/ThreadLocal.hpp</label>
+        <link refid="ThreadLocal_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+      </node>
+      <node id="3294">
+        <label>string</label>
+      </node>
+      <node id="3361">
+        <label>SFML/System/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+        <childnode refid="3362" relation="include">
+        </childnode>
+      </node>
+      <node id="3296">
+        <label>CerealBox1.h</label>
+        <link refid="CerealBox1_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3355">
+        <label>SFML/System/String.hpp</label>
+        <link refid="String_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3356" relation="include">
+        </childnode>
+        <childnode refid="3358" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3360" relation="include">
+        </childnode>
+      </node>
+      <node id="3335">
+        <label>Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="3336" relation="include">
+        </childnode>
+      </node>
+      <node id="3300">
+        <label>CerealBox5.h</label>
+        <link refid="CerealBox5_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3321">
+        <label>exception</label>
+      </node>
+      <node id="3368">
+        <label>SFML/System/Vector3.hpp</label>
+        <link refid="Vector3_8hpp"/>
+        <childnode refid="3369" relation="include">
+        </childnode>
+      </node>
+      <node id="3376">
+        <label>SFML/Audio/SoundBuffer.hpp</label>
+        <link refid="SoundBuffer_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+        <childnode refid="3377" relation="include">
+        </childnode>
+      </node>
+      <node id="3349">
+        <label>ostream</label>
+      </node>
+      <node id="3295">
+        <label>BrownCan.h</label>
+        <link refid="BrownCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3359">
+        <label>SFML/System/Utf.inl</label>
+        <link refid="Utf_8inl"/>
+      </node>
+      <node id="3340">
+        <label>DefineValues.h</label>
+        <link refid="DefineValues_8h"/>
+      </node>
+      <node id="3373">
+        <label>SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3374" relation="include">
+        </childnode>
+        <childnode refid="3361" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3353" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+      </node>
+      <node id="3379">
+        <label>SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3361" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+      </node>
+      <node id="3330">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="3331" relation="include">
+        </childnode>
+        <childnode refid="3318" relation="include">
+        </childnode>
+      </node>
+      <node id="3366">
+        <label>SFML/System/Vector2.hpp</label>
+        <link refid="Vector2_8hpp"/>
+        <childnode refid="3367" relation="include">
+        </childnode>
+      </node>
+      <node id="3327">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="3324" relation="include">
+        </childnode>
+      </node>
+      <node id="3305">
+        <label>PeasCan.h</label>
+        <link refid="PeasCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3371">
+        <label>SFML/Audio/Export.hpp</label>
+        <link refid="Audio_2Export_8hpp"/>
+        <childnode refid="3344" relation="include">
+        </childnode>
+      </node>
+      <node id="3288">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP.h"/>
+        <childnode refid="3289" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+        <childnode refid="3291" relation="include">
+        </childnode>
+        <childnode refid="3318" relation="include">
+        </childnode>
+        <childnode refid="3326" relation="include">
+        </childnode>
+        <childnode refid="3328" relation="include">
+        </childnode>
+        <childnode refid="3330" relation="include">
+        </childnode>
+        <childnode refid="3332" relation="include">
+        </childnode>
+        <childnode refid="3334" relation="include">
+        </childnode>
+        <childnode refid="3335" relation="include">
+        </childnode>
+        <childnode refid="3338" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3341" relation="include">
+        </childnode>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3342" relation="include">
+        </childnode>
+      </node>
+      <node id="3315">
+        <label>SodaCan.h</label>
+        <link refid="SodaCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3291">
+        <label>DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="3292" relation="include">
+        </childnode>
+        <childnode refid="3295" relation="include">
+        </childnode>
+        <childnode refid="3296" relation="include">
+        </childnode>
+        <childnode refid="3297" relation="include">
+        </childnode>
+        <childnode refid="3298" relation="include">
+        </childnode>
+        <childnode refid="3299" relation="include">
+        </childnode>
+        <childnode refid="3300" relation="include">
+        </childnode>
+        <childnode refid="3301" relation="include">
+        </childnode>
+        <childnode refid="3302" relation="include">
+        </childnode>
+        <childnode refid="3303" relation="include">
+        </childnode>
+        <childnode refid="3304" relation="include">
+        </childnode>
+        <childnode refid="3305" relation="include">
+        </childnode>
+        <childnode refid="3306" relation="include">
+        </childnode>
+        <childnode refid="3307" relation="include">
+        </childnode>
+        <childnode refid="3308" relation="include">
+        </childnode>
+        <childnode refid="3309" relation="include">
+        </childnode>
+        <childnode refid="3310" relation="include">
+        </childnode>
+        <childnode refid="3311" relation="include">
+        </childnode>
+        <childnode refid="3312" relation="include">
+        </childnode>
+        <childnode refid="3313" relation="include">
+        </childnode>
+        <childnode refid="3314" relation="include">
+        </childnode>
+        <childnode refid="3315" relation="include">
+        </childnode>
+        <childnode refid="3316" relation="include">
+        </childnode>
+        <childnode refid="3317" relation="include">
+        </childnode>
+      </node>
+      <node id="3322">
+        <label>ctime</label>
+      </node>
+      <node id="3299">
+        <label>CerealBox4.h</label>
+        <link refid="CerealBox4_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3350">
+        <label>SFML/System/InputStream.hpp</label>
+        <link refid="InputStream_8hpp"/>
+        <childnode refid="3344" relation="include">
+        </childnode>
+      </node>
+      <node id="3333">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="3324" relation="include">
+        </childnode>
+      </node>
+      <node id="3362">
+        <label>SFML/System/Thread.inl</label>
+        <link refid="Thread_8inl"/>
+      </node>
+      <node id="3332">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="3333" relation="include">
+        </childnode>
+      </node>
+      <node id="3360">
+        <label>SFML/System/String.inl</label>
+        <link refid="String_8inl"/>
+      </node>
+      <node id="3374">
+        <label>SFML/Audio/SoundSource.hpp</label>
+        <link refid="SoundSource_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3368" relation="include">
+        </childnode>
+      </node>
+      <node id="3292">
+        <label>BeansCan.h</label>
+        <link refid="BeansCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3369">
+        <label>SFML/System/Vector3.inl</label>
+        <link refid="Vector3_8inl"/>
+      </node>
+      <node id="3337">
+        <label>vector</label>
+      </node>
+      <node id="3331">
+        <label>stack</label>
+      </node>
+      <node id="3354">
+        <label>SFML/System/Sleep.hpp</label>
+        <link refid="Sleep_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+      </node>
+      <node id="3312">
+        <label>MtnDewCan.h</label>
+        <link refid="MtnDewCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3367">
+        <label>SFML/System/Vector2.inl</label>
+        <link refid="Vector2_8inl"/>
+      </node>
+      <node id="3343">
+        <label>SFML/System.hpp</label>
+        <link refid="System_8hpp"/>
+        <childnode refid="3344" relation="include">
+        </childnode>
+        <childnode refid="3345" relation="include">
+        </childnode>
+        <childnode refid="3348" relation="include">
+        </childnode>
+        <childnode refid="3350" relation="include">
+        </childnode>
+        <childnode refid="3351" relation="include">
+        </childnode>
+        <childnode refid="3353" relation="include">
+        </childnode>
+        <childnode refid="3354" relation="include">
+        </childnode>
+        <childnode refid="3355" relation="include">
+        </childnode>
+        <childnode refid="3361" relation="include">
+        </childnode>
+        <childnode refid="3363" relation="include">
+        </childnode>
+        <childnode refid="3364" relation="include">
+        </childnode>
+        <childnode refid="3356" relation="include">
+        </childnode>
+        <childnode refid="3366" relation="include">
+        </childnode>
+        <childnode refid="3368" relation="include">
+        </childnode>
+      </node>
+      <node id="3341">
+        <label>sstream</label>
+      </node>
+      <node id="3378">
+        <label>SFML/Audio/SoundBufferRecorder.hpp</label>
+        <link refid="SoundBufferRecorder_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3376" relation="include">
+        </childnode>
+        <childnode refid="3379" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+      </node>
+      <node id="3309">
+        <label>BranCan.h</label>
+        <link refid="BranCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3346">
+        <label>SFML/System/Export.hpp</label>
+        <link refid="System_2Export_8hpp"/>
+        <childnode refid="3344" relation="include">
+        </childnode>
+      </node>
+      <node id="3301">
+        <label>EasterEgg1.h</label>
+        <link refid="EasterEgg1_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3317">
+        <label>EmptyItem.h</label>
+        <link refid="EmptyItem_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3375">
+        <label>SFML/Audio/Sound.hpp</label>
+        <link refid="Sound_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3374" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+      </node>
+      <node id="3326">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="3327" relation="include">
+        </childnode>
+      </node>
+      <node id="3372">
+        <label>SFML/Audio/Music.hpp</label>
+        <link refid="Music_8hpp"/>
+        <childnode refid="3371" relation="include">
+        </childnode>
+        <childnode refid="3373" relation="include">
+        </childnode>
+        <childnode refid="3353" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3294" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+      </node>
+      <node id="3323">
+        <label>cstdlib</label>
+      </node>
+      <node id="3345">
+        <label>SFML/System/Clock.hpp</label>
+        <link refid="Clock_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+      </node>
+      <node id="3364">
+        <label>SFML/System/ThreadLocalPtr.hpp</label>
+        <link refid="ThreadLocalPtr_8hpp"/>
+        <childnode refid="3363" relation="include">
+        </childnode>
+        <childnode refid="3365" relation="include">
+        </childnode>
+      </node>
+      <node id="3325">
+        <label>iostream</label>
+      </node>
+      <node id="3313">
+        <label>RedMonsterCan.h</label>
+        <link refid="RedMonsterCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3304">
+        <label>MelonCan.h</label>
+        <link refid="MelonCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3298">
+        <label>CerealBox3.h</label>
+        <link refid="CerealBox3_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3310">
+        <label>GluWaterCan.h</label>
+        <link refid="GluWaterCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3348">
+        <label>SFML/System/Err.hpp</label>
+        <link refid="Err_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+        <childnode refid="3349" relation="include">
+        </childnode>
+      </node>
+      <node id="3329">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="3334">
+        <label>Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="3333" relation="include">
+        </childnode>
+        <childnode refid="3318" relation="include">
+        </childnode>
+      </node>
+      <node id="3377">
+        <label>set</label>
+      </node>
+      <node id="3336">
+        <label>Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+        <childnode refid="3337" relation="include">
+        </childnode>
+      </node>
+      <node id="3290">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="3357">
+        <label>algorithm</label>
+      </node>
+      <node id="3314">
+        <label>RootBeerFloatsCan.h</label>
+        <link refid="RootBeerFloatsCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3302">
+        <label>EasterEgg2.h</label>
+        <link refid="EasterEgg2_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3306">
+        <label>SardineCan.h</label>
+        <link refid="SardineCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3352">
+        <label>SFML/System/NonCopyable.hpp</label>
+        <link refid="NonCopyable_8hpp"/>
+        <childnode refid="3346" relation="include">
+        </childnode>
+      </node>
+      <node id="3324">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3319" relation="include">
+        </childnode>
+        <childnode refid="3325" relation="include">
+        </childnode>
+      </node>
+      <node id="3316">
+        <label>SodaFestCan.h</label>
+        <link refid="SodaFestCan_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+        <childnode refid="3290" relation="include">
+        </childnode>
+      </node>
+      <node id="3339">
+        <label>Container.h</label>
+        <link refid="Container_8h"/>
+        <childnode refid="3293" relation="include">
+        </childnode>
+      </node>
+      <node id="3319">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3320" relation="include">
+        </childnode>
+        <childnode refid="3321" relation="include">
+        </childnode>
+        <childnode refid="3322" relation="include">
+        </childnode>
+        <childnode refid="3323" relation="include">
+        </childnode>
+      </node>
+      <node id="3289">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="3365">
+        <label>SFML/System/ThreadLocalPtr.inl</label>
+        <link refid="ThreadLocalPtr_8inl"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3383">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3381">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3380">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP.h"/>
+        <childnode refid="3381" relation="include">
+        </childnode>
+        <childnode refid="3382" relation="include">
+        </childnode>
+        <childnode refid="3383" relation="include">
+        </childnode>
+      </node>
+      <node id="3382">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classSceneSP" prot="public">SceneSP</innerclass>
+    <innerclass refid="structSceneSP_1_1Transformations" prot="private">SceneSP::Transformations</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SCENESP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SCENESP_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineEnum_8h" kindref="compound">DefineEnum.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineItemClass_8h" kindref="compound">DefineItemClass.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera3_8h" kindref="compound">Camera3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Utility_8h" kindref="compound">Utility.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Player_8h" kindref="compound">Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Npc_8h" kindref="compound">Npc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Container_8h" kindref="compound">Container.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="DefineValues_8h" kindref="compound">DefineValues.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;ctime&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Audio_8hpp" kindref="compound">SFML\Audio.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::string;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="31"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="classSceneSP" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSceneSP" kindref="compound">SceneSP</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*=======================================</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Collision<sp/>Functions</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" kindref="member">checkPickUpItem</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1afbc68aa0f7d7978688938cf34f10256a" kindref="member">checkCollision</ref>();</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aed88cbeaa9c2779dc5ab3396e0cbd3ba" kindref="member">checkObjectCollision</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>widthX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>widthZ);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad6a24084727f08fc91c3e02e292b649f" kindref="member">checkSupermarketCollision</ref>();</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5284cba426a3ff140f0cfa583f270c54" kindref="member">checkElevatorCollision</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" kindref="member">checkReturnPoint</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" kindref="member">checkWinLose</ref>();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a728563a08b6ecb8e25d7452185785bae" kindref="member">resetGame</ref>();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a516f7251a5124ef02a4404296f01ffbd" kindref="member">addToInventory</ref>(<ref refid="classCItem" kindref="compound">CItem</ref>*<sp/>pickedUp);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*=======================================</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>Render<sp/>Functions</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a32c8fc6286744d0c6d20f71e2a4a1847" kindref="member">RenderText</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,<sp/>std::string<sp/>text,<sp/><ref refid="structColor" kindref="compound">Color</ref><sp/>color);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a00e4614934f01c736d265c9e0ee2f1ff" kindref="member">RenderTextOnScreen</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,<sp/>std::string<sp/>text,<sp/><ref refid="structColor" kindref="compound">Color</ref><sp/>color,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5115fe71d4e36db4df6f029c928772e1" kindref="member">RenderTGAUI</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa67fc7c1c81aac501e815148a3ebd65c" kindref="member">RenderTGAInventory</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/>mesh,</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>size,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x<sp/>,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a28a66fa74f2c41afc4e0048bd773d584" kindref="member">RenderSupermarket</ref>();</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad29fac1df1441fdc83ac52994c4aa16a" kindref="member">RenderShelves</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad29fac1df1441fdc83ac52994c4aa16a" kindref="member">RenderShelves</ref>(<ref refid="classCContainer" kindref="compound">CContainer</ref>*<sp/>container);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab171a42480425860b30b7a088d65db03" kindref="member">RenderDoors</ref>();</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a280f438c779cb55a30e779664917e97e" kindref="member">RenderTrolleys</ref>();</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0513b0d4f70be372ac9bc4e4cc49edbe" kindref="member">RenderSamplestand</ref>();</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a10f8b0ad8859109f0a48f464296fe681" kindref="member">RenderSamples</ref>();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae5b83c001320f3ab83ceee51124d86aa" kindref="member">RenderUI</ref>();</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a24cfa47c9258bc7ba995760ea9d07e51" kindref="member">RenderTugofwarUI</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a49baa6430b59d2fb1bfeecf80f90204b" kindref="member">RenderDrunkmanUI</ref>();</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a734f7fbd2fe4b865f241bf99d23a5c4e" kindref="member">RenderItem</ref>();<sp/></highlight><highlight class="comment">//<sp/>Take<sp/>in<sp/>a<sp/>CContainer<sp/>location<sp/>and<sp/>populate<sp/>it&apos;s<sp/>contents</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a7e32a67b49aa638c3c0236b221d3e306" kindref="member">RenderCashierTables</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1abec49d944e5152770324bee4bba4a140" kindref="member">RenderInventory</ref>();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad7e643432e18410f0bb3782c310bdbe6" kindref="member">RenderFence</ref>();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aca131d95f4fb8a0c5097e67f4509741a" kindref="member">RenderElevator</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a26ff2c324fa7d370d6682b631cc01ea5" kindref="member">RenderCharacters</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" kindref="member">RenderCharacter</ref>(<ref refid="classCNpc" kindref="compound">CNpc</ref>*<sp/>npc);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" kindref="member">RenderHand</ref>();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a4bd1537d2658ba5442174991483793f9" kindref="member">RenderTug</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1afdd308374fa5720a874c5a1d875fc4ca" kindref="member">RenderReturnPoint</ref>();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a29972883c52ec3ff169e8900cdbd8b3c" kindref="member">RenderBeerstand</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a047fd639bce91ca4d840ec577a0d1db2" kindref="member">RenderMainMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Render<sp/>Main<sp/>Menu<sp/>Screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad0be6fd30e0b9569b2dc0d972ae59cc8" kindref="member">RenderSubMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Render<sp/>Sub/Start<sp/>Menu<sp/>Screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0565229f33c2c6115867856ad9752ac9" kindref="member">RenderWinLoseMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Render<sp/>Win/Lose<sp/>Menu<sp/>Screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a427b857a7534b39b0364a1287fbe225f" kindref="member">RenderInstructionMenu</ref>();<sp/><sp/><sp/></highlight><highlight class="comment">//Render<sp/>instruction<sp/>Screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a72cf933ff795f6f7e4e47fbf5e257a07" kindref="member">RenderPauseMenu</ref>();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a026e12890b393c4c4ed8a2ae10b94762" kindref="member">RenderOffice</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1accc1c7f13ed51bf09b194df67a09ed35" kindref="member">RenderStorage</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af653c6ebae7c1d144a96043c6fd2d20f" kindref="member">RenderBuilding</ref>();</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9f6905e8a0687fd4f0e8250e1e2efbae" kindref="member">RenderIceBox</ref>();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a10d953a32d300448870b72b03b1c2f31" kindref="member">RenderMeatShelf</ref>();</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a34275ee3c053a7f16396652be953efac" kindref="member">RenderFoodShelf</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a485124cfc1edc9f3c397d775fa4dd80c" kindref="member">RenderCage</ref>();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0980c2a65773ba37aaecfe7260b327a1" kindref="member">RenderTroll</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aba3ac585689f6337d6e0e97792c3596f" kindref="member">RenderMiscEastereggs</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae8c77e08076f5ca756433782aafe26ad" kindref="member">RenderEasteregg</ref>();</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a4620fecec9b7d89136b8e947d26ffc81" kindref="member">RenderATM</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a8496ae2ec6070e04eba9d8dbab40b776" kindref="member">RenderFerrisWheel</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*=======================================</highlight></codeline>
+<codeline lineno="94"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>update<sp/>functions</highlight></codeline>
+<codeline lineno="95"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a4772701f96585823bf6462942bfbb793" kindref="member">UpdateAI</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>AI<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa74368fc2d0520d4eadb9853db9cfcf8" kindref="member">UpdateHand</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>players<sp/>hand</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" kindref="member">UpdateDoor</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>supermarket<sp/>door</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" kindref="member">UpdateUI</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Game<sp/>User<sp/>Interface</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" kindref="member">UpdateSamples</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>sample<sp/>food<sp/>stand</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" kindref="member">UpdateElevator</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>elevator<sp/>in<sp/>supermarket</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae17b9a537b3fb23e63f54477fa59a83c" kindref="member">UpdateMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Menus<sp/>into<sp/>1<sp/>function</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1acf6236276aadffd24b631491412574c0" kindref="member">UpdateMainMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Main<sp/>Menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a17ea984d0e98061610e8a7e34b2a4397" kindref="member">UpdateStartMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Start<sp/>Menu<sp/>with<sp/>play<sp/>scenarios</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5c9003c90f7f5daa489b19eac9096739" kindref="member">UpdateWinLoseMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>winning<sp/>and<sp/>losing<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a036771dd835c6b363379517c75722fa6" kindref="member">UpdateInstructionMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>instruction<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a3b3e04ac35d50ad7224b780b65cf4f30" kindref="member">UpdatePauseMenu</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Pause<sp/>menu</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" kindref="member">UpdatePlaying</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>application<sp/>while<sp/>game<sp/>is<sp/>playing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" kindref="member">UpdateTugofwar</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>the<sp/>Tug-Of-War<sp/>mini<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a01fcec80d931e2556c0e50bbd93b9ade" kindref="member">UpdateDrunkman</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Drunk<sp/>Man<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa0e203afe09c6f065bd7cb393de07fb1" kindref="member">UpdatePlayerSelection</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>what<sp/>the<sp/>player<sp/>is<sp/>selecting</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0dc7bd8ea42e851751f7115d6499d5a7" kindref="member">UpdateItemRotation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>player<sp/>inspection<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0ca0c247e4bc68fd75e98d68e4b8266b" kindref="member">UpdateTugofwarguy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Tug-Of-War<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1adb19fb3deaf7203ed8014858451c2125" kindref="member">UpdateDrunkmanguy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Drunk-Man<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a50c790340ab8444f752f48b6a02ef877" kindref="member">UpdateWalkingman</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Walking-man<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab1a0249ccf2d18ca17b795fd981519f0" kindref="member">UpdateWalkingmanoutsideX</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight><highlight class="comment">//Update<sp/>Walking-man<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa9544ac81fdace13b036854baf4ff2d6" kindref="member">UpdateWalkingmanoutsideZ</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight><highlight class="comment">//Update<sp/>Walking-man<sp/>NPC<sp/>opp<sp/>dir</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aee74cf07daa837fb07de86fbd70e5851" kindref="member">UpdateLogisticman</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Logistic-man<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae68b9d228ca0e7308bcf5e631ac72905" kindref="member">UpdateGhostman</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Ghost<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1d26118bc0e477c1ca91d95e87c13e83" kindref="member">UpdateCustomer</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>Customer<sp/>NPC</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af79f7c58a58f00b7cd5c0d0adf26b2e1" kindref="member">UpdateShoppers</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af7496bbb719aaa865e6ae2a7850803b2" kindref="member">UpdateLookingman</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>NPC<sp/>that<sp/>looks<sp/>at<sp/>shelves</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a16d020ce28661c217810cb062a4510fd" kindref="member">UpdateChattingman</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1f4561ddac6bd5653909b369df5de2e5" kindref="member">UpdateLegAnimation</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>NPC<sp/>leg<sp/>animation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ac2cc1a6156a4c3bb9ad8316352ff655b" kindref="member">UpdateItemInspection</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>player<sp/>holding<sp/>and<sp/>rotating<sp/>the<sp/>item</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1acd94f08d5777be854ef85313526f69bc" kindref="member">UpdateAITimer</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" kindref="member">UpdatePaying</ref>();<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Update<sp/>paying<sp/>activity</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" kindref="member">UpdateCage</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a2963d58071297789ad0c567c41dd5dbd" kindref="member">UpdateGaben</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" kindref="member">UpdateTroll</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" kindref="member">UpdateMiscEasteregg</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5ad62cfa3ac5fe2156a8713ffab6a4dd" kindref="member">UpdateEasteregg</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1d18eb92664b2eb377dd4d959bf9335c" kindref="member">UpdateEasterEggGuy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);<sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" kindref="member">UpdateATM</ref>();<sp/></highlight><highlight class="comment">//Update<sp/>ATM</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a810e5313d48de43702158891315ffa0e" kindref="member">UpdateBuildingGuy</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight><highlight class="comment">//Update<sp/>building<sp/>guy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*=======================================</highlight></codeline>
+<codeline lineno="137"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>Init<sp/>functions</highlight></codeline>
+<codeline lineno="138"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=======================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ac00c66843e83747f823f5c96a134285e" kindref="member">DeclareLightParameters</ref>();</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad3599551cd93fb32876be3090e1cbf69" kindref="member">DeclareGLEnable</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" kindref="member">DefineItem</ref>(<ref refid="classCContainer" kindref="compound">CContainer</ref>*<sp/>container,<sp/><ref refid="classCItem" kindref="compound">CItem</ref><sp/>item,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>row);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1e184e8b2707bd048b4bbd50748d8e48" kindref="member">initGeoType</ref>();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9a0de3ea6342a231b45c3d487ba1ec1a" kindref="member">initCharacter</ref>();</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ac38b25928202c4c22b0b525662afde54" kindref="member">initNPC</ref>();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a8f096719e7e0e404f4d1afc12d317943" kindref="member">initShelves</ref>();</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*========================================</highlight></codeline>
+<codeline lineno="147"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Declare<sp/>variables<sp/>here</highlight></codeline>
+<codeline lineno="148"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=========================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="150" refid="classSceneSP_1ab598b98035d1de843bbc5ed9a8303f3c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab598b98035d1de843bbc5ed9a8303f3c" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="151" refid="classSceneSP_1a5f43e0941f9c1eab5ccd3cfc1575a636" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/><ref refid="classSceneSP_1a5f43e0941f9c1eab5ccd3cfc1575a636" kindref="member">meshList</ref>[<ref refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9babc44a199ce2574bf7d76285206458da8" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="152" refid="classSceneSP_1a0f2fcbc179c8a0cbb75a80ac9a36242c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0f2fcbc179c8a0cbb75a80ac9a36242c" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="153" refid="classSceneSP_1a0d76dd81fc2f99d9e247e7da1cd1fdf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0d76dd81fc2f99d9e247e7da1cd1fdf1" kindref="member">m_parameters</ref>[<ref refid="DefineEnum_8h_1a4fe33d2cddb20d37baf1933d94b46ffaac65d323f9c9bb38164694d2e82db4d01" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="155" refid="classSceneSP_1aba424e355df4b1b4784805ef2ac909dd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer" kindref="compound">CContainer</ref><sp/><ref refid="classSceneSP_1aba424e355df4b1b4784805ef2ac909dd" kindref="member">shelfSardineCan</ref>;</highlight></codeline>
+<codeline lineno="156" refid="classSceneSP_1accd5499cdacfb5bbd57d38f8562607ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1accd5499cdacfb5bbd57d38f8562607ae" kindref="member">toggleLight</ref>;</highlight></codeline>
+<codeline lineno="157" refid="classSceneSP_1ae87c0823d99d4fc8ff9747c2ed4925da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae87c0823d99d4fc8ff9747c2ed4925da" kindref="member">toggleDoorFront</ref>;</highlight></codeline>
+<codeline lineno="158" refid="classSceneSP_1a167d0089913d00bb9be38979c985d5da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a167d0089913d00bb9be38979c985d5da" kindref="member">toggleDoorBack</ref>;</highlight></codeline>
+<codeline lineno="159" refid="classSceneSP_1a17e3538225bef6ae1333863c558c26b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a17e3538225bef6ae1333863c558c26b9" kindref="member">elevatorDoorOpening</ref>;</highlight></codeline>
+<codeline lineno="160" refid="classSceneSP_1a275f642c00a3550be9a28f15eab19ed8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a275f642c00a3550be9a28f15eab19ed8" kindref="member">elevatorSecondFloor</ref>;</highlight></codeline>
+<codeline lineno="161" refid="classSceneSP_1a77fa5901c17cbf238d97effcf7642674" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a77fa5901c17cbf238d97effcf7642674" kindref="member">b_isWithinInteractionItem</ref>;</highlight></codeline>
+<codeline lineno="162" refid="classSceneSP_1a18a1a999d7e5326eba2d5750f4a56f5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a18a1a999d7e5326eba2d5750f4a56f5c" kindref="member">b_isWithinPayingCashier</ref>;</highlight></codeline>
+<codeline lineno="163" refid="classSceneSP_1a0cda805b60cda2df291924c60f818fa2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0cda805b60cda2df291924c60f818fa2" kindref="member">b_is_Stealing</ref>;</highlight></codeline>
+<codeline lineno="164" refid="classSceneSP_1a3815c5827c2ef6b1fac1511b4a69848b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a3815c5827c2ef6b1fac1511b4a69848b" kindref="member">b_dinged</ref>;</highlight></codeline>
+<codeline lineno="165" refid="classSceneSP_1a93d8b6c511496b6f2b6737ec788d8cb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a93d8b6c511496b6f2b6737ec788d8cb3" kindref="member">falling</ref>;</highlight></codeline>
+<codeline lineno="166" refid="classSceneSP_1ab4814ef363dcc618cc1bdb188c96c480" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab4814ef363dcc618cc1bdb188c96c480" kindref="member">interactionTimer</ref>;</highlight></codeline>
+<codeline lineno="167" refid="classSceneSP_1a2d1d1a5f87cb82bf5cb096915c32660d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a2d1d1a5f87cb82bf5cb096915c32660d" kindref="member">LogisticinteractionTimer</ref>;</highlight></codeline>
+<codeline lineno="168" refid="classSceneSP_1ab8cad3792cc4681668c35ffdbd3dd009" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab8cad3792cc4681668c35ffdbd3dd009" kindref="member">CustomerinteractionTimer</ref>;</highlight></codeline>
+<codeline lineno="169" refid="classSceneSP_1ae8329080c0130c74d794785e3eb0fbe6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae8329080c0130c74d794785e3eb0fbe6" kindref="member">moveDoorFront</ref>;</highlight></codeline>
+<codeline lineno="170" refid="classSceneSP_1a50c50ec55fc1f6eede231e25e3afad34" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a50c50ec55fc1f6eede231e25e3afad34" kindref="member">moveDoorBack</ref>;</highlight></codeline>
+<codeline lineno="171" refid="classSceneSP_1a129de0d4058f53bccb6182d077d79605" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a129de0d4058f53bccb6182d077d79605" kindref="member">trolleyrotation</ref>;</highlight></codeline>
+<codeline lineno="172" refid="classSceneSP_1a2558642476b4c695e6f9da9fb26a6eb9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a2558642476b4c695e6f9da9fb26a6eb9" kindref="member">handrotationleftandright</ref>;</highlight></codeline>
+<codeline lineno="173" refid="classSceneSP_1ac13fe67e797aabbfe40dea0637da7e70" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ac13fe67e797aabbfe40dea0637da7e70" kindref="member">handtranslation</ref>;</highlight></codeline>
+<codeline lineno="174" refid="classSceneSP_1ae8941ac3c11bec93349f0387f5ce70aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae8941ac3c11bec93349f0387f5ce70aa" kindref="member">diffX</ref>;</highlight></codeline>
+<codeline lineno="175" refid="classSceneSP_1a05fdce9e19fb269c6eec81a406cbc121" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a05fdce9e19fb269c6eec81a406cbc121" kindref="member">diffZ</ref>;</highlight></codeline>
+<codeline lineno="176" refid="classSceneSP_1ada26d307a4155bbec05f75b1b62e3806" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ada26d307a4155bbec05f75b1b62e3806" kindref="member">charactersrotation</ref>;</highlight></codeline>
+<codeline lineno="177" refid="classSceneSP_1a56bf895c333f7a73d0cd85df124d28c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a56bf895c333f7a73d0cd85df124d28c1" kindref="member">elevatorDoorY</ref>;</highlight></codeline>
+<codeline lineno="178" refid="classSceneSP_1a1bbd3940f8ac6039dddb9be561f9db7a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1bbd3940f8ac6039dddb9be561f9db7a" kindref="member">elevatorY</ref>;</highlight></codeline>
+<codeline lineno="179" refid="classSceneSP_1af7231d1503da7e66f60c7fa49fb68f3b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af7231d1503da7e66f60c7fa49fb68f3b" kindref="member">itemYrotation</ref>;</highlight></codeline>
+<codeline lineno="180" refid="classSceneSP_1a05cef93cffc544aaa29869bcb8533631" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a05cef93cffc544aaa29869bcb8533631" kindref="member">itemXrotation</ref>;</highlight></codeline>
+<codeline lineno="181" refid="classSceneSP_1a9f11726e40da8f41ca536bac86488d06" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9f11726e40da8f41ca536bac86488d06" kindref="member">ATMMoney</ref>;</highlight></codeline>
+<codeline lineno="182" refid="classSceneSP_1a02ff170fa86b9bac25ecbf06a9bf02cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a02ff170fa86b9bac25ecbf06a9bf02cf" kindref="member">f_soundTimer</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="184" refid="classSceneSP_1af4999458f6634e8dcab0981b8527c79d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCEmptyItem" kindref="compound">CEmptyItem</ref><sp/><ref refid="classSceneSP_1af4999458f6634e8dcab0981b8527c79d" kindref="member">emptyItem</ref>;</highlight></codeline>
+<codeline lineno="185" refid="classSceneSP_1aa37d298796c181f0d22e67f0197fd301" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa37d298796c181f0d22e67f0197fd301" kindref="member">easterLimiter</ref>;</highlight></codeline>
+<codeline lineno="186" refid="classSceneSP_1aaae652ae625469ebb3e17a0146276334" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aaae652ae625469ebb3e17a0146276334" kindref="member">easterLimiter2</ref>;</highlight></codeline>
+<codeline lineno="187" refid="classSceneSP_1a1c48614bf7325fe76efbfa3755a7e822" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1c48614bf7325fe76efbfa3755a7e822" kindref="member">easterTimer</ref>;</highlight></codeline>
+<codeline lineno="188" refid="classSceneSP_1a05dad6c5d64e4c28e84319a3c4da0179" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a05dad6c5d64e4c28e84319a3c4da0179" kindref="member">cagedPos</ref>;</highlight></codeline>
+<codeline lineno="189" refid="classSceneSP_1a6aa44a3977c78dadc731101de652685b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a6aa44a3977c78dadc731101de652685b" kindref="member">diffY</ref>;</highlight></codeline>
+<codeline lineno="190" refid="classSceneSP_1a9bcf09dcd40e5e4a0ff7c13162904559" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9bcf09dcd40e5e4a0ff7c13162904559" kindref="member">getCounter</ref>;</highlight></codeline>
+<codeline lineno="191" refid="classSceneSP_1a8fbd304e3588b200b171dd6b667e0ee4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a8fbd304e3588b200b171dd6b667e0ee4" kindref="member">winEaster</ref>;</highlight></codeline>
+<codeline lineno="192" refid="classSceneSP_1a5292bf8d48376428f29489ce2686410f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5292bf8d48376428f29489ce2686410f" kindref="member">closeEaster</ref>;</highlight></codeline>
+<codeline lineno="193" refid="classSceneSP_1a5e4db70b7ffd617813b591aa454a7a23" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5e4db70b7ffd617813b591aa454a7a23" kindref="member">inRange</ref>;</highlight></codeline>
+<codeline lineno="194" refid="classSceneSP_1a080548dbcc561d4fcdd99be92b1eb4f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a080548dbcc561d4fcdd99be92b1eb4f2" kindref="member">getCaged</ref>;</highlight></codeline>
+<codeline lineno="195" refid="classSceneSP_1a64ecafb0ed9c05c1cb0ddfbb1bdf34b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a64ecafb0ed9c05c1cb0ddfbb1bdf34b9" kindref="member">getGabed</ref>;</highlight></codeline>
+<codeline lineno="196" refid="classSceneSP_1adb6681d2b3f6813fad6b4014650e2ef2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1adb6681d2b3f6813fad6b4014650e2ef2" kindref="member">getTrolled</ref>;</highlight></codeline>
+<codeline lineno="197" refid="classSceneSP_1a70010fe90bb67495cd7399fcaf2cdf3a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a70010fe90bb67495cd7399fcaf2cdf3a" kindref="member">getTimed</ref>;</highlight></codeline>
+<codeline lineno="198" refid="classSceneSP_1a788a084174d4c725c8f2dc6f0fe21d48" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a788a084174d4c725c8f2dc6f0fe21d48" kindref="member">getRicked</ref>;</highlight></codeline>
+<codeline lineno="199" refid="classSceneSP_1a864787f08c56da03375530eb0d074a96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a864787f08c56da03375530eb0d074a96" kindref="member">caged</ref>;</highlight></codeline>
+<codeline lineno="200" refid="classSceneSP_1aa469c337ff45c720fa5cde27900954ce" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa469c337ff45c720fa5cde27900954ce" kindref="member">win</ref>;</highlight></codeline>
+<codeline lineno="201" refid="classSceneSP_1a9c43989322715bc72a434e79ac9538ac" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9c43989322715bc72a434e79ac9538ac" kindref="member">lose</ref>;</highlight></codeline>
+<codeline lineno="202" refid="classSceneSP_1af41c898d3858ea9a05b0837b7b1c893c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af41c898d3858ea9a05b0837b7b1c893c" kindref="member">showTuginstruction</ref>;</highlight></codeline>
+<codeline lineno="203" refid="classSceneSP_1adbad2c2e5df3efc5765af092c5604916" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1adbad2c2e5df3efc5765af092c5604916" kindref="member">b_crouching</ref>;</highlight></codeline>
+<codeline lineno="204" refid="classSceneSP_1ab8aae989065c7622ad312852d9c1bbd0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab8aae989065c7622ad312852d9c1bbd0" kindref="member">b_inspection</ref>;</highlight></codeline>
+<codeline lineno="205" refid="classSceneSP_1afad26616edb9451f6111d00bb13b2b75" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1afad26616edb9451f6111d00bb13b2b75" kindref="member">i_total_items_to_find</ref>;</highlight></codeline>
+<codeline lineno="206" refid="classSceneSP_1ae4a8df5406041430d648b3fa9768f922" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae4a8df5406041430d648b3fa9768f922" kindref="member">i_sampleItems</ref>;</highlight></codeline>
+<codeline lineno="207" refid="classSceneSP_1ab8bb0795f68b7ff9cc77f89566e7864c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ab8bb0795f68b7ff9cc77f89566e7864c" kindref="member">i_menuHandle</ref>;</highlight></codeline>
+<codeline lineno="208" refid="classSceneSP_1a0b51848382d5135f64793ed2093477d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0b51848382d5135f64793ed2093477d9" kindref="member">i_drunkmanAct</ref>;</highlight></codeline>
+<codeline lineno="209" refid="classSceneSP_1a7f972e58312cb100af1993254f8a4ff6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a7f972e58312cb100af1993254f8a4ff6" kindref="member">i_CashierAct</ref>;</highlight></codeline>
+<codeline lineno="210" refid="classSceneSP_1a819fbe74143959b6aa0bff6b2139369b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a819fbe74143959b6aa0bff6b2139369b" kindref="member">elevatorIdle</ref>;</highlight></codeline>
+<codeline lineno="211" refid="classSceneSP_1a5ac6b81e9e0c96182d29a963e8a32881" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a5ac6b81e9e0c96182d29a963e8a32881" kindref="member">IsIntugofwar</ref>;</highlight></codeline>
+<codeline lineno="212" refid="classSceneSP_1ad6b3355d756b91ecae9b1529fb3b8045" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ad6b3355d756b91ecae9b1529fb3b8045" kindref="member">s_money</ref>;</highlight></codeline>
+<codeline lineno="213" refid="classSceneSP_1aa2268da42af32922db705c5d84fa2370" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aa2268da42af32922db705c5d84fa2370" kindref="member">s_position</ref>;</highlight></codeline>
+<codeline lineno="214" refid="classSceneSP_1a0ad56cb905b6ee2d88f7daa31772c900" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a0ad56cb905b6ee2d88f7daa31772c900" kindref="member">s_fps</ref>;</highlight></codeline>
+<codeline lineno="215" refid="classSceneSP_1a9a60b73c118d0e2e7d349c544ce352b6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a9a60b73c118d0e2e7d349c544ce352b6" kindref="member">s_camera_target</ref>;</highlight></codeline>
+<codeline lineno="216" refid="classSceneSP_1aae1506ed04e68bde0bed3a4574444fc0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aae1506ed04e68bde0bed3a4574444fc0" kindref="member">s_item_name</ref>;</highlight></codeline>
+<codeline lineno="217" refid="classSceneSP_1a1564139b19168adb6eb9cf60c455231f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1564139b19168adb6eb9cf60c455231f" kindref="member">s_item_price</ref>;</highlight></codeline>
+<codeline lineno="218" refid="classSceneSP_1aae87a47595ea7b76d23949c734ee9c18" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aae87a47595ea7b76d23949c734ee9c18" kindref="member">s_easter_counter</ref>;</highlight></codeline>
+<codeline lineno="219" refid="classSceneSP_1ac510822ee1088db3f284dfcde2d2aa80" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ac510822ee1088db3f284dfcde2d2aa80" kindref="member">s_easter_count</ref>;</highlight></codeline>
+<codeline lineno="220" refid="classSceneSP_1a1183a97bf20e2cb72f75d7824212bb35" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a1183a97bf20e2cb72f75d7824212bb35" kindref="member">s_atm_balance</ref>;</highlight></codeline>
+<codeline lineno="221" refid="classSceneSP_1aeb3514c88e035ed58a3f42745ab71be5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCPlayer" kindref="compound">CPlayer</ref><sp/>*<sp/><ref refid="classSceneSP_1aeb3514c88e035ed58a3f42745ab71be5" kindref="member">ptrplayer</ref>;</highlight></codeline>
+<codeline lineno="222" refid="classSceneSP_1a64aa7d480750eb94ac9b071468b08e40" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem" kindref="compound">CItem</ref><sp/>*<sp/><ref refid="classSceneSP_1a64aa7d480750eb94ac9b071468b08e40" kindref="member">ptrItem</ref>;</highlight></codeline>
+<codeline lineno="223" refid="classSceneSP_1ab4349182d369ad613f92ea856392052f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem" kindref="compound">CItem</ref><sp/>*<sp/><ref refid="classSceneSP_1ab4349182d369ad613f92ea856392052f" kindref="member">ptrClass</ref>;</highlight></codeline>
+<codeline lineno="224" refid="classSceneSP_1a467706b72db7fe4bbe349ce223c9d7bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem" kindref="compound">CItem</ref><sp/>*<sp/><ref refid="classSceneSP_1a467706b72db7fe4bbe349ce223c9d7bb" kindref="member">ptrInvSelect</ref>;</highlight></codeline>
+<codeline lineno="225" refid="classSceneSP_1a10707257fca1d2fae71c07c43c70ebfa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc" kindref="compound">CNpc</ref><sp/>*<sp/><ref refid="classSceneSP_1a10707257fca1d2fae71c07c43c70ebfa" kindref="member">ptrNPC</ref>;</highlight></codeline>
+<codeline lineno="226" refid="classSceneSP_1ae472b8911c8e99c83776d05177bacbde" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1ae472b8911c8e99c83776d05177bacbde" kindref="member">selectionPointing</ref>;</highlight></codeline>
+<codeline lineno="227" refid="classSceneSP_1a843b1cc24b0dd046be4820f62d426c63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a843b1cc24b0dd046be4820f62d426c63" kindref="member">inventoryPointing</ref>;</highlight></codeline>
+<codeline lineno="228" refid="classSceneSP_1a10856a68829d014f8a36b021c9fa7495" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCContainer" kindref="compound">CContainer</ref>*<sp/><ref refid="classSceneSP_1a10856a68829d014f8a36b021c9fa7495" kindref="member">ptrContainer</ref>;</highlight></codeline>
+<codeline lineno="229" refid="classSceneSP_1a883b4a6953dc22094fd07d5327f60609" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;CContainer*&gt;<sp/><ref refid="classSceneSP_1a883b4a6953dc22094fd07d5327f60609" kindref="member">myContainerList</ref>;<sp/></highlight><highlight class="comment">//Shelf<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="230" refid="classSceneSP_1a9549c9c6c4beff3cc4d5f9d0cc29f353" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;CItem*&gt;<sp/><ref refid="classSceneSP_1a9549c9c6c4beff3cc4d5f9d0cc29f353" kindref="member">myStockList</ref>;<sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Supermarket<sp/>stock<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231" refid="classSceneSP_1a958c7b3cad9c8173a8e32303accf37e7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;CItem*&gt;<sp/><ref refid="classSceneSP_1a958c7b3cad9c8173a8e32303accf37e7" kindref="member">myTreasureList</ref>;<sp/></highlight><highlight class="comment">//Treasure<sp/>item<sp/>vector</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="232" refid="classSceneSP_1a4320fd8dfba760426f2d37e10dea7983" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;CItem*&gt;<sp/><ref refid="classSceneSP_1a4320fd8dfba760426f2d37e10dea7983" kindref="member">myCheckList</ref>;<sp/></highlight><highlight class="comment">//Check<sp/>list<sp/>for<sp/>items</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="233" refid="classSceneSP_1aa4e654c93690c11012e7a80c276695d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;CNpc*&gt;<sp/><ref refid="classSceneSP_1aa4e654c93690c11012e7a80c276695d0" kindref="member">myNPCList</ref>;</highlight></codeline>
+<codeline lineno="234" refid="structSceneSP_1_1Transformations" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structSceneSP_1_1Transformations" kindref="compound">Transformations</ref></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="236" refid="structSceneSP_1_1Transformations_1a84fd96144d675efd073a6d2000d8c621" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structSceneSP_1_1Transformations_1a84fd96144d675efd073a6d2000d8c621" kindref="member">translateX</ref>;</highlight></codeline>
+<codeline lineno="237" refid="structSceneSP_1_1Transformations_1a4b7d0cb3d935a483b342afe21f0a2477" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structSceneSP_1_1Transformations_1a4b7d0cb3d935a483b342afe21f0a2477" kindref="member">translateY</ref>;</highlight></codeline>
+<codeline lineno="238" refid="structSceneSP_1_1Transformations_1a1fab143a75486fab7eff6ab0b2fde545" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structSceneSP_1_1Transformations_1a1fab143a75486fab7eff6ab0b2fde545" kindref="member">translateZ</ref>;</highlight></codeline>
+<codeline lineno="239" refid="structSceneSP_1_1Transformations_1ab0a6c5029fd70adc3ef5b8f99cadddf1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="structSceneSP_1_1Transformations_1ab0a6c5029fd70adc3ef5b8f99cadddf1" kindref="member">rotateA</ref>;</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sound<sp/>Buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="243" refid="classSceneSP_1a2ef010111a9b5064c3c0e9d847589a4a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref><sp/><ref refid="classSceneSP_1a2ef010111a9b5064c3c0e9d847589a4a" kindref="member">music</ref>;</highlight></codeline>
+<codeline lineno="244" refid="classSceneSP_1a020ddc0fdd99b612dc308a07e24716aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref><sp/><ref refid="classSceneSP_1a020ddc0fdd99b612dc308a07e24716aa" kindref="member">music2</ref>;</highlight></codeline>
+<codeline lineno="245" refid="classSceneSP_1a0e95d10bc1aea98c8f75fac63fc5b9e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref><sp/><ref refid="classSceneSP_1a0e95d10bc1aea98c8f75fac63fc5b9e1" kindref="member">sound</ref>;</highlight></codeline>
+<codeline lineno="246" refid="classSceneSP_1a6867812b9c44ba7d6ec54ab9341c4098" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref><sp/><ref refid="classSceneSP_1a6867812b9c44ba7d6ec54ab9341c4098" kindref="member">easter</ref>;</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSP_1a80dbae750d77999eaa03f19cb51ac999" kindref="member">SceneSP</ref>();</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneSP_1a3e6a17a1dde050fc987536c06275095e" kindref="member">~SceneSP</ref>();</highlight></codeline>
+<codeline lineno="250" refid="classSceneSP_1adad74408874348ad8585960f22e921d8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1adad74408874348ad8585960f22e921d8" kindref="member">timer</ref>;</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a7d552813859dff4132751e1d43253c44" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1adf87c23d837ac9522a361a799ecb4300" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1af9fd03cc9990ba9e1ce2df171d358474" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Camera3<sp/>camera;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="classSceneSP_1a09c76b1ed816a94b775bd46e1ba2c4d0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/><ref refid="classSceneSP_1a09c76b1ed816a94b775bd46e1ba2c4d0" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//render<sp/>skybox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1a71623d5328db0316c931d504f7707c07" kindref="member">RenderSkyBox</ref>();</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262" refid="classSceneSP_1a581b561a719d5da0ebb3570485728c19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSceneSP_1abc180adffdbd92cd0a75c8c91bfc3218" kindref="member">modelStack</ref>,<sp/><ref refid="classSceneSP_1a581b561a719d5da0ebb3570485728c19" kindref="member">viewStack</ref>,<sp/><ref refid="classSceneSP_1a8ee20efe50d8e6aef3753d4793ac1d74" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="264" refid="classSceneSP_1a2a37456bd927ff091184479be5a87957" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight" kindref="compound">Light</ref><sp/><ref refid="classSceneSP_1a2a37456bd927ff091184479be5a87957" kindref="member">lights</ref>[2];</highlight></codeline>
+<codeline lineno="265" refid="classSceneSP_1ac05912befcc1353d1d5c755f54f4175b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structSceneSP_1_1Transformations" kindref="compound">Transformations</ref><sp/><ref refid="classSceneSP_1ac05912befcc1353d1d5c755f54f4175b" kindref="member">Cashier</ref>;</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneSP_1aefb2189bff2b182a3180014dcc5b0786" kindref="member">RenderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneSP.h"/>
+  </compounddef>
+</doxygen>

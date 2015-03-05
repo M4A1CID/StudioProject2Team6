@@ -1,0 +1,1547 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1String" kind="class" prot="public">
+    <compoundname>sf::String</compoundname>
+    <includes refid="String_8hpp" local="no">String.hpp</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="typedef" id="classsf_1_1String_1ac90f2b7b28f703020f8d027e98806235" prot="public" static="no">
+        <type>std::basic_string&lt; <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &gt;::iterator</type>
+        <definition>typedef std::basic_string&lt;Uint32&gt;::iterator sf::String::Iterator</definition>
+        <argsstring></argsstring>
+        <name>Iterator</name>
+        <briefdescription>
+<para>Iterator type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="51" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classsf_1_1String_1a8e18efc2e8464f6eb82818902d527efa" prot="public" static="no">
+        <type>std::basic_string&lt; <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &gt;::const_iterator</type>
+        <definition>typedef std::basic_string&lt;Uint32&gt;::const_iterator sf::String::ConstIterator</definition>
+        <argsstring></argsstring>
+        <name>ConstIterator</name>
+        <briefdescription>
+<para>Read-only iterator type. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="52" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classsf_1_1String_1abaadecaf12a6b41c54d725c75fd28527" prot="public" static="yes" mutable="no">
+        <type>const std::size_t</type>
+        <definition>const std::size_t sf::String::InvalidPos</definition>
+        <argsstring></argsstring>
+        <name>InvalidPos</name>
+        <briefdescription>
+<para>Represents an invalid position in the string. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="57" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1String_1ac31f912a1ff7315ed52ddab1b8ac0c98" prot="private" static="no" mutable="no">
+        <type>std::basic_string&lt; <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &gt;</type>
+        <definition>std::basic_string&lt;Uint32&gt; sf::String::m_string</definition>
+        <argsstring></argsstring>
+        <name>m_string</name>
+        <briefdescription>
+<para>Internal string of UTF-32 characters. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="526" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" bodystart="526" bodyend="-1"/>
+        <referencedby refid="classsf_1_1String_1aecbcc789c2505f1583c586516be82a94" compoundref="String_8inl" startline="48" endline="53">fromUtf32</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1String_1a9563a4e93f692e0c8e8702b374ef8692" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>()</argsstring>
+        <name>String</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor creates an empty string. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="65" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ac9df7f7696cff164794e338f3c89ccc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(char ansiChar, const std::locale &amp;locale=std::locale())</argsstring>
+        <name>String</name>
+        <param>
+          <type>char</type>
+          <declname>ansiChar</declname>
+        </param>
+        <param>
+          <type>const std::locale &amp;</type>
+          <declname>locale</declname>
+          <defval>std::locale()</defval>
+        </param>
+        <briefdescription>
+<para>Construct from a single ANSI character and a locale. </para>        </briefdescription>
+        <detaileddescription>
+<para>The source character is converted to UTF-32 according to the given locale.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ansiChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ANSI character to convert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Locale to use for conversion </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="77" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1aefaa202d2aa5ff85b4f75a5983367e86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(wchar_t wideChar)</argsstring>
+        <name>String</name>
+        <param>
+          <type>wchar_t</type>
+          <declname>wideChar</declname>
+        </param>
+        <briefdescription>
+<para>Construct from single wide character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wideChar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wide character to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="85" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a8e1a5027416d121187908e2ed77079ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(Uint32 utf32Char)</argsstring>
+        <name>String</name>
+        <param>
+          <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref></type>
+          <declname>utf32Char</declname>
+        </param>
+        <briefdescription>
+<para>Construct from single UTF-32 character. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utf32Char</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UTF-32 character to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="93" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a57d2b8c289f9894f859564cad034bfc7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const char *ansiString, const std::locale &amp;locale=std::locale())</argsstring>
+        <name>String</name>
+        <param>
+          <type>const char *</type>
+          <declname>ansiString</declname>
+        </param>
+        <param>
+          <type>const std::locale &amp;</type>
+          <declname>locale</declname>
+          <defval>std::locale()</defval>
+        </param>
+        <briefdescription>
+<para>Construct from a null-terminated C-style ANSI string and a locale. </para>        </briefdescription>
+        <detaileddescription>
+<para>The source string is converted to UTF-32 according to the given locale.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ansiString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ANSI string to convert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Locale to use for conversion </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a0aa41dcbd17b0c36c74d03d3b0147f1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const std::string &amp;ansiString, const std::locale &amp;locale=std::locale())</argsstring>
+        <name>String</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>ansiString</declname>
+        </param>
+        <param>
+          <type>const std::locale &amp;</type>
+          <declname>locale</declname>
+          <defval>std::locale()</defval>
+        </param>
+        <briefdescription>
+<para>Construct from an ANSI string and a locale. </para>        </briefdescription>
+        <detaileddescription>
+<para>The source string is converted to UTF-32 according to the given locale.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ansiString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ANSI string to convert </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Locale to use for conversion </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="117" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a5742d0a9b0c754f711820c2b5c40fa55" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const wchar_t *wideString)</argsstring>
+        <name>String</name>
+        <param>
+          <type>const wchar_t *</type>
+          <declname>wideString</declname>
+        </param>
+        <briefdescription>
+<para>Construct from null-terminated C-style wide string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wideString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wide string to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="125" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a5e38151340af4f9a5f74ad24c0664074" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const std::wstring &amp;wideString)</argsstring>
+        <name>String</name>
+        <param>
+          <type>const std::wstring &amp;</type>
+          <declname>wideString</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a wide string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wideString</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Wide string to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="133" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1aea3629adf19f9fe713d4946f6c75b214" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const Uint32 *utf32String)</argsstring>
+        <name>String</name>
+        <param>
+          <type>const <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> *</type>
+          <declname>utf32String</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a null-terminated C-style UTF-32 string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utf32String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UTF-32 string to assign </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="141" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a6eee86dbe75d16bbcc26e97416c2e1ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const std::basic_string&lt; Uint32 &gt; &amp;utf32String)</argsstring>
+        <name>String</name>
+        <param>
+          <type>const std::basic_string&lt; <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &gt; &amp;</type>
+          <declname>utf32String</declname>
+        </param>
+        <briefdescription>
+<para>Construct from an UTF-32 string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>utf32String</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>UTF-32 string to assign </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1af862594d3c4070d8ddbf08cf8dce4f59" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::String</definition>
+        <argsstring>(const String &amp;copy)</argsstring>
+        <name>String</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>copy</declname>
+        </param>
+        <briefdescription>
+<para>Copy constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>copy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance to copy </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="157" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a3664f92c3b488bf9f60f6b8eafe1844d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::operator std::string</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::string</name>
+        <briefdescription>
+<para>Implicit conversion operator to std::string (ANSI string) </para>        </briefdescription>
+        <detaileddescription>
+<para>The current global locale is used for conversion. If you want to explicitly specify a locale, see toAnsiString. Characters that do not fit in the target encoding are discarded from the returned string. This operator is defined for convenience, and is equivalent to calling <ref refid="classsf_1_1String_1a71d111ccfaf295b8b8be8ca4a3ceb5f4" kindref="member">toAnsiString()</ref>.</para><para><simplesect kind="return"><para>Converted ANSI string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a71d111ccfaf295b8b8be8ca4a3ceb5f4" kindref="member">toAnsiString</ref>, operator std::wstring </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="220" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a20d50d45020d1dbe1779dda69ee83732" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::String::operator std::wstring</definition>
+        <argsstring>() const </argsstring>
+        <name>operator std::wstring</name>
+        <briefdescription>
+<para>Implicit conversion operator to std::wstring (wide string) </para>        </briefdescription>
+        <detaileddescription>
+<para>Characters that do not fit in the target encoding are discarded from the returned string. This operator is defined for convenience, and is equivalent to calling <ref refid="classsf_1_1String_1afd8b085ad7255543e4dc1285389d2d82" kindref="member">toWideString()</ref>.</para><para><simplesect kind="return"><para>Converted wide string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1afd8b085ad7255543e4dc1285389d2d82" kindref="member">toWideString</ref>, operator std::string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="235" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a71d111ccfaf295b8b8be8ca4a3ceb5f4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string sf::String::toAnsiString</definition>
+        <argsstring>(const std::locale &amp;locale=std::locale()) const </argsstring>
+        <name>toAnsiString</name>
+        <param>
+          <type>const std::locale &amp;</type>
+          <declname>locale</declname>
+          <defval>std::locale()</defval>
+        </param>
+        <briefdescription>
+<para>Convert the Unicode string to an ANSI string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The UTF-32 string is converted to an ANSI string in the encoding defined by <emphasis>locale</emphasis>. Characters that do not fit in the target encoding are discarded from the returned string.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>locale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Locale to use for conversion</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Converted ANSI string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1afd8b085ad7255543e4dc1285389d2d82" kindref="member">toWideString</ref>, operator std::string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="252" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1afd8b085ad7255543e4dc1285389d2d82" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::wstring</type>
+        <definition>std::wstring sf::String::toWideString</definition>
+        <argsstring>() const </argsstring>
+        <name>toWideString</name>
+        <briefdescription>
+<para>Convert the Unicode string to a wide string. </para>        </briefdescription>
+        <detaileddescription>
+<para>Characters that do not fit in the target encoding are discarded from the returned string.</para><para><simplesect kind="return"><para>Converted wide string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a71d111ccfaf295b8b8be8ca4a3ceb5f4" kindref="member">toAnsiString</ref>, operator std::wstring </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="265" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a6669450d88e8284fd90d1ba457c30fa0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::basic_string&lt; <ref refid="namespacesf_1a4ef3d630785c4f296f9b4f274c33d78e" kindref="member">Uint8</ref> &gt;</type>
+        <definition>std::basic_string&lt;Uint8&gt; sf::String::toUtf8</definition>
+        <argsstring>() const </argsstring>
+        <name>toUtf8</name>
+        <briefdescription>
+<para>Convert the Unicode string to a UTF-8 string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Converted UTF-8 string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1abaa37ec39d40f44a2bff4ad3059bef47" kindref="member">toUtf16</ref>, <ref refid="classsf_1_1String_1a70f6bdf579125e1cb52329e34a981168" kindref="member">toUtf32</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="275" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1abaa37ec39d40f44a2bff4ad3059bef47" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::basic_string&lt; <ref refid="namespacesf_1a2fcaf787248b0b83dfb6b145ca348246" kindref="member">Uint16</ref> &gt;</type>
+        <definition>std::basic_string&lt;Uint16&gt; sf::String::toUtf16</definition>
+        <argsstring>() const </argsstring>
+        <name>toUtf16</name>
+        <briefdescription>
+<para>Convert the Unicode string to a UTF-16 string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Converted UTF-16 string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a6669450d88e8284fd90d1ba457c30fa0" kindref="member">toUtf8</ref>, <ref refid="classsf_1_1String_1a70f6bdf579125e1cb52329e34a981168" kindref="member">toUtf32</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="285" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a70f6bdf579125e1cb52329e34a981168" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::basic_string&lt; <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &gt;</type>
+        <definition>std::basic_string&lt;Uint32&gt; sf::String::toUtf32</definition>
+        <argsstring>() const </argsstring>
+        <name>toUtf32</name>
+        <briefdescription>
+<para>Convert the Unicode string to a UTF-32 string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function doesn&apos;t perform any conversion, since the string is already stored as UTF-32 internally.</para><para><simplesect kind="return"><para>Converted UTF-32 string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a6669450d88e8284fd90d1ba457c30fa0" kindref="member">toUtf8</ref>, <ref refid="classsf_1_1String_1abaa37ec39d40f44a2bff4ad3059bef47" kindref="member">toUtf16</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="298" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a096255c066e5ef8c31952216b8ce9c42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+        <definition>String&amp; sf::String::operator=</definition>
+        <argsstring>(const String &amp;right)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of assignment operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Instance to assign</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to self </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="308" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ae6563ce2c243ae2160eea8a354199f4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+        <definition>String&amp; sf::String::operator+=</definition>
+        <argsstring>(const String &amp;right)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of += operator to append an UTF-32 string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classsf_1_1String" kindref="compound">String</ref> to append</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to self </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="318" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a649b89a65866bf03652f7b5cb6de3bb6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref></type>
+        <definition>Uint32 sf::String::operator[]</definition>
+        <argsstring>(std::size_t index) const </argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Overload of [] operator to access a character by its position. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function provides read-only access to characters. Note: the behavior is undefined if <emphasis>index</emphasis> is out of range.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the character to get</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Character at position <emphasis>index</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="331" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1abc989da7f4fb873ab29188d40772ab24" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> &amp;</type>
+        <definition>Uint32&amp; sf::String::operator[]</definition>
+        <argsstring>(std::size_t index)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>index</declname>
+        </param>
+        <briefdescription>
+<para>Overload of [] operator to access a character by its position. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function provides read and write access to characters. Note: the behavior is undefined if <emphasis>index</emphasis> is out of range.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>index</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the character to get</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the character at position <emphasis>index</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="344" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a391c1b4950cbf3d3f8040cea73af2969" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::String::clear</definition>
+        <argsstring>()</argsstring>
+        <name>clear</name>
+        <briefdescription>
+<para>Clear the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function removes all the characters from the string.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1String_1a6c43f0cbe84cf17fa6ba93d58b75fcdc" kindref="member">isEmpty</ref>, <ref refid="classsf_1_1String_1aaa78a0a46b3fbe200a4ccdedc326eb93" kindref="member">erase</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="354" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a635d75c4cd830d5f639a41815dd0ce23" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t sf::String::getSize</definition>
+        <argsstring>() const </argsstring>
+        <name>getSize</name>
+        <briefdescription>
+<para>Get the size of the string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of characters in the string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a6c43f0cbe84cf17fa6ba93d58b75fcdc" kindref="member">isEmpty</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="364" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a6c43f0cbe84cf17fa6ba93d58b75fcdc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::String::isEmpty</definition>
+        <argsstring>() const </argsstring>
+        <name>isEmpty</name>
+        <briefdescription>
+<para>Check whether the string is empty or not. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the string is empty (i.e. contains no character)</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a391c1b4950cbf3d3f8040cea73af2969" kindref="member">clear</ref>, <ref refid="classsf_1_1String_1a635d75c4cd830d5f639a41815dd0ce23" kindref="member">getSize</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="374" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1aaa78a0a46b3fbe200a4ccdedc326eb93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::String::erase</definition>
+        <argsstring>(std::size_t position, std::size_t count=1)</argsstring>
+        <name>erase</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>count</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Erase one or more characters from the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function removes a sequence of <emphasis>count</emphasis> characters starting from <emphasis>position</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPosition" kindref="compound">Position</ref> of the first character to erase </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>count</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters to erase </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="386" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ad0b1455deabf07af13ee79812e05fa02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::String::insert</definition>
+        <argsstring>(std::size_t position, const String &amp;str)</argsstring>
+        <name>insert</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>Insert one or more characters into the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function inserts the characters of <emphasis>str</emphasis> into the string, starting from <emphasis>position</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structPosition" kindref="compound">Position</ref> of insertion </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Characters to insert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="398" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ae1fc8d6ced3b6082853f8013ea051b5c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::size_t</type>
+        <definition>std::size_t sf::String::find</definition>
+        <argsstring>(const String &amp;str, std::size_t start=0) const </argsstring>
+        <name>find</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>str</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>start</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Find a sequence of one or more characters in the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function searches for the characters of <emphasis>str</emphasis> in the string, starting from <emphasis>start</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Characters to find </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Where to begin searching</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="structPosition" kindref="compound">Position</ref> of <emphasis>str</emphasis> in the string, or <ref refid="classsf_1_1String_1abaadecaf12a6b41c54d725c75fd28527" kindref="member">String::InvalidPos</ref> if not found </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="412" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ad460e628c287b0fa88deba2eb0b6744b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::String::replace</definition>
+        <argsstring>(std::size_t position, std::size_t length, const String &amp;replaceWith)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>length</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>replaceWith</declname>
+        </param>
+        <briefdescription>
+<para>Replace a substring with another string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function replaces the substring that starts at index <emphasis>position</emphasis> and spans <emphasis>length</emphasis> characters with the string <emphasis>replaceWith</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the first character to be replaced </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters to replace. You can pass InvalidPos to replace all characters until the end of the string. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replaceWith</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classsf_1_1String" kindref="compound">String</ref> that replaces the given substring. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="426" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a82bbfee2bf23c641e5361ad505c07921" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::String::replace</definition>
+        <argsstring>(const String &amp;searchFor, const String &amp;replaceWith)</argsstring>
+        <name>replace</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>searchFor</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>replaceWith</declname>
+        </param>
+        <briefdescription>
+<para>Replace all occurrences of a substring with a replacement string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function replaces all occurrences of <emphasis>searchFor</emphasis> in this string with the string <emphasis>replaceWith</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>searchFor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value being searched for </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>replaceWith</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value that replaces found <emphasis>searchFor</emphasis> values </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="438" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a5ee1913acbad01c24feec87d294f6529" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>String sf::String::substring</definition>
+        <argsstring>(std::size_t position, std::size_t length=InvalidPos) const </argsstring>
+        <name>substring</name>
+        <param>
+          <type>std::size_t</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>length</declname>
+          <defval><ref refid="classsf_1_1String_1abaadecaf12a6b41c54d725c75fd28527" kindref="member">InvalidPos</ref></defval>
+        </param>
+        <briefdescription>
+<para>Return a part of the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function returns the substring that starts at index <emphasis>position</emphasis> and spans <emphasis>length</emphasis> characters.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index of the first character </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>length</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of characters to include in the substring (if the string is shorter, as many characters as possible are included). <ref refid="classsf_1_1String_1abaadecaf12a6b41c54d725c75fd28527" kindref="member">InvalidPos</ref> can be used to include all characters until the end of the string.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classsf_1_1String" kindref="compound">String</ref> object containing a substring of this object </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="455" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1af2d4e70869ebd38e225c6796e1325ae4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref> *</type>
+        <definition>const Uint32* sf::String::getData</definition>
+        <argsstring>() const </argsstring>
+        <name>getData</name>
+        <briefdescription>
+<para>Get a pointer to the C-style array of characters. </para>        </briefdescription>
+        <detaileddescription>
+<para>This functions provides a read-only access to a null-terminated C-style representation of the string. The returned pointer is temporary and is meant only for immediate use, thus it is not recommended to store it.</para><para><simplesect kind="return"><para>Read-only pointer to the array of characters </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="468" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a8ec30ddc08e3a6bd11c99aed782f6dfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String_1ac90f2b7b28f703020f8d027e98806235" kindref="member">Iterator</ref></type>
+        <definition>Iterator sf::String::begin</definition>
+        <argsstring>()</argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Return an iterator to the beginning of the string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Read-write iterator to the beginning of the string characters</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1ac823012f39cb6f61100418876e99d53b" kindref="member">end</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="478" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a09bbf7704847ed35bf1c18aca6fba2a2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String_1a8e18efc2e8464f6eb82818902d527efa" kindref="member">ConstIterator</ref></type>
+        <definition>ConstIterator sf::String::begin</definition>
+        <argsstring>() const </argsstring>
+        <name>begin</name>
+        <briefdescription>
+<para>Return an iterator to the beginning of the string. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Read-only iterator to the beginning of the string characters</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1ac823012f39cb6f61100418876e99d53b" kindref="member">end</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="488" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ac823012f39cb6f61100418876e99d53b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String_1ac90f2b7b28f703020f8d027e98806235" kindref="member">Iterator</ref></type>
+        <definition>Iterator sf::String::end</definition>
+        <argsstring>()</argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Return an iterator to the end of the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The end iterator refers to 1 position past the last character; thus it represents an invalid character and should never be accessed.</para><para><simplesect kind="return"><para>Read-write iterator to the end of the string characters</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a8ec30ddc08e3a6bd11c99aed782f6dfe" kindref="member">begin</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="502" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ab6fb6ee1b21bd5dbdc9d6840f035eb79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1String_1a8e18efc2e8464f6eb82818902d527efa" kindref="member">ConstIterator</ref></type>
+        <definition>ConstIterator sf::String::end</definition>
+        <argsstring>() const </argsstring>
+        <name>end</name>
+        <briefdescription>
+<para>Return an iterator to the end of the string. </para>        </briefdescription>
+        <detaileddescription>
+<para>The end iterator refers to 1 position past the last character; thus it represents an invalid character and should never be accessed.</para><para><simplesect kind="return"><para>Read-only iterator to the end of the string characters</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a8ec30ddc08e3a6bd11c99aed782f6dfe" kindref="member">begin</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="516" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a0b93eacbb10ea41f25669f2ace0148c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>String sf::String::fromUtf8</definition>
+        <argsstring>(T begin, T end)</argsstring>
+        <name>fromUtf8</name>
+        <param>
+          <type>T</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.inl" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.inl" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1acf4be994a8f801ef399ef934e892c891" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>String sf::String::fromUtf16</definition>
+        <argsstring>(T begin, T end)</argsstring>
+        <name>fromUtf16</name>
+        <param>
+          <type>T</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.inl" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.inl" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1aecbcc789c2505f1583c586516be82a94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>String sf::String::fromUtf32</definition>
+        <argsstring>(T begin, T end)</argsstring>
+        <name>fromUtf32</name>
+        <param>
+          <type>T</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.inl" line="48" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.inl" bodystart="48" bodyend="53"/>
+        <references refid="classsf_1_1String_1ac31f912a1ff7315ed52ddab1b8ac0c98" compoundref="String_8hpp" startline="526">m_string</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classsf_1_1String_1aa7beb7ae5b26e63dcbbfa390e27a9e4b" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>static String sf::String::fromUtf8</definition>
+        <argsstring>(T begin, T end)</argsstring>
+        <name>fromUtf8</name>
+        <param>
+          <type>T</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> from a UTF-8 encoded string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Forward iterator to the beginning of the UTF-8 sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Forward iterator to the end of the UTF-8 sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> containing the source string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1a81f70eecad0000a4f2e4d66f97b80300" kindref="member">fromUtf16</ref>, <ref refid="classsf_1_1String_1ab023a4900dce37ee71ab9e29b30a23cb" kindref="member">fromUtf32</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="171" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a81f70eecad0000a4f2e4d66f97b80300" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>static String sf::String::fromUtf16</definition>
+        <argsstring>(T begin, T end)</argsstring>
+        <name>fromUtf16</name>
+        <param>
+          <type>T</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> from a UTF-16 encoded string. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Forward iterator to the beginning of the UTF-16 sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Forward iterator to the end of the UTF-16 sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> containing the source string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1aa7beb7ae5b26e63dcbbfa390e27a9e4b" kindref="member">fromUtf8</ref>, <ref refid="classsf_1_1String_1ab023a4900dce37ee71ab9e29b30a23cb" kindref="member">fromUtf32</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ab023a4900dce37ee71ab9e29b30a23cb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>static String sf::String::fromUtf32</definition>
+        <argsstring>(T begin, T end)</argsstring>
+        <name>fromUtf32</name>
+        <param>
+          <type>T</type>
+          <declname>begin</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>end</declname>
+        </param>
+        <briefdescription>
+<para>Create a new <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> from a UTF-32 encoded string. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is provided for consistency, it is equivalent to using the constructors that takes a const <ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">sf::Uint32</ref>* or a std::basic_string&lt;sf::Uint32&gt;.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>begin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Forward iterator to the beginning of the UTF-32 sequence </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>end</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Forward iterator to the end of the UTF-32 sequence</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> containing the source string</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1String_1aa7beb7ae5b26e63dcbbfa390e27a9e4b" kindref="member">fromUtf8</ref>, <ref refid="classsf_1_1String_1a81f70eecad0000a4f2e4d66f97b80300" kindref="member">fromUtf16</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="203" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsf_1_1String_1a2a385459fa9a237e61a712fa956d489e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator==</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="520" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classsf_1_1String_1ac2ca5a7703402a2bbafd85eec6d1e846" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&lt;</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="521" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="related">
+      <memberdef kind="function" id="classsf_1_1String_1a2a385459fa9a237e61a712fa956d489e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator==</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of == operator to compare two UTF-32 strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if both strings are equal </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="539" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a2b592c36be218b4811795fdc84eecc69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator!=</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of != operator to compare two UTF-32 strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if both strings are different </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="551" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1ac2ca5a7703402a2bbafd85eec6d1e846" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&lt;</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &lt; operator to compare two UTF-32 strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is lexicographically before <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="563" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a5efc1eca58cf5c17d01eb8501d303538" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&gt;</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &gt; operator to compare two UTF-32 strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is lexicographically after <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="575" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1abd342b6094b81cd086c7929b53b112ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&lt;=</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &lt;= operator to compare two UTF-32 strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is lexicographically before or equivalent to <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="587" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a8d2979d7829d6616330a768956f251e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&gt;=</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &gt;= operator to compare two UTF-32 strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is lexicographically after or equivalent to <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="599" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1String_1a55ef2bf7dc6b295ef7127b0bc1e58760" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1String" kindref="compound">String</ref></type>
+        <definition>SFML_SYSTEM_API String operator+</definition>
+        <argsstring>(const String &amp;left, const String &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1String" kindref="compound">String</ref> &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary + operator to concatenate two strings. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a string) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a string)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Concatenated string </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="611" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility string class that automatically handles conversions between types and encodings. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1String" kindref="compound">sf::String</ref> is a utility string class defined mainly for convenience.</para><para>It is a Unicode string (implemented using UTF-32), thus it can store any character in the world (European, Chinese, Arabic, Hebrew, etc.).</para><para>It automatically handles conversions from/to ANSI and wide strings, so that you can work with standard string classes and still be compatible with functions taking a <ref refid="classsf_1_1String" kindref="compound">sf::String</ref>.</para><para><programlisting><codeline><highlight class="normal">sf::String<sp/>s;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">std::string<sp/>s1<sp/>=<sp/>s;<sp/><sp/>//<sp/>automatically<sp/>converted<sp/>to<sp/>ANSI<sp/>string</highlight></codeline>
+<codeline><highlight class="normal">std::wstring<sp/>s2<sp/>=<sp/>s;<sp/>//<sp/>automatically<sp/>converted<sp/>to<sp/>wide<sp/>string</highlight></codeline>
+<codeline><highlight class="normal">s<sp/>=<sp/>&quot;hello&quot;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>automatically<sp/>converted<sp/>from<sp/>ANSI<sp/>string</highlight></codeline>
+<codeline><highlight class="normal">s<sp/>=<sp/>L&quot;hello&quot;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>automatically<sp/>converted<sp/>from<sp/>wide<sp/>string</highlight></codeline>
+<codeline><highlight class="normal">s<sp/>+=<sp/>&apos;a&apos;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>automatically<sp/>converted<sp/>from<sp/>ANSI<sp/>string</highlight></codeline>
+<codeline><highlight class="normal">s<sp/>+=<sp/>L&apos;a&apos;;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>automatically<sp/>converted<sp/>from<sp/>wide<sp/>string</highlight></codeline>
+</programlisting></para><para>Conversions involving ANSI strings use the default user locale. However it is possible to use a custom locale if necessary: <programlisting><codeline><highlight class="normal">std::locale<sp/>locale;</highlight></codeline>
+<codeline><highlight class="normal">sf::String<sp/>s;</highlight></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">std::string<sp/>s1<sp/>=<sp/>s.toAnsiString(locale);</highlight></codeline>
+<codeline><highlight class="normal">s<sp/>=<sp/>sf::String(&quot;hello&quot;,<sp/>locale);</highlight></codeline>
+</programlisting></para><para><ref refid="classsf_1_1String" kindref="compound">sf::String</ref> defines the most important functions of the standard std::string class: removing, random access, iterating, appending, comparing, etc. However it is a simple class provided for convenience, and you may have to consider using a more optimized class if your program requires complex string handling. The automatic conversion functions will then take care of converting your string to <ref refid="classsf_1_1String" kindref="compound">sf::String</ref> whenever SFML requires it.</para><para>Please note that SFML also defines a low-level, generic interface for Unicode handling, see the <ref refid="singletonsf_1_1Utf" kindref="compound">sf::Utf</ref> classes. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1149">
+        <label>size_t</label>
+      </node>
+      <node id="1147">
+        <label>sf::String</label>
+        <link refid="classsf_1_1String"/>
+        <childnode refid="1148" relation="usage">
+          <edgelabel>m_string</edgelabel>
+        </childnode>
+        <childnode refid="1149" relation="usage">
+          <edgelabel>InvalidPos</edgelabel>
+        </childnode>
+      </node>
+      <node id="1148">
+        <label>basic_string&lt; Uint32 &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" line="45" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/String.hpp" bodystart="44" bodyend="527"/>
+    <listofallmembers>
+      <member refid="classsf_1_1String_1a8ec30ddc08e3a6bd11c99aed782f6dfe" prot="public" virt="non-virtual"><scope>sf::String</scope><name>begin</name></member>
+      <member refid="classsf_1_1String_1a09bbf7704847ed35bf1c18aca6fba2a2" prot="public" virt="non-virtual"><scope>sf::String</scope><name>begin</name></member>
+      <member refid="classsf_1_1String_1a391c1b4950cbf3d3f8040cea73af2969" prot="public" virt="non-virtual"><scope>sf::String</scope><name>clear</name></member>
+      <member refid="classsf_1_1String_1a8e18efc2e8464f6eb82818902d527efa" prot="public" virt="non-virtual"><scope>sf::String</scope><name>ConstIterator</name></member>
+      <member refid="classsf_1_1String_1ac823012f39cb6f61100418876e99d53b" prot="public" virt="non-virtual"><scope>sf::String</scope><name>end</name></member>
+      <member refid="classsf_1_1String_1ab6fb6ee1b21bd5dbdc9d6840f035eb79" prot="public" virt="non-virtual"><scope>sf::String</scope><name>end</name></member>
+      <member refid="classsf_1_1String_1aaa78a0a46b3fbe200a4ccdedc326eb93" prot="public" virt="non-virtual"><scope>sf::String</scope><name>erase</name></member>
+      <member refid="classsf_1_1String_1ae1fc8d6ced3b6082853f8013ea051b5c" prot="public" virt="non-virtual"><scope>sf::String</scope><name>find</name></member>
+      <member refid="classsf_1_1String_1a81f70eecad0000a4f2e4d66f97b80300" prot="public" virt="non-virtual"><scope>sf::String</scope><name>fromUtf16</name></member>
+      <member refid="classsf_1_1String_1acf4be994a8f801ef399ef934e892c891" prot="public" virt="non-virtual"><scope>sf::String</scope><name>fromUtf16</name></member>
+      <member refid="classsf_1_1String_1ab023a4900dce37ee71ab9e29b30a23cb" prot="public" virt="non-virtual"><scope>sf::String</scope><name>fromUtf32</name></member>
+      <member refid="classsf_1_1String_1aecbcc789c2505f1583c586516be82a94" prot="public" virt="non-virtual"><scope>sf::String</scope><name>fromUtf32</name></member>
+      <member refid="classsf_1_1String_1aa7beb7ae5b26e63dcbbfa390e27a9e4b" prot="public" virt="non-virtual"><scope>sf::String</scope><name>fromUtf8</name></member>
+      <member refid="classsf_1_1String_1a0b93eacbb10ea41f25669f2ace0148c2" prot="public" virt="non-virtual"><scope>sf::String</scope><name>fromUtf8</name></member>
+      <member refid="classsf_1_1String_1af2d4e70869ebd38e225c6796e1325ae4" prot="public" virt="non-virtual"><scope>sf::String</scope><name>getData</name></member>
+      <member refid="classsf_1_1String_1a635d75c4cd830d5f639a41815dd0ce23" prot="public" virt="non-virtual"><scope>sf::String</scope><name>getSize</name></member>
+      <member refid="classsf_1_1String_1ad0b1455deabf07af13ee79812e05fa02" prot="public" virt="non-virtual"><scope>sf::String</scope><name>insert</name></member>
+      <member refid="classsf_1_1String_1abaadecaf12a6b41c54d725c75fd28527" prot="public" virt="non-virtual"><scope>sf::String</scope><name>InvalidPos</name></member>
+      <member refid="classsf_1_1String_1a6c43f0cbe84cf17fa6ba93d58b75fcdc" prot="public" virt="non-virtual"><scope>sf::String</scope><name>isEmpty</name></member>
+      <member refid="classsf_1_1String_1ac90f2b7b28f703020f8d027e98806235" prot="public" virt="non-virtual"><scope>sf::String</scope><name>Iterator</name></member>
+      <member refid="classsf_1_1String_1ac31f912a1ff7315ed52ddab1b8ac0c98" prot="private" virt="non-virtual"><scope>sf::String</scope><name>m_string</name></member>
+      <member refid="classsf_1_1String_1a3664f92c3b488bf9f60f6b8eafe1844d" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator std::string</name></member>
+      <member refid="classsf_1_1String_1a20d50d45020d1dbe1779dda69ee83732" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator std::wstring</name></member>
+      <member refid="classsf_1_1String_1a2b592c36be218b4811795fdc84eecc69" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator!=</name></member>
+      <member refid="classsf_1_1String_1a55ef2bf7dc6b295ef7127b0bc1e58760" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator+</name></member>
+      <member refid="classsf_1_1String_1ae6563ce2c243ae2160eea8a354199f4e" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator+=</name></member>
+      <member refid="classsf_1_1String_1ac2ca5a7703402a2bbafd85eec6d1e846" prot="private" virt="non-virtual"><scope>sf::String</scope><name>operator&lt;</name></member>
+      <member refid="classsf_1_1String_1ac2ca5a7703402a2bbafd85eec6d1e846" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator&lt;</name></member>
+      <member refid="classsf_1_1String_1abd342b6094b81cd086c7929b53b112ae" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator&lt;=</name></member>
+      <member refid="classsf_1_1String_1a096255c066e5ef8c31952216b8ce9c42" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator=</name></member>
+      <member refid="classsf_1_1String_1a2a385459fa9a237e61a712fa956d489e" prot="private" virt="non-virtual"><scope>sf::String</scope><name>operator==</name></member>
+      <member refid="classsf_1_1String_1a2a385459fa9a237e61a712fa956d489e" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator==</name></member>
+      <member refid="classsf_1_1String_1a5efc1eca58cf5c17d01eb8501d303538" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator&gt;</name></member>
+      <member refid="classsf_1_1String_1a8d2979d7829d6616330a768956f251e1" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator&gt;=</name></member>
+      <member refid="classsf_1_1String_1a649b89a65866bf03652f7b5cb6de3bb6" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator[]</name></member>
+      <member refid="classsf_1_1String_1abc989da7f4fb873ab29188d40772ab24" prot="public" virt="non-virtual"><scope>sf::String</scope><name>operator[]</name></member>
+      <member refid="classsf_1_1String_1ad460e628c287b0fa88deba2eb0b6744b" prot="public" virt="non-virtual"><scope>sf::String</scope><name>replace</name></member>
+      <member refid="classsf_1_1String_1a82bbfee2bf23c641e5361ad505c07921" prot="public" virt="non-virtual"><scope>sf::String</scope><name>replace</name></member>
+      <member refid="classsf_1_1String_1a9563a4e93f692e0c8e8702b374ef8692" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1ac9df7f7696cff164794e338f3c89ccc5" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1aefaa202d2aa5ff85b4f75a5983367e86" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a8e1a5027416d121187908e2ed77079ff" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a57d2b8c289f9894f859564cad034bfc7" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a0aa41dcbd17b0c36c74d03d3b0147f1e" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a5742d0a9b0c754f711820c2b5c40fa55" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a5e38151340af4f9a5f74ad24c0664074" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1aea3629adf19f9fe713d4946f6c75b214" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a6eee86dbe75d16bbcc26e97416c2e1ca" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1af862594d3c4070d8ddbf08cf8dce4f59" prot="public" virt="non-virtual"><scope>sf::String</scope><name>String</name></member>
+      <member refid="classsf_1_1String_1a5ee1913acbad01c24feec87d294f6529" prot="public" virt="non-virtual"><scope>sf::String</scope><name>substring</name></member>
+      <member refid="classsf_1_1String_1a71d111ccfaf295b8b8be8ca4a3ceb5f4" prot="public" virt="non-virtual"><scope>sf::String</scope><name>toAnsiString</name></member>
+      <member refid="classsf_1_1String_1abaa37ec39d40f44a2bff4ad3059bef47" prot="public" virt="non-virtual"><scope>sf::String</scope><name>toUtf16</name></member>
+      <member refid="classsf_1_1String_1a70f6bdf579125e1cb52329e34a981168" prot="public" virt="non-virtual"><scope>sf::String</scope><name>toUtf32</name></member>
+      <member refid="classsf_1_1String_1a6669450d88e8284fd90d1ba457c30fa0" prot="public" virt="non-virtual"><scope>sf::String</scope><name>toUtf8</name></member>
+      <member refid="classsf_1_1String_1afd8b085ad7255543e4dc1285389d2d82" prot="public" virt="non-virtual"><scope>sf::String</scope><name>toWideString</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

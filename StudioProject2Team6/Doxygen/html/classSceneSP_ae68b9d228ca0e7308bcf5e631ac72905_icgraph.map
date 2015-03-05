@@ -1,0 +1,5 @@
+<map id="SceneSP::UpdateGhostman" name="SceneSP::UpdateGhostman">
+<area shape="rect" id="node2" href="$classSceneSP.html#a4772701f96585823bf6462942bfbb793" title="Updates the movement of all Npcs in the scene based on dt. " alt="" coords="240,5,379,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="427,5,596,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="644,5,771,32"/>
+</map>

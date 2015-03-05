@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="NonCopyable_8hpp" kind="file">
+    <compoundname>NonCopyable.hpp</compoundname>
+    <includes refid="System_2Export_8hpp" local="no">SFML/System/Export.hpp</includes>
+    <includedby refid="Lock_8hpp" local="no">SFML/include/SFML/System/Lock.hpp</includedby>
+    <includedby refid="Mutex_8hpp" local="no">SFML/include/SFML/System/Mutex.hpp</includedby>
+    <includedby refid="Thread_8hpp" local="no">SFML/include/SFML/System/Thread.hpp</includedby>
+    <includedby refid="ThreadLocal_8hpp" local="no">SFML/include/SFML/System/ThreadLocal.hpp</includedby>
+    <incdepgraph>
+      <node id="3923">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="3922">
+        <label>SFML/System/Export.hpp</label>
+        <link refid="System_2Export_8hpp"/>
+        <childnode refid="3923" relation="include">
+        </childnode>
+      </node>
+      <node id="3921">
+        <label>SFML/include/SFML/System/NonCopyable.hpp</label>
+        <link refid="NonCopyable.hpp"/>
+        <childnode refid="3922" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3931">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3932">
+        <label>SFML/include/SFML/System/Mutex.hpp</label>
+        <link refid="Mutex_8hpp"/>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3927">
+        <label>SFML/include/SFML/Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="3928" relation="include">
+        </childnode>
+      </node>
+      <node id="3925">
+        <label>SFML/include/SFML/System/Lock.hpp</label>
+        <link refid="Lock_8hpp"/>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3938">
+        <label>SFML/include/SFML/System/ThreadLocal.hpp</label>
+        <link refid="ThreadLocal_8hpp"/>
+        <childnode refid="3939" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3935">
+        <label>SFML/include/SFML/System/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="3936" relation="include">
+        </childnode>
+        <childnode refid="3934" relation="include">
+        </childnode>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3929">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3934">
+        <label>SFML/include/SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream_8hpp"/>
+        <childnode refid="3933" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3936">
+        <label>SFML/include/SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder_8hpp"/>
+        <childnode refid="3937" relation="include">
+        </childnode>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3928">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3929" relation="include">
+        </childnode>
+        <childnode refid="3930" relation="include">
+        </childnode>
+        <childnode refid="3931" relation="include">
+        </childnode>
+      </node>
+      <node id="3926">
+        <label>SFML/include/SFML/System.hpp</label>
+        <link refid="System_8hpp"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3937">
+        <label>SFML/include/SFML/Audio/SoundBufferRecorder.hpp</label>
+        <link refid="SoundBufferRecorder_8hpp"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3930">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="3933">
+        <label>SFML/include/SFML/Audio/Music.hpp</label>
+        <link refid="Music_8hpp"/>
+        <childnode refid="3927" relation="include">
+        </childnode>
+      </node>
+      <node id="3939">
+        <label>SFML/include/SFML/System/ThreadLocalPtr.hpp</label>
+        <link refid="ThreadLocalPtr_8hpp"/>
+        <childnode refid="3926" relation="include">
+        </childnode>
+      </node>
+      <node id="3924">
+        <label>SFML/include/SFML/System/NonCopyable.hpp</label>
+        <link refid="NonCopyable.hpp"/>
+        <childnode refid="3925" relation="include">
+        </childnode>
+        <childnode refid="3932" relation="include">
+        </childnode>
+        <childnode refid="3935" relation="include">
+        </childnode>
+        <childnode refid="3938" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsf_1_1NonCopyable" prot="public">sf::NonCopyable</innerclass>
+    <innernamespace refid="namespacesf">sf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SFML<sp/>-<sp/>Simple<sp/>and<sp/>Fast<sp/>Multimedia<sp/>Library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007-2014<sp/>Laurent<sp/>Gomila<sp/>(laurent.gom@gmail.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied<sp/>warranty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages<sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it<sp/>freely,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>you<sp/>must<sp/>not<sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>If<sp/>you<sp/>use<sp/>this<sp/>software<sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be<sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>and<sp/>must<sp/>not<sp/>be<sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SFML_NONCOPYABLE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SFML_NONCOPYABLE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">//<sp/>Headers</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="System_2Export_8hpp" kindref="compound">SFML/System/Export.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesf" kindref="compound">sf</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41" refid="classsf_1_1NonCopyable" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" kindref="member">NonCopyable</ref>()<sp/>{}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref>&amp;);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref>&amp;<sp/>operator<sp/>=(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsf_1_1NonCopyable" kindref="compound">NonCopyable</ref>&amp;);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SFML_NONCOPYABLE_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/NonCopyable.hpp"/>
+  </compounddef>
+</doxygen>

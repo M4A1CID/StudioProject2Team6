@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1ThreadLocal" kind="class" prot="public">
+    <compoundname>sf::ThreadLocal</compoundname>
+    <basecompoundref refid="classsf_1_1NonCopyable" prot="private" virt="non-virtual">sf::NonCopyable</basecompoundref>
+    <derivedcompoundref refid="classsf_1_1ThreadLocalPtr" prot="private" virt="non-virtual">sf::ThreadLocalPtr&lt; T &gt;</derivedcompoundref>
+    <includes refid="ThreadLocal_8hpp" local="no">ThreadLocal.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1ThreadLocal_1ad736c197dd72c45ee48c57fa3704c00a" prot="private" static="no" mutable="no">
+        <type>priv::ThreadLocalImpl *</type>
+        <definition>priv::ThreadLocalImpl* sf::ThreadLocal::m_impl</definition>
+        <argsstring></argsstring>
+        <name>m_impl</name>
+        <briefdescription>
+<para>Pointer to the OS specific implementation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" line="86" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1ThreadLocal_1a44ea3c4be4eef118080275cbf4cf04cd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::ThreadLocal::ThreadLocal</definition>
+        <argsstring>(void *value=NULL)</argsstring>
+        <name>ThreadLocal</name>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+          <defval>NULL</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Optional value to initialize the variable </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocal_1acc612bddfd0f0507b1c5da8b3b8c75c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::ThreadLocal::~ThreadLocal</definition>
+        <argsstring>()</argsstring>
+        <name>~ThreadLocal</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocal_1ab7e334c83d77644a8e67ee31c3230007" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::ThreadLocal::setValue</definition>
+        <argsstring>(void *value)</argsstring>
+        <name>setValue</name>
+        <param>
+          <type>void *</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+<para>Set the thread-specific value of the variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Value of the variable for the current thread </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1ThreadLocal_1aef35a39686eac4b6634a6e5605aacfd7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* sf::ThreadLocal::getValue</definition>
+        <argsstring>() const </argsstring>
+        <name>getValue</name>
+        <briefdescription>
+<para>Retrieve the thread-specific value of the variable. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Value of the variable for the current thread </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" line="79" column="1"/>
+        <referencedby refid="classsf_1_1ThreadLocalPtr_1a6792a6a808af06f0d13e3ceecf2fc947" compoundref="ThreadLocalPtr_8inl" startline="71" endline="75">sf::ThreadLocalPtr&lt; T &gt;::operator=</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines variables with thread-local storage. </para>    </briefdescription>
+    <detaileddescription>
+<para>This class manipulates void* parameters and thus is not appropriate for strongly-typed variables.</para><para>You should rather use the <ref refid="classsf_1_1ThreadLocalPtr" kindref="compound">sf::ThreadLocalPtr</ref> template class. </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1177">
+        <label>sf::ThreadLocalPtr&lt; T &gt;</label>
+        <link refid="classsf_1_1ThreadLocalPtr"/>
+        <childnode refid="1175" relation="private-inheritance">
+        </childnode>
+      </node>
+      <node id="1176">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1175">
+        <label>sf::ThreadLocal</label>
+        <link refid="classsf_1_1ThreadLocal"/>
+        <childnode refid="1176" relation="private-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1180">
+        <label>ThreadLocalImpl *</label>
+      </node>
+      <node id="1179">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1178">
+        <label>sf::ThreadLocal</label>
+        <link refid="classsf_1_1ThreadLocal"/>
+        <childnode refid="1179" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1180" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" line="48" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/ThreadLocal.hpp" bodystart="47" bodyend="87"/>
+    <listofallmembers>
+      <member refid="classsf_1_1ThreadLocal_1aef35a39686eac4b6634a6e5605aacfd7" prot="public" virt="non-virtual"><scope>sf::ThreadLocal</scope><name>getValue</name></member>
+      <member refid="classsf_1_1ThreadLocal_1ad736c197dd72c45ee48c57fa3704c00a" prot="private" virt="non-virtual"><scope>sf::ThreadLocal</scope><name>m_impl</name></member>
+      <member refid="classsf_1_1NonCopyable_1a2110add170580fdb946f887719da6860" prot="private" virt="non-virtual"><scope>sf::ThreadLocal</scope><name>NonCopyable</name></member>
+      <member refid="classsf_1_1ThreadLocal_1ab7e334c83d77644a8e67ee31c3230007" prot="public" virt="non-virtual"><scope>sf::ThreadLocal</scope><name>setValue</name></member>
+      <member refid="classsf_1_1ThreadLocal_1a44ea3c4be4eef118080275cbf4cf04cd" prot="public" virt="non-virtual"><scope>sf::ThreadLocal</scope><name>ThreadLocal</name></member>
+      <member refid="classsf_1_1ThreadLocal_1acc612bddfd0f0507b1c5da8b3b8c75c2" prot="public" virt="non-virtual"><scope>sf::ThreadLocal</scope><name>~ThreadLocal</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

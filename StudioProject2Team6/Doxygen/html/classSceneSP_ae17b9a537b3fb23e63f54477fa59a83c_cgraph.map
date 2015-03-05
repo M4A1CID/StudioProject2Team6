@@ -1,0 +1,63 @@
+<map id="SceneSP::UpdateMenu" name="SceneSP::UpdateMenu">
+<area shape="rect" id="node2" href="$classSceneSP.html#a036771dd835c6b363379517c75722fa6" title="Updates the instruction menu. " alt="" coords="212,487,431,513"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#acf6236276aadffd24b631491412574c0" title="Updates the main menu upon starting up. " alt="" coords="228,436,415,463"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="224,537,419,564"/>
+<area shape="rect" id="node59" href="$classSceneSP.html#a17ea984d0e98061610e8a7e34b2a4397" title="Updates the Start menu. " alt="" coords="228,639,415,665"/>
+<area shape="rect" id="node62" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="217,588,426,615"/>
+<area shape="rect" id="node3" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="486,537,661,564"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="499,588,648,615"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="716,588,819,615"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#ad3599551cd93fb32876be3090e1cbf69" title="Declares GLEnable. " alt="" coords="871,5,1057,32"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#ac00c66843e83747f823f5c96a134285e" title="Declares all light parameters. " alt="" coords="1337,56,1561,83"/>
+<area shape="rect" id="node15" href="$classCPlayer.html#aa5acefb8c6837741ac85426e93ff0b69" title="Accessor function for the items held by the player. " alt="" coords="905,309,1023,336"/>
+<area shape="rect" id="node16" href="$classCPlayer.html#a41b39fd627819feb2bafd614c3246b66" title="Accessor function for the max amount of items the player can have. " alt="" coords="867,360,1061,387"/>
+<area shape="rect" id="node17" href="$classCamera3.html#a19ed99e698e764c1da3a985cf75eb93f" title="Initialises the camera. " alt="" coords="915,411,1013,437"/>
+<area shape="rect" id="node23" href="$classSceneSP.html#a9a0de3ea6342a231b45c3d487ba1ec1a" title="Initialises the player and all NPCs. " alt="" coords="885,461,1043,488"/>
+<area shape="rect" id="node24" href="$classSceneSP.html#a1e184e8b2707bd048b4bbd50748d8e48" title="Initialises all geometry types. " alt="" coords="887,233,1041,260"/>
+<area shape="rect" id="node34" href="$classSceneSP.html#a8f096719e7e0e404f4d1afc12d317943" title="Initialises all shelves in the scene. " alt="" coords="891,512,1037,539"/>
+<area shape="rect" id="node48" href="$classMS.html#a86606fe9f575ccb747d77195c8aefdaf" title="Return the top matrix with a new matrix. " alt="" coords="907,563,1021,589"/>
+<area shape="rect" id="node49" href="$classsf_1_1Music.html#a3edc66e5f5b3f11e84b90eaec9c7d7c0" title="Open a music from an audio file. " alt="" coords="883,613,1045,640"/>
+<area shape="rect" id="node50" href="$classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. " alt="" coords="889,664,1039,691"/>
+<area shape="rect" id="node51" href="$classsf_1_1Listener.html#a803a24a1fc04620cacc9f88c6fbc0e3a" title="Change the global volume of all the sounds and musics. " alt="" coords="867,715,1061,741"/>
+<area shape="rect" id="node52" href="$classCPlayer.html#a31b9cac478a011ca5fbbf899499216f5" title="Mutator function to add an item picked up by the player. " alt="" coords="891,765,1037,792"/>
+<area shape="rect" id="node53" href="$classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the end. " alt="" coords="877,816,1051,843"/>
+<area shape="rect" id="node54" href="$classsf_1_1Listener.html#a5bc2d8d18ea2d8f339d23cbf17678564" title="Set the position of the listener in the scene. " alt="" coords="885,867,1043,893"/>
+<area shape="rect" id="node55" href="$classsf_1_1SoundSource.html#a0480257ea25d986eba6cc3c1a6f8d7c2" title="Set the 3D position of the sound in the audio scene. " alt="" coords="869,917,1059,944"/>
+<area shape="rect" id="node56" href="$classMtx44.html#ac6e6521111d78ff36d539bf111a902c6" title="Set matrix to be a perspective matrix. " alt="" coords="881,968,1047,995"/>
+<area shape="rect" id="node58" href="$classsf_1_1SoundSource.html#a2f192f2b49fb8e2b82f3498d3663fcc2" title="Set the volume of the sound. " alt="" coords="870,1019,1058,1045"/>
+<area shape="rect" id="node9" href="$shader_8cpp.html#a833f10cca6a76fe34ae9efa23ac5e73c" title="LoadShaders" alt="" coords="1150,5,1249,32"/>
+<area shape="rect" id="node11" href="$namespaceMath.html#ac04b987cc6c574a059e68cb58f58c09a" title="Converts from degrees to radians. " alt="" coords="1621,5,1775,32"/>
+<area shape="rect" id="node12" href="$structPosition.html#a2919b2441baf7a2f799791d65a1cfc15" title="Position::Set" alt="" coords="1649,157,1747,184"/>
+<area shape="rect" id="node13" href="$structColor.html#acc77e4e3583d3eca7e476952e51bfb80" title="Color::Set" alt="" coords="1658,56,1738,83"/>
+<area shape="rect" id="node14" href="$structVector3.html#a9c25d604bd52b162cfcb56302ef032bb" title="Set the elements of this vector. " alt="" coords="1651,107,1745,133"/>
+<area shape="rect" id="node18" href="$structVector3.html#aa1cdc5357009b47fe585ddd61e263aad" title="Cross product of 2 vectors. " alt="" coords="1145,360,1254,387"/>
+<area shape="rect" id="node20" href="$structVector3.html#aaef4f25a38878a640ab4a48002a7eff8" title="Normalize this vector and return a reference to it. " alt="" coords="1133,461,1266,488"/>
+<area shape="rect" id="node22" href="$structVector3.html#a2da0f00c5529bced69763320dac9c414" title="Return a copy of this vector, normalized. " alt="" coords="1129,411,1269,437"/>
+<area shape="rect" id="node19" href="$structVector3.html#afa5e0c801fc2c8a820a54ea99302fe08" title="Vector3 default constructor. " alt="" coords="1389,360,1509,387"/>
+<area shape="rect" id="node21" href="$structVector3.html#a200024a8442329de9a625ed58ffe7075" title="Return length of vector. " alt="" coords="1392,411,1507,437"/>
+<area shape="rect" id="node25" href="$classMeshBuilder.html#a78d37e2b0cc068eec801f17c367100e7" title="Generate the vertices of a reference Axes; Use red for x&#45;axis, green for y&#45;axis, blue for z&#45;axis Then..." alt="" coords="1357,107,1542,133"/>
+<area shape="rect" id="node26" href="$classMeshBuilder.html#aba87550d7726a610c911fbb977fd3575" title="MeshBuilder::GenerateOBJ" alt="" coords="1109,259,1289,285"/>
+<area shape="rect" id="node31" href="$classMeshBuilder.html#aec661388bddf32e7bf834b38fb5ed34d" title="Generate the vertices of a quad; Use random color for each vertex Then generate the VBO/IBO and store..." alt="" coords="1356,157,1543,184"/>
+<area shape="rect" id="node32" href="$classMeshBuilder.html#aac7c87881dbc08f8d41f2068e0f40c76" title="MeshBuilder::GenerateText" alt="" coords="1359,208,1539,235"/>
+<area shape="rect" id="node33" href="$LoadTGA_8cpp.html#a459a80ca6de67a1e3493bfb66ae317e4" title="LoadTGA" alt="" coords="1161,309,1237,336"/>
+<area shape="rect" id="node27" href="$LoadOBJ_8cpp.html#aa99ef9426a57205ed8acb8f7d41f3bae" title="IndexVBO" alt="" coords="1409,309,1490,336"/>
+<area shape="rect" id="node30" href="$LoadOBJ_8cpp.html#aa634e9cac0a72d751731db6b4479cbda" title="LoadOBJ" alt="" coords="1412,259,1487,285"/>
+<area shape="rect" id="node28" href="$LoadOBJ_8cpp.html#af43afccb67fd9c80513489b75fddb347" title="getSimilarVertexIndex_fast" alt="" coords="1609,309,1787,336"/>
+<area shape="rect" id="node29" href="$structTexCoord.html#a64b4ceeb1733c478cb4b5b1216146c32" title="TexCoord::Set" alt="" coords="1645,208,1751,235"/>
+<area shape="rect" id="node35" href="$classSceneSP.html#a0cb20bb43706bbd74745f2466fb3f534" title="Defines all items and containers. " alt="" coords="1126,588,1273,615"/>
+<area shape="rect" id="node45" href="$classCContainer.html#a8cbd00470704513d12083d2be711ad4b" title="Accessor function for container botttom row item. " alt="" coords="1110,639,1289,665"/>
+<area shape="rect" id="node46" href="$classCContainer.html#aeceff305e238951c1cf927ac97ae84ce" title="Accessor function for container middle row item. " alt="" coords="1112,689,1287,716"/>
+<area shape="rect" id="node47" href="$classCContainer.html#a064d9d932a0e361083d5a4a9285eef22" title="Accessor function for container top row item. " alt="" coords="1120,512,1279,539"/>
+<area shape="rect" id="node36" href="$classCContainer.html#ab9bf0cf7936e505a400255e265104e94" title="Accessor function for first item stock in container. " alt="" coords="1363,765,1535,792"/>
+<area shape="rect" id="node37" href="$classCItem.html#a916597368755e28b6edb8af37acc1ad6" title="Accessor function for item geometry type. " alt="" coords="1382,816,1517,843"/>
+<area shape="rect" id="node38" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="1391,867,1507,893"/>
+<area shape="rect" id="node39" href="$classCItem.html#a6375bf21ba971d20a25fd8888d083f5a" title="Accessor function for item price. " alt="" coords="1393,461,1505,488"/>
+<area shape="rect" id="node40" href="$classCContainer.html#a1260c4eb8f72a4529af2087586f1600b" title="Accessor function for second item stock in container. " alt="" coords="1354,512,1545,539"/>
+<area shape="rect" id="node41" href="$classCContainer.html#a39099429332baa7d3003b4fa9e1b3c9f" title="Accessor function for third item stock in container. " alt="" coords="1362,563,1537,589"/>
+<area shape="rect" id="node42" href="$classCContainer.html#a35e4344eb1c1d25c9364ab16f16dc709" title="Accessor function for container x position. " alt="" coords="1379,613,1519,640"/>
+<area shape="rect" id="node43" href="$classCContainer.html#ae00b4f70a3679017c1d795536b2a7d5f" title="Accessor function for container y position. " alt="" coords="1378,664,1521,691"/>
+<area shape="rect" id="node44" href="$classCContainer.html#a912430f27287e0fd419a94333790c947" title="Accessor function for container z position. " alt="" coords="1379,715,1519,741"/>
+<area shape="rect" id="node57" href="$classMtx44.html#a1b985913080679da29ff94217935b3c7" title="Default Constructor. Default values are zero. " alt="" coords="1148,968,1251,995"/>
+<area shape="rect" id="node60" href="$classCCharacter.html#a4e9ecc23aabb47e67fc3d7d629b4dceb" title="Mutator function to set character job. " alt="" coords="479,639,668,665"/>
+<area shape="rect" id="node61" href="$classsf_1_1SoundStream.html#a16cc6a0404b32e42c4dce184bb94d0f4" title="Stop playing the audio stream. " alt="" coords="497,689,649,716"/>
+</map>

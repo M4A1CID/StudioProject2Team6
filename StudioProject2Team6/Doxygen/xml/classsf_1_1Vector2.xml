@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Vector2" kind="class" prot="public">
+    <compoundname>sf::Vector2</compoundname>
+    <includes refid="Vector2_8hpp" local="no">Vector2.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsf_1_1Vector2_1a1e6ad77fa155f3753bfb92699bd28141" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sf::Vector2&lt; T &gt;::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>X coordinate of the vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="75" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Vector2_1a420f2481b015f4eb929c75f2af564299" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sf::Vector2&lt; T &gt;::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Y coordinate of the vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="76" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Vector2_1a58c32383b5291380db4b43a289f75988" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Vector2&lt; T &gt;::Vector2</definition>
+        <argsstring>()</argsstring>
+        <name>Vector2</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Creates a Vector2(0, 0). </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1aed26a72164e59e8a4a0aeee2049568f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Vector2&lt; T &gt;::Vector2</definition>
+        <argsstring>(T X, T Y)</argsstring>
+        <name>Vector2</name>
+        <param>
+          <type>T</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>Y</declname>
+        </param>
+        <briefdescription>
+<para>Construct the vector from its coordinates. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="56" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a3da455e0ae3f8ff6d2fe36d10b332d10" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector2&lt; T &gt;::Vector2</definition>
+        <argsstring>(const Vector2&lt; U &gt; &amp;vector)</argsstring>
+        <name>Vector2</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; U &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Construct the vector from another type of vector. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor doesn&apos;t replace the copy constructor, it&apos;s called only when U != T. A call to this constructor will fail to compile if U is not convertible to T.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a39e5056d930011fba562ad69679efcb8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector2&lt; T &gt;::Vector2</definition>
+        <argsstring>()</argsstring>
+        <name>Vector2</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.inl" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.inl" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a18a61144d6839c5658b62ebb49c9eb68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector2&lt; T &gt;::Vector2</definition>
+        <argsstring>(T X, T Y)</argsstring>
+        <name>Vector2</name>
+        <param>
+          <type>T</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>Y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.inl" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.inl" bodystart="38" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a3da455e0ae3f8ff6d2fe36d10b332d10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector2&lt; T &gt;::Vector2</definition>
+        <argsstring>(const Vector2&lt; U &gt; &amp;vector)</argsstring>
+        <name>Vector2</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; U &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.inl" line="49" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.inl" bodystart="49" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="related">
+      <memberdef kind="function" id="classsf_1_1Vector2_1a3885c2e66dc427cec7eaa178d59d8e8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt;</type>
+        <definition>Vector2&lt; T &gt; operator-</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of unary operator -. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to negate</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise opposite of the vector </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1ad4b7a9d355d57790bfc7df0ade8bb628" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector2&lt; T &gt; &amp; operator+=</definition>
+        <argsstring>(Vector2&lt; T &gt; &amp;left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator +=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise addition of both vectors, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="105" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a30a5a12ad03c9a3a982a0a313bf84e6f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector2&lt; T &gt; &amp; operator-=</definition>
+        <argsstring>(Vector2&lt; T &gt; &amp;left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator -=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise subtraction of both vectors, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a72421239823c38a6b780c86a710ead07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt;</type>
+        <definition>Vector2&lt; T &gt; operator+</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator +. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise addition of both vectors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="134" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1ad027adae53ec547a86c20deeb05c9e85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt;</type>
+        <definition>Vector2&lt; T &gt; operator-</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator -. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise subtraction of both vectors </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="147" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a5f48ca928995b41c89f155afe8d16b02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt;</type>
+        <definition>Vector2&lt; T &gt; operator*</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator *. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise multiplication by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="160" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1ad8b3e1cf7b156a984bc1427539ca8605" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt;</type>
+        <definition>Vector2&lt; T &gt; operator*</definition>
+        <argsstring>(T left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>T</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator *. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a scalar value) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise multiplication by <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1abea24cb28c0d6e2957e259ba4e65d70e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector2&lt; T &gt; &amp; operator*=</definition>
+        <argsstring>(Vector2&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator *=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise multiplication by <emphasis>right</emphasis>, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a7409dd89cb3aad6c3bc6622311107311" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt;</type>
+        <definition>Vector2&lt; T &gt; operator/</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator /. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Memberwise division by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="202" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1ac4d293c9dc7954ccfd5e373972f38b03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+        <definition>Vector2&lt; T &gt; &amp; operator/=</definition>
+        <argsstring>(Vector2&lt; T &gt; &amp;left, T right)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type><ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator /=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator performs a memberwise division by <emphasis>right</emphasis>, and assigns the result to <emphasis>left</emphasis>.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a scalar value)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to <emphasis>left</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="218" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a9a7b2d36c3850828fdb651facfd25136" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool operator==</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator ==. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator compares strict equality between two vectors.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is equal to <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="233" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector2_1a01673da35ef9c52d0e54b8263549a956" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool operator!=</definition>
+        <argsstring>(const Vector2&lt; T &gt; &amp;left, const Vector2&lt; T &gt; &amp;right)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector2" kindref="compound">Vector2</ref>&lt; T &gt; &amp;</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary operator !=. </para>        </briefdescription>
+        <detaileddescription>
+<para>This operator compares strict difference between two vectors.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a vector) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a vector)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is not equal to <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="248" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility template class for manipulating 2-dimensional vectors. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Vector2" kindref="compound">sf::Vector2</ref> is a simple class that defines a mathematical vector with two coordinates (x and y).</para><para>It can be used to represent anything that has two dimensions: a size, a point, a velocity, etc.</para><para>The template parameter T is the type of the coordinates. It can be any type that supports arithmetic operations (+, -, /, *) and comparisons (==, !=), for example int or float.</para><para>You generally don&apos;t have to care about the templated form (sf::Vector2&lt;T&gt;), the most common specializations have special typedefs: <itemizedlist>
+<listitem><para>sf::Vector2&lt;float&gt; is <ref refid="namespacesf_1acf03098c2577b869e2fa6836cc48f1a0" kindref="member">sf::Vector2f</ref> </para></listitem>
+<listitem><para>sf::Vector2&lt;int&gt; is <ref refid="namespacesf_1ace09dd1447d74c6e9ba56ae874c094e1" kindref="member">sf::Vector2i</ref> </para></listitem>
+<listitem><para>sf::Vector2&lt;unsigned int&gt; is <ref refid="namespacesf_1aaa02ba42bf79b001a376fe9d79254cb3" kindref="member">sf::Vector2u</ref></para></listitem>
+</itemizedlist>
+The <ref refid="classsf_1_1Vector2" kindref="compound">sf::Vector2</ref> class has a small and simple interface, its x and y members can be accessed directly (there are no accessors like setX(), getX()) and it contains no mathematical function like dot product, cross product, length, etc.</para><para>Usage example: <programlisting><codeline><highlight class="normal">sf::Vector2f<sp/>v1(16.5f,<sp/>24.f);</highlight></codeline>
+<codeline><highlight class="normal">v1.x<sp/>=<sp/>18.2f;</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>y<sp/>=<sp/>v1.y;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sf::Vector2f<sp/>v2<sp/>=<sp/>v1<sp/>*<sp/>5.f;</highlight></codeline>
+<codeline><highlight class="normal">sf::Vector2f<sp/>v3;</highlight></codeline>
+<codeline><highlight class="normal">v3<sp/>=<sp/>v1<sp/>+<sp/>v2;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>different<sp/>=<sp/>(v2<sp/>!=<sp/>v3);</highlight></codeline>
+</programlisting></para><para>Note: for 3-dimensional vectors, see <ref refid="classsf_1_1Vector3" kindref="compound">sf::Vector3</ref>. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1210">
+        <label>T</label>
+      </node>
+      <node id="1209">
+        <label>sf::Vector2&lt; T &gt;</label>
+        <link refid="classsf_1_1Vector2"/>
+        <childnode refid="1210" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector2.hpp" bodystart="37" bodyend="77"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Vector2_1a01673da35ef9c52d0e54b8263549a956" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator!=</name></member>
+      <member refid="classsf_1_1Vector2_1a5f48ca928995b41c89f155afe8d16b02" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator*</name></member>
+      <member refid="classsf_1_1Vector2_1ad8b3e1cf7b156a984bc1427539ca8605" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator*</name></member>
+      <member refid="classsf_1_1Vector2_1abea24cb28c0d6e2957e259ba4e65d70e" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator*=</name></member>
+      <member refid="classsf_1_1Vector2_1a72421239823c38a6b780c86a710ead07" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator+</name></member>
+      <member refid="classsf_1_1Vector2_1ad4b7a9d355d57790bfc7df0ade8bb628" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator+=</name></member>
+      <member refid="classsf_1_1Vector2_1a3885c2e66dc427cec7eaa178d59d8e8b" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator-</name></member>
+      <member refid="classsf_1_1Vector2_1ad027adae53ec547a86c20deeb05c9e85" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator-</name></member>
+      <member refid="classsf_1_1Vector2_1a30a5a12ad03c9a3a982a0a313bf84e6f" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator-=</name></member>
+      <member refid="classsf_1_1Vector2_1a7409dd89cb3aad6c3bc6622311107311" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator/</name></member>
+      <member refid="classsf_1_1Vector2_1ac4d293c9dc7954ccfd5e373972f38b03" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator/=</name></member>
+      <member refid="classsf_1_1Vector2_1a9a7b2d36c3850828fdb651facfd25136" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>operator==</name></member>
+      <member refid="classsf_1_1Vector2_1a58c32383b5291380db4b43a289f75988" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>Vector2</name></member>
+      <member refid="classsf_1_1Vector2_1aed26a72164e59e8a4a0aeee2049568f1" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>Vector2</name></member>
+      <member refid="classsf_1_1Vector2_1a3da455e0ae3f8ff6d2fe36d10b332d10" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>Vector2</name></member>
+      <member refid="classsf_1_1Vector2_1a39e5056d930011fba562ad69679efcb8" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>Vector2</name></member>
+      <member refid="classsf_1_1Vector2_1a18a61144d6839c5658b62ebb49c9eb68" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>Vector2</name></member>
+      <member refid="classsf_1_1Vector2_1a3da455e0ae3f8ff6d2fe36d10b332d10" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>Vector2</name></member>
+      <member refid="classsf_1_1Vector2_1a1e6ad77fa155f3753bfb92699bd28141" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>x</name></member>
+      <member refid="classsf_1_1Vector2_1a420f2481b015f4eb929c75f2af564299" prot="public" virt="non-virtual"><scope>sf::Vector2</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classApplication" kind="class" prot="public">
+    <compoundname>Application</compoundname>
+    <includes refid="Application_8h" local="no">Application.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" prot="private" static="no" mutable="no">
+        <type><ref refid="classStopWatch" kindref="compound">StopWatch</ref></type>
+        <definition>StopWatch Application::m_timer</definition>
+        <argsstring></argsstring>
+        <name>m_timer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="117" endline="137">Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::Application</definition>
+        <argsstring>()</argsstring>
+        <name>Application</name>
+        <briefdescription>
+<para>Default application constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a748bca84fefb9c12661cfaa2f623748d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Application::~Application</definition>
+        <argsstring>()</argsstring>
+        <name>~Application</name>
+        <briefdescription>
+<para>Default application destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="58" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Init</definition>
+        <argsstring>()</argsstring>
+        <name>Init</name>
+        <briefdescription>
+<para>Initialises the application. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="17" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="67" bodyend="115"/>
+        <references refid="group__system_1ga7fe7f475639e26334606b5142c29551f">sf::err</references>
+        <references refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" compoundref="Application_8cpp" startline="26" endline="30">error_callback</references>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="16">m_window</references>
+        <references refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" compoundref="Application_8cpp" startline="20" endline="23">resize_callback</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Run</definition>
+        <argsstring>()</argsstring>
+        <name>Run</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="117" bodyend="137"/>
+        <references refid="classScene_1aae8e24654ef98c79961c2b804b12852c">Scene::Exit</references>
+        <references refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" compoundref="Application_8cpp" startline="18">frameTime</references>
+        <references refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" compoundref="timer_8cpp" startline="34" endline="41">StopWatch::getElapsedTime</references>
+        <references refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478">Scene::Init</references>
+        <references refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" compoundref="Application_8cpp" startline="39" endline="42">IsKeyPressed</references>
+        <references refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" compoundref="Application_8h" startline="26">m_timer</references>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="16">m_window</references>
+        <references refid="classScene_1ae24d21e12b34839994ad265662ea24d7">Scene::Render</references>
+        <references refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" compoundref="timer_8cpp" startline="29" endline="32">StopWatch::startTimer</references>
+        <references refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91">Scene::Update</references>
+        <references refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" compoundref="timer_8cpp" startline="43" endline="56">StopWatch::waitUntil</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Application::Exit</definition>
+        <argsstring>()</argsstring>
+        <name>Exit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="19" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="139" bodyend="145"/>
+        <references refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" compoundref="Application_8cpp" startline="16">m_window</references>
+        <referencedby refid="main_8cpp_1a840291bc02cba5474a4cb46a9b9566fe" compoundref="main_8cpp" startline="5" endline="11">main</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Application::IsKeyPressed</definition>
+        <argsstring>(unsigned short key)</argsstring>
+        <name>IsKeyPressed</name>
+        <param>
+          <type>unsigned short</type>
+          <declname>key</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="39" bodyend="42"/>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="117" endline="137">Run</referencedby>
+        <referencedby refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" compoundref="SceneSP_8cpp" startline="1769" endline="1788">SceneSP::UpdateATM</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a01fcec80d931e2556c0e50bbd93b9ade" compoundref="SceneSP_8cpp" startline="2141" endline="2165">SceneSP::UpdateDrunkman</referencedby>
+        <referencedby refid="classSceneSP_1a5ad62cfa3ac5fe2156a8713ffab6a4dd" compoundref="SceneSP_8cpp" startline="1453" endline="1477">SceneSP::UpdateEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1a1d18eb92664b2eb377dd4d959bf9335c" compoundref="SceneSP_8cpp" startline="1011" endline="1038">SceneSP::UpdateEasterEggGuy</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1a2963d58071297789ad0c567c41dd5dbd" compoundref="SceneSP_8cpp" startline="3020" endline="3054">SceneSP::UpdateGaben</referencedby>
+        <referencedby refid="classSceneSP_1aa74368fc2d0520d4eadb9853db9cfcf8" compoundref="SceneSP_8cpp" startline="1104" endline="1136">SceneSP::UpdateHand</referencedby>
+        <referencedby refid="classSceneSP_1a036771dd835c6b363379517c75722fa6" compoundref="SceneSP_8cpp" startline="1293" endline="1309">SceneSP::UpdateInstructionMenu</referencedby>
+        <referencedby refid="classSceneSP_1ac2cc1a6156a4c3bb9ad8316352ff655b" compoundref="SceneSP_8cpp" startline="967" endline="977">SceneSP::UpdateItemInspection</referencedby>
+        <referencedby refid="classSceneSP_1a0dc7bd8ea42e851751f7115d6499d5a7" compoundref="SceneSP_8cpp" startline="1421" endline="1444">SceneSP::UpdateItemRotation</referencedby>
+        <referencedby refid="classSceneSP_1acf6236276aadffd24b631491412574c0" compoundref="SceneSP_8cpp" startline="1143" endline="1192">SceneSP::UpdateMainMenu</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classCamera_1ac2a07c30e5c1c5f415ed86d6e15c5a9f" compoundref="Camera_8cpp" startline="60" endline="79">Camera::UpdateMovement</referencedby>
+        <referencedby refid="classCamera3_1af471bcc6fd86bc2f99b5430ccfcb7e7c" compoundref="Camera3_8cpp" startline="54" endline="125">Camera3::UpdateMovement</referencedby>
+        <referencedby refid="classSceneSP_1a3b3e04ac35d50ad7224b780b65cf4f30" compoundref="SceneSP_8cpp" startline="1349" endline="1397">SceneSP::UpdatePauseMenu</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1aa0e203afe09c6f065bd7cb393de07fb1" compoundref="SceneSP_8cpp" startline="1897" endline="1972">SceneSP::UpdatePlayerSelection</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a17ea984d0e98061610e8a7e34b2a4397" compoundref="SceneSP_8cpp" startline="1199" endline="1266">SceneSP::UpdateStartMenu</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+        <referencedby refid="classSceneSP_1a6393a02c9709e2849cb86faace0ae42e" compoundref="SceneSP_8cpp" startline="2059" endline="2106">SceneSP::UpdateTugofwar</referencedby>
+        <referencedby refid="classCamera3_1a5e9f9f8eb7e97df9304df1861001eba0" compoundref="Camera3_8cpp" startline="135" endline="201">Camera3::UpdateView</referencedby>
+        <referencedby refid="classSceneSP_1a5c9003c90f7f5daa489b19eac9096739" compoundref="SceneSP_8cpp" startline="1273" endline="1286">SceneSP::UpdateWinLoseMenu</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines our entire application. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classApplication" kindref="compound">Application</ref>: </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="613">
+        <label>Application</label>
+        <link refid="classApplication"/>
+        <childnode refid="614" relation="usage">
+          <edgelabel>m_timer</edgelabel>
+        </childnode>
+      </node>
+      <node id="616">
+        <label>LARGE_INTEGER</label>
+      </node>
+      <node id="614">
+        <label>StopWatch</label>
+        <link refid="classStopWatch"/>
+        <childnode refid="615" relation="usage">
+          <edgelabel>wTimerRes</edgelabel>
+        </childnode>
+        <childnode refid="616" relation="usage">
+          <edgelabel>frequency</edgelabel>
+          <edgelabel>currTime</edgelabel>
+          <edgelabel>prevTime</edgelabel>
+        </childnode>
+      </node>
+      <node id="615">
+        <label>UINT</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" line="13" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.h" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" prot="public" virt="non-virtual"><scope>Application</scope><name>Application</name></member>
+      <member refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" prot="public" virt="non-virtual"><scope>Application</scope><name>Exit</name></member>
+      <member refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" prot="public" virt="non-virtual"><scope>Application</scope><name>Init</name></member>
+      <member refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" prot="public" virt="non-virtual"><scope>Application</scope><name>IsKeyPressed</name></member>
+      <member refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" prot="private" virt="non-virtual"><scope>Application</scope><name>m_timer</name></member>
+      <member refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" prot="public" virt="non-virtual"><scope>Application</scope><name>Run</name></member>
+      <member refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" prot="public" virt="non-virtual"><scope>Application</scope><name>~Application</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,268 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="SceneModel_8h" kind="file">
+    <compoundname>SceneModel.h</compoundname>
+    <includes refid="Scene_8h" local="yes">Scene.h</includes>
+    <includes refid="Mtx44_8h" local="yes">Mtx44.h</includes>
+    <includes local="yes">Camera2.h</includes>
+    <includes refid="Camera3_8h" local="yes">Camera3.h</includes>
+    <includes refid="Mesh_8h" local="yes">Mesh.h</includes>
+    <includes refid="MatrixStack_8h" local="yes">MatrixStack.h</includes>
+    <includes refid="Light_8h" local="yes">Light.h</includes>
+    <includes refid="Utility_8h" local="yes">Utility.h</includes>
+    <incdepgraph>
+      <node id="3339">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3345" relation="include">
+        </childnode>
+      </node>
+      <node id="3341">
+        <label>cmath</label>
+      </node>
+      <node id="3350">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="3351" relation="include">
+        </childnode>
+        <childnode refid="3352" relation="include">
+        </childnode>
+      </node>
+      <node id="3351">
+        <label>string</label>
+      </node>
+      <node id="3342">
+        <label>exception</label>
+      </node>
+      <node id="3353">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="3354" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+      </node>
+      <node id="3349">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="3345" relation="include">
+        </childnode>
+      </node>
+      <node id="3337">
+        <label>MyGraphics/Source/SceneModel.h</label>
+        <link refid="SceneModel.h"/>
+        <childnode refid="3338" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+        <childnode refid="3347" relation="include">
+        </childnode>
+        <childnode refid="3348" relation="include">
+        </childnode>
+        <childnode refid="3350" relation="include">
+        </childnode>
+        <childnode refid="3353" relation="include">
+        </childnode>
+        <childnode refid="3355" relation="include">
+        </childnode>
+        <childnode refid="3357" relation="include">
+        </childnode>
+      </node>
+      <node id="3343">
+        <label>ctime</label>
+      </node>
+      <node id="3356">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="3345" relation="include">
+        </childnode>
+      </node>
+      <node id="3355">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="3356" relation="include">
+        </childnode>
+      </node>
+      <node id="3354">
+        <label>stack</label>
+      </node>
+      <node id="3348">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="3349" relation="include">
+        </childnode>
+      </node>
+      <node id="3344">
+        <label>cstdlib</label>
+      </node>
+      <node id="3347">
+        <label>Camera2.h</label>
+      </node>
+      <node id="3346">
+        <label>iostream</label>
+      </node>
+      <node id="3352">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="3357">
+        <label>Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="3356" relation="include">
+        </childnode>
+        <childnode refid="3339" relation="include">
+        </childnode>
+      </node>
+      <node id="3345">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="3340" relation="include">
+        </childnode>
+        <childnode refid="3346" relation="include">
+        </childnode>
+      </node>
+      <node id="3340">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="3341" relation="include">
+        </childnode>
+        <childnode refid="3342" relation="include">
+        </childnode>
+        <childnode refid="3343" relation="include">
+        </childnode>
+        <childnode refid="3344" relation="include">
+        </childnode>
+      </node>
+      <node id="3338">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classSceneModel" prot="public">SceneModel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>_SceneModel_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>_SceneModel_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Scene_8h" kindref="compound">Scene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mtx44_8h" kindref="compound">Mtx44.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;Camera2.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Camera3_8h" kindref="compound">Camera3.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Mesh_8h" kindref="compound">Mesh.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="MatrixStack_8h" kindref="compound">MatrixStack.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Light_8h" kindref="compound">Light.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Utility_8h" kindref="compound">Utility.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classSceneModel" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classSceneModel" kindref="compound">SceneModel</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classScene" kindref="compound">Scene</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228" kindref="member">UNIFORM_TYPE</ref></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aedcecd34778e66cb5591b7997f209a7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aedcecd34778e66cb5591b7997f209a7b" kindref="member">U_MVP</ref><sp/>=<sp/>0,</highlight></codeline>
+<codeline lineno="20" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4a1a8e45557f52da9ff4243d89bf1fb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4a1a8e45557f52da9ff4243d89bf1fb3" kindref="member">U_MODELVIEW</ref>,</highlight></codeline>
+<codeline lineno="21" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6dd4a8bd003767314efe4943036443f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6dd4a8bd003767314efe4943036443f5" kindref="member">U_MODELVIEW_INVERSE_TRANSPOSE</ref>,</highlight></codeline>
+<codeline lineno="22" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a71ec9e3fd73f2e5daeef5509ba5a13e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a71ec9e3fd73f2e5daeef5509ba5a13e1" kindref="member">U_MATERIAL_AMBIENT</ref>,</highlight></codeline>
+<codeline lineno="23" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aa6fe127a3e35057de68925c289b01d16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aa6fe127a3e35057de68925c289b01d16" kindref="member">U_MATERIAL_DIFFUSE</ref>,</highlight></codeline>
+<codeline lineno="24" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a990ea6fef4ba9bee1862cbe86df895de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a990ea6fef4ba9bee1862cbe86df895de" kindref="member">U_MATERIAL_SPECULAR</ref>,</highlight></codeline>
+<codeline lineno="25" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae7f1c317e5c3f87db65ea635d7d77756" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae7f1c317e5c3f87db65ea635d7d77756" kindref="member">U_MATERIAL_SHININESS</ref>,</highlight></codeline>
+<codeline lineno="26" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3c854f024f0d291cc38e4f8b90eee05f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3c854f024f0d291cc38e4f8b90eee05f" kindref="member">U_LIGHT0_POSITION</ref>,</highlight></codeline>
+<codeline lineno="27" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab626971b3af2bb801f5c1f5ce41f8778" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab626971b3af2bb801f5c1f5ce41f8778" kindref="member">U_LIGHT0_TYPE</ref>,</highlight></codeline>
+<codeline lineno="28" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5248c746d315ea7e5b50e7b3a8c8dbfd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5248c746d315ea7e5b50e7b3a8c8dbfd" kindref="member">U_LIGHT0_COLOR</ref>,</highlight></codeline>
+<codeline lineno="29" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a7e45f700de4a79037c95da0d40b89e1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a7e45f700de4a79037c95da0d40b89e1d" kindref="member">U_LIGHT0_POWER</ref>,</highlight></codeline>
+<codeline lineno="30" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5626afb2d8f2fc6755fbfb3db07e2ee2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a5626afb2d8f2fc6755fbfb3db07e2ee2" kindref="member">U_LIGHT0_KC</ref>,</highlight></codeline>
+<codeline lineno="31" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae3a94ebd09ed5d19440233ff494ace2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae3a94ebd09ed5d19440233ff494ace2c" kindref="member">U_LIGHT0_KL</ref>,</highlight></codeline>
+<codeline lineno="32" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228adf1887ce2e500ecf580b37bf3855afe9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228adf1887ce2e500ecf580b37bf3855afe9" kindref="member">U_LIGHT0_KQ</ref>,</highlight></codeline>
+<codeline lineno="33" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a60fc6cd2b3db60f5b0c2b7495af3b3db" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a60fc6cd2b3db60f5b0c2b7495af3b3db" kindref="member">U_LIGHTENABLED</ref>,</highlight></codeline>
+<codeline lineno="34" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4db250112e9be5a6850a1d7335074914" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a4db250112e9be5a6850a1d7335074914" kindref="member">U_LIGHT0_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="35" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228abd26c3b0e34109c2009e45092813e4f2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228abd26c3b0e34109c2009e45092813e4f2" kindref="member">U_LIGHT0_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="36" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a1865787e7591a2d097cb603fb2ac89fd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a1865787e7591a2d097cb603fb2ac89fd" kindref="member">U_LIGHT0_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="37" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a733b4922abd08ad26a65de841a9feb71" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a733b4922abd08ad26a65de841a9feb71" kindref="member">U_LIGHT0_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a89127bb76531c8c51b4de4aeb570ff38" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a89127bb76531c8c51b4de4aeb570ff38" kindref="member">U_LIGHT1_POSITION</ref>,</highlight></codeline>
+<codeline lineno="40" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac9a7084dbc29b1113975497648cdc5e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac9a7084dbc29b1113975497648cdc5e0" kindref="member">U_LIGHT1_TYPE</ref>,</highlight></codeline>
+<codeline lineno="41" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac6c3339bce801049c50476ee49322456" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ac6c3339bce801049c50476ee49322456" kindref="member">U_LIGHT1_COLOR</ref>,</highlight></codeline>
+<codeline lineno="42" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a168eddcf3b5120999ec57a9dd31106d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a168eddcf3b5120999ec57a9dd31106d4" kindref="member">U_LIGHT1_POWER</ref>,</highlight></codeline>
+<codeline lineno="43" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6c49ce81d13cb8fa64d780357e8ec6e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a6c49ce81d13cb8fa64d780357e8ec6e1" kindref="member">U_LIGHT1_KC</ref>,</highlight></codeline>
+<codeline lineno="44" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a79bb8fa0c6f6f92a4e20294cb760fcd4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a79bb8fa0c6f6f92a4e20294cb760fcd4" kindref="member">U_LIGHT1_KL</ref>,</highlight></codeline>
+<codeline lineno="45" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3e250e37dcb23614f1e8c3a23b1123f9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a3e250e37dcb23614f1e8c3a23b1123f9" kindref="member">U_LIGHT1_KQ</ref>,</highlight></codeline>
+<codeline lineno="46" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab4438cc5c4b9b7d55ebcb9820c740f41" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab4438cc5c4b9b7d55ebcb9820c740f41" kindref="member">U_LIGHT1_SPOTDIRECTION</ref>,</highlight></codeline>
+<codeline lineno="47" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab15f2a21750ba46f864b047928d4b543" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ab15f2a21750ba46f864b047928d4b543" kindref="member">U_LIGHT1_COSCUTOFF</ref>,</highlight></codeline>
+<codeline lineno="48" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228af700bed544cedf57452a571bd4b43c5e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228af700bed544cedf57452a571bd4b43c5e" kindref="member">U_LIGHT1_COSINNER</ref>,</highlight></codeline>
+<codeline lineno="49" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aaba79b11b0bd3c789c3fab7a3b295cd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228aaba79b11b0bd3c789c3fab7a3b295cd2" kindref="member">U_LIGHT1_EXPONENT</ref>,</highlight></codeline>
+<codeline lineno="50" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae04849cc6db84bd8bb9ddccd2ac267cc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ae04849cc6db84bd8bb9ddccd2ac267cc" kindref="member">U_NUMLIGHTS</ref>,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>these<sp/>enum<sp/>in<sp/>UNIFORM_TYPE<sp/>before<sp/>U_TOTAL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a8f6640692fe6ddd59ebfc16c786a9b09" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228a8f6640692fe6ddd59ebfc16c786a9b09" kindref="member">U_COLOR_TEXTURE_ENABLED</ref>,</highlight></codeline>
+<codeline lineno="53" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ace2435066447c48496daec40f9568fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228ace2435066447c48496daec40f9568fd9" kindref="member">U_COLOR_TEXTURE</ref>,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228afa7968ceedd57a22b461eb1efee85b57" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228afa7968ceedd57a22b461eb1efee85b57" kindref="member">U_TOTAL</ref>,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483" kindref="member">GEOMETRY_TYPE</ref></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="60" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483afee240de35d556d2f28a53e693f13859" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483afee240de35d556d2f28a53e693f13859" kindref="member">GEO_AXES</ref>,</highlight></codeline>
+<codeline lineno="61" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a966447e564b872f900148b3a4f42c0c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a966447e564b872f900148b3a4f42c0c9" kindref="member">GEO_QUAD</ref>,</highlight></codeline>
+<codeline lineno="62" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa4b2502d7c94ea25cceb8a6926918638" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa4b2502d7c94ea25cceb8a6926918638" kindref="member">GEO_SPHERE0</ref>,</highlight></codeline>
+<codeline lineno="63" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a0d4357ea39c5696c771653febe38ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a0d4357ea39c5696c771653febe38ed" kindref="member">GEO_SPHERE1</ref>,</highlight></codeline>
+<codeline lineno="64" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a7cdf58949e2f65d8cbe8b9041162f8eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a7cdf58949e2f65d8cbe8b9041162f8eb" kindref="member">GEO_SPHERE2</ref>,</highlight></codeline>
+<codeline lineno="65" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a757ffe44e776d1ef47a124b6223d11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a8a757ffe44e776d1ef47a124b6223d11" kindref="member">GEO_SPHERE3</ref>,</highlight></codeline>
+<codeline lineno="66" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aab0c557c0389dcfe340fae48b0f21d1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aab0c557c0389dcfe340fae48b0f21d1e" kindref="member">GEO_SPHERE4</ref>,</highlight></codeline>
+<codeline lineno="67" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aba13c45caabbbb8aff493dec1a231c7b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aba13c45caabbbb8aff493dec1a231c7b" kindref="member">GEO_SPHERE5</ref>,</highlight></codeline>
+<codeline lineno="68" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa2a1b8ef2c5ca76b6ea5373239d9deee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483aa2a1b8ef2c5ca76b6ea5373239d9deee" kindref="member">GEO_SPHERE6</ref>,</highlight></codeline>
+<codeline lineno="69" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b188789bee48b6c2cd0c60f194147e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b188789bee48b6c2cd0c60f194147e2" kindref="member">GEO_SPHERE7</ref>,</highlight></codeline>
+<codeline lineno="70" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a035385a4d70e51e7d9a1091cfe629dee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a035385a4d70e51e7d9a1091cfe629dee" kindref="member">GEO_SPHERE8</ref>,</highlight></codeline>
+<codeline lineno="71" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b88fb1beafea09f0c20fb568814e1c6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5b88fb1beafea09f0c20fb568814e1c6" kindref="member">GEO_LIGHTBALL</ref>,</highlight></codeline>
+<codeline lineno="72" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a50a1ba14d086a30dcd4dba873237bdae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a50a1ba14d086a30dcd4dba873237bdae" kindref="member">GEO_LIGHTBALL2</ref>,</highlight></codeline>
+<codeline lineno="73" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5ab2beaf33cd8f825670b9d2cbaf982b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a5ab2beaf33cd8f825670b9d2cbaf982b" kindref="member">GEO_CYLINDER</ref>,</highlight></codeline>
+<codeline lineno="74" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6f1aac43803753f8c5f8b5707a956208" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6f1aac43803753f8c5f8b5707a956208" kindref="member">GEO_MODEL1</ref>,</highlight></codeline>
+<codeline lineno="75" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a94a0da412875219722de4c443d837d36" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a94a0da412875219722de4c443d837d36" kindref="member">GEO_MODEL2</ref>,</highlight></codeline>
+<codeline lineno="76" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483abb04b5603c81197334490d58a2815ab9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483abb04b5603c81197334490d58a2815ab9" kindref="member">GEO_MODEL3</ref>,</highlight></codeline>
+<codeline lineno="77" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a846b0fa1d599a0c6b8e847dfe636fda0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a846b0fa1d599a0c6b8e847dfe636fda0" kindref="member">GEO_LEFT</ref>,</highlight></codeline>
+<codeline lineno="78" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a38665ef8f8e3a7c7f086bfc46fa3bce4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a38665ef8f8e3a7c7f086bfc46fa3bce4" kindref="member">GEO_RIGHT</ref>,</highlight></codeline>
+<codeline lineno="79" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a195e33148181ea2cfa7552608569537a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a195e33148181ea2cfa7552608569537a" kindref="member">GEO_TOP</ref>,</highlight></codeline>
+<codeline lineno="80" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483afdc81dc03c978ac23a611c47086412b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483afdc81dc03c978ac23a611c47086412b9" kindref="member">GEO_BOTTOM</ref>,</highlight></codeline>
+<codeline lineno="81" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6d15c091a4e472acb5ba32afdbb6dee3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a6d15c091a4e472acb5ba32afdbb6dee3" kindref="member">GEO_FRONT</ref>,</highlight></codeline>
+<codeline lineno="82" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483addfdeaff7e0e29e412baad6c5f2853c7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483addfdeaff7e0e29e412baad6c5f2853c7" kindref="member">GEO_BACK</ref>,</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a666720583b4cd9c2d17b88d963fbfe6d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a666720583b4cd9c2d17b88d963fbfe6d" kindref="member">NUM_GEOMETRY</ref>,</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1a0fe76fa3bea08f54bafbe78257b17638" kindref="member">SceneModel</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classSceneModel_1ad4e125cfdc3d4a11d492e4869f3aae0a" kindref="member">~SceneModel</ref>();</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1a3c07e062d6c09125fe9f8ea794f16255" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1a937831169909e6699265154d817cb1ef" kindref="member">Update</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1aa0450726b11758c761d432464a238784" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1a5774a86f55bbdffa51347878099cc510" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="96" refid="classSceneModel_1ac81aa81f5c58743a386bc2e5a634639c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1ac81aa81f5c58743a386bc2e5a634639c" kindref="member">m_vertexArrayID</ref>;</highlight></codeline>
+<codeline lineno="97" refid="classSceneModel_1a2b857184f8fd5e3d376cd88c42c8d249" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMesh" kindref="compound">Mesh</ref>*<sp/><ref refid="classSceneModel_1a2b857184f8fd5e3d376cd88c42c8d249" kindref="member">meshList</ref>[<ref refid="classSceneModel_1ada16dbd96f682fba84736d7942fee483a666720583b4cd9c2d17b88d963fbfe6d" kindref="member">NUM_GEOMETRY</ref>];</highlight></codeline>
+<codeline lineno="98" refid="classSceneModel_1acefd6d535ad7d4c5e52738323455706e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1acefd6d535ad7d4c5e52738323455706e" kindref="member">m_programID</ref>;</highlight></codeline>
+<codeline lineno="99" refid="classSceneModel_1af27d9b8a13375886fc8fb5086d1f7dfb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1af27d9b8a13375886fc8fb5086d1f7dfb" kindref="member">m_parameters</ref>[<ref refid="classSceneModel_1a3100aa352b8a4f34e4bfc5e36d093228afa7968ceedd57a22b461eb1efee85b57" kindref="member">U_TOTAL</ref>];</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101" refid="classSceneModel_1ac5dbf0ef222571c0b3a960632dc5459c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1ac5dbf0ef222571c0b3a960632dc5459c" kindref="member">rotateAngle</ref>;</highlight></codeline>
+<codeline lineno="102" refid="classSceneModel_1a7204f015f5b769e09190baba4c9ff405" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1a7204f015f5b769e09190baba4c9ff405" kindref="member">worldSize</ref>;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Camera2<sp/>camera;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105" refid="classSceneModel_1aeeabfefc22ea13a02b1ab18368799228" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCamera3" kindref="compound">Camera3</ref><sp/><ref refid="classSceneModel_1aeeabfefc22ea13a02b1ab18368799228" kindref="member">camera</ref>;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="classSceneModel_1a67665c9b4bf73a8225b9a42463f94f2a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMS" kindref="compound">MS</ref><sp/><ref refid="classSceneModel_1acf903f662e9a94a9f899fb9f8ecc162d" kindref="member">modelStack</ref>,<sp/><ref refid="classSceneModel_1a67665c9b4bf73a8225b9a42463f94f2a" kindref="member">viewStack</ref>,<sp/><ref refid="classSceneModel_1a6aba8ac3d74ec4d76a49e0cd6875ace6" kindref="member">projectionStack</ref>;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classSceneModel_1ad0241601512b68c875140cf048a44d5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="structLight" kindref="compound">Light</ref><sp/><ref refid="classSceneModel_1ad0241601512b68c875140cf048a44d5c" kindref="member">lights</ref>[2];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1a7b80f3f06dfb53682b3a147c6dff8016" kindref="member">RenderSkybox</ref>();</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classSceneModel_1aa419ebbb2e72b68499727d44d6ef68a4" kindref="member">RenderMesh</ref>(<ref refid="classMesh" kindref="compound">Mesh</ref><sp/>*mesh,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>enableLight);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/SceneModel.h"/>
+  </compounddef>
+</doxygen>

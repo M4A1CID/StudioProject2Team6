@@ -2,7 +2,12 @@
 #define CAMERA_3_H
 
 #include "Camera.h"
-
+/******************************************************************************/
+/*!
+		Class Camera3:
+\brief	Defines the Camera3 class
+*/
+/******************************************************************************/
 class Camera3 : public Camera
 {
 public:

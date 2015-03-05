@@ -5,6 +5,12 @@
 #include "Item.h"
 #include "DefineEnum.h"
 #include <vector>
+/******************************************************************************/
+/*!
+		Class Character:
+\brief	Defines the character class
+*/
+/******************************************************************************/
 class CCharacter
 {
 public:

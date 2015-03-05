@@ -1,6 +1,11 @@
 #ifndef _MATERIAL_H
 #define _MATERIAL_H
-
+/******************************************************************************/
+/*!
+		Struct Component:
+\brief	Defines a material component
+*/
+/******************************************************************************/
 struct Component
 {
 	float r, g, b;
@@ -15,7 +20,12 @@ struct Component
 		this->b = b;
 	}
 };
-
+/******************************************************************************/
+/*!
+		Struct Material:
+\brief	Defines a material
+*/
+/******************************************************************************/
 struct Material
 {
 	Component kAmbient;

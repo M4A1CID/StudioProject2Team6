@@ -1,0 +1,5 @@
+<map id="SceneSP::UpdateATM" name="SceneSP::UpdateATM">
+<area shape="rect" id="node2" href="$classCPlayer.html#a1cc34d624d5208e89aed5fd1ad9dcdd1" title="Accessor function for the amount of money the player has. " alt="" coords="227,5,361,32"/>
+<area shape="rect" id="node3" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="207,56,381,83"/>
+<area shape="rect" id="node4" href="$classCPlayer.html#ac5c0e462bb3e9804f5fff4a33be5a33d" title="Mutator function to set the players current money. " alt="" coords="227,107,361,133"/>
+</map>

@@ -40,15 +40,30 @@ bool Application::IsKeyPressed(unsigned short key)
 {
     return ((GetAsyncKeyState(key) & 0x8001) != 0);
 }
-
+/******************************************************************************/
+/*!
+\brief
+Default application constructor
+*/
+/******************************************************************************/
 Application::Application()
 {
 }
-
+/******************************************************************************/
+/*!
+\brief
+Default application destructor
+*/
+/******************************************************************************/
 Application::~Application()
 {
 }
-
+/******************************************************************************/
+/*!
+\brief
+Initialises the application
+*/
+/******************************************************************************/
 void Application::Init()
 {
 	//Set the error callback

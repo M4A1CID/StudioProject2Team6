@@ -3,7 +3,12 @@
 #define APPLICATION_H
 
 #include "timer.h"
-
+/******************************************************************************/
+/*!
+		Class Application:
+\brief	Defines our entire application
+*/
+/******************************************************************************/
 class Application
 {
 public:

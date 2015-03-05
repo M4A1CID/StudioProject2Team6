@@ -1,0 +1,245 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Npc_8cpp" kind="file">
+    <compoundname>Npc.cpp</compoundname>
+    <includes refid="Npc_8h" local="yes">Npc.h</includes>
+    <incdepgraph>
+      <node id="3076">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3077" relation="include">
+        </childnode>
+      </node>
+      <node id="3074">
+        <label>Npc.h</label>
+        <link refid="Npc_8h"/>
+        <childnode refid="3075" relation="include">
+        </childnode>
+      </node>
+      <node id="3073">
+        <label>MyGraphics/Source/Npc.cpp</label>
+        <link refid="Npc.cpp"/>
+        <childnode refid="3074" relation="include">
+        </childnode>
+      </node>
+      <node id="3077">
+        <label>string</label>
+      </node>
+      <node id="3079">
+        <label>vector</label>
+      </node>
+      <node id="3075">
+        <label>Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="3076" relation="include">
+        </childnode>
+        <childnode refid="3078" relation="include">
+        </childnode>
+        <childnode refid="3079" relation="include">
+        </childnode>
+      </node>
+      <node id="3078">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Npc_8h" kindref="compound">Npc.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCNpc_1a209ecebe9d32b8baba8ff3995fd5ce41" refkind="member"><highlight class="normal"><ref refid="classCNpc_1a209ecebe9d32b8baba8ff3995fd5ce41" kindref="member">CNpc::CNpc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="29"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" refkind="member"><highlight class="normal"><ref refid="classCNpc_1a209ecebe9d32b8baba8ff3995fd5ce41" kindref="member">CNpc::CNpc</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posX,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posY,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>posZ,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>head,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>arm,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>leg,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>type,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>job,</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" kindref="member">setXpos</ref>(posX);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" kindref="member">setYpos</ref>(posY);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" kindref="member">setZpos</ref>(posZ);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a7e00ec77f1e9cbb698271120d2151f74" kindref="member">GeoHeadType</ref><sp/>=<sp/>head;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a1a932b38474001df6dedf1d67c9f5620" kindref="member">GeoArmType</ref><sp/>=<sp/>arm;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1aab1e355955d429d2d41f7863d903fc50" kindref="member">GeoLegType</ref><sp/>=<sp/>leg;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" kindref="member">setCharacterJob</ref>(job);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" kindref="member">setCharacterState</ref>(state);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" kindref="member">setAnimationType</ref>(type);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" kindref="member">Yrotation</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" kindref="member">Xrotation</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" kindref="member">Zrotation</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" kindref="member">rotateLeftArm</ref><sp/>=<sp/>90.f;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" kindref="member">rotateRightArm</ref><sp/>=<sp/>270.f;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" kindref="member">rotateLeftLeg</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" kindref="member">rotateRightLeg</ref><sp/>=<sp/>0.f;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" kindref="member">moveSpd</ref><sp/>=<sp/>5.0f;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" kindref="member">NPCTimer</ref><sp/>=<sp/>0.0f;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" kindref="member">IsActive</ref><sp/>=<sp/>active;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" kindref="member">legRotDir</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="60"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="classCNpc_1a4085ccdb7452b3ca1c54848a1cbc2ffc" refkind="member"><highlight class="normal"><ref refid="classCNpc_1a4085ccdb7452b3ca1c54848a1cbc2ffc" kindref="member">CNpc::~CNpc</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="71"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classCNpc_1a9e3f73d1e7229d677c4e7197f37d2176" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a9e3f73d1e7229d677c4e7197f37d2176" kindref="member">CNpc::getArmType</ref>()</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a1a932b38474001df6dedf1d67c9f5620" kindref="member">GeoArmType</ref>;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="83"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classCNpc_1ad7775806d37e7714c4d646cf8da26349" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1ad7775806d37e7714c4d646cf8da26349" kindref="member">CNpc::getHeadType</ref>()</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a7e00ec77f1e9cbb698271120d2151f74" kindref="member">GeoHeadType</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="95"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classCNpc_1a1c56fa76c16a847b7112bf692c8a55bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a1c56fa76c16a847b7112bf692c8a55bc" kindref="member">CNpc::getLegType</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1aab1e355955d429d2d41f7863d903fc50" kindref="member">GeoLegType</ref>;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="107"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108" refid="classCNpc_1afc60d26d6113fc1653e609fc8d85815c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1afc60d26d6113fc1653e609fc8d85815c" kindref="member">CNpc::getLeftArm</ref>()</highlight></codeline>
+<codeline lineno="109"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" kindref="member">rotateLeftArm</ref>;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="119"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120" refid="classCNpc_1a909a85440909b795ae6a8adb279cbedc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a909a85440909b795ae6a8adb279cbedc" kindref="member">CNpc::getRightArm</ref>()</highlight></codeline>
+<codeline lineno="121"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" kindref="member">rotateRightArm</ref>;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="131"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132" refid="classCNpc_1a9a5d8dedffcc89164ce18128ed87078c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a9a5d8dedffcc89164ce18128ed87078c" kindref="member">CNpc::getLeftLeg</ref>()</highlight></codeline>
+<codeline lineno="133"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" kindref="member">rotateLeftLeg</ref>;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="143"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144" refid="classCNpc_1aa018bddc9614bd53413cd36efaf71949" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1aa018bddc9614bd53413cd36efaf71949" kindref="member">CNpc::getRightLeg</ref>()</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" kindref="member">rotateRightLeg</ref>;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="155"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156" refid="classCNpc_1a6adeaaaf42ae550d6b62cfafada4eaa9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a6adeaaaf42ae550d6b62cfafada4eaa9" kindref="member">CNpc::getYRotation</ref>()</highlight></codeline>
+<codeline lineno="157"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" kindref="member">Yrotation</ref>;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="167"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168" refid="classCNpc_1a4c5cb360b381c84d42078ef21143496b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a4c5cb360b381c84d42078ef21143496b" kindref="member">CNpc::getXRotation</ref>()</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" kindref="member">Xrotation</ref>;</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="179"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="180" refid="classCNpc_1af393509d253642255561812ee7343794" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1af393509d253642255561812ee7343794" kindref="member">CNpc::getZRotation</ref>()</highlight></codeline>
+<codeline lineno="181"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" kindref="member">Zrotation</ref>;</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="191"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192" refid="classCNpc_1a6c37b50c09f920bf2de0062a883b7c90" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a6c37b50c09f920bf2de0062a883b7c90" kindref="member">CNpc::getmoveSpd</ref>()</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" kindref="member">moveSpd</ref>;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="203"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="classCNpc_1a7f73833a9a9af1510e2a86bde091636d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a7f73833a9a9af1510e2a86bde091636d" kindref="member">CNpc::getNPCTimer</ref>()</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" kindref="member">NPCTimer</ref>;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="215"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="216" refid="classCNpc_1a5045f380578cbd54ebb95046e1d7c94e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a5045f380578cbd54ebb95046e1d7c94e" kindref="member">CNpc::getActive</ref>()</highlight></codeline>
+<codeline lineno="217"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" kindref="member">IsActive</ref>;</highlight></codeline>
+<codeline lineno="219"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="227"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228" refid="classCNpc_1a1f9fd2e87e4a06a4dd82edbe86ce7e40" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a1f9fd2e87e4a06a4dd82edbe86ce7e40" kindref="member">CNpc::getlegRotDir</ref>()</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" kindref="member">legRotDir</ref>;</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="240"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="241" refid="classCNpc_1a3cfcc5ad7940b72505444a1f495ec423" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a3cfcc5ad7940b72505444a1f495ec423" kindref="member">CNpc::setLeftArm</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" kindref="member">rotateLeftArm</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="252"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="253" refid="classCNpc_1a0af5c6962cabcdeff758b2f697ab27fa" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a0af5c6962cabcdeff758b2f697ab27fa" kindref="member">CNpc::setRightArm</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" kindref="member">rotateRightArm</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="264"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="265" refid="classCNpc_1a19e8e6a99af7ffb400fdf06ed2091e02" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a19e8e6a99af7ffb400fdf06ed2091e02" kindref="member">CNpc::setLeftLeg</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" kindref="member">rotateLeftLeg</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="268"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="276"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277" refid="classCNpc_1a8f21953fc67f681c221d341a6450e4f9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a8f21953fc67f681c221d341a6450e4f9" kindref="member">CNpc::setRightLeg</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="278"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" kindref="member">rotateRightLeg</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="288"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="289" refid="classCNpc_1a4869f0594ccba9a518887c8d91966c2d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a4869f0594ccba9a518887c8d91966c2d" kindref="member">CNpc::setYRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="290"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" kindref="member">Yrotation</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="300"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301" refid="classCNpc_1a6f648098dece44ff4d3ab1fe1e820833" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a6f648098dece44ff4d3ab1fe1e820833" kindref="member">CNpc::setXRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="302"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" kindref="member">Xrotation</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="312"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313" refid="classCNpc_1ab1fbf4a3e9dd0e45032bfd00ad61a31b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1ab1fbf4a3e9dd0e45032bfd00ad61a31b" kindref="member">CNpc::setZRotation</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" kindref="member">Zrotation</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="324"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325" refid="classCNpc_1a48af32b4aa535ccbbfdded13217f453e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a48af32b4aa535ccbbfdded13217f453e" kindref="member">CNpc::setmoveSpd</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>r)</highlight></codeline>
+<codeline lineno="326"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" kindref="member">moveSpd</ref><sp/>=<sp/>r;</highlight></codeline>
+<codeline lineno="328"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="336"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="337" refid="classCNpc_1acf84cecc87c17d26523740cfc2b7a590" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1acf84cecc87c17d26523740cfc2b7a590" kindref="member">CNpc::setNPCTimer</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timer)</highlight></codeline>
+<codeline lineno="338"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" kindref="member">NPCTimer</ref><sp/>=<sp/>timer;</highlight></codeline>
+<codeline lineno="340"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="348"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="349" refid="classCNpc_1a3479de38e3d0fd08abfb2ebe8129bcc9" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a3479de38e3d0fd08abfb2ebe8129bcc9" kindref="member">CNpc::setActive</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>active)</highlight></codeline>
+<codeline lineno="350"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" kindref="member">IsActive</ref><sp/>=<sp/>active;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="360"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="361" refid="classCNpc_1a97d1fd654a6bffd7614ea55dc9b0971f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCNpc_1a97d1fd654a6bffd7614ea55dc9b0971f" kindref="member">CNpc::setlegRotDir</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>dir)</highlight></codeline>
+<codeline lineno="362"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" kindref="member">legRotDir</ref><sp/>=<sp/>dir;</highlight></codeline>
+<codeline lineno="364"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp"/>
+  </compounddef>
+</doxygen>

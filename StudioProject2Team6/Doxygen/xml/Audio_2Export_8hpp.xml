@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Audio_2Export_8hpp" kind="file">
+    <compoundname>Export.hpp</compoundname>
+    <includes refid="Config_8hpp" local="no">SFML/Config.hpp</includes>
+    <includedby refid="Listener_8hpp" local="no">SFML/include/SFML/Audio/Listener.hpp</includedby>
+    <includedby refid="Music_8hpp" local="no">SFML/include/SFML/Audio/Music.hpp</includedby>
+    <includedby refid="Sound_8hpp" local="no">SFML/include/SFML/Audio/Sound.hpp</includedby>
+    <includedby refid="SoundBuffer_8hpp" local="no">SFML/include/SFML/Audio/SoundBuffer.hpp</includedby>
+    <includedby refid="SoundBufferRecorder_8hpp" local="no">SFML/include/SFML/Audio/SoundBufferRecorder.hpp</includedby>
+    <includedby refid="SoundRecorder_8hpp" local="no">SFML/include/SFML/Audio/SoundRecorder.hpp</includedby>
+    <includedby refid="SoundSource_8hpp" local="no">SFML/include/SFML/Audio/SoundSource.hpp</includedby>
+    <includedby refid="SoundStream_8hpp" local="no">SFML/include/SFML/Audio/SoundStream.hpp</includedby>
+    <incdepgraph>
+      <node id="3624">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="3623">
+        <label>SFML/include/SFML/Audio/Export.hpp</label>
+        <link refid="Audio/Export.hpp"/>
+        <childnode refid="3624" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3631">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3627">
+        <label>SFML/include/SFML/Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="3628" relation="include">
+        </childnode>
+      </node>
+      <node id="3626">
+        <label>SFML/include/SFML/Audio/Listener.hpp</label>
+        <link refid="Listener_8hpp"/>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3629">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3634">
+        <label>SFML/include/SFML/Audio/SoundBuffer.hpp</label>
+        <link refid="SoundBuffer_8hpp"/>
+        <childnode refid="3635" relation="include">
+        </childnode>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3638">
+        <label>SFML/include/SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream_8hpp"/>
+        <childnode refid="3632" relation="include">
+        </childnode>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3636">
+        <label>SFML/include/SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder_8hpp"/>
+        <childnode refid="3635" relation="include">
+        </childnode>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3625">
+        <label>SFML/include/SFML/Audio/Export.hpp</label>
+        <link refid="Audio/Export.hpp"/>
+        <childnode refid="3626" relation="include">
+        </childnode>
+        <childnode refid="3632" relation="include">
+        </childnode>
+        <childnode refid="3633" relation="include">
+        </childnode>
+        <childnode refid="3634" relation="include">
+        </childnode>
+        <childnode refid="3635" relation="include">
+        </childnode>
+        <childnode refid="3636" relation="include">
+        </childnode>
+        <childnode refid="3637" relation="include">
+        </childnode>
+        <childnode refid="3638" relation="include">
+        </childnode>
+      </node>
+      <node id="3628">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3629" relation="include">
+        </childnode>
+        <childnode refid="3630" relation="include">
+        </childnode>
+        <childnode refid="3631" relation="include">
+        </childnode>
+      </node>
+      <node id="3637">
+        <label>SFML/include/SFML/Audio/SoundSource.hpp</label>
+        <link refid="SoundSource_8hpp"/>
+        <childnode refid="3633" relation="include">
+        </childnode>
+        <childnode refid="3638" relation="include">
+        </childnode>
+      </node>
+      <node id="3635">
+        <label>SFML/include/SFML/Audio/SoundBufferRecorder.hpp</label>
+        <link refid="SoundBufferRecorder_8hpp"/>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3633">
+        <label>SFML/include/SFML/Audio/Sound.hpp</label>
+        <link refid="Sound_8hpp"/>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+      <node id="3630">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="3632">
+        <label>SFML/include/SFML/Audio/Music.hpp</label>
+        <link refid="Music_8hpp"/>
+        <childnode refid="3627" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="Audio_2Export_8hpp_1a4d34c0f253824ac49bdd93545913eb89" prot="public" static="no">
+        <name>SFML_AUDIO_API</name>
+        <initializer><ref refid="Config_8hpp_1aba0bbe5791bee6633caa835c7f6a12a4" kindref="member">SFML_API_IMPORT</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Export.hpp" line="43" column="13" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Export.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SFML<sp/>-<sp/>Simple<sp/>and<sp/>Fast<sp/>Multimedia<sp/>Library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007-2014<sp/>Laurent<sp/>Gomila<sp/>(laurent.gom@gmail.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied<sp/>warranty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages<sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it<sp/>freely,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>you<sp/>must<sp/>not<sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>If<sp/>you<sp/>use<sp/>this<sp/>software<sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be<sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>and<sp/>must<sp/>not<sp/>be<sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SFML_AUDIO_EXPORT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SFML_AUDIO_EXPORT_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">//<sp/>Headers</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="Config_8hpp" kindref="compound">SFML/Config.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">//<sp/>Define<sp/>portable<sp/>import<sp/>/<sp/>export<sp/>macros</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"></highlight><highlight class="preprocessor">#if<sp/>defined(SFML_AUDIO_EXPORTS)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SFML_AUDIO_API<sp/>SFML_API_EXPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="preprocessor">#else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="Audio_2Export_8hpp_1a4d34c0f253824ac49bdd93545913eb89" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#define<sp/>SFML_AUDIO_API<sp/>SFML_API_IMPORT</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SFML_AUDIO_EXPORT_HPP</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Export.hpp"/>
+  </compounddef>
+</doxygen>

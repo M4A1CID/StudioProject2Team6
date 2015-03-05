@@ -1,0 +1,1100 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Application_8cpp" kind="file">
+    <compoundname>Application.cpp</compoundname>
+    <includes refid="Application_8h" local="yes">Application.h</includes>
+    <includes local="no">GL/glew.h</includes>
+    <includes local="no">GLFW/glfw3.h</includes>
+    <includes local="no">stdio.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes refid="SceneSP_8h" local="yes">SceneSP.h</includes>
+    <incdepgraph>
+      <node id="2216">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="2217" relation="include">
+        </childnode>
+      </node>
+      <node id="2281">
+        <label>locale</label>
+      </node>
+      <node id="2270">
+        <label>SFML/System/Time.hpp</label>
+        <link refid="Time_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+      </node>
+      <node id="2276">
+        <label>SFML/System/Mutex.hpp</label>
+        <link refid="Mutex_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+      </node>
+      <node id="2231">
+        <label>VargaCan.h</label>
+        <link refid="VargaCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2220">
+        <label>CerealBox2.h</label>
+        <link refid="CerealBox2_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2261">
+        <label>Npc.h</label>
+        <link refid="Npc_8h"/>
+        <childnode refid="2259" relation="include">
+        </childnode>
+      </node>
+      <node id="2279">
+        <label>SFML/System/Utf.hpp</label>
+        <link refid="Utf_8hpp"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+        <childnode refid="2280" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+        <childnode refid="2282" relation="include">
+        </childnode>
+      </node>
+      <node id="2206">
+        <label>windows.h</label>
+      </node>
+      <node id="2265">
+        <label>SFML\Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="2266" relation="include">
+        </childnode>
+        <childnode refid="2293" relation="include">
+        </childnode>
+        <childnode refid="2295" relation="include">
+        </childnode>
+        <childnode refid="2298" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+        <childnode refid="2301" relation="include">
+        </childnode>
+        <childnode refid="2302" relation="include">
+        </childnode>
+        <childnode refid="2296" relation="include">
+        </childnode>
+      </node>
+      <node id="2274">
+        <label>SFML/System/Lock.hpp</label>
+        <link refid="Lock_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+      </node>
+      <node id="2241">
+        <label>Mtx44.h</label>
+        <link refid="Mtx44_8h"/>
+        <childnode refid="2242" relation="include">
+        </childnode>
+        <childnode refid="2247" relation="include">
+        </childnode>
+      </node>
+      <node id="2230">
+        <label>TomatoCan.h</label>
+        <link refid="TomatoCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2210">
+        <label>stdlib.h</label>
+      </node>
+      <node id="2226">
+        <label>EasterEgg3.h</label>
+        <link refid="EasterEgg3_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2243">
+        <label>cmath</label>
+      </node>
+      <node id="2293">
+        <label>SFML/Audio/Listener.hpp</label>
+        <link refid="Listener_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+      </node>
+      <node id="2251">
+        <label>Mesh.h</label>
+        <link refid="Mesh_8h"/>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2252" relation="include">
+        </childnode>
+      </node>
+      <node id="2267">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="2234">
+        <label>HumanCan.h</label>
+        <link refid="HumanCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2286">
+        <label>SFML/System/ThreadLocal.hpp</label>
+        <link refid="ThreadLocal_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+      </node>
+      <node id="2217">
+        <label>string</label>
+      </node>
+      <node id="2207">
+        <label>GL/glew.h</label>
+      </node>
+      <node id="2284">
+        <label>SFML/System/Thread.hpp</label>
+        <link refid="Thread_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2275" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+        <childnode refid="2285" relation="include">
+        </childnode>
+      </node>
+      <node id="2203">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application.cpp"/>
+        <childnode refid="2204" relation="include">
+        </childnode>
+        <childnode refid="2207" relation="include">
+        </childnode>
+        <childnode refid="2208" relation="include">
+        </childnode>
+        <childnode refid="2209" relation="include">
+        </childnode>
+        <childnode refid="2210" relation="include">
+        </childnode>
+        <childnode refid="2211" relation="include">
+        </childnode>
+      </node>
+      <node id="2219">
+        <label>CerealBox1.h</label>
+        <link refid="CerealBox1_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2278">
+        <label>SFML/System/String.hpp</label>
+        <link refid="String_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2281" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2283" relation="include">
+        </childnode>
+      </node>
+      <node id="2258">
+        <label>Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="2259" relation="include">
+        </childnode>
+      </node>
+      <node id="2223">
+        <label>CerealBox5.h</label>
+        <link refid="CerealBox5_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2208">
+        <label>GLFW/glfw3.h</label>
+      </node>
+      <node id="2244">
+        <label>exception</label>
+      </node>
+      <node id="2291">
+        <label>SFML/System/Vector3.hpp</label>
+        <link refid="Vector3_8hpp"/>
+        <childnode refid="2292" relation="include">
+        </childnode>
+      </node>
+      <node id="2299">
+        <label>SFML/Audio/SoundBuffer.hpp</label>
+        <link refid="SoundBuffer_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+        <childnode refid="2300" relation="include">
+        </childnode>
+      </node>
+      <node id="2272">
+        <label>ostream</label>
+      </node>
+      <node id="2218">
+        <label>BrownCan.h</label>
+        <link refid="BrownCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2282">
+        <label>SFML/System/Utf.inl</label>
+        <link refid="Utf_8inl"/>
+      </node>
+      <node id="2204">
+        <label>Application.h</label>
+        <link refid="Application_8h"/>
+        <childnode refid="2205" relation="include">
+        </childnode>
+      </node>
+      <node id="2263">
+        <label>DefineValues.h</label>
+        <link refid="DefineValues_8h"/>
+      </node>
+      <node id="2296">
+        <label>SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2297" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+      </node>
+      <node id="2302">
+        <label>SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+      </node>
+      <node id="2253">
+        <label>MatrixStack.h</label>
+        <link refid="MatrixStack_8h"/>
+        <childnode refid="2254" relation="include">
+        </childnode>
+        <childnode refid="2241" relation="include">
+        </childnode>
+      </node>
+      <node id="2289">
+        <label>SFML/System/Vector2.hpp</label>
+        <link refid="Vector2_8hpp"/>
+        <childnode refid="2290" relation="include">
+        </childnode>
+      </node>
+      <node id="2250">
+        <label>Camera.h</label>
+        <link refid="Camera_8h"/>
+        <childnode refid="2247" relation="include">
+        </childnode>
+      </node>
+      <node id="2205">
+        <label>timer.h</label>
+        <link refid="timer_8h"/>
+        <childnode refid="2206" relation="include">
+        </childnode>
+      </node>
+      <node id="2228">
+        <label>PeasCan.h</label>
+        <link refid="PeasCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2294">
+        <label>SFML/Audio/Export.hpp</label>
+        <link refid="Audio_2Export_8hpp"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+      </node>
+      <node id="2211">
+        <label>SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="2212" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+        <childnode refid="2214" relation="include">
+        </childnode>
+        <childnode refid="2241" relation="include">
+        </childnode>
+        <childnode refid="2249" relation="include">
+        </childnode>
+        <childnode refid="2251" relation="include">
+        </childnode>
+        <childnode refid="2253" relation="include">
+        </childnode>
+        <childnode refid="2255" relation="include">
+        </childnode>
+        <childnode refid="2257" relation="include">
+        </childnode>
+        <childnode refid="2258" relation="include">
+        </childnode>
+        <childnode refid="2261" relation="include">
+        </childnode>
+        <childnode refid="2262" relation="include">
+        </childnode>
+        <childnode refid="2263" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2264" relation="include">
+        </childnode>
+        <childnode refid="2243" relation="include">
+        </childnode>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2265" relation="include">
+        </childnode>
+      </node>
+      <node id="2238">
+        <label>SodaCan.h</label>
+        <link refid="SodaCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2214">
+        <label>DefineItemClass.h</label>
+        <link refid="DefineItemClass_8h"/>
+        <childnode refid="2215" relation="include">
+        </childnode>
+        <childnode refid="2218" relation="include">
+        </childnode>
+        <childnode refid="2219" relation="include">
+        </childnode>
+        <childnode refid="2220" relation="include">
+        </childnode>
+        <childnode refid="2221" relation="include">
+        </childnode>
+        <childnode refid="2222" relation="include">
+        </childnode>
+        <childnode refid="2223" relation="include">
+        </childnode>
+        <childnode refid="2224" relation="include">
+        </childnode>
+        <childnode refid="2225" relation="include">
+        </childnode>
+        <childnode refid="2226" relation="include">
+        </childnode>
+        <childnode refid="2227" relation="include">
+        </childnode>
+        <childnode refid="2228" relation="include">
+        </childnode>
+        <childnode refid="2229" relation="include">
+        </childnode>
+        <childnode refid="2230" relation="include">
+        </childnode>
+        <childnode refid="2231" relation="include">
+        </childnode>
+        <childnode refid="2232" relation="include">
+        </childnode>
+        <childnode refid="2233" relation="include">
+        </childnode>
+        <childnode refid="2234" relation="include">
+        </childnode>
+        <childnode refid="2235" relation="include">
+        </childnode>
+        <childnode refid="2236" relation="include">
+        </childnode>
+        <childnode refid="2237" relation="include">
+        </childnode>
+        <childnode refid="2238" relation="include">
+        </childnode>
+        <childnode refid="2239" relation="include">
+        </childnode>
+        <childnode refid="2240" relation="include">
+        </childnode>
+      </node>
+      <node id="2245">
+        <label>ctime</label>
+      </node>
+      <node id="2222">
+        <label>CerealBox4.h</label>
+        <link refid="CerealBox4_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2273">
+        <label>SFML/System/InputStream.hpp</label>
+        <link refid="InputStream_8hpp"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+      </node>
+      <node id="2256">
+        <label>Vertex.h</label>
+        <link refid="Vertex_8h"/>
+        <childnode refid="2247" relation="include">
+        </childnode>
+      </node>
+      <node id="2285">
+        <label>SFML/System/Thread.inl</label>
+        <link refid="Thread_8inl"/>
+      </node>
+      <node id="2255">
+        <label>Light.h</label>
+        <link refid="Light_8h"/>
+        <childnode refid="2256" relation="include">
+        </childnode>
+      </node>
+      <node id="2283">
+        <label>SFML/System/String.inl</label>
+        <link refid="String_8inl"/>
+      </node>
+      <node id="2297">
+        <label>SFML/Audio/SoundSource.hpp</label>
+        <link refid="SoundSource_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+      </node>
+      <node id="2215">
+        <label>BeansCan.h</label>
+        <link refid="BeansCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2292">
+        <label>SFML/System/Vector3.inl</label>
+        <link refid="Vector3_8inl"/>
+      </node>
+      <node id="2260">
+        <label>vector</label>
+      </node>
+      <node id="2254">
+        <label>stack</label>
+      </node>
+      <node id="2277">
+        <label>SFML/System/Sleep.hpp</label>
+        <link refid="Sleep_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+      </node>
+      <node id="2235">
+        <label>MtnDewCan.h</label>
+        <link refid="MtnDewCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2290">
+        <label>SFML/System/Vector2.inl</label>
+        <link refid="Vector2_8inl"/>
+      </node>
+      <node id="2266">
+        <label>SFML/System.hpp</label>
+        <link refid="System_8hpp"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+        <childnode refid="2268" relation="include">
+        </childnode>
+        <childnode refid="2271" relation="include">
+        </childnode>
+        <childnode refid="2273" relation="include">
+        </childnode>
+        <childnode refid="2274" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2277" relation="include">
+        </childnode>
+        <childnode refid="2278" relation="include">
+        </childnode>
+        <childnode refid="2284" relation="include">
+        </childnode>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2287" relation="include">
+        </childnode>
+        <childnode refid="2279" relation="include">
+        </childnode>
+        <childnode refid="2289" relation="include">
+        </childnode>
+        <childnode refid="2291" relation="include">
+        </childnode>
+      </node>
+      <node id="2264">
+        <label>sstream</label>
+      </node>
+      <node id="2301">
+        <label>SFML/Audio/SoundBufferRecorder.hpp</label>
+        <link refid="SoundBufferRecorder_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2299" relation="include">
+        </childnode>
+        <childnode refid="2302" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+      </node>
+      <node id="2232">
+        <label>BranCan.h</label>
+        <link refid="BranCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2269">
+        <label>SFML/System/Export.hpp</label>
+        <link refid="System_2Export_8hpp"/>
+        <childnode refid="2267" relation="include">
+        </childnode>
+      </node>
+      <node id="2224">
+        <label>EasterEgg1.h</label>
+        <link refid="EasterEgg1_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2240">
+        <label>EmptyItem.h</label>
+        <link refid="EmptyItem_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2298">
+        <label>SFML/Audio/Sound.hpp</label>
+        <link refid="Sound_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2297" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+      </node>
+      <node id="2249">
+        <label>Camera3.h</label>
+        <link refid="Camera3_8h"/>
+        <childnode refid="2250" relation="include">
+        </childnode>
+      </node>
+      <node id="2295">
+        <label>SFML/Audio/Music.hpp</label>
+        <link refid="Music_8hpp"/>
+        <childnode refid="2294" relation="include">
+        </childnode>
+        <childnode refid="2296" relation="include">
+        </childnode>
+        <childnode refid="2276" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+        <childnode refid="2217" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+      </node>
+      <node id="2246">
+        <label>cstdlib</label>
+      </node>
+      <node id="2268">
+        <label>SFML/System/Clock.hpp</label>
+        <link refid="Clock_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2270" relation="include">
+        </childnode>
+      </node>
+      <node id="2287">
+        <label>SFML/System/ThreadLocalPtr.hpp</label>
+        <link refid="ThreadLocalPtr_8hpp"/>
+        <childnode refid="2286" relation="include">
+        </childnode>
+        <childnode refid="2288" relation="include">
+        </childnode>
+      </node>
+      <node id="2248">
+        <label>iostream</label>
+      </node>
+      <node id="2236">
+        <label>RedMonsterCan.h</label>
+        <link refid="RedMonsterCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2227">
+        <label>MelonCan.h</label>
+        <link refid="MelonCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2221">
+        <label>CerealBox3.h</label>
+        <link refid="CerealBox3_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2233">
+        <label>GluWaterCan.h</label>
+        <link refid="GluWaterCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2271">
+        <label>SFML/System/Err.hpp</label>
+        <link refid="Err_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+        <childnode refid="2272" relation="include">
+        </childnode>
+      </node>
+      <node id="2252">
+        <label>Material.h</label>
+        <link refid="Material_8h"/>
+      </node>
+      <node id="2257">
+        <label>Utility.h</label>
+        <link refid="Utility_8h"/>
+        <childnode refid="2256" relation="include">
+        </childnode>
+        <childnode refid="2241" relation="include">
+        </childnode>
+      </node>
+      <node id="2300">
+        <label>set</label>
+      </node>
+      <node id="2259">
+        <label>Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+        <childnode refid="2260" relation="include">
+        </childnode>
+      </node>
+      <node id="2213">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+      <node id="2280">
+        <label>algorithm</label>
+      </node>
+      <node id="2237">
+        <label>RootBeerFloatsCan.h</label>
+        <link refid="RootBeerFloatsCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2209">
+        <label>stdio.h</label>
+      </node>
+      <node id="2225">
+        <label>EasterEgg2.h</label>
+        <link refid="EasterEgg2_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2229">
+        <label>SardineCan.h</label>
+        <link refid="SardineCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2275">
+        <label>SFML/System/NonCopyable.hpp</label>
+        <link refid="NonCopyable_8hpp"/>
+        <childnode refid="2269" relation="include">
+        </childnode>
+      </node>
+      <node id="2247">
+        <label>Vector3.h</label>
+        <link refid="Vector3_8h"/>
+        <childnode refid="2242" relation="include">
+        </childnode>
+        <childnode refid="2248" relation="include">
+        </childnode>
+      </node>
+      <node id="2239">
+        <label>SodaFestCan.h</label>
+        <link refid="SodaFestCan_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+        <childnode refid="2213" relation="include">
+        </childnode>
+      </node>
+      <node id="2262">
+        <label>Container.h</label>
+        <link refid="Container_8h"/>
+        <childnode refid="2216" relation="include">
+        </childnode>
+      </node>
+      <node id="2242">
+        <label>MyMath.h</label>
+        <link refid="MyMath_8h"/>
+        <childnode refid="2243" relation="include">
+        </childnode>
+        <childnode refid="2244" relation="include">
+        </childnode>
+        <childnode refid="2245" relation="include">
+        </childnode>
+        <childnode refid="2246" relation="include">
+        </childnode>
+      </node>
+      <node id="2212">
+        <label>Scene.h</label>
+        <link refid="Scene_8h"/>
+      </node>
+      <node id="2288">
+        <label>SFML/System/ThreadLocalPtr.inl</label>
+        <link refid="ThreadLocalPtr_8inl"/>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" prot="public" static="no" mutable="no">
+        <type>GLFWwindow *</type>
+        <definition>GLFWwindow* m_window</definition>
+        <argsstring></argsstring>
+        <name>m_window</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" compoundref="Application_8cpp" startline="139" endline="145">Application::Exit</referencedby>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="67" endline="115">Application::Init</referencedby>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="117" endline="137">Application::Run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" prot="public" static="no" mutable="no">
+        <type>const unsigned char</type>
+        <definition>const unsigned char FPS</definition>
+        <argsstring></argsstring>
+        <name>FPS</name>
+        <initializer>= 60</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" line="17" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" prot="public" static="no" mutable="no">
+        <type>const unsigned int</type>
+        <definition>const unsigned int frameTime</definition>
+        <argsstring></argsstring>
+        <name>frameTime</name>
+        <initializer>= 1000 / <ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="18" bodyend="-1"/>
+        <referencedby refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" compoundref="Application_8cpp" startline="117" endline="137">Application::Run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void resize_callback</definition>
+        <argsstring>(GLFWwindow *window, int w, int h)</argsstring>
+        <name>resize_callback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>w</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="20" bodyend="23"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="67" endline="115">Application::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void error_callback</definition>
+        <argsstring>(int error, const char *description)</argsstring>
+        <name>error_callback</name>
+        <param>
+          <type>int</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="26" bodyend="30"/>
+        <referencedby refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" compoundref="Application_8cpp" startline="67" endline="115">Application::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void key_callback</definition>
+        <argsstring>(GLFWwindow *window, int key, int scancode, int action, int mods)</argsstring>
+        <name>key_callback</name>
+        <param>
+          <type>GLFWwindow *</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>key</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scancode</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>action</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mods</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" line="33" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Application_8h" kindref="compound">Application.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/glew.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GLFW/glfw3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//Include<sp/>the<sp/>standard<sp/>C++<sp/>headers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="SceneSP_8h" kindref="compound">SceneSP.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" refkind="member"><highlight class="normal">GLFWwindow*<sp/><ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>;</highlight></codeline>
+<codeline lineno="17" refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref><sp/>=<sp/>60;<sp/></highlight><highlight class="comment">//<sp/>FPS<sp/>of<sp/>this<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" kindref="member">frameTime</ref><sp/>=<sp/>1000<sp/>/<sp/><ref refid="Application_8cpp_1a677c5ab1ba0f5747ef76b40a17b6f803" kindref="member">FPS</ref>;<sp/></highlight><highlight class="comment">//<sp/>time<sp/>for<sp/>each<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" kindref="member">resize_callback</ref>(GLFWwindow*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h)</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glViewport(0,<sp/>0,<sp/>w,<sp/>h);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>an<sp/>error<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" kindref="member">error_callback</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>error,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>description)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fputs(description,<sp/>stderr);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>_fgetchar();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//Define<sp/>the<sp/>key<sp/>input<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Application_8cpp_1a6d1a8981b70f74fc60c1428f080da820" kindref="member">key_callback</ref>(GLFWwindow*<sp/>window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scancode,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>action,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mods)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(key<sp/>==<sp/>GLFW_KEY_ESCAPE<sp/>&amp;&amp;<sp/>action<sp/>==<sp/>GLFW_PRESS)</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetWindowShouldClose(window,<sp/>GL_TRUE);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">Application::IsKeyPressed</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>key)</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>((GetAsyncKeyState(key)<sp/>&amp;<sp/>0x8001)<sp/>!=<sp/>0);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="48"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" refkind="member"><highlight class="normal"><ref refid="classApplication_1afa8cc05ce6b6092be5ecdfdae44e05f8" kindref="member">Application::Application</ref>()</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="57"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="58" refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" refkind="member"><highlight class="normal"><ref refid="classApplication_1a748bca84fefb9c12661cfaa2f623748d" kindref="member">Application::~Application</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="66"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a276388f7090c0a2b1c8b16cf033b969d" kindref="member">Application::Init</ref>()</highlight></codeline>
+<codeline lineno="68"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>error<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetErrorCallback(<ref refid="Application_8cpp_1a6e6d1771a9242858811be0a3569838fa" kindref="member">error_callback</ref>);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!glfwInit())</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Set<sp/>the<sp/>GLFW<sp/>window<sp/>creation<sp/>hints<sp/>-<sp/>these<sp/>are<sp/>optional</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_SAMPLES,<sp/>4);<sp/></highlight><highlight class="comment">//Request<sp/>4x<sp/>antialiasing</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR,<sp/>3);<sp/></highlight><highlight class="comment">//Request<sp/>a<sp/>specific<sp/>OpenGL<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR,<sp/>3);<sp/></highlight><highlight class="comment">//Request<sp/>a<sp/>specific<sp/>OpenGL<sp/>version</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT,<sp/>GL_TRUE);<sp/>//<sp/>To<sp/>make<sp/>MacOS<sp/>happy;<sp/>should<sp/>not<sp/>be<sp/>needed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwWindowHint(GLFW_OPENGL_PROFILE,<sp/>GLFW_OPENGL_CORE_PROFILE);<sp/></highlight><highlight class="comment">//We<sp/>don&apos;t<sp/>want<sp/>the<sp/>old<sp/>OpenGL<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Create<sp/>a<sp/>window<sp/>and<sp/>create<sp/>its<sp/>OpenGL<sp/>context</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref><sp/>=<sp/>glfwCreateWindow(1366,<sp/>768,<sp/></highlight><highlight class="stringliteral">&quot;Computer<sp/>Graphics&quot;</highlight><highlight class="normal">,<sp/>NULL,<sp/>NULL);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>the<sp/>window<sp/>couldn&apos;t<sp/>be<sp/>created</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>)</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(<sp/>stderr,<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>GLFW<sp/>window.\n&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(EXIT_FAILURE);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Register<sp/>the<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSetWindowSizeCallback(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>,<sp/><ref refid="Application_8cpp_1aadcee9765075e232ca0720f80a76ad37" kindref="member">resize_callback</ref>);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//This<sp/>function<sp/>makes<sp/>the<sp/>context<sp/>of<sp/>the<sp/>specified<sp/>window<sp/>current<sp/>on<sp/>the<sp/>calling<sp/>thread.<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwMakeContextCurrent(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Sets<sp/>the<sp/>key<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//glfwSetKeyCallback(m_window,<sp/>key_callback);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glewExperimental<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Needed<sp/>for<sp/>core<sp/>profile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Initialize<sp/>GLEW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GLenum<sp/><ref refid="group__system_1ga7fe7f475639e26334606b5142c29551f" kindref="member">err</ref><sp/>=<sp/>glewInit();</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//If<sp/>GLEW<sp/>hasn&apos;t<sp/>initialized</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(err<sp/>!=<sp/>GLEW_OK)<sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fprintf(stderr,<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>%s\n&quot;</highlight><highlight class="normal">,<sp/>glewGetErrorString(err));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//return<sp/>-1;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117" refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1aaf09cd6cb412086dc039e28cdb059f0d" kindref="member">Application::Run</ref>()</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Main<sp/>Loop</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classScene" kindref="compound">Scene</ref><sp/>*scene<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classSceneSP" kindref="compound">SceneSP</ref>();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1ac3c4677dfd702a3ffd5ffadd3f1ac478" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1a23301f735a2e3190435e39c9fd70cdf2" kindref="member">startTimer</ref>();<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Start<sp/>timer<sp/>to<sp/>calculate<sp/>how<sp/>long<sp/>it<sp/>takes<sp/>to<sp/>render<sp/>this<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!glfwWindowShouldClose(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>)<sp/>&amp;&amp;<sp/>!<ref refid="classApplication_1a72cc9bba26506a7c0f54c346dfbd5cfe" kindref="member">IsKeyPressed</ref>(VK_ESCAPE))</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1af5c6bcf2185087fb32c27fb8f6a18d91" kindref="member">Update</ref>(<ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1ac8be1626396d1a5ca414f74349d59eb2" kindref="member">getElapsedTime</ref>());</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1ae24d21e12b34839994ad265662ea24d7" kindref="member">Render</ref>();</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Swap<sp/>buffers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwSwapBuffers(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Get<sp/>and<sp/>organize<sp/>events,<sp/>like<sp/>keyboard<sp/>and<sp/>mouse<sp/>input,<sp/>window<sp/>resizing,<sp/>etc...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwPollEvents();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classApplication_1ac81ea1396dc69c6d48b9a701954f53fe" kindref="member">m_timer</ref>.<ref refid="classStopWatch_1a2cd0856fc87a40038edfd66d784be8b4" kindref="member">waitUntil</ref>(<ref refid="Application_8cpp_1ae228418b33873657fa31313fb4189a8f" kindref="member">frameTime</ref>);<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Frame<sp/>rate<sp/>limiter.<sp/>Limits<sp/>each<sp/>frame<sp/>to<sp/>a<sp/>specified<sp/>time<sp/>in<sp/>ms.<sp/><sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="comment">//Check<sp/>if<sp/>the<sp/>ESC<sp/>key<sp/>had<sp/>been<sp/>pressed<sp/>or<sp/>if<sp/>the<sp/>window<sp/>had<sp/>been<sp/>closed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scene-&gt;<ref refid="classScene_1aae8e24654ef98c79961c2b804b12852c" kindref="member">Exit</ref>();</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>scene;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight></codeline>
+<codeline lineno="139" refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classApplication_1a9d410604b39b8374a884b1f2a1f2a5ba" kindref="member">Application::Exit</ref>()</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Close<sp/>OpenGL<sp/>window<sp/>and<sp/>terminate<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwDestroyWindow(<ref refid="Application_8cpp_1ac325468d8b5ea73fd5e5831ba972bb59" kindref="member">m_window</ref>);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Finalize<sp/>and<sp/>clean<sp/>up<sp/>GLFW</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glfwTerminate();</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Application.cpp"/>
+  </compounddef>
+</doxygen>

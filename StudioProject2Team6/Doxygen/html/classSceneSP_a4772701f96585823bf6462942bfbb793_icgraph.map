@@ -1,0 +1,4 @@
+<map id="SceneSP::UpdateAI" name="SceneSP::UpdateAI">
+<area shape="rect" id="node2" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="192,5,361,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="409,5,536,32"/>
+</map>

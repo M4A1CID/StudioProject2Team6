@@ -1,0 +1,7 @@
+<map id="SceneSP::Init" name="SceneSP::Init">
+<area shape="rect" id="node2" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="156,31,305,57"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="353,5,563,32"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="361,56,555,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="611,31,769,57"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="817,31,944,57"/>
+</map>

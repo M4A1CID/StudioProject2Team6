@@ -1,0 +1,4 @@
+<map id="SceneSP::RenderReturnPoint" name="SceneSP::RenderReturnPoint">
+<area shape="rect" id="node2" href="$classSceneSP.html#a28a66fa74f2c41afc4e0048bd773d584" title="Renders the entire supermarket. " alt="" coords="248,5,448,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="496,5,623,32"/>
+</map>

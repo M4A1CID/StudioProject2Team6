@@ -1,0 +1,6 @@
+<map id="SceneSP::checkReturnPoint" name="SceneSP::checkReturnPoint">
+<area shape="rect" id="node2" href="$classSceneSP.html#ae5b83c001320f3ab83ceee51124d86aa" title="Renders the player&#39;s UI. " alt="" coords="257,5,395,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="241,56,411,83"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="459,5,585,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="459,56,585,83"/>
+</map>

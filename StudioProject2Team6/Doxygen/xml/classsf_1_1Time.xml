@@ -1,0 +1,1208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Time" kind="class" prot="public">
+    <compoundname>sf::Time</compoundname>
+    <includes refid="Time_8hpp" local="no">Time.hpp</includes>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classsf_1_1Time_1a8db127b632fa8da21550e7282af11fa0" prot="public" static="yes" mutable="no">
+        <type>const <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>const Time sf::Time::Zero</definition>
+        <argsstring></argsstring>
+        <name>Zero</name>
+        <briefdescription>
+<para>Predefined &quot;zero&quot; time value. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="85" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1Time_1a9f00785b8e837350682e056ada05dd51" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        <definition>Int64 sf::Time::m_microseconds</definition>
+        <argsstring></argsstring>
+        <name>m_microseconds</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> value stored as microseconds. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="109" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" bodystart="109" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Time_1acba0cfbc49e3a09a22a8e079eb67a05c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Time::Time</definition>
+        <argsstring>()</argsstring>
+        <name>Time</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Sets the time value to zero. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="50" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a7538140d095e48da9d7eee015dd455a9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float sf::Time::asSeconds</definition>
+        <argsstring>() const </argsstring>
+        <name>asSeconds</name>
+        <briefdescription>
+<para>Return the time value as a number of seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> in seconds</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Time_1a85e6deb41fa71896508ce0f64059a6ae" kindref="member">asMilliseconds</ref>, <ref refid="classsf_1_1Time_1ae41a7e0ca73ceea771b3c150c12abdd2" kindref="member">asMicroseconds</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a85e6deb41fa71896508ce0f64059a6ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" kindref="member">Int32</ref></type>
+        <definition>Int32 sf::Time::asMilliseconds</definition>
+        <argsstring>() const </argsstring>
+        <name>asMilliseconds</name>
+        <briefdescription>
+<para>Return the time value as a number of milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> in milliseconds</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Time_1a7538140d095e48da9d7eee015dd455a9" kindref="member">asSeconds</ref>, <ref refid="classsf_1_1Time_1ae41a7e0ca73ceea771b3c150c12abdd2" kindref="member">asMicroseconds</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="70" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ae41a7e0ca73ceea771b3c150c12abdd2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        <definition>Int64 sf::Time::asMicroseconds</definition>
+        <argsstring>() const </argsstring>
+        <name>asMicroseconds</name>
+        <briefdescription>
+<para>Return the time value as a number of microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> in microseconds</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Time_1a7538140d095e48da9d7eee015dd455a9" kindref="member">asSeconds</ref>, <ref refid="classsf_1_1Time_1a85e6deb41fa71896508ce0f64059a6ae" kindref="member">asMilliseconds</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="80" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classsf_1_1Time_1abe757d058fd820b4c84232c1451c1efa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time seconds</definition>
+        <argsstring>(float)</argsstring>
+        <name>seconds</name>
+        <param>
+          <type>float</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="89" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classsf_1_1Time_1a8dc1cb5f5fdde2ed2221d5af80cce853" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time milliseconds</definition>
+        <argsstring>(Int32)</argsstring>
+        <name>milliseconds</name>
+        <param>
+          <type><ref refid="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" kindref="member">Int32</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="90" column="1"/>
+      </memberdef>
+      <memberdef kind="friend" id="classsf_1_1Time_1ab4f5b719ece75ebd11593f935fbe3bcb" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend <ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time microseconds</definition>
+        <argsstring>(Int64)</argsstring>
+        <name>microseconds</name>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="91" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsf_1_1Time_1abb009ceaef7f7e234572128cc81ba9b0" prot="private" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Time::Time</definition>
+        <argsstring>(Int64 microseconds)</argsstring>
+        <name>Time</name>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>microseconds</declname>
+        </param>
+        <briefdescription>
+<para>Construct from a number of microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is internal. To construct time values, use sf::seconds, sf::milliseconds or sf::microseconds instead.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>microseconds</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of microseconds </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="102" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="related">
+      <memberdef kind="function" id="classsf_1_1Time_1ae36b9ef700f0ed0516abf0194ceb546b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time seconds</definition>
+        <argsstring>(float amount)</argsstring>
+        <name>seconds</name>
+        <param>
+          <type>float</type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Construct a time value from a number of seconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of seconds</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> value constructed from the amount of seconds</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Time_1a8dc1cb5f5fdde2ed2221d5af80cce853" kindref="member">milliseconds</ref>, <ref refid="classsf_1_1Time_1ab4f5b719ece75ebd11593f935fbe3bcb" kindref="member">microseconds</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="123" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ae379d420bc07170668f51522023957b9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time milliseconds</definition>
+        <argsstring>(Int32 amount)</argsstring>
+        <name>milliseconds</name>
+        <param>
+          <type><ref refid="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" kindref="member">Int32</ref></type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Construct a time value from a number of milliseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of milliseconds</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> value constructed from the amount of milliseconds</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Time_1abe757d058fd820b4c84232c1451c1efa" kindref="member">seconds</ref>, <ref refid="classsf_1_1Time_1ab4f5b719ece75ebd11593f935fbe3bcb" kindref="member">microseconds</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="136" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a951fd7219641f1e8191887f5dfe0dc31" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time microseconds</definition>
+        <argsstring>(Int64 amount)</argsstring>
+        <name>microseconds</name>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>amount</declname>
+        </param>
+        <briefdescription>
+<para>Construct a time value from a number of microseconds. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>amount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of microseconds</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> value constructed from the amount of microseconds</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Time_1abe757d058fd820b4c84232c1451c1efa" kindref="member">seconds</ref>, <ref refid="classsf_1_1Time_1a8dc1cb5f5fdde2ed2221d5af80cce853" kindref="member">milliseconds</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="149" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a2b8453227f651e9d5db3663fa08c47e2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator==</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of == operator to compare two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if both time values are equal </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="161" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ae06b561f6422ec8ca414d400efd2cf4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator!=</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator!=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of != operator to compare two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if both time values are different </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="173" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ac222933174ddcff5d14c3ac7d1020d54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&lt;</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &lt; operator to compare two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is lesser than <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="185" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a23978402846bf3c7ac54a3f2c6b397a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&gt;</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator&gt;</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &gt; operator to compare two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is greater than <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="197" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a2c22369869bf903578635bc6517c44d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&lt;=</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator&lt;=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &lt;= operator to compare two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is lesser or equal than <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="209" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ad69edc80cd01b7a03f5673b4276181eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> bool</type>
+        <definition>SFML_SYSTEM_API bool operator&gt;=</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator&gt;=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of &gt;= operator to compare two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if <emphasis>left</emphasis> is greater or equal than <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="221" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a1b23b91cf367764338c2ff922c65da4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator-</definition>
+        <argsstring>(Time right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of unary - operator to negate a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Opposite of the time value </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="232" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a7155e965f238f8c32d63649b0189ef47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator+</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary + operator to add two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum of the two times values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="244" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a831c8df4b7b9b47eaa0c5a52a1be654c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator+=</definition>
+        <argsstring>(Time &amp;left, Time right)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary += operator to add/assign two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Sum of the two times values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="256" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ace92ab9bc7aec80239af7218cd89cc80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator-</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary - operator to subtract two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference of the two times values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="268" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1aaf7888302cf4847f97cfc26875367b94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator-=</definition>
+        <argsstring>(Time &amp;left, Time right)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary -= operator to subtract/assign two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Difference of the two times values </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="280" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ac1386c6360872d354b9b59eadcd9778d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator*</definition>
+        <argsstring>(Time left, float right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary * operator to scale a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> multiplied by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="292" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1acd021b3ebb108053d7dec56869e27385" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator*</definition>
+        <argsstring>(Time left, Int64 right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary * operator to scale a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> multiplied by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="304" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a63723c9e9c5ff6151377ec4350c6f36e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator*</definition>
+        <argsstring>(float left, Time right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type>float</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary * operator to scale a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a number) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> multiplied by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="316" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a40a6d0938fb4a43731d54fd90bfc6476" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator*</definition>
+        <argsstring>(Int64 left, Time right)</argsstring>
+        <name>operator*</name>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary * operator to scale a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a number) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> multiplied by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="328" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a8996b6a6fcb8f3854b486b8e43949b50" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator*=</definition>
+        <argsstring>(Time &amp;left, float right)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary *= operator to scale/assign a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> multiplied by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="340" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a6656a0a1a1802009a72d93fbba61f24a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator*=</definition>
+        <argsstring>(Time &amp;left, Int64 right)</argsstring>
+        <name>operator*=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary *= operator to scale/assign a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> multiplied by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="352" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a3386c392dbc62e51dfa59730854d1ed2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator/</definition>
+        <argsstring>(Time left, float right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary / operator to scale a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> divided by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="364" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ab72f2de3e2bb592b4b4008dc1ac79056" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator/</definition>
+        <argsstring>(Time left, Int64 right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary / operator to scale a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> divided by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="376" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1a9835490c54cab06492ec3aa9e9275ef9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator/=</definition>
+        <argsstring>(Time &amp;left, float right)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary /= operator to scale/assign a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> divided by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="388" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ad51871e3db77def834ae8688e64504ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator/=</definition>
+        <argsstring>(Time &amp;left, Int64 right)</argsstring>
+        <name>operator/=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary /= operator to scale/assign a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a number)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> divided by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="400" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1ac3ae4f4d24a93e088d8e36d68322ea0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> float</type>
+        <definition>SFML_SYSTEM_API float operator/</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator/</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary / operator to compute the ratio of two time values. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> divided by <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="412" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1aafb8b12fb0ac0e366d6ea9c9e9f93335" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>SFML_SYSTEM_API Time operator%</definition>
+        <argsstring>(Time left, Time right)</argsstring>
+        <name>operator%</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary % operator to compute remainder of a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> modulo <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="424" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Time_1af12dd271f14a17b58c9d737395e776d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref> <ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+        <definition>SFML_SYSTEM_API Time &amp; operator%=</definition>
+        <argsstring>(Time &amp;left, Time right)</argsstring>
+        <name>operator%=</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref> &amp;</type>
+          <declname>left</declname>
+        </param>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>right</declname>
+        </param>
+        <briefdescription>
+<para>Overload of binary %= operator to compute/assign remainder of a time value. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>left</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Left operand (a time) </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>right</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Right operand (a time)</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><emphasis>left</emphasis> modulo <emphasis>right</emphasis> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="436" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Represents a time value. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Time" kindref="compound">sf::Time</ref> encapsulates a time value in a flexible way.</para><para>It allows to define a time value either as a number of seconds, milliseconds or microseconds. It also works the other way round: you can read a time value as either a number of seconds, milliseconds or microseconds.</para><para>By using such a flexible interface, the API doesn&apos;t impose any fixed type or resolution for time values, and let the user choose its own favorite representation.</para><para><ref refid="classsf_1_1Time" kindref="compound">Time</ref> values support the usual mathematical operations: you can add or subtract two times, multiply or divide a time by a number, compare two times, etc.</para><para>Since they represent a time span and not an absolute time value, times can also be negative.</para><para>Usage example: <programlisting><codeline><highlight class="normal">sf::Time<sp/>t1<sp/>=<sp/>sf::seconds(0.1f);</highlight></codeline>
+<codeline><highlight class="normal">Int32<sp/>milli<sp/>=<sp/>t1.asMilliseconds();<sp/>//<sp/>100</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sf::Time<sp/>t2<sp/>=<sp/>sf::milliseconds(30);</highlight></codeline>
+<codeline><highlight class="normal">Int64<sp/>micro<sp/>=<sp/>t2.asMicroseconds();<sp/>//<sp/>30000</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sf::Time<sp/>t3<sp/>=<sp/>sf::microseconds(-800000);</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>sec<sp/>=<sp/>t3.asSeconds();<sp/>//<sp/>-0.8</highlight></codeline>
+</programlisting></para><para><programlisting><codeline><highlight class="normal">void<sp/>update(sf::Time<sp/>elapsed)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>position<sp/>+=<sp/>speed<sp/>*<sp/>elapsed.asSeconds();</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">update(sf::milliseconds(100));</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classsf_1_1Clock" kindref="compound">sf::Clock</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1195">
+        <label>sf::Time</label>
+        <link refid="classsf_1_1Time"/>
+        <childnode refid="1195" relation="usage">
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+        <childnode refid="1196" relation="usage">
+          <edgelabel>m_microseconds</edgelabel>
+        </childnode>
+      </node>
+      <node id="1196">
+        <label>signed long long</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp" bodystart="40" bodyend="110"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Time_1ae41a7e0ca73ceea771b3c150c12abdd2" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>asMicroseconds</name></member>
+      <member refid="classsf_1_1Time_1a85e6deb41fa71896508ce0f64059a6ae" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>asMilliseconds</name></member>
+      <member refid="classsf_1_1Time_1a7538140d095e48da9d7eee015dd455a9" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>asSeconds</name></member>
+      <member refid="classsf_1_1Time_1a9f00785b8e837350682e056ada05dd51" prot="private" virt="non-virtual"><scope>sf::Time</scope><name>m_microseconds</name></member>
+      <member refid="classsf_1_1Time_1ab4f5b719ece75ebd11593f935fbe3bcb" prot="private" virt="non-virtual"><scope>sf::Time</scope><name>microseconds</name></member>
+      <member refid="classsf_1_1Time_1a951fd7219641f1e8191887f5dfe0dc31" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>microseconds</name></member>
+      <member refid="classsf_1_1Time_1a8dc1cb5f5fdde2ed2221d5af80cce853" prot="private" virt="non-virtual"><scope>sf::Time</scope><name>milliseconds</name></member>
+      <member refid="classsf_1_1Time_1ae379d420bc07170668f51522023957b9" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>milliseconds</name></member>
+      <member refid="classsf_1_1Time_1ae06b561f6422ec8ca414d400efd2cf4b" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator!=</name></member>
+      <member refid="classsf_1_1Time_1aafb8b12fb0ac0e366d6ea9c9e9f93335" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator%</name></member>
+      <member refid="classsf_1_1Time_1af12dd271f14a17b58c9d737395e776d4" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator%=</name></member>
+      <member refid="classsf_1_1Time_1ac1386c6360872d354b9b59eadcd9778d" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator*</name></member>
+      <member refid="classsf_1_1Time_1acd021b3ebb108053d7dec56869e27385" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator*</name></member>
+      <member refid="classsf_1_1Time_1a63723c9e9c5ff6151377ec4350c6f36e" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator*</name></member>
+      <member refid="classsf_1_1Time_1a40a6d0938fb4a43731d54fd90bfc6476" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator*</name></member>
+      <member refid="classsf_1_1Time_1a8996b6a6fcb8f3854b486b8e43949b50" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator*=</name></member>
+      <member refid="classsf_1_1Time_1a6656a0a1a1802009a72d93fbba61f24a" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator*=</name></member>
+      <member refid="classsf_1_1Time_1a7155e965f238f8c32d63649b0189ef47" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator+</name></member>
+      <member refid="classsf_1_1Time_1a831c8df4b7b9b47eaa0c5a52a1be654c" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator+=</name></member>
+      <member refid="classsf_1_1Time_1a1b23b91cf367764338c2ff922c65da4e" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator-</name></member>
+      <member refid="classsf_1_1Time_1ace92ab9bc7aec80239af7218cd89cc80" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator-</name></member>
+      <member refid="classsf_1_1Time_1aaf7888302cf4847f97cfc26875367b94" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator-=</name></member>
+      <member refid="classsf_1_1Time_1a3386c392dbc62e51dfa59730854d1ed2" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator/</name></member>
+      <member refid="classsf_1_1Time_1ab72f2de3e2bb592b4b4008dc1ac79056" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator/</name></member>
+      <member refid="classsf_1_1Time_1ac3ae4f4d24a93e088d8e36d68322ea0f" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator/</name></member>
+      <member refid="classsf_1_1Time_1a9835490c54cab06492ec3aa9e9275ef9" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator/=</name></member>
+      <member refid="classsf_1_1Time_1ad51871e3db77def834ae8688e64504ff" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator/=</name></member>
+      <member refid="classsf_1_1Time_1ac222933174ddcff5d14c3ac7d1020d54" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator&lt;</name></member>
+      <member refid="classsf_1_1Time_1a2c22369869bf903578635bc6517c44d4" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator&lt;=</name></member>
+      <member refid="classsf_1_1Time_1a2b8453227f651e9d5db3663fa08c47e2" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator==</name></member>
+      <member refid="classsf_1_1Time_1a23978402846bf3c7ac54a3f2c6b397a2" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator&gt;</name></member>
+      <member refid="classsf_1_1Time_1ad69edc80cd01b7a03f5673b4276181eb" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>operator&gt;=</name></member>
+      <member refid="classsf_1_1Time_1abe757d058fd820b4c84232c1451c1efa" prot="private" virt="non-virtual"><scope>sf::Time</scope><name>seconds</name></member>
+      <member refid="classsf_1_1Time_1ae36b9ef700f0ed0516abf0194ceb546b" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>seconds</name></member>
+      <member refid="classsf_1_1Time_1acba0cfbc49e3a09a22a8e079eb67a05c" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>Time</name></member>
+      <member refid="classsf_1_1Time_1abb009ceaef7f7e234572128cc81ba9b0" prot="private" virt="non-virtual"><scope>sf::Time</scope><name>Time</name></member>
+      <member refid="classsf_1_1Time_1a8db127b632fa8da21550e7282af11fa0" prot="public" virt="non-virtual"><scope>sf::Time</scope><name>Zero</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

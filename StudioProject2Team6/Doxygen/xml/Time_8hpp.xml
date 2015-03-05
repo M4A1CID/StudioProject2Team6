@@ -1,0 +1,269 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Time_8hpp" kind="file">
+    <compoundname>Time.hpp</compoundname>
+    <includes refid="System_2Export_8hpp" local="no">SFML/System/Export.hpp</includes>
+    <includedby refid="Music_8hpp" local="no">SFML/include/SFML/Audio/Music.hpp</includedby>
+    <includedby refid="Sound_8hpp" local="no">SFML/include/SFML/Audio/Sound.hpp</includedby>
+    <includedby refid="SoundBuffer_8hpp" local="no">SFML/include/SFML/Audio/SoundBuffer.hpp</includedby>
+    <includedby refid="SoundRecorder_8hpp" local="no">SFML/include/SFML/Audio/SoundRecorder.hpp</includedby>
+    <includedby refid="SoundStream_8hpp" local="no">SFML/include/SFML/Audio/SoundStream.hpp</includedby>
+    <includedby refid="Clock_8hpp" local="no">SFML/include/SFML/System/Clock.hpp</includedby>
+    <includedby refid="Sleep_8hpp" local="no">SFML/include/SFML/System/Sleep.hpp</includedby>
+    <incdepgraph>
+      <node id="4043">
+        <label>SFML/include/SFML/System/Time.hpp</label>
+        <link refid="Time.hpp"/>
+        <childnode refid="4044" relation="include">
+        </childnode>
+      </node>
+      <node id="4045">
+        <label>SFML/Config.hpp</label>
+        <link refid="Config_8hpp"/>
+      </node>
+      <node id="4044">
+        <label>SFML/System/Export.hpp</label>
+        <link refid="System_2Export_8hpp"/>
+        <childnode refid="4045" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="4052">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="4046">
+        <label>SFML/include/SFML/System/Time.hpp</label>
+        <link refid="Time.hpp"/>
+        <childnode refid="4047" relation="include">
+        </childnode>
+        <childnode refid="4053" relation="include">
+        </childnode>
+        <childnode refid="4054" relation="include">
+        </childnode>
+        <childnode refid="4056" relation="include">
+        </childnode>
+        <childnode refid="4057" relation="include">
+        </childnode>
+        <childnode refid="4058" relation="include">
+        </childnode>
+        <childnode refid="4060" relation="include">
+        </childnode>
+      </node>
+      <node id="4048">
+        <label>SFML/include/SFML/Audio.hpp</label>
+        <link refid="Audio_8hpp"/>
+        <childnode refid="4049" relation="include">
+        </childnode>
+      </node>
+      <node id="4050">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="4054">
+        <label>SFML/include/SFML/Audio/SoundBuffer.hpp</label>
+        <link refid="SoundBuffer_8hpp"/>
+        <childnode refid="4055" relation="include">
+        </childnode>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4057">
+        <label>SFML/include/SFML/Audio/SoundStream.hpp</label>
+        <link refid="SoundStream_8hpp"/>
+        <childnode refid="4047" relation="include">
+        </childnode>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4056">
+        <label>SFML/include/SFML/Audio/SoundRecorder.hpp</label>
+        <link refid="SoundRecorder_8hpp"/>
+        <childnode refid="4055" relation="include">
+        </childnode>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4049">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="4050" relation="include">
+        </childnode>
+        <childnode refid="4051" relation="include">
+        </childnode>
+        <childnode refid="4052" relation="include">
+        </childnode>
+      </node>
+      <node id="4060">
+        <label>SFML/include/SFML/System/Sleep.hpp</label>
+        <link refid="Sleep_8hpp"/>
+        <childnode refid="4059" relation="include">
+        </childnode>
+      </node>
+      <node id="4059">
+        <label>SFML/include/SFML/System.hpp</label>
+        <link refid="System_8hpp"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4055">
+        <label>SFML/include/SFML/Audio/SoundBufferRecorder.hpp</label>
+        <link refid="SoundBufferRecorder_8hpp"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4053">
+        <label>SFML/include/SFML/Audio/Sound.hpp</label>
+        <link refid="Sound_8hpp"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4051">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+      <node id="4047">
+        <label>SFML/include/SFML/Audio/Music.hpp</label>
+        <link refid="Music_8hpp"/>
+        <childnode refid="4048" relation="include">
+        </childnode>
+      </node>
+      <node id="4058">
+        <label>SFML/include/SFML/System/Clock.hpp</label>
+        <link refid="Clock_8hpp"/>
+        <childnode refid="4059" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classsf_1_1Time" prot="public">sf::Time</innerclass>
+    <innernamespace refid="namespacesf">sf</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>SFML<sp/>-<sp/>Simple<sp/>and<sp/>Fast<sp/>Multimedia<sp/>Library</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Copyright<sp/>(C)<sp/>2007-2014<sp/>Laurent<sp/>Gomila<sp/>(laurent.gom@gmail.com)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>software<sp/>is<sp/>provided<sp/>&apos;as-is&apos;,<sp/>without<sp/>any<sp/>express<sp/>or<sp/>implied<sp/>warranty.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>In<sp/>no<sp/>event<sp/>will<sp/>the<sp/>authors<sp/>be<sp/>held<sp/>liable<sp/>for<sp/>any<sp/>damages<sp/>arising<sp/>from<sp/>the<sp/>use<sp/>of<sp/>this<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Permission<sp/>is<sp/>granted<sp/>to<sp/>anyone<sp/>to<sp/>use<sp/>this<sp/>software<sp/>for<sp/>any<sp/>purpose,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>including<sp/>commercial<sp/>applications,<sp/>and<sp/>to<sp/>alter<sp/>it<sp/>and<sp/>redistribute<sp/>it<sp/>freely,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>restrictions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/>1.<sp/>The<sp/>origin<sp/>of<sp/>this<sp/>software<sp/>must<sp/>not<sp/>be<sp/>misrepresented;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>you<sp/>must<sp/>not<sp/>claim<sp/>that<sp/>you<sp/>wrote<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>If<sp/>you<sp/>use<sp/>this<sp/>software<sp/>in<sp/>a<sp/>product,<sp/>an<sp/>acknowledgment</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>in<sp/>the<sp/>product<sp/>documentation<sp/>would<sp/>be<sp/>appreciated<sp/>but<sp/>is<sp/>not<sp/>required.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>2.<sp/>Altered<sp/>source<sp/>versions<sp/>must<sp/>be<sp/>plainly<sp/>marked<sp/>as<sp/>such,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>and<sp/>must<sp/>not<sp/>be<sp/>misrepresented<sp/>as<sp/>being<sp/>the<sp/>original<sp/>software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>3.<sp/>This<sp/>notice<sp/>may<sp/>not<sp/>be<sp/>removed<sp/>or<sp/>altered<sp/>from<sp/>any<sp/>source<sp/>distribution.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SFML_TIME_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SFML_TIME_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment">//<sp/>Headers</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="preprocessor">#include<sp/>&lt;<ref refid="System_2Export_8hpp" kindref="compound">SFML/System/Export.hpp</ref>&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacesf" kindref="compound">sf</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40" refid="classsf_1_1Time" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>asSeconds()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" kindref="member">Int32</ref><sp/>asMilliseconds()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>asMicroseconds()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Static<sp/>member<sp/>data</highlight></codeline>
+<codeline lineno="85" refid="classsf_1_1Time_1a8db127b632fa8da21550e7282af11fa0" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="classsf_1_1Time_1a8db127b632fa8da21550e7282af11fa0" kindref="member">Zero</ref>;<sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>seconds(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>milliseconds(<ref refid="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" kindref="member">Int32</ref>);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>microseconds(<ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref>);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>(<ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>microseconds);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Member<sp/>data</highlight></codeline>
+<codeline lineno="109" refid="classsf_1_1Time_1a9f00785b8e837350682e056ada05dd51" refkind="member"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/><ref refid="classsf_1_1Time_1a9f00785b8e837350682e056ada05dd51" kindref="member">m_microseconds</ref>;<sp/></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>seconds(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>amount);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>milliseconds(<ref refid="namespacesf_1ac2dfd4952377a26dee4750e2e4a30a15" kindref="member">Int32</ref><sp/>amount);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>microseconds(<ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>amount);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="Vector2_8inl_1a9a7b2d36c3850828fdb651facfd25136" kindref="member">operator ==</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="Vector2_8inl_1a01673da35ef9c52d0e54b8263549a956" kindref="member">operator !=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator<sp/>&lt;(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator<sp/>&gt;(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator<sp/>&lt;=(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>operator<sp/>&gt;=(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector2_8inl_1af6be5729d510689ad3bda16e2ee1052e" kindref="member">operator -</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector2_8inl_1a629b6b51cf4ef3d9bef1b471096535c1" kindref="member">operator +</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/><ref refid="Vector2_8inl_1a52734531787801fca563b63877cf8855" kindref="member">operator +=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector2_8inl_1af6be5729d510689ad3bda16e2ee1052e" kindref="member">operator -</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/><ref refid="Vector2_8inl_1a6dc66f95d609a2280bc5d0e8dc1871ec" kindref="member">operator -=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector3_8cpp_1ad0633cb4e51ffd5188e6b69e72209ab0" kindref="member">operator *</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector3_8cpp_1ad0633cb4e51ffd5188e6b69e72209ab0" kindref="member">operator *</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>right);</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector3_8cpp_1ad0633cb4e51ffd5188e6b69e72209ab0" kindref="member">operator *</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector3_8cpp_1ad0633cb4e51ffd5188e6b69e72209ab0" kindref="member">operator *</ref>(<ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/><ref refid="Vector2_8inl_1af8c6cb01ae7604914f9ea350793712bb" kindref="member">operator *=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right);</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/><ref refid="Vector2_8inl_1af8c6cb01ae7604914f9ea350793712bb" kindref="member">operator *=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>right);</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector2_8inl_1a1a55a08f8d786e49995d2b162d0ef922" kindref="member">operator /</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/><ref refid="Vector2_8inl_1a1a55a08f8d786e49995d2b162d0ef922" kindref="member">operator /</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>right);</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight></codeline>
+<codeline lineno="388"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/><ref refid="Vector2_8inl_1ad2184b7a2f3e06a149072232f916cd16" kindref="member">operator /=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>right);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/><ref refid="Vector2_8inl_1ad2184b7a2f3e06a149072232f916cd16" kindref="member">operator /=</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/><ref refid="namespacesf_1a2840579fed3494d9f330baf7a5a19903" kindref="member">Int64</ref><sp/>right);</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="Vector2_8inl_1a1a55a08f8d786e49995d2b162d0ef922" kindref="member">operator /</ref>(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="413"><highlight class="normal"></highlight></codeline>
+<codeline lineno="424"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>operator<sp/>%(<ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="425"><highlight class="normal"></highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><ref refid="System_2Export_8hpp_1a6476c9e422606477a4c23d92b1d79a1f" kindref="member">SFML_SYSTEM_API</ref><sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>operator<sp/>%=(<ref refid="classsf_1_1Time" kindref="compound">Time</ref>&amp;<sp/>left,<sp/><ref refid="classsf_1_1Time" kindref="compound">Time</ref><sp/>right);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"></highlight></codeline>
+<codeline lineno="438"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>sf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="439"><highlight class="normal"></highlight></codeline>
+<codeline lineno="440"><highlight class="normal"></highlight></codeline>
+<codeline lineno="441"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>SFML_TIME_HPP</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="442"><highlight class="normal"></highlight></codeline>
+<codeline lineno="443"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Time.hpp"/>
+  </compounddef>
+</doxygen>

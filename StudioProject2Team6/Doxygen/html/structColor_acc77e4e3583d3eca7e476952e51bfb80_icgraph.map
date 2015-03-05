@@ -1,0 +1,12 @@
+<map id="Color::Set" name="Color::Set">
+<area shape="rect" id="node2" href="$structColor.html#aa2ccdb977158b64bf8ad9000f443b09c" title="Color::Color" alt="" coords="181,5,271,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#ac00c66843e83747f823f5c96a134285e" title="Declares all light parameters. " alt="" coords="367,56,591,83"/>
+<area shape="rect" id="node10" href="$classMeshBuilder.html#a78d37e2b0cc068eec801f17c367100e7" title="Generate the vertices of a reference Axes; Use red for x&#45;axis, green for y&#45;axis, blue for z&#45;axis Then..." alt="" coords="133,107,319,133"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a666ca4ae2003d15869bffba85260c1b3" title="Initialises the entire scene. " alt="" coords="639,81,741,108"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a728563a08b6ecb8e25d7452185785bae" title="Resets the entire game. " alt="" coords="789,81,939,108"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a5c9003c90f7f5daa489b19eac9096739" title="Updates the win / lose menu. " alt="" coords="987,56,1196,83"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a3b3e04ac35d50ad7224b780b65cf4f30" title="Updates the pause menu. " alt="" coords="994,107,1189,133"/>
+<area shape="rect" id="node7" href="$classSceneSP.html#ae17b9a537b3fb23e63f54477fa59a83c" title="Updates the switching between menus. " alt="" coords="1244,81,1403,108"/>
+<area shape="rect" id="node8" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="1451,81,1577,108"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a1e184e8b2707bd048b4bbd50748d8e48" title="Initialises all geometry types. " alt="" coords="401,107,556,133"/>
+</map>

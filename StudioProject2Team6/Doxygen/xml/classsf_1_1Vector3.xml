@@ -1,0 +1,261 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Vector3" kind="class" prot="public">
+    <compoundname>sf::Vector3</compoundname>
+    <includes refid="Vector3_8hpp" local="no">Vector3.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename</type>
+        <declname>T</declname>
+        <defname>T</defname>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classsf_1_1Vector3_1a3cb0c769390bc37c346bb1a69e510d16" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sf::Vector3&lt; T &gt;::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+<para>X coordinate of the vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="76" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Vector3_1a6590d50ccb862c5efc5512e974e9b794" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sf::Vector3&lt; T &gt;::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+<para>Y coordinate of the vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="77" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Vector3_1a2f36ab4b552c028e3a9734c1ad4df7d1" prot="public" static="no" mutable="no">
+        <type>T</type>
+        <definition>T sf::Vector3&lt; T &gt;::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+<para>Z coordinate of the vector. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="78" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" bodystart="78" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Vector3_1aee8be1985c6e45e381ad4071265636f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Vector3&lt; T &gt;::Vector3</definition>
+        <argsstring>()</argsstring>
+        <name>Vector3</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>Creates a <ref refid="structVector3" kindref="compound">Vector3(0, 0, 0)</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="47" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector3_1a99ed75b68f58adfa3e9fa0561b424bf6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Vector3&lt; T &gt;::Vector3</definition>
+        <argsstring>(T X, T Y, T Z)</argsstring>
+        <name>Vector3</name>
+        <param>
+          <type>T</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>Z</declname>
+        </param>
+        <briefdescription>
+<para>Construct the vector from its coordinates. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>X</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>X coordinate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Y coordinate </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Z coordinate </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="57" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector3_1adb2b2e150025e97ccfa96219bbed59d1" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector3&lt; T &gt;::Vector3</definition>
+        <argsstring>(const Vector3&lt; U &gt; &amp;vector)</argsstring>
+        <name>Vector3</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector3" kindref="compound">Vector3</ref>&lt; U &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Construct the vector from another type of vector. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor doesn&apos;t replace the copy constructor, it&apos;s called only when U != T. A call to this constructor will fail to compile if U is not convertible to T.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to convert </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="71" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector3_1a49536881e57dd6f1bec692bb85b39413" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector3&lt; T &gt;::Vector3</definition>
+        <argsstring>()</argsstring>
+        <name>Vector3</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="28" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector3_1a6d71676baa113af029006c01620fd4ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector3&lt; T &gt;::Vector3</definition>
+        <argsstring>(T X, T Y, T Z)</argsstring>
+        <name>Vector3</name>
+        <param>
+          <type>T</type>
+          <declname>X</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>Y</declname>
+        </param>
+        <param>
+          <type>T</type>
+          <declname>Z</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" line="39" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="39" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Vector3_1adb2b2e150025e97ccfa96219bbed59d1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename U</type>
+          </param>
+        </templateparamlist>
+        <type></type>
+        <definition>sf::Vector3&lt; T &gt;::Vector3</definition>
+        <argsstring>(const Vector3&lt; U &gt; &amp;vector)</argsstring>
+        <name>Vector3</name>
+        <param>
+          <type>const <ref refid="classsf_1_1Vector3" kindref="compound">Vector3</ref>&lt; U &gt; &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" line="51" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.inl" bodystart="51" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Utility template class for manipulating 3-dimensional vectors. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Vector3" kindref="compound">sf::Vector3</ref> is a simple class that defines a mathematical vector with three coordinates (x, y and z).</para><para>It can be used to represent anything that has three dimensions: a size, a point, a velocity, etc.</para><para>The template parameter T is the type of the coordinates. It can be any type that supports arithmetic operations (+, -, /, *) and comparisons (==, !=), for example int or float.</para><para>You generally don&apos;t have to care about the templated form (sf::Vector3&lt;T&gt;), the most common specializations have special typedefs: <itemizedlist>
+<listitem><para>sf::Vector3&lt;float&gt; is <ref refid="namespacesf_1af97357d7d32e7d6a700d03be2f3b4811" kindref="member">sf::Vector3f</ref> </para></listitem>
+<listitem><para>sf::Vector3&lt;int&gt; is <ref refid="namespacesf_1ad066a8774efaf7b623df8909ba219dc7" kindref="member">sf::Vector3i</ref></para></listitem>
+</itemizedlist>
+The <ref refid="classsf_1_1Vector3" kindref="compound">sf::Vector3</ref> class has a small and simple interface, its x and y members can be accessed directly (there are no accessors like setX(), getX()) and it contains no mathematical function like dot product, cross product, length, etc.</para><para>Usage example: <programlisting><codeline><highlight class="normal">sf::Vector3f<sp/>v1(16.5f,<sp/>24.f,<sp/>-8.2f);</highlight></codeline>
+<codeline><highlight class="normal">v1.x<sp/>=<sp/>18.2f;</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>y<sp/>=<sp/>v1.y;</highlight></codeline>
+<codeline><highlight class="normal">float<sp/>z<sp/>=<sp/>v1.z;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sf::Vector3f<sp/>v2<sp/>=<sp/>v1<sp/>*<sp/>5.f;</highlight></codeline>
+<codeline><highlight class="normal">sf::Vector3f<sp/>v3;</highlight></codeline>
+<codeline><highlight class="normal">v3<sp/>=<sp/>v1<sp/>+<sp/>v2;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>different<sp/>=<sp/>(v2<sp/>!=<sp/>v3);</highlight></codeline>
+</programlisting></para><para>Note: for 2-dimensional vectors, see <ref refid="classsf_1_1Vector2" kindref="compound">sf::Vector2</ref>. </para>    </detaileddescription>
+    <collaborationgraph>
+      <node id="1213">
+        <label>T</label>
+      </node>
+      <node id="1212">
+        <label>sf::Vector3&lt; T &gt;</label>
+        <link refid="classsf_1_1Vector3"/>
+        <childnode refid="1213" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Vector3.hpp" bodystart="37" bodyend="79"/>
+    <listofallmembers>
+      <member refid="classsf_1_1Vector3_1aee8be1985c6e45e381ad4071265636f9" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>Vector3</name></member>
+      <member refid="classsf_1_1Vector3_1a99ed75b68f58adfa3e9fa0561b424bf6" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>Vector3</name></member>
+      <member refid="classsf_1_1Vector3_1adb2b2e150025e97ccfa96219bbed59d1" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>Vector3</name></member>
+      <member refid="classsf_1_1Vector3_1a49536881e57dd6f1bec692bb85b39413" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>Vector3</name></member>
+      <member refid="classsf_1_1Vector3_1a6d71676baa113af029006c01620fd4ca" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>Vector3</name></member>
+      <member refid="classsf_1_1Vector3_1adb2b2e150025e97ccfa96219bbed59d1" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>Vector3</name></member>
+      <member refid="classsf_1_1Vector3_1a3cb0c769390bc37c346bb1a69e510d16" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>x</name></member>
+      <member refid="classsf_1_1Vector3_1a6590d50ccb862c5efc5512e974e9b794" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>y</name></member>
+      <member refid="classsf_1_1Vector3_1a2f36ab4b552c028e3a9734c1ad4df7d1" prot="public" virt="non-virtual"><scope>sf::Vector3</scope><name>z</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCMtnDewCan" kind="class" prot="public">
+    <compoundname>CMtnDewCan</compoundname>
+    <basecompoundref refid="classCItem" prot="public" virt="non-virtual">CItem</basecompoundref>
+    <includes refid="MtnDewCan_8h" local="no">MtnDewCan.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCMtnDewCan_1a5ee3eabfb4e15018c9e770d2d27a909c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CMtnDewCan::CMtnDewCan</definition>
+        <argsstring>(void)</argsstring>
+        <name>CMtnDewCan</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.h" line="13" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.cpp" bodystart="9" bodyend="14"/>
+        <references refid="DefineEnum_8h_1ae921670d82047483df0e480a42c4cf9ba90dc1c3f94de12a2686b469c50518b66" compoundref="DefineEnum_8h" startline="41">GEO_CAN_MTNDEW</references>
+        <references refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" compoundref="Item_8cpp" startline="78" endline="81">CItem::setGeoType</references>
+        <references refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" compoundref="Item_8cpp" startline="54" endline="57">CItem::setName</references>
+        <references refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" compoundref="Item_8cpp" startline="66" endline="69">CItem::setPrice</references>
+      </memberdef>
+      <memberdef kind="function" id="classCMtnDewCan_1ac0f98e013f7969587dda3e6afa893175" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CMtnDewCan::~CMtnDewCan</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CMtnDewCan</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.h" line="14" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.cpp" bodystart="22" bodyend="24"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines MtnDewCan class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class <ref refid="classScene" kindref="compound">Scene</ref>: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="806">
+        <label>CItem</label>
+        <link refid="classCItem"/>
+      </node>
+      <node id="805">
+        <label>CMtnDewCan</label>
+        <link refid="classCMtnDewCan"/>
+        <childnode refid="806" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="808">
+        <label>CItem</label>
+        <link refid="classCItem"/>
+        <childnode refid="809" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+          <edgelabel>price</edgelabel>
+        </childnode>
+        <childnode refid="810" relation="usage">
+          <edgelabel>objectType</edgelabel>
+        </childnode>
+        <childnode refid="811" relation="usage">
+          <edgelabel>active</edgelabel>
+        </childnode>
+        <childnode refid="812" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="812">
+        <label>string</label>
+      </node>
+      <node id="809">
+        <label>float</label>
+      </node>
+      <node id="810">
+        <label>int</label>
+      </node>
+      <node id="807">
+        <label>CMtnDewCan</label>
+        <link refid="classCMtnDewCan"/>
+        <childnode refid="808" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="811">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.h" line="11" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/MtnDewCan.h" bodystart="10" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>CItem</name></member>
+      <member refid="classCItem_1a1df3074023a1ee0668eec574a637c121" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>CItem</name></member>
+      <member refid="classCMtnDewCan_1a5ee3eabfb4e15018c9e770d2d27a909c" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>CMtnDewCan</name></member>
+      <member refid="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getActiveState</name></member>
+      <member refid="classCItem_1a916597368755e28b6edb8af37acc1ad6" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getGeoType</name></member>
+      <member refid="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getName</name></member>
+      <member refid="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getPrice</name></member>
+      <member refid="classCItem_1aa34235d3cd780cef7fc7461387f6b081" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getXpos</name></member>
+      <member refid="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getYpos</name></member>
+      <member refid="classCItem_1ab9a6defffbef320655a11faab524e915" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>getZpos</name></member>
+      <member refid="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setActiveState</name></member>
+      <member refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setGeoType</name></member>
+      <member refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setName</name></member>
+      <member refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setPrice</name></member>
+      <member refid="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setXpos</name></member>
+      <member refid="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setYpos</name></member>
+      <member refid="classCItem_1a87034717276be8d5c3d39edbdcf7417e" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>setZpos</name></member>
+      <member refid="classCItem_1a00aeafeeaf647c7059b9d325ac5a1108" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>~CItem</name></member>
+      <member refid="classCMtnDewCan_1ac0f98e013f7969587dda3e6afa893175" prot="public" virt="non-virtual"><scope>CMtnDewCan</scope><name>~CMtnDewCan</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

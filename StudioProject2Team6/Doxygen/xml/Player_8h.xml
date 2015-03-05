@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="Player_8h" kind="file">
+    <compoundname>Player.h</compoundname>
+    <includes refid="Character_8h" local="yes">Character.h</includes>
+    <includedby refid="SceneSP_8h" local="yes">MyGraphics/Source/SceneSP.h</includedby>
+    <includedby refid="Player_8cpp" local="yes">MyGraphics/Source/Player.cpp</includedby>
+    <incdepgraph>
+      <node id="3120">
+        <label>Item.h</label>
+        <link refid="Item_8h"/>
+        <childnode refid="3121" relation="include">
+        </childnode>
+      </node>
+      <node id="3121">
+        <label>string</label>
+      </node>
+      <node id="3118">
+        <label>MyGraphics/Source/Player.h</label>
+        <link refid="Player.h"/>
+        <childnode refid="3119" relation="include">
+        </childnode>
+      </node>
+      <node id="3123">
+        <label>vector</label>
+      </node>
+      <node id="3119">
+        <label>Character.h</label>
+        <link refid="Character_8h"/>
+        <childnode refid="3120" relation="include">
+        </childnode>
+        <childnode refid="3122" relation="include">
+        </childnode>
+        <childnode refid="3123" relation="include">
+        </childnode>
+      </node>
+      <node id="3122">
+        <label>DefineEnum.h</label>
+        <link refid="DefineEnum_8h"/>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3128">
+        <label>MyGraphics/Source/SceneSP.cpp</label>
+        <link refid="SceneSP_8cpp"/>
+      </node>
+      <node id="3126">
+        <label>MyGraphics/Source/Application.cpp</label>
+        <link refid="Application_8cpp"/>
+      </node>
+      <node id="3124">
+        <label>MyGraphics/Source/Player.h</label>
+        <link refid="Player.h"/>
+        <childnode refid="3125" relation="include">
+        </childnode>
+        <childnode refid="3129" relation="include">
+        </childnode>
+      </node>
+      <node id="3129">
+        <label>MyGraphics/Source/Player.cpp</label>
+        <link refid="Player_8cpp"/>
+      </node>
+      <node id="3125">
+        <label>MyGraphics/Source/SceneSP.h</label>
+        <link refid="SceneSP_8h"/>
+        <childnode refid="3126" relation="include">
+        </childnode>
+        <childnode refid="3127" relation="include">
+        </childnode>
+        <childnode refid="3128" relation="include">
+        </childnode>
+      </node>
+      <node id="3127">
+        <label>MyGraphics/Source/Camera3.cpp</label>
+        <link refid="Camera3_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCPlayer" prot="public">CPlayer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Character_8h" kindref="compound">Character.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">/******************************************************************************/</highlight></codeline>
+<codeline lineno="8"><highlight class="comment">/******************************************************************************/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9" refid="classCPlayer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCPlayer" kindref="compound">CPlayer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCCharacter" kindref="compound">CCharacter</ref></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="13" refid="classCPlayer_1a6dad3cc6b61043444d75237499307b00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a6dad3cc6b61043444d75237499307b00" kindref="member">itemsHeld</ref>;</highlight></codeline>
+<codeline lineno="14" refid="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" kindref="member">maxItemCapacity</ref>;</highlight></codeline>
+<codeline lineno="15" refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" kindref="member">money</ref>;</highlight></codeline>
+<codeline lineno="16" refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;CItem*&gt;<sp/><ref refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" kindref="member">myInventoryList</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" kindref="member">CPlayer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" kindref="member">CPlayer</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1ac5c0e462bb3e9804f5fff4a33be5a33d" kindref="member">setMoney</ref>,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setItemsHeld,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>setMaxItemCapacity);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCPlayer_1a08f66f2357be4330a63d2f87a3584fba" kindref="member">~CPlayer</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a1cc34d624d5208e89aed5fd1ad9dcdd1" kindref="member">getMoney</ref>();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a41b39fd627819feb2bafd614c3246b66" kindref="member">getMaxItemCapacity</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a0a51abd578e68eaa554eabee62a9079d" kindref="member">getItemHeld</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;CItem*&gt;<sp/><ref refid="classCPlayer_1ac02fc75d1ba514addba85bfe2bd6154d" kindref="member">getVector</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a31b9cac478a011ca5fbbf899499216f5" kindref="member">setInventory</ref>(<ref refid="classCItem" kindref="compound">CItem</ref>*<sp/>pickedUp);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a31b9cac478a011ca5fbbf899499216f5" kindref="member">setInventory</ref>(<ref refid="classCItem" kindref="compound">CItem</ref>*<sp/>pickedUp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1a31b9cac478a011ca5fbbf899499216f5" kindref="member">setInventory</ref>(<ref refid="classCItem" kindref="compound">CItem</ref><sp/>pickedUp,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>slot);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCPlayer_1ac5c0e462bb3e9804f5fff4a33be5a33d" kindref="member">setMoney</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>newMoney);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classCItem" kindref="compound">CItem</ref>*<sp/><ref refid="classCPlayer_1aa5acefb8c6837741ac85426e93ff0b69" kindref="member">getItem</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h"/>
+  </compounddef>
+</doxygen>

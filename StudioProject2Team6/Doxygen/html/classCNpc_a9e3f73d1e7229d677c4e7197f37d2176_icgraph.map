@@ -1,0 +1,5 @@
+<map id="CNpc::getArmType" name="CNpc::getArmType">
+<area shape="rect" id="node2" href="$classSceneSP.html#a8ccd068274fba1e71a9593515d751d4e" title="Function to render the targa inventory of the player. " alt="" coords="185,5,368,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a26ff2c324fa7d370d6682b631cc01ea5" title="Renders all Npcs. " alt="" coords="416,5,605,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="653,5,780,32"/>
+</map>

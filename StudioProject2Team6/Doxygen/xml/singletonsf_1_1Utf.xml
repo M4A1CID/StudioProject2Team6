@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="singletonsf_1_1Utf" kind="class" prot="public">
+    <compoundname>sf::Utf</compoundname>
+    <includes refid="Utf_8hpp" local="no">Utf.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>unsigned int</type>
+        <declname>N</declname>
+        <defname>N</defname>
+      </param>
+    </templateparamlist>
+    <briefdescription>
+<para>Utility class providing generic functions for UTF conversions. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="singletonsf_1_1Utf" kindref="compound">sf::Utf</ref> is a low-level, generic interface for counting, iterating, encoding and decoding Unicode characters and strings. It is able to handle ANSI, wide, latin-1, UTF-8, UTF-16 and UTF-32 encodings.</para><para>sf::Utf&lt;X&gt; functions are all static, these classes are not meant to be instantiated. All the functions are template, so that you can use any character / string type for a given encoding.</para><para>It has 3 specializations: <itemizedlist>
+<listitem><para><ref refid="classsf_1_1Utf_3_018_01_4" kindref="compound">sf::Utf&lt;8&gt;</ref> (typedef&apos;d to <ref refid="namespacesf_1ab78b7f576a82034d14eab92becc15301" kindref="member">sf::Utf8</ref>) </para></listitem>
+<listitem><para><ref refid="classsf_1_1Utf_3_0116_01_4" kindref="compound">sf::Utf&lt;16&gt;</ref> (typedef&apos;d to <ref refid="namespacesf_1ae30b6ea05a1723d608853ebc3043e53d" kindref="member">sf::Utf16</ref>) </para></listitem>
+<listitem><para><ref refid="classsf_1_1Utf_3_0132_01_4" kindref="compound">sf::Utf&lt;32&gt;</ref> (typedef&apos;d to <ref refid="namespacesf_1a51a40f697607908d2e9f58e67f4c89a3" kindref="member">sf::Utf32</ref>) </para></listitem>
+</itemizedlist>
+</para>    </detaileddescription>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Utf.hpp" bodystart="41" bodyend="-1"/>
+    <listofallmembers>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

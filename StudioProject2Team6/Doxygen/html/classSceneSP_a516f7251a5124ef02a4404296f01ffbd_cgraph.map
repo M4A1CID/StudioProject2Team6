@@ -1,0 +1,4 @@
+<map id="SceneSP::addToInventory" name="SceneSP::addToInventory">
+<area shape="rect" id="node2" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="239,5,355,32"/>
+<area shape="rect" id="node3" href="$classCPlayer.html#a31b9cac478a011ca5fbbf899499216f5" title="Mutator function to add an item picked up by the player. " alt="" coords="224,56,369,83"/>
+</map>

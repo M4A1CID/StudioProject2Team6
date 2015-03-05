@@ -1,0 +1,1045 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCNpc" kind="class" prot="public">
+    <compoundname>CNpc</compoundname>
+    <basecompoundref refid="classCCharacter" prot="public" virt="non-virtual">CCharacter</basecompoundref>
+    <includes refid="Npc_8h" local="no">Npc.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCNpc_1a7e00ec77f1e9cbb698271120d2151f74" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CNpc::GeoHeadType</definition>
+        <argsstring></argsstring>
+        <name>GeoHeadType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="45" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="45" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1ad7775806d37e7714c4d646cf8da26349" compoundref="Npc_8cpp" startline="84" endline="87">getHeadType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a1a932b38474001df6dedf1d67c9f5620" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CNpc::GeoArmType</definition>
+        <argsstring></argsstring>
+        <name>GeoArmType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="46" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="46" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a9e3f73d1e7229d677c4e7197f37d2176" compoundref="Npc_8cpp" startline="72" endline="75">getArmType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1aab1e355955d429d2d41f7863d903fc50" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CNpc::GeoLegType</definition>
+        <argsstring></argsstring>
+        <name>GeoLegType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="47" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="47" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a1c56fa76c16a847b7112bf692c8a55bc" compoundref="Npc_8cpp" startline="96" endline="99">getLegType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::Yrotation</definition>
+        <argsstring></argsstring>
+        <name>Yrotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="48" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="48" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a6adeaaaf42ae550d6b62cfafada4eaa9" compoundref="Npc_8cpp" startline="156" endline="159">getYRotation</referencedby>
+        <referencedby refid="classCNpc_1a4869f0594ccba9a518887c8d91966c2d" compoundref="Npc_8cpp" startline="289" endline="292">setYRotation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::Xrotation</definition>
+        <argsstring></argsstring>
+        <name>Xrotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="49" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="49" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a4c5cb360b381c84d42078ef21143496b" compoundref="Npc_8cpp" startline="168" endline="171">getXRotation</referencedby>
+        <referencedby refid="classCNpc_1a6f648098dece44ff4d3ab1fe1e820833" compoundref="Npc_8cpp" startline="301" endline="304">setXRotation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::Zrotation</definition>
+        <argsstring></argsstring>
+        <name>Zrotation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="50" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="50" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1af393509d253642255561812ee7343794" compoundref="Npc_8cpp" startline="180" endline="183">getZRotation</referencedby>
+        <referencedby refid="classCNpc_1ab1fbf4a3e9dd0e45032bfd00ad61a31b" compoundref="Npc_8cpp" startline="313" endline="316">setZRotation</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::rotateLeftArm</definition>
+        <argsstring></argsstring>
+        <name>rotateLeftArm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="51" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="51" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1afc60d26d6113fc1653e609fc8d85815c" compoundref="Npc_8cpp" startline="108" endline="111">getLeftArm</referencedby>
+        <referencedby refid="classCNpc_1a3cfcc5ad7940b72505444a1f495ec423" compoundref="Npc_8cpp" startline="241" endline="244">setLeftArm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::rotateRightArm</definition>
+        <argsstring></argsstring>
+        <name>rotateRightArm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="52" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="52" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a909a85440909b795ae6a8adb279cbedc" compoundref="Npc_8cpp" startline="120" endline="123">getRightArm</referencedby>
+        <referencedby refid="classCNpc_1a0af5c6962cabcdeff758b2f697ab27fa" compoundref="Npc_8cpp" startline="253" endline="256">setRightArm</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::rotateLeftLeg</definition>
+        <argsstring></argsstring>
+        <name>rotateLeftLeg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="53" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="53" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a9a5d8dedffcc89164ce18128ed87078c" compoundref="Npc_8cpp" startline="132" endline="135">getLeftLeg</referencedby>
+        <referencedby refid="classCNpc_1a19e8e6a99af7ffb400fdf06ed2091e02" compoundref="Npc_8cpp" startline="265" endline="268">setLeftLeg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::rotateRightLeg</definition>
+        <argsstring></argsstring>
+        <name>rotateRightLeg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="54" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="54" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1aa018bddc9614bd53413cd36efaf71949" compoundref="Npc_8cpp" startline="144" endline="147">getRightLeg</referencedby>
+        <referencedby refid="classCNpc_1a8f21953fc67f681c221d341a6450e4f9" compoundref="Npc_8cpp" startline="277" endline="280">setRightLeg</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::moveSpd</definition>
+        <argsstring></argsstring>
+        <name>moveSpd</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="55" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="55" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a6c37b50c09f920bf2de0062a883b7c90" compoundref="Npc_8cpp" startline="192" endline="195">getmoveSpd</referencedby>
+        <referencedby refid="classCNpc_1a48af32b4aa535ccbbfdded13217f453e" compoundref="Npc_8cpp" startline="325" endline="328">setmoveSpd</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CNpc::NPCTimer</definition>
+        <argsstring></argsstring>
+        <name>NPCTimer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="56" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="56" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a7f73833a9a9af1510e2a86bde091636d" compoundref="Npc_8cpp" startline="204" endline="207">getNPCTimer</referencedby>
+        <referencedby refid="classCNpc_1acf84cecc87c17d26523740cfc2b7a590" compoundref="Npc_8cpp" startline="337" endline="340">setNPCTimer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CNpc::IsActive</definition>
+        <argsstring></argsstring>
+        <name>IsActive</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="57" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="57" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a5045f380578cbd54ebb95046e1d7c94e" compoundref="Npc_8cpp" startline="216" endline="219">getActive</referencedby>
+        <referencedby refid="classCNpc_1a3479de38e3d0fd08abfb2ebe8129bcc9" compoundref="Npc_8cpp" startline="349" endline="352">setActive</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CNpc::legRotDir</definition>
+        <argsstring></argsstring>
+        <name>legRotDir</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="58" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="58" bodyend="-1"/>
+        <referencedby refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" compoundref="Npc_8cpp" startline="30" endline="53">CNpc</referencedby>
+        <referencedby refid="classCNpc_1a1f9fd2e87e4a06a4dd82edbe86ce7e40" compoundref="Npc_8cpp" startline="228" endline="231">getlegRotDir</referencedby>
+        <referencedby refid="classCNpc_1a97d1fd654a6bffd7614ea55dc9b0971f" compoundref="Npc_8cpp" startline="361" endline="364">setlegRotDir</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCNpc_1a209ecebe9d32b8baba8ff3995fd5ce41" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CNpc::CNpc</definition>
+        <argsstring>(void)</argsstring>
+        <name>CNpc</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default NPC constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="12" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="9" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CNpc::CNpc</definition>
+        <argsstring>(float posX, float posY, float posZ, int head, int arm, int leg, int state, int type, int job, bool active)</argsstring>
+        <name>CNpc</name>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>arm</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>leg</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>job</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded NPC constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- X position of npc </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Y position of npc </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Z position of npc </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>head</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc head type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>arm</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc arm type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>leg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc leg type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc character state </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc animation type </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>job</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc job </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>active</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- npc active state </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="13" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="30" bodyend="53"/>
+        <references refid="classCNpc_1a1a932b38474001df6dedf1d67c9f5620" compoundref="Npc_8h" startline="46">GeoArmType</references>
+        <references refid="classCNpc_1a7e00ec77f1e9cbb698271120d2151f74" compoundref="Npc_8h" startline="45">GeoHeadType</references>
+        <references refid="classCNpc_1aab1e355955d429d2d41f7863d903fc50" compoundref="Npc_8h" startline="47">GeoLegType</references>
+        <references refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" compoundref="Npc_8h" startline="57">IsActive</references>
+        <references refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" compoundref="Npc_8h" startline="58">legRotDir</references>
+        <references refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" compoundref="Npc_8h" startline="55">moveSpd</references>
+        <references refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" compoundref="Npc_8h" startline="56">NPCTimer</references>
+        <references refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" compoundref="Npc_8h" startline="51">rotateLeftArm</references>
+        <references refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" compoundref="Npc_8h" startline="53">rotateLeftLeg</references>
+        <references refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" compoundref="Npc_8h" startline="52">rotateRightArm</references>
+        <references refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" compoundref="Npc_8h" startline="54">rotateRightLeg</references>
+        <references refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" compoundref="Character_8cpp" startline="181" endline="184">CCharacter::setAnimationType</references>
+        <references refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" compoundref="Character_8cpp" startline="169" endline="172">CCharacter::setCharacterJob</references>
+        <references refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" compoundref="Character_8cpp" startline="157" endline="160">CCharacter::setCharacterState</references>
+        <references refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" compoundref="Character_8cpp" startline="121" endline="124">CCharacter::setXpos</references>
+        <references refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" compoundref="Character_8cpp" startline="133" endline="136">CCharacter::setYpos</references>
+        <references refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" compoundref="Character_8cpp" startline="145" endline="148">CCharacter::setZpos</references>
+        <references refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" compoundref="Npc_8h" startline="49">Xrotation</references>
+        <references refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" compoundref="Npc_8h" startline="48">Yrotation</references>
+        <references refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" compoundref="Npc_8h" startline="50">Zrotation</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a4085ccdb7452b3ca1c54848a1cbc2ffc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CNpc::~CNpc</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CNpc</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="14" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1ad7775806d37e7714c4d646cf8da26349" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CNpc::getHeadType</definition>
+        <argsstring>()</argsstring>
+        <name>getHeadType</name>
+        <briefdescription>
+<para>Accessor function for head type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc head type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="84" bodyend="87"/>
+        <references refid="classCNpc_1a7e00ec77f1e9cbb698271120d2151f74" compoundref="Npc_8h" startline="45">GeoHeadType</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a1c56fa76c16a847b7112bf692c8a55bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CNpc::getLegType</definition>
+        <argsstring>()</argsstring>
+        <name>getLegType</name>
+        <briefdescription>
+<para>Accessor function for leg type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc leg type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="17" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="96" bodyend="99"/>
+        <references refid="classCNpc_1aab1e355955d429d2d41f7863d903fc50" compoundref="Npc_8h" startline="47">GeoLegType</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a9e3f73d1e7229d677c4e7197f37d2176" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CNpc::getArmType</definition>
+        <argsstring>()</argsstring>
+        <name>getArmType</name>
+        <briefdescription>
+<para>Accessor function for arm type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc arm type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="72" bodyend="75"/>
+        <references refid="classCNpc_1a1a932b38474001df6dedf1d67c9f5620" compoundref="Npc_8h" startline="46">GeoArmType</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a6adeaaaf42ae550d6b62cfafada4eaa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getYRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getYRotation</name>
+        <briefdescription>
+<para>Accessor function for npc y rotation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc y rotation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="156" bodyend="159"/>
+        <references refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" compoundref="Npc_8h" startline="48">Yrotation</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a4c5cb360b381c84d42078ef21143496b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getXRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getXRotation</name>
+        <briefdescription>
+<para>Accessor function for npc x rotation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc x rotation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="168" bodyend="171"/>
+        <references refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" compoundref="Npc_8h" startline="49">Xrotation</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1af393509d253642255561812ee7343794" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getZRotation</definition>
+        <argsstring>()</argsstring>
+        <name>getZRotation</name>
+        <briefdescription>
+<para>Accessor function for npc z rotation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc z rotation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="22" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="180" bodyend="183"/>
+        <references refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" compoundref="Npc_8h" startline="50">Zrotation</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1afc60d26d6113fc1653e609fc8d85815c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getLeftArm</definition>
+        <argsstring>()</argsstring>
+        <name>getLeftArm</name>
+        <briefdescription>
+<para>Accessor function for left arm roation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc left arm roation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="23" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="108" bodyend="111"/>
+        <references refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" compoundref="Npc_8h" startline="51">rotateLeftArm</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a909a85440909b795ae6a8adb279cbedc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getRightArm</definition>
+        <argsstring>()</argsstring>
+        <name>getRightArm</name>
+        <briefdescription>
+<para>Accessor function for right arm roation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc right arm roation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="24" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="120" bodyend="123"/>
+        <references refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" compoundref="Npc_8h" startline="52">rotateRightArm</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a9a5d8dedffcc89164ce18128ed87078c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getLeftLeg</definition>
+        <argsstring>()</argsstring>
+        <name>getLeftLeg</name>
+        <briefdescription>
+<para>Accessor function for left leg roation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc left leg roation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="25" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="132" bodyend="135"/>
+        <references refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" compoundref="Npc_8h" startline="53">rotateLeftLeg</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1aa018bddc9614bd53413cd36efaf71949" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getRightLeg</definition>
+        <argsstring>()</argsstring>
+        <name>getRightLeg</name>
+        <briefdescription>
+<para>Accessor function for right leg roation. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc right leg roation </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="144" bodyend="147"/>
+        <references refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" compoundref="Npc_8h" startline="54">rotateRightLeg</references>
+        <referencedby refid="classSceneSP_1a8ccd068274fba1e71a9593515d751d4e" compoundref="SceneSP_8cpp" startline="3705" endline="3746">SceneSP::RenderCharacter</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a6c37b50c09f920bf2de0062a883b7c90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getmoveSpd</definition>
+        <argsstring>()</argsstring>
+        <name>getmoveSpd</name>
+        <briefdescription>
+<para>Accessor function for npc move speed. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc move speed </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="192" bodyend="195"/>
+        <references refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" compoundref="Npc_8h" startline="55">moveSpd</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a7f73833a9a9af1510e2a86bde091636d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CNpc::getNPCTimer</definition>
+        <argsstring>()</argsstring>
+        <name>getNPCTimer</name>
+        <briefdescription>
+<para>Accessor function for npc interaction timer. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc interaction timer </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="204" bodyend="207"/>
+        <references refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" compoundref="Npc_8h" startline="56">NPCTimer</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a5045f380578cbd54ebb95046e1d7c94e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CNpc::getActive</definition>
+        <argsstring>()</argsstring>
+        <name>getActive</name>
+        <briefdescription>
+<para>Accessor function for npc active state. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc active state </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="29" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="216" bodyend="219"/>
+        <references refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" compoundref="Npc_8h" startline="57">IsActive</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a1f9fd2e87e4a06a4dd82edbe86ce7e40" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CNpc::getlegRotDir</definition>
+        <argsstring>()</argsstring>
+        <name>getlegRotDir</name>
+        <briefdescription>
+<para>Accessor function for npc leg rotation direction. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>npc leg rotation direction </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="30" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="228" bodyend="231"/>
+        <references refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" compoundref="Npc_8h" startline="58">legRotDir</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a4869f0594ccba9a518887c8d91966c2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setYRotation</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setYRotation</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set y rotation of npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Y rotation of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="32" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="289" bodyend="292"/>
+        <references refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" compoundref="Npc_8h" startline="48">Yrotation</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a6f648098dece44ff4d3ab1fe1e820833" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setXRotation</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setXRotation</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set x rotation of npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- X rotation of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="33" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="301" bodyend="304"/>
+        <references refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" compoundref="Npc_8h" startline="49">Xrotation</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1ab1fbf4a3e9dd0e45032bfd00ad61a31b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setZRotation</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setZRotation</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set z rotation of npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- Z rotation of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="34" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="313" bodyend="316"/>
+        <references refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" compoundref="Npc_8h" startline="50">Zrotation</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a3cfcc5ad7940b72505444a1f495ec423" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setLeftArm</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setLeftArm</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set rotation of left npc arm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rotation of left npc arm </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="35" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="241" bodyend="244"/>
+        <references refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" compoundref="Npc_8h" startline="51">rotateLeftArm</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a0af5c6962cabcdeff758b2f697ab27fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setRightArm</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setRightArm</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set rotation of right npc arm. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rotation of right npc arm </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="36" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="253" bodyend="256"/>
+        <references refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" compoundref="Npc_8h" startline="52">rotateRightArm</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a19e8e6a99af7ffb400fdf06ed2091e02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setLeftLeg</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setLeftLeg</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set rotation of left npc leg. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rotation of left npc leg </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="37" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="265" bodyend="268"/>
+        <references refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" compoundref="Npc_8h" startline="53">rotateLeftLeg</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a8f21953fc67f681c221d341a6450e4f9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setRightLeg</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setRightLeg</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set rotation of right npc leg. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- rotation of right npc leg </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="277" bodyend="280"/>
+        <references refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" compoundref="Npc_8h" startline="54">rotateRightLeg</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a48af32b4aa535ccbbfdded13217f453e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setmoveSpd</definition>
+        <argsstring>(float r)</argsstring>
+        <name>setmoveSpd</name>
+        <param>
+          <type>float</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the movement speed of npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>r</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- move speed of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="39" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="325" bodyend="328"/>
+        <references refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" compoundref="Npc_8h" startline="55">moveSpd</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a3479de38e3d0fd08abfb2ebe8129bcc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setActive</definition>
+        <argsstring>(bool active)</argsstring>
+        <name>setActive</name>
+        <param>
+          <type>bool</type>
+          <declname>active</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the active state of the npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>active</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- active state of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="40" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="349" bodyend="352"/>
+        <references refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" compoundref="Npc_8h" startline="57">IsActive</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1a97d1fd654a6bffd7614ea55dc9b0971f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setlegRotDir</definition>
+        <argsstring>(bool dir)</argsstring>
+        <name>setlegRotDir</name>
+        <param>
+          <type>bool</type>
+          <declname>dir</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the leg roation direction of the npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- leg roation direction of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="361" bodyend="364"/>
+        <references refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" compoundref="Npc_8h" startline="58">legRotDir</references>
+      </memberdef>
+      <memberdef kind="function" id="classCNpc_1acf84cecc87c17d26523740cfc2b7a590" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CNpc::setNPCTimer</definition>
+        <argsstring>(float timer)</argsstring>
+        <name>setNPCTimer</name>
+        <param>
+          <type>float</type>
+          <declname>timer</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the interaction of the npc. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- interaction of npc </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="42" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.cpp" bodystart="337" bodyend="340"/>
+        <references refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" compoundref="Npc_8h" startline="56">NPCTimer</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines the NPC class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class Npc: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="813">
+        <label>CNpc</label>
+        <link refid="classCNpc"/>
+        <childnode refid="814" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="814">
+        <label>CCharacter</label>
+        <link refid="classCCharacter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="817">
+        <label>float</label>
+      </node>
+      <node id="819">
+        <label>int</label>
+      </node>
+      <node id="815">
+        <label>CNpc</label>
+        <link refid="classCNpc"/>
+        <childnode refid="816" relation="public-inheritance">
+        </childnode>
+        <childnode refid="817" relation="usage">
+          <edgelabel>NPCTimer</edgelabel>
+          <edgelabel>rotateRightLeg</edgelabel>
+          <edgelabel>Zrotation</edgelabel>
+          <edgelabel>Xrotation</edgelabel>
+          <edgelabel>Yrotation</edgelabel>
+          <edgelabel>moveSpd</edgelabel>
+          <edgelabel>rotateLeftArm</edgelabel>
+          <edgelabel>rotateLeftLeg</edgelabel>
+          <edgelabel>rotateRightArm</edgelabel>
+        </childnode>
+        <childnode refid="819" relation="usage">
+          <edgelabel>GeoHeadType</edgelabel>
+          <edgelabel>GeoLegType</edgelabel>
+          <edgelabel>GeoArmType</edgelabel>
+        </childnode>
+        <childnode refid="820" relation="usage">
+          <edgelabel>legRotDir</edgelabel>
+          <edgelabel>IsActive</edgelabel>
+        </childnode>
+      </node>
+      <node id="816">
+        <label>CCharacter</label>
+        <link refid="classCCharacter"/>
+        <childnode refid="817" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+        <childnode refid="818" relation="usage">
+          <edgelabel>animationType</edgelabel>
+          <edgelabel>characterJob</edgelabel>
+          <edgelabel>characterState</edgelabel>
+        </childnode>
+      </node>
+      <node id="818">
+        <label>unsigned</label>
+      </node>
+      <node id="820">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" line="10" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Npc.h" bodystart="9" bodyend="59"/>
+    <listofallmembers>
+      <member refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" prot="public" virt="non-virtual"><scope>CNpc</scope><name>CCharacter</name></member>
+      <member refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" prot="public" virt="non-virtual"><scope>CNpc</scope><name>CCharacter</name></member>
+      <member refid="classCNpc_1a209ecebe9d32b8baba8ff3995fd5ce41" prot="public" virt="non-virtual"><scope>CNpc</scope><name>CNpc</name></member>
+      <member refid="classCNpc_1ae80606078f1a289ac5d097bfadcffbac" prot="public" virt="non-virtual"><scope>CNpc</scope><name>CNpc</name></member>
+      <member refid="classCNpc_1a1a932b38474001df6dedf1d67c9f5620" prot="private" virt="non-virtual"><scope>CNpc</scope><name>GeoArmType</name></member>
+      <member refid="classCNpc_1a7e00ec77f1e9cbb698271120d2151f74" prot="private" virt="non-virtual"><scope>CNpc</scope><name>GeoHeadType</name></member>
+      <member refid="classCNpc_1aab1e355955d429d2d41f7863d903fc50" prot="private" virt="non-virtual"><scope>CNpc</scope><name>GeoLegType</name></member>
+      <member refid="classCNpc_1a5045f380578cbd54ebb95046e1d7c94e" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getActive</name></member>
+      <member refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getAnimationType</name></member>
+      <member refid="classCNpc_1a9e3f73d1e7229d677c4e7197f37d2176" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getArmType</name></member>
+      <member refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getCharacterJob</name></member>
+      <member refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getCharacterState</name></member>
+      <member refid="classCNpc_1ad7775806d37e7714c4d646cf8da26349" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getHeadType</name></member>
+      <member refid="classCNpc_1afc60d26d6113fc1653e609fc8d85815c" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getLeftArm</name></member>
+      <member refid="classCNpc_1a9a5d8dedffcc89164ce18128ed87078c" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getLeftLeg</name></member>
+      <member refid="classCNpc_1a1f9fd2e87e4a06a4dd82edbe86ce7e40" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getlegRotDir</name></member>
+      <member refid="classCNpc_1a1c56fa76c16a847b7112bf692c8a55bc" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getLegType</name></member>
+      <member refid="classCNpc_1a6c37b50c09f920bf2de0062a883b7c90" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getmoveSpd</name></member>
+      <member refid="classCNpc_1a7f73833a9a9af1510e2a86bde091636d" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getNPCTimer</name></member>
+      <member refid="classCNpc_1a909a85440909b795ae6a8adb279cbedc" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getRightArm</name></member>
+      <member refid="classCNpc_1aa018bddc9614bd53413cd36efaf71949" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getRightLeg</name></member>
+      <member refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getXpos</name></member>
+      <member refid="classCNpc_1a4c5cb360b381c84d42078ef21143496b" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getXRotation</name></member>
+      <member refid="classCCharacter_1adf34bbd751c72295580148348f086a32" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getYpos</name></member>
+      <member refid="classCNpc_1a6adeaaaf42ae550d6b62cfafada4eaa9" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getYRotation</name></member>
+      <member refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getZpos</name></member>
+      <member refid="classCNpc_1af393509d253642255561812ee7343794" prot="public" virt="non-virtual"><scope>CNpc</scope><name>getZRotation</name></member>
+      <member refid="classCNpc_1aa8e1ff79e6252ff2bce8c4500fd97002" prot="private" virt="non-virtual"><scope>CNpc</scope><name>IsActive</name></member>
+      <member refid="classCNpc_1ae33949bb25e4f2447cb9a31712a2b207" prot="private" virt="non-virtual"><scope>CNpc</scope><name>legRotDir</name></member>
+      <member refid="classCNpc_1a32569557c9f48b3c4c45a96b13450aa3" prot="private" virt="non-virtual"><scope>CNpc</scope><name>moveSpd</name></member>
+      <member refid="classCNpc_1a4f6260e2d9a18f9e22a1cfa2df7dd5b1" prot="private" virt="non-virtual"><scope>CNpc</scope><name>NPCTimer</name></member>
+      <member refid="classCNpc_1ada6dc446dc5125ccbee8fd339a44e620" prot="private" virt="non-virtual"><scope>CNpc</scope><name>rotateLeftArm</name></member>
+      <member refid="classCNpc_1a6f9c6b6f7b3c1176634e8d890a1d2bfe" prot="private" virt="non-virtual"><scope>CNpc</scope><name>rotateLeftLeg</name></member>
+      <member refid="classCNpc_1a8c00cd3c4b8a48914164404c4302bc21" prot="private" virt="non-virtual"><scope>CNpc</scope><name>rotateRightArm</name></member>
+      <member refid="classCNpc_1a8f00f1e0dbb92a653f77c8db42c8c60e" prot="private" virt="non-virtual"><scope>CNpc</scope><name>rotateRightLeg</name></member>
+      <member refid="classCNpc_1a3479de38e3d0fd08abfb2ebe8129bcc9" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setActive</name></member>
+      <member refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setAnimationType</name></member>
+      <member refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setCharacterJob</name></member>
+      <member refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setCharacterState</name></member>
+      <member refid="classCNpc_1a3cfcc5ad7940b72505444a1f495ec423" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setLeftArm</name></member>
+      <member refid="classCNpc_1a19e8e6a99af7ffb400fdf06ed2091e02" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setLeftLeg</name></member>
+      <member refid="classCNpc_1a97d1fd654a6bffd7614ea55dc9b0971f" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setlegRotDir</name></member>
+      <member refid="classCNpc_1a48af32b4aa535ccbbfdded13217f453e" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setmoveSpd</name></member>
+      <member refid="classCNpc_1acf84cecc87c17d26523740cfc2b7a590" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setNPCTimer</name></member>
+      <member refid="classCNpc_1a0af5c6962cabcdeff758b2f697ab27fa" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setRightArm</name></member>
+      <member refid="classCNpc_1a8f21953fc67f681c221d341a6450e4f9" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setRightLeg</name></member>
+      <member refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setXpos</name></member>
+      <member refid="classCNpc_1a6f648098dece44ff4d3ab1fe1e820833" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setXRotation</name></member>
+      <member refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setYpos</name></member>
+      <member refid="classCNpc_1a4869f0594ccba9a518887c8d91966c2d" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setYRotation</name></member>
+      <member refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setZpos</name></member>
+      <member refid="classCNpc_1ab1fbf4a3e9dd0e45032bfd00ad61a31b" prot="public" virt="non-virtual"><scope>CNpc</scope><name>setZRotation</name></member>
+      <member refid="classCNpc_1a9b20ca28950f9f75fa86ecf89628cf45" prot="private" virt="non-virtual"><scope>CNpc</scope><name>Xrotation</name></member>
+      <member refid="classCNpc_1a7f54030c60ef8d3d22ee323bfe88cd3d" prot="private" virt="non-virtual"><scope>CNpc</scope><name>Yrotation</name></member>
+      <member refid="classCNpc_1a617e352bc01d53a11a96f15941a8ff1c" prot="private" virt="non-virtual"><scope>CNpc</scope><name>Zrotation</name></member>
+      <member refid="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" prot="public" virt="non-virtual"><scope>CNpc</scope><name>~CCharacter</name></member>
+      <member refid="classCNpc_1a4085ccdb7452b3ca1c54848a1cbc2ffc" prot="public" virt="non-virtual"><scope>CNpc</scope><name>~CNpc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

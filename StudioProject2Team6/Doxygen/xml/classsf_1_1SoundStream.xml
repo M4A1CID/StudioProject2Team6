@@ -1,0 +1,758 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1SoundStream" kind="class" prot="public" abstract="yes">
+    <compoundname>sf::SoundStream</compoundname>
+    <basecompoundref refid="classsf_1_1SoundSource" prot="public" virt="non-virtual">sf::SoundSource</basecompoundref>
+    <derivedcompoundref refid="classsf_1_1Music" prot="public" virt="non-virtual">sf::Music</derivedcompoundref>
+    <includes refid="SoundStream_8hpp" local="no">SoundStream.hpp</includes>
+    <innerclass refid="structsf_1_1SoundStream_1_1Chunk" prot="public">sf::SoundStream::Chunk</innerclass>
+      <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classsf_1_1SoundStream_1a7707214e7cd4ffcf1c123e7bcab4092a" prot="private" static="no">
+        <name>@0</name>
+        <enumvalue id="classsf_1_1SoundStream_1a7707214e7cd4ffcf1c123e7bcab4092aa3adf3b6cd18edb6121fda81e569dbbf5" prot="private">
+          <name>BufferCount</name>
+          <initializer>= 3</initializer>
+          <briefdescription>
+<para>Number of audio buffers used by the streaming loop. </para>          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="283" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="282" bodyend="285"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a004d1b16c81698be55779efe0f2b5ed3" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref></type>
+        <definition>Thread sf::SoundStream::m_thread</definition>
+        <argsstring></argsstring>
+        <name>m_thread</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref> running the background tasks. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="290" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="290" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a134d03a5d3075f6a98a85a2edff9ac7d" prot="private" static="no" mutable="yes">
+        <type><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref></type>
+        <definition>Mutex sf::SoundStream::m_threadMutex</definition>
+        <argsstring></argsstring>
+        <name>m_threadMutex</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Thread" kindref="compound">Thread</ref> mutex. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="291" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a2e06f2688d7fcf777a9779168067f302" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" kindref="member">Status</ref></type>
+        <definition>Status sf::SoundStream::m_threadStartState</definition>
+        <argsstring></argsstring>
+        <name>m_threadStartState</name>
+        <briefdescription>
+<para>State the thread starts in (Playing, Paused, Stopped) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="292" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="292" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1afa20ca6cbb29ee2355d986a3faa7a38f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sf::SoundStream::m_isStreaming</definition>
+        <argsstring></argsstring>
+        <name>m_isStreaming</name>
+        <briefdescription>
+<para>Streaming state (true = playing, false = stopped) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="293" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="293" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a3a7fbefda7d08527177acd1f6e63487b" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundStream::m_buffers[BufferCount]</definition>
+        <argsstring>[BufferCount]</argsstring>
+        <name>m_buffers</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> buffers used to store temporary audio data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="294" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1ad7c1a66f24be5e58ed275fd06e24294e" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundStream::m_channelCount</definition>
+        <argsstring></argsstring>
+        <name>m_channelCount</name>
+        <briefdescription>
+<para>Number of channels (1 = mono, 2 = stereo, ...) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="295" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="295" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1ac6cf65793e01b6b5f6bf6b555b1c1dfd" prot="private" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundStream::m_sampleRate</definition>
+        <argsstring></argsstring>
+        <name>m_sampleRate</name>
+        <briefdescription>
+<para>Frequency (samples / second) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="296" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="296" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a5c91434e0f1c2e4445e01b3de578af49" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacesf_1aa746fb1ddef4410bddf198ebb27e727c" kindref="member">Uint32</ref></type>
+        <definition>Uint32 sf::SoundStream::m_format</definition>
+        <argsstring></argsstring>
+        <name>m_format</name>
+        <briefdescription>
+<para>Format of the internal sound buffers. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="297" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a32ee01b984f74c9e0857d676bc33ad9f" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sf::SoundStream::m_loop</definition>
+        <argsstring></argsstring>
+        <name>m_loop</name>
+        <briefdescription>
+<para>Loop flag (true to loop, false to play once) </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="298" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1a7365a2ec97b89cec15577b31461ff4be" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacesf_1add9ac83466d96b9f50a009b9f4064266" kindref="member">Uint64</ref></type>
+        <definition>Uint64 sf::SoundStream::m_samplesProcessed</definition>
+        <argsstring></argsstring>
+        <name>m_samplesProcessed</name>
+        <briefdescription>
+<para>Number of buffers processed since beginning of the stream. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="299" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="299" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1SoundStream_1aaa3cf6e489beb8d9f7f6d060adf77dc5" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool sf::SoundStream::m_endBuffers[BufferCount]</definition>
+        <argsstring>[BufferCount]</argsstring>
+        <name>m_endBuffers</name>
+        <briefdescription>
+<para>Each buffer is marked as &quot;end buffer&quot; or not, for proper duration calculation. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="300" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="300" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a1fafb9f1ca572d23d7d6a17921860d85" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual sf::SoundStream::~SoundStream</definition>
+        <argsstring>()</argsstring>
+        <name>~SoundStream</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="63" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::play</definition>
+        <argsstring>()</argsstring>
+        <name>play</name>
+        <briefdescription>
+<para>Start or resume playing the audio stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function starts the stream if it was stopped, resumes it if it was paused, and restarts it from the beginning if it was already playing. This function uses its own thread so that it doesn&apos;t block the rest of the program while the stream is played.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1a932ff181e661503cad288b4bb6fe45ca" kindref="member">pause</ref>, <ref refid="classsf_1_1SoundStream_1a16cc6a0404b32e42c4dce184bb94d0f4" kindref="member">stop</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="77" column="1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1a2963d58071297789ad0c567c41dd5dbd" compoundref="SceneSP_8cpp" startline="3020" endline="3054">SceneSP::UpdateGaben</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a932ff181e661503cad288b4bb6fe45ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::pause</definition>
+        <argsstring>()</argsstring>
+        <name>pause</name>
+        <briefdescription>
+<para>Pause the audio stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function pauses the stream if it was playing, otherwise (stream already paused or stopped) it has no effect.</para><para><simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play</ref>, <ref refid="classsf_1_1SoundStream_1a16cc6a0404b32e42c4dce184bb94d0f4" kindref="member">stop</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="88" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a16cc6a0404b32e42c4dce184bb94d0f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::stop</definition>
+        <argsstring>()</argsstring>
+        <name>stop</name>
+        <briefdescription>
+<para>Stop playing the audio stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function stops the stream if it was playing or paused, and does nothing if it was already stopped. It also resets the playing position (unlike <ref refid="classsf_1_1SoundStream_1a932ff181e661503cad288b4bb6fe45ca" kindref="member">pause()</ref>).</para><para><simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play</ref>, <ref refid="classsf_1_1SoundStream_1a932ff181e661503cad288b4bb6fe45ca" kindref="member">pause</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="100" column="1"/>
+        <referencedby refid="classSceneSP_1af9fd03cc9990ba9e1ce2df171d358474" compoundref="SceneSP_8cpp" startline="5310" endline="5329">SceneSP::Exit</referencedby>
+        <referencedby refid="classSceneSP_1a17ea984d0e98061610e8a7e34b2a4397" compoundref="SceneSP_8cpp" startline="1199" endline="1266">SceneSP::UpdateStartMenu</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a68dedd0a2c26e6937c80fab3d235edea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundStream::getChannelCount</definition>
+        <argsstring>() const </argsstring>
+        <name>getChannelCount</name>
+        <briefdescription>
+<para>Return the number of channels of the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>1 channel means a mono sound, 2 means stereo, etc.</para><para><simplesect kind="return"><para>Number of channels </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="110" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1aad1da51c7a752682ca208bf11e3349bb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned int</type>
+        <definition>unsigned int sf::SoundStream::getSampleRate</definition>
+        <argsstring>() const </argsstring>
+        <name>getSampleRate</name>
+        <briefdescription>
+<para>Get the stream sample rate of the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The sample rate is the number of audio samples played per second. The higher, the better the quality.</para><para><simplesect kind="return"><para>Sample rate, in number of samples per second </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="121" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a75f722e7edcfa9952ff0c643966c6858" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" kindref="member">Status</ref></type>
+        <definition>Status sf::SoundStream::getStatus</definition>
+        <argsstring>() const </argsstring>
+        <name>getStatus</name>
+        <briefdescription>
+<para>Get the current status of the stream (stopped, paused, playing) </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current status </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="129" column="1"/>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1af416a5f84c8750d2acb9821d78bc8646" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::setPlayingOffset</definition>
+        <argsstring>(Time timeOffset)</argsstring>
+        <name>setPlayingOffset</name>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>timeOffset</declname>
+        </param>
+        <briefdescription>
+<para>Change the current playing position of the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>The playing position can be changed when the stream is either paused or playing. Changing the playing position when the stream is stopped has no effect, since playing the stream would reset its position.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New playing position, from the beginning of the stream</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1a6070416e1e1a11b5915e9314dd6638f7" kindref="member">getPlayingOffset</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="144" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a6070416e1e1a11b5915e9314dd6638f7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>Time sf::SoundStream::getPlayingOffset</definition>
+        <argsstring>() const </argsstring>
+        <name>getPlayingOffset</name>
+        <briefdescription>
+<para>Get the current playing position of the stream. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Current playing position, from the beginning of the stream</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1af416a5f84c8750d2acb9821d78bc8646" kindref="member">setPlayingOffset</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="154" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a43fade018ffba7e4f847a9f00b353f3d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::setLoop</definition>
+        <argsstring>(bool loop)</argsstring>
+        <name>setLoop</name>
+        <param>
+          <type>bool</type>
+          <declname>loop</declname>
+        </param>
+        <briefdescription>
+<para>Set whether or not the stream should loop after reaching the end. </para>        </briefdescription>
+        <detaileddescription>
+<para>If set, the stream will restart from beginning after reaching the end and so on, until it is stopped or setLoop(false) is called. The default looping state for streams is false.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True to play in loop, false to play once</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1ad8bbf6c0d2ff2d75e19035dea3fd77c3" kindref="member">getLoop</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="169" column="1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1a2963d58071297789ad0c567c41dd5dbd" compoundref="SceneSP_8cpp" startline="3020" endline="3054">SceneSP::UpdateGaben</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1ad8bbf6c0d2ff2d75e19035dea3fd77c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::SoundStream::getLoop</definition>
+        <argsstring>() const </argsstring>
+        <name>getLoop</name>
+        <briefdescription>
+<para>Tell whether or not the stream is in loop mode. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if the stream is looping, false otherwise</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1SoundStream_1a43fade018ffba7e4f847a9f00b353f3d" kindref="member">setLoop</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="179" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a769d08f4c3c6b4340ef3a838329d2e5c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::SoundStream::SoundStream</definition>
+        <argsstring>()</argsstring>
+        <name>SoundStream</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para>This constructor is only meant to be called by derived classes. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="189" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a9c351711198ee1aa77c2fefd3ced4d2c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::initialize</definition>
+        <argsstring>(unsigned int channelCount, unsigned int sampleRate)</argsstring>
+        <name>initialize</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>channelCount</declname>
+        </param>
+        <param>
+          <type>unsigned int</type>
+          <declname>sampleRate</declname>
+        </param>
+        <briefdescription>
+<para>Define the audio stream parameters. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function must be called by derived classes as soon as they know the audio settings of the stream to play. Any attempt to manipulate the stream (<ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play()</ref>, ...) before calling this function will fail. It can be called multiple times if the settings of the audio stream change, but only when the stream is stopped.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>channelCount</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of channels of the stream </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sampleRate</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Sample rate, in samples per second </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="205" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a968ec024a6e45490962c8a1121cb7c5f" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>bool</type>
+        <definition>virtual bool sf::SoundStream::onGetData</definition>
+        <argsstring>(Chunk &amp;data)=0</argsstring>
+        <name>onGetData</name>
+        <reimplementedby refid="classsf_1_1Music_1aca1bcb4e5d56a854133e74bd86374463">onGetData</reimplementedby>
+        <param>
+          <type><ref refid="structsf_1_1SoundStream_1_1Chunk" kindref="compound">Chunk</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Request a new chunk of audio samples from the stream source. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function must be overridden by derived classes to provide the audio samples to play. It is called continuously by the streaming loop, in a separate thread. The source can choose to stop the streaming loop at any time, by returning false to the caller. If you return true (i.e. continue streaming) it is important that the returned array of samples is not empty; this would stop the stream due to an internal limitation.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="structsf_1_1SoundStream_1_1Chunk" kindref="compound">Chunk</ref> of data to fill</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True to continue playback, false to stop </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="224" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a907036dd2ca7d3af5ead316e54b75997" prot="protected" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void sf::SoundStream::onSeek</definition>
+        <argsstring>(Time timeOffset)=0</argsstring>
+        <name>onSeek</name>
+        <reimplementedby refid="classsf_1_1Music_1a15119cc0419c16bb334fa0698699c02e">onSeek</reimplementedby>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>timeOffset</declname>
+        </param>
+        <briefdescription>
+<para>Change the current playing position in the stream source. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function must be overridden by derived classes to allow random seeking into the stream source.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New playing position, relative to the beginning of the stream </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="235" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsf_1_1SoundStream_1a08c54af1f433424ac627d1a30021f5e9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::streamData</definition>
+        <argsstring>()</argsstring>
+        <name>streamData</name>
+        <briefdescription>
+<para>Function called as the entry point of the thread. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function starts the streaming loop, and returns only when the sound is stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="246" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1aae39dcacd392489e3664f687d494ae9e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::SoundStream::fillAndPushBuffer</definition>
+        <argsstring>(unsigned int bufferNum)</argsstring>
+        <name>fillAndPushBuffer</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>bufferNum</declname>
+        </param>
+        <briefdescription>
+<para>Fill a new buffer with audio samples, and append it to the playing queue. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called as soon as a buffer has been fully consumed; it fills it again and inserts it back into the playing queue.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bufferNum</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of the buffer to fill (in [0, BufferCount])</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the stream source has requested to stop, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="261" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1abf8cdcc65da5e31c14f9bddccb53fb72" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::SoundStream::fillQueue</definition>
+        <argsstring>()</argsstring>
+        <name>fillQueue</name>
+        <briefdescription>
+<para>Fill the audio buffers and put them all into the playing queue. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called when playing starts and the playing queue is empty.</para><para><simplesect kind="return"><para>True if the derived class has requested to stop, false otherwise </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="272" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1SoundStream_1ac0fdfe8ec3e5b662f0b7956ba894f5bc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::SoundStream::clearQueue</definition>
+        <argsstring>()</argsstring>
+        <name>clearQueue</name>
+        <briefdescription>
+<para>Clear all the audio buffers and empty the playing queue. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function is called when the stream is stopped. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="280" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Abstract base class for streamed audio sources. </para>    </briefdescription>
+    <detaileddescription>
+<para>Unlike audio buffers (see <ref refid="classsf_1_1SoundBuffer" kindref="compound">sf::SoundBuffer</ref>), audio streams are never completely loaded in memory.</para><para>Instead, the audio data is acquired continuously while the stream is playing. This behavior allows to play a sound with no loading delay, and keeps the memory consumption very low.</para><para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> sources that need to be streamed are usually big files (compressed audio musics that would eat hundreds of MB in memory) or files that would take a lot of time to be received (sounds played over the network).</para><para><ref refid="classsf_1_1SoundStream" kindref="compound">sf::SoundStream</ref> is a base class that doesn&apos;t care about the stream source, which is left to the derived class. SFML provides a built-in specialization for big files (see <ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref>). No network stream source is provided, but you can write your own by combining this class with the network module.</para><para>A derived class has to override two virtual functions: <itemizedlist>
+<listitem><para>onGetData fills a new chunk of audio data to be played </para></listitem>
+<listitem><para>onSeek changes the current playing position in the source</para></listitem>
+</itemizedlist>
+It is important to note that each <ref refid="classsf_1_1SoundStream" kindref="compound">SoundStream</ref> is played in its own separate thread, so that the streaming loop doesn&apos;t block the rest of the program. In particular, the OnGetData and OnSeek virtual functions may sometimes be called from this separate thread. It is important to keep this in mind, because you may have to take care of synchronization issues if you share data between threads.</para><para>Usage example: <programlisting><codeline><highlight class="normal">class<sp/>CustomStream<sp/>:<sp/>public<sp/>sf::SoundStream</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal">public:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>open(const<sp/>std::string&amp;<sp/>location)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Open<sp/>the<sp/>source<sp/>and<sp/>get<sp/>audio<sp/>settings</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>channelCount<sp/>=<sp/>...;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsigned<sp/>int<sp/>sampleRate<sp/>=<sp/>...;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Initialize<sp/>the<sp/>stream<sp/>--<sp/>important!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initialize(channelCount,<sp/>sampleRate);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">private:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>bool<sp/>onGetData(Chunk&amp;<sp/>data)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Fill<sp/>the<sp/>chunk<sp/>with<sp/>audio<sp/>data<sp/>from<sp/>the<sp/>stream<sp/>source</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>(note:<sp/>must<sp/>not<sp/>be<sp/>empty<sp/>if<sp/>you<sp/>want<sp/>to<sp/>continue<sp/>playing)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.samples<sp/>=<sp/>...;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data.sampleCount<sp/>=<sp/>...;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Return<sp/>true<sp/>to<sp/>continue<sp/>playing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>virtual<sp/>void<sp/>onSeek(Uint32<sp/>timeOffset)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>Change<sp/>the<sp/>current<sp/>position<sp/>in<sp/>the<sp/>stream<sp/>source</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Usage</highlight></codeline>
+<codeline><highlight class="normal">CustomStream<sp/>stream;</highlight></codeline>
+<codeline><highlight class="normal">stream.open(&quot;path/to/stream&quot;);</highlight></codeline>
+<codeline><highlight class="normal">stream.play();</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="1126">
+        <label>sf::SoundStream</label>
+        <link refid="classsf_1_1SoundStream"/>
+        <childnode refid="1127" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1128">
+        <label>sf::Music</label>
+        <link refid="classsf_1_1Music"/>
+        <childnode refid="1126" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1127">
+        <label>sf::SoundSource</label>
+        <link refid="classsf_1_1SoundSource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1139">
+        <label>sf::Mutex</label>
+        <link refid="classsf_1_1Mutex"/>
+        <childnode refid="1134" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1140" relation="usage">
+          <edgelabel>m_mutexImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="1141">
+        <label>Status</label>
+      </node>
+      <node id="1129">
+        <label>sf::SoundStream</label>
+        <link refid="classsf_1_1SoundStream"/>
+        <childnode refid="1130" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1132" relation="usage">
+          <edgelabel>m_samplesProcessed</edgelabel>
+        </childnode>
+        <childnode refid="1133" relation="usage">
+          <edgelabel>m_thread</edgelabel>
+        </childnode>
+        <childnode refid="1137" relation="usage">
+          <edgelabel>m_isStreaming</edgelabel>
+          <edgelabel>m_loop</edgelabel>
+          <edgelabel>m_endBuffers</edgelabel>
+        </childnode>
+        <childnode refid="1138" relation="usage">
+          <edgelabel>m_channelCount</edgelabel>
+          <edgelabel>m_format</edgelabel>
+          <edgelabel>m_sampleRate</edgelabel>
+          <edgelabel>m_buffers</edgelabel>
+        </childnode>
+        <childnode refid="1139" relation="usage">
+          <edgelabel>m_threadMutex</edgelabel>
+        </childnode>
+        <childnode refid="1141" relation="usage">
+          <edgelabel>m_threadStartState</edgelabel>
+        </childnode>
+      </node>
+      <node id="1133">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="1134" relation="private-inheritance">
+        </childnode>
+        <childnode refid="1135" relation="usage">
+          <edgelabel>m_entryPoint</edgelabel>
+        </childnode>
+        <childnode refid="1136" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+      <node id="1140">
+        <label>MutexImpl *</label>
+      </node>
+      <node id="1135">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1132">
+        <label>unsigned long long</label>
+      </node>
+      <node id="1136">
+        <label>ThreadImpl *</label>
+      </node>
+      <node id="1138">
+        <label>unsigned int</label>
+      </node>
+      <node id="1131">
+        <label>unsigned</label>
+      </node>
+      <node id="1134">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="1137">
+        <label>bool</label>
+      </node>
+      <node id="1130">
+        <label>sf::SoundSource</label>
+        <link refid="classsf_1_1SoundSource"/>
+        <childnode refid="1131" relation="usage">
+          <edgelabel>m_source</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" line="46" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/SoundStream.hpp" bodystart="45" bodyend="301"/>
+    <listofallmembers>
+      <member refid="classsf_1_1SoundStream_1a7707214e7cd4ffcf1c123e7bcab4092aa3adf3b6cd18edb6121fda81e569dbbf5" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>BufferCount</name></member>
+      <member refid="classsf_1_1SoundStream_1ac0fdfe8ec3e5b662f0b7956ba894f5bc" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>clearQueue</name></member>
+      <member refid="classsf_1_1SoundStream_1aae39dcacd392489e3664f687d494ae9e" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>fillAndPushBuffer</name></member>
+      <member refid="classsf_1_1SoundStream_1abf8cdcc65da5e31c14f9bddccb53fb72" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>fillQueue</name></member>
+      <member refid="classsf_1_1SoundSource_1ac5f5ffef8930bb573f43d47cbc779bf6" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getAttenuation</name></member>
+      <member refid="classsf_1_1SoundStream_1a68dedd0a2c26e6937c80fab3d235edea" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getChannelCount</name></member>
+      <member refid="classsf_1_1SoundStream_1ad8bbf6c0d2ff2d75e19035dea3fd77c3" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getLoop</name></member>
+      <member refid="classsf_1_1SoundSource_1a3379b9f7a0f0e31ab9a4e5fa1762986e" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getMinDistance</name></member>
+      <member refid="classsf_1_1SoundSource_1aedad6aff442aeb6dcd267befd4fdbb59" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getPitch</name></member>
+      <member refid="classsf_1_1SoundStream_1a6070416e1e1a11b5915e9314dd6638f7" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getPlayingOffset</name></member>
+      <member refid="classsf_1_1SoundSource_1a4c3bc60286f488aaf2941ab76476eebc" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getPosition</name></member>
+      <member refid="classsf_1_1SoundStream_1aad1da51c7a752682ca208bf11e3349bb" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getSampleRate</name></member>
+      <member refid="classsf_1_1SoundStream_1a75f722e7edcfa9952ff0c643966c6858" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getStatus</name></member>
+      <member refid="classsf_1_1SoundSource_1aafb0558fce9cbebfc6828d932cbcce2f" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>getVolume</name></member>
+      <member refid="classsf_1_1SoundStream_1a9c351711198ee1aa77c2fefd3ced4d2c" prot="protected" virt="non-virtual"><scope>sf::SoundStream</scope><name>initialize</name></member>
+      <member refid="classsf_1_1SoundSource_1a5cb9107e1c47f65ab82c4885436061ef" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>isRelativeToListener</name></member>
+      <member refid="classsf_1_1SoundStream_1a3a7fbefda7d08527177acd1f6e63487b" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_buffers</name></member>
+      <member refid="classsf_1_1SoundStream_1ad7c1a66f24be5e58ed275fd06e24294e" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_channelCount</name></member>
+      <member refid="classsf_1_1SoundStream_1aaa3cf6e489beb8d9f7f6d060adf77dc5" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_endBuffers</name></member>
+      <member refid="classsf_1_1SoundStream_1a5c91434e0f1c2e4445e01b3de578af49" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_format</name></member>
+      <member refid="classsf_1_1SoundStream_1afa20ca6cbb29ee2355d986a3faa7a38f" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_isStreaming</name></member>
+      <member refid="classsf_1_1SoundStream_1a32ee01b984f74c9e0857d676bc33ad9f" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_loop</name></member>
+      <member refid="classsf_1_1SoundStream_1ac6cf65793e01b6b5f6bf6b555b1c1dfd" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_sampleRate</name></member>
+      <member refid="classsf_1_1SoundStream_1a7365a2ec97b89cec15577b31461ff4be" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_samplesProcessed</name></member>
+      <member refid="classsf_1_1SoundSource_1a0223cef4b1c587e6e1e17b4c92c4479c" prot="protected" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_source</name></member>
+      <member refid="classsf_1_1SoundStream_1a004d1b16c81698be55779efe0f2b5ed3" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_thread</name></member>
+      <member refid="classsf_1_1SoundStream_1a134d03a5d3075f6a98a85a2edff9ac7d" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_threadMutex</name></member>
+      <member refid="classsf_1_1SoundStream_1a2e06f2688d7fcf777a9779168067f302" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>m_threadStartState</name></member>
+      <member refid="classsf_1_1SoundStream_1a968ec024a6e45490962c8a1121cb7c5f" prot="protected" virt="pure-virtual"><scope>sf::SoundStream</scope><name>onGetData</name></member>
+      <member refid="classsf_1_1SoundStream_1a907036dd2ca7d3af5ead316e54b75997" prot="protected" virt="pure-virtual"><scope>sf::SoundStream</scope><name>onSeek</name></member>
+      <member refid="classsf_1_1SoundStream_1a932ff181e661503cad288b4bb6fe45ca" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>pause</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>Paused</name></member>
+      <member refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>play</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03af07bdea9f70ef7606dfc9f955beeee18" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>Playing</name></member>
+      <member refid="classsf_1_1SoundSource_1aa2adff44cd2f8b4e3c7315d7c2a45626" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setAttenuation</name></member>
+      <member refid="classsf_1_1SoundStream_1a43fade018ffba7e4f847a9f00b353f3d" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setLoop</name></member>
+      <member refid="classsf_1_1SoundSource_1a75bbc2c34addc8b25a14edb908508afe" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setMinDistance</name></member>
+      <member refid="classsf_1_1SoundSource_1a72a13695ed48b7f7b55e7cd4431f4bb6" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setPitch</name></member>
+      <member refid="classsf_1_1SoundStream_1af416a5f84c8750d2acb9821d78bc8646" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setPlayingOffset</name></member>
+      <member refid="classsf_1_1SoundSource_1a0480257ea25d986eba6cc3c1a6f8d7c2" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1a17ba9ed01925395652181a7b2a7d3aef" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1ac478a8b813faf7dd575635b102081d0d" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setRelativeToListener</name></member>
+      <member refid="classsf_1_1SoundSource_1a2f192f2b49fb8e2b82f3498d3663fcc2" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>setVolume</name></member>
+      <member refid="classsf_1_1SoundSource_1ae0c7728c1449fdebe65749ab6fcb3170" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>SoundSource</name></member>
+      <member refid="classsf_1_1SoundSource_1aefa4bd4460f387d81a0637d293979436" prot="protected" virt="non-virtual"><scope>sf::SoundStream</scope><name>SoundSource</name></member>
+      <member refid="classsf_1_1SoundStream_1a769d08f4c3c6b4340ef3a838329d2e5c" prot="protected" virt="non-virtual"><scope>sf::SoundStream</scope><name>SoundStream</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>Status</name></member>
+      <member refid="classsf_1_1SoundStream_1a16cc6a0404b32e42c4dce184bb94d0f4" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>stop</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a" prot="public" virt="non-virtual"><scope>sf::SoundStream</scope><name>Stopped</name></member>
+      <member refid="classsf_1_1SoundStream_1a08c54af1f433424ac627d1a30021f5e9" prot="private" virt="non-virtual"><scope>sf::SoundStream</scope><name>streamData</name></member>
+      <member refid="classsf_1_1SoundSource_1a77c7c1524f8cb81df2de9375b0f87c5c" prot="public" virt="virtual"><scope>sf::SoundStream</scope><name>~SoundSource</name></member>
+      <member refid="classsf_1_1SoundStream_1a1fafb9f1ca572d23d7d6a17921860d85" prot="public" virt="virtual"><scope>sf::SoundStream</scope><name>~SoundStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

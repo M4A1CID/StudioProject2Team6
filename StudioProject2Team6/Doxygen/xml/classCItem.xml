@@ -1,0 +1,902 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCItem" kind="class" prot="public">
+    <compoundname>CItem</compoundname>
+    <derivedcompoundref refid="classCBeansCan" prot="public" virt="non-virtual">CBeansCan</derivedcompoundref>
+    <derivedcompoundref refid="classCBranCan" prot="public" virt="non-virtual">CBranCan</derivedcompoundref>
+    <derivedcompoundref refid="classCBrownCan" prot="public" virt="non-virtual">CBrownCan</derivedcompoundref>
+    <derivedcompoundref refid="classCCerealBox1" prot="public" virt="non-virtual">CCerealBox1</derivedcompoundref>
+    <derivedcompoundref refid="classCCerealBox2" prot="public" virt="non-virtual">CCerealBox2</derivedcompoundref>
+    <derivedcompoundref refid="classCCerealBox3" prot="public" virt="non-virtual">CCerealBox3</derivedcompoundref>
+    <derivedcompoundref refid="classCCerealBox4" prot="public" virt="non-virtual">CCerealBox4</derivedcompoundref>
+    <derivedcompoundref refid="classCCerealBox5" prot="public" virt="non-virtual">CCerealBox5</derivedcompoundref>
+    <derivedcompoundref refid="classCEasterEgg1" prot="public" virt="non-virtual">CEasterEgg1</derivedcompoundref>
+    <derivedcompoundref refid="classCEasterEgg2" prot="public" virt="non-virtual">CEasterEgg2</derivedcompoundref>
+    <derivedcompoundref refid="classCEasterEgg3" prot="public" virt="non-virtual">CEasterEgg3</derivedcompoundref>
+    <derivedcompoundref refid="classCEmptyItem" prot="public" virt="non-virtual">CEmptyItem</derivedcompoundref>
+    <derivedcompoundref refid="classCGluWaterCan" prot="public" virt="non-virtual">CGluWaterCan</derivedcompoundref>
+    <derivedcompoundref refid="classCHumanCan" prot="public" virt="non-virtual">CHumanCan</derivedcompoundref>
+    <derivedcompoundref refid="classCMelonCan" prot="public" virt="non-virtual">CMelonCan</derivedcompoundref>
+    <derivedcompoundref refid="classCMtnDewCan" prot="public" virt="non-virtual">CMtnDewCan</derivedcompoundref>
+    <derivedcompoundref refid="classCPeasCan" prot="public" virt="non-virtual">CPeasCan</derivedcompoundref>
+    <derivedcompoundref refid="classCRedMonsterCan" prot="public" virt="non-virtual">CRedMonsterCan</derivedcompoundref>
+    <derivedcompoundref refid="classCRootBeerFloatsCan" prot="public" virt="non-virtual">CRootBeerFloatsCan</derivedcompoundref>
+    <derivedcompoundref refid="classCSardineCan" prot="public" virt="non-virtual">CSardineCan</derivedcompoundref>
+    <derivedcompoundref refid="classCSodaCan" prot="public" virt="non-virtual">CSodaCan</derivedcompoundref>
+    <derivedcompoundref refid="classCSodaFestCan" prot="public" virt="non-virtual">CSodaFestCan</derivedcompoundref>
+    <derivedcompoundref refid="classCTomatoCan" prot="public" virt="non-virtual">CTomatoCan</derivedcompoundref>
+    <derivedcompoundref refid="classCVargaCan" prot="public" virt="non-virtual">CVargaCan</derivedcompoundref>
+    <derivedcompoundref refid="classCWinebottle1" prot="public" virt="non-virtual">CWinebottle1</derivedcompoundref>
+    <derivedcompoundref refid="classCWinebottle2" prot="public" virt="non-virtual">CWinebottle2</derivedcompoundref>
+    <derivedcompoundref refid="classCWinebottle3" prot="public" virt="non-virtual">CWinebottle3</derivedcompoundref>
+    <derivedcompoundref refid="classCWinebottle4" prot="public" virt="non-virtual">CWinebottle4</derivedcompoundref>
+    <derivedcompoundref refid="classCWinebottle5" prot="public" virt="non-virtual">CWinebottle5</derivedcompoundref>
+    <includes refid="Item_8h" local="no">Item.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCItem_1ae1b889ccadab7241ef622ece191e1604" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string CItem::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="35" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="35" bodyend="-1"/>
+        <referencedby refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" compoundref="Item_8cpp" startline="8" endline="13">CItem</referencedby>
+        <referencedby refid="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" compoundref="Item_8cpp" startline="198" endline="201">getName</referencedby>
+        <referencedby refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" compoundref="Item_8cpp" startline="54" endline="57">setName</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CItem::price</definition>
+        <argsstring></argsstring>
+        <name>price</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="36" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="36" bodyend="-1"/>
+        <referencedby refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" compoundref="Item_8cpp" startline="8" endline="13">CItem</referencedby>
+        <referencedby refid="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" compoundref="Item_8cpp" startline="210" endline="213">getPrice</referencedby>
+        <referencedby refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" compoundref="Item_8cpp" startline="66" endline="69">setPrice</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CItem::objectType</definition>
+        <argsstring></argsstring>
+        <name>objectType</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="37" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="37" bodyend="-1"/>
+        <referencedby refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" compoundref="Item_8cpp" startline="8" endline="13">CItem</referencedby>
+        <referencedby refid="classCItem_1a916597368755e28b6edb8af37acc1ad6" compoundref="Item_8cpp" startline="150" endline="153">getGeoType</referencedby>
+        <referencedby refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" compoundref="Item_8cpp" startline="78" endline="81">setGeoType</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCItem_1a7c1874b5ff192ace386f1e9893972e46" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CItem::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="38" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="38" bodyend="-1"/>
+        <referencedby refid="classCItem_1a1df3074023a1ee0668eec574a637c121" compoundref="Item_8cpp" startline="27" endline="35">CItem</referencedby>
+        <referencedby refid="classCItem_1aa34235d3cd780cef7fc7461387f6b081" compoundref="Item_8cpp" startline="162" endline="165">getXpos</referencedby>
+        <referencedby refid="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" compoundref="Item_8cpp" startline="102" endline="105">setXpos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCItem_1a92c2828730ed868dece3a0f6948f956b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CItem::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="39" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="39" bodyend="-1"/>
+        <referencedby refid="classCItem_1a1df3074023a1ee0668eec574a637c121" compoundref="Item_8cpp" startline="27" endline="35">CItem</referencedby>
+        <referencedby refid="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" compoundref="Item_8cpp" startline="174" endline="177">getYpos</referencedby>
+        <referencedby refid="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" compoundref="Item_8cpp" startline="114" endline="117">setYpos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCItem_1a8f7b5d91127f858aae637d8a21f89add" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CItem::z</definition>
+        <argsstring></argsstring>
+        <name>z</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="40" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="40" bodyend="-1"/>
+        <referencedby refid="classCItem_1a1df3074023a1ee0668eec574a637c121" compoundref="Item_8cpp" startline="27" endline="35">CItem</referencedby>
+        <referencedby refid="classCItem_1ab9a6defffbef320655a11faab524e915" compoundref="Item_8cpp" startline="186" endline="189">getZpos</referencedby>
+        <referencedby refid="classCItem_1a87034717276be8d5c3d39edbdcf7417e" compoundref="Item_8cpp" startline="126" endline="129">setZpos</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCItem_1adac2b51499cdc78208396440324cbdc4" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool CItem::active</definition>
+        <argsstring></argsstring>
+        <name>active</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="41" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" compoundref="Item_8cpp" startline="138" endline="141">getActiveState</referencedby>
+        <referencedby refid="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" compoundref="Item_8cpp" startline="90" endline="93">setActiveState</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CItem::CItem</definition>
+        <argsstring>(void)</argsstring>
+        <name>CItem</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default item constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="8" bodyend="13"/>
+        <references refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" compoundref="Item_8h" startline="35">name</references>
+        <references refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" compoundref="Item_8h" startline="37">objectType</references>
+        <references refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" compoundref="Item_8h" startline="36">price</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a1df3074023a1ee0668eec574a637c121" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CItem::CItem</definition>
+        <argsstring>(string n, float p, int type, float posX, float posY, float posZ)</argsstring>
+        <name>CItem</name>
+        <param>
+          <type>string</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>p</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded item constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- name of item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- price of item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- type of item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- x position of item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- y position of item </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>posZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- z position of item </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="17" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="27" bodyend="35"/>
+        <references refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" compoundref="Item_8h" startline="35">name</references>
+        <references refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" compoundref="Item_8h" startline="37">objectType</references>
+        <references refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" compoundref="Item_8h" startline="36">price</references>
+        <references refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" compoundref="Item_8h" startline="38">x</references>
+        <references refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" compoundref="Item_8h" startline="39">y</references>
+        <references refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" compoundref="Item_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a66aaf6da5435db163e72d3572c9f577f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setName</definition>
+        <argsstring>(string n)</argsstring>
+        <name>setName</name>
+        <param>
+          <type>string</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the item name. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set item name </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="18" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="54" bodyend="57"/>
+        <references refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" compoundref="Item_8h" startline="35">name</references>
+        <referencedby refid="classCBeansCan_1a420bb71ba982ff6a3b5e68cad0d19474" compoundref="BeansCan_8cpp" startline="9" endline="14">CBeansCan::CBeansCan</referencedby>
+        <referencedby refid="classCBranCan_1a571e75503719063a518aa026809b6588" compoundref="BranCan_8cpp" startline="9" endline="14">CBranCan::CBranCan</referencedby>
+        <referencedby refid="classCBrownCan_1ae1d95ed3d9babad2c274bfab024bfc10" compoundref="BrownCan_8cpp" startline="9" endline="14">CBrownCan::CBrownCan</referencedby>
+        <referencedby refid="classCCerealBox1_1a6187db3f74a8a1799a79b7ae6e8771d9" compoundref="CerealBox1_8cpp" startline="9" endline="14">CCerealBox1::CCerealBox1</referencedby>
+        <referencedby refid="classCCerealBox2_1a11cf811eb461173d87c4d9b095cf6f53" compoundref="CerealBox2_8cpp" startline="9" endline="14">CCerealBox2::CCerealBox2</referencedby>
+        <referencedby refid="classCCerealBox3_1a83bf7de493d27f7f9e39b1fd7c39eac1" compoundref="CerealBox3_8cpp" startline="9" endline="14">CCerealBox3::CCerealBox3</referencedby>
+        <referencedby refid="classCCerealBox4_1a1fc8bb1bca89978c88960cac8f6b05c1" compoundref="CerealBox4_8cpp" startline="9" endline="14">CCerealBox4::CCerealBox4</referencedby>
+        <referencedby refid="classCCerealBox5_1acfa24b47869bbf20fa08c89ce26454b4" compoundref="CerealBox5_8cpp" startline="9" endline="14">CCerealBox5::CCerealBox5</referencedby>
+        <referencedby refid="classCEasterEgg1_1afa80f1edd0c1ea52e5099065ff9d646e" compoundref="EasterEgg1_8cpp" startline="9" endline="14">CEasterEgg1::CEasterEgg1</referencedby>
+        <referencedby refid="classCEasterEgg2_1a51f0540313b60b10a5cdc107b8fab02c" compoundref="EasterEgg2_8cpp" startline="9" endline="14">CEasterEgg2::CEasterEgg2</referencedby>
+        <referencedby refid="classCEasterEgg3_1a0b9268a14042b16034e66e5bd578a703" compoundref="EasterEgg3_8cpp" startline="9" endline="14">CEasterEgg3::CEasterEgg3</referencedby>
+        <referencedby refid="classCEmptyItem_1ab0847a3713ef7e1c90c15daa1c0288a5" compoundref="EmptyItem_8cpp" startline="9" endline="14">CEmptyItem::CEmptyItem</referencedby>
+        <referencedby refid="classCGluWaterCan_1a5704917340f9e22a0300d1a0cd938f26" compoundref="GluWaterCan_8cpp" startline="9" endline="14">CGluWaterCan::CGluWaterCan</referencedby>
+        <referencedby refid="classCHumanCan_1a82f41175f9e0a4e7f5d96518221a0ea7" compoundref="HumanCan_8cpp" startline="9" endline="14">CHumanCan::CHumanCan</referencedby>
+        <referencedby refid="classCMelonCan_1a68b89540d874f90fcd35c2876539baa7" compoundref="MelonCan_8cpp" startline="9" endline="14">CMelonCan::CMelonCan</referencedby>
+        <referencedby refid="classCMtnDewCan_1a5ee3eabfb4e15018c9e770d2d27a909c" compoundref="MtnDewCan_8cpp" startline="9" endline="14">CMtnDewCan::CMtnDewCan</referencedby>
+        <referencedby refid="classCPeasCan_1a97442973d593fcfcef6921959bfa12b0" compoundref="PeasCan_8cpp" startline="9" endline="14">CPeasCan::CPeasCan</referencedby>
+        <referencedby refid="classCRedMonsterCan_1ad1a923198eb09612b12d2f8090a7506c" compoundref="RedMonsterCan_8cpp" startline="9" endline="14">CRedMonsterCan::CRedMonsterCan</referencedby>
+        <referencedby refid="classCRootBeerFloatsCan_1ae920ef576cd4efc6379b7f3d0b7a04f9" compoundref="RootBeerFloatsCan_8cpp" startline="9" endline="14">CRootBeerFloatsCan::CRootBeerFloatsCan</referencedby>
+        <referencedby refid="classCSardineCan_1aec24764af29a5cf8c2acf3ddf19ccc78" compoundref="SardineCan_8cpp" startline="9" endline="14">CSardineCan::CSardineCan</referencedby>
+        <referencedby refid="classCSodaCan_1a31d38248fa2c7766978b79410b00f4ae" compoundref="SodaCan_8cpp" startline="9" endline="14">CSodaCan::CSodaCan</referencedby>
+        <referencedby refid="classCSodaFestCan_1ae5c7be0ce0c34da89adb6e76dd06e220" compoundref="SodaFestCan_8cpp" startline="9" endline="14">CSodaFestCan::CSodaFestCan</referencedby>
+        <referencedby refid="classCTomatoCan_1ab96816f2b6102f184ee32d9a36b241cf" compoundref="TomatoCan_8cpp" startline="9" endline="14">CTomatoCan::CTomatoCan</referencedby>
+        <referencedby refid="classCVargaCan_1ab3a391130238050a85fdabaff47653d5" compoundref="VargaCan_8cpp" startline="9" endline="14">CVargaCan::CVargaCan</referencedby>
+        <referencedby refid="classCWinebottle1_1add76c501b400f7e1d0e27fb97863fa28" compoundref="Winebottle1_8cpp" startline="9" endline="14">CWinebottle1::CWinebottle1</referencedby>
+        <referencedby refid="classCWinebottle2_1a51ef446e24143cfb4e0e97eac9f7e40b" compoundref="Winebottle2_8cpp" startline="9" endline="14">CWinebottle2::CWinebottle2</referencedby>
+        <referencedby refid="classCWinebottle3_1accaea4ef8a24966a455d2dec8f5caf3d" compoundref="Winebottle3_8cpp" startline="9" endline="14">CWinebottle3::CWinebottle3</referencedby>
+        <referencedby refid="classCWinebottle4_1ab389309af64f172d814e32ec0a6498f9" compoundref="Winebottle4_8cpp" startline="9" endline="14">CWinebottle4::CWinebottle4</referencedby>
+        <referencedby refid="classCWinebottle5_1a720a76a23a91bdd5b4c6321629b36197" compoundref="Winebottle5_8cpp" startline="9" endline="14">CWinebottle5::CWinebottle5</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setPrice</definition>
+        <argsstring>(float p)</argsstring>
+        <name>setPrice</name>
+        <param>
+          <type>float</type>
+          <declname>p</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the item price. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set item price </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="19" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="66" bodyend="69"/>
+        <references refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" compoundref="Item_8h" startline="36">price</references>
+        <referencedby refid="classCBeansCan_1a420bb71ba982ff6a3b5e68cad0d19474" compoundref="BeansCan_8cpp" startline="9" endline="14">CBeansCan::CBeansCan</referencedby>
+        <referencedby refid="classCBranCan_1a571e75503719063a518aa026809b6588" compoundref="BranCan_8cpp" startline="9" endline="14">CBranCan::CBranCan</referencedby>
+        <referencedby refid="classCBrownCan_1ae1d95ed3d9babad2c274bfab024bfc10" compoundref="BrownCan_8cpp" startline="9" endline="14">CBrownCan::CBrownCan</referencedby>
+        <referencedby refid="classCCerealBox1_1a6187db3f74a8a1799a79b7ae6e8771d9" compoundref="CerealBox1_8cpp" startline="9" endline="14">CCerealBox1::CCerealBox1</referencedby>
+        <referencedby refid="classCCerealBox2_1a11cf811eb461173d87c4d9b095cf6f53" compoundref="CerealBox2_8cpp" startline="9" endline="14">CCerealBox2::CCerealBox2</referencedby>
+        <referencedby refid="classCCerealBox3_1a83bf7de493d27f7f9e39b1fd7c39eac1" compoundref="CerealBox3_8cpp" startline="9" endline="14">CCerealBox3::CCerealBox3</referencedby>
+        <referencedby refid="classCCerealBox4_1a1fc8bb1bca89978c88960cac8f6b05c1" compoundref="CerealBox4_8cpp" startline="9" endline="14">CCerealBox4::CCerealBox4</referencedby>
+        <referencedby refid="classCCerealBox5_1acfa24b47869bbf20fa08c89ce26454b4" compoundref="CerealBox5_8cpp" startline="9" endline="14">CCerealBox5::CCerealBox5</referencedby>
+        <referencedby refid="classCEasterEgg1_1afa80f1edd0c1ea52e5099065ff9d646e" compoundref="EasterEgg1_8cpp" startline="9" endline="14">CEasterEgg1::CEasterEgg1</referencedby>
+        <referencedby refid="classCEasterEgg2_1a51f0540313b60b10a5cdc107b8fab02c" compoundref="EasterEgg2_8cpp" startline="9" endline="14">CEasterEgg2::CEasterEgg2</referencedby>
+        <referencedby refid="classCEasterEgg3_1a0b9268a14042b16034e66e5bd578a703" compoundref="EasterEgg3_8cpp" startline="9" endline="14">CEasterEgg3::CEasterEgg3</referencedby>
+        <referencedby refid="classCEmptyItem_1ab0847a3713ef7e1c90c15daa1c0288a5" compoundref="EmptyItem_8cpp" startline="9" endline="14">CEmptyItem::CEmptyItem</referencedby>
+        <referencedby refid="classCGluWaterCan_1a5704917340f9e22a0300d1a0cd938f26" compoundref="GluWaterCan_8cpp" startline="9" endline="14">CGluWaterCan::CGluWaterCan</referencedby>
+        <referencedby refid="classCHumanCan_1a82f41175f9e0a4e7f5d96518221a0ea7" compoundref="HumanCan_8cpp" startline="9" endline="14">CHumanCan::CHumanCan</referencedby>
+        <referencedby refid="classCMelonCan_1a68b89540d874f90fcd35c2876539baa7" compoundref="MelonCan_8cpp" startline="9" endline="14">CMelonCan::CMelonCan</referencedby>
+        <referencedby refid="classCMtnDewCan_1a5ee3eabfb4e15018c9e770d2d27a909c" compoundref="MtnDewCan_8cpp" startline="9" endline="14">CMtnDewCan::CMtnDewCan</referencedby>
+        <referencedby refid="classCPeasCan_1a97442973d593fcfcef6921959bfa12b0" compoundref="PeasCan_8cpp" startline="9" endline="14">CPeasCan::CPeasCan</referencedby>
+        <referencedby refid="classCRedMonsterCan_1ad1a923198eb09612b12d2f8090a7506c" compoundref="RedMonsterCan_8cpp" startline="9" endline="14">CRedMonsterCan::CRedMonsterCan</referencedby>
+        <referencedby refid="classCRootBeerFloatsCan_1ae920ef576cd4efc6379b7f3d0b7a04f9" compoundref="RootBeerFloatsCan_8cpp" startline="9" endline="14">CRootBeerFloatsCan::CRootBeerFloatsCan</referencedby>
+        <referencedby refid="classCSardineCan_1aec24764af29a5cf8c2acf3ddf19ccc78" compoundref="SardineCan_8cpp" startline="9" endline="14">CSardineCan::CSardineCan</referencedby>
+        <referencedby refid="classCSodaCan_1a31d38248fa2c7766978b79410b00f4ae" compoundref="SodaCan_8cpp" startline="9" endline="14">CSodaCan::CSodaCan</referencedby>
+        <referencedby refid="classCSodaFestCan_1ae5c7be0ce0c34da89adb6e76dd06e220" compoundref="SodaFestCan_8cpp" startline="9" endline="14">CSodaFestCan::CSodaFestCan</referencedby>
+        <referencedby refid="classCTomatoCan_1ab96816f2b6102f184ee32d9a36b241cf" compoundref="TomatoCan_8cpp" startline="9" endline="14">CTomatoCan::CTomatoCan</referencedby>
+        <referencedby refid="classCVargaCan_1ab3a391130238050a85fdabaff47653d5" compoundref="VargaCan_8cpp" startline="9" endline="14">CVargaCan::CVargaCan</referencedby>
+        <referencedby refid="classCWinebottle1_1add76c501b400f7e1d0e27fb97863fa28" compoundref="Winebottle1_8cpp" startline="9" endline="14">CWinebottle1::CWinebottle1</referencedby>
+        <referencedby refid="classCWinebottle2_1a51ef446e24143cfb4e0e97eac9f7e40b" compoundref="Winebottle2_8cpp" startline="9" endline="14">CWinebottle2::CWinebottle2</referencedby>
+        <referencedby refid="classCWinebottle3_1accaea4ef8a24966a455d2dec8f5caf3d" compoundref="Winebottle3_8cpp" startline="9" endline="14">CWinebottle3::CWinebottle3</referencedby>
+        <referencedby refid="classCWinebottle4_1ab389309af64f172d814e32ec0a6498f9" compoundref="Winebottle4_8cpp" startline="9" endline="14">CWinebottle4::CWinebottle4</referencedby>
+        <referencedby refid="classCWinebottle5_1a720a76a23a91bdd5b4c6321629b36197" compoundref="Winebottle5_8cpp" startline="9" endline="14">CWinebottle5::CWinebottle5</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setGeoType</definition>
+        <argsstring>(int type)</argsstring>
+        <name>setGeoType</name>
+        <param>
+          <type>int</type>
+          <declname>type</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the item geometry type. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set item geometry type </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="78" bodyend="81"/>
+        <references refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" compoundref="Item_8h" startline="37">objectType</references>
+        <referencedby refid="classCBeansCan_1a420bb71ba982ff6a3b5e68cad0d19474" compoundref="BeansCan_8cpp" startline="9" endline="14">CBeansCan::CBeansCan</referencedby>
+        <referencedby refid="classCBranCan_1a571e75503719063a518aa026809b6588" compoundref="BranCan_8cpp" startline="9" endline="14">CBranCan::CBranCan</referencedby>
+        <referencedby refid="classCBrownCan_1ae1d95ed3d9babad2c274bfab024bfc10" compoundref="BrownCan_8cpp" startline="9" endline="14">CBrownCan::CBrownCan</referencedby>
+        <referencedby refid="classCCerealBox1_1a6187db3f74a8a1799a79b7ae6e8771d9" compoundref="CerealBox1_8cpp" startline="9" endline="14">CCerealBox1::CCerealBox1</referencedby>
+        <referencedby refid="classCCerealBox2_1a11cf811eb461173d87c4d9b095cf6f53" compoundref="CerealBox2_8cpp" startline="9" endline="14">CCerealBox2::CCerealBox2</referencedby>
+        <referencedby refid="classCCerealBox3_1a83bf7de493d27f7f9e39b1fd7c39eac1" compoundref="CerealBox3_8cpp" startline="9" endline="14">CCerealBox3::CCerealBox3</referencedby>
+        <referencedby refid="classCCerealBox4_1a1fc8bb1bca89978c88960cac8f6b05c1" compoundref="CerealBox4_8cpp" startline="9" endline="14">CCerealBox4::CCerealBox4</referencedby>
+        <referencedby refid="classCCerealBox5_1acfa24b47869bbf20fa08c89ce26454b4" compoundref="CerealBox5_8cpp" startline="9" endline="14">CCerealBox5::CCerealBox5</referencedby>
+        <referencedby refid="classCEasterEgg1_1afa80f1edd0c1ea52e5099065ff9d646e" compoundref="EasterEgg1_8cpp" startline="9" endline="14">CEasterEgg1::CEasterEgg1</referencedby>
+        <referencedby refid="classCEasterEgg2_1a51f0540313b60b10a5cdc107b8fab02c" compoundref="EasterEgg2_8cpp" startline="9" endline="14">CEasterEgg2::CEasterEgg2</referencedby>
+        <referencedby refid="classCEasterEgg3_1a0b9268a14042b16034e66e5bd578a703" compoundref="EasterEgg3_8cpp" startline="9" endline="14">CEasterEgg3::CEasterEgg3</referencedby>
+        <referencedby refid="classCEmptyItem_1ab0847a3713ef7e1c90c15daa1c0288a5" compoundref="EmptyItem_8cpp" startline="9" endline="14">CEmptyItem::CEmptyItem</referencedby>
+        <referencedby refid="classCGluWaterCan_1a5704917340f9e22a0300d1a0cd938f26" compoundref="GluWaterCan_8cpp" startline="9" endline="14">CGluWaterCan::CGluWaterCan</referencedby>
+        <referencedby refid="classCHumanCan_1a82f41175f9e0a4e7f5d96518221a0ea7" compoundref="HumanCan_8cpp" startline="9" endline="14">CHumanCan::CHumanCan</referencedby>
+        <referencedby refid="classCMelonCan_1a68b89540d874f90fcd35c2876539baa7" compoundref="MelonCan_8cpp" startline="9" endline="14">CMelonCan::CMelonCan</referencedby>
+        <referencedby refid="classCMtnDewCan_1a5ee3eabfb4e15018c9e770d2d27a909c" compoundref="MtnDewCan_8cpp" startline="9" endline="14">CMtnDewCan::CMtnDewCan</referencedby>
+        <referencedby refid="classCPeasCan_1a97442973d593fcfcef6921959bfa12b0" compoundref="PeasCan_8cpp" startline="9" endline="14">CPeasCan::CPeasCan</referencedby>
+        <referencedby refid="classCRedMonsterCan_1ad1a923198eb09612b12d2f8090a7506c" compoundref="RedMonsterCan_8cpp" startline="9" endline="14">CRedMonsterCan::CRedMonsterCan</referencedby>
+        <referencedby refid="classCRootBeerFloatsCan_1ae920ef576cd4efc6379b7f3d0b7a04f9" compoundref="RootBeerFloatsCan_8cpp" startline="9" endline="14">CRootBeerFloatsCan::CRootBeerFloatsCan</referencedby>
+        <referencedby refid="classCSardineCan_1aec24764af29a5cf8c2acf3ddf19ccc78" compoundref="SardineCan_8cpp" startline="9" endline="14">CSardineCan::CSardineCan</referencedby>
+        <referencedby refid="classCSodaCan_1a31d38248fa2c7766978b79410b00f4ae" compoundref="SodaCan_8cpp" startline="9" endline="14">CSodaCan::CSodaCan</referencedby>
+        <referencedby refid="classCSodaFestCan_1ae5c7be0ce0c34da89adb6e76dd06e220" compoundref="SodaFestCan_8cpp" startline="9" endline="14">CSodaFestCan::CSodaFestCan</referencedby>
+        <referencedby refid="classCTomatoCan_1ab96816f2b6102f184ee32d9a36b241cf" compoundref="TomatoCan_8cpp" startline="9" endline="14">CTomatoCan::CTomatoCan</referencedby>
+        <referencedby refid="classCVargaCan_1ab3a391130238050a85fdabaff47653d5" compoundref="VargaCan_8cpp" startline="9" endline="14">CVargaCan::CVargaCan</referencedby>
+        <referencedby refid="classCWinebottle1_1add76c501b400f7e1d0e27fb97863fa28" compoundref="Winebottle1_8cpp" startline="9" endline="14">CWinebottle1::CWinebottle1</referencedby>
+        <referencedby refid="classCWinebottle2_1a51ef446e24143cfb4e0e97eac9f7e40b" compoundref="Winebottle2_8cpp" startline="9" endline="14">CWinebottle2::CWinebottle2</referencedby>
+        <referencedby refid="classCWinebottle3_1accaea4ef8a24966a455d2dec8f5caf3d" compoundref="Winebottle3_8cpp" startline="9" endline="14">CWinebottle3::CWinebottle3</referencedby>
+        <referencedby refid="classCWinebottle4_1ab389309af64f172d814e32ec0a6498f9" compoundref="Winebottle4_8cpp" startline="9" endline="14">CWinebottle4::CWinebottle4</referencedby>
+        <referencedby refid="classCWinebottle5_1a720a76a23a91bdd5b4c6321629b36197" compoundref="Winebottle5_8cpp" startline="9" endline="14">CWinebottle5::CWinebottle5</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setXpos</definition>
+        <argsstring>(float posX)</argsstring>
+        <name>setXpos</name>
+        <param>
+          <type>float</type>
+          <declname>posX</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the x position of the item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set item X position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="102" bodyend="105"/>
+        <references refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" compoundref="Item_8h" startline="38">x</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setYpos</definition>
+        <argsstring>(float posY)</argsstring>
+        <name>setYpos</name>
+        <param>
+          <type>float</type>
+          <declname>posY</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the y position of the item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set item Y position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="22" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="114" bodyend="117"/>
+        <references refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" compoundref="Item_8h" startline="39">y</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a87034717276be8d5c3d39edbdcf7417e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setZpos</definition>
+        <argsstring>(float posZ)</argsstring>
+        <name>setZpos</name>
+        <param>
+          <type>float</type>
+          <declname>posZ</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the z position of the item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>posX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set item Z position </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="23" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="126" bodyend="129"/>
+        <references refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" compoundref="Item_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CItem::setActiveState</definition>
+        <argsstring>(bool setActive)</argsstring>
+        <name>setActiveState</name>
+        <param>
+          <type>bool</type>
+          <declname>setActive</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the active state of the item. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>setActive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- set active state of item </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="24" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="90" bodyend="93"/>
+        <references refid="classCItem_1adac2b51499cdc78208396440324cbdc4" compoundref="Item_8h" startline="41">active</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool CItem::getActiveState</definition>
+        <argsstring>()</argsstring>
+        <name>getActiveState</name>
+        <briefdescription>
+<para>Accessor function for item active state. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item active state </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="25" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="138" bodyend="141"/>
+        <references refid="classCItem_1adac2b51499cdc78208396440324cbdc4" compoundref="Item_8h" startline="41">active</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1aa34235d3cd780cef7fc7461387f6b081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CItem::getXpos</definition>
+        <argsstring>()</argsstring>
+        <name>getXpos</name>
+        <briefdescription>
+<para>Accessor function for item x position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item X position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="162" bodyend="165"/>
+        <references refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" compoundref="Item_8h" startline="38">x</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CItem::getYpos</definition>
+        <argsstring>()</argsstring>
+        <name>getYpos</name>
+        <briefdescription>
+<para>Accessor function for item y position. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item Yposition </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="174" bodyend="177"/>
+        <references refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" compoundref="Item_8h" startline="39">y</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1ab9a6defffbef320655a11faab524e915" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CItem::getZpos</definition>
+        <argsstring>()</argsstring>
+        <name>getZpos</name>
+        <briefdescription>
+<para>Accessor function for item Zposition. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item Z position </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="186" bodyend="189"/>
+        <references refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" compoundref="Item_8h" startline="40">z</references>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string CItem::getName</definition>
+        <argsstring>()</argsstring>
+        <name>getName</name>
+        <briefdescription>
+<para>Accessor function for item name. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item name </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="29" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="198" bodyend="201"/>
+        <references refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" compoundref="Item_8h" startline="35">name</references>
+        <referencedby refid="classSceneSP_1a516f7251a5124ef02a4404296f01ffbd" compoundref="SceneSP_8cpp" startline="792" endline="798">SceneSP::addToInventory</referencedby>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" compoundref="SceneSP_8cpp" startline="5253" endline="5303">SceneSP::checkWinLose</referencedby>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+        <referencedby refid="classSceneSP_1ae5b83c001320f3ab83ceee51124d86aa" compoundref="SceneSP_8cpp" startline="3205" endline="3243">SceneSP::RenderUI</referencedby>
+        <referencedby refid="classSceneSP_1aa0e203afe09c6f065bd7cb393de07fb1" compoundref="SceneSP_8cpp" startline="1897" endline="1972">SceneSP::UpdatePlayerSelection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a916597368755e28b6edb8af37acc1ad6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CItem::getGeoType</definition>
+        <argsstring>()</argsstring>
+        <name>getGeoType</name>
+        <briefdescription>
+<para>Accessor function for item geometry type. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item geometry type </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="30" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="150" bodyend="153"/>
+        <references refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" compoundref="Item_8h" startline="37">objectType</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+        <referencedby refid="classSceneSP_1a414b8e3dac73778cce85767d5cae8822" compoundref="SceneSP_8cpp" startline="3572" endline="3611">SceneSP::RenderHand</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CItem::getPrice</definition>
+        <argsstring>()</argsstring>
+        <name>getPrice</name>
+        <briefdescription>
+<para>Accessor function for item price. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item price </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="31" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="210" bodyend="213"/>
+        <references refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" compoundref="Item_8h" startline="36">price</references>
+        <referencedby refid="classSceneSP_1a0cb20bb43706bbd74745f2466fb3f534" compoundref="SceneSP_8cpp" startline="755" endline="783">SceneSP::DefineItem</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCItem_1a00aeafeeaf647c7059b9d325ac5a1108" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CItem::~CItem</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CItem</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="32" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.cpp" bodystart="43" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Defines item class. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class Item: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="777">
+        <label>CRootBeerFloatsCan</label>
+        <link refid="classCRootBeerFloatsCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="780">
+        <label>CSodaFestCan</label>
+        <link refid="classCSodaFestCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="770">
+        <label>CEmptyItem</label>
+        <link refid="classCEmptyItem"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="772">
+        <label>CHumanCan</label>
+        <link refid="classCHumanCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="779">
+        <label>CSodaCan</label>
+        <link refid="classCSodaCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="782">
+        <label>CVargaCan</label>
+        <link refid="classCVargaCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="776">
+        <label>CRedMonsterCan</label>
+        <link refid="classCRedMonsterCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="758">
+        <label>CItem</label>
+        <link refid="classCItem"/>
+      </node>
+      <node id="778">
+        <label>CSardineCan</label>
+        <link refid="classCSardineCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="775">
+        <label>CPeasCan</label>
+        <link refid="classCPeasCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="783">
+        <label>CWinebottle1</label>
+        <link refid="classCWinebottle1"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="784">
+        <label>CWinebottle2</label>
+        <link refid="classCWinebottle2"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="785">
+        <label>CWinebottle3</label>
+        <link refid="classCWinebottle3"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="786">
+        <label>CWinebottle4</label>
+        <link refid="classCWinebottle4"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="787">
+        <label>CWinebottle5</label>
+        <link refid="classCWinebottle5"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="762">
+        <label>CCerealBox1</label>
+        <link refid="classCCerealBox1"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="763">
+        <label>CCerealBox2</label>
+        <link refid="classCCerealBox2"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="764">
+        <label>CCerealBox3</label>
+        <link refid="classCCerealBox3"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="765">
+        <label>CCerealBox4</label>
+        <link refid="classCCerealBox4"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="766">
+        <label>CCerealBox5</label>
+        <link refid="classCCerealBox5"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="774">
+        <label>CMtnDewCan</label>
+        <link refid="classCMtnDewCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="767">
+        <label>CEasterEgg1</label>
+        <link refid="classCEasterEgg1"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="768">
+        <label>CEasterEgg2</label>
+        <link refid="classCEasterEgg2"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="769">
+        <label>CEasterEgg3</label>
+        <link refid="classCEasterEgg3"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="759">
+        <label>CBeansCan</label>
+        <link refid="classCBeansCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="771">
+        <label>CGluWaterCan</label>
+        <link refid="classCGluWaterCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="773">
+        <label>CMelonCan</label>
+        <link refid="classCMelonCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="761">
+        <label>CBrownCan</label>
+        <link refid="classCBrownCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="760">
+        <label>CBranCan</label>
+        <link refid="classCBranCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="781">
+        <label>CTomatoCan</label>
+        <link refid="classCTomatoCan"/>
+        <childnode refid="758" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="788">
+        <label>CItem</label>
+        <link refid="classCItem"/>
+        <childnode refid="789" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+          <edgelabel>price</edgelabel>
+        </childnode>
+        <childnode refid="790" relation="usage">
+          <edgelabel>objectType</edgelabel>
+        </childnode>
+        <childnode refid="791" relation="usage">
+          <edgelabel>active</edgelabel>
+        </childnode>
+        <childnode refid="792" relation="usage">
+          <edgelabel>name</edgelabel>
+        </childnode>
+      </node>
+      <node id="792">
+        <label>string</label>
+      </node>
+      <node id="789">
+        <label>float</label>
+      </node>
+      <node id="790">
+        <label>int</label>
+      </node>
+      <node id="791">
+        <label>bool</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" line="14" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Item.h" bodystart="13" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classCItem_1adac2b51499cdc78208396440324cbdc4" prot="private" virt="non-virtual"><scope>CItem</scope><name>active</name></member>
+      <member refid="classCItem_1aa476a2d773330b4e6c0e8d33bd722185" prot="public" virt="non-virtual"><scope>CItem</scope><name>CItem</name></member>
+      <member refid="classCItem_1a1df3074023a1ee0668eec574a637c121" prot="public" virt="non-virtual"><scope>CItem</scope><name>CItem</name></member>
+      <member refid="classCItem_1ae435f085df82fc3043d7fb51aa8e6117" prot="public" virt="non-virtual"><scope>CItem</scope><name>getActiveState</name></member>
+      <member refid="classCItem_1a916597368755e28b6edb8af37acc1ad6" prot="public" virt="non-virtual"><scope>CItem</scope><name>getGeoType</name></member>
+      <member refid="classCItem_1a7343eafabf4f5789dd6c423b92c1650c" prot="public" virt="non-virtual"><scope>CItem</scope><name>getName</name></member>
+      <member refid="classCItem_1a6375bf21ba971d20a25fd8888d083f5a" prot="public" virt="non-virtual"><scope>CItem</scope><name>getPrice</name></member>
+      <member refid="classCItem_1aa34235d3cd780cef7fc7461387f6b081" prot="public" virt="non-virtual"><scope>CItem</scope><name>getXpos</name></member>
+      <member refid="classCItem_1a8aa0fe83a787d085b82b970961d0a2ee" prot="public" virt="non-virtual"><scope>CItem</scope><name>getYpos</name></member>
+      <member refid="classCItem_1ab9a6defffbef320655a11faab524e915" prot="public" virt="non-virtual"><scope>CItem</scope><name>getZpos</name></member>
+      <member refid="classCItem_1ae1b889ccadab7241ef622ece191e1604" prot="private" virt="non-virtual"><scope>CItem</scope><name>name</name></member>
+      <member refid="classCItem_1a38f1c6a2b4b0e85fc163e93a2d18ee25" prot="private" virt="non-virtual"><scope>CItem</scope><name>objectType</name></member>
+      <member refid="classCItem_1a26d5fed2d0b4311237015abb1fa3579c" prot="private" virt="non-virtual"><scope>CItem</scope><name>price</name></member>
+      <member refid="classCItem_1a01bfd6634c9a15e74479b5e054bd7e3c" prot="public" virt="non-virtual"><scope>CItem</scope><name>setActiveState</name></member>
+      <member refid="classCItem_1aa0741ad558e4eef8c1b00cd6c70ab848" prot="public" virt="non-virtual"><scope>CItem</scope><name>setGeoType</name></member>
+      <member refid="classCItem_1a66aaf6da5435db163e72d3572c9f577f" prot="public" virt="non-virtual"><scope>CItem</scope><name>setName</name></member>
+      <member refid="classCItem_1a9ed3645eac72541e48cef6f98cbcf503" prot="public" virt="non-virtual"><scope>CItem</scope><name>setPrice</name></member>
+      <member refid="classCItem_1a37d6169456ff16a35dfb1ea8f9acbc51" prot="public" virt="non-virtual"><scope>CItem</scope><name>setXpos</name></member>
+      <member refid="classCItem_1a4c2df6c43d43288b212a48d5cb9e156e" prot="public" virt="non-virtual"><scope>CItem</scope><name>setYpos</name></member>
+      <member refid="classCItem_1a87034717276be8d5c3d39edbdcf7417e" prot="public" virt="non-virtual"><scope>CItem</scope><name>setZpos</name></member>
+      <member refid="classCItem_1a7c1874b5ff192ace386f1e9893972e46" prot="private" virt="non-virtual"><scope>CItem</scope><name>x</name></member>
+      <member refid="classCItem_1a92c2828730ed868dece3a0f6948f956b" prot="private" virt="non-virtual"><scope>CItem</scope><name>y</name></member>
+      <member refid="classCItem_1a8f7b5d91127f858aae637d8a21f89add" prot="private" virt="non-virtual"><scope>CItem</scope><name>z</name></member>
+      <member refid="classCItem_1a00aeafeeaf647c7059b9d325ac5a1108" prot="public" virt="non-virtual"><scope>CItem</scope><name>~CItem</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

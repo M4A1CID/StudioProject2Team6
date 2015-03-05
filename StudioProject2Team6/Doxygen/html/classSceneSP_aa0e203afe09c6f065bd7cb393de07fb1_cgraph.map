@@ -1,0 +1,6 @@
+<map id="SceneSP::UpdatePlayerSelection" name="SceneSP::UpdatePlayerSelection">
+<area shape="rect" id="node2" href="$classCPlayer.html#aa5acefb8c6837741ac85426e93ff0b69" title="Accessor function for the items held by the player. " alt="" coords="299,5,417,32"/>
+<area shape="rect" id="node3" href="$classCPlayer.html#a0a51abd578e68eaa554eabee62a9079d" title="Accessor function for the number of items the player is holding. " alt="" coords="285,56,431,83"/>
+<area shape="rect" id="node4" href="$classCItem.html#a7343eafabf4f5789dd6c423b92c1650c" title="Accessor function for item name. " alt="" coords="300,107,416,133"/>
+<area shape="rect" id="node5" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="271,157,445,184"/>
+</map>

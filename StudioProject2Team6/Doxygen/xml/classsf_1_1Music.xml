@@ -1,0 +1,490 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classsf_1_1Music" kind="class" prot="public">
+    <compoundname>sf::Music</compoundname>
+    <basecompoundref refid="classsf_1_1SoundStream" prot="public" virt="non-virtual">sf::SoundStream</basecompoundref>
+    <includes refid="Music_8hpp" local="no">Music.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classsf_1_1Music_1ac1169fba9f8d9cdb5cf1f997cf03d573" prot="private" static="no" mutable="no">
+        <type>priv::SoundFile *</type>
+        <definition>priv::SoundFile* sf::Music::m_file</definition>
+        <argsstring></argsstring>
+        <name>m_file</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Sound" kindref="compound">Sound</ref> file. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="173" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Music_1acfae7b78c739f1b2328413ceb5663f42" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>Time sf::Music::m_duration</definition>
+        <argsstring></argsstring>
+        <name>m_duration</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Music" kindref="compound">Music</ref> duration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="174" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Music_1af9a047420c96cf7d3013404b6125c5c3" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="namespacesf_1a3c8e10435e2a310a7741755e66b5c94e" kindref="member">Int16</ref> &gt;</type>
+        <definition>std::vector&lt;Int16&gt; sf::Music::m_samples</definition>
+        <argsstring></argsstring>
+        <name>m_samples</name>
+        <briefdescription>
+<para>Temporary buffer of samples. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="175" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classsf_1_1Music_1a47cf4b92edf2f2e936a91b8a5cfa6824" prot="private" static="no" mutable="no">
+        <type><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref></type>
+        <definition>Mutex sf::Music::m_mutex</definition>
+        <argsstring></argsstring>
+        <name>m_mutex</name>
+        <briefdescription>
+<para><ref refid="classsf_1_1Mutex" kindref="compound">Mutex</ref> protecting the data. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="176" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classsf_1_1Music_1a0bc787d8e022b3a9b89cf2c28befd42e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Music::Music</definition>
+        <argsstring>()</argsstring>
+        <name>Music</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="60" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Music_1a4c65860fed2f01d0eaa6c4199870414b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>sf::Music::~Music</definition>
+        <argsstring>()</argsstring>
+        <name>~Music</name>
+        <briefdescription>
+<para>Destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="66" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Music_1a3edc66e5f5b3f11e84b90eaec9c7d7c0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::Music::openFromFile</definition>
+        <argsstring>(const std::string &amp;filename)</argsstring>
+        <name>openFromFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <briefdescription>
+<para>Open a music from an audio file. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function doesn&apos;t start playing the music (call <ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play()</ref> to do so). Here is a complete list of all the supported audio formats: ogg, wav, flac, aiff, au, raw, paf, svx, nist, voc, ircam, w64, mat4, mat5 pvf, htk, sds, avr, sd2, caf, wve, mpc2k, rf64.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Path of the music file to open</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if loading succeeded, false if it failed</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Music_1ae93b21bcf28ff0b5fec458039111386e" kindref="member">openFromMemory</ref>, <ref refid="classsf_1_1Music_1a4e55d1910a26858b44778c26b237d673" kindref="member">openFromStream</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="84" column="1"/>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1a9d736fb66a1ce2d4e102f483f7034ace" compoundref="SceneSP_8cpp" startline="2960" endline="3011">SceneSP::UpdateCage</referencedby>
+        <referencedby refid="classSceneSP_1a62815fc7bf3ff5937dc6f7a5f6cd14ff" compoundref="SceneSP_8cpp" startline="1797" endline="1890">SceneSP::UpdateDoor</referencedby>
+        <referencedby refid="classSceneSP_1a122e2cac2a30e66b0414e618cf546411" compoundref="SceneSP_8cpp" startline="1662" endline="1762">SceneSP::UpdateElevator</referencedby>
+        <referencedby refid="classSceneSP_1a2963d58071297789ad0c567c41dd5dbd" compoundref="SceneSP_8cpp" startline="3020" endline="3054">SceneSP::UpdateGaben</referencedby>
+        <referencedby refid="classSceneSP_1a2a3538fcae1edb1cc53f9ea8c1e7897e" compoundref="SceneSP_8cpp" startline="3101" endline="3151">SceneSP::UpdateMiscEasteregg</referencedby>
+        <referencedby refid="classSceneSP_1a82c8d6c68ad062038524b06c1921c9aa" compoundref="SceneSP_8cpp" startline="1486" endline="1611">SceneSP::UpdatePlaying</referencedby>
+        <referencedby refid="classSceneSP_1a41d8943d3f6a1c79a52b8875e6ccda67" compoundref="SceneSP_8cpp" startline="2030" endline="2050">SceneSP::UpdateSamples</referencedby>
+        <referencedby refid="classSceneSP_1a8773475b7b228451b8a96aeb1912fb30" compoundref="SceneSP_8cpp" startline="3063" endline="3092">SceneSP::UpdateTroll</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Music_1ae93b21bcf28ff0b5fec458039111386e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::Music::openFromMemory</definition>
+        <argsstring>(const void *data, std::size_t sizeInBytes)</argsstring>
+        <name>openFromMemory</name>
+        <param>
+          <type>const void *</type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>std::size_t</type>
+          <declname>sizeInBytes</declname>
+        </param>
+        <briefdescription>
+<para>Open a music from an audio file in memory. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function doesn&apos;t start playing the music (call <ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play()</ref> to do so). Here is a complete list of all the supported audio formats: ogg, wav, flac, aiff, au, raw, paf, svx, nist, voc, ircam, w64, mat4, mat5 pvf, htk, sds, avr, sd2, caf, wve, mpc2k, rf64. Since the music is not loaded completely but rather streamed continuously, the <emphasis>data</emphasis> must remain available as long as the music is playing (i.e. you can&apos;t deallocate it right after calling this function).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the file data in memory </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizeInBytes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Size of the data to load, in bytes</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if loading succeeded, false if it failed</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Music_1a3edc66e5f5b3f11e84b90eaec9c7d7c0" kindref="member">openFromFile</ref>, <ref refid="classsf_1_1Music_1a4e55d1910a26858b44778c26b237d673" kindref="member">openFromStream</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="107" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Music_1a4e55d1910a26858b44778c26b237d673" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool sf::Music::openFromStream</definition>
+        <argsstring>(InputStream &amp;stream)</argsstring>
+        <name>openFromStream</name>
+        <param>
+          <type><ref refid="classsf_1_1InputStream" kindref="compound">InputStream</ref> &amp;</type>
+          <declname>stream</declname>
+        </param>
+        <briefdescription>
+<para>Open a music from an audio file in a custom stream. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function doesn&apos;t start playing the music (call <ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play()</ref> to do so). Here is a complete list of all the supported audio formats: ogg, wav, flac, aiff, au, raw, paf, svx, nist, voc, ircam, w64, mat4, mat5 pvf, htk, sds, avr, sd2, caf, wve, mpc2k, rf64. Since the music is not loaded completely but rather streamed continuously, the <emphasis>stream</emphasis> must remain alive as long as the music is playing (i.e. you can&apos;t destroy it right after calling this function).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>stream</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Source stream to read from</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if loading succeeded, false if it failed</para></simplesect>
+<simplesect kind="see"><para><ref refid="classsf_1_1Music_1a3edc66e5f5b3f11e84b90eaec9c7d7c0" kindref="member">openFromFile</ref>, <ref refid="classsf_1_1Music_1ae93b21bcf28ff0b5fec458039111386e" kindref="member">openFromMemory</ref> </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="129" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Music_1af4738b69c4c5038f71414ad7ffbbdc2b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+        <definition>Time sf::Music::getDuration</definition>
+        <argsstring>() const </argsstring>
+        <name>getDuration</name>
+        <briefdescription>
+<para>Get the total duration of the music. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classsf_1_1Music" kindref="compound">Music</ref> duration </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="137" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classsf_1_1Music_1aca1bcb4e5d56a854133e74bd86374463" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool sf::Music::onGetData</definition>
+        <argsstring>(Chunk &amp;data)</argsstring>
+        <name>onGetData</name>
+        <reimplements refid="classsf_1_1SoundStream_1a968ec024a6e45490962c8a1121cb7c5f">onGetData</reimplements>
+        <param>
+          <type><ref refid="structsf_1_1SoundStream_1_1Chunk" kindref="compound">Chunk</ref> &amp;</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>Request a new chunk of audio samples from the stream source. </para>        </briefdescription>
+        <detaileddescription>
+<para>This function fills the chunk from the next samples to read from the audio file.</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Chunk of data to fill</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True to continue playback, false to stop </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="152" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classsf_1_1Music_1a15119cc0419c16bb334fa0698699c02e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void sf::Music::onSeek</definition>
+        <argsstring>(Time timeOffset)</argsstring>
+        <name>onSeek</name>
+        <reimplements refid="classsf_1_1SoundStream_1a907036dd2ca7d3af5ead316e54b75997">onSeek</reimplements>
+        <param>
+          <type><ref refid="classsf_1_1Time" kindref="compound">Time</ref></type>
+          <declname>timeOffset</declname>
+        </param>
+        <briefdescription>
+<para>Change the current playing position in the stream source. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>timeOffset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>New playing position, from the beginning of the music </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="160" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classsf_1_1Music_1a5da7929d371fda9bb5fdbb0ee0fdce5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void sf::Music::initialize</definition>
+        <argsstring>()</argsstring>
+        <name>initialize</name>
+        <briefdescription>
+<para>Initialize the internal state after loading a new music. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="168" column="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Streamed music played from an audio file. </para>    </briefdescription>
+    <detaileddescription>
+<para><ref refid="classsf_1_1Music" kindref="compound">Music</ref> objects are sounds that are streamed rather than completely loaded in memory.</para><para>This is especially useful for compressed music that usually takes hundreds of MB when it is uncompressed: by streaming it instead of loading it entirely, you avoid saturating the memory and have almost no loading delay.</para><para>Apart from that, <ref refid="classsf_1_1Music" kindref="compound">sf::Music</ref> has almost the same features as the <ref refid="classsf_1_1SoundBuffer" kindref="compound">sf::SoundBuffer</ref> / <ref refid="classsf_1_1Sound" kindref="compound">sf::Sound</ref> pair: you can play/pause/stop it, request its parameters (channels, sample rate), change the way it is played (pitch, volume, 3D position, ...), etc.</para><para>As a sound stream, a music is played in its own thread in order not to block the rest of the program. This means that you can leave the music alone after calling <ref refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" kindref="member">play()</ref>, it will manage itself very well.</para><para>Usage example: <programlisting><codeline><highlight class="normal">//<sp/>Declare<sp/>a<sp/>new<sp/>music</highlight></codeline>
+<codeline><highlight class="normal">sf::Music<sp/>music;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Open<sp/>it<sp/>from<sp/>an<sp/>audio<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>(!music.openFromFile(&quot;music.ogg&quot;))</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>error...</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Change<sp/>some<sp/>parameters</highlight></codeline>
+<codeline><highlight class="normal">music.setPosition(0,<sp/>1,<sp/>10);<sp/>//<sp/>change<sp/>its<sp/>3D<sp/>position</highlight></codeline>
+<codeline><highlight class="normal">music.setPitch(2);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>increase<sp/>the<sp/>pitch</highlight></codeline>
+<codeline><highlight class="normal">music.setVolume(50);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>reduce<sp/>the<sp/>volume</highlight></codeline>
+<codeline><highlight class="normal">music.setLoop(true);<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>make<sp/>it<sp/>loop</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>Play<sp/>it</highlight></codeline>
+<codeline><highlight class="normal">music.play();</highlight></codeline>
+</programlisting></para><para><simplesect kind="see"><para><ref refid="classsf_1_1Sound" kindref="compound">sf::Sound</ref>, <ref refid="classsf_1_1SoundStream" kindref="compound">sf::SoundStream</ref> </para></simplesect>
+</para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="981">
+        <label>sf::SoundStream</label>
+        <link refid="classsf_1_1SoundStream"/>
+        <childnode refid="982" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="980">
+        <label>sf::Music</label>
+        <link refid="classsf_1_1Music"/>
+        <childnode refid="981" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="982">
+        <label>sf::SoundSource</label>
+        <link refid="classsf_1_1SoundSource"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="994">
+        <label>sf::Mutex</label>
+        <link refid="classsf_1_1Mutex"/>
+        <childnode refid="989" relation="private-inheritance">
+        </childnode>
+        <childnode refid="995" relation="usage">
+          <edgelabel>m_mutexImpl</edgelabel>
+        </childnode>
+      </node>
+      <node id="996">
+        <label>Status</label>
+      </node>
+      <node id="984">
+        <label>sf::SoundStream</label>
+        <link refid="classsf_1_1SoundStream"/>
+        <childnode refid="985" relation="public-inheritance">
+        </childnode>
+        <childnode refid="987" relation="usage">
+          <edgelabel>m_samplesProcessed</edgelabel>
+        </childnode>
+        <childnode refid="988" relation="usage">
+          <edgelabel>m_thread</edgelabel>
+        </childnode>
+        <childnode refid="992" relation="usage">
+          <edgelabel>m_isStreaming</edgelabel>
+          <edgelabel>m_loop</edgelabel>
+          <edgelabel>m_endBuffers</edgelabel>
+        </childnode>
+        <childnode refid="993" relation="usage">
+          <edgelabel>m_channelCount</edgelabel>
+          <edgelabel>m_format</edgelabel>
+          <edgelabel>m_sampleRate</edgelabel>
+          <edgelabel>m_buffers</edgelabel>
+        </childnode>
+        <childnode refid="994" relation="usage">
+          <edgelabel>m_threadMutex</edgelabel>
+        </childnode>
+        <childnode refid="996" relation="usage">
+          <edgelabel>m_threadStartState</edgelabel>
+        </childnode>
+      </node>
+      <node id="988">
+        <label>sf::Thread</label>
+        <link refid="classsf_1_1Thread"/>
+        <childnode refid="989" relation="private-inheritance">
+        </childnode>
+        <childnode refid="990" relation="usage">
+          <edgelabel>m_entryPoint</edgelabel>
+        </childnode>
+        <childnode refid="991" relation="usage">
+          <edgelabel>m_impl</edgelabel>
+        </childnode>
+      </node>
+      <node id="995">
+        <label>MutexImpl *</label>
+      </node>
+      <node id="990">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="983">
+        <label>sf::Music</label>
+        <link refid="classsf_1_1Music"/>
+        <childnode refid="984" relation="public-inheritance">
+        </childnode>
+        <childnode refid="997" relation="usage">
+          <edgelabel>m_duration</edgelabel>
+        </childnode>
+        <childnode refid="999" relation="usage">
+          <edgelabel>m_samples</edgelabel>
+        </childnode>
+        <childnode refid="1000" relation="usage">
+          <edgelabel>m_file</edgelabel>
+        </childnode>
+        <childnode refid="994" relation="usage">
+          <edgelabel>m_mutex</edgelabel>
+        </childnode>
+      </node>
+      <node id="987">
+        <label>unsigned long long</label>
+      </node>
+      <node id="997">
+        <label>sf::Time</label>
+        <link refid="classsf_1_1Time"/>
+        <childnode refid="997" relation="usage">
+          <edgelabel>Zero</edgelabel>
+        </childnode>
+        <childnode refid="998" relation="usage">
+          <edgelabel>m_microseconds</edgelabel>
+        </childnode>
+      </node>
+      <node id="991">
+        <label>ThreadImpl *</label>
+      </node>
+      <node id="1000">
+        <label>SoundFile *</label>
+      </node>
+      <node id="993">
+        <label>unsigned int</label>
+      </node>
+      <node id="998">
+        <label>signed long long</label>
+      </node>
+      <node id="999">
+        <label>vector&lt; Int16 &gt;</label>
+      </node>
+      <node id="986">
+        <label>unsigned</label>
+      </node>
+      <node id="989">
+        <label>sf::NonCopyable</label>
+        <link refid="classsf_1_1NonCopyable"/>
+      </node>
+      <node id="992">
+        <label>bool</label>
+      </node>
+      <node id="985">
+        <label>sf::SoundSource</label>
+        <link refid="classsf_1_1SoundSource"/>
+        <childnode refid="986" relation="usage">
+          <edgelabel>m_source</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" line="53" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/Audio/Music.hpp" bodystart="52" bodyend="177"/>
+    <listofallmembers>
+      <member refid="classsf_1_1SoundSource_1ac5f5ffef8930bb573f43d47cbc779bf6" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getAttenuation</name></member>
+      <member refid="classsf_1_1SoundStream_1a68dedd0a2c26e6937c80fab3d235edea" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getChannelCount</name></member>
+      <member refid="classsf_1_1Music_1af4738b69c4c5038f71414ad7ffbbdc2b" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getDuration</name></member>
+      <member refid="classsf_1_1SoundStream_1ad8bbf6c0d2ff2d75e19035dea3fd77c3" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getLoop</name></member>
+      <member refid="classsf_1_1SoundSource_1a3379b9f7a0f0e31ab9a4e5fa1762986e" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getMinDistance</name></member>
+      <member refid="classsf_1_1SoundSource_1aedad6aff442aeb6dcd267befd4fdbb59" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getPitch</name></member>
+      <member refid="classsf_1_1SoundStream_1a6070416e1e1a11b5915e9314dd6638f7" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getPlayingOffset</name></member>
+      <member refid="classsf_1_1SoundSource_1a4c3bc60286f488aaf2941ab76476eebc" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getPosition</name></member>
+      <member refid="classsf_1_1SoundStream_1aad1da51c7a752682ca208bf11e3349bb" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getSampleRate</name></member>
+      <member refid="classsf_1_1SoundStream_1a75f722e7edcfa9952ff0c643966c6858" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getStatus</name></member>
+      <member refid="classsf_1_1SoundSource_1aafb0558fce9cbebfc6828d932cbcce2f" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>getVolume</name></member>
+      <member refid="classsf_1_1Music_1a5da7929d371fda9bb5fdbb0ee0fdce5f" prot="private" virt="non-virtual"><scope>sf::Music</scope><name>initialize</name></member>
+      <member refid="classsf_1_1SoundStream_1a9c351711198ee1aa77c2fefd3ced4d2c" prot="protected" virt="non-virtual" ambiguityscope="sf::SoundStream::"><scope>sf::Music</scope><name>initialize</name></member>
+      <member refid="classsf_1_1SoundSource_1a5cb9107e1c47f65ab82c4885436061ef" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>isRelativeToListener</name></member>
+      <member refid="classsf_1_1Music_1acfae7b78c739f1b2328413ceb5663f42" prot="private" virt="non-virtual"><scope>sf::Music</scope><name>m_duration</name></member>
+      <member refid="classsf_1_1Music_1ac1169fba9f8d9cdb5cf1f997cf03d573" prot="private" virt="non-virtual"><scope>sf::Music</scope><name>m_file</name></member>
+      <member refid="classsf_1_1Music_1a47cf4b92edf2f2e936a91b8a5cfa6824" prot="private" virt="non-virtual"><scope>sf::Music</scope><name>m_mutex</name></member>
+      <member refid="classsf_1_1Music_1af9a047420c96cf7d3013404b6125c5c3" prot="private" virt="non-virtual"><scope>sf::Music</scope><name>m_samples</name></member>
+      <member refid="classsf_1_1SoundSource_1a0223cef4b1c587e6e1e17b4c92c4479c" prot="protected" virt="non-virtual"><scope>sf::Music</scope><name>m_source</name></member>
+      <member refid="classsf_1_1Music_1a0bc787d8e022b3a9b89cf2c28befd42e" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>Music</name></member>
+      <member refid="classsf_1_1Music_1aca1bcb4e5d56a854133e74bd86374463" prot="protected" virt="virtual"><scope>sf::Music</scope><name>onGetData</name></member>
+      <member refid="classsf_1_1Music_1a15119cc0419c16bb334fa0698699c02e" prot="protected" virt="virtual"><scope>sf::Music</scope><name>onSeek</name></member>
+      <member refid="classsf_1_1Music_1a3edc66e5f5b3f11e84b90eaec9c7d7c0" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>openFromFile</name></member>
+      <member refid="classsf_1_1Music_1ae93b21bcf28ff0b5fec458039111386e" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>openFromMemory</name></member>
+      <member refid="classsf_1_1Music_1a4e55d1910a26858b44778c26b237d673" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>openFromStream</name></member>
+      <member refid="classsf_1_1SoundStream_1a932ff181e661503cad288b4bb6fe45ca" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>pause</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03ac3ca1fcc0394267c9bdbe3dc0a8a7e41" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>Paused</name></member>
+      <member refid="classsf_1_1SoundStream_1afdc08b69cab5f243d9324940a85a1144" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>play</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03af07bdea9f70ef7606dfc9f955beeee18" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>Playing</name></member>
+      <member refid="classsf_1_1SoundSource_1aa2adff44cd2f8b4e3c7315d7c2a45626" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setAttenuation</name></member>
+      <member refid="classsf_1_1SoundStream_1a43fade018ffba7e4f847a9f00b353f3d" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setLoop</name></member>
+      <member refid="classsf_1_1SoundSource_1a75bbc2c34addc8b25a14edb908508afe" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setMinDistance</name></member>
+      <member refid="classsf_1_1SoundSource_1a72a13695ed48b7f7b55e7cd4431f4bb6" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setPitch</name></member>
+      <member refid="classsf_1_1SoundStream_1af416a5f84c8750d2acb9821d78bc8646" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setPlayingOffset</name></member>
+      <member refid="classsf_1_1SoundSource_1a0480257ea25d986eba6cc3c1a6f8d7c2" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1a17ba9ed01925395652181a7b2a7d3aef" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setPosition</name></member>
+      <member refid="classsf_1_1SoundSource_1ac478a8b813faf7dd575635b102081d0d" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setRelativeToListener</name></member>
+      <member refid="classsf_1_1SoundSource_1a2f192f2b49fb8e2b82f3498d3663fcc2" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>setVolume</name></member>
+      <member refid="classsf_1_1SoundSource_1ae0c7728c1449fdebe65749ab6fcb3170" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>SoundSource</name></member>
+      <member refid="classsf_1_1SoundSource_1aefa4bd4460f387d81a0637d293979436" prot="protected" virt="non-virtual"><scope>sf::Music</scope><name>SoundSource</name></member>
+      <member refid="classsf_1_1SoundStream_1a769d08f4c3c6b4340ef3a838329d2e5c" prot="protected" virt="non-virtual"><scope>sf::Music</scope><name>SoundStream</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>Status</name></member>
+      <member refid="classsf_1_1SoundStream_1a16cc6a0404b32e42c4dce184bb94d0f4" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>stop</name></member>
+      <member refid="classsf_1_1SoundSource_1ac43af72c98c077500b239bc75b812f03adabb01e8aa85b2f54b344890addf764a" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>Stopped</name></member>
+      <member refid="classsf_1_1Music_1a4c65860fed2f01d0eaa6c4199870414b" prot="public" virt="non-virtual"><scope>sf::Music</scope><name>~Music</name></member>
+      <member refid="classsf_1_1SoundSource_1a77c7c1524f8cb81df2de9375b0f87c5c" prot="public" virt="virtual"><scope>sf::Music</scope><name>~SoundSource</name></member>
+      <member refid="classsf_1_1SoundStream_1a1fafb9f1ca572d23d7d6a17921860d85" prot="public" virt="virtual"><scope>sf::Music</scope><name>~SoundStream</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

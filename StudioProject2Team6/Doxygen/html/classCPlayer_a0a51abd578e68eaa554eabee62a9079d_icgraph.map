@@ -1,0 +1,7 @@
+<map id="CPlayer::getItemHeld" name="CPlayer::getItemHeld">
+<area shape="rect" id="node2" href="$classSceneSP.html#abec49d944e5152770324bee4bba4a140" title="Renders the player&#39;s inventory. " alt="" coords="219,5,396,32"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#aa0e203afe09c6f065bd7cb393de07fb1" title="Updates the selection of inventory slot by the player. " alt="" coords="199,56,416,83"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#adf87c23d837ac9522a361a799ecb4300" title="Renders the entire scene. " alt="" coords="485,5,612,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="464,56,633,83"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="681,56,808,83"/>
+</map>

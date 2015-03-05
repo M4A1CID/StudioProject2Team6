@@ -1,0 +1,5 @@
+<map id="SceneSP::checkCollision" name="SceneSP::checkCollision">
+<area shape="rect" id="node2" href="$classSceneSP.html#a5284cba426a3ff140f0cfa583f270c54" title="Checks for the collision of the elevator. " alt="" coords="223,5,437,32"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#aed88cbeaa9c2779dc5ab3396e0cbd3ba" title="Checks for the collision of an object. " alt="" coords="227,56,433,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#ad6a24084727f08fc91c3e02e292b649f" title="Checks for the collision of the supermarket. " alt="" coords="233,107,427,149"/>
+</map>

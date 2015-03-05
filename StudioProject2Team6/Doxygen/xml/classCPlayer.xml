@@ -1,0 +1,469 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="classCPlayer" kind="class" prot="public">
+    <compoundname>CPlayer</compoundname>
+    <basecompoundref refid="classCCharacter" prot="public" virt="non-virtual">CCharacter</basecompoundref>
+    <includes refid="Player_8h" local="no">Player.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classCPlayer_1a6dad3cc6b61043444d75237499307b00" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CPlayer::itemsHeld</definition>
+        <argsstring></argsstring>
+        <name>itemsHeld</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="13" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" bodystart="13" bodyend="-1"/>
+        <referencedby refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" compoundref="Player_8cpp" startline="9" endline="15">CPlayer</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int CPlayer::maxItemCapacity</definition>
+        <argsstring></argsstring>
+        <name>maxItemCapacity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="14" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" bodystart="14" bodyend="-1"/>
+        <referencedby refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" compoundref="Player_8cpp" startline="9" endline="15">CPlayer</referencedby>
+        <referencedby refid="classCPlayer_1a41b39fd627819feb2bafd614c3246b66" compoundref="Player_8cpp" startline="87" endline="90">getMaxItemCapacity</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCPlayer_1a46c157ed3be4185bf71576765b844014" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float CPlayer::money</definition>
+        <argsstring></argsstring>
+        <name>money</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="15" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" bodystart="15" bodyend="-1"/>
+        <referencedby refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" compoundref="Player_8cpp" startline="9" endline="15">CPlayer</referencedby>
+        <referencedby refid="classCPlayer_1a1cc34d624d5208e89aed5fd1ad9dcdd1" compoundref="Player_8cpp" startline="63" endline="66">getMoney</referencedby>
+        <referencedby refid="classCPlayer_1ac5c0e462bb3e9804f5fff4a33be5a33d" compoundref="Player_8cpp" startline="129" endline="132">setMoney</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classCItem" kindref="compound">CItem</ref> * &gt;</type>
+        <definition>std::vector&lt;CItem*&gt; CPlayer::myInventoryList</definition>
+        <argsstring></argsstring>
+        <name>myInventoryList</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="16" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" bodystart="16" bodyend="-1"/>
+        <referencedby refid="classCPlayer_1aa5acefb8c6837741ac85426e93ff0b69" compoundref="Player_8cpp" startline="51" endline="54">getItem</referencedby>
+        <referencedby refid="classCPlayer_1a0a51abd578e68eaa554eabee62a9079d" compoundref="Player_8cpp" startline="75" endline="78">getItemHeld</referencedby>
+        <referencedby refid="classCPlayer_1ac02fc75d1ba514addba85bfe2bd6154d" compoundref="Player_8cpp" startline="117" endline="120">getVector</referencedby>
+        <referencedby refid="classCPlayer_1a31b9cac478a011ca5fbbf899499216f5" compoundref="Player_8cpp" startline="99" endline="102">setInventory</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPlayer::CPlayer</definition>
+        <argsstring>(void)</argsstring>
+        <name>CPlayer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default player constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="20" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="9" bodyend="15"/>
+        <references refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3afd6a0e4343048b10646dd2976cc5ad18" compoundref="DefineEnum_8h" startline="184">IDLE</references>
+        <references refid="classCPlayer_1a6dad3cc6b61043444d75237499307b00" compoundref="Player_8h" startline="13">itemsHeld</references>
+        <references refid="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" compoundref="Player_8h" startline="14">maxItemCapacity</references>
+        <references refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" compoundref="Player_8h" startline="15">money</references>
+        <references refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" compoundref="Character_8cpp" startline="157" endline="160">CCharacter::setCharacterState</references>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1ae767209cab169f3aba83293e74517dbf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPlayer::CPlayer</definition>
+        <argsstring>(float setMoney, int setItemsHeld, int setMaxItemCapacity)</argsstring>
+        <name>CPlayer</name>
+        <param>
+          <type>float</type>
+          <declname>setMoney</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>setItemsHeld</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>setMaxItemCapacity</declname>
+        </param>
+        <briefdescription>
+<para>Overloaded player constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>setMoney</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- sets the players money </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setItemsHeld</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- sets the number of items held by the players </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>setMaxItemCapacity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- sets the max item capacity of the player </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="21" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="26" bodyend="32"/>
+        <references refid="DefineEnum_8h_1acab78672e4a9ba36667305ad072ecbf3afd6a0e4343048b10646dd2976cc5ad18" compoundref="DefineEnum_8h" startline="184">IDLE</references>
+        <references refid="classCPlayer_1a6dad3cc6b61043444d75237499307b00" compoundref="Player_8h" startline="13">itemsHeld</references>
+        <references refid="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" compoundref="Player_8h" startline="14">maxItemCapacity</references>
+        <references refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" compoundref="Player_8h" startline="15">money</references>
+        <references refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" compoundref="Character_8cpp" startline="157" endline="160">CCharacter::setCharacterState</references>
+        <references refid="classCPlayer_1ac5c0e462bb3e9804f5fff4a33be5a33d" compoundref="Player_8cpp" startline="129" endline="132">setMoney</references>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a08f66f2357be4330a63d2f87a3584fba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>CPlayer::~CPlayer</definition>
+        <argsstring>(void)</argsstring>
+        <name>~CPlayer</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Default destructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="22" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a1cc34d624d5208e89aed5fd1ad9dcdd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float CPlayer::getMoney</definition>
+        <argsstring>()</argsstring>
+        <name>getMoney</name>
+        <briefdescription>
+<para>Accessor function for the amount of money the player has. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>player&apos;s money </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="24" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="63" bodyend="66"/>
+        <references refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" compoundref="Player_8h" startline="15">money</references>
+        <referencedby refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" compoundref="SceneSP_8cpp" startline="1769" endline="1788">SceneSP::UpdateATM</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a41b39fd627819feb2bafd614c3246b66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CPlayer::getMaxItemCapacity</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxItemCapacity</name>
+        <briefdescription>
+<para>Accessor function for the max amount of items the player can have. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>max item capacity </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="25" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="87" bodyend="90"/>
+        <references refid="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" compoundref="Player_8h" startline="14">maxItemCapacity</references>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a0a51abd578e68eaa554eabee62a9079d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int CPlayer::getItemHeld</definition>
+        <argsstring>()</argsstring>
+        <name>getItemHeld</name>
+        <briefdescription>
+<para>Accessor function for the number of items the player is holding. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>number of items held </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="26" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="75" bodyend="78"/>
+        <references refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" compoundref="Player_8h" startline="16">myInventoryList</references>
+        <referencedby refid="classSceneSP_1abec49d944e5152770324bee4bba4a140" compoundref="SceneSP_8cpp" startline="4644" endline="4650">SceneSP::RenderInventory</referencedby>
+        <referencedby refid="classSceneSP_1aa0e203afe09c6f065bd7cb393de07fb1" compoundref="SceneSP_8cpp" startline="1897" endline="1972">SceneSP::UpdatePlayerSelection</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1ac02fc75d1ba514addba85bfe2bd6154d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classCItem" kindref="compound">CItem</ref> * &gt;</type>
+        <definition>std::vector&lt; CItem * &gt; CPlayer::getVector</definition>
+        <argsstring>()</argsstring>
+        <name>getVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="27" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="117" bodyend="120"/>
+        <references refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" compoundref="Player_8h" startline="16">myInventoryList</references>
+        <referencedby refid="classSceneSP_1a182bfd6a2fca51fe09cbd82771f779a1" compoundref="SceneSP_8cpp" startline="5253" endline="5303">SceneSP::checkWinLose</referencedby>
+        <referencedby refid="classSceneSP_1abec49d944e5152770324bee4bba4a140" compoundref="SceneSP_8cpp" startline="4644" endline="4650">SceneSP::RenderInventory</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a31b9cac478a011ca5fbbf899499216f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::setInventory</definition>
+        <argsstring>(CItem *pickedUp)</argsstring>
+        <name>setInventory</name>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref> *</type>
+          <declname>pickedUp</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to add an item picked up by the player. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pickedUp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adds the item picked up </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="28" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="99" bodyend="102"/>
+        <references refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" compoundref="Player_8h" startline="16">myInventoryList</references>
+        <referencedby refid="classSceneSP_1a516f7251a5124ef02a4404296f01ffbd" compoundref="SceneSP_8cpp" startline="792" endline="798">SceneSP::addToInventory</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a600b5e155809d8e6fd09ee40fc7f5e09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::setInventory</definition>
+        <argsstring>(CItem *pickedUp, int slot)</argsstring>
+        <name>setInventory</name>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref> *</type>
+          <declname>pickedUp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to add an item picked up by the player to a specific inventory slot. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pickedUp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- adds the item picked up </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>slot</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the inventory slot to add the item to </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="29" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="112" bodyend="115"/>
+        <references refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" compoundref="Player_8h" startline="16">myInventoryList</references>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1a33e46ff265f6699ff8aed109af30c937" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::setInventory</definition>
+        <argsstring>(CItem pickedUp, int slot)</argsstring>
+        <name>setInventory</name>
+        <param>
+          <type><ref refid="classCItem" kindref="compound">CItem</ref></type>
+          <declname>pickedUp</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>slot</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="30" column="1"/>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1ac5c0e462bb3e9804f5fff4a33be5a33d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CPlayer::setMoney</definition>
+        <argsstring>(float newMoney)</argsstring>
+        <name>setMoney</name>
+        <param>
+          <type>float</type>
+          <declname>newMoney</declname>
+        </param>
+        <briefdescription>
+<para>Mutator function to set the players current money. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>newMoney</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>- the players new amount of money </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="31" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="129" bodyend="132"/>
+        <references refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" compoundref="Player_8h" startline="15">money</references>
+        <referencedby refid="classCPlayer_1ae767209cab169f3aba83293e74517dbf" compoundref="Player_8cpp" startline="26" endline="32">CPlayer</referencedby>
+        <referencedby refid="classSceneSP_1a83a54c919d8dd397ba181f7c787c3adf" compoundref="SceneSP_8cpp" startline="1769" endline="1788">SceneSP::UpdateATM</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classCPlayer_1aa5acefb8c6837741ac85426e93ff0b69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classCItem" kindref="compound">CItem</ref> *</type>
+        <definition>CItem * CPlayer::getItem</definition>
+        <argsstring>(int i)</argsstring>
+        <name>getItem</name>
+        <param>
+          <type>int</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>Accessor function for the items held by the player. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>item held </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="32" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.cpp" bodystart="51" bodyend="54"/>
+        <references refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" compoundref="Player_8h" startline="16">myInventoryList</references>
+        <referencedby refid="classSceneSP_1a4e6f57c4d70b6c0609ce56d00d374ac0" compoundref="SceneSP_8cpp" startline="4818" endline="4873">SceneSP::checkPickUpItem</referencedby>
+        <referencedby refid="classSceneSP_1af1758342d1f0afe09af5adbcc1a30af6" compoundref="SceneSP_8cpp" startline="5210" endline="5246">SceneSP::checkReturnPoint</referencedby>
+        <referencedby refid="classSceneSP_1a666ca4ae2003d15869bffba85260c1b3" compoundref="SceneSP_8cpp" startline="36" endline="151">SceneSP::Init</referencedby>
+        <referencedby refid="classSceneSP_1ae5b83c001320f3ab83ceee51124d86aa" compoundref="SceneSP_8cpp" startline="3205" endline="3243">SceneSP::RenderUI</referencedby>
+        <referencedby refid="classSceneSP_1abf3a278e89de13c3e68e1674bd454be3" compoundref="SceneSP_8cpp" startline="1979" endline="2023">SceneSP::UpdatePaying</referencedby>
+        <referencedby refid="classSceneSP_1aa0e203afe09c6f065bd7cb393de07fb1" compoundref="SceneSP_8cpp" startline="1897" endline="1972">SceneSP::UpdatePlayerSelection</referencedby>
+        <referencedby refid="classSceneSP_1a4d582749b064ce46da7702b11272bbcd" compoundref="SceneSP_8cpp" startline="941" endline="960">SceneSP::UpdateUI</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Player class which stores the player&apos;s money and inventory. </para>    </briefdescription>
+    <detaileddescription>
+<para>Class Item: </para>    </detaileddescription>
+    <inheritancegraph>
+      <node id="835">
+        <label>CPlayer</label>
+        <link refid="classCPlayer"/>
+        <childnode refid="836" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="836">
+        <label>CCharacter</label>
+        <link refid="classCCharacter"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="839">
+        <label>float</label>
+      </node>
+      <node id="837">
+        <label>CPlayer</label>
+        <link refid="classCPlayer"/>
+        <childnode refid="838" relation="public-inheritance">
+        </childnode>
+        <childnode refid="839" relation="usage">
+          <edgelabel>money</edgelabel>
+        </childnode>
+        <childnode refid="841" relation="usage">
+          <edgelabel>maxItemCapacity</edgelabel>
+          <edgelabel>itemsHeld</edgelabel>
+        </childnode>
+        <childnode refid="842" relation="usage">
+          <edgelabel>myInventoryList</edgelabel>
+        </childnode>
+      </node>
+      <node id="841">
+        <label>int</label>
+      </node>
+      <node id="842">
+        <label>vector&lt; CItem * &gt;</label>
+      </node>
+      <node id="838">
+        <label>CCharacter</label>
+        <link refid="classCCharacter"/>
+        <childnode refid="839" relation="usage">
+          <edgelabel>x</edgelabel>
+          <edgelabel>y</edgelabel>
+          <edgelabel>z</edgelabel>
+        </childnode>
+        <childnode refid="840" relation="usage">
+          <edgelabel>animationType</edgelabel>
+          <edgelabel>characterJob</edgelabel>
+          <edgelabel>characterState</edgelabel>
+        </childnode>
+      </node>
+      <node id="840">
+        <label>unsigned</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" line="10" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/MyGraphics/Source/Player.h" bodystart="9" bodyend="34"/>
+    <listofallmembers>
+      <member refid="classCCharacter_1a0a45163210c01ba76eff3d79b2ec6e10" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>CCharacter</name></member>
+      <member refid="classCCharacter_1a5fa61d0943affcc2ecb546a1ca59bdb7" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>CCharacter</name></member>
+      <member refid="classCPlayer_1a0a9df6cbf879b601a12b090f40a30617" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>CPlayer</name></member>
+      <member refid="classCPlayer_1ae767209cab169f3aba83293e74517dbf" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>CPlayer</name></member>
+      <member refid="classCCharacter_1a588f03d856c0a8187b1d3a71cc135c0b" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getAnimationType</name></member>
+      <member refid="classCCharacter_1a549d8f9bc2e177e348e2a3d791ea511c" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getCharacterJob</name></member>
+      <member refid="classCCharacter_1a7dc340b6fc3ca6002975c0dfc8621227" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getCharacterState</name></member>
+      <member refid="classCPlayer_1aa5acefb8c6837741ac85426e93ff0b69" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getItem</name></member>
+      <member refid="classCPlayer_1a0a51abd578e68eaa554eabee62a9079d" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getItemHeld</name></member>
+      <member refid="classCPlayer_1a41b39fd627819feb2bafd614c3246b66" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getMaxItemCapacity</name></member>
+      <member refid="classCPlayer_1a1cc34d624d5208e89aed5fd1ad9dcdd1" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getMoney</name></member>
+      <member refid="classCPlayer_1ac02fc75d1ba514addba85bfe2bd6154d" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getVector</name></member>
+      <member refid="classCCharacter_1ab5174416af9fb5a6772807ecba57ba62" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getXpos</name></member>
+      <member refid="classCCharacter_1adf34bbd751c72295580148348f086a32" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getYpos</name></member>
+      <member refid="classCCharacter_1a09aa50c943d454829b9d98786b374095" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>getZpos</name></member>
+      <member refid="classCPlayer_1a6dad3cc6b61043444d75237499307b00" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>itemsHeld</name></member>
+      <member refid="classCPlayer_1a4d6f9bc1af6cd77c68acf7e3e75a2fec" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>maxItemCapacity</name></member>
+      <member refid="classCPlayer_1a46c157ed3be4185bf71576765b844014" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>money</name></member>
+      <member refid="classCPlayer_1a5f52235975855e7fddd9a05f779d29f6" prot="private" virt="non-virtual"><scope>CPlayer</scope><name>myInventoryList</name></member>
+      <member refid="classCCharacter_1a67d9105c568f0dba5eb1417236e279ac" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setAnimationType</name></member>
+      <member refid="classCCharacter_1a4e9ecc23aabb47e67fc3d7d629b4dceb" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setCharacterJob</name></member>
+      <member refid="classCCharacter_1aa1dc700b3501b6e53c8887d97a37484e" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setCharacterState</name></member>
+      <member refid="classCPlayer_1a31b9cac478a011ca5fbbf899499216f5" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setInventory</name></member>
+      <member refid="classCPlayer_1a600b5e155809d8e6fd09ee40fc7f5e09" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setInventory</name></member>
+      <member refid="classCPlayer_1a33e46ff265f6699ff8aed109af30c937" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setInventory</name></member>
+      <member refid="classCPlayer_1ac5c0e462bb3e9804f5fff4a33be5a33d" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setMoney</name></member>
+      <member refid="classCCharacter_1adc6655e35c3a3f796808bccc7cedf5ea" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setXpos</name></member>
+      <member refid="classCCharacter_1aba7dbce0ad3f9f458dd192f00ee0cbe8" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setYpos</name></member>
+      <member refid="classCCharacter_1a7d7eddac9ddecff9463d251b1e830d6c" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>setZpos</name></member>
+      <member refid="classCCharacter_1a6176ffa71d744eed17566ab6d61e37bf" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>~CCharacter</name></member>
+      <member refid="classCPlayer_1a08f66f2357be4330a63d2f87a3584fba" prot="public" virt="non-virtual"><scope>CPlayer</scope><name>~CPlayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

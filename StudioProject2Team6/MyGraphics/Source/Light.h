@@ -2,7 +2,12 @@
 #define _LIGHT_H
 
 #include "Vertex.h"
-
+/******************************************************************************/
+/*!
+		Struct Light:
+\brief	Defines a light source
+*/
+/******************************************************************************/
 struct Light
 {
 	Position position;

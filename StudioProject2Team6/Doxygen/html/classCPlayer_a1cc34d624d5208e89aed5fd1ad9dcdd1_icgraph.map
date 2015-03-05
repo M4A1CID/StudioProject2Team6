@@ -1,0 +1,7 @@
+<map id="CPlayer::getMoney" name="CPlayer::getMoney">
+<area shape="rect" id="node2" href="$classSceneSP.html#a83a54c919d8dd397ba181f7c787c3adf" title="Updates the addition of the player&#39;s money and deduction of the ATM&#39;s money. " alt="" coords="193,5,347,32"/>
+<area shape="rect" id="node5" href="$classSceneSP.html#abf3a278e89de13c3e68e1674bd454be3" title="Updates the paying of money. " alt="" coords="187,56,353,83"/>
+<area shape="rect" id="node6" href="$classSceneSP.html#a4d582749b064ce46da7702b11272bbcd" title="Updates the players UI. " alt="" coords="201,107,339,133"/>
+<area shape="rect" id="node3" href="$classSceneSP.html#a82c8d6c68ad062038524b06c1921c9aa" title="Updates the scene when the player is ingame. " alt="" coords="401,56,571,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a7d552813859dff4132751e1d43253c44" title="Updates the entire scene. " alt="" coords="619,56,745,83"/>
+</map>

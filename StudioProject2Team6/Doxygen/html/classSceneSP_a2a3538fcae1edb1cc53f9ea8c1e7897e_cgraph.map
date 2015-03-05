@@ -1,0 +1,7 @@
+<map id="SceneSP::UpdateMiscEasteregg" name="SceneSP::UpdateMiscEasteregg">
+<area shape="rect" id="node2" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="273,5,448,32"/>
+<area shape="rect" id="node3" href="$classsf_1_1Music.html#a3edc66e5f5b3f11e84b90eaec9c7d7c0" title="Open a music from an audio file. " alt="" coords="279,56,442,83"/>
+<area shape="rect" id="node4" href="$classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. " alt="" coords="285,107,436,133"/>
+<area shape="rect" id="node5" href="$classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the end. " alt="" coords="274,157,447,184"/>
+<area shape="rect" id="node6" href="$classsf_1_1SoundSource.html#a2f192f2b49fb8e2b82f3498d3663fcc2" title="Set the volume of the sound. " alt="" coords="267,208,455,235"/>
+</map>

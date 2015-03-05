@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.8">
+  <compounddef id="structpriv_1_1ThreadFunctorWithArg" kind="struct" prot="public">
+    <compoundname>priv::ThreadFunctorWithArg</compoundname>
+    <basecompoundref refid="structpriv_1_1ThreadFunc" prot="public" virt="non-virtual">priv::ThreadFunc</basecompoundref>
+    <templateparamlist>
+      <param>
+        <type>typename F</type>
+      </param>
+      <param>
+        <type>typename A</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structpriv_1_1ThreadFunctorWithArg_1ab12992af3112f15df4b6f0dbce3137b9" prot="public" static="no" mutable="no">
+        <type>F</type>
+        <definition>F priv::ThreadFunctorWithArg&lt; F, A &gt;::m_function</definition>
+        <argsstring></argsstring>
+        <name>m_function</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="49" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="49" bodyend="-1"/>
+        <referencedby refid="structpriv_1_1ThreadFunctorWithArg_1a0f8bb6ba36819e80016528bab8b0bd4f" compoundref="Thread_8inl" startline="48" endline="48">priv::ThreadFunctorWithArg&lt; F, A &gt;::run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="structpriv_1_1ThreadFunctorWithArg_1ac598f7701f976320bc3964733b9ae9ae" prot="public" static="no" mutable="no">
+        <type>A</type>
+        <definition>A priv::ThreadFunctorWithArg&lt; F, A &gt;::m_arg</definition>
+        <argsstring></argsstring>
+        <name>m_arg</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="50" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="50" bodyend="-1"/>
+        <referencedby refid="structpriv_1_1ThreadFunctorWithArg_1a0f8bb6ba36819e80016528bab8b0bd4f" compoundref="Thread_8inl" startline="48" endline="48">priv::ThreadFunctorWithArg&lt; F, A &gt;::run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structpriv_1_1ThreadFunctorWithArg_1ae3745753b77880cdfda6f10d72748efa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>priv::ThreadFunctorWithArg&lt; F, A &gt;::ThreadFunctorWithArg</definition>
+        <argsstring>(F function, A arg)</argsstring>
+        <name>ThreadFunctorWithArg</name>
+        <param>
+          <type>F</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>A</type>
+          <declname>arg</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="47" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="structpriv_1_1ThreadFunctorWithArg_1a0f8bb6ba36819e80016528bab8b0bd4f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void priv::ThreadFunctorWithArg&lt; F, A &gt;::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <reimplements refid="structpriv_1_1ThreadFunc_1ab5465e714ca4aa92a09bf5e24410a5c3">run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="48" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="48" bodyend="48"/>
+        <references refid="structpriv_1_1ThreadFunctorWithArg_1ac598f7701f976320bc3964733b9ae9ae" compoundref="Thread_8inl" startline="50">priv::ThreadFunctorWithArg&lt; F, A &gt;::m_arg</references>
+        <references refid="structpriv_1_1ThreadFunctorWithArg_1ab12992af3112f15df4b6f0dbce3137b9" compoundref="Thread_8inl" startline="49">priv::ThreadFunctorWithArg&lt; F, A &gt;::m_function</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1170">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1169">
+        <label>priv::ThreadFunctorWithArg&lt; F, A &gt;</label>
+        <link refid="structpriv_1_1ThreadFunctorWithArg"/>
+        <childnode refid="1170" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1174">
+        <label>A</label>
+      </node>
+      <node id="1173">
+        <label>F</label>
+      </node>
+      <node id="1172">
+        <label>priv::ThreadFunc</label>
+        <link refid="structpriv_1_1ThreadFunc"/>
+      </node>
+      <node id="1171">
+        <label>priv::ThreadFunctorWithArg&lt; F, A &gt;</label>
+        <link refid="structpriv_1_1ThreadFunctorWithArg"/>
+        <childnode refid="1172" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1173" relation="usage">
+          <edgelabel>m_function</edgelabel>
+        </childnode>
+        <childnode refid="1174" relation="usage">
+          <edgelabel>m_arg</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" line="46" column="1" bodyfile="C:/Users/john/Desktop/StudioProject2Team6/StudioProject2Team6/SFML/include/SFML/System/Thread.inl" bodystart="45" bodyend="51"/>
+    <listofallmembers>
+      <member refid="structpriv_1_1ThreadFunctorWithArg_1ac598f7701f976320bc3964733b9ae9ae" prot="public" virt="non-virtual"><scope>priv::ThreadFunctorWithArg</scope><name>m_arg</name></member>
+      <member refid="structpriv_1_1ThreadFunctorWithArg_1ab12992af3112f15df4b6f0dbce3137b9" prot="public" virt="non-virtual"><scope>priv::ThreadFunctorWithArg</scope><name>m_function</name></member>
+      <member refid="structpriv_1_1ThreadFunctorWithArg_1a0f8bb6ba36819e80016528bab8b0bd4f" prot="public" virt="virtual"><scope>priv::ThreadFunctorWithArg</scope><name>run</name></member>
+      <member refid="structpriv_1_1ThreadFunctorWithArg_1ae3745753b77880cdfda6f10d72748efa" prot="public" virt="non-virtual"><scope>priv::ThreadFunctorWithArg</scope><name>ThreadFunctorWithArg</name></member>
+      <member refid="structpriv_1_1ThreadFunc_1a085d7741b00ad5c8610cc26739d423cb" prot="public" virt="virtual"><scope>priv::ThreadFunctorWithArg</scope><name>~ThreadFunc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

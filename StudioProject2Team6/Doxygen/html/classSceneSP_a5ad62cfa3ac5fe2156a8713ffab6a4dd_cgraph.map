@@ -1,0 +1,12 @@
+<map id="SceneSP::UpdateEasteregg" name="SceneSP::UpdateEasteregg">
+<area shape="rect" id="node2" href="$classCCharacter.html#a549d8f9bc2e177e348e2a3d791ea511c" title="Accessor function for character job. " alt="" coords="251,5,440,32"/>
+<area shape="rect" id="node3" href="$classApplication.html#a72cc9bba26506a7c0f54c346dfbd5cfe" title="Application::IsKeyPressed" alt="" coords="507,56,681,83"/>
+<area shape="rect" id="node4" href="$classSceneSP.html#a9d736fb66a1ce2d4e102f483f7034ace" title="Updates the &quot;cage&quot; easter egg based on dt. " alt="" coords="267,107,423,133"/>
+<area shape="rect" id="node9" href="$classSceneSP.html#a2963d58071297789ad0c567c41dd5dbd" title="Updates the &quot;gabe&quot; easter egg based on dt. " alt="" coords="263,157,427,184"/>
+<area shape="rect" id="node10" href="$classSceneSP.html#a2a3538fcae1edb1cc53f9ea8c1e7897e" title="Updates the miscellaneous easter eggs based on dt. " alt="" coords="239,208,452,235"/>
+<area shape="rect" id="node11" href="$classSceneSP.html#a8773475b7b228451b8a96aeb1912fb30" title="Updates the &quot;troll&quot; easter egg based on dt. " alt="" coords="270,259,421,285"/>
+<area shape="rect" id="node5" href="$classsf_1_1Music.html#a3edc66e5f5b3f11e84b90eaec9c7d7c0" title="Open a music from an audio file. " alt="" coords="513,157,675,184"/>
+<area shape="rect" id="node6" href="$classsf_1_1SoundStream.html#afdc08b69cab5f243d9324940a85a1144" title="Start or resume playing the audio stream. " alt="" coords="519,208,669,235"/>
+<area shape="rect" id="node7" href="$classsf_1_1SoundStream.html#a43fade018ffba7e4f847a9f00b353f3d" title="Set whether or not the stream should loop after reaching the end. " alt="" coords="507,259,681,285"/>
+<area shape="rect" id="node8" href="$classsf_1_1SoundSource.html#a2f192f2b49fb8e2b82f3498d3663fcc2" title="Set the volume of the sound. " alt="" coords="500,107,688,133"/>
+</map>
