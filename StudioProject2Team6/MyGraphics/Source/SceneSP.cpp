@@ -1,3 +1,12 @@
+/******************************************************************************/
+/*!
+\file	SceneSP.cpp
+\author Edmund Ang , Jeffrey Teo, John Leong, Xue Tian
+\brief
+Combines everything to be passed to application
+*/
+/******************************************************************************/
+
 #include "SceneSP.h"
 #include "GL\glew.h"
 #include "shader.hpp"
@@ -36,7 +45,7 @@ Initialises the entire scene
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
-	std::srand((unsigned int)time(0)); //Seed the random number generator
+	
 	//Initialize all meshes to NULL
 	for(int i = 0; i < NUM_GEOMETRY; ++i)
 	{
@@ -73,15 +82,18 @@ void SceneSP::Init()
 	i_drunkmanAct = DRUNKIDLE;
 	i_CashierAct = LOOKATCUSTOMER;
 	initCharacter(); //Initilize the player
-	//Initialize all Inventory to NULL
-	ptrItem = new CEmptyItem;
-	for(int i = 0; i< ptrplayer->getMaxItemCapacity();++i)
-	{
-		ptrplayer->setInventory(ptrItem);
-	}
-	ptrInvSelect = ptrplayer->getItem(0);
 	initGeoType(); //Initilize all Geo Types
 	initShelves();//Initilize all shelves
+	//Initialize all Inventory to NULL
+	for(int i = 0; i< ptrplayer->getMaxItemCapacity();++i)
+	{
+		ptrplayer->setInventory(ptrEmpty);
+	}
+	
+	ptrInvSelect = ptrplayer->getItem(0);
+	
+
+	
 	falling = false;
 	b_is_Stealing = false;
 	b_crouching = false;
@@ -143,11 +155,6 @@ void SceneSP::Init()
 
 	DeclareLightParameters(); //Declare Light parameters
 
-	////////////////////////////////////////////
-	Cashier.translateX = 0;
-	Cashier.translateY = 0;
-	Cashier.translateZ = 0;
-	Cashier.rotateA = 0;
 }
 /******************************************************************************/
 /*!
@@ -306,28 +313,28 @@ void SceneSP::initGeoType()
 	meshList[GEO_CASHIER_HEADBODY]->textureID = LoadTGA("Image//cashier.tga");
 	meshList[GEO_CASHIER_LEGANDFEET] = MeshBuilder::GenerateOBJ("cashier head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_CASHIER_LEGANDFEET]->textureID = LoadTGA("Image//cashier.tga");
-	/////////////////////////////////////////////////////////////////////
+
 	meshList[GEO_DRUNKMAN_ARM] = MeshBuilder::GenerateOBJ("drunkman arm", "OBJ//Arm.obj");
 	meshList[GEO_DRUNKMAN_ARM]->textureID = LoadTGA("Image//Drunkman.tga");
 	meshList[GEO_DRUNKMAN_HEADBODY] = MeshBuilder::GenerateOBJ("drunkman head and body", "OBJ//headandbody.obj");
 	meshList[GEO_DRUNKMAN_HEADBODY]->textureID = LoadTGA("Image//Drunkman.tga");
 	meshList[GEO_DRUNKMAN_LEGANDFEET] = MeshBuilder::GenerateOBJ("drunkman head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_DRUNKMAN_LEGANDFEET]->textureID = LoadTGA("Image//Drunkman.tga");
-	///////////////////////////////////////////////////////////////////////
+	
 	meshList[GEO_LOGISTICSTAFF_ARM] = MeshBuilder::GenerateOBJ("logisticstaff arm", "OBJ//Arm.obj");
 	meshList[GEO_LOGISTICSTAFF_ARM]->textureID = LoadTGA("Image//Logisticstaff.tga");
 	meshList[GEO_LOGISTICSTAFF_HEADBODY] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//headandbody.obj");
 	meshList[GEO_LOGISTICSTAFF_HEADBODY]->textureID = LoadTGA("Image//Logisticstaff.tga");
 	meshList[GEO_LOGISTICSTAFF_LEGANDFEET] = MeshBuilder::GenerateOBJ("logisticstaff head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_LOGISTICSTAFF_LEGANDFEET]->textureID = LoadTGA("Image//Logisticstaff.tga");
-	/////////////////////////////////////////////////////////////////////////////
+
 	meshList[GEO_NormalNpc1_ARM] = MeshBuilder::GenerateOBJ("NormalNpc1 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc1_ARM]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	meshList[GEO_NormalNpc1_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//headandbody.obj");
 	meshList[GEO_NormalNpc1_HEADBODY]->textureID = LoadTGA("Image//NormalNpc1.tga");
 	meshList[GEO_NormalNpc1_LEGANDFEET] = MeshBuilder::GenerateOBJ("NormalNpc1 head and body", "OBJ//legandfeet.obj");
 	meshList[GEO_NormalNpc1_LEGANDFEET]->textureID = LoadTGA("Image//NormalNpc1.tga");
-	//////////////////////////////////////////////////////////////////////////////
+	
 	meshList[GEO_NormalNpc2_ARM] = MeshBuilder::GenerateOBJ("NormalNpc2 arm", "OBJ//Arm.obj");
 	meshList[GEO_NormalNpc2_ARM]->textureID = LoadTGA("Image//NormalNpc2.tga");
 	meshList[GEO_NormalNpc2_HEADBODY] = MeshBuilder::GenerateOBJ("NormalNpc2 head and body", "OBJ//headandbody.obj");
@@ -490,6 +497,7 @@ void SceneSP::initShelves()
 	//=============================================================================
 	ptrClass = new CBeansCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,14,0,28,180);
+
 	myContainerList.push_back(ptrContainer);	//Push back into vector list
 	DefineItem(ptrContainer,ptrContainer->getTopItem(),ROW_TOP);		//Top row
 	DefineItem(ptrContainer,ptrContainer->getMiddleItem(),ROW_MIDDLE);	//Middle row
@@ -1243,7 +1251,7 @@ void SceneSP::UpdateStartMenu()
 				{
 					//DO TREASURE HUNT HERE
 					unsigned int random =0;
-					
+					std::srand((unsigned int)time(0)); //Seed the random number generator
 					i_total_items_to_find = rand()%3+3;
 					for(int i = 0; i< i_total_items_to_find; ++i)
 					{

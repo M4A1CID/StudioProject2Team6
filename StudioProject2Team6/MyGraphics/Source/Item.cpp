@@ -32,6 +32,7 @@ CItem::CItem(string n, float p, int type, float posX, float posY, float posZ)
 	x = posX;
 	y = posY;
 	z = posZ;
+	active = true;
 }
 
 /******************************************************************************/
