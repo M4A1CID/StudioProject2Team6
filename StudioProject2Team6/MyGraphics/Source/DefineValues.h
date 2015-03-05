@@ -155,8 +155,8 @@ static float checkInnerElevatorZposMax = -23.f;
 static float secondFloorYpositionMax = 17.f;
 static float secondFloorYpositionMin = 0.0f;
 
-static float elevatorSpeed = 5.0f;
-
+const static float elevatorSpeed = 5.0f;
+const static float elevatorDoorSpeed = 15.0f;
 //Bound checking for RETURN POINT
 static float returnPointBoxPosX = -37.f;
 static float returnPointBoxPosY = 0.f;

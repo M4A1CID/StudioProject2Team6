@@ -36,7 +36,7 @@ Initialises the entire scene
 void SceneSP::Init()
 {
 	DeclareGLEnable(); //Handle glEnable things
-
+	std::srand((unsigned int)time(0)); //Seed the random number generator
 	//Initialize all meshes to NULL
 	for(int i = 0; i < NUM_GEOMETRY; ++i)
 	{
@@ -486,6 +486,7 @@ Initialises all shelves in the scene
 /******************************************************************************/
 void SceneSP::initShelves()
 {
+	
 	//=============================================================================
 	ptrClass = new CBeansCan;
 	ptrContainer = new CContainer(ptrClass,ptrClass,ptrClass,"ShelfOne",5,5,5,14,0,28,180);
@@ -1242,7 +1243,7 @@ void SceneSP::UpdateStartMenu()
 				{
 					//DO TREASURE HUNT HERE
 					unsigned int random =0;
-					std::srand((unsigned int)time(0)); //Seed the random number generator
+					
 					i_total_items_to_find = rand()%3+3;
 					for(int i = 0; i< i_total_items_to_find; ++i)
 					{
@@ -1734,7 +1735,7 @@ void SceneSP::UpdateElevator(double dt)
 
 		if(!(elevatorDoorY > checkElevatorYposMax))
 		{
-			elevatorDoorY+=float(dt)*5;
+			elevatorDoorY+=float(dt)*elevatorDoorSpeed;
 			b_dinged = false;
 		}		
 	}
@@ -1742,7 +1743,7 @@ void SceneSP::UpdateElevator(double dt)
 	{
 		if(!(elevatorDoorY < checkElevatorYposMin))
 		{
-			elevatorDoorY-= float(dt)*5;
+			elevatorDoorY-= float(dt)*elevatorDoorSpeed;
 		}
 		else
 		{
