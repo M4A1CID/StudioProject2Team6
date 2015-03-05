@@ -332,7 +332,7 @@ void SceneSP::initCharacter()
 	myNPCList.push_back(ptrNPC);
 
 	//Ghost npc
-	ptrNPC = new CNpc(-20.f,-2.f,45.f,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY,true);
+	ptrNPC = new CNpc(-20.f,-2.f,45.f,GEO_GHOSTNPC_HEADANDBODY,GEO_GHOSTNPC_ARM,GEO_GHOSTNPC_LEGANDFEET,STATE_IDLE,IDLE,GHOST_GUY,false);
 	myNPCList.push_back(ptrNPC);
 	//cashier 1
 	ptrNPC = new CNpc(-26.f,0.f,-18.f,GEO_CASHIER_HEADBODY,GEO_CASHIER_ARM,GEO_CASHIER_LEGANDFEET,STATE_IDLE,IDLE,CASHIER,true);
@@ -1869,8 +1869,8 @@ void SceneSP::UpdateDrunkman(double dt)
 		if(myNPCList[i]->getCharacterJob() == DRUNKMAN)
 		{
 			if(Application::IsKeyPressed('E') && (i_drunkmanAct == DRUNKIDLE)	
-				&&(camera.position.z > myNPCList[i]->getZpos()-6 && camera.position.z <myNPCList[i]->getZpos()+6)
-				&&(camera.position.x > myNPCList[i]->getXpos()-6 && camera.position.x < myNPCList[i]->getXpos()+6)
+				&&(camera.position.z > myNPCList[i]->getZpos()-10 && camera.position.z <myNPCList[i]->getZpos()+10)
+				&&(camera.position.x > myNPCList[i]->getXpos()-10 && camera.position.x < myNPCList[i]->getXpos()+10)
 				&&(camera.position.y > myNPCList[i]->getYpos())
 				)
 			{
