@@ -2,7 +2,12 @@
 #ifndef CONTAINER_H
 #define CONTAINER_H
 #include "Item.h"
-
+/******************************************************************************/
+/*!
+		Class Container:
+\brief	Defines Container class to store items
+*/
+/******************************************************************************/
 class CContainer
 {
 public:

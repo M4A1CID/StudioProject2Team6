@@ -1,6 +1,12 @@
 #pragma once
 #include "Item.h"
 #include "DefineEnum.h"
+/******************************************************************************/
+/*!
+		Class EasterEgg1:
+\brief	Defines EasterEgg1 class
+*/
+/******************************************************************************/
 class CEasterEgg1 : public CItem
 {
 public:

@@ -1,6 +1,11 @@
 #include "SardineCan.h"
 
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 CSardineCan::CSardineCan(void)
 {
 	setName("Sardine Can");
@@ -8,7 +13,12 @@ CSardineCan::CSardineCan(void)
 	setGeoType(GEO_CAN_SARDINE);
 }
 
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 CSardineCan::~CSardineCan(void)
 {
 }

@@ -1,6 +1,11 @@
 #include "GluWaterCan.h"
 
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 CGluWaterCan::CGluWaterCan(void)
 {
 	setName("GluWater Can");
@@ -8,7 +13,12 @@ CGluWaterCan::CGluWaterCan(void)
 	setGeoType(GEO_CAN_GLUWATER);
 }
 
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 CGluWaterCan::~CGluWaterCan(void)
 {
 }

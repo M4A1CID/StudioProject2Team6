@@ -1,6 +1,11 @@
 #include "SodaFestCan.h"
 
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 CSodaFestCan::CSodaFestCan(void)
 {
 	setName("SodaFest Can");
@@ -8,7 +13,12 @@ CSodaFestCan::CSodaFestCan(void)
 	setGeoType(GEO_CAN_SODAFEST);
 }
 
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 CSodaFestCan::~CSodaFestCan(void)
 {
 }

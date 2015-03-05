@@ -2,7 +2,12 @@
 #ifndef ITEM_H
 #define ITEM_H
 #include <string>
-
+/******************************************************************************/
+/*!
+		Class Item:
+\brief	Defines item class
+*/
+/******************************************************************************/
 using std::string;
 class CItem
 {

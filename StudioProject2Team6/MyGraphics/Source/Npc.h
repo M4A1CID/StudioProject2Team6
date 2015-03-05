@@ -1,5 +1,11 @@
 #pragma once
 #include "Character.h"
+/******************************************************************************/
+/*!
+		Class Npc:
+\brief	Defines the NPC class
+*/
+/******************************************************************************/
 class CNpc : public CCharacter
 {
 public:

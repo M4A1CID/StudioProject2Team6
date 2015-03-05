@@ -1,6 +1,11 @@
 #include "Winebottle4.h"
 
-
+/******************************************************************************/
+/*!
+\brief
+Default constructor
+*/
+/******************************************************************************/
 CWinebottle4::CWinebottle4(void)
 {
 	setName("Winebottle4");
@@ -8,7 +13,12 @@ CWinebottle4::CWinebottle4(void)
 	setGeoType(GEO_WINEBOTTLE_4);
 }
 
-
+/******************************************************************************/
+/*!
+\brief
+Default destructor
+*/
+/******************************************************************************/
 CWinebottle4::~CWinebottle4(void)
 {
 }
