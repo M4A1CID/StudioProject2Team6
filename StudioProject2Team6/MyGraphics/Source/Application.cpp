@@ -74,7 +74,11 @@ void Application::Init()
 	{
 		exit(EXIT_FAILURE);
 	}
-
+	const GLFWvidmode* mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+	glfwWindowHint(GLFW_RED_BITS, mode->redBits);
+	glfwWindowHint(GLFW_GREEN_BITS, mode->greenBits);
+	glfwWindowHint(GLFW_BLUE_BITS, mode->blueBits);
+	glfwWindowHint(GLFW_REFRESH_RATE, mode->refreshRate);
 	//Set the GLFW window creation hints - these are optional
 	glfwWindowHint(GLFW_SAMPLES, 4); //Request 4x antialiasing
 	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3); //Request a specific OpenGL version
@@ -83,8 +87,8 @@ void Application::Init()
 	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); //We don't want the old OpenGL 
 
 	//Create a window and create its OpenGL context
-	m_window = glfwCreateWindow(1366, 768, "Computer Graphics", NULL, NULL);
-
+	m_window = glfwCreateWindow(mode->width, mode->height, "Computer Graphics",  glfwGetPrimaryMonitor(), NULL);
+	
 	//If the window couldn't be created
 	if (!m_window)
 	{
