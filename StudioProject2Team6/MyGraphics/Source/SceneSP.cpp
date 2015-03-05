@@ -3348,6 +3348,7 @@ void SceneSP::Render()
 	case MAIN_MENU:
 		//do menu here
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+		RenderTextOnScreen(meshList[GEO_TEXT],"By: Jeffrey Teo, Edmund Ang, Xue Tian, John Leong",Color(0.5f,1.f,0.5f),3,1,1);
 		RenderMainMenu();
 		break;
 
@@ -3355,12 +3356,14 @@ void SceneSP::Render()
 		//Do sub menu here
 	case SUB_MENU:
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+		RenderTextOnScreen(meshList[GEO_TEXT],"By: Jeffrey Teo, Edmund Ang, Xue Tian, John Leong",Color(0.5f,1.f,0.5f),3,1,1);
 		RenderSubMenu();
 		break;
 
 		//Do instruction Menu here
 	case INSTRUCTION_MENU:
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+		RenderTextOnScreen(meshList[GEO_TEXT],"By: Jeffrey Teo, Edmund Ang, Xue Tian, John Leong",Color(0.5f,1.f,0.5f),3,1,1);
 		RenderInstructionMenu();
 		break;
 
@@ -3844,7 +3847,6 @@ void SceneSP::RenderInstructionMenu()
 	RenderTextOnScreen(meshList[GEO_TEXT], "Use '1' to '8' for inventory select", Color(0, 1, 0), 3, 2, 15);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press SHIFT to run",Color(0, 1, 0), 3, 2, 14);
 	RenderTextOnScreen(meshList[GEO_TEXT], "Press Ctrl to crouch", Color(0, 1, 0), 3, 2, 13);
-	RenderTextOnScreen(meshList[GEO_TEXT], "Press Esc to end application", Color(0, 1, 0), 3, 2, 10);
 
 	RenderTextOnScreen(meshList[GEO_TEXT], menuTextArray[MENU_BACK], Color(1, 1, 0),  3, 19, 5);
 }

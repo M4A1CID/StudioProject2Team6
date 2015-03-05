@@ -1,9 +1,9 @@
 /******************************************************************************/
 /*!
-\file	EasterEgg4.h
+\file	EmptyItem.h
 \author Edmund Ang
 \brief
-Header File for EasterEgg4 item
+Header File for EmptyItem item
 */
 /******************************************************************************/
 #pragma once

@@ -3,7 +3,7 @@
 \file	CerealBox3.h
 \author Edmund Ang
 \brief
-File for CerealBox3 item
+Header File for CerealBox3 item
 */
 /******************************************************************************/
 #pragma once

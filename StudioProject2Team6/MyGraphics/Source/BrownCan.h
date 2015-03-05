@@ -3,7 +3,7 @@
 \file	BrownCan.h
 \author Edmund Ang
 \brief
-File for Brown Can item
+Header file for Brown Can item
 */
 /******************************************************************************/
 #pragma once

@@ -3,7 +3,7 @@
 \file	BranCan.h
 \author Edmund Ang, Jeffrey Teo
 \brief
-File for Bran Can item
+Header File for Bran Can item
 */
 /******************************************************************************/
 #pragma once
