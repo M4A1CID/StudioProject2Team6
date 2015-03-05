@@ -5,7 +5,7 @@ CNpc::CNpc(void)
 {
 
 }
-CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state, int type, int job)
+CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int state, int type, int job,bool active)
 {
 	setXpos(posX);
 	setYpos(posY);
@@ -26,7 +26,7 @@ CNpc::CNpc(float posX, float posY, float posZ, int head, int arm, int leg, int s
 	rotateRightLeg = 0.f;
 	moveSpd = 5.0f;
 	NPCTimer = 0.0f;
-	IsActive = true;
+	IsActive = active;
 	legRotDir = false;
 }
 

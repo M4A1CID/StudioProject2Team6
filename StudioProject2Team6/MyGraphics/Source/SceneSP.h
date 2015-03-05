@@ -150,6 +150,7 @@ private:
 	bool b_isWithinInteractionItem;
 	bool b_isWithinPayingCashier;
 	bool b_is_Stealing;
+	bool falling;
 	float interactionTimer;
 	float LogisticinteractionTimer;
 	float CustomerinteractionTimer;
