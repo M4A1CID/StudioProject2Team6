@@ -3348,6 +3348,8 @@ void SceneSP::Render()
 	case MAIN_MENU:
 		//do menu here
 		RenderTGAUI(meshList[GEO_MAIN_MENU_TITLE], 3, 40, 40);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Up and Down key to navigate",Color(0.5f,1.f,0.5f),2,20,6);
+		RenderTextOnScreen(meshList[GEO_TEXT],"Enter key to confirm",Color(0.5f,1.f,0.5f),2,25,5);
 		RenderTextOnScreen(meshList[GEO_TEXT],"By: Jeffrey Teo, Edmund Ang, Xue Tian, John Leong",Color(0.5f,1.f,0.5f),3,1,1);
 		RenderMainMenu();
 		break;
